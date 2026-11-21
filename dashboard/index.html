@@ -107,7 +107,13 @@
 .pod-range { width: 100%; max-width: 520px; accent-color: var(--color-fg); }
 .pod-tool .pod-kpi { background: var(--color-bg); }
 .pod-neg { color: var(--color-bad); }
-@media print { .pod-scroll { max-height: none; overflow: visible; border: 0; } .pod-nav, .pod-tabbar { display: none; } .pod details { border: 0; } #tab-utama { break-before: page; } }
+.pod-funnel { display: flex; flex-wrap: wrap; align-items: stretch; gap: var(--cds-gap-sm); }
+.pod-step { flex: 1 1 150px; }
+.pod-arrow { display: flex; align-items: center; justify-content: center; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.pod-analyses { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: var(--cds-gap-md); }
+.pod-analysis { gap: var(--cds-gap-sm); }
+.pod-analysis table th { background: var(--color-panel); }
+@media print { .pod-scroll { max-height: none; overflow: visible; border: 0; } .pod-nav, .pod-tabbar { display: none; } .pod details { border: 0; } #tab-prestasi, #tab-utama { break-before: page; } }
 </style>
 
 <div class="pod">
@@ -117,6 +123,7 @@
   <h1>Riset POD Typography</h1>
   <div class="pod-tabbar" role="tablist" aria-label="Tab dashboard">
     <button type="button" class="pod-tab-btn" role="tab" id="btn-poster" data-tab="tab-poster" aria-controls="tab-poster" aria-selected="true">Poster</button>
+    <button type="button" class="pod-tab-btn" role="tab" id="btn-prestasi" data-tab="tab-prestasi" aria-controls="tab-prestasi" aria-selected="false" tabindex="-1">Prestasi</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-utama" data-tab="tab-utama" aria-controls="tab-utama" aria-selected="false" tabindex="-1">Semua produk</button>
   </div>
 </header>
@@ -491,6 +498,102 @@
       </table>
     </div>
   </details>
+</section>
+
+</section>
+
+<section id="tab-prestasi" class="pod-tab" role="tabpanel" aria-labelledby="btn-prestasi" hidden>
+
+<div id="k-intro" class="pod-section pod-first">
+  <p class="pod-lede">Sasaran bulan ke-24: <b data-draw="k-sales" data-source="prestasi_funnel" data-field="sales_day" data-row="0">—</b> jualan sehari × <b data-draw="k-ppo" data-source="prestasi_funnel" data-field="ppo" data-row="0">—</b> = <b data-draw="k-profit" data-source="prestasi_funnel" data-field="profit_month" data-row="0">—</b> sebulan. Angka sebenar akan muncul bila Google Analytics, Pinterest dan WooCommerce disambung.</p>
+  <nav class="pod-nav" aria-label="Bahagian prestasi">
+    <a href="#k-corong">Corong jualan</a>
+    <a href="#k-milestone">Milestone</a>
+    <a href="#k-analisa">5 analisa</a>
+    <a href="#k-alat">Alat data</a>
+  </nav>
+</div>
+
+<section id="k-corong" class="pod-section">
+  <h2>Corong jualan: sasaran sebulan</h2>
+  <p class="pod-muted">Setiap peringkat bergantung pada peringkat sebelumnya. Betulkan peringkat yang paling lemah dahulu.</p>
+  <div class="pod-funnel">
+    <div class="pod-kpi pod-step" id="k-step-tayangan">
+      <div class="pod-q">Tayangan Pinterest</div>
+      <div class="pod-mid" data-draw="k-f-impr" data-source="prestasi_funnel" data-field="impressions" data-row="0">—</div>
+      <div class="pod-muted">Sebenar: belum disambung</div>
+    </div>
+    <div class="pod-arrow"><span><span data-draw="k-f-ctr" data-source="prestasi_funnel" data-field="ctr" data-row="0">—</span>% klik →</span></div>
+    <div class="pod-kpi pod-step" id="k-step-pelawat">
+      <div class="pod-q">Pelawat</div>
+      <div class="pod-mid" data-draw="k-f-vis" data-source="prestasi_funnel" data-field="visitors" data-row="0">—</div>
+      <div class="pod-muted">Sebenar: belum disambung</div>
+    </div>
+    <div class="pod-arrow"><span><span data-draw="k-f-conv" data-source="prestasi_funnel" data-field="conv" data-row="0">—</span>% membeli →</span></div>
+    <div class="pod-kpi pod-step" id="k-step-pesanan">
+      <div class="pod-q">Pesanan</div>
+      <div class="pod-mid" data-draw="k-f-orders" data-source="prestasi_funnel" data-field="orders_month" data-row="0">—</div>
+      <div class="pod-muted">Sebenar: belum disambung</div>
+    </div>
+    <div class="pod-arrow"><span>× <span data-draw="k-f-ppo" data-source="prestasi_funnel" data-field="ppo" data-row="0">—</span> →</span></div>
+    <div class="pod-kpi pod-step pod-hl" id="k-step-untung">
+      <div class="pod-q">Untung</div>
+      <div class="pod-mid" data-draw="k-f-profit" data-source="prestasi_funnel" data-field="profit_month" data-row="0">—</div>
+      <div class="pod-muted">Sebenar: belum disambung</div>
+    </div>
+  </div>
+</section>
+
+<section id="k-milestone" class="pod-section">
+  <h2>Milestone ke 10 jualan sehari</h2>
+  <p class="pod-muted">Semak setiap bulan. Kalau di bawah sasaran, baiki peringkat corong yang paling lemah sebelum menambah pin.</p>
+  <div class="pod-kpis" id="k-ms" data-draw="k-milestones" data-source="prestasi_milestones"></div>
+</section>
+
+<section id="k-analisa" class="pod-section">
+  <h2>Lima analisa</h2>
+  <p class="pod-muted">Sasaran setiap metrik. Kolum "Sebenar" akan diisi bila data disambung.</p>
+  <div class="pod-analyses" id="k-analyses" data-draw="k-analyses" data-source="prestasi_kpi"></div>
+  <template id="tpl-k-analysis">
+    <article class="pod-card pod-analysis">
+      <div class="pod-guide-head">
+        <h3 class="k-a-title"></h3>
+        <span class="pod-pill" data-tone="warn">Belum disambung</span>
+      </div>
+      <div class="pod-muted k-a-q"></div>
+      <div class="pod-table-wrap">
+        <table class="pod-mini" data-source="prestasi_kpi" data-row-key="id">
+          <thead><tr>
+            <th data-field="metric">Metrik</th>
+            <th data-field="target">Sasaran</th>
+            <th data-field="actual_status">Sebenar</th>
+          </tr></thead>
+          <tbody class="k-a-body"></tbody>
+        </table>
+      </div>
+      <details class="pod-more">
+        <summary>Kalau rendah, buat apa?</summary>
+        <ul class="pod-rules k-a-actions"></ul>
+      </details>
+    </article>
+  </template>
+</section>
+
+<section id="k-alat" class="pod-section">
+  <h2>Alat data yang perlu disambung</h2>
+  <p class="pod-muted">Semuanya percuma. Setiap satu diperlukan untuk mengisi kolum "Sebenar".</p>
+  <div class="pod-table-wrap">
+    <table id="k-table-tools" data-source="prestasi_tools" data-row-key="tool">
+      <thead><tr>
+        <th data-field="tool">Alat</th>
+        <th data-field="analysis">Untuk analisa</th>
+        <th data-field="gives">Data yang diberi</th>
+        <th data-field="how">Cara sambung</th>
+        <th data-field="status">Status</th>
+      </tr></thead>
+      <tbody data-draw="k-tools-body"></tbody>
+    </table>
+  </div>
 </section>
 
 </section>
@@ -1832,5 +1935,91 @@ dash.draw('p-calc-out', (box) => {
     cost,
     POD.tile('Harga pulang modal', POD.usd2(Math.ceil(breakeven * 100) / 100), 'Bawah harga ini rugi')
   );
+});
+
+dash.calc('prestasi_funnel', {
+  title: 'Corong sasaran sebulan',
+  description: 'Dari sasaran KPI: jualan sehari × 30.4 hari = pesanan; pesanan ÷ % membeli = pelawat; pelawat ÷ kadar klik = tayangan; pesanan × untung setiap pesanan = untung sebulan.',
+  inputs: ['prestasi_kpi'],
+  fn: (kpi) => {
+    const v = (id) => Number((kpi.find((r) => r.id === id) || {}).target_value);
+    const sales = v('sales_day'), ppo = v('prod_profit_order'), conv = v('web_conv'), ctr = v('pin_ctr');
+    if (![sales, ppo, conv, ctr].every((x) => x > 0)) return [];
+    const orders = sales * 30.4, visitors = orders / (conv / 100);
+    return [{ sales_day: sales, ppo, conv, ctr, orders_month: Math.round(orders), visitors: Math.round(visitors), impressions: Math.round(visitors / (ctr / 100)), profit_month: Math.round(orders * ppo) }];
+  }
+});
+
+POD.text('k-sales', 'prestasi_funnel', (r) => r[0].sales_day, POD.int);
+POD.text('k-ppo', 'prestasi_funnel', (r) => r[0].ppo, POD.usd0);
+POD.text('k-profit', 'prestasi_funnel', (r) => r[0].profit_month, POD.usd0);
+POD.text('k-f-impr', 'prestasi_funnel', (r) => r[0].impressions, POD.int);
+POD.text('k-f-ctr', 'prestasi_funnel', (r) => r[0].ctr);
+POD.text('k-f-vis', 'prestasi_funnel', (r) => r[0].visitors, POD.int);
+POD.text('k-f-conv', 'prestasi_funnel', (r) => r[0].conv);
+POD.text('k-f-orders', 'prestasi_funnel', (r) => r[0].orders_month, POD.int);
+POD.text('k-f-ppo', 'prestasi_funnel', (r) => r[0].ppo, POD.usd0);
+POD.text('k-f-profit', 'prestasi_funnel', (r) => r[0].profit_month, POD.usd0);
+
+dash.draw('k-milestones', (box) => {
+  const rows = POD.ok('prestasi_milestones'); box.replaceChildren();
+  if (!rows) { const m = document.createElement('div'); m.className = 'pod-msg'; m.textContent = POD.statusMsg('prestasi_milestones'); box.appendChild(m); return; }
+  rows.slice().sort((a, b) => a.month - b.month).forEach((r) => {
+    const where = 'month=' + POD.enc(r.month);
+    const mark = (e, f) => { e.dataset.source = 'prestasi_milestones'; e.dataset.field = f; e.dataset.where = where; return e; };
+    const d = document.createElement('div'); d.className = 'pod-kpi' + (r.sales_per_day >= 10 ? ' pod-hl' : '');
+    const q = document.createElement('div'); q.className = 'pod-q';
+    q.append(mark(Object.assign(document.createElement('span'), { textContent: r.label }), 'label'), ' · ', mark(Object.assign(document.createElement('span'), { textContent: r.date }), 'date'));
+    const v = document.createElement('div'); v.className = 'pod-mid';
+    v.append('≥ ', mark(Object.assign(document.createElement('span'), { textContent: String(r.sales_per_day) }), 'sales_per_day'), ' jualan/hari');
+    const p = document.createElement('div'); p.className = 'pod-muted';
+    p.append('~', mark(Object.assign(document.createElement('span'), { textContent: POD.usd0(r.profit_month) }), 'profit_month'), ' sebulan');
+    const s = document.createElement('div'); s.className = 'pod-muted'; s.textContent = 'Sebenar: belum disambung';
+    d.append(q, v, p, s); box.appendChild(d);
+  });
+});
+
+dash.draw('k-analyses', (box) => {
+  const rows = POD.ok('prestasi_kpi'); box.replaceChildren();
+  if (!rows) { const m = document.createElement('div'); m.className = 'pod-msg'; m.textContent = POD.statusMsg('prestasi_kpi'); box.appendChild(m); return; }
+  const tpl = document.getElementById('tpl-k-analysis'); if (!tpl) return;
+  const groups = d3.groups(rows.slice().sort((a, b) => a.analysis_no - b.analysis_no), (r) => r.analysis_no);
+  groups.forEach(([no, items]) => {
+    const node = tpl.content.cloneNode(true);
+    const first = items[0];
+    const art = node.querySelector('article'); if (art) art.id = 'k-analisa-' + no;
+    const t = node.querySelector('.k-a-title');
+    if (t) { t.textContent = no + ' · ' + first.analysis; t.dataset.source = 'prestasi_kpi'; t.dataset.field = 'analysis'; t.dataset.where = 'analysis_no=' + no; }
+    const q = node.querySelector('.k-a-q');
+    if (q) { q.textContent = first.question; q.dataset.source = 'prestasi_kpi'; q.dataset.field = 'question'; q.dataset.where = 'analysis_no=' + no; }
+    const tb = node.querySelector('.k-a-body');
+    const ul = node.querySelector('.k-a-actions');
+    items.forEach((r) => {
+      if (tb) {
+        const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.id);
+        POD.cell(tr, r.metric); POD.cell(tr, r.target);
+        const st = document.createElement('td'); st.className = 'pod-muted'; st.textContent = r.actual_status; tr.appendChild(st);
+        tb.appendChild(tr);
+      }
+      if (ul && r.if_low) {
+        const li = document.createElement('li');
+        const b = document.createElement('b'); b.textContent = r.metric + ': ';
+        const s = document.createElement('span'); s.textContent = r.if_low; s.dataset.source = 'prestasi_kpi'; s.dataset.field = 'if_low'; s.dataset.where = 'id=' + POD.enc(r.id);
+        li.append(b, s); ul.appendChild(li);
+      }
+    });
+    box.appendChild(node);
+  });
+});
+
+dash.draw('k-tools-body', (tb) => {
+  const rows = POD.ok('prestasi_tools'); tb.replaceChildren();
+  if (!rows) { POD.emptyRow(tb, 5, POD.statusMsg('prestasi_tools')); return; }
+  rows.forEach((r) => {
+    const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.tool);
+    POD.cell(tr, r.tool); POD.cell(tr, r.analysis); POD.cell(tr, r.gives, 'pod-wide'); POD.cell(tr, r.how, 'pod-wide');
+    const st = document.createElement('td'); st.appendChild(POD.pill(r.status, null, 'warn')); tr.appendChild(st);
+    tb.appendChild(tr);
+  });
 });
 </script>

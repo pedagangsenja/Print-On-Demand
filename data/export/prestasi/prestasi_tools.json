@@ -1,0 +1,10 @@
+[
+{"tool": "Google Analytics 4", "analysis": "Pelawat, Laman web", "gives": "Pelawat, sumber trafik, peranti, tambah ke troli", "how": "Pasang GA4 (plugin Site Kit) di WordPress", "cost": "Percuma", "status": "Belum disambung"},
+{"tool": "Microsoft Clarity", "analysis": "Laman web", "gives": "Heatmap dan rakaman sesi pelawat", "how": "Pasang plugin Clarity", "cost": "Percuma", "status": "Belum disambung"},
+{"tool": "PageSpeed Insights", "analysis": "Laman web", "gives": "Kelajuan halaman (LCP)", "how": "Tiada pemasangan; uji URL", "cost": "Percuma", "status": "Belum disambung"},
+{"tool": "WooCommerce Analytics", "analysis": "Produk, Jualan & untung", "gives": "Pesanan, produk terlaris, nilai pesanan", "how": "Terbina dalam WooCommerce", "cost": "Percuma", "status": "Belum disambung"},
+{"tool": "Printify", "analysis": "Produk, Jualan & untung", "gives": "Kos pengeluaran, cetak semula", "how": "Laporan Printify / API", "cost": "Percuma", "status": "Belum disambung"},
+{"tool": "Pinterest Analytics + Pinterest Tag", "analysis": "Pinterest", "gives": "Tayangan, klik keluar, saves, penukaran", "how": "Akaun Business, sahkan domain, pasang tag", "cost": "Percuma", "status": "Belum disambung"},
+{"tool": "Google Search Console", "analysis": "Pelawat", "gives": "Carian Google ke laman web", "how": "Sahkan domain", "cost": "Percuma", "status": "Belum disambung"},
+{"tool": "Cloudflare Web Analytics", "analysis": "Laman web", "gives": "Trafik tanpa cookie, kelajuan", "how": "Aktifkan dalam Cloudflare", "cost": "Percuma", "status": "Belum disambung"}
+]

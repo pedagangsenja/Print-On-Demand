@@ -1,0 +1,6 @@
+[
+{"month": 6, "label": "Bulan 6", "date": "Jun 2027", "sales_per_day": 1.5, "profit_month": 1368, "actual_status": "Belum disambung"},
+{"month": 12, "label": "Bulan 12", "date": "Dis 2027", "sales_per_day": 3, "profit_month": 2736, "actual_status": "Belum disambung"},
+{"month": 18, "label": "Bulan 18", "date": "Jun 2028", "sales_per_day": 6, "profit_month": 5472, "actual_status": "Belum disambung"},
+{"month": 24, "label": "Bulan 24", "date": "Dis 2028", "sales_per_day": 10, "profit_month": 9120, "actual_status": "Belum disambung"}
+]
