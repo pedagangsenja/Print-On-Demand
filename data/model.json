@@ -1,0 +1,1427 @@
+{
+  "stage": 6,
+  "title": "Kalendar musim + model untung setahun",
+  "updated": "2026-11-21",
+  "assumptions": {
+    "steady_visitors_per_month": 3000,
+    "ramp_year1": {
+      "Jan": 0.05,
+      "Feb": 0.1,
+      "Mac": 0.2,
+      "Apr": 0.33,
+      "Mei": 0.5,
+      "Jun": 0.67,
+      "Jul": 0.83,
+      "Ogos": 1,
+      "Sep": 1,
+      "Okt": 1,
+      "Nov": 1,
+      "Dis": 1
+    },
+    "conversion": "1.5% satu-satu; 1.0% bridal (anggaran berdasarkan purata kedai POD ~1.7%)",
+    "profit_per_order": "Dari Peringkat 4 (kos Printify disahkan), campuran produk setiap niche",
+    "seasonality": "Indeks anggaran Claude berdasarkan bukti Peringkat 1-5 (jumlah 1200 = purata 100/bulan); belum disahkan dengan Pinterest/Google Trends",
+    "pessimistic": "trafik x0.5, conversion x0.67 (bridal x0.5)",
+    "optimistic": "trafik x2 (6,000 pelawat/bulan)"
+  },
+  "niches": {
+    "bridal": {
+      "name": "Bridal",
+      "share": 0.15,
+      "conv": 0.01,
+      "profit": 70,
+      "revenue": 160,
+      "type": "bermusim",
+      "idx": [
+        110,
+        110,
+        115,
+        125,
+        125,
+        95,
+        100,
+        120,
+        115,
+        70,
+        50,
+        65
+      ],
+      "pin": "Nov-Feb (proposal), Jan-Ogos (set bridal party)"
+    },
+    "teacher": {
+      "name": "Cikgu",
+      "share": 0.12,
+      "conv": 0.015,
+      "profit": 20,
+      "revenue": 35,
+      "type": "bermusim",
+      "idx": [
+        70,
+        60,
+        70,
+        120,
+        150,
+        80,
+        140,
+        160,
+        90,
+        60,
+        80,
+        120
+      ],
+      "pin": "Mac-Apr (appreciation), Mei-Jul (back-to-school), Okt-Nov (hadiah Krismas)"
+    },
+    "nursery": {
+      "name": "Nursery",
+      "share": 0.15,
+      "conv": 0.015,
+      "profit": 25,
+      "revenue": 45,
+      "type": "sepanjang tahun",
+      "idx": [
+        95,
+        95,
+        105,
+        120,
+        105,
+        95,
+        95,
+        95,
+        95,
+        95,
+        100,
+        105
+      ],
+      "pin": "Sepanjang tahun; tambah Feb-Mac"
+    },
+    "funny_home": {
+      "name": "Tanda lucu rumah",
+      "share": 0.2,
+      "conv": 0.015,
+      "profit": 22,
+      "revenue": 40,
+      "type": "sepanjang tahun",
+      "idx": [
+        90,
+        80,
+        95,
+        105,
+        100,
+        90,
+        85,
+        95,
+        100,
+        110,
+        125,
+        125
+      ],
+      "pin": "Sepanjang tahun; tambah Dis-Feb dan Ogos-Okt"
+    },
+    "mama": {
+      "name": "Mama",
+      "share": 0.12,
+      "conv": 0.015,
+      "profit": 20,
+      "revenue": 35,
+      "type": "sepanjang tahun + puncak",
+      "idx": [
+        70,
+        70,
+        90,
+        140,
+        190,
+        70,
+        60,
+        60,
+        70,
+        90,
+        130,
+        150
+      ],
+      "pin": "Feb-Apr (Mother's Day), Sep-Okt (Krismas)"
+    },
+    "christmas": {
+      "name": "Krismas",
+      "share": 0.08,
+      "conv": 0.015,
+      "profit": 26,
+      "revenue": 45,
+      "type": "bermusim",
+      "idx": [
+        10,
+        0,
+        0,
+        0,
+        0,
+        0,
+        10,
+        30,
+        80,
+        200,
+        420,
+        450
+      ],
+      "pin": "Jul-Okt"
+    },
+    "friendship": {
+      "name": "Kawan / Galentine",
+      "share": 0.06,
+      "conv": 0.015,
+      "profit": 22,
+      "revenue": 40,
+      "type": "bermusim",
+      "idx": [
+        300,
+        420,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        60,
+        100
+      ],
+      "pin": "Nov-Jan"
+    },
+    "bookish": {
+      "name": "Bookish",
+      "share": 0.12,
+      "conv": 0.015,
+      "profit": 18,
+      "revenue": 32,
+      "type": "sepanjang tahun",
+      "idx": [
+        90,
+        85,
+        90,
+        90,
+        95,
+        95,
+        100,
+        100,
+        100,
+        105,
+        125,
+        125
+      ],
+      "pin": "Sepanjang tahun; tambah Ogos-Okt"
+    }
+  },
+  "results": {
+    "pesimis": {
+      "steady": {
+        "months": [
+          {
+            "month": "Jan",
+            "by_niche": {
+              "bridal": 86.6,
+              "teacher": 25.2,
+              "nursery": 53.5,
+              "funny_home": 59.4,
+              "mama": 25.2,
+              "christmas": 3.1,
+              "friendship": 59.4,
+              "bookish": 29.2
+            },
+            "profit": 341.7,
+            "orders": 13.0,
+            "revenue": 655.9
+          },
+          {
+            "month": "Feb",
+            "by_niche": {
+              "bridal": 86.6,
+              "teacher": 21.6,
+              "nursery": 53.5,
+              "funny_home": 52.8,
+              "mama": 25.2,
+              "christmas": 0.0,
+              "friendship": 83.2,
+              "bookish": 27.6
+            },
+            "profit": 350.5,
+            "orders": 13.4,
+            "revenue": 672.5
+          },
+          {
+            "month": "Mac",
+            "by_niche": {
+              "bridal": 90.6,
+              "teacher": 25.2,
+              "nursery": 59.1,
+              "funny_home": 62.7,
+              "mama": 32.4,
+              "christmas": 0.0,
+              "friendship": 7.9,
+              "bookish": 29.2
+            },
+            "profit": 307.1,
+            "orders": 11.4,
+            "revenue": 594.5
+          },
+          {
+            "month": "Apr",
+            "by_niche": {
+              "bridal": 98.4,
+              "teacher": 43.2,
+              "nursery": 67.5,
+              "funny_home": 69.3,
+              "mama": 50.4,
+              "christmas": 0.0,
+              "friendship": 7.9,
+              "bookish": 29.2
+            },
+            "profit": 366.1,
+            "orders": 13.9,
+            "revenue": 702.8
+          },
+          {
+            "month": "Mei",
+            "by_niche": {
+              "bridal": 98.4,
+              "teacher": 54.0,
+              "nursery": 59.1,
+              "funny_home": 66.0,
+              "mama": 68.4,
+              "christmas": 0.0,
+              "friendship": 7.9,
+              "bookish": 30.8
+            },
+            "profit": 384.7,
+            "orders": 15.0,
+            "revenue": 734.9
+          },
+          {
+            "month": "Jun",
+            "by_niche": {
+              "bridal": 74.8,
+              "teacher": 28.8,
+              "nursery": 53.5,
+              "funny_home": 59.4,
+              "mama": 25.2,
+              "christmas": 0.0,
+              "friendship": 7.9,
+              "bookish": 30.8
+            },
+            "profit": 280.5,
+            "orders": 10.7,
+            "revenue": 539.0
+          },
+          {
+            "month": "Jul",
+            "by_niche": {
+              "bridal": 78.8,
+              "teacher": 50.4,
+              "nursery": 53.5,
+              "funny_home": 56.1,
+              "mama": 21.6,
+              "christmas": 3.1,
+              "friendship": 7.9,
+              "bookish": 32.4
+            },
+            "profit": 303.8,
+            "orders": 11.7,
+            "revenue": 581.8
+          },
+          {
+            "month": "Ogos",
+            "by_niche": {
+              "bridal": 94.5,
+              "teacher": 57.6,
+              "nursery": 53.5,
+              "funny_home": 62.7,
+              "mama": 21.6,
+              "christmas": 9.4,
+              "friendship": 7.9,
+              "bookish": 32.4
+            },
+            "profit": 339.6,
+            "orders": 12.8,
+            "revenue": 653.2
+          },
+          {
+            "month": "Sep",
+            "by_niche": {
+              "bridal": 90.6,
+              "teacher": 32.4,
+              "nursery": 53.5,
+              "funny_home": 66.0,
+              "mama": 25.2,
+              "christmas": 25.0,
+              "friendship": 7.9,
+              "bookish": 32.4
+            },
+            "profit": 333.0,
+            "orders": 12.4,
+            "revenue": 639.4
+          },
+          {
+            "month": "Okt",
+            "by_niche": {
+              "bridal": 55.1,
+              "teacher": 21.6,
+              "nursery": 53.5,
+              "funny_home": 72.6,
+              "mama": 32.4,
+              "christmas": 62.4,
+              "friendship": 7.9,
+              "bookish": 34.0
+            },
+            "profit": 339.6,
+            "orders": 13.6,
+            "revenue": 631.8
+          },
+          {
+            "month": "Nov",
+            "by_niche": {
+              "bridal": 39.4,
+              "teacher": 28.8,
+              "nursery": 56.3,
+              "funny_home": 82.5,
+              "mama": 46.8,
+              "christmas": 131.1,
+              "friendship": 11.9,
+              "bookish": 40.5
+            },
+            "profit": 437.3,
+            "orders": 18.2,
+            "revenue": 794.3
+          },
+          {
+            "month": "Dis",
+            "by_niche": {
+              "bridal": 51.2,
+              "teacher": 43.2,
+              "nursery": 59.1,
+              "funny_home": 82.5,
+              "mama": 54.0,
+              "christmas": 140.5,
+              "friendship": 19.8,
+              "bookish": 40.5
+            },
+            "profit": 490.9,
+            "orders": 20.3,
+            "revenue": 894.8
+          }
+        ],
+        "total": {
+          "profit": 4274.8,
+          "orders": 166.4,
+          "revenue": 8094.9
+        }
+      },
+      "year1": {
+        "months": [
+          {
+            "month": "Jan",
+            "by_niche": {
+              "bridal": 4.3,
+              "teacher": 1.3,
+              "nursery": 2.7,
+              "funny_home": 3.0,
+              "mama": 1.3,
+              "christmas": 0.2,
+              "friendship": 3.0,
+              "bookish": 1.5
+            },
+            "profit": 17.1,
+            "orders": 0.7,
+            "revenue": 32.8
+          },
+          {
+            "month": "Feb",
+            "by_niche": {
+              "bridal": 8.7,
+              "teacher": 2.2,
+              "nursery": 5.3,
+              "funny_home": 5.3,
+              "mama": 2.5,
+              "christmas": 0.0,
+              "friendship": 8.3,
+              "bookish": 2.8
+            },
+            "profit": 35.0,
+            "orders": 1.3,
+            "revenue": 67.2
+          },
+          {
+            "month": "Mac",
+            "by_niche": {
+              "bridal": 18.1,
+              "teacher": 5.0,
+              "nursery": 11.8,
+              "funny_home": 12.5,
+              "mama": 6.5,
+              "christmas": 0.0,
+              "friendship": 1.6,
+              "bookish": 5.8
+            },
+            "profit": 61.4,
+            "orders": 2.3,
+            "revenue": 118.9
+          },
+          {
+            "month": "Apr",
+            "by_niche": {
+              "bridal": 32.5,
+              "teacher": 14.3,
+              "nursery": 22.3,
+              "funny_home": 22.9,
+              "mama": 16.6,
+              "christmas": 0.0,
+              "friendship": 2.6,
+              "bookish": 9.6
+            },
+            "profit": 120.8,
+            "orders": 4.6,
+            "revenue": 231.9
+          },
+          {
+            "month": "Mei",
+            "by_niche": {
+              "bridal": 49.2,
+              "teacher": 27.0,
+              "nursery": 29.5,
+              "funny_home": 33.0,
+              "mama": 34.2,
+              "christmas": 0.0,
+              "friendship": 4.0,
+              "bookish": 15.4
+            },
+            "profit": 192.4,
+            "orders": 7.5,
+            "revenue": 367.4
+          },
+          {
+            "month": "Jun",
+            "by_niche": {
+              "bridal": 50.1,
+              "teacher": 19.3,
+              "nursery": 35.8,
+              "funny_home": 39.8,
+              "mama": 16.9,
+              "christmas": 0.0,
+              "friendship": 5.3,
+              "bookish": 20.6
+            },
+            "profit": 187.9,
+            "orders": 7.2,
+            "revenue": 361.1
+          },
+          {
+            "month": "Jul",
+            "by_niche": {
+              "bridal": 65.4,
+              "teacher": 41.9,
+              "nursery": 44.4,
+              "funny_home": 46.6,
+              "mama": 17.9,
+              "christmas": 2.6,
+              "friendship": 6.6,
+              "bookish": 26.9
+            },
+            "profit": 252.2,
+            "orders": 9.7,
+            "revenue": 482.9
+          },
+          {
+            "month": "Ogos",
+            "by_niche": {
+              "bridal": 94.5,
+              "teacher": 57.6,
+              "nursery": 53.5,
+              "funny_home": 62.7,
+              "mama": 21.6,
+              "christmas": 9.4,
+              "friendship": 7.9,
+              "bookish": 32.4
+            },
+            "profit": 339.6,
+            "orders": 12.8,
+            "revenue": 653.2
+          },
+          {
+            "month": "Sep",
+            "by_niche": {
+              "bridal": 90.6,
+              "teacher": 32.4,
+              "nursery": 53.5,
+              "funny_home": 66.0,
+              "mama": 25.2,
+              "christmas": 25.0,
+              "friendship": 7.9,
+              "bookish": 32.4
+            },
+            "profit": 333.0,
+            "orders": 12.4,
+            "revenue": 639.4
+          },
+          {
+            "month": "Okt",
+            "by_niche": {
+              "bridal": 55.1,
+              "teacher": 21.6,
+              "nursery": 53.5,
+              "funny_home": 72.6,
+              "mama": 32.4,
+              "christmas": 62.4,
+              "friendship": 7.9,
+              "bookish": 34.0
+            },
+            "profit": 339.6,
+            "orders": 13.6,
+            "revenue": 631.8
+          },
+          {
+            "month": "Nov",
+            "by_niche": {
+              "bridal": 39.4,
+              "teacher": 28.8,
+              "nursery": 56.3,
+              "funny_home": 82.5,
+              "mama": 46.8,
+              "christmas": 131.1,
+              "friendship": 11.9,
+              "bookish": 40.5
+            },
+            "profit": 437.3,
+            "orders": 18.2,
+            "revenue": 794.3
+          },
+          {
+            "month": "Dis",
+            "by_niche": {
+              "bridal": 51.2,
+              "teacher": 43.2,
+              "nursery": 59.1,
+              "funny_home": 82.5,
+              "mama": 54.0,
+              "christmas": 140.5,
+              "friendship": 19.8,
+              "bookish": 40.5
+            },
+            "profit": 490.9,
+            "orders": 20.3,
+            "revenue": 894.8
+          }
+        ],
+        "total": {
+          "profit": 2807.2,
+          "orders": 110.6,
+          "revenue": 5275.7
+        }
+      }
+    },
+    "asas": {
+      "steady": {
+        "months": [
+          {
+            "month": "Jan",
+            "by_niche": {
+              "bridal": 346.5,
+              "teacher": 75.6,
+              "nursery": 160.3,
+              "funny_home": 178.2,
+              "mama": 75.6,
+              "christmas": 9.4,
+              "friendship": 178.2,
+              "bookish": 87.5
+            },
+            "profit": 1111.3,
+            "orders": 40.3,
+            "revenue": 2164.9
+          },
+          {
+            "month": "Feb",
+            "by_niche": {
+              "bridal": 346.5,
+              "teacher": 64.8,
+              "nursery": 160.3,
+              "funny_home": 158.4,
+              "mama": 75.6,
+              "christmas": 0.0,
+              "friendship": 249.5,
+              "bookish": 82.6
+            },
+            "profit": 1137.7,
+            "orders": 41.5,
+            "revenue": 2214.7
+          },
+          {
+            "month": "Mac",
+            "by_niche": {
+              "bridal": 362.2,
+              "teacher": 75.6,
+              "nursery": 177.2,
+              "funny_home": 188.1,
+              "mama": 97.2,
+              "christmas": 0.0,
+              "friendship": 23.8,
+              "bookish": 87.5
+            },
+            "profit": 1011.6,
+            "orders": 35.4,
+            "revenue": 1990.1
+          },
+          {
+            "month": "Apr",
+            "by_niche": {
+              "bridal": 393.8,
+              "teacher": 129.6,
+              "nursery": 202.5,
+              "funny_home": 207.9,
+              "mama": 151.2,
+              "christmas": 0.0,
+              "friendship": 23.8,
+              "bookish": 87.5
+            },
+            "profit": 1196.2,
+            "orders": 43.2,
+            "revenue": 2332.6
+          },
+          {
+            "month": "Mei",
+            "by_niche": {
+              "bridal": 393.8,
+              "teacher": 162.0,
+              "nursery": 177.2,
+              "funny_home": 198.0,
+              "mama": 205.2,
+              "christmas": 0.0,
+              "friendship": 23.8,
+              "bookish": 92.3
+            },
+            "profit": 1252.2,
+            "orders": 46.3,
+            "revenue": 2428.9
+          },
+          {
+            "month": "Jun",
+            "by_niche": {
+              "bridal": 299.2,
+              "teacher": 86.4,
+              "nursery": 160.3,
+              "funny_home": 178.2,
+              "mama": 75.6,
+              "christmas": 0.0,
+              "friendship": 23.8,
+              "bookish": 92.3
+            },
+            "profit": 915.9,
+            "orders": 33.1,
+            "revenue": 1787.4
+          },
+          {
+            "month": "Jul",
+            "by_niche": {
+              "bridal": 315.0,
+              "teacher": 151.2,
+              "nursery": 160.3,
+              "funny_home": 168.3,
+              "mama": 64.8,
+              "christmas": 9.4,
+              "friendship": 23.8,
+              "bookish": 97.2
+            },
+            "profit": 989.9,
+            "orders": 36.2,
+            "revenue": 1924.8
+          },
+          {
+            "month": "Ogos",
+            "by_niche": {
+              "bridal": 378.0,
+              "teacher": 172.8,
+              "nursery": 160.3,
+              "funny_home": 188.1,
+              "mama": 64.8,
+              "christmas": 28.1,
+              "friendship": 23.8,
+              "bookish": 97.2
+            },
+            "profit": 1113.1,
+            "orders": 39.8,
+            "revenue": 2175.0
+          },
+          {
+            "month": "Sep",
+            "by_niche": {
+              "bridal": 362.2,
+              "teacher": 97.2,
+              "nursery": 160.3,
+              "funny_home": 198.0,
+              "mama": 75.6,
+              "christmas": 74.9,
+              "friendship": 23.8,
+              "bookish": 97.2
+            },
+            "profit": 1089.2,
+            "orders": 38.6,
+            "revenue": 2124.6
+          },
+          {
+            "month": "Okt",
+            "by_niche": {
+              "bridal": 220.5,
+              "teacher": 64.8,
+              "nursery": 160.3,
+              "funny_home": 217.8,
+              "mama": 97.2,
+              "christmas": 187.2,
+              "friendship": 23.8,
+              "bookish": 102.1
+            },
+            "profit": 1073.6,
+            "orders": 41.5,
+            "revenue": 2020.7
+          },
+          {
+            "month": "Nov",
+            "by_niche": {
+              "bridal": 157.5,
+              "teacher": 86.4,
+              "nursery": 168.8,
+              "funny_home": 247.5,
+              "mama": 140.4,
+              "christmas": 393.1,
+              "friendship": 35.6,
+              "bookish": 121.5
+            },
+            "profit": 1350.8,
+            "orders": 55.1,
+            "revenue": 2471.9
+          },
+          {
+            "month": "Dis",
+            "by_niche": {
+              "bridal": 204.8,
+              "teacher": 129.6,
+              "nursery": 177.2,
+              "funny_home": 247.5,
+              "mama": 162.0,
+              "christmas": 421.2,
+              "friendship": 59.4,
+              "bookish": 121.5
+            },
+            "profit": 1523.1,
+            "orders": 61.5,
+            "revenue": 2800.2
+          }
+        ],
+        "total": {
+          "profit": 13764.6,
+          "orders": 512.5,
+          "revenue": 26435.8
+        }
+      },
+      "year1": {
+        "months": [
+          {
+            "month": "Jan",
+            "by_niche": {
+              "bridal": 17.3,
+              "teacher": 3.8,
+              "nursery": 8.0,
+              "funny_home": 8.9,
+              "mama": 3.8,
+              "christmas": 0.5,
+              "friendship": 8.9,
+              "bookish": 4.4
+            },
+            "profit": 55.6,
+            "orders": 2.0,
+            "revenue": 108.2
+          },
+          {
+            "month": "Feb",
+            "by_niche": {
+              "bridal": 34.6,
+              "teacher": 6.5,
+              "nursery": 16.0,
+              "funny_home": 15.8,
+              "mama": 7.6,
+              "christmas": 0.0,
+              "friendship": 24.9,
+              "bookish": 8.3
+            },
+            "profit": 113.8,
+            "orders": 4.2,
+            "revenue": 221.5
+          },
+          {
+            "month": "Mac",
+            "by_niche": {
+              "bridal": 72.4,
+              "teacher": 15.1,
+              "nursery": 35.4,
+              "funny_home": 37.6,
+              "mama": 19.4,
+              "christmas": 0.0,
+              "friendship": 4.8,
+              "bookish": 17.5
+            },
+            "profit": 202.3,
+            "orders": 7.1,
+            "revenue": 398.0
+          },
+          {
+            "month": "Apr",
+            "by_niche": {
+              "bridal": 129.9,
+              "teacher": 42.8,
+              "nursery": 66.8,
+              "funny_home": 68.6,
+              "mama": 49.9,
+              "christmas": 0.0,
+              "friendship": 7.8,
+              "bookish": 28.9
+            },
+            "profit": 394.7,
+            "orders": 14.2,
+            "revenue": 769.8
+          },
+          {
+            "month": "Mei",
+            "by_niche": {
+              "bridal": 196.9,
+              "teacher": 81.0,
+              "nursery": 88.6,
+              "funny_home": 99.0,
+              "mama": 102.6,
+              "christmas": 0.0,
+              "friendship": 11.9,
+              "bookish": 46.2
+            },
+            "profit": 626.1,
+            "orders": 23.1,
+            "revenue": 1214.4
+          },
+          {
+            "month": "Jun",
+            "by_niche": {
+              "bridal": 200.5,
+              "teacher": 57.9,
+              "nursery": 107.4,
+              "funny_home": 119.4,
+              "mama": 50.7,
+              "christmas": 0.0,
+              "friendship": 15.9,
+              "bookish": 61.9
+            },
+            "profit": 613.6,
+            "orders": 22.2,
+            "revenue": 1197.6
+          },
+          {
+            "month": "Jul",
+            "by_niche": {
+              "bridal": 261.4,
+              "teacher": 125.5,
+              "nursery": 133.1,
+              "funny_home": 139.7,
+              "mama": 53.8,
+              "christmas": 7.8,
+              "friendship": 19.7,
+              "bookish": 80.7
+            },
+            "profit": 821.6,
+            "orders": 30.0,
+            "revenue": 1597.6
+          },
+          {
+            "month": "Ogos",
+            "by_niche": {
+              "bridal": 378.0,
+              "teacher": 172.8,
+              "nursery": 160.3,
+              "funny_home": 188.1,
+              "mama": 64.8,
+              "christmas": 28.1,
+              "friendship": 23.8,
+              "bookish": 97.2
+            },
+            "profit": 1113.1,
+            "orders": 39.8,
+            "revenue": 2175.0
+          },
+          {
+            "month": "Sep",
+            "by_niche": {
+              "bridal": 362.2,
+              "teacher": 97.2,
+              "nursery": 160.3,
+              "funny_home": 198.0,
+              "mama": 75.6,
+              "christmas": 74.9,
+              "friendship": 23.8,
+              "bookish": 97.2
+            },
+            "profit": 1089.2,
+            "orders": 38.6,
+            "revenue": 2124.6
+          },
+          {
+            "month": "Okt",
+            "by_niche": {
+              "bridal": 220.5,
+              "teacher": 64.8,
+              "nursery": 160.3,
+              "funny_home": 217.8,
+              "mama": 97.2,
+              "christmas": 187.2,
+              "friendship": 23.8,
+              "bookish": 102.1
+            },
+            "profit": 1073.6,
+            "orders": 41.5,
+            "revenue": 2020.7
+          },
+          {
+            "month": "Nov",
+            "by_niche": {
+              "bridal": 157.5,
+              "teacher": 86.4,
+              "nursery": 168.8,
+              "funny_home": 247.5,
+              "mama": 140.4,
+              "christmas": 393.1,
+              "friendship": 35.6,
+              "bookish": 121.5
+            },
+            "profit": 1350.8,
+            "orders": 55.1,
+            "revenue": 2471.9
+          },
+          {
+            "month": "Dis",
+            "by_niche": {
+              "bridal": 204.8,
+              "teacher": 129.6,
+              "nursery": 177.2,
+              "funny_home": 247.5,
+              "mama": 162.0,
+              "christmas": 421.2,
+              "friendship": 59.4,
+              "bookish": 121.5
+            },
+            "profit": 1523.1,
+            "orders": 61.5,
+            "revenue": 2800.2
+          }
+        ],
+        "total": {
+          "profit": 8977.5,
+          "orders": 339.3,
+          "revenue": 17099.5
+        }
+      }
+    },
+    "optimis": {
+      "steady": {
+        "months": [
+          {
+            "month": "Jan",
+            "by_niche": {
+              "bridal": 693.0,
+              "teacher": 151.2,
+              "nursery": 320.6,
+              "funny_home": 356.4,
+              "mama": 151.2,
+              "christmas": 18.7,
+              "friendship": 356.4,
+              "bookish": 175.0
+            },
+            "profit": 2222.5,
+            "orders": 80.7,
+            "revenue": 4329.8
+          },
+          {
+            "month": "Feb",
+            "by_niche": {
+              "bridal": 693.0,
+              "teacher": 129.6,
+              "nursery": 320.6,
+              "funny_home": 316.8,
+              "mama": 151.2,
+              "christmas": 0.0,
+              "friendship": 499.0,
+              "bookish": 165.2
+            },
+            "profit": 2275.4,
+            "orders": 83.0,
+            "revenue": 4429.5
+          },
+          {
+            "month": "Mac",
+            "by_niche": {
+              "bridal": 724.5,
+              "teacher": 151.2,
+              "nursery": 354.4,
+              "funny_home": 376.2,
+              "mama": 194.4,
+              "christmas": 0.0,
+              "friendship": 47.5,
+              "bookish": 175.0
+            },
+            "profit": 2023.2,
+            "orders": 70.8,
+            "revenue": 3980.1
+          },
+          {
+            "month": "Apr",
+            "by_niche": {
+              "bridal": 787.5,
+              "teacher": 259.2,
+              "nursery": 405.0,
+              "funny_home": 415.8,
+              "mama": 302.4,
+              "christmas": 0.0,
+              "friendship": 47.5,
+              "bookish": 175.0
+            },
+            "profit": 2392.4,
+            "orders": 86.3,
+            "revenue": 4665.2
+          },
+          {
+            "month": "Mei",
+            "by_niche": {
+              "bridal": 787.5,
+              "teacher": 324.0,
+              "nursery": 354.4,
+              "funny_home": 396.0,
+              "mama": 410.4,
+              "christmas": 0.0,
+              "friendship": 47.5,
+              "bookish": 184.7
+            },
+            "profit": 2504.5,
+            "orders": 92.6,
+            "revenue": 4857.8
+          },
+          {
+            "month": "Jun",
+            "by_niche": {
+              "bridal": 598.5,
+              "teacher": 172.8,
+              "nursery": 320.6,
+              "funny_home": 356.4,
+              "mama": 151.2,
+              "christmas": 0.0,
+              "friendship": 47.5,
+              "bookish": 184.7
+            },
+            "profit": 1831.7,
+            "orders": 66.2,
+            "revenue": 3574.8
+          },
+          {
+            "month": "Jul",
+            "by_niche": {
+              "bridal": 630.0,
+              "teacher": 302.4,
+              "nursery": 320.6,
+              "funny_home": 336.6,
+              "mama": 129.6,
+              "christmas": 18.7,
+              "friendship": 47.5,
+              "bookish": 194.4
+            },
+            "profit": 1979.9,
+            "orders": 72.4,
+            "revenue": 3849.5
+          },
+          {
+            "month": "Ogos",
+            "by_niche": {
+              "bridal": 756.0,
+              "teacher": 345.6,
+              "nursery": 320.6,
+              "funny_home": 376.2,
+              "mama": 129.6,
+              "christmas": 56.2,
+              "friendship": 47.5,
+              "bookish": 194.4
+            },
+            "profit": 2226.1,
+            "orders": 79.6,
+            "revenue": 4349.9
+          },
+          {
+            "month": "Sep",
+            "by_niche": {
+              "bridal": 724.5,
+              "teacher": 194.4,
+              "nursery": 320.6,
+              "funny_home": 396.0,
+              "mama": 151.2,
+              "christmas": 149.8,
+              "friendship": 47.5,
+              "bookish": 194.4
+            },
+            "profit": 2178.4,
+            "orders": 77.2,
+            "revenue": 4249.1
+          },
+          {
+            "month": "Okt",
+            "by_niche": {
+              "bridal": 441.0,
+              "teacher": 129.6,
+              "nursery": 320.6,
+              "funny_home": 435.6,
+              "mama": 194.4,
+              "christmas": 374.4,
+              "friendship": 47.5,
+              "bookish": 204.1
+            },
+            "profit": 2147.3,
+            "orders": 83.0,
+            "revenue": 4041.4
+          },
+          {
+            "month": "Nov",
+            "by_niche": {
+              "bridal": 315.0,
+              "teacher": 172.8,
+              "nursery": 337.5,
+              "funny_home": 495.0,
+              "mama": 280.8,
+              "christmas": 786.2,
+              "friendship": 71.3,
+              "bookish": 243.0
+            },
+            "profit": 2701.6,
+            "orders": 110.2,
+            "revenue": 4943.7
+          },
+          {
+            "month": "Dis",
+            "by_niche": {
+              "bridal": 409.5,
+              "teacher": 259.2,
+              "nursery": 354.4,
+              "funny_home": 495.0,
+              "mama": 324.0,
+              "christmas": 842.4,
+              "friendship": 118.8,
+              "bookish": 243.0
+            },
+            "profit": 3046.3,
+            "orders": 123.0,
+            "revenue": 5600.5
+          }
+        ],
+        "total": {
+          "profit": 27529.3,
+          "orders": 1025.0,
+          "revenue": 52871.3
+        }
+      },
+      "year1": {
+        "months": [
+          {
+            "month": "Jan",
+            "by_niche": {
+              "bridal": 34.6,
+              "teacher": 7.6,
+              "nursery": 16.0,
+              "funny_home": 17.8,
+              "mama": 7.6,
+              "christmas": 0.9,
+              "friendship": 17.8,
+              "bookish": 8.7
+            },
+            "profit": 111.1,
+            "orders": 4.0,
+            "revenue": 216.5
+          },
+          {
+            "month": "Feb",
+            "by_niche": {
+              "bridal": 69.3,
+              "teacher": 13.0,
+              "nursery": 32.1,
+              "funny_home": 31.7,
+              "mama": 15.1,
+              "christmas": 0.0,
+              "friendship": 49.9,
+              "bookish": 16.5
+            },
+            "profit": 227.5,
+            "orders": 8.3,
+            "revenue": 442.9
+          },
+          {
+            "month": "Mac",
+            "by_niche": {
+              "bridal": 144.9,
+              "teacher": 30.2,
+              "nursery": 70.9,
+              "funny_home": 75.2,
+              "mama": 38.9,
+              "christmas": 0.0,
+              "friendship": 9.5,
+              "bookish": 35.0
+            },
+            "profit": 404.6,
+            "orders": 14.2,
+            "revenue": 796.0
+          },
+          {
+            "month": "Apr",
+            "by_niche": {
+              "bridal": 259.9,
+              "teacher": 85.5,
+              "nursery": 133.7,
+              "funny_home": 137.2,
+              "mama": 99.8,
+              "christmas": 0.0,
+              "friendship": 15.7,
+              "bookish": 57.7
+            },
+            "profit": 789.5,
+            "orders": 28.5,
+            "revenue": 1539.5
+          },
+          {
+            "month": "Mei",
+            "by_niche": {
+              "bridal": 393.8,
+              "teacher": 162.0,
+              "nursery": 177.2,
+              "funny_home": 198.0,
+              "mama": 205.2,
+              "christmas": 0.0,
+              "friendship": 23.8,
+              "bookish": 92.3
+            },
+            "profit": 1252.2,
+            "orders": 46.3,
+            "revenue": 2428.9
+          },
+          {
+            "month": "Jun",
+            "by_niche": {
+              "bridal": 401.0,
+              "teacher": 115.8,
+              "nursery": 214.8,
+              "funny_home": 238.8,
+              "mama": 101.3,
+              "christmas": 0.0,
+              "friendship": 31.8,
+              "bookish": 123.7
+            },
+            "profit": 1227.3,
+            "orders": 44.4,
+            "revenue": 2395.1
+          },
+          {
+            "month": "Jul",
+            "by_niche": {
+              "bridal": 522.9,
+              "teacher": 251.0,
+              "nursery": 266.1,
+              "funny_home": 279.4,
+              "mama": 107.6,
+              "christmas": 15.5,
+              "friendship": 39.4,
+              "bookish": 161.4
+            },
+            "profit": 1643.3,
+            "orders": 60.1,
+            "revenue": 3195.1
+          },
+          {
+            "month": "Ogos",
+            "by_niche": {
+              "bridal": 756.0,
+              "teacher": 345.6,
+              "nursery": 320.6,
+              "funny_home": 376.2,
+              "mama": 129.6,
+              "christmas": 56.2,
+              "friendship": 47.5,
+              "bookish": 194.4
+            },
+            "profit": 2226.1,
+            "orders": 79.6,
+            "revenue": 4349.9
+          },
+          {
+            "month": "Sep",
+            "by_niche": {
+              "bridal": 724.5,
+              "teacher": 194.4,
+              "nursery": 320.6,
+              "funny_home": 396.0,
+              "mama": 151.2,
+              "christmas": 149.8,
+              "friendship": 47.5,
+              "bookish": 194.4
+            },
+            "profit": 2178.4,
+            "orders": 77.2,
+            "revenue": 4249.1
+          },
+          {
+            "month": "Okt",
+            "by_niche": {
+              "bridal": 441.0,
+              "teacher": 129.6,
+              "nursery": 320.6,
+              "funny_home": 435.6,
+              "mama": 194.4,
+              "christmas": 374.4,
+              "friendship": 47.5,
+              "bookish": 204.1
+            },
+            "profit": 2147.3,
+            "orders": 83.0,
+            "revenue": 4041.4
+          },
+          {
+            "month": "Nov",
+            "by_niche": {
+              "bridal": 315.0,
+              "teacher": 172.8,
+              "nursery": 337.5,
+              "funny_home": 495.0,
+              "mama": 280.8,
+              "christmas": 786.2,
+              "friendship": 71.3,
+              "bookish": 243.0
+            },
+            "profit": 2701.6,
+            "orders": 110.2,
+            "revenue": 4943.7
+          },
+          {
+            "month": "Dis",
+            "by_niche": {
+              "bridal": 409.5,
+              "teacher": 259.2,
+              "nursery": 354.4,
+              "funny_home": 495.0,
+              "mama": 324.0,
+              "christmas": 842.4,
+              "friendship": 118.8,
+              "bookish": 243.0
+            },
+            "profit": 3046.3,
+            "orders": 123.0,
+            "revenue": 5600.5
+          }
+        ],
+        "total": {
+          "profit": 17955.2,
+          "orders": 678.8,
+          "revenue": 34198.6
+        }
+      }
+    }
+  }
+}
