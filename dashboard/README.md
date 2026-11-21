@@ -8,5 +8,5 @@ Dashboard: https://claude.ai/artifact/EeAC4MqQijSGYGTWfZW3Sg (jenis "Data").
 
 ## Tab
 
-- **Riset utama**: semua produk (data `data/export/*.json`).
-- **Poster**: riset khas poster P1–P8 (data `data/export/posters/*.json`, dijana oleh `scripts/poster_p1.py` … `scripts/poster_p7.py`; dataset `poster_*` dalam artifact).
+- **Poster** (dibuka dahulu): riset khas poster P1–P8, kalkulator harga dan slider pelawat (data `data/export/posters/*.json`, dijana oleh `scripts/poster_p1.py` … `scripts/poster_p7.py`; dataset `poster_*` dalam artifact).
+- **Semua produk**: riset semua produk (data `data/export/*.json`).
