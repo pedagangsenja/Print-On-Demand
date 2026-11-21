@@ -1,0 +1,48 @@
+{
+  "stage": 4,
+  "title": "Top produk Printify + digital",
+  "updated": "2026-11-21",
+  "assumptions": {
+    "plan": "Printify Free (harga Premium dicatat jika ada)",
+    "market": "Pembeli di US",
+    "shipping": "Pembeli bayar shipping (pass-through)",
+    "payment_fee": "~6% x (harga + shipping) + $0.22 (Stripe Malaysia, kad antarabangsa + tukaran)",
+    "profit_formula": "harga - kos asas - fee bayaran",
+    "note": "Kos asas 'From USD' ialah saiz/provider termurah di halaman Printify; saiz lain lebih mahal. Sahkan dalam editor Printify sebelum menetapkan harga."
+  },
+  "products": [
+    {"id": "poster_matte", "name": "Poster matte (vertical)", "base_usd": 4.96, "base_premium_usd": 3.61, "base_note": "Saiz termurah; 47 saiz; 18x24 dianggar ~$8.50, 24x36 ~$10.39", "shipping_usd": 7.39, "shipping_additional_usd": 1.99, "shipping_note": "Today's Graphics 16x20/18x24 ke US", "price_usd": 29.99, "profit_usd": 19.0, "profit_note": "Saiz 18x24", "sources": ["https://printify.com/app/products/282/generic-brand/matte-vertical-posters", "https://printify.com/app/products/home-and-living/posters", "https://printify.com/shipping-rates/todays-graphics/"], "level": "rasmi (kos permulaan); anggaran (saiz 18x24)"},
+    {"id": "poster_framed", "name": "Poster berbingkai (vertical)", "base_usd": 35.89, "base_premium_usd": 26.01, "shipping_usd": 12.8, "shipping_note": "~$12.49-13.19 (data halaman produk)", "price_usd": 74.99, "profit_usd": 33.6, "sources": ["https://printify.com/app/products/540/roma-imaging/framed-vertical-poster"], "level": "rasmi"},
+    {"id": "canvas", "name": "Canvas stretched", "base_usd": 10.63, "base_premium_usd": 7.94, "base_note": "Matte Canvas 1.25\" saiz termurah; 16x20 dianggar $15-22", "shipping_usd": 10, "shipping_note": "Anggaran", "price_usd": 69.99, "profit_usd_range": "43-50", "profit_note": "Saiz 16x20 (kos anggaran)", "sources": ["https://printify.com/app/products/home-and-living/canvas", "https://apparelhub.ai/blog/best-print-on-demand-supplier-for-canvas-prints"], "level": "rasmi (kos permulaan); anggaran (16x20)"},
+    {"id": "mug_11oz", "name": "Mug seramik 11oz", "base_usd": 4.93, "base_premium_usd": 3.68, "shipping_usd": 5.49, "shipping_additional_usd": 2.99, "shipping_note": "Printify Choice (baris jadual tidak dilabel; belum disahkan); SwiftPOD $6.99", "price_usd": 19.99, "profit_usd": 13.3, "sources": ["https://printify.com/app/products/478/generic-brand/ceramic-mug-11oz-15oz", "https://printify.com/shipping-rates/printify-choice/", "https://printify.com/shipping-rates/swiftpod/"], "level": "rasmi"},
+    {"id": "tote", "name": "Tote bag cotton canvas (Liberty Bags)", "base_usd": 9.67, "shipping_usd": 5, "shipping_note": "Anggaran (kadar Printify tidak dijumpai)", "price_usd": 24.99, "profit_usd": 13.3, "sources": ["https://printify.com/app/brand/94/liberty-bags"], "level": "rasmi (kos); anggaran (shipping)"},
+    {"id": "stickers", "name": "Kiss-cut stickers", "base_usd": 1.21, "base_note": "Bermula $1.21 sekeping; Premium hingga 20% diskaun", "shipping_usd": 4, "shipping_note": "Anggaran", "price_usd": 4.99, "profit_usd": 3.0, "use": "Tambahan (add-on) untuk kotak bridal, cikgu, bookish", "sources": ["https://printify.com/make-your-own-stickers"], "level": "rasmi (kos); anggaran (shipping)"},
+    {"id": "tumbler_20oz", "name": "Tumbler stainless 20oz", "base_note": "EUR 18.59 (Premium EUR 16.48); harga USD tidak dijumpai; pihak ketiga $12-16", "shipping_note": "EUR 5.56", "price_usd": 32.99, "profit_usd_range": "10-16", "sources": ["https://printify.com/app/products/1927/generic-brand/stainless-steel-tumbler-20oz", "https://merchtitans.com/blog/print-on-demand-tumblers-guide"], "level": "rasmi (EUR); anggaran (USD)"},
+    {"id": "gildan_18000", "name": "Sweatshirt Gildan 18000", "base_usd": 17.87, "shipping_usd": 8, "shipping_note": "Anggaran $5.99-8.79", "price_usd": 44.99, "profit_usd": 23.7, "sources": ["https://printify.com/app/products/49/gildan/unisex-heavy-blendtm-crewneck-sweatshirt", "https://printify.com/blog/gildan-sweatshirts/"], "level": "rasmi"},
+    {"id": "gildan_18000_embroidered", "name": "Sweatshirt Gildan 18000 bersulam", "base_usd": 19.61, "shipping_usd": 8, "price_usd": 54.99, "profit_usd": 31.4, "sources": ["https://printify.com/custom-embroidered-hoodies/"], "level": "rasmi"},
+    {"id": "cc_1566", "name": "Sweatshirt Comfort Colors 1566", "base_usd": 31.29, "base_premium_usd": 23.85, "shipping_usd": 8, "price_usd": 59.99, "profit_usd": 24.4, "profit_premium_usd": 31.8, "sources": ["https://printify.com/app/products/bestsellers"], "level": "rasmi"},
+    {"id": "cc_1717", "name": "T-shirt Comfort Colors 1717", "base_usd": 12.41, "shipping_usd": 4.75, "shipping_additional_usd": 2.40, "price_usd": 32.99, "profit_usd": 18.1, "sources": ["https://printify.com/custom-t-shirts-ab/", "https://printify.com/shipping-rates/printify-choice/"], "level": "rasmi"},
+    {"id": "velveteen_blanket", "name": "Velveteen plush blanket", "base_usd": 13.64, "base_premium_usd": 9.88, "base_note": "Saiz termurah", "shipping_usd": 5.69, "price_usd": 44.99, "profit_usd": 28.1, "sources": ["https://printify.com/app/products/522/generic-brand/velveteen-plush-blanket"], "level": "rasmi"},
+    {"id": "digital_printable_bundle", "name": "Printable digital (bundle 3-12)", "base_usd": 0, "price_usd": 12.99, "profit_usd": 12.0, "market_prices": "Etsy: set 12 cetakan $2.70; set 25 cetakan $14.62-18.22; bundle kelas 15 produk $32.99; quote minimal $5-18", "fulfilment": "WooCommerce produk 'downloadable' (percuma)", "sources": ["https://www.etsy.com/listing/4315142864", "https://www.etsy.com/listing/4323688674", "https://www.insightagent.app/guides/best-selling-printable-wall-art-etsy"], "level": "rasmi (harga listing Etsy)"},
+    {"id": "digital_svg_bundle", "name": "Fail SVG/PNG (Cricut, sublimation)", "base_usd": 0, "price_usd": 9.99, "profit_usd": 9.2, "market_prices": "Sefail $2-6; bundle $6-15", "sources": ["https://mydesigns.io/blog/svg-files-for-cricut/", "https://merchtitans.com/blog/how-to-sell-svg-files-online"], "level": "pihak_ketiga"}
+  ],
+  "bundles": [
+    {"id": "bridal_sweatshirt_set", "name": "Set bridal 5 x Gildan 18000 @ $38", "revenue_usd": 190, "profit_usd": 88, "note": "Shipping pembeli: $8 + 4 x ~$2.50"},
+    {"id": "bridal_tee_set", "name": "Set bridal 5 x Comfort Colors 1717 @ $29.99", "revenue_usd": 149.95, "profit_usd": 78, "note": "Shipping pembeli: $4.75 + 4 x $2.40"},
+    {"id": "poster_set_3", "name": "Set 3 poster 18x24 @ $69.99", "revenue_usd": 69.99, "profit_usd": 39, "note": "Shipping pembeli: $7.39 + 2 x $1.99"}
+  ],
+  "niche_product_map": {
+    "bridal": ["bridal_sweatshirt_set", "bridal_tee_set", "tote", "tumbler_20oz", "stickers"],
+    "teacher": ["digital_printable_bundle", "poster_matte", "tote", "tumbler_20oz", "mug_11oz"],
+    "nursery": ["poster_matte", "poster_framed", "canvas", "digital_printable_bundle", "velveteen_blanket"],
+    "funny_home": ["poster_set_3", "poster_matte", "digital_printable_bundle", "poster_framed", "mug_11oz"],
+    "mama": ["mug_11oz", "poster_framed", "velveteen_blanket", "tote", "cc_1566"],
+    "christmas": ["gildan_18000", "mug_11oz", "velveteen_blanket", "poster_matte"],
+    "friendship": ["mug_11oz", "tumbler_20oz", "stickers", "cc_1717"],
+    "bookish": ["tote", "gildan_18000", "stickers", "poster_matte", "digital_svg_bundle"]
+  },
+  "corrections": [
+    "Kos Gildan 18000 disahkan $17.87 di halaman Printify (anggaran sebelum ini $15.24): untung sehelai ~$23.7 (bukan ~$26); set bridal 5 helai ~$88 (bukan ~$101).",
+    "Kos mug 11oz disahkan $4.93 (anggaran sebelum ini $7.25): untung ~$13.3 (bukan ~$11)."
+  ]
+}
