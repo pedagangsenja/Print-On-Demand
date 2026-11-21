@@ -29,6 +29,7 @@
 .pod-chart svg { display: block; overflow: visible; }
 .pod-msg { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); padding: var(--cds-pad-md) 0; }
 .pod-tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); box-shadow: var(--cds-shadow-popover); border-radius: var(--cds-radius); padding: var(--cds-pad-sm) var(--cds-pad-md); font-size: var(--cds-font-size-caption); min-width: 160px; z-index: 3; display: grid; gap: 2px; font-variant-numeric: tabular-nums; }
+.pod-tip[hidden] { display: none; }
 .pod-tip strong { font-weight: var(--cds-font-weight-medium); }
 .pod-tip .pod-tip-row { display: flex; justify-content: space-between; gap: var(--cds-gap-md); color: var(--cds-text-secondary); }
 .pod-axis text { fill: var(--cds-text-secondary); font-size: var(--cds-font-size-caption); font-family: var(--font-anthropic-sans); }
@@ -69,7 +70,18 @@
 .pod details { border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-sm) var(--cds-pad-md); }
 .pod details summary { cursor: pointer; font-weight: var(--cds-font-weight-medium); font-size: var(--cds-font-size-caption); }
 .pod details[open] > :not(summary) { margin-top: var(--cds-gap-sm); }
-@media print { .pod-scroll { max-height: none; overflow: visible; border: 0; } .pod-nav { display: none; } .pod details { border: 0; } }
+.pod-tabbar { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs); border-bottom: 1px solid var(--color-border-line); }
+.pod-tab-btn { appearance: none; background: none; border: 0; border-bottom: 2px solid transparent; margin-bottom: -1px; padding: var(--cds-pad-sm) var(--cds-pad-md); font: inherit; font-size: var(--cds-font-size-body); color: var(--color-fg-muted); cursor: pointer; }
+.pod-tab-btn[aria-selected="true"] { color: var(--color-fg); border-bottom-color: var(--color-fg); font-weight: var(--cds-font-weight-medium); }
+.pod-tab-btn:hover { color: var(--color-fg); }
+.pod-tab-btn:focus-visible { outline: 2px solid var(--color-fg); outline-offset: 2px; border-radius: var(--cds-radius); }
+.pod-tab { display: grid; gap: calc(var(--cds-gap-xl) * 1.5); min-width: 0; }
+.pod-tab[hidden] { display: none !important; }
+.pod-guide { gap: var(--cds-gap-md); }
+.pod-guide-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--cds-gap-sm); }
+.pod-guide-head h3 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-heading); }
+.pod-guide-tiles > div { min-width: 0; display: grid; gap: 2px; align-content: start; }
+@media print { .pod-scroll { max-height: none; overflow: visible; border: 0; } .pod-nav, .pod-tabbar { display: none; } .pod details { border: 0; } #tab-poster { break-before: page; } }
 </style>
 
 <div class="pod">
@@ -77,6 +89,16 @@
 <header id="ringkasan" class="pod-section pod-first">
   <div class="pod-kicker">Riset untuk kedai typography di Pinterest</div>
   <h1>Riset POD Typography</h1>
+  <p class="pod-muted">Dua tab: <b>Riset utama</b> untuk semua produk (baju, mug, poster dan lain-lain), dan <b>Poster</b> untuk riset khas poster yang berisiko rendah dan laku sepanjang tahun.</p>
+  <div class="pod-tabbar" role="tablist" aria-label="Tab dashboard">
+    <button type="button" class="pod-tab-btn" role="tab" id="btn-utama" data-tab="tab-utama" aria-controls="tab-utama" aria-selected="true">Riset utama</button>
+    <button type="button" class="pod-tab-btn" role="tab" id="btn-poster" data-tab="tab-poster" aria-controls="tab-poster" aria-selected="false" tabindex="-1">Poster</button>
+  </div>
+</header>
+
+<section id="tab-utama" class="pod-tab" role="tabpanel" aria-labelledby="btn-utama">
+
+<div id="utama-intro" class="pod-section pod-first">
   <p class="pod-lede">Bila kedai sudah matang, anggaran untung ialah <b data-draw="lede-steady" data-source="scenarios" data-field="steady_profit" data-where="scenario=Asas">—</b> setahun. Niche <b data-draw="lede-top" data-source="niche_profit" data-field="niche" data-row="0">—</b> paling banyak menyumbang, iaitu <b data-draw="lede-share" data-source="niche_profit" data-field="share" data-row="0">—</b>% daripada untung.</p>
   <ul class="pod-how">
     <li>Mula dengan <b>Jawapan ringkas</b> di bawah, kemudian pilih niche di bahagian <b>Produk untuk setiap niche</b>.</li>
@@ -94,7 +116,7 @@
     <a href="#pin">Pin</a>
     <a href="#sumber">Sumber</a>
   </nav>
-</header>
+</div>
 
 <section id="jawapan" class="pod-section">
   <h2>Jawapan ringkas</h2>
@@ -391,6 +413,369 @@
       </table>
     </div>
   </details>
+</section>
+
+
+</section>
+
+<section id="tab-poster" class="pod-tab" role="tabpanel" aria-labelledby="btn-poster" hidden>
+
+<div id="p-intro" class="pod-section pod-first">
+  <div class="pod-kicker">Riset khas poster</div>
+  <h2>Poster sahaja: risiko rendah, jualan sepanjang tahun</h2>
+  <p class="pod-lede">Kedai poster sahaja dijangka untung <b data-draw="p-lede-steady" data-source="poster_scenarios" data-field="profit_steady" data-where="scenario=Asas">—</b> setahun bila matang, <span data-draw="p-lede-word">—</span> model campuran baju dan poster (<b data-draw="p-lede-mixed" data-source="scenarios" data-field="steady_profit" data-where="scenario=Asas">—</b>). Niche <b data-draw="p-lede-top" data-source="poster_niche_profit" data-field="niche" data-row="0">—</b> paling banyak menyumbang (<b data-draw="p-lede-share" data-source="poster_niche_profit" data-field="share" data-row="0">—</b>% daripada untung).</p>
+  <ul class="pod-how">
+    <li>Kenapa risiko rendah: Printify tidak menerima pulangan kerana salah saiz atau tukar fikiran, dan poster tiada isu saiz badan, punca utama pulangan baju. Poster yang rosak semasa penghantaran dicetak semula percuma.</li>
+    <li>Pilih niche di <b>Panduan niche</b> untuk melihat gaya, fon, produk dan bila perlu pin.</li>
+    <li>Semua jumlah dalam USD dan ialah anggaran. Lihat <b>Sumber poster</b> untuk bukti setiap angka.</li>
+  </ul>
+  <nav class="pod-nav" aria-label="Bahagian poster">
+    <a href="#p-jawapan">Jawapan ringkas</a>
+    <a href="#p-untung">Untung</a>
+    <a href="#p-panduan">Panduan niche</a>
+    <a href="#p-niche">Semua niche</a>
+    <a href="#p-format">Format &amp; harga</a>
+    <a href="#p-katakunci">Kata kunci</a>
+    <a href="#p-kalendar">Bila jual</a>
+    <a href="#p-persona">Pembeli</a>
+    <a href="#p-pin">Pin</a>
+    <a href="#p-sumber">Sumber poster</a>
+  </nav>
+</div>
+
+<section id="p-jawapan" class="pod-section">
+  <h2>Jawapan ringkas: poster</h2>
+  <div class="pod-answers">
+    <div class="pod-card" id="p-ans-untung">
+      <div class="pod-q">Berapa untung setahun?</div>
+      <div class="pod-big" data-draw="p-kpi-steady" data-source="poster_scenarios" data-field="profit_steady" data-where="scenario=Asas">—</div>
+      <div class="pod-muted">Bila matang, <span data-draw="p-kpi-orders" data-source="poster_scenarios" data-field="orders_steady" data-where="scenario=Asas">—</span> pesanan setahun. Tahun pertama (2027): <span data-draw="p-kpi-y1" data-source="poster_scenarios" data-field="profit_year1" data-where="scenario=Asas">—</span>.</div>
+    </div>
+    <div class="pod-card" id="p-ans-banding">
+      <div class="pod-q">Poster sahaja vs model campuran?</div>
+      <div class="pod-big" data-draw="p-cmp-diff" data-source="poster_vs_mixed" data-field="diff" data-row="0">—</div>
+      <div class="pod-muted">Beza setahun (<span data-draw="p-cmp-pct" data-source="poster_vs_mixed" data-field="diff_pct" data-row="0">—</span>%). Poster <span data-draw="p-cmp-poster" data-source="poster_vs_mixed" data-field="poster" data-row="0">—</span> vs campuran <span data-draw="p-cmp-mixed" data-source="poster_vs_mixed" data-field="mixed" data-row="0">—</span>, tanpa risiko pulangan saiz.</div>
+    </div>
+    <div class="pod-card" id="p-ans-niche">
+      <div class="pod-q">Niche poster paling untung?</div>
+      <div class="pod-mid" data-draw="p-ans-niche" data-source="poster_niche_profit" data-field="niche" data-row="0">—</div>
+      <div class="pod-muted"><span data-draw="p-ans-niche-profit" data-source="poster_niche_profit" data-field="profit" data-row="0">—</span> setahun daripada niche ini.</div>
+    </div>
+    <div class="pod-card" id="p-ans-produk">
+      <div class="pod-q">Produk poster paling untung seunit?</div>
+      <div class="pod-mid" data-draw="p-ans-product" data-source="poster_top_product" data-field="product" data-row="0">—</div>
+      <div class="pod-muted">Untung ~<span data-draw="p-ans-product-profit" data-source="poster_top_product" data-field="profit_usd" data-row="0">—</span> seunit (tidak termasuk set).</div>
+    </div>
+    <div class="pod-card" id="p-ans-katakunci">
+      <div class="pod-q">Kata kunci poster paling berpeluang?</div>
+      <div class="pod-mid" data-draw="p-ans-keyword" data-source="poster_top_keyword" data-field="keyword" data-row="0">—</div>
+      <div class="pod-muted"><span data-draw="p-ans-keyword-opp" data-source="poster_top_keyword" data-field="opportunity" data-row="0">—</span> carian sebulan bagi setiap 1,000 produk pesaing di Etsy.</div>
+    </div>
+  </div>
+</section>
+
+<section id="p-untung" class="pod-section">
+  <h2>Berapa untung poster setiap bulan?</h2>
+  <p class="pod-muted">Purata <b data-draw="p-avg" data-source="poster_monthly_stats" data-field="avg" data-row="0">—</b> sebulan bila matang. Bulan paling rendah <b data-draw="p-min-month" data-source="poster_monthly_stats" data-field="min_month" data-row="0">—</b> (<span data-draw="p-min" data-source="poster_monthly_stats" data-field="min" data-row="0">—</span>), paling tinggi <b data-draw="p-max-month" data-source="poster_monthly_stats" data-field="max_month" data-row="0">—</b> (<span data-draw="p-max" data-source="poster_monthly_stats" data-field="max" data-row="0">—</span>). Bulan paling rendah masih <b data-draw="p-low-high" data-source="poster_monthly_stats" data-field="low_vs_high" data-row="0">—</b>% daripada bulan tertinggi.</p>
+  <ul class="pod-legend" id="p-legend-monthly">
+    <li><span class="pod-sw" id="p-sw-matang"></span>Bila matang</li>
+    <li><span class="pod-sw pod-line"></span>Tahun pertama (2027)</li>
+  </ul>
+  <div class="pod-chart" id="p-chart-monthly" data-draw="p-monthly" data-source="poster_monthly"></div>
+
+  <div class="pod-two">
+    <div>
+      <h3 id="p-tajuk-niche-untung">Untung setahun ikut niche (bila matang)</h3>
+      <div class="pod-chart pod-short" id="p-chart-niche-profit" data-draw="p-niche-profit" data-source="poster_niche_profit"></div>
+    </div>
+    <div>
+      <h3 id="p-tajuk-senario">Tiga senario</h3>
+      <div class="pod-table-wrap">
+        <table id="p-table-scenarios" data-source="poster_scenarios" data-row-key="scenario">
+          <thead><tr>
+            <th data-field="scenario">Senario</th>
+            <th class="pod-num" data-field="profit_year1">Tahun 1</th>
+            <th class="pod-num" data-field="profit_steady">Matang</th>
+            <th class="pod-num" data-field="orders_steady">Pesanan</th>
+            <th class="pod-num" data-field="revenue_steady">Jualan</th>
+            <th data-field="assumption">Andaian</th>
+          </tr></thead>
+          <tbody data-draw="p-scenarios-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <p class="pod-muted">Musim jualan dan kadar pembelian ialah anggaran yang belum disahkan dengan Pinterest atau Google Trends. Kemas kini dengan data jualan sebenar selepas 3 bulan.</p>
+</section>
+
+<section id="p-panduan" class="pod-section">
+  <h2>Panduan niche: apa nak design dan jual</h2>
+  <p class="pod-muted">Pilih niche untuk melihat gaya design, fon, format produk, overlay pin dan bila perlu mula pin.</p>
+  <div class="pod-select-row">
+    <label class="pod-muted" for="p-guide-niche">Niche</label>
+    <select id="p-guide-niche" class="dash-select" data-draw="p-guide-filter" data-source="poster_niches" aria-label="Pilih niche poster"></select>
+  </div>
+  <div id="p-guide-card" data-draw="p-guide" data-source="poster_niches"></div>
+  <template id="tpl-p-guide">
+    <article class="pod-card pod-guide">
+      <div class="pod-guide-head">
+        <h3 class="pod-g-name"></h3>
+        <span class="pod-pill pod-g-wave"></span>
+      </div>
+      <div class="pod-tiles pod-guide-tiles">
+        <div><div class="pod-q">Untung setahun</div><div class="pod-mid pod-g-profit"></div></div>
+        <div><div class="pod-q">Untung setiap pesanan</div><div class="pod-mid pod-g-ppo"></div></div>
+        <div><div class="pod-q">Kata kunci utama</div><div class="pod-mid pod-g-kw"></div><div class="pod-muted"><span class="pod-g-vol"></span> carian sebulan</div></div>
+      </div>
+      <dl class="pod-dl">
+        <dt>Gaya</dt><dd data-f="style"></dd>
+        <dt>Palet warna</dt><dd data-f="palette"></dd>
+        <dt>Fon</dt><dd data-f="fonts"></dd>
+        <dt>Produk</dt><dd data-f="product_mix"></dd>
+        <dt>Overlay pin</dt><dd data-f="pin_overlay"></dd>
+        <dt>Bulan puncak</dt><dd data-f="peak_months"></dd>
+        <dt>Bila mula pin</dt><dd data-f="pin_window"></dd>
+        <dt>Bukti</dt><dd data-f="key_evidence"></dd>
+      </dl>
+    </article>
+  </template>
+  <p class="pod-muted">Fon ialah cadangan keluarga Google Fonts berlesen SIL OFL; sahkan lesen setiap fon sebelum digunakan.</p>
+</section>
+
+<section id="p-niche" class="pod-section">
+  <h2>Semua niche poster yang dikaji</h2>
+  <p class="pod-muted">Skor daripada 30: permintaan, saingan rendah, typography, padan Pinterest, nilai pesanan dan automasi. "Gelombang 1" dilancarkan dahulu; untung setahun hanya dikira untuk niche Gelombang 1.</p>
+  <div class="pod-table-wrap pod-scroll">
+    <table id="p-table-niches" data-source="poster_niches" data-row-key="id">
+      <thead><tr>
+        <th class="pod-num" data-field="rank">#</th>
+        <th data-field="niche">Niche</th>
+        <th class="pod-num" data-field="total">Skor /30</th>
+        <th data-field="peak_months">Puncak jualan</th>
+        <th data-field="wave">Keputusan</th>
+        <th class="pod-num" data-field="annual_profit">Untung setahun</th>
+        <th data-field="top_keyword">Kata kunci utama</th>
+        <th class="pod-num" data-field="top_keyword_volume">Carian / bulan</th>
+        <th data-field="evidence_level">Tahap bukti</th>
+      </tr></thead>
+      <tbody data-draw="p-niches-body"></tbody>
+    </table>
+  </div>
+  <details id="p-pecahan-skor">
+    <summary>Lihat pecahan skor setiap kriteria (1–5)</summary>
+    <div class="pod-table-wrap">
+      <table id="p-table-scores" data-source="poster_niches" data-row-key="id">
+        <thead><tr>
+          <th data-field="niche">Niche</th>
+          <th data-field="group">Kumpulan</th>
+          <th class="pod-num" data-field="demand">Permintaan</th>
+          <th class="pod-num" data-field="competition">Saingan rendah</th>
+          <th class="pod-num" data-field="typography_fit">Typography</th>
+          <th class="pod-num" data-field="pinterest_fit">Pinterest</th>
+          <th class="pod-num" data-field="order_value">Nilai pesanan</th>
+          <th class="pod-num" data-field="automation">Automasi</th>
+        </tr></thead>
+        <tbody data-draw="p-scores-body"></tbody>
+      </table>
+    </div>
+    <p class="pod-muted">Skor ialah penilaian Claude berdasarkan bukti yang dipautkan, bukan data rasmi.</p>
+  </details>
+</section>
+
+<section id="p-format" class="pod-section">
+  <h2>Format poster mana paling untung?</h2>
+  <p class="pod-muted">Untung seunit = harga jual − kos Printify − fee bayaran (pelan Printify Free, pembeli bayar shipping). Kos bertanda "Anggaran" perlu disahkan dalam editor Printify.</p>
+  <div class="pod-chart pod-short" id="p-chart-profit" data-draw="p-profit-chart" data-source="poster_profit"></div>
+  <details id="p-jadual-harga">
+    <summary>Lihat harga jual, kos, shipping dan margin setiap produk</summary>
+    <div class="pod-table-wrap pod-scroll">
+      <table id="p-table-profit" data-source="poster_profit" data-row-key="product">
+        <thead><tr>
+          <th data-field="product">Produk</th>
+          <th class="pod-num" data-field="price_usd">Harga jual</th>
+          <th class="pod-num" data-field="base_usd">Kos Printify</th>
+          <th class="pod-num" data-field="shipping_usd">Shipping (pembeli)</th>
+          <th class="pod-num" data-field="profit_usd">Untung</th>
+          <th class="pod-num" data-field="margin_pct">Margin %</th>
+          <th data-field="cost_note">Nota kos</th>
+        </tr></thead>
+        <tbody data-draw="p-profit-body"></tbody>
+      </table>
+    </div>
+  </details>
+  <details id="p-jadual-format">
+    <summary>Lihat semua format poster di Printify dan cadangan</summary>
+    <div class="pod-table-wrap pod-scroll">
+      <table id="p-table-formats" data-source="poster_formats" data-row-key="format">
+        <thead><tr>
+          <th data-field="format">Format</th>
+          <th class="pod-num" data-field="base_min_usd">Kos min (Free)</th>
+          <th class="pod-num" data-field="premium_min_usd">Kos min (Premium)</th>
+          <th data-field="use">Kegunaan</th>
+          <th data-field="recommendation">Cadangan</th>
+          <th data-field="level">Tahap bukti</th>
+          <th data-field="source">Sumber</th>
+        </tr></thead>
+        <tbody data-draw="p-formats-body"></tbody>
+      </table>
+    </div>
+  </details>
+</section>
+
+<section id="p-katakunci" class="pod-section">
+  <h2>Apa yang pembeli poster cari?</h2>
+  <p class="pod-muted">Volum carian Google ialah anggaran RankHero (global). Pinterest tidak menerbitkan jumlah carian sebenar, jadi angka Pinterest tidak dipaparkan.</p>
+  <div class="pod-select-row">
+    <label class="pod-muted" for="p-kw-niche">Niche</label>
+    <select id="p-kw-niche" class="dash-select" data-draw="p-kw-filter" data-source="poster_keywords" aria-label="Tapis niche kata kunci poster"></select>
+  </div>
+  <h3 id="p-tajuk-peluang">Peluang: carian sebulan bagi setiap 1,000 produk pesaing di Etsy</h3>
+  <div class="pod-chart pod-short" id="p-chart-opportunity" data-draw="p-opportunity" data-source="poster_keywords"></div>
+  <details id="p-jadual-katakunci">
+    <summary>Lihat semua kata kunci poster dan jumlah carian</summary>
+    <div class="pod-table-wrap pod-scroll">
+      <table id="p-table-keywords" data-source="poster_keywords" data-row-key="keyword">
+        <thead><tr>
+          <th data-field="niche">Niche</th>
+          <th data-field="keyword">Kata kunci</th>
+          <th class="pod-num" data-field="google_monthly">Carian / bulan</th>
+          <th class="pod-num" data-field="etsy_listings">Produk pesaing Etsy</th>
+          <th class="pod-num" data-field="opportunity">Peluang</th>
+          <th data-field="intent">Niat</th>
+          <th data-field="note">Nota</th>
+          <th data-field="source">Sumber</th>
+        </tr></thead>
+        <tbody data-draw="p-kw-body"></tbody>
+      </table>
+    </div>
+  </details>
+</section>
+
+<section id="p-kalendar" class="pod-section">
+  <h2>Bila poster laku dan bila nak pin?</h2>
+  <p class="pod-muted">Warna lebih pekat = bulan jualan lebih tinggi (100 = bulan biasa). Mula pin 45–60 hari sebelum bulan puncak.</p>
+  <div class="pod-table-wrap">
+    <div class="pod-chart" id="p-chart-heatmap" data-draw="p-heatmap" data-source="poster_seasonality"></div>
+  </div>
+  <div class="pod-table-wrap">
+    <table id="p-table-calendar" data-source="poster_niches" data-row-key="id">
+      <thead><tr>
+        <th data-field="niche">Niche</th>
+        <th data-field="peak_months">Bulan jualan puncak</th>
+        <th data-field="pin_window">Bila mula pin</th>
+        <th data-field="product_mix">Produk utama</th>
+      </tr></thead>
+      <tbody data-draw="p-calendar-body"></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="p-persona" class="pod-section">
+  <h2>Siapa pembeli poster?</h2>
+  <p class="pod-muted">Pembeli wall art di Pinterest kebanyakannya wanita US yang menghias rumah, membeli hadiah atau menyediakan kelas. "Set" bermaksud beberapa poster dalam satu pesanan.</p>
+  <div class="pod-personas" id="p-persona-cards" data-draw="p-personas" data-source="poster_personas"></div>
+  <template id="tpl-p-persona">
+    <article class="pod-card">
+      <h3 class="pod-pp-name"></h3>
+      <div class="pod-muted pod-pp-niches"></div>
+      <dl class="pod-dl">
+        <dt>Siapa</dt><dd data-f="who"></dd>
+        <dt>Cara beli</dt><dd data-f="how"></dd>
+        <dt>Bila</dt><dd data-f="when"></dd>
+        <dt>Kekerapan</dt><dd data-f="frequency"></dd>
+        <dt>Produk</dt><dd data-f="products"></dd>
+        <dt>Bajet</dt><dd data-f="budget"></dd>
+        <dt>Bukti</dt><dd data-f="evidence"></dd>
+        <dt>Sumber</dt><dd data-f="source"></dd>
+      </dl>
+    </article>
+  </template>
+</section>
+
+<section id="p-pin" class="pod-section">
+  <h2>Cara buat pin wall art yang dapat klik</h2>
+  <p class="pod-muted">Setiap design poster dijadikan beberapa pin ikut campuran templat ini. Peraturan terkuat datang dari kajian home decor Pinterest (Ogos 2026).</p>
+  <h3 id="p-tajuk-templat">Campuran templat pin (% daripada semua pin)</h3>
+  <div class="pod-chart pod-short" id="p-chart-templates" data-draw="p-templates" data-source="poster_pin_playbook"></div>
+  <div class="pod-table-wrap">
+    <table id="p-table-pins" data-source="poster_pin_playbook" data-row-key="item">
+      <thead><tr>
+        <th data-field="item">Peraturan</th>
+        <th data-field="level">Tahap bukti</th>
+        <th data-field="source">Sumber</th>
+      </tr></thead>
+      <tbody data-draw="p-pins-body"></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="p-sumber" class="pod-section">
+  <h2>Sumber poster dan semakan data</h2>
+  <p>Angka poster dikumpul pada 21 November 2026 dan disemak melalui indeks carian. Halaman asal belum dibuka terus kerana rangkaian kerja disekat.</p>
+  <div class="pod-tiles">
+    <div class="pod-card" id="p-src-semakan">
+      <div class="pod-q">Semakan data lulus</div>
+      <div class="pod-big"><span data-draw="p-chk-pass" data-source="poster_check_summary" data-field="passed" data-row="0">—</span> / <span data-draw="p-chk-total" data-source="poster_check_summary" data-field="total" data-row="0">—</span></div>
+      <div class="pod-muted">Formula untung, jumlah bulanan dan padanan niche</div>
+    </div>
+    <div class="pod-card" id="p-src-rasmi">
+      <div class="pod-q">Sumber rasmi</div>
+      <div class="pod-big" data-draw="p-src-rasmi" data-source="poster_source_counts" data-field="count" data-where="level=rasmi">—</div>
+      <div class="pod-muted">Printify, Pinterest, Etsy, CDC, EdWeek, NAR</div>
+    </div>
+    <div class="pod-card" id="p-src-pihak">
+      <div class="pod-q">Pihak ketiga</div>
+      <div class="pod-big" data-draw="p-src-pihak" data-source="poster_source_counts" data-field="count" data-where="level=pihak_ketiga">—</div>
+      <div class="pod-muted">Tool kata kunci, blog vendor, media</div>
+    </div>
+    <div class="pod-card" id="p-src-lemah">
+      <div class="pod-q">Bukti lemah</div>
+      <div class="pod-big" data-draw="p-src-lemah" data-source="poster_source_counts" data-field="count" data-where="level=lemah">—</div>
+      <div class="pod-muted">Satu sumber atau anekdot</div>
+    </div>
+  </div>
+  <h3 id="p-tajuk-percanggahan">Angka yang bercanggah dan pilihan dibuat</h3>
+  <div class="pod-table-wrap">
+    <table id="p-table-conflicts" data-source="poster_conflicts" data-row-key="topic">
+      <thead><tr>
+        <th data-field="topic">Topik</th>
+        <th data-field="values">Nilai bercanggah</th>
+        <th data-field="resolution">Keputusan</th>
+      </tr></thead>
+      <tbody data-draw="p-conflicts-body"></tbody>
+    </table>
+  </div>
+  <details id="p-semakan">
+    <summary>Lihat semua semakan data</summary>
+    <div class="pod-table-wrap">
+      <table id="p-table-checks" data-source="poster_checks" data-row-key="check">
+        <thead><tr>
+          <th data-field="check">Semakan</th>
+          <th data-field="status">Keputusan</th>
+          <th data-field="detail">Butiran</th>
+        </tr></thead>
+        <tbody data-draw="p-checks-body"></tbody>
+      </table>
+    </div>
+  </details>
+  <details id="p-daftar-sumber">
+    <summary>Lihat daftar semua sumber poster</summary>
+    <div class="pod-table-wrap pod-scroll">
+      <table id="p-table-sources" data-source="poster_sources" data-row-key="id">
+        <thead><tr>
+          <th data-field="id">ID</th>
+          <th data-field="domain">Domain</th>
+          <th data-field="level">Tahap</th>
+          <th data-field="stages">Peringkat</th>
+          <th data-field="claim">Dakwaan</th>
+          <th data-field="url">Pautan</th>
+        </tr></thead>
+        <tbody data-draw="p-sources-body"></tbody>
+      </table>
+    </div>
+  </details>
+</section>
+
 </section>
 
 </div>
@@ -829,6 +1214,479 @@ dash.draw('conflicts-body', (tb) => {
 dash.draw('sources-body', (tb) => {
   const rows = POD.ok('sources'); tb.replaceChildren();
   if (!rows) { POD.emptyRow(tb, 6, POD.statusMsg('sources')); return; }
+  rows.forEach((r) => {
+    const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.id);
+    POD.cell(tr, r.id); POD.cell(tr, r.domain); POD.pillCell(tr, r.level); POD.cell(tr, r.stages);
+    POD.cell(tr, r.claim, 'pod-wide'); POD.linkCell(tr, r.url, 'buka');
+    tb.appendChild(tr);
+  });
+});
+</script>
+
+<script>
+(() => {
+  const tabs = () => [...document.querySelectorAll('.pod-tab')];
+  const btns = () => [...document.querySelectorAll('.pod-tab-btn')];
+  POD.openTab = (id, link) => {
+    const all = tabs();
+    if (!all.some((t) => t.id === id)) return false;
+    all.forEach((t) => { t.hidden = t.id !== id; });
+    btns().forEach((b) => { const on = b.dataset.tab === id; b.setAttribute('aria-selected', on ? 'true' : 'false'); b.tabIndex = on ? 0 : -1; });
+    if (link) dash.setLink(id);
+    return true;
+  };
+  btns().forEach((b, i, list) => {
+    b.addEventListener('click', () => POD.openTab(b.dataset.tab, true));
+    b.addEventListener('keydown', (ev) => {
+      if (ev.key !== 'ArrowRight' && ev.key !== 'ArrowLeft') return;
+      const next = list[(i + (ev.key === 'ArrowRight' ? 1 : list.length - 1)) % list.length];
+      if (next) { POD.openTab(next.dataset.tab, true); next.focus(); }
+    });
+  });
+  const fromHash = () => {
+    let h = '';
+    try { h = decodeURIComponent((location.hash || '').slice(1)); } catch (e) { h = ''; }
+    if (!h) return;
+    const el = document.getElementById(h);
+    const tab = el && el.closest('.pod-tab');
+    if (!tab) return;
+    POD.openTab(tab.id, false);
+    if (el !== tab) requestAnimationFrame(() => el.scrollIntoView());
+  };
+  fromHash();
+  window.addEventListener('hashchange', fromHash);
+  let printing = false, before = null;
+  window.addEventListener('beforeprint', () => {
+    if (printing) return;
+    printing = true;
+    const open = tabs().find((t) => !t.hidden);
+    before = open ? open.id : null;
+    tabs().forEach((t) => { t.hidden = false; });
+  });
+  window.addEventListener('afterprint', () => {
+    if (!printing) return;
+    printing = false;
+    POD.openTab(before || 'tab-utama', false);
+  });
+})();
+
+POD.pkw = '';
+POD.pguide = '';
+const psw = document.getElementById('p-sw-matang');
+if (psw) psw.style.background = POD.color(0);
+
+dash.calc('poster_niche_profit', {
+  title: 'Untung poster setahun ikut niche',
+  description: 'Untung setahun (senario asas, bila matang) bagi setiap niche poster Gelombang 1, dengan bahagian peratus daripada jumlah.',
+  inputs: ['poster_niches'],
+  fn: (niches) => {
+    const rows = niches.filter((n) => n.annual_profit != null).map((n) => ({ niche_id: n.id, niche: n.niche, profit: Number(n.annual_profit) }));
+    const total = rows.reduce((s, r) => s + r.profit, 0);
+    return rows.map((r) => ({ ...r, share: total ? Math.round((r.profit / total) * 100) : 0 })).sort((a, b) => b.profit - a.profit);
+  }
+});
+
+dash.calc('poster_monthly_stats', {
+  title: 'Purata, terendah dan tertinggi untung poster bulanan',
+  description: 'Dikira dari untung setiap bulan model poster (senario asas, bila matang).',
+  inputs: ['poster_monthly'],
+  fn: (months) => {
+    if (!months.length) return [];
+    const t = months.map((m) => ({ month: m.month, v: Number(m.profit_steady) }));
+    let min = t[0], max = t[0], sum = 0;
+    t.forEach((d) => { sum += d.v; if (d.v < min.v) min = d; if (d.v > max.v) max = d; });
+    return [{ avg: Math.round(sum / t.length), min: Math.round(min.v), min_month: min.month, max: Math.round(max.v), max_month: max.month, low_vs_high: max.v ? Math.round((min.v / max.v) * 100) : 0 }];
+  }
+});
+
+dash.calc('poster_vs_mixed', {
+  title: 'Poster sahaja berbanding model campuran',
+  description: 'Untung setahun bila matang (senario asas): model poster sahaja tolak model campuran baju dan poster.',
+  inputs: ['poster_scenarios', 'scenarios'],
+  fn: (poster, mixed) => {
+    const p = poster.find((r) => r.scenario === 'Asas');
+    const m = mixed.find((r) => r.scenario === 'Asas');
+    if (!p || !m) return [];
+    const a = Number(p.profit_steady), b = Number(m.steady_profit);
+    return [{ poster: a, mixed: b, diff: a - b, diff_pct: b ? Math.round(((a - b) / b) * 1000) / 10 : 0 }];
+  }
+});
+
+dash.calc('poster_top_product', {
+  title: 'Produk poster paling untung seunit',
+  description: 'Produk poster dengan untung seunit tertinggi, tidak termasuk set.',
+  inputs: ['poster_profit'],
+  fn: (products) => {
+    const ok = products.filter((p) => !/^Set /.test(p.product) && p.profit_usd != null).sort((a, b) => Number(b.profit_usd) - Number(a.profit_usd));
+    return ok.length ? [{ product: ok[0].product, profit_usd: Number(ok[0].profit_usd) }] : [];
+  }
+});
+
+dash.calc('poster_top_keyword', {
+  title: 'Kata kunci poster paling berpeluang',
+  description: 'Kata kunci poster dengan nisbah carian bulanan bagi setiap 1,000 listing Etsy paling tinggi.',
+  inputs: ['poster_keywords'],
+  fn: (keywords) => {
+    const ok = keywords.filter((k) => k.opportunity != null).sort((a, b) => Number(b.opportunity) - Number(a.opportunity));
+    return ok.length ? [{ keyword: ok[0].keyword, opportunity: Number(ok[0].opportunity) }] : [];
+  }
+});
+
+dash.calc('poster_source_counts', {
+  title: 'Bilangan sumber poster ikut tahap',
+  description: 'Kiraan sumber dalam daftar poster mengikut tahap pengesahan (rasmi, pihak ketiga, lemah).',
+  inputs: ['poster_sources'],
+  fn: (sources) => {
+    const c = {};
+    sources.forEach((s) => { c[s.level] = (c[s.level] || 0) + 1; });
+    return ['rasmi', 'pihak_ketiga', 'lemah'].map((l) => ({ level: l, count: c[l] || 0 }));
+  }
+});
+
+dash.calc('poster_check_summary', {
+  title: 'Semakan data poster yang lulus',
+  description: 'Bilangan semakan konsistensi data poster (P1–P6) yang lulus berbanding jumlah semakan.',
+  inputs: ['poster_checks'],
+  fn: (checks) => [{ passed: checks.filter((c) => c.status === 'LULUS').length, total: checks.length }]
+});
+
+const pAsas = (rows) => rows.find((r) => r.scenario === 'Asas') || {};
+const pSigned = (v) => (v == null ? null : (v < 0 ? '-' : '+') + POD.usd0(Math.abs(v)));
+POD.text('p-lede-steady', 'poster_scenarios', (r) => pAsas(r).profit_steady, POD.usd0);
+POD.text('p-lede-mixed', 'scenarios', (r) => pAsas(r).steady_profit, POD.usd0);
+POD.text('p-lede-top', 'poster_niche_profit', (r) => r[0].niche);
+POD.text('p-lede-share', 'poster_niche_profit', (r) => r[0].share);
+POD.text('p-lede-word', 'poster_vs_mixed', (r) => { const p = Number(r[0].diff_pct); return Math.abs(p) < 5 ? 'hampir sama dengan' : p > 0 ? 'lebih tinggi daripada' : 'lebih rendah daripada'; });
+POD.text('p-kpi-steady', 'poster_scenarios', (r) => pAsas(r).profit_steady, POD.usd0);
+POD.text('p-kpi-orders', 'poster_scenarios', (r) => pAsas(r).orders_steady, POD.int);
+POD.text('p-kpi-y1', 'poster_scenarios', (r) => pAsas(r).profit_year1, POD.usd0);
+POD.text('p-cmp-diff', 'poster_vs_mixed', (r) => r[0].diff, pSigned);
+POD.text('p-cmp-pct', 'poster_vs_mixed', (r) => r[0].diff_pct, (v) => (v > 0 ? '+' : v < 0 ? '-' : '') + d3.format('.1f')(Math.abs(v)));
+POD.text('p-cmp-poster', 'poster_vs_mixed', (r) => r[0].poster, POD.usd0);
+POD.text('p-cmp-mixed', 'poster_vs_mixed', (r) => r[0].mixed, POD.usd0);
+POD.text('p-ans-niche', 'poster_niche_profit', (r) => r[0].niche);
+POD.text('p-ans-niche-profit', 'poster_niche_profit', (r) => r[0].profit, POD.usd0);
+POD.text('p-ans-product', 'poster_top_product', (r) => r[0].product);
+POD.text('p-ans-product-profit', 'poster_top_product', (r) => r[0].profit_usd, POD.usd);
+POD.text('p-ans-keyword', 'poster_top_keyword', (r) => r[0].keyword);
+POD.text('p-ans-keyword-opp', 'poster_top_keyword', (r) => r[0].opportunity, POD.int);
+POD.text('p-avg', 'poster_monthly_stats', (r) => r[0].avg, POD.usd0);
+POD.text('p-min', 'poster_monthly_stats', (r) => r[0].min, POD.usd0);
+POD.text('p-max', 'poster_monthly_stats', (r) => r[0].max, POD.usd0);
+POD.text('p-min-month', 'poster_monthly_stats', (r) => r[0].min_month);
+POD.text('p-max-month', 'poster_monthly_stats', (r) => r[0].max_month);
+POD.text('p-low-high', 'poster_monthly_stats', (r) => r[0].low_vs_high);
+POD.text('p-chk-pass', 'poster_check_summary', (r) => r[0].passed, POD.int);
+POD.text('p-chk-total', 'poster_check_summary', (r) => r[0].total, POD.int);
+const pLvl = (l) => (rows) => (rows.find((r) => r.level === l) || {}).count;
+POD.text('p-src-rasmi', 'poster_source_counts', pLvl('rasmi'), POD.int);
+POD.text('p-src-pihak', 'poster_source_counts', pLvl('pihak_ketiga'), POD.int);
+POD.text('p-src-lemah', 'poster_source_counts', pLvl('lemah'), POD.int);
+
+POD.noChart = (parts, id, text) => { parts.svg.selectAll('*').remove(); parts.svg.attr('height', 0); parts.tip.hidden = true; parts.msg.hidden = false; parts.msg.textContent = text || POD.statusMsg(id); };
+
+dash.draw('p-monthly', {
+  mount(el) { return POD.chartShell(el, 'Carta bar untung poster bulanan bila matang, dengan garis untung tahun pertama 2027'); },
+  update(el, parts) {
+    const { msg, svg, tip } = parts;
+    const rows = POD.ok('poster_monthly');
+    if (!rows || !rows.length) { POD.noChart(parts, 'poster_monthly'); return; }
+    svg.selectAll('*').remove(); tip.hidden = true; msg.hidden = true;
+    const data = rows.slice().sort((a, b) => a.month_no - b.month_no).map((r) => ({ month: r.month, total: Number(r.profit_steady), y1: Number(r.profit_year1), lo: Number(r.profit_pessimistic), hi: Number(r.profit_optimistic), orders: Number(r.orders_steady) }));
+    const W = Math.max(280, el.clientWidth || 600), H = 280, mb = 26;
+    const y = d3.scaleLinear().domain([0, d3.max(data, (d) => Math.max(d.total, d.y1)) || 1]).nice().range([H - mb, 18]);
+    const ticks = y.ticks(4);
+    const ml = POD.measure(svg, ticks.map((t) => POD.usd0(t))) + 10, mr = 6;
+    const x = d3.scaleBand().domain(data.map((d) => d.month)).range([ml, W - mr]).padding(0.25);
+    svg.attr('width', '100%').attr('height', H).attr('viewBox', `0 0 ${W} ${H}`);
+    svg.append('g').attr('class', 'pod-grid').attr('transform', `translate(${ml},0)`).call(d3.axisLeft(y).tickValues(ticks).tickSize(-(W - ml - mr)).tickFormat(''));
+    svg.append('g').attr('class', 'pod-axis').attr('transform', `translate(${ml},0)`).call(d3.axisLeft(y).tickValues(ticks).tickFormat((t) => POD.usd0(t)).tickSize(0).tickPadding(6)).call((g) => g.select('.domain').remove());
+    const every = x.bandwidth() < 24 ? 2 : 1;
+    svg.append('g').attr('class', 'pod-axis').attr('transform', `translate(0,${H - mb})`).call(d3.axisBottom(x).tickValues(x.domain().filter((_, i) => i % every === 0)).tickSize(0).tickPadding(8)).call((g) => g.select('.domain').remove());
+    svg.append('g').selectAll('rect').data(data).join('rect')
+      .attr('x', (d) => x(d.month)).attr('width', x.bandwidth()).attr('rx', 2)
+      .attr('y', (d) => y(d.total)).attr('height', (d) => Math.max(0, y(0) - y(d.total))).style('fill', POD.color(0));
+    if (x.bandwidth() >= 30) svg.append('g').selectAll('text').data(data).join('text').attr('class', 'pod-label pod-dim')
+      .attr('x', (d) => x(d.month) + x.bandwidth() / 2).attr('y', (d) => y(d.total) - 5).attr('text-anchor', 'middle').text((d) => POD.usd0(d.total));
+    const line = d3.line().x((d) => x(d.month) + x.bandwidth() / 2).y((d) => y(d.y1));
+    svg.append('path').datum(data).attr('d', line).style('fill', 'none').style('stroke', 'var(--color-fg)').style('stroke-width', 2);
+    svg.append('g').selectAll('circle').data(data).join('circle').attr('cx', (d) => x(d.month) + x.bandwidth() / 2).attr('cy', (d) => y(d.y1)).attr('r', 3)
+      .style('fill', 'var(--color-bg)').style('stroke', 'var(--color-fg)').style('stroke-width', 1.5);
+    svg.append('g').selectAll('rect').data(data).join('rect')
+      .attr('x', (d) => x(d.month) - (x.step() - x.bandwidth()) / 2).attr('width', x.step()).attr('y', 0).attr('height', H - mb).style('fill', 'transparent')
+      .on('pointerenter pointermove', (ev, d) => {
+        const [px, py] = d3.pointer(ev, el);
+        POD.tipShow(el, tip, px, py, (t) => {
+          POD.tipLine(t, d.month, '', true);
+          POD.tipLine(t, 'Bila matang', POD.usd0(d.total));
+          POD.tipLine(t, 'Tahun pertama', POD.usd0(d.y1));
+          POD.tipLine(t, 'Pesimis', POD.usd0(d.lo));
+          POD.tipLine(t, 'Optimis', POD.usd0(d.hi));
+          POD.tipLine(t, 'Pesanan (matang)', POD.int(d.orders));
+        });
+      })
+      .on('pointerleave', () => { tip.hidden = true; });
+  }
+});
+
+dash.draw('p-niche-profit', {
+  mount(el) { return POD.chartShell(el, 'Carta bar mendatar untung poster setahun bagi setiap niche bila matang'); },
+  update(el, parts) {
+    const rows = POD.ok('poster_niche_profit');
+    if (!rows || !rows.length) { POD.noChart(parts, 'poster_niche_profit'); return; }
+    POD.hbars(el, parts, rows, (r) => r.niche, (r) => Number(r.profit), POD.usd0, POD.color(0),
+      (t, d) => { POD.tipLine(t, d.niche, '', true); POD.tipLine(t, 'Untung setahun', POD.usd0(d.profit)); POD.tipLine(t, 'Bahagian', d.share + '%'); });
+  }
+});
+
+dash.draw('p-scenarios-body', (tb) => {
+  const rows = POD.ok('poster_scenarios'); tb.replaceChildren();
+  if (!rows) { POD.emptyRow(tb, 6, POD.statusMsg('poster_scenarios')); return; }
+  rows.forEach((r) => {
+    const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.scenario);
+    POD.cell(tr, r.scenario); POD.cell(tr, POD.usd0(r.profit_year1), 'pod-num'); POD.cell(tr, POD.usd0(r.profit_steady), 'pod-num');
+    POD.cell(tr, POD.int(r.orders_steady), 'pod-num'); POD.cell(tr, POD.usd0(r.revenue_steady), 'pod-num'); POD.cell(tr, r.assumption);
+    tb.appendChild(tr);
+  });
+});
+
+dash.draw('p-guide-filter', (sel) => {
+  const rows = (POD.ok('poster_niches') || []).filter((r) => r.style);
+  rows.sort((a, b) => (b.annual_profit == null ? -1 : Number(b.annual_profit)) - (a.annual_profit == null ? -1 : Number(a.annual_profit)));
+  sel.replaceChildren(...rows.map((r) => new Option(r.niche, r.id)));
+  if (!rows.some((r) => r.id === POD.pguide)) POD.pguide = rows.length ? rows[0].id : '';
+  sel.value = POD.pguide;
+  sel.onchange = () => { POD.pguide = sel.value; dash.draw('p-guide'); };
+});
+
+dash.draw('p-guide', (box) => {
+  const rows = POD.ok('poster_niches'); box.replaceChildren();
+  if (!rows) { const m = document.createElement('div'); m.className = 'pod-msg'; m.textContent = POD.statusMsg('poster_niches'); box.appendChild(m); return; }
+  const tpl = document.getElementById('tpl-p-guide'); if (!tpl) return;
+  const withStyle = rows.filter((r) => r.style);
+  withStyle.sort((a, b) => (b.annual_profit == null ? -1 : Number(b.annual_profit)) - (a.annual_profit == null ? -1 : Number(a.annual_profit)));
+  const r = withStyle.find((x) => x.id === POD.pguide) || withStyle[0];
+  if (!r) return;
+  const node = tpl.content.cloneNode(true);
+  const where = 'id=' + POD.enc(r.id);
+  const put = (e, text, field) => { if (!e) return; e.textContent = text == null || text === '' ? '—' : String(text); if (field) { e.dataset.source = 'poster_niches'; e.dataset.field = field; e.dataset.where = where; } };
+  put(node.querySelector('.pod-g-name'), r.niche, 'niche');
+  const wave = node.querySelector('.pod-g-wave'); put(wave, r.wave, 'wave'); if (wave && r.wave === 'Gelombang 1') wave.dataset.tone = 'ok';
+  put(node.querySelector('.pod-g-profit'), r.annual_profit == null ? 'Belum dimodelkan' : POD.usd0(r.annual_profit), r.annual_profit == null ? null : 'annual_profit');
+  put(node.querySelector('.pod-g-ppo'), r.profit_per_order == null ? '—' : POD.usd0(r.profit_per_order), r.profit_per_order == null ? null : 'profit_per_order');
+  put(node.querySelector('.pod-g-kw'), r.top_keyword, 'top_keyword');
+  put(node.querySelector('.pod-g-vol'), POD.int(r.top_keyword_volume), r.top_keyword_volume == null ? null : 'top_keyword_volume');
+  node.querySelectorAll('dd[data-f]').forEach((dd) => {
+    const f = dd.dataset.f;
+    put(dd, r[f], f);
+    if (f === 'key_evidence') { const a = POD.link(r.source, 'sumber'); if (a) { dd.append(' '); dd.appendChild(a); } }
+  });
+  box.appendChild(node);
+});
+
+POD.pWaveCell = (tr, wave) => { const td = document.createElement('td'); td.appendChild(POD.pill(wave || '—', null, wave === 'Gelombang 1' ? 'ok' : /^Elak/.test(wave || '') ? 'bad' : null)); tr.appendChild(td); return td; };
+
+dash.draw('p-niches-body', (tb) => {
+  const rows = POD.ok('poster_niches'); tb.replaceChildren();
+  if (!rows) { POD.emptyRow(tb, 9, POD.statusMsg('poster_niches')); return; }
+  rows.slice().sort((a, b) => Number(a.rank) - Number(b.rank)).forEach((r) => {
+    const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.id);
+    POD.cell(tr, r.rank, 'pod-num'); POD.cell(tr, r.niche);
+    const tot = POD.cell(tr, r.total, 'pod-num');
+    const bar = document.createElement('span'); bar.className = 'pod-scorebar'; bar.style.width = Math.round((Number(r.total) / 30) * 52) + 'px'; bar.style.background = POD.color(0); tot.appendChild(bar);
+    POD.cell(tr, r.peak_months); POD.pWaveCell(tr, r.wave);
+    POD.cell(tr, r.annual_profit == null ? '—' : POD.usd0(r.annual_profit), 'pod-num');
+    POD.cell(tr, r.top_keyword); POD.cell(tr, POD.int(r.top_keyword_volume), 'pod-num');
+    POD.pillCell(tr, r.evidence_level);
+    tb.appendChild(tr);
+  });
+});
+
+dash.draw('p-scores-body', (tb) => {
+  const rows = POD.ok('poster_niches'); tb.replaceChildren();
+  if (!rows) { POD.emptyRow(tb, 8, POD.statusMsg('poster_niches')); return; }
+  rows.slice().sort((a, b) => Number(a.rank) - Number(b.rank)).forEach((r) => {
+    const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.id);
+    POD.cell(tr, r.niche); POD.cell(tr, r.group);
+    ['demand', 'competition', 'typography_fit', 'pinterest_fit', 'order_value', 'automation'].forEach((k) => POD.cell(tr, r[k], 'pod-num'));
+    tb.appendChild(tr);
+  });
+});
+
+dash.draw('p-profit-chart', {
+  mount(el) { return POD.chartShell(el, 'Carta bar mendatar untung seunit bagi setiap produk poster'); },
+  update(el, parts) {
+    const all = POD.ok('poster_profit');
+    if (!all) { POD.noChart(parts, 'poster_profit'); return; }
+    const rows = all.filter((r) => r.profit_usd != null).sort((a, b) => Number(b.profit_usd) - Number(a.profit_usd));
+    if (!rows.length) { POD.noChart(parts, 'poster_profit', 'Tiada data untung.'); return; }
+    POD.hbars(el, parts, rows, (r) => r.product, (r) => Number(r.profit_usd), POD.usd, POD.color(1),
+      (t, d) => { POD.tipLine(t, d.product, '', true); POD.tipLine(t, 'Harga jual', POD.usd(d.price_usd)); POD.tipLine(t, 'Kos Printify', POD.usd(d.base_usd)); POD.tipLine(t, 'Shipping (pembeli)', POD.usd(d.shipping_usd)); POD.tipLine(t, 'Untung', POD.usd(d.profit_usd)); POD.tipLine(t, 'Margin', d.margin_pct + '%'); });
+  }
+});
+
+dash.draw('p-profit-body', (tb) => {
+  const rows = POD.ok('poster_profit'); tb.replaceChildren();
+  if (!rows) { POD.emptyRow(tb, 7, POD.statusMsg('poster_profit')); return; }
+  rows.slice().sort((a, b) => Number(b.profit_usd) - Number(a.profit_usd)).forEach((r) => {
+    const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.product);
+    POD.cell(tr, r.product); POD.cell(tr, POD.usd(r.price_usd), 'pod-num'); POD.cell(tr, POD.usd(r.base_usd), 'pod-num');
+    POD.cell(tr, POD.usd(r.shipping_usd), 'pod-num'); POD.cell(tr, POD.usd(r.profit_usd), 'pod-num'); POD.cell(tr, r.margin_pct, 'pod-num');
+    POD.cell(tr, r.cost_note, 'pod-wide');
+    tb.appendChild(tr);
+  });
+});
+
+dash.draw('p-formats-body', (tb) => {
+  const rows = POD.ok('poster_formats'); tb.replaceChildren();
+  if (!rows) { POD.emptyRow(tb, 7, POD.statusMsg('poster_formats')); return; }
+  rows.forEach((r) => {
+    const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.format);
+    POD.cell(tr, r.format); POD.cell(tr, POD.usd(r.base_min_usd), 'pod-num'); POD.cell(tr, POD.usd(r.premium_min_usd), 'pod-num');
+    POD.cell(tr, r.use, 'pod-wide');
+    const rec = document.createElement('td'); rec.appendChild(POD.pill(r.recommendation || '—', null, /^Teras/.test(r.recommendation || '') ? 'ok' : /^Elak/.test(r.recommendation || '') ? 'bad' : null)); tr.appendChild(rec);
+    POD.pillCell(tr, r.level); POD.linkCell(tr, r.source, 'buka');
+    tb.appendChild(tr);
+  });
+});
+
+dash.draw('p-kw-filter', (sel) => {
+  const rows = POD.ok('poster_keywords') || [];
+  const niches = [...new Set(rows.map((r) => r.niche))];
+  sel.replaceChildren(new Option('Semua niche', ''), ...niches.map((n) => new Option(n, n)));
+  sel.value = niches.includes(POD.pkw) ? POD.pkw : '';
+  sel.onchange = () => { POD.pkw = sel.value; dash.draw('p-opportunity'); dash.draw('p-kw-body'); };
+});
+
+dash.draw('p-opportunity', {
+  mount(el) { return POD.chartShell(el, 'Carta bar mendatar peluang kata kunci poster: carian bulanan bagi setiap 1,000 listing Etsy'); },
+  update(el, parts) {
+    const all = POD.ok('poster_keywords');
+    if (!all) { POD.noChart(parts, 'poster_keywords'); return; }
+    const rows = all.filter((r) => r.opportunity != null && (!POD.pkw || r.niche === POD.pkw)).sort((a, b) => b.opportunity - a.opportunity);
+    if (!rows.length) { POD.noChart(parts, 'poster_keywords', 'Tiada kata kunci dengan data pesaing Etsy untuk niche ini.'); return; }
+    POD.hbars(el, parts, rows, (r) => r.keyword, (r) => Number(r.opportunity), POD.int, POD.color(1),
+      (t, d) => { POD.tipLine(t, d.keyword, '', true); POD.tipLine(t, 'Niche', d.niche); POD.tipLine(t, 'Carian / bulan', POD.int(d.google_monthly)); POD.tipLine(t, 'Produk pesaing Etsy', POD.int(d.etsy_listings)); POD.tipLine(t, 'Peluang', POD.int(d.opportunity)); });
+  }
+});
+
+dash.draw('p-kw-body', (tb) => {
+  const all = POD.ok('poster_keywords'); tb.replaceChildren();
+  if (!all) { POD.emptyRow(tb, 8, POD.statusMsg('poster_keywords')); return; }
+  all.filter((r) => !POD.pkw || r.niche === POD.pkw).slice().sort((a, b) => Number(b.google_monthly) - Number(a.google_monthly)).forEach((r) => {
+    const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.keyword);
+    POD.cell(tr, r.niche); POD.cell(tr, r.keyword); POD.cell(tr, POD.int(r.google_monthly), 'pod-num');
+    POD.cell(tr, POD.int(r.etsy_listings), 'pod-num'); POD.cell(tr, POD.int(r.opportunity), 'pod-num'); POD.cell(tr, r.intent); POD.cell(tr, r.note);
+    POD.linkCell(tr, r.source, 'sumber');
+    tb.appendChild(tr);
+  });
+});
+
+dash.draw('p-heatmap', {
+  mount(el) { return POD.chartShell(el, 'Peta haba indeks jualan poster bulanan bagi setiap niche, Januari hingga Disember'); },
+  update(el, parts) {
+    const { msg, svg, tip } = parts;
+    const rows = POD.ok('poster_seasonality');
+    if (!rows || !rows.length) { POD.noChart(parts, 'poster_seasonality'); return; }
+    svg.selectAll('*').remove(); tip.hidden = true; msg.hidden = true;
+    const niches = [...new Set(rows.map((r) => r.niche))];
+    const months = [...new Set(rows.slice().sort((a, b) => a.month_no - b.month_no).map((r) => r.month))];
+    const W = Math.max(440, el.clientWidth || 600), rowH = 30, mt = 22;
+    const ml = POD.measure(svg, niches) + 12;
+    const x = d3.scaleBand().domain(months).range([ml, W]).padding(0.06);
+    const y = d3.scaleBand().domain(niches).range([mt, mt + niches.length * rowH]).padding(0.08);
+    const H = mt + niches.length * rowH + 4;
+    svg.attr('width', '100%').attr('height', H).attr('viewBox', `0 0 ${W} ${H}`);
+    svg.append('g').selectAll('text').data(months).join('text').attr('class', 'pod-label pod-dim').attr('x', (m) => x(m) + x.bandwidth() / 2).attr('y', 14).attr('text-anchor', 'middle').text((m) => m);
+    svg.append('g').selectAll('text').data(niches).join('text').attr('class', 'pod-label').attr('x', ml - 8).attr('y', (n) => y(n) + y.bandwidth() / 2).attr('dy', '0.32em').attr('text-anchor', 'end').text((n) => n);
+    const op = (v) => 0.07 + 0.93 * Math.min(1, Number(v) / 200);
+    const showNum = x.bandwidth() >= 30;
+    const cells = svg.append('g').selectAll('g').data(rows).join('g');
+    cells.append('rect').attr('x', (d) => x(d.month)).attr('y', (d) => y(d.niche)).attr('width', x.bandwidth()).attr('height', y.bandwidth()).attr('rx', 2)
+      .style('fill', POD.color(0)).style('fill-opacity', (d) => op(d.index));
+    if (showNum) cells.append('text').attr('class', 'pod-label').attr('x', (d) => x(d.month) + x.bandwidth() / 2).attr('y', (d) => y(d.niche) + y.bandwidth() / 2)
+      .attr('dy', '0.32em').attr('text-anchor', 'middle').style('fill', (d) => (op(d.index) > 0.6 ? 'var(--color-bg)' : 'var(--color-fg)')).text((d) => d.index);
+    cells.on('pointerenter pointermove', (ev, d) => {
+      const [px, py] = d3.pointer(ev, el);
+      POD.tipShow(el, tip, px, py, (t) => { POD.tipLine(t, `${d.niche}, ${d.month}`, '', true); POD.tipLine(t, 'Indeks jualan', String(d.index)); POD.tipLine(t, 'Untung (matang)', POD.usd0(d.profit)); });
+    }).on('pointerleave', () => { tip.hidden = true; });
+  }
+});
+
+dash.draw('p-calendar-body', (tb) => {
+  const rows = POD.ok('poster_niches'); tb.replaceChildren();
+  if (!rows) { POD.emptyRow(tb, 4, POD.statusMsg('poster_niches')); return; }
+  rows.filter((r) => r.pin_window).sort((a, b) => Number(b.annual_profit) - Number(a.annual_profit)).forEach((r) => {
+    const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.id);
+    POD.cell(tr, r.niche); POD.cell(tr, r.peak_months); POD.cell(tr, r.pin_window, 'pod-wide'); POD.cell(tr, r.product_mix, 'pod-wide');
+    tb.appendChild(tr);
+  });
+});
+
+dash.draw('p-personas', (box) => {
+  const rows = POD.ok('poster_personas'); box.replaceChildren();
+  if (!rows) { const m = document.createElement('div'); m.className = 'pod-msg'; m.textContent = POD.statusMsg('poster_personas'); box.appendChild(m); return; }
+  const tpl = document.getElementById('tpl-p-persona'); if (!tpl) return;
+  rows.forEach((r, i) => {
+    const node = tpl.content.cloneNode(true);
+    const mark = (e, f) => { e.dataset.source = 'poster_personas'; e.dataset.field = f; e.dataset.row = String(i); };
+    const name = node.querySelector('.pod-pp-name'); if (name) { name.textContent = r.persona; mark(name, 'persona'); }
+    const ni = node.querySelector('.pod-pp-niches'); if (ni) { ni.textContent = r.niches || '—'; mark(ni, 'niches'); }
+    node.querySelectorAll('dd[data-f]').forEach((dd) => {
+      const f = dd.dataset.f;
+      if (f === 'source') { const safe = POD.safeUrl(r.source); const a = safe ? POD.link(safe, new URL(safe).hostname.replace(/^www\./, '')) : null; if (a) dd.replaceChildren(a); else dd.textContent = '—'; return; }
+      dd.textContent = r[f] == null || r[f] === '' ? '—' : String(r[f]); mark(dd, f);
+    });
+    box.appendChild(node);
+  });
+});
+
+dash.draw('p-templates', {
+  mount(el) { return POD.chartShell(el, 'Carta bar mendatar peratus pin wall art bagi setiap templat'); },
+  update(el, parts) {
+    const all = POD.ok('poster_pin_playbook');
+    if (!all) { POD.noChart(parts, 'poster_pin_playbook'); return; }
+    const rows = all.filter((r) => r.share_pct != null).sort((a, b) => b.share_pct - a.share_pct);
+    POD.hbars(el, parts, rows, (r) => r.item, (r) => Number(r.share_pct), (v) => v + '%', POD.color(2),
+      (t, d) => { POD.tipLine(t, d.item, '', true); POD.tipLine(t, 'Bahagian pin', d.share_pct + '%'); });
+  }
+});
+
+dash.draw('p-pins-body', (tb) => {
+  const rows = POD.ok('poster_pin_playbook'); tb.replaceChildren();
+  if (!rows) { POD.emptyRow(tb, 3, POD.statusMsg('poster_pin_playbook')); return; }
+  rows.filter((r) => r.share_pct == null).sort((a, b) => (POD.levelBase(a.level) !== 'rasmi') - (POD.levelBase(b.level) !== 'rasmi')).forEach((r) => {
+    const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.item);
+    POD.cell(tr, r.item, 'pod-wide'); POD.pillCell(tr, r.level); POD.linkCell(tr, r.source, 'sumber');
+    tb.appendChild(tr);
+  });
+});
+
+dash.draw('p-conflicts-body', (tb) => {
+  const rows = POD.ok('poster_conflicts'); tb.replaceChildren();
+  if (!rows) { POD.emptyRow(tb, 3, POD.statusMsg('poster_conflicts')); return; }
+  rows.forEach((r) => {
+    const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.topic);
+    POD.cell(tr, r.topic); POD.cell(tr, r.values, 'pod-wide'); POD.cell(tr, r.resolution);
+    tb.appendChild(tr);
+  });
+});
+
+dash.draw('p-checks-body', (tb) => {
+  const rows = POD.ok('poster_checks'); tb.replaceChildren();
+  if (!rows) { POD.emptyRow(tb, 3, POD.statusMsg('poster_checks')); return; }
+  rows.forEach((r) => {
+    const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.check);
+    POD.cell(tr, r.check, 'pod-wide');
+    const st = document.createElement('td'); st.appendChild(POD.pill(r.status, null, r.status === 'LULUS' ? 'ok' : 'bad')); tr.appendChild(st);
+    POD.cell(tr, r.detail);
+    tb.appendChild(tr);
+  });
+});
+
+dash.draw('p-sources-body', (tb) => {
+  const rows = POD.ok('poster_sources'); tb.replaceChildren();
+  if (!rows) { POD.emptyRow(tb, 6, POD.statusMsg('poster_sources')); return; }
   rows.forEach((r) => {
     const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.id);
     POD.cell(tr, r.id); POD.cell(tr, r.domain); POD.pillCell(tr, r.level); POD.cell(tr, r.stages);

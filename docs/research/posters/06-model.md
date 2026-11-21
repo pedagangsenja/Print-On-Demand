@@ -45,7 +45,7 @@ Tarikh: 2026-11-21. Data penuh: `data/posters/model.json` (skrip `scripts/poster
 | Dis | $1,376 | 57 | $1,376 |
 | **Jumlah** | **$13,575** | **514** | **$9,021** |
 
-Bulan terendah (Jun) masih 73% daripada bulan tertinggi (Dis): aliran tunai stabil sepanjang tahun.
+Bulan terendah (Jun) masih 72% daripada bulan tertinggi (Dis): aliran tunai stabil sepanjang tahun.
 
 ## Untung setahun ikut niche (asas, matang)
 
