@@ -1,0 +1,98 @@
+{
+  "stage": 2,
+  "title": "Top keywords + jumlah carian bulanan",
+  "updated": "2026-11-21",
+  "method": {
+    "google_volume": "Anggaran RankHero (purata carian bulanan global, data gaya Google Ads). Setiap halaman ada tarikh kemas kini berbeza (akhir 2025 - 2026).",
+    "etsy_listings": "Bilangan listing Etsy yang menyasarkan kata kunci (RankHero).",
+    "opportunity": "Carian bulanan / 1,000 listing Etsy. Lebih tinggi = permintaan lebih besar berbanding saingan.",
+    "pinterest_volume": "Pinterest tidak menerbitkan jumlah carian mutlak. Pinterest Trends hanya menunjukkan indeks relatif 0-100. Tiada angka awam yang sah untuk setiap kata kunci.",
+    "verification": "Semua volum ialah anggaran pihak ketiga; bukan data rasmi Google/Pinterest."
+  },
+  "pinterest_platform_facts": [
+    {"claim": "Pinterest Trends menormalkan volum carian berbanding jumlah carian platform; graf indeks 0-100; tiada akaun diperlukan", "source": "https://help.pinterest.com/en/business/article/pinterest-trends", "level": "rasmi"},
+    {"claim": "API Trends Pinterest memberi volum relatif mingguan (0-100) setiap kata kunci", "source": "https://developers.pinterest.com/docs/analytics-and-reports/trends/", "level": "rasmi"},
+    {"claim": "Tiada tool boleh tunjuk volum carian Pinterest sebenar; banyak guna volum Google sebagai ganti", "source": "https://keywordseverywhere.com/tools/pinterest-keyword-generator/", "level": "pihak_ketiga"},
+    {"claim": ">3 bilion carian perkahwinan setahun di Pinterest (global)", "source": "https://newsroom.pinterest.com/en-us/news/the-pinterest-2024-wedding-report/", "level": "rasmi"}
+  ],
+  "niches": {
+    "bridal": [
+      {"keyword": "bridesmaids", "google_monthly": 550000, "us_monthly": 201000, "etsy_listings": 1338784, "opportunity": 411, "note": "Turun 18% Jul 2025-Jun 2026", "source": "https://www.rankhero.com/keywords/bridesmaids"},
+      {"keyword": "gift for bridesmaids", "google_monthly": 33100, "etsy_listings": null, "opportunity": null, "source": "https://www.rankhero.com/keywords/gift-for-bridesmaids"},
+      {"keyword": "bride box", "google_monthly": 2400, "us_share": 0.42, "etsy_listings": 41715, "opportunity": 58, "cpc_usd": 7.21, "difficulty": 46, "source": "https://www.rankhero.com/keywords/bride-box"},
+      {"keyword": "proposal gift", "google_monthly": 880, "source": "https://www.rankhero.com/keywords/proposal-gift"},
+      {"keyword": "proposal card", "google_monthly": 720, "us_share": 0.15, "source": "https://www.rankhero.com/keywords/proposal-card"},
+      {"keyword": "bridesmaid set", "google_monthly": 320, "source": "https://www.rankhero.com/keywords/bridesmaid-set"}
+    ],
+    "teacher": [
+      {"keyword": "teacher gift", "google_monthly": 60500, "etsy_listings": 1835056, "opportunity": 33, "note": "Puncak Disember", "source": "https://www.rankhero.com/keywords/teacher-gift"},
+      {"keyword": "teacher gift ideas", "google_monthly_peak": 90500, "peak_month": "2025-12", "source": "https://www.rankhero.com/keywords/teacher-gift-ideas"},
+      {"keyword": "teacher appreciation", "google_monthly": 18100, "etsy_listings": 547604, "opportunity": 33, "source": "https://www.rankhero.com/keywords/teacher-appreciation"},
+      {"keyword": "shirt for teacher", "google_monthly": 9900, "etsy_listings": 831332, "opportunity": 12, "source": "https://www.rankhero.com/keywords/shirt-for-teacher"},
+      {"keyword": "classroom posters", "google_monthly": 6600, "us_share": 0.55, "etsy_listings": 144725, "opportunity": 46, "source": "https://www.rankhero.com/keywords/classroom-posters"},
+      {"keyword": "teacher tee", "google_monthly": 2900, "etsy_listings": 652995, "opportunity": 4, "source": "https://www.rankhero.com/keywords/teacher-tee"},
+      {"keyword": "teacher decorations", "google_monthly": 1000, "source": "https://www.rankhero.com/keywords/teacher-decorations"},
+      {"keyword": "teacher xmas", "google_monthly_peak": 1000, "peak_month": "2025-12", "low": 20, "etsy_listings": 53049, "source": "https://www.rankhero.com/keywords/teacher-xmas"}
+    ],
+    "nursery": [
+      {"keyword": "nursery", "google_monthly": 673000, "difficulty": 50, "note": "Istilah luas", "source": "https://www.rankhero.com/keywords/nursery"},
+      {"keyword": "nursery wall sticker(s)", "google_monthly": 8100, "etsy_listings": 110571, "opportunity": 73, "source": "https://www.rankhero.com/keywords/nursery-wall-sticker"},
+      {"keyword": "nursery art", "google_monthly": 8100, "difficulty": 64, "source": "https://adtargeting.io/industry/wall-decoration-keywords", "source_2": "https://www.rankhero.com/keywords/nursery-art"},
+      {"keyword": "baby nursery wall decor", "google_monthly": 480, "source": "https://unicornseo.com/best-keywords-niche/Baby%20Nursery"},
+      {"keyword": "nursery wall print", "google_monthly": 390, "note": "Menurun 590 -> 320 (Ogos-akhir 2025)", "source": "https://www.rankhero.com/keywords/nursery-wall-print"},
+      {"keyword": "baby nursery wall art", "google_monthly": 260, "source": "https://unicornseo.com/best-keywords-niche/Baby%20Nursery"},
+      {"keyword": "nursery wall art print", "google_monthly": 110, "etsy_listings": 1219311, "difficulty": 84, "source": "https://www.rankhero.com/keywords/nursery-wall-art-print"}
+    ],
+    "funny_home": [
+      {"keyword": "laundry room", "google_monthly": 90500, "note": "Istilah luas", "source": "https://www.rankhero.com/keywords/laundry-room"},
+      {"keyword": "bathroom sign", "google_monthly": 22200, "etsy_listings": 145867, "opportunity": 152, "source": "https://www.rankhero.com/keywords/bathroom-sign"},
+      {"keyword": "kitchen art", "google_monthly": 22200, "source": "https://www.rankhero.com/keywords/kitchen-art"},
+      {"keyword": "funny bathroom sign", "google_monthly": 8100, "us_share": 0.81, "etsy_listings": 36886, "opportunity": 220, "cpc_usd": 0.41, "difficulty": 40, "source": "https://www.rankhero.com/keywords/funny-bathroom-sign"},
+      {"keyword": "kitchen sign", "google_monthly": 5400, "source": "https://www.rankhero.com/keywords/kitchen-sign"},
+      {"keyword": "laundry room sign", "google_monthly": 2900, "us_share": 0.66, "source": "https://www.rankhero.com/keywords/laundry-room-sign"},
+      {"keyword": "kitchen poster", "google_monthly_range": "1,300-1,600 (Sep-Dis 2025)", "source": "https://www.rankhero.com/keywords/kitchen-poster"},
+      {"keyword": "laundry wall art", "google_monthly": 590, "source": "https://www.rankhero.com/keywords/laundry-wall-art"}
+    ],
+    "mama": [
+      {"keyword": "mama shirt", "google_monthly": 4400, "etsy_listings": 741040, "opportunity": 6, "source": "https://www.rankhero.com/keywords/mama-shirt"},
+      {"keyword": "mother sweatshirt", "google_monthly": 3600, "us_share": 0.67, "etsy_listings": 318199, "opportunity": 11, "source": "https://www.rankhero.com/keywords/mother-sweatshirt"},
+      {"keyword": "mama crewneck", "google_monthly": 590, "etsy_listings": 98374, "opportunity": 6, "source": "https://www.rankhero.com/keywords/mama-crewneck"},
+      {"keyword": "mama outfit", "google_monthly": 590, "difficulty": 60, "source": "https://www.rankhero.com/keywords/mama-outfit"},
+      {"keyword": "dog mama sweatshirt", "google_monthly": 130, "etsy_listings": 47630, "opportunity": 3, "source": "https://www.rankhero.com/keywords/dog-mama-sweatshirt"}
+    ],
+    "christmas": [
+      {"keyword": "christmas sweatshirt", "google_monthly": 22200, "source": "https://www.rankhero.com/keywords/christmas-sweatshirt"},
+      {"keyword": "christmas gift ideas for mom", "google_monthly": 14800, "us_share": 0.67, "difficulty": 48, "source": "https://www.rankhero.com/keywords/christmas-gift-ideas-for-mom"},
+      {"keyword": "christmas", "etsy_rank": "#1 US Oktober 2026", "source": "https://help.erank.com/blog/top-keywords-on-etsy/"}
+    ],
+    "friendship": [
+      {"keyword": "galentines gift", "google_monthly": 5400, "us_share": 0.44, "difficulty": 48, "source": "https://www.rankhero.com/keywords/galentines-gift"},
+      {"keyword": "galentine gift", "google_monthly": 5400, "google_monthly_peak": 33100, "peak_month": "2026-02", "low": 170, "source": "https://www.rankhero.com/keywords/galentine-gift"}
+    ],
+    "bookish": [
+      {"keyword": "bookish", "google_monthly": 135000, "note": "Istilah luas", "source": "https://www.rankhero.com/keywords/bookish"},
+      {"keyword": "bookish shirt", "google_monthly": 4400, "source": "https://www.rankhero.com/keywords/bookish-shirt"},
+      {"keyword": "book sweatshirt", "google_monthly": 1600, "us_share": 0.81, "source": "https://www.rankhero.com/keywords/book-sweatshirt"},
+      {"keyword": "gifts for bookworms", "google_monthly": 1300, "source": "https://www.rankhero.com/keywords/gifts-for-bookworms"},
+      {"keyword": "bookish crewneck", "google_monthly": 90, "source": "https://www.rankhero.com/keywords/bookish-crewneck"}
+    ],
+    "grandma_ref": [
+      {"keyword": "personalized grandma shirt", "google_monthly": 1300, "etsy_listings": 71260, "opportunity": 18, "cpc_usd": 1.25, "source": "https://www.rankhero.com/keywords/personalized-grandma-shirt"}
+    ]
+  },
+  "seasonality_signals": [
+    {"claim": "Carian 'mothers day' melonjak ~1 minggu sebelum; carian hadiah umum naik lebih awal", "source": "https://about.ads.microsoft.com/en-us/blog/post/april-2022/april-monthly-insights-for-gifting-season", "level": "rasmi"},
+    {"claim": "Trafik Mother's Day naik 2 minggu sebelum; hari tertinggi Isnin sebelum cuti (2023)", "source": "https://www.bloomreach.com/en/blog/2023/mothers-day-trends-2023", "level": "pihak_ketiga"},
+    {"claim": "Senarai 729 kata kunci perkahwinan, ~34.5 juta carian/bulan gabungan (Okt 2026)", "source": "https://keywordseverywhere.com/ctl/top/wedding-keywords", "level": "pihak_ketiga"}
+  ],
+  "excluded_anomalies": [
+    {"keyword": "teach shirt", "reported": 1500000, "reason": "Tidak munasabah berbanding kata kunci cikgu lain; berkemungkinan ralat data", "source": "https://www.rankhero.com/keywords/teach-shirt"},
+    {"keyword": "galentines", "reported": "8,100 (Okt) -> 1,000,000 (Feb)", "reason": "Lonjakan 1 juta tidak konsisten dengan 'galentines gift' (puncak 33,100)", "source": "https://www.rankhero.com/keywords/galentines"}
+  ],
+  "findings": [
+    "Peluang terbaik (carian per 1,000 listing): bridesmaids 411, funny bathroom sign 220, bathroom sign 152, nursery wall sticker 73, bride box 58, classroom posters 46.",
+    "Apparel 'mama' sangat sesak: mama shirt 6, mama crewneck 6, mother sweatshirt 11, dog mama sweatshirt 3.",
+    "Apparel cikgu sesak (shirt for teacher 12, teacher tee 4); poster kelas lebih berpeluang (46).",
+    "Kata kunci hadiah sangat bermusim: teacher gift puncak Dis; galentine gift 33,100 (Feb) vs 170 (Apr-Mei)."
+  ]
+}
