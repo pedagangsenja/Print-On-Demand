@@ -1,0 +1,229 @@
+{
+  "stage": 1,
+  "title": "Top niche (typography + pembeli Pinterest)",
+  "updated": "2026-11-21",
+  "scoring": {
+    "scale": "1-5 (5 = terbaik)",
+    "criteria": {
+      "demand": "Bukti permintaan (volum carian / ranking / laporan)",
+      "competition": "Tahap saingan (5 = kurang sesak)",
+      "typography_fit": "Sesuai design typography sahaja",
+      "pinterest_fit": "Padan dengan pembeli Pinterest (wanita, merancang)",
+      "order_value": "Nilai pesanan / potensi bulk",
+      "automation": "Mudah diautomasi tanpa personalisasi"
+    },
+    "note": "Skor ialah penilaian Claude berdasarkan bukti di bawah; bukan data rasmi."
+  },
+  "verification_levels": {
+    "rasmi": "Data platform / organisasi utama (Etsy, Pinterest, The Knot, eRank laporan sendiri)",
+    "pihak_ketiga": "Tool kata kunci / blog vendor / media; belum disahkan silang",
+    "lemah": "Satu sumber, tiada metodologi"
+  },
+  "niches": [
+    {
+      "id": "bridal",
+      "name": "Bridal party & bachelorette",
+      "scores": {"demand": 4, "competition": 3, "typography_fit": 5, "pinterest_fit": 5, "order_value": 5, "automation": 4},
+      "total": 26,
+      "season": "bermusim",
+      "peak_months": "Dis-Mac (proposal), Mac-Sep (set bridal party)",
+      "evidence": [
+        {"claim": "77% pasangan guna Pinterest untuk inspirasi perkahwinan (83% Gen Z)", "source": "https://www.zola.com/expert-advice/social-media-wedding-inspiration", "level": "pihak_ketiga"},
+        {"claim": ">3 bilion carian berkaitan perkahwinan setahun (global)", "source": "https://newsroom.pinterest.com/en-us/news/the-pinterest-2024-wedding-report/", "level": "rasmi"},
+        {"claim": "Purata wedding party 8 orang (4 setiap pihak), turun dari 10 pada 2019", "source": "https://www.axios.com/2026/01/17/wedding-party-bridesmaid-groomsmen-cost", "level": "rasmi"},
+        {"claim": "19% lamaran berlaku pada Disember", "source": "https://www.theknot.com/content/popular-day-to-get-engaged", "level": "rasmi"},
+        {"claim": "76% majlis kahwin pada Mei-Oktober", "source": "https://www.theknot.com/content/is-there-an-off-season-for-weddings", "level": "rasmi"}
+      ]
+    },
+    {
+      "id": "teacher",
+      "name": "Cikgu (poster kelas + hadiah cikgu)",
+      "scores": {"demand": 5, "competition": 2, "typography_fit": 5, "pinterest_fit": 5, "order_value": 3, "automation": 5},
+      "total": 25,
+      "season": "bermusim (3 puncak)",
+      "peak_months": "Apr-Mei (teacher appreciation), Jul-Ogos (back-to-school), Dis",
+      "evidence": [
+        {"claim": "'Teacher gifts' ~453k carian/bulan (Google), >200k walaupun bulan perlahan", "source": "https://merchone.com/blog/sell-teacher-gifts-with-print-on-demand/", "level": "pihak_ketiga"},
+        {"claim": "Carian 'teacher appreciation gifts' memuncak minggu pertama Mei (data eRank)", "source": "https://merchone.com/blog/sell-teacher-gifts-with-print-on-demand/", "level": "pihak_ketiga"},
+        {"claim": "Poster antara produk back-to-school paling dicari", "source": "https://merchone.com/blog/back-to-school-print-on-demand-products/", "level": "pihak_ketiga"},
+        {"claim": "Saingan printable percuma di Teachers Pay Teachers", "source": "https://www.teacherspayteachers.com/Product/First-Day-of-School-Picture-Posters-FREE-Back-to-School-2024-2025-1267471", "level": "rasmi"}
+      ]
+    },
+    {
+      "id": "nursery",
+      "name": "Nursery & bilik anak",
+      "scores": {"demand": 4, "competition": 3, "typography_fit": 4, "pinterest_fit": 5, "order_value": 3, "automation": 4},
+      "total": 23,
+      "season": "sepanjang tahun",
+      "peak_months": "April (puncak), baby shower sepanjang tahun",
+      "evidence": [
+        {"claim": "'nursery art' ~8,100 carian/bulan global (anggaran tool)", "source": "https://adtargeting.io/industry/wall-decoration-keywords", "level": "pihak_ketiga"},
+        {"claim": "'baby nursery wall decor' ~480, 'baby nursery wall art' ~260 carian/bulan", "source": "https://unicornseo.com/best-keywords-niche/Baby%20Nursery", "level": "pihak_ketiga"},
+        {"claim": "400+ carian 'nursery art' sehari di Etsy (Etsy Search Insights, blog penjual)", "source": "https://queststudio.io/blog/etsy-nursery-art-keywords", "level": "lemah"},
+        {"claim": "Permintaan memuncak April", "source": "https://www.listifyai.net/keyword/nursery-wall-art", "level": "pihak_ketiga"}
+      ]
+    },
+    {
+      "id": "funny_home",
+      "name": "Tanda lucu rumah (bilik air, dapur, dobi)",
+      "scores": {"demand": 4, "competition": 2, "typography_fit": 5, "pinterest_fit": 4, "order_value": 3, "automation": 5},
+      "total": 23,
+      "season": "sepanjang tahun",
+      "peak_months": "Rata; naik Q4 (hadiah rumah baru)",
+      "evidence": [
+        {"claim": "'Seat Yourself' bathroom art berlabel best seller (130 ulasan) di Walmart", "source": "https://www.walmart.com/ip/Funny-Bathroom-Wall-Art-Seat-Yourself/421497500", "level": "rasmi"},
+        {"claim": "Etsy: varian 'Hello Sweet Cheeks' $2.49 (printable) hingga ~$37 (fizikal)", "source": "https://www.etsy.com/listing/4333199924", "level": "rasmi"},
+        {"claim": "Ranking jualan bathroom prints Etsy (tarikh kemas kini tidak dinyatakan)", "source": "https://etsyhunt.com/etsy-competitor-research/best-etsy-bathroom-prints", "level": "pihak_ketiga"}
+      ]
+    },
+    {
+      "id": "christmas",
+      "name": "Krismas & hadiah cuti",
+      "scores": {"demand": 5, "competition": 1, "typography_fit": 4, "pinterest_fit": 5, "order_value": 3, "automation": 5},
+      "total": 23,
+      "season": "bermusim",
+      "peak_months": "Sep-Dis (pin Jul-Sep)",
+      "evidence": [
+        {"claim": "'christmas' kata kunci #1 di Etsy US, Oktober 2026", "source": "https://help.erank.com/blog/top-keywords-on-etsy/", "level": "rasmi"},
+        {"claim": "~40% jualan POD setahun berlaku pada Q4", "source": "https://www.zikanalytics.com/blog/print-on-demand-statistics/", "level": "pihak_ketiga"}
+      ]
+    },
+    {
+      "id": "mama",
+      "name": "Mama & motherhood",
+      "scores": {"demand": 4, "competition": 2, "typography_fit": 5, "pinterest_fit": 5, "order_value": 2, "automation": 4},
+      "total": 22,
+      "season": "sepanjang tahun + puncak",
+      "peak_months": "Apr-Mei (Mother's Day), Q4",
+      "evidence": [
+        {"claim": "'mothers day' & 'mothers day gift' #4-5 kata kunci Etsy, April 2026", "source": "https://help.erank.com/blog/top-keywords-on-etsy-april-2026/", "level": "rasmi"},
+        {"claim": "Anggaran belanja Mother's Day 2026 di US: $38 bilion", "source": "https://www.shopify.com/blog/unique-personalized-gifts", "level": "pihak_ketiga"}
+      ]
+    },
+    {
+      "id": "friendship",
+      "name": "Valentine / Galentine & persahabatan",
+      "scores": {"demand": 4, "competition": 2, "typography_fit": 5, "pinterest_fit": 4, "order_value": 3, "automation": 4},
+      "total": 22,
+      "season": "bermusim",
+      "peak_months": "Jan-Feb, Dis (Friendsmas)",
+      "evidence": [
+        {"claim": "Carian hadiah personalisasi untuk kawan +1,400% (laporan Etsy F/W 2026; asas tidak dinyatakan)", "source": "https://community.etsy.com/forum/etsy-success-300/topic/etsy-insights-etsy-trend-edit-fallwinter-26-190171/", "level": "rasmi"},
+        {"claim": "Anggaran belanja Valentine 2026 di US: $29 bilion", "source": "https://www.shopify.com/blog/unique-personalized-gifts", "level": "pihak_ketiga"}
+      ]
+    },
+    {
+      "id": "bookish",
+      "name": "Bookish / pencinta buku",
+      "scores": {"demand": 3, "competition": 3, "typography_fit": 5, "pinterest_fit": 4, "order_value": 2, "automation": 4},
+      "total": 21,
+      "season": "sepanjang tahun",
+      "peak_months": "Rata; naik Q4",
+      "evidence": [
+        {"claim": "Carian 'book totes' +148%, romantasy +77% (data Faire)", "source": "https://www.somethingdifferentwholesale.com/uk/blog/book-gift-trend/", "level": "lemah"},
+        {"claim": "Design ikut 'trope' (romantasy, dark romance) lebih laku; design generik sesak", "source": "https://printify.com/knowledge-hub/booktok-trope-merch-2026-playbook-high-margin-print-on-demand-profit/", "level": "pihak_ketiga"}
+      ]
+    },
+    {
+      "id": "home_office",
+      "name": "Home office / humor kerja",
+      "scores": {"demand": 3, "competition": 3, "typography_fit": 5, "pinterest_fit": 3, "order_value": 2, "automation": 5},
+      "total": 21,
+      "season": "sepanjang tahun",
+      "peak_months": "Januari",
+      "evidence": [
+        {"claim": "Home office wall decor: kategori carian wall art paling cepat berkembang sejak 2020", "source": "https://www.gelato.com/de/blog/wall-decor-by-room-guide", "level": "pihak_ketiga"}
+      ]
+    },
+    {
+      "id": "faith",
+      "name": "Iman / Kristian (ayat Bible)",
+      "scores": {"demand": 3, "competition": 2, "typography_fit": 5, "pinterest_fit": 4, "order_value": 2, "automation": 5},
+      "total": 21,
+      "season": "sepanjang tahun",
+      "peak_months": "Easter, Krismas",
+      "evidence": [
+        {"claim": "Kedai Etsy 'KAM DesignHaus' ~26,289 jualan (sejak 2019)", "source": "https://www.etsy.com/shop/KAMDesignHaus", "level": "rasmi"},
+        {"claim": "Kedai Etsy 'Crafty Cow Design' ~6,120 jualan (sejak 2013)", "source": "https://www.etsy.com/shop/CraftyCowDesign", "level": "rasmi"}
+      ]
+    },
+    {
+      "id": "sports_mom",
+      "name": "Sports mom (baseball, soccer)",
+      "scores": {"demand": 3, "competition": 2, "typography_fit": 5, "pinterest_fit": 4, "order_value": 4, "automation": 3},
+      "total": 21,
+      "season": "bermusim",
+      "peak_months": "Feb-Jun (baseball/softball), Ogos-Nov (soccer/football)",
+      "evidence": [
+        {"claim": "Sports mom tees disenaraikan dalam laporan trend penjual Etsy S/S 2026", "source": "https://www.kittl.com/blogs/2026-t-shirt-design-ideas-trends-dsi/", "level": "pihak_ketiga"},
+        {"claim": "Design 'soccer mom' konsisten tinggi permintaan di Etsy", "source": "https://merchize.com/soccer-shirt-design/", "level": "lemah"}
+      ]
+    },
+    {
+      "id": "halloween",
+      "name": "Halloween",
+      "scores": {"demand": 5, "competition": 1, "typography_fit": 4, "pinterest_fit": 4, "order_value": 2, "automation": 5},
+      "total": 21,
+      "season": "bermusim",
+      "peak_months": "Ogos-Okt",
+      "evidence": [
+        {"claim": "'halloween' kata kunci #2 di Etsy US, Q3 2026", "source": "https://help.erank.com/blog/top-etsy-searches-q3-2026/", "level": "rasmi"}
+      ]
+    },
+    {
+      "id": "affirmation",
+      "name": "Afirmasi / kesihatan mental / kaunselor",
+      "scores": {"demand": 2, "competition": 2, "typography_fit": 5, "pinterest_fit": 4, "order_value": 3, "automation": 5},
+      "total": 21,
+      "season": "sepanjang tahun",
+      "peak_months": "Rata; back-to-school untuk kaunselor",
+      "evidence": [
+        {"claim": "Poster afirmasi di Walmart dari $13.25; banyak bekalan", "source": "https://www.walmart.com/c/kp/affirmations-poster", "level": "rasmi"},
+        {"claim": "Bundle digital calm corner di Etsy $3.50-16.81", "source": "https://www.etsy.com/listing/4567285134", "level": "rasmi"}
+      ]
+    },
+    {
+      "id": "pet",
+      "name": "Ibu bapa haiwan (ikut baka)",
+      "scores": {"demand": 4, "competition": 3, "typography_fit": 3, "pinterest_fit": 4, "order_value": 2, "automation": 4},
+      "total": 20,
+      "season": "sepanjang tahun + Q4",
+      "peak_months": "Nov-Dis",
+      "evidence": [
+        {"claim": "Carian hadiah haiwan peliharaan ~2x tahun ke tahun (laporan Etsy F/W 2026)", "source": "https://community.etsy.com/forum/etsy-success-300/topic/etsy-insights-etsy-trend-edit-fallwinter-26-190171/", "level": "rasmi"}
+      ]
+    },
+    {
+      "id": "grandma",
+      "name": "Nenek (Nana, Gigi, Grandma)",
+      "scores": {"demand": 3, "competition": 2, "typography_fit": 5, "pinterest_fit": 4, "order_value": 2, "automation": 3},
+      "total": 19,
+      "season": "sepanjang tahun + puncak",
+      "peak_months": "Mother's Day, Grandparents Day (Sep), Krismas",
+      "evidence": [
+        {"claim": "'personalized grandma shirt' ~1,300 carian/bulan; 71,260 listing Etsy; saingan tinggi; CPC $1.25", "source": "https://www.rankhero.com/keywords/personalized-grandma-shirt", "level": "pihak_ketiga"},
+        {"claim": "Grandma gift shirts disenaraikan dalam laporan trend Etsy S/S 2026", "source": "https://www.kittl.com/blogs/2026-t-shirt-design-ideas-trends-dsi/", "level": "pihak_ketiga"}
+      ]
+    },
+    {
+      "id": "family_est",
+      "name": "Nama keluarga 'Est.' (personalisasi)",
+      "scores": {"demand": 3, "competition": 2, "typography_fit": 5, "pinterest_fit": 4, "order_value": 2, "automation": 2},
+      "total": 18,
+      "season": "sepanjang tahun",
+      "peak_months": "Wedding, housewarming, Krismas",
+      "evidence": [
+        {"claim": "Tiada data permintaan khusus dijumpai; perlu personalisasi (fasa 2)", "source": null, "level": "lemah"}
+      ]
+    }
+  ],
+  "general_evidence": [
+    {"claim": "'wall art' kata kunci #4 di Etsy US, Q3 2026 (dan #4 Mei 2026)", "source": "https://help.erank.com/blog/top-etsy-searches-q3-2026/", "level": "rasmi"},
+    {"claim": "'shirt' kata kunci #1 di Etsy US, Q3 2026", "source": "https://help.erank.com/blog/top-etsy-searches-q3-2026/", "level": "rasmi"}
+  ],
+  "decision": {
+    "wave_1": ["bridal", "teacher", "nursery", "funny_home", "mama", "christmas", "friendship", "bookish"],
+    "wave_2": ["home_office", "faith", "sports_mom", "halloween", "affirmation", "pet", "grandma"],
+    "phase_2_personalization": ["family_est"]
+  }
+}
