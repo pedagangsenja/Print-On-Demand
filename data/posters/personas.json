@@ -1,0 +1,309 @@
+{
+  "stage": "P5",
+  "title": "Persona pembeli wall art",
+  "updated": "2026-11-21",
+  "general": [
+    {
+      "claim": "Pembeli bawah 40: 2x lebih cenderung beli terus dari artis; 'mampu milik' antara sebab utama (65%)",
+      "source": "https://www.myartbroker.com/the-print-collectors-survey-2025",
+      "level": "pihak_ketiga"
+    },
+    {
+      "claim": "~70% pengguna Pinterest wanita",
+      "source": "https://www.charleagency.com/articles/pinterest-statistics/",
+      "level": "pihak_ketiga"
+    }
+  ],
+  "personas": [
+    {
+      "id": "renter",
+      "persona": "Penyewa muda",
+      "niches": "Ruang tamu, bilik tidur, dapur, bilik air",
+      "who": "Millennial/Gen Z yang menyewa; mahu hiasan tanpa paku",
+      "how": "Set gallery wall / satu-satu",
+      "frequency": "Ketika pindah atau refresh (~1 kali/tahun, anggaran)",
+      "when": "Ogos-Sep (musim pindah), Jan-Apr",
+      "products": "Poster matte, rolled, set 3, printable",
+      "budget": "Sensitif harga",
+      "evidence": [
+        {
+          "claim": "Kadar pemilikan rumah US 65.2% (2025), iaitu ~1/3 isi rumah menyewa",
+          "source": "https://usafacts.org/articles/homeownership-rates-by-race/",
+          "level": "rasmi"
+        },
+        {
+          "claim": "~44.6 juta isi rumah penyewa (~35%)",
+          "source": "https://www.verticalrent.com/blog/rental-market-statistics-2026",
+          "level": "pihak_ketiga"
+        },
+        {
+          "claim": "49% isi rumah penyewa terbeban kos (rekod 22.7 juta, 2024)",
+          "source": "https://www.jchs.harvard.edu/press-releases/new-report-finds-cooling-rental-markets-affordability-crisis-deepens-renters",
+          "level": "rasmi"
+        }
+      ]
+    },
+    {
+      "id": "mover",
+      "persona": "Pemilik rumah baru & orang yang berpindah",
+      "niches": "Ruang tamu, dapur, pintu masuk, bilik tidur",
+      "who": "Pembeli rumah (pembeli kali pertama berumur median 40) dan keluarga yang berpindah",
+      "how": "Set / beberapa bilik sekali gus",
+      "frequency": "Sekali setiap perpindahan",
+      "when": "Musim panas (puncak pindah), Q4",
+      "products": "Canvas, berbingkai, set 3",
+      "budget": "Sederhana-tinggi",
+      "evidence": [
+        {
+          "claim": "~39.6 juta orang berpindah (11.8%, 2024)",
+          "source": "https://www.homesnacks.com/moving-statistics/",
+          "level": "pihak_ketiga"
+        },
+        {
+          "claim": "Pembeli kali pertama 21% (rekod terendah), umur median 40",
+          "source": "https://www.nar.realtor/newsroom/first-time-home-buyer-share-falls-to-historic-low-of-21-median-age-rises-to-40",
+          "level": "rasmi"
+        }
+      ]
+    },
+    {
+      "id": "gift_giver",
+      "persona": "Pemberi hadiah (rumah baru, Krismas, Mother's Day)",
+      "niches": "Dapur, ruang tamu, nursery, Krismas",
+      "who": "Wanita yang membeli hadiah untuk keluarga dan kawan",
+      "how": "Satu-satu (berbingkai sebagai hadiah)",
+      "frequency": "2-4 kali setahun",
+      "when": "Nov-Dis, Apr-Mei, sepanjang tahun (rumah baru)",
+      "products": "Poster berbingkai, canvas",
+      "budget": "Hadiah rumah baru ~$40-51",
+      "evidence": [
+        {
+          "claim": "Hadiah rumah baru: kebanyakan orang belanja ~$40",
+          "source": "https://ally.com/stories/spend/how-much-should-you-spend-on-a-gift-for-any-occasion",
+          "level": "pihak_ketiga"
+        },
+        {
+          "claim": "Purata hadiah rumah baru $51.40",
+          "source": "https://www.retailtouchpoints.com/resources/unwrap-the-latest-data-on-gifting",
+          "level": "pihak_ketiga"
+        },
+        {
+          "claim": "Quote klise seperti 'live laugh love' dianggap hadiah rumah baru yang lemah (survei UK)",
+          "source": "https://www.propertyreporter.co.uk/at-home/chosing-the-right-housewarming-gift.html",
+          "level": "pihak_ketiga"
+        },
+        {
+          "claim": "Purata Mother's Day $284.25 seorang (2026)",
+          "source": "https://nrf.com/blog/2026-mothers-day-shopping-plans",
+          "level": "rasmi"
+        }
+      ]
+    },
+    {
+      "id": "new_parent",
+      "persona": "Ibu bapa baru",
+      "niches": "Nursery, bilik anak",
+      "who": "Wanita 25-38 menyediakan nursery; juga tetamu baby shower",
+      "how": "Set 2-3 atau satu poster utama",
+      "frequency": "Sekali setiap anak",
+      "when": "Sepanjang tahun (puncak minat April)",
+      "products": "Berbingkai, canvas, set 3",
+      "budget": "Sederhana",
+      "evidence": [
+        {
+          "claim": "3,606,400 kelahiran di US (2025, provisional)",
+          "source": "https://cdc.gov/nchs/pressroom/releases/20260409.html",
+          "level": "rasmi"
+        }
+      ]
+    },
+    {
+      "id": "teacher",
+      "persona": "Cikgu",
+      "niches": "Kelas",
+      "who": "Cikgu K-12, kebanyakan wanita, aktif mencari idea kelas di Pinterest",
+      "how": "Set 6-12 (sebaiknya digital)",
+      "frequency": "Setiap tahun persekolahan",
+      "when": "Jul-Ogos, Jan",
+      "products": "Bundle printable, set poster kecil",
+      "budget": "Purata $600 duit sendiri setahun",
+      "evidence": [
+        {
+          "claim": "~3.19 juta cikgu sekolah awam (unjuran 2026)",
+          "source": "https://www.edweek.org/ew/issues/education-statistics/index.html",
+          "level": "rasmi"
+        },
+        {
+          "claim": "Purata $600 duit sendiri untuk kelas (2025-26)",
+          "source": "https://www.edweek.org/leadership/see-the-school-supplies-teachers-buy-for-students/2026/08",
+          "level": "rasmi"
+        }
+      ]
+    },
+    {
+      "id": "counselor",
+      "persona": "Kaunselor sekolah & terapis",
+      "niches": "Calm corner / bilik kaunselor",
+      "who": "Kaunselor sekolah, terapis kanak-kanak, cikgu pendidikan khas",
+      "how": "Bundle (set poster + carta)",
+      "frequency": "Setahun sekali + bila membuka bilik baru",
+      "when": "Ogos-Sep",
+      "products": "Bundle printable, set poster",
+      "budget": "Rendah-sederhana (digital $3.50-16.81 di Etsy)",
+      "evidence": [
+        {
+          "claim": "Nisbah murid kepada kaunselor 371:1 (2024-25); cadangan ASCA 250:1",
+          "source": "https://www.schoolcounselor.org/getmedia/62807f33-a020-4c4f-ac6f-bf284803fd97/pr_ratios-24-25.pdf",
+          "level": "rasmi"
+        },
+        {
+          "claim": "'calm corner' 6,600 carian/bulan, 23,904 listing Etsy",
+          "source": "https://www.rankhero.com/keywords/calm-corner",
+          "level": "pihak_ketiga"
+        }
+      ]
+    },
+    {
+      "id": "remote_worker",
+      "persona": "Pekerja remote, hybrid & pejabat",
+      "niches": "Home office & cubicle",
+      "who": "Profesional wanita yang menghias meja kerja di rumah atau cubicle",
+      "how": "Satu-satu / set 2 kecil",
+      "frequency": "~1 kali/tahun (anggaran)",
+      "when": "Jan (tahun baru), Sep (kembali ke pejabat)",
+      "products": "Berbingkai kecil, poster matte 8×10/11×14",
+      "budget": "Sederhana",
+      "evidence": [
+        {
+          "claim": "22.6% pekerja telework/bekerja dari rumah (Mac 2026)",
+          "source": "https://www.bls.gov/opub/ted/2026/22-6-percent-of-workers-teleworked-in-march-2026.htm",
+          "level": "rasmi"
+        },
+        {
+          "claim": "Pekerja remote-capable: 54% hybrid, 25% remote penuh",
+          "source": "https://www.gallup.com/401384/indicator-hybrid-work.aspx",
+          "level": "rasmi"
+        },
+        {
+          "claim": "'chic cubicle decor' +1,543% di Pinterest",
+          "source": "https://newsroom.pinterest.com/news/the-2025-pinterest-fall-trend-report/",
+          "level": "rasmi"
+        }
+      ]
+    },
+    {
+      "id": "decorator",
+      "persona": "Peminat hiasan rumah (humor & bilik spesifik)",
+      "niches": "Bilik air, dapur, dobi, pintu masuk",
+      "who": "Wanita pemilik/penyewa rumah yang suka humor dan estetik",
+      "how": "Set 3 atau satu-satu",
+      "frequency": "~1 kali/tahun (data lama/UK)",
+      "when": "Jan-Apr (refresh), Q4",
+      "products": "Set 3, berbingkai, metal sign (bilik lembap)",
+      "budget": "Sederhana",
+      "evidence": [
+        {
+          "claim": "UK: 25% refresh rumah setiap tahun, 18% setiap 6 bulan",
+          "source": "https://www.featherandblack.com/inspiration/how-often-the-uk-redecorates",
+          "level": "pihak_ketiga"
+        },
+        {
+          "claim": "'funny bathroom sign' 8,100 carian/bulan",
+          "source": "https://www.rankhero.com/keywords/funny-bathroom-sign",
+          "level": "pihak_ketiga"
+        }
+      ]
+    },
+    {
+      "id": "reader",
+      "persona": "Pencinta buku",
+      "niches": "Reading nook",
+      "who": "Wanita 20-40, komuniti BookTok/Bookstagram",
+      "how": "Satu-satu / set 2",
+      "frequency": "Tidak diketahui",
+      "when": "Sepanjang tahun, Q4",
+      "products": "Poster matte, printable",
+      "budget": "Rendah-sederhana",
+      "evidence": [
+        {
+          "claim": "Carian 'book totes' +148% (Faire)",
+          "source": "https://www.somethingdifferentwholesale.com/uk/blog/book-gift-trend/",
+          "level": "lemah"
+        }
+      ]
+    },
+    {
+      "id": "student",
+      "persona": "Pelajar kolej (dorm)",
+      "niches": "Asrama / dorm",
+      "who": "Gen Z 18-22 menghias bilik asrama",
+      "how": "Set / kolaj",
+      "frequency": "Setiap tahun pengajian",
+      "when": "Jul-Ogos",
+      "products": "Rolled/matte murah, printable",
+      "budget": "Rendah",
+      "evidence": [
+        {
+          "claim": "Trend 2026-27: 'hobby walls' dan dinding peribadi tersusun",
+          "source": "https://www.dormtherapy.com/what-is-a-hobby-wall-100013955",
+          "level": "pihak_ketiga"
+        },
+        {
+          "claim": "'dorm decor' 8,100 carian/bulan tetapi 2.37 juta listing",
+          "source": "https://www.rankhero.com/keywords/dorm-decor",
+          "level": "pihak_ketiga"
+        }
+      ]
+    },
+    {
+      "id": "couple",
+      "persona": "Pasangan berkahwin",
+      "niches": "Papan tanda perkahwinan",
+      "who": "Pengantin 24-34 merancang di Pinterest",
+      "how": "Beberapa papan tanda setiap majlis",
+      "frequency": "Sekali",
+      "when": "Mac-Okt (2-3 bulan sebelum majlis, anggaran)",
+      "products": "Foam board, poster 18×24 (fasa 2 personalisasi)",
+      "budget": "Sederhana",
+      "evidence": [
+        {
+          "claim": "~2.01 juta perkahwinan di US (2025)",
+          "source": "https://wedding.report/index.cfm/action/wedding_statistics/view/market/",
+          "level": "pihak_ketiga"
+        },
+        {
+          "claim": "'wedding sign' 27,100 carian/bulan",
+          "source": "https://www.rankhero.com/keywords/wedding-sign",
+          "level": "pihak_ketiga"
+        }
+      ]
+    },
+    {
+      "id": "home_gym",
+      "persona": "Pemilik home gym",
+      "niches": "Home gym",
+      "who": "Peminat kecergasan dengan gym di rumah/garaj",
+      "how": "Set 3-5",
+      "frequency": "Jarang (bila buat gym)",
+      "when": "Jan (azam tahun baru)",
+      "products": "Metal sign, poster berbingkai/laminasi",
+      "budget": "Sederhana",
+      "evidence": [
+        {
+          "claim": "'gym poster' ~9,900 carian/bulan",
+          "source": "https://www.rankhero.com/keywords/gym-poster",
+          "level": "pihak_ketiga"
+        },
+        {
+          "claim": "Pemilik home gym guna 3-5 poster (anekdot)",
+          "source": "https://markus-hagner-photography.com/best-wall-art-for-home-gyms/",
+          "level": "lemah"
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    "Tiada survei terkini pembeli wall art US ikut umur/jantina (data Statista 2017).",
+    "Kekerapan membeli wall art kebanyakannya anggaran atau data UK."
+  ]
+}
