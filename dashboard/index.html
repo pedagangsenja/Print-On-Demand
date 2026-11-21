@@ -1,24 +1,34 @@
 <meta name="dash-one-writer">
 <style>
-.pod { display: grid; gap: var(--cds-gap-xl); font-family: var(--font-anthropic-sans); color: var(--color-fg); }
+.pod { display: grid; gap: calc(var(--cds-gap-xl) * 1.5); font-family: var(--font-anthropic-sans); color: var(--color-fg); }
 .pod h1 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); line-height: 1.15; margin: 0; text-wrap: balance; }
-.pod h2 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0; text-wrap: balance; }
+.pod h2 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-heading); margin: 0; text-wrap: balance; }
 .pod h3 { font-size: var(--cds-font-size-body); font-weight: var(--cds-font-weight-medium); margin: 0; }
-.pod p { margin: 0; max-width: 72ch; line-height: 1.5; }
-.pod-section { display: grid; gap: var(--cds-gap-md); min-width: 0; }
-.pod-muted { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); line-height: 1.45; }
+.pod p { margin: 0; max-width: 70ch; line-height: 1.55; }
+.pod-section { display: grid; gap: var(--cds-gap-md); min-width: 0; padding-top: var(--cds-pad-lg); border-top: 1px solid var(--color-border-line); }
+.pod-section.pod-first { border-top: 0; padding-top: 0; }
+.pod-kicker { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); letter-spacing: 0.04em; text-transform: uppercase; }
+.pod-muted { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); line-height: 1.5; }
+.pod-lede { font-size: var(--cds-font-size-body); }
 .pod-lede b { font-variant-numeric: tabular-nums; }
+.pod-how { margin: 0; padding-left: 1.2em; display: grid; gap: 4px; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); max-width: 70ch; }
 .pod-nav { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs) var(--cds-gap-sm); }
-.pod-nav a { color: var(--color-fg); text-decoration: none; border: 1px solid var(--color-border-line); border-radius: 999px; padding: 2px 10px; font-size: var(--cds-font-size-caption); }
+.pod-nav a { color: var(--color-fg); text-decoration: none; border: 1px solid var(--color-border-line); border-radius: 999px; padding: 3px 12px; font-size: var(--cds-font-size-caption); }
 .pod-nav a:hover, .pod-nav a:focus-visible { background: var(--color-panel); }
-.pod-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: var(--cds-gap-md); }
+.pod-answers { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--cds-gap-md); }
 .pod-card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); min-width: 0; display: grid; gap: var(--cds-gap-xs); align-content: start; }
-.pod-big { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: 2rem; line-height: 1.1; font-variant-numeric: tabular-nums; }
-.pod-chart { position: relative; min-height: 280px; min-width: 0; }
-.pod-chart.pod-short { min-height: 160px; }
+.pod-q { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.pod-big { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: 1.9rem; line-height: 1.15; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.pod-mid { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: 1.35rem; line-height: 1.2; overflow-wrap: anywhere; }
+.pod-gloss { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: var(--cds-gap-sm) var(--cds-gap-lg); margin: 0; }
+.pod-gloss div { min-width: 0; }
+.pod-gloss dt { font-weight: var(--cds-font-weight-medium); font-size: var(--cds-font-size-caption); }
+.pod-gloss dd { margin: 0; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); line-height: 1.45; }
+.pod-chart { position: relative; min-height: 260px; min-width: 0; }
+.pod-chart.pod-short { min-height: 140px; }
 .pod-chart svg { display: block; overflow: visible; }
 .pod-msg { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); padding: var(--cds-pad-md) 0; }
-.pod-tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); box-shadow: var(--cds-shadow-popover); border-radius: var(--cds-radius); padding: var(--cds-pad-sm) var(--cds-pad-md); font-size: var(--cds-font-size-caption); min-width: 150px; z-index: 3; display: grid; gap: 2px; font-variant-numeric: tabular-nums; }
+.pod-tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); box-shadow: var(--cds-shadow-popover); border-radius: var(--cds-radius); padding: var(--cds-pad-sm) var(--cds-pad-md); font-size: var(--cds-font-size-caption); min-width: 160px; z-index: 3; display: grid; gap: 2px; font-variant-numeric: tabular-nums; }
 .pod-tip strong { font-weight: var(--cds-font-weight-medium); }
 .pod-tip .pod-tip-row { display: flex; justify-content: space-between; gap: var(--cds-gap-md); color: var(--cds-text-secondary); }
 .pod-axis text { fill: var(--cds-text-secondary); font-size: var(--cds-font-size-caption); font-family: var(--font-anthropic-sans); }
@@ -27,124 +37,194 @@
 .pod-grid path { display: none; }
 .pod-label { fill: var(--color-fg); font-size: var(--cds-font-size-caption); font-family: var(--font-anthropic-sans); font-variant-numeric: tabular-nums; }
 .pod-label.pod-dim { fill: var(--cds-text-secondary); }
-.pod-legend { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs) var(--cds-gap-md); list-style: none; padding: 0; margin: 0; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
-.pod-sw { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; background: var(--cds-chart-muted); }
-.pod-sw.pod-line { height: 2px; width: 14px; vertical-align: 3px; background: var(--color-fg); }
+.pod-legend { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs) var(--cds-gap-lg); list-style: none; padding: 0; margin: 0; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.pod-sw { display: inline-block; width: 12px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; background: var(--cds-chart-muted); }
+.pod-sw.pod-line { height: 2px; width: 16px; vertical-align: 3px; background: var(--color-fg); }
+.pod-two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--cds-gap-lg); }
+.pod-two > * { min-width: 0; display: grid; gap: var(--cds-gap-sm); align-content: start; }
+.pod-select-row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--cds-gap-sm); }
+.pod-np { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--cds-gap-xs); }
+.pod-np-item { display: grid; grid-template-columns: 1fr auto; gap: 2px var(--cds-gap-md); padding: var(--cds-pad-sm) var(--cds-pad-md); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background: var(--color-panel); }
+.pod-np-name { font-weight: var(--cds-font-weight-medium); min-width: 0; overflow-wrap: anywhere; }
+.pod-np-profit { font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+.pod-np-meta { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs) var(--cds-gap-sm); align-items: center; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
 .pod-table-wrap { overflow-x: auto; min-width: 0; }
-.pod-scroll { max-height: 440px; overflow: auto; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); }
+.pod-scroll { max-height: 460px; overflow: auto; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); }
 .pod table { border-collapse: collapse; width: 100%; font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; }
-.pod th { position: sticky; top: 0; background: var(--color-bg); font-weight: var(--cds-font-weight-medium); color: var(--color-fg-muted); white-space: nowrap; }
-.pod th, .pod td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--color-border-line); vertical-align: top; }
+.pod th { position: sticky; top: 0; background: var(--color-bg); font-weight: var(--cds-font-weight-medium); color: var(--color-fg-muted); white-space: nowrap; z-index: 1; }
+.pod th, .pod td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--color-border-line); vertical-align: top; }
 .pod td.pod-num, .pod th.pod-num { text-align: right; white-space: nowrap; }
 .pod td.pod-wide { min-width: 220px; }
 .pod a.pod-link { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
 .pod-pill { display: inline-block; padding: 0 8px; border-radius: 999px; font-size: var(--cds-font-size-caption); border: 1px solid var(--color-border-line); white-space: nowrap; line-height: 1.6; }
-.pod-pill[data-level="rasmi"] { color: var(--color-ok); border-color: currentColor; }
-.pod-pill[data-level="pihak_ketiga"] { color: var(--color-warn); border-color: currentColor; }
-.pod-pill[data-level="lemah"] { color: var(--color-bad); border-color: currentColor; }
-.pod-scorebar { display: inline-block; height: 6px; border-radius: 3px; margin-left: 6px; vertical-align: middle; background: var(--cds-chart-muted); }
+.pod-pill[data-level="rasmi"], .pod-pill[data-tone="ok"] { color: var(--color-ok); border-color: currentColor; }
+.pod-pill[data-level="pihak_ketiga"], .pod-pill[data-tone="warn"] { color: var(--color-warn); border-color: currentColor; }
+.pod-pill[data-level="lemah"], .pod-pill[data-tone="bad"] { color: var(--color-bad); border-color: currentColor; }
+.pod-scorebar { display: inline-block; height: 6px; border-radius: 3px; margin-left: 8px; vertical-align: middle; background: var(--cds-chart-muted); }
 .pod-personas { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--cds-gap-md); }
-.pod-persona h3 { font-size: var(--cds-font-size-body); }
 .pod-dl { display: grid; grid-template-columns: max-content 1fr; gap: 4px var(--cds-gap-sm); font-size: var(--cds-font-size-caption); margin: 0; }
 .pod-dl dt { color: var(--color-fg-muted); }
 .pod-dl dd { margin: 0; min-width: 0; }
-.pod-select-row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--cds-gap-sm); }
-.pod-two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--cds-gap-lg); }
-.pod-two > * { min-width: 0; }
-.pod details summary { cursor: pointer; font-weight: var(--cds-font-weight-medium); }
+.pod-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: var(--cds-gap-md); }
+.pod details { border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-sm) var(--cds-pad-md); }
+.pod details summary { cursor: pointer; font-weight: var(--cds-font-weight-medium); font-size: var(--cds-font-size-caption); }
 .pod details[open] > :not(summary) { margin-top: var(--cds-gap-sm); }
-@media print { .pod-scroll { max-height: none; overflow: visible; border: 0; } .pod-nav { display: none; } }
+@media print { .pod-scroll { max-height: none; overflow: visible; border: 0; } .pod-nav { display: none; } .pod details { border: 0; } }
 </style>
 
 <div class="pod">
 
-<header id="ringkasan" class="pod-section">
+<header id="ringkasan" class="pod-section pod-first">
+  <div class="pod-kicker">Riset untuk kedai typography di Pinterest</div>
   <h1>Riset POD Typography</h1>
-  <p class="pod-lede">Senario asas: untung <b data-draw="lede-steady" data-source="scenarios" data-field="steady_profit" data-where="scenario=Asas">—</b> setahun bila matang. <b data-draw="lede-top" data-source="niche_profit" data-field="niche" data-row="0">—</b> menyumbang paling banyak, <b data-draw="lede-share" data-source="niche_profit" data-field="share" data-row="0">—</b>% daripada untung.</p>
-  <p class="pod-muted">Pasaran: pembeli Pinterest di US. Jualan melalui Printify dan produk digital. Data dikumpul pada 21 November 2026 daripada sumber awam.</p>
+  <p class="pod-lede">Bila kedai sudah matang, anggaran untung ialah <b data-draw="lede-steady" data-source="scenarios" data-field="steady_profit" data-where="scenario=Asas">—</b> setahun. Niche <b data-draw="lede-top" data-source="niche_profit" data-field="niche" data-row="0">—</b> paling banyak menyumbang, iaitu <b data-draw="lede-share" data-source="niche_profit" data-field="share" data-row="0">—</b>% daripada untung.</p>
+  <ul class="pod-how">
+    <li>Mula dengan <b>Jawapan ringkas</b> di bawah, kemudian pilih niche di bahagian <b>Produk untuk setiap niche</b>.</li>
+    <li>Halakan tetikus pada carta untuk melihat angka tepat.</li>
+    <li>Semua jumlah dalam USD. Angka untung ialah anggaran; lihat <b>Dari mana data ini?</b> untuk sumber.</li>
+  </ul>
   <nav class="pod-nav" aria-label="Bahagian dashboard">
+    <a href="#jawapan">Jawapan ringkas</a>
+    <a href="#produk">Produk ikut niche</a>
     <a href="#untung">Untung</a>
     <a href="#niche">Niche</a>
     <a href="#katakunci">Kata kunci</a>
-    <a href="#produk">Produk</a>
-    <a href="#persona">Persona</a>
+    <a href="#persona">Pembeli</a>
+    <a href="#kalendar">Bila jual</a>
     <a href="#pin">Pin</a>
-    <a href="#kalendar">Kalendar</a>
     <a href="#sumber">Sumber</a>
   </nav>
 </header>
 
-<section id="untung" class="pod-section">
-  <h2>Unjuran untung</h2>
-  <div class="pod-tiles">
-    <div class="pod-card" id="kpi-matang">
-      <div class="pod-muted">Untung setahun, fasa matang</div>
+<section id="jawapan" class="pod-section">
+  <h2>Jawapan ringkas</h2>
+  <div class="pod-answers">
+    <div class="pod-card" id="ans-untung">
+      <div class="pod-q">Berapa boleh untung setahun?</div>
       <div class="pod-big" data-draw="kpi-steady" data-source="scenarios" data-field="steady_profit" data-where="scenario=Asas">—</div>
-      <div class="pod-muted">Senario asas, 3,000 pelawat Pinterest sebulan</div>
+      <div class="pod-muted">Bila kedai matang (~3,000 pelawat Pinterest sebulan). Tahun pertama (2027): <span data-draw="kpi-y1" data-source="scenarios" data-field="year1_profit" data-where="scenario=Asas">—</span>.</div>
     </div>
-    <div class="pod-card" id="kpi-tahun1">
-      <div class="pod-muted">Untung tahun 1 (2027)</div>
-      <div class="pod-big" data-draw="kpi-y1" data-source="scenarios" data-field="year1_profit" data-where="scenario=Asas">—</div>
-      <div class="pod-muted">Trafik naik dari 5% (Jan) ke 100% (Ogos)</div>
+    <div class="pod-card" id="ans-niche">
+      <div class="pod-q">Niche mana paling untung?</div>
+      <div class="pod-mid" data-draw="ans-niche" data-source="niche_profit" data-field="niche" data-row="0">—</div>
+      <div class="pod-muted"><span data-draw="ans-niche-profit" data-source="niche_profit" data-field="profit" data-row="0">—</span> setahun daripada niche ini.</div>
     </div>
-    <div class="pod-card" id="kpi-pesanan">
-      <div class="pod-muted">Pesanan setahun, fasa matang</div>
-      <div class="pod-big" data-draw="kpi-orders" data-source="scenarios" data-field="steady_orders" data-where="scenario=Asas">—</div>
-      <div class="pod-muted">Senario asas</div>
+    <div class="pod-card" id="ans-produk">
+      <div class="pod-q">Produk mana paling untung seunit?</div>
+      <div class="pod-mid" data-draw="ans-product" data-source="top_product" data-field="product" data-row="0">—</div>
+      <div class="pod-muted">Untung ~<span data-draw="ans-product-profit" data-source="top_product" data-field="profit_usd" data-row="0">—</span> seunit (tidak termasuk set bulk).</div>
     </div>
-    <div class="pod-card" id="kpi-purata">
-      <div class="pod-muted">Purata untung sebulan</div>
-      <div class="pod-big" data-draw="kpi-avg" data-source="monthly_stats" data-field="avg" data-row="0">—</div>
-      <div class="pod-muted">Terendah <span data-draw="kpi-min-month" data-source="monthly_stats" data-field="min_month" data-row="0">—</span> (<span data-draw="kpi-min" data-source="monthly_stats" data-field="min" data-row="0">—</span>), tertinggi <span data-draw="kpi-max-month" data-source="monthly_stats" data-field="max_month" data-row="0">—</span> (<span data-draw="kpi-max" data-source="monthly_stats" data-field="max" data-row="0">—</span>)</div>
+    <div class="pod-card" id="ans-katakunci">
+      <div class="pod-q">Kata kunci paling berpeluang?</div>
+      <div class="pod-mid" data-draw="ans-keyword" data-source="top_keyword" data-field="keyword" data-row="0">—</div>
+      <div class="pod-muted"><span data-draw="ans-keyword-opp" data-source="top_keyword" data-field="opportunity" data-row="0">—</span> carian sebulan bagi setiap 1,000 produk pesaing di Etsy.</div>
     </div>
   </div>
+  <details id="istilah">
+    <summary>Maksud istilah dalam dashboard ini</summary>
+    <dl class="pod-gloss">
+      <div><dt>Matang</dt><dd>Selepas akaun Pinterest stabil dan membawa ~3,000 pelawat sebulan ke kedai.</dd></div>
+      <div><dt>Tahun pertama</dt><dd>2027. Trafik bermula perlahan (5% pada Januari) dan penuh pada Ogos.</dd></div>
+      <div><dt>Senario</dt><dd>Pesimis, asas dan optimis: tiga andaian trafik dan kadar pembelian.</dd></div>
+      <div><dt>Untung seunit</dt><dd>Harga jual tolak kos Printify dan fee bayaran. Pembeli bayar shipping.</dd></div>
+      <div><dt>Peluang</dt><dd>Carian sebulan bagi setiap 1,000 produk pesaing di Etsy. Lebih tinggi = lebih mudah menonjol.</dd></div>
+      <div><dt>Produk utama / tambahan</dt><dd>Utama: jual dahulu. Tambahan: produk sampingan untuk menaikkan nilai pesanan.</dd></div>
+      <div><dt>Tahap bukti</dt><dd>Rasmi (platform asal), pihak ketiga (tool atau blog), lemah (satu sumber atau anekdot).</dd></div>
+    </dl>
+  </details>
+</section>
 
-  <h3 id="tajuk-bulanan">Untung bulanan ikut niche, fasa matang, dan tahun 1</h3>
-  <ul class="pod-legend" id="legend-monthly">
-    <li data-key="bridal"><span class="pod-sw"></span>Bridal</li>
-    <li data-key="teacher"><span class="pod-sw"></span>Cikgu</li>
-    <li data-key="nursery"><span class="pod-sw"></span>Nursery</li>
-    <li data-key="funny_home"><span class="pod-sw"></span>Tanda lucu rumah</li>
-    <li data-key="mama"><span class="pod-sw"></span>Mama</li>
-    <li data-key="christmas"><span class="pod-sw"></span>Krismas</li>
-    <li data-key="friendship"><span class="pod-sw"></span>Kawan / Galentine</li>
-    <li data-key="bookish"><span class="pod-sw"></span>Bookish</li>
-    <li><span class="pod-sw pod-line"></span>Tahun 1 (2027)</li>
-  </ul>
-  <div class="pod-chart" id="chart-monthly" data-draw="monthly" data-source="model_monthly"></div>
-  <p class="pod-muted">Andaian: conversion 1.5% (bridal 1.0%); untung setiap pesanan dari kos Printify yang disahkan; indeks musim ialah anggaran yang belum disahkan dengan Pinterest atau Google Trends.</p>
+<section id="produk" class="pod-section">
+  <h2>Produk Printify untuk setiap niche</h2>
+  <p class="pod-muted">Pilih niche untuk melihat produk yang sesuai dijual. Untung ialah anggaran seunit atau setiap set (pelan Printify Free, pembeli bayar shipping).</p>
+  <div class="pod-select-row">
+    <label class="pod-muted" for="np-niche">Niche</label>
+    <select id="np-niche" class="dash-select" data-draw="np-filter" data-source="niche_products" aria-label="Pilih niche"></select>
+  </div>
+  <div class="pod-two">
+    <div>
+      <h3 id="tajuk-utama">Produk utama: jual dahulu</h3>
+      <ul class="pod-np" id="np-main" data-draw="np-main" data-source="niche_products"></ul>
+    </div>
+    <div>
+      <h3 id="tajuk-tambahan">Produk tambahan: naikkan nilai pesanan</h3>
+      <ul class="pod-np" id="np-addon" data-draw="np-addon" data-source="niche_products"></ul>
+    </div>
+  </div>
+  <template id="tpl-np">
+    <li class="pod-np-item">
+      <span class="pod-np-name"></span>
+      <span class="pod-np-profit">Untung ~<b class="pod-np-profit-v"></b></span>
+      <span class="pod-np-meta"><span class="pod-pill pod-np-cat"></span><span>Harga jual <span class="pod-np-price"></span></span><span class="pod-np-note"></span><span class="pod-np-link"></span></span>
+    </li>
+  </template>
 
-  <h3 id="tajuk-senario">Tiga senario</h3>
-  <div class="pod-table-wrap">
-    <table id="table-scenarios" data-source="scenarios" data-row-key="scenario">
+  <h3 id="tajuk-katalog">Semua produk Printify yang dikaji</h3>
+  <div class="pod-select-row">
+    <label class="pod-muted" for="cat-filter">Kategori</label>
+    <select id="cat-filter" class="dash-select" data-draw="cat-filter" data-source="products" aria-label="Tapis kategori"></select>
+  </div>
+  <div class="pod-table-wrap pod-scroll">
+    <table id="table-catalog" data-source="products" data-row-key="id">
       <thead><tr>
-        <th data-field="scenario">Senario</th>
-        <th data-field="assumption">Andaian</th>
-        <th class="pod-num" data-field="year1_profit">Tahun 1</th>
-        <th class="pod-num" data-field="steady_profit">Matang / tahun</th>
-        <th class="pod-num" data-field="steady_orders">Pesanan / tahun</th>
-        <th class="pod-num" data-field="steady_revenue">Jualan kasar / tahun</th>
+        <th data-field="product">Produk</th>
+        <th data-field="category">Kategori</th>
+        <th class="pod-num" data-field="base_usd">Kos Printify</th>
+        <th class="pod-num" data-field="price_usd">Harga jual</th>
+        <th class="pod-num" data-field="profit_usd">Untung</th>
+        <th data-field="status">Cadangan</th>
+        <th data-field="cost_note">Nota kos</th>
+        <th data-field="level">Tahap bukti</th>
+        <th data-field="source">Printify</th>
       </tr></thead>
-      <tbody data-draw="scenarios-body"></tbody>
+      <tbody data-draw="catalog-body"></tbody>
     </table>
   </div>
+  <p class="pod-muted">"—" pada untung bermaksud kos dalam USD belum dijumpai (hanya harga EUR). Kos "termurah" ialah saiz atau provider paling murah; sahkan dalam editor Printify sebelum menetapkan harga.</p>
+</section>
+
+<section id="untung" class="pod-section">
+  <h2>Berapa untung setiap bulan?</h2>
+  <p class="pod-muted">Purata <b data-draw="kpi-avg" data-source="monthly_stats" data-field="avg" data-row="0">—</b> sebulan bila matang. Bulan paling rendah <b data-draw="kpi-min-month" data-source="monthly_stats" data-field="min_month" data-row="0">—</b> (<span data-draw="kpi-min" data-source="monthly_stats" data-field="min" data-row="0">—</span>), paling tinggi <b data-draw="kpi-max-month" data-source="monthly_stats" data-field="max_month" data-row="0">—</b> (<span data-draw="kpi-max" data-source="monthly_stats" data-field="max" data-row="0">—</span>).</p>
+  <ul class="pod-legend" id="legend-monthly">
+    <li><span class="pod-sw" id="sw-matang"></span>Bila matang</li>
+    <li><span class="pod-sw pod-line"></span>Tahun pertama (2027)</li>
+  </ul>
+  <div class="pod-chart" id="chart-monthly" data-draw="monthly" data-source="model_monthly"></div>
+
+  <div class="pod-two">
+    <div>
+      <h3 id="tajuk-niche-untung">Untung setahun ikut niche (bila matang)</h3>
+      <div class="pod-chart pod-short" id="chart-niche-profit" data-draw="niche-profit" data-source="niche_profit"></div>
+    </div>
+    <div>
+      <h3 id="tajuk-senario">Tiga senario</h3>
+      <div class="pod-table-wrap">
+        <table id="table-scenarios" data-source="scenarios" data-row-key="scenario">
+          <thead><tr>
+            <th data-field="scenario">Senario</th>
+            <th class="pod-num" data-field="year1_profit">Tahun 1</th>
+            <th class="pod-num" data-field="steady_profit">Matang</th>
+            <th class="pod-num" data-field="steady_orders">Pesanan</th>
+            <th data-field="assumption">Andaian</th>
+          </tr></thead>
+          <tbody data-draw="scenarios-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <p class="pod-muted">Andaian: 1.5% pelawat membeli (bridal 1.0%); untung setiap pesanan dari kos Printify; musim jualan ialah anggaran yang belum disahkan dengan Pinterest atau Google Trends.</p>
 </section>
 
 <section id="niche" class="pod-section">
-  <h2>Top niche</h2>
-  <p class="pod-muted">Skor 1–5 setiap kriteria, jumlah maksimum 30. D: permintaan. S: saingan (5 = kurang sesak). T: sesuai typography. P: padan pembeli Pinterest. B: nilai pesanan / bulk. A: mudah automasi. Skor ialah penilaian Claude berdasarkan bukti yang dipautkan.</p>
+  <h2>Niche mana nak fokus?</h2>
+  <p class="pod-muted">Skor daripada 30: gabungan permintaan, saingan, kesesuaian typography, padan dengan pembeli Pinterest, nilai pesanan dan kemudahan automasi. "Gelombang 1" ialah niche untuk dilancarkan dahulu.</p>
   <div class="pod-table-wrap">
     <table id="table-niches" data-source="niches" data-row-key="id">
       <thead><tr>
         <th class="pod-num" data-field="rank">#</th>
         <th data-field="niche">Niche</th>
-        <th class="pod-num" data-field="total">Jumlah</th>
-        <th class="pod-num" data-field="demand">D</th>
-        <th class="pod-num" data-field="competition">S</th>
-        <th class="pod-num" data-field="typography_fit">T</th>
-        <th class="pod-num" data-field="pinterest_fit">P</th>
-        <th class="pod-num" data-field="order_value">B</th>
-        <th class="pod-num" data-field="automation">A</th>
+        <th class="pod-num" data-field="total">Skor /30</th>
         <th data-field="season">Musim</th>
         <th data-field="wave">Keputusan</th>
         <th data-field="key_evidence">Bukti utama</th>
@@ -153,72 +233,70 @@
       <tbody data-draw="niches-body"></tbody>
     </table>
   </div>
+  <details id="pecahan-skor">
+    <summary>Lihat pecahan skor setiap kriteria (1–5)</summary>
+    <div class="pod-table-wrap">
+      <table id="table-scores" data-source="niches" data-row-key="id">
+        <thead><tr>
+          <th data-field="niche">Niche</th>
+          <th class="pod-num" data-field="demand">Permintaan</th>
+          <th class="pod-num" data-field="competition">Saingan rendah</th>
+          <th class="pod-num" data-field="typography_fit">Typography</th>
+          <th class="pod-num" data-field="pinterest_fit">Pinterest</th>
+          <th class="pod-num" data-field="order_value">Nilai pesanan</th>
+          <th class="pod-num" data-field="automation">Automasi</th>
+        </tr></thead>
+        <tbody data-draw="scores-body"></tbody>
+      </table>
+    </div>
+    <p class="pod-muted">Skor ialah penilaian Claude berdasarkan bukti yang dipautkan, bukan data rasmi.</p>
+  </details>
 </section>
 
 <section id="katakunci" class="pod-section">
-  <h2>Kata kunci dan jumlah carian</h2>
-  <p class="pod-muted">Volum carian Google ialah anggaran RankHero (global). Pinterest tidak menerbitkan jumlah carian mutlak; Pinterest Trends hanya memberi indeks relatif 0–100, jadi tiada angka Pinterest dipaparkan. Peluang = carian bulanan ÷ 1,000 listing Etsy.</p>
+  <h2>Apa yang pembeli cari?</h2>
+  <p class="pod-muted">Volum carian Google ialah anggaran RankHero. Pinterest tidak menerbitkan jumlah carian sebenar, hanya indeks relatif, jadi angka Pinterest tidak dipaparkan.</p>
   <div class="pod-select-row">
-    <label class="pod-muted" for="kw-niche">Tapis niche</label>
-    <select id="kw-niche" class="dash-select" data-draw="kw-filter" data-source="keywords" aria-label="Tapis niche"></select>
+    <label class="pod-muted" for="kw-niche">Niche</label>
+    <select id="kw-niche" class="dash-select" data-draw="kw-filter" data-source="keywords" aria-label="Tapis niche kata kunci"></select>
   </div>
-  <h3 id="tajuk-peluang">Peluang: carian sebulan bagi setiap 1,000 listing Etsy</h3>
+  <h3 id="tajuk-peluang">Peluang: carian sebulan bagi setiap 1,000 produk pesaing di Etsy</h3>
   <div class="pod-chart pod-short" id="chart-opportunity" data-draw="opportunity" data-source="keywords"></div>
-  <div class="pod-table-wrap pod-scroll">
-    <table id="table-keywords" data-source="keywords" data-row-key="keyword">
-      <thead><tr>
-        <th data-field="niche">Niche</th>
-        <th data-field="keyword">Kata kunci</th>
-        <th class="pod-num" data-field="google_monthly">Carian / bulan</th>
-        <th data-field="volume_type">Jenis</th>
-        <th class="pod-num" data-field="etsy_listings">Listing Etsy</th>
-        <th class="pod-num" data-field="opportunity">Peluang</th>
-        <th data-field="note">Nota</th>
-        <th data-field="source">Sumber</th>
-      </tr></thead>
-      <tbody data-draw="kw-body"></tbody>
-    </table>
-  </div>
-</section>
-
-<section id="produk" class="pod-section">
-  <h2>Produk Printify dan digital</h2>
-  <p class="pod-muted">Andaian: pelan Printify Free, pembeli di US bayar shipping, fee bayaran ~6% + $0.22. Kos "From USD" ialah saiz atau provider termurah; sahkan dalam editor Printify.</p>
-  <h3 id="tajuk-untung-produk">Untung setiap unit atau set (USD)</h3>
-  <div class="pod-chart" id="chart-products" data-draw="products-chart" data-source="products"></div>
-  <div class="pod-table-wrap">
-    <table id="table-products" data-source="products" data-row-key="product">
-      <thead><tr>
-        <th data-field="product">Produk</th>
-        <th class="pod-num" data-field="base_usd">Kos asas</th>
-        <th class="pod-num" data-field="premium_usd">Kos Premium</th>
-        <th class="pod-num" data-field="shipping_usd">Shipping US</th>
-        <th class="pod-num" data-field="price_usd">Harga jual</th>
-        <th class="pod-num" data-field="profit_usd">Untung</th>
-        <th data-field="profit_note">Nota</th>
-        <th data-field="level">Tahap bukti</th>
-        <th data-field="source">Sumber</th>
-      </tr></thead>
-      <tbody data-draw="products-body"></tbody>
-    </table>
-  </div>
+  <details id="jadual-katakunci">
+    <summary>Lihat semua kata kunci dan jumlah carian</summary>
+    <div class="pod-table-wrap pod-scroll">
+      <table id="table-keywords" data-source="keywords" data-row-key="keyword">
+        <thead><tr>
+          <th data-field="niche">Niche</th>
+          <th data-field="keyword">Kata kunci</th>
+          <th class="pod-num" data-field="google_monthly">Carian / bulan</th>
+          <th data-field="volume_type">Jenis</th>
+          <th class="pod-num" data-field="etsy_listings">Produk pesaing Etsy</th>
+          <th class="pod-num" data-field="opportunity">Peluang</th>
+          <th data-field="note">Nota</th>
+          <th data-field="source">Sumber</th>
+        </tr></thead>
+        <tbody data-draw="kw-body"></tbody>
+      </table>
+    </div>
+  </details>
 </section>
 
 <section id="persona" class="pod-section">
-  <h2>Persona pembeli</h2>
-  <p class="pod-muted">Siapa mereka, berapa besar pasaran, berapa mereka belanja, kekerapan, bila dan bagaimana mereka membeli.</p>
+  <h2>Siapa pembeli dan bagaimana mereka membeli?</h2>
+  <p class="pod-muted">"Bulk" bermaksud satu pesanan untuk ramai orang (contohnya set bridal 4–8 helai); "satu-satu" bermaksud satu item setiap pesanan.</p>
   <div class="pod-personas" id="persona-cards" data-draw="personas" data-source="personas"></div>
   <template id="tpl-persona">
-    <article class="pod-card pod-persona">
+    <article class="pod-card">
       <h3 class="pod-p-name"></h3>
       <div><span class="pod-pill pod-p-niche"></span></div>
       <dl class="pod-dl">
-        <dt>Siapa</dt><dd data-f="who"></dd>
-        <dt>Saiz pasaran</dt><dd data-f="market_size"></dd>
-        <dt>Belanja</dt><dd data-f="spend"></dd>
-        <dt>Kekerapan</dt><dd data-f="frequency"></dd>
-        <dt>Bila</dt><dd data-f="when"></dd>
         <dt>Cara beli</dt><dd data-f="how"></dd>
+        <dt>Bila</dt><dd data-f="when"></dd>
+        <dt>Kekerapan</dt><dd data-f="frequency"></dd>
+        <dt>Belanja</dt><dd data-f="spend"></dd>
+        <dt>Saiz pasaran</dt><dd data-f="market_size"></dd>
+        <dt>Siapa</dt><dd data-f="who"></dd>
         <dt>Produk</dt><dd data-f="products"></dd>
         <dt>Emosi</dt><dd data-f="emotion"></dd>
         <dt>Sumber</dt><dd data-f="source"></dd>
@@ -227,66 +305,66 @@
   </template>
 </section>
 
-<section id="pin" class="pod-section">
-  <h2>Panduan pin Pinterest</h2>
-  <p class="pod-muted">Tiada data "top pins" awam setiap niche; panduan ini datang dari laporan rasmi Pinterest, kajian benchmark dan panduan penjual. Top pins sebenar akan dikesan dari analytics selepas pelancaran.</p>
-  <h3 id="tajuk-templat">Campuran templat pin (% daripada semua pin)</h3>
-  <div class="pod-chart pod-short" id="chart-templates" data-draw="templates" data-source="pin_playbook"></div>
-  <div class="pod-table-wrap">
-    <table id="table-pins" data-source="pin_playbook" data-row-key="item">
-      <thead><tr>
-        <th data-field="kind">Jenis</th>
-        <th data-field="item">Dapatan</th>
-        <th data-field="level">Tahap bukti</th>
-        <th data-field="source">Sumber</th>
-      </tr></thead>
-      <tbody data-draw="pins-body"></tbody>
-    </table>
-  </div>
-</section>
-
 <section id="kalendar" class="pod-section">
-  <h2>Kalendar musim</h2>
-  <p class="pod-muted">Indeks permintaan bulanan setiap niche (100 = purata). Warna lebih pekat = bulan jualan lebih tinggi. Pin perlu dimulakan 45–90 hari sebelum puncak.</p>
+  <h2>Bila nak pin dan jual?</h2>
+  <p class="pod-muted">Warna lebih pekat = bulan jualan lebih tinggi (100 = bulan biasa). Mula pin 45–90 hari sebelum bulan puncak.</p>
   <div class="pod-table-wrap">
     <div class="pod-chart" id="chart-heatmap" data-draw="heatmap" data-source="seasonality"></div>
   </div>
-  <h3 id="tajuk-tetingkap-pin">Tetingkap pin setiap niche</h3>
   <div class="pod-table-wrap">
     <table id="table-calendar" data-source="niches" data-row-key="id">
       <thead><tr>
         <th data-field="niche">Niche</th>
-        <th data-field="season">Musim</th>
-        <th data-field="peak_months">Bulan puncak</th>
-        <th data-field="pin_window">Tetingkap pin</th>
+        <th data-field="peak_months">Bulan jualan puncak</th>
+        <th data-field="pin_window">Bila mula pin</th>
       </tr></thead>
       <tbody data-draw="calendar-body"></tbody>
     </table>
   </div>
 </section>
 
+<section id="pin" class="pod-section">
+  <h2>Cara buat pin yang dapat klik</h2>
+  <p class="pod-muted">Setiap design dijadikan 3–5 pin berbeza ikut campuran templat ini. Panduan datang dari laporan Pinterest dan kajian benchmark; pin terbaik sebenar akan dikesan dari analytics selepas pelancaran.</p>
+  <h3 id="tajuk-templat">Campuran templat pin (% daripada semua pin)</h3>
+  <div class="pod-chart pod-short" id="chart-templates" data-draw="templates" data-source="pin_playbook"></div>
+  <details id="jadual-pin">
+    <summary>Lihat peraturan format dan trend visual 2026</summary>
+    <div class="pod-table-wrap">
+      <table id="table-pins" data-source="pin_playbook" data-row-key="item">
+        <thead><tr>
+          <th data-field="kind">Jenis</th>
+          <th data-field="item">Dapatan</th>
+          <th data-field="level">Tahap bukti</th>
+          <th data-field="source">Sumber</th>
+        </tr></thead>
+        <tbody data-draw="pins-body"></tbody>
+      </table>
+    </div>
+  </details>
+</section>
+
 <section id="sumber" class="pod-section">
-  <h2>Sumber dan pengesahan</h2>
-  <p>Setiap angka dikumpul dari hasil carian web yang memetik halaman sumber. Halaman asal belum dapat dibuka terus dari persekitaran kerja (rangkaian disekat pada 21 November 2026), jadi statusnya disemak melalui indeks carian, bukan secara langsung.</p>
+  <h2>Dari mana data ini?</h2>
+  <p>Angka dikumpul pada 21 November 2026 daripada hasil carian web yang memetik halaman sumber. Halaman asal belum dibuka terus (rangkaian kerja disekat), jadi semakan dibuat melalui indeks carian.</p>
   <div class="pod-tiles">
     <div class="pod-card" id="src-rasmi">
-      <div class="pod-muted">Rasmi</div>
+      <div class="pod-q">Sumber rasmi</div>
       <div class="pod-big" data-draw="src-rasmi" data-source="source_counts" data-field="count" data-where="level=rasmi">—</div>
       <div class="pod-muted">NRF, CDC, Printify, Pinterest, Etsy, The Knot, EdWeek, eRank</div>
     </div>
     <div class="pod-card" id="src-pihak">
-      <div class="pod-muted">Pihak ketiga</div>
+      <div class="pod-q">Pihak ketiga</div>
       <div class="pod-big" data-draw="src-pihak" data-source="source_counts" data-field="count" data-where="level=pihak_ketiga">—</div>
       <div class="pod-muted">Tool kata kunci, blog vendor, media</div>
     </div>
     <div class="pod-card" id="src-lemah">
-      <div class="pod-muted">Lemah</div>
+      <div class="pod-q">Bukti lemah</div>
       <div class="pod-big" data-draw="src-lemah" data-source="source_counts" data-field="count" data-where="level=lemah">—</div>
       <div class="pod-muted">Satu sumber, anekdot atau tiada metodologi</div>
     </div>
   </div>
-
-  <h3 id="tajuk-percanggahan">Percanggahan data dan keputusan</h3>
+  <h3 id="tajuk-percanggahan">Angka yang bercanggah dan pilihan dibuat</h3>
   <div class="pod-table-wrap">
     <table id="table-conflicts" data-source="conflicts" data-row-key="topic">
       <thead><tr>
@@ -297,26 +375,24 @@
       <tbody data-draw="conflicts-body"></tbody>
     </table>
   </div>
-
-  <h3 id="tajuk-daftar">Daftar sumber</h3>
-  <div class="pod-table-wrap pod-scroll">
-    <table id="table-sources" data-source="sources" data-row-key="id">
-      <thead><tr>
-        <th data-field="id">ID</th>
-        <th data-field="domain">Domain</th>
-        <th data-field="level">Tahap</th>
-        <th data-field="stages">Peringkat</th>
-        <th data-field="claim">Dakwaan</th>
-        <th data-field="url">Pautan</th>
-      </tr></thead>
-      <tbody data-draw="sources-body"></tbody>
-    </table>
-  </div>
-
-  <details id="kaedah">
-    <summary>Cara data dikumpul dan hadnya</summary>
-    <p>Riset dibuat dalam 7 peringkat: niche, kata kunci, pin, produk, persona, model untung dan daftar sumber. Angka Pinterest mutlak tidak wujud secara awam. Volum carian Google ialah anggaran pihak ketiga. Indeks musim dan unjuran untung ialah model anggaran yang akan dikemas kini apabila data jualan dan analytics sebenar tersedia. Yuran sebenar Printify Premium masih belum disahkan.</p>
+  <details id="daftar-sumber">
+    <summary>Lihat daftar semua sumber</summary>
+    <div class="pod-table-wrap pod-scroll">
+      <table id="table-sources" data-source="sources" data-row-key="id">
+        <thead><tr>
+          <th data-field="id">ID</th>
+          <th data-field="domain">Domain</th>
+          <th data-field="level">Tahap</th>
+          <th data-field="stages">Peringkat</th>
+          <th data-field="claim">Dakwaan</th>
+          <th data-field="url">Pautan</th>
+        </tr></thead>
+        <tbody data-draw="sources-body"></tbody>
+      </table>
+    </div>
   </details>
+</section>
+
 </div>
 
 <script>
@@ -336,21 +412,15 @@ POD.levelText = { rasmi: 'Rasmi', pihak_ketiga: 'Pihak ketiga', lemah: 'Lemah' }
 POD.color = (i) => dash.colors[i % dash.colors.length];
 POD.enc = (s) => String(s).replace(/%/g, '%25').replace(/&/g, '%26').replace(/=/g, '%3D').replace(/,/g, '%2C');
 POD.kw = '';
+POD.np = '';
+POD.cat = '';
 
 POD.cell = (tr, text, cls) => { const td = document.createElement('td'); if (cls) td.className = cls; td.textContent = text == null || text === '' ? '—' : String(text); tr.appendChild(td); return td; };
-POD.linkCell = (tr, url, label) => {
-  const td = document.createElement('td'); const safe = POD.safeUrl(url);
-  if (safe) { const a = document.createElement('a'); a.href = safe; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.className = 'pod-link'; a.textContent = label || 'sumber'; td.appendChild(a); }
-  else td.textContent = url ? String(url) : '—';
-  tr.appendChild(td); return td;
-};
-POD.pillCell = (tr, level) => {
-  const td = document.createElement('td'); const s = document.createElement('span');
-  s.className = 'pod-pill'; const key = String(level || '');
-  const base = key.startsWith('rasmi') ? 'rasmi' : key.startsWith('pihak') ? 'pihak_ketiga' : key.startsWith('lemah') ? 'lemah' : '';
-  if (base) s.dataset.level = base;
-  s.textContent = POD.levelText[key] || key || '—'; td.appendChild(s); tr.appendChild(td); return td;
-};
+POD.link = (url, label) => { const safe = POD.safeUrl(url); if (!safe) return null; const a = document.createElement('a'); a.href = safe; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.className = 'pod-link'; a.textContent = label; return a; };
+POD.linkCell = (tr, url, label) => { const td = document.createElement('td'); const a = POD.link(url, label); if (a) td.appendChild(a); else td.textContent = '—'; tr.appendChild(td); return td; };
+POD.levelBase = (l) => { const k = String(l || ''); return k.startsWith('rasmi') ? 'rasmi' : k.startsWith('pihak') ? 'pihak_ketiga' : k.startsWith('lemah') ? 'lemah' : ''; };
+POD.pill = (text, level, tone) => { const s = document.createElement('span'); s.className = 'pod-pill'; if (level) s.dataset.level = level; if (tone) s.dataset.tone = tone; s.textContent = text; return s; };
+POD.pillCell = (tr, level) => { const td = document.createElement('td'); const b = POD.levelBase(level); td.appendChild(POD.pill(POD.levelText[level] || POD.levelText[b] || String(level || '—'), b)); tr.appendChild(td); return td; };
 POD.emptyRow = (tbody, cols, msg) => { const tr = document.createElement('tr'); const td = document.createElement('td'); td.colSpan = cols; td.className = 'pod-msg'; td.textContent = msg; tr.appendChild(td); tbody.appendChild(tr); };
 POD.tipShow = (el, tip, x, y, build) => {
   tip.replaceChildren(); build(tip); tip.hidden = false;
@@ -359,9 +429,9 @@ POD.tipShow = (el, tip, x, y, build) => {
   tip.style.left = left + 'px'; tip.style.top = Math.max(0, y - h / 2) + 'px';
 };
 POD.tipLine = (tip, label, value, strong) => {
-  const row = document.createElement('div'); row.className = strong ? '' : 'pod-tip-row';
+  const row = document.createElement('div');
   if (strong) { const b = document.createElement('strong'); b.textContent = label; row.appendChild(b); }
-  else { const a = document.createElement('span'); a.textContent = label; const b = document.createElement('span'); b.textContent = value; row.append(a, b); }
+  else { row.className = 'pod-tip-row'; const a = document.createElement('span'); a.textContent = label; const b = document.createElement('span'); b.textContent = value; row.append(a, b); }
   tip.appendChild(row);
 };
 POD.measure = (svg, texts) => {
@@ -369,12 +439,33 @@ POD.measure = (svg, texts) => {
   let w = 0; texts.forEach((t) => { const n = g.append('text').text(t).node(); w = Math.max(w, n.getComputedTextLength ? n.getComputedTextLength() : 0); });
   g.remove(); return Math.ceil(w);
 };
+POD.chartShell = (el, label) => {
+  const msg = document.createElement('div'); msg.className = 'pod-msg';
+  const svgEl = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svgEl.setAttribute('role', 'img'); svgEl.setAttribute('aria-label', label);
+  const tip = document.createElement('div'); tip.className = 'pod-tip'; tip.hidden = true;
+  el.append(msg, svgEl, tip);
+  return { msg, svg: d3.select(svgEl), tip };
+};
+POD.hbars = (el, parts, rows, label, value, fmt, color, tipBuild) => {
+  const { msg, svg, tip } = parts;
+  svg.selectAll('*').remove(); tip.hidden = true; msg.hidden = true;
+  const W = Math.max(260, el.clientWidth || 600), rowH = 26, H = rows.length * rowH + 6;
+  const ml = Math.min(W * 0.5, POD.measure(svg, rows.map(label)) + 10);
+  const vl = POD.measure(svg, rows.map((r) => fmt(value(r)))) + 10;
+  const x = d3.scaleLinear().domain([0, d3.max(rows, value) || 1]).range([ml, Math.max(ml + 20, W - vl)]);
+  svg.attr('width', '100%').attr('height', H).attr('viewBox', `0 0 ${W} ${H}`);
+  const g = svg.append('g').selectAll('g').data(rows).join('g').attr('transform', (d, i) => `translate(0,${i * rowH + 3})`);
+  g.append('text').attr('class', 'pod-label').attr('x', ml - 8).attr('y', rowH / 2).attr('dy', '0.32em').attr('text-anchor', 'end').text(label);
+  g.append('rect').attr('x', ml).attr('y', 5).attr('rx', 2).attr('height', rowH - 10).attr('width', (d) => Math.max(1, x(value(d)) - ml)).style('fill', color);
+  g.append('text').attr('class', 'pod-label pod-dim').attr('x', (d) => x(value(d)) + 5).attr('y', rowH / 2).attr('dy', '0.32em').text((d) => fmt(value(d)));
+  if (tipBuild) g.append('rect').attr('x', 0).attr('y', 0).attr('width', W).attr('height', rowH).style('fill', 'transparent')
+    .on('pointerenter pointermove', (ev, d) => { const [px, py] = d3.pointer(ev, el); POD.tipShow(el, tip, px, py, (t) => tipBuild(t, d)); })
+    .on('pointerleave', () => { tip.hidden = true; });
+};
 
-document.querySelectorAll('#legend-monthly [data-key]').forEach((li) => {
-  const i = POD.NICHES.findIndex((n) => n.k === li.dataset.key);
-  const sw = li.querySelector('.pod-sw');
-  if (sw && i >= 0) sw.style.background = POD.color(i);
-});
+const sw = document.getElementById('sw-matang');
+if (sw) sw.style.background = POD.color(0);
 
 dash.calc('niche_profit', {
   title: 'Untung setahun ikut niche',
@@ -403,6 +494,28 @@ dash.calc('monthly_stats', {
   }
 });
 
+dash.calc('top_product', {
+  title: 'Produk paling untung seunit',
+  description: 'Produk disyorkan dengan untung seunit tertinggi, tidak termasuk set bulk dan produk tanpa kos USD.',
+  inputs: ['products'],
+  fn: (products) => {
+    const ok = products.filter((p) => p.status === 'Disyorkan' && p.category !== 'Set / bulk' && p.profit_usd != null);
+    ok.sort((a, b) => Number(b.profit_usd) - Number(a.profit_usd));
+    return ok.length ? [{ product: ok[0].product, profit_usd: Number(ok[0].profit_usd) }] : [];
+  }
+});
+
+dash.calc('top_keyword', {
+  title: 'Kata kunci paling berpeluang',
+  description: 'Kata kunci dengan nisbah carian bulanan bagi setiap 1,000 listing Etsy paling tinggi.',
+  inputs: ['keywords'],
+  fn: (keywords) => {
+    const ok = keywords.filter((k) => k.opportunity != null);
+    ok.sort((a, b) => Number(b.opportunity) - Number(a.opportunity));
+    return ok.length ? [{ keyword: ok[0].keyword, opportunity: Number(ok[0].opportunity) }] : [];
+  }
+});
+
 dash.calc('source_counts', {
   title: 'Bilangan sumber ikut tahap',
   description: 'Kiraan sumber dalam daftar mengikut tahap pengesahan (rasmi, pihak ketiga, lemah).',
@@ -423,9 +536,14 @@ const asas = (rows) => rows.find((r) => r.scenario === 'Asas') || {};
 POD.text('lede-steady', 'scenarios', (r) => asas(r).steady_profit, POD.usd0);
 POD.text('kpi-steady', 'scenarios', (r) => asas(r).steady_profit, POD.usd0);
 POD.text('kpi-y1', 'scenarios', (r) => asas(r).year1_profit, POD.usd0);
-POD.text('kpi-orders', 'scenarios', (r) => asas(r).steady_orders, POD.int);
 POD.text('lede-top', 'niche_profit', (r) => r[0].niche);
 POD.text('lede-share', 'niche_profit', (r) => r[0].share);
+POD.text('ans-niche', 'niche_profit', (r) => r[0].niche);
+POD.text('ans-niche-profit', 'niche_profit', (r) => r[0].profit, POD.usd0);
+POD.text('ans-product', 'top_product', (r) => r[0].product);
+POD.text('ans-product-profit', 'top_product', (r) => r[0].profit_usd, POD.usd);
+POD.text('ans-keyword', 'top_keyword', (r) => r[0].keyword);
+POD.text('ans-keyword-opp', 'top_keyword', (r) => r[0].opportunity, POD.int);
 POD.text('kpi-avg', 'monthly_stats', (r) => r[0].avg, POD.usd0);
 POD.text('kpi-min', 'monthly_stats', (r) => r[0].min, POD.usd0);
 POD.text('kpi-max', 'monthly_stats', (r) => r[0].max, POD.usd0);
@@ -438,92 +556,148 @@ POD.text('src-lemah', 'source_counts', lvl('lemah'), POD.int);
 </script>
 
 <script>
+dash.draw('np-filter', (sel) => {
+  const rows = POD.ok('niche_products') || [];
+  const seen = new Map(); rows.forEach((r) => { if (!seen.has(r.niche_id)) seen.set(r.niche_id, r.niche); });
+  sel.replaceChildren(...[...seen].map(([id, name]) => new Option(name, id)));
+  if (!seen.has(POD.np)) POD.np = seen.size ? [...seen.keys()][0] : '';
+  sel.value = POD.np;
+  sel.onchange = () => { POD.np = sel.value; dash.draw('np-main'); dash.draw('np-addon'); };
+});
+
+POD.npList = (ul, role) => {
+  const rows = POD.ok('niche_products'); ul.replaceChildren();
+  if (!rows) { const li = document.createElement('li'); li.className = 'pod-msg'; li.textContent = POD.statusMsg('niche_products'); ul.appendChild(li); return; }
+  const tpl = document.getElementById('tpl-np'); if (!tpl) return;
+  const nid = POD.np || (rows[0] && rows[0].niche_id);
+  rows.filter((r) => r.niche_id === nid && r.role === role)
+    .sort((a, b) => (b.profit_usd == null ? -1 : Number(b.profit_usd)) - (a.profit_usd == null ? -1 : Number(a.profit_usd)))
+    .forEach((r) => {
+      const node = tpl.content.cloneNode(true);
+      const where = 'key=' + POD.enc(r.key);
+      const set = (sel, text, field) => { const e = node.querySelector(sel); if (!e) return; e.textContent = text; if (field) { e.dataset.source = 'niche_products'; e.dataset.field = field; e.dataset.where = where; } };
+      set('.pod-np-name', r.product, 'product');
+      set('.pod-np-profit-v', POD.usd(r.profit_usd), 'profit_usd');
+      set('.pod-np-cat', r.category, 'category');
+      set('.pod-np-price', POD.usd(r.price_usd), 'price_usd');
+      set('.pod-np-note', r.profit_usd == null ? r.cost_note : '', r.profit_usd == null ? 'cost_note' : null);
+      const lk = node.querySelector('.pod-np-link'); const a = POD.link(r.source, 'Lihat di Printify');
+      if (lk && a) lk.appendChild(a);
+      ul.appendChild(node);
+    });
+};
+dash.draw('np-main', (ul) => POD.npList(ul, 'Utama'));
+dash.draw('np-addon', (ul) => POD.npList(ul, 'Tambahan'));
+
+dash.draw('cat-filter', (sel) => {
+  const rows = POD.ok('products') || [];
+  const cats = [...new Set(rows.map((r) => r.category))];
+  sel.replaceChildren(new Option('Semua kategori', ''), ...cats.map((c) => new Option(c, c)));
+  sel.value = cats.includes(POD.cat) ? POD.cat : '';
+  sel.onchange = () => { POD.cat = sel.value; dash.draw('catalog-body'); };
+});
+
+dash.draw('catalog-body', (tb) => {
+  const rows = POD.ok('products'); tb.replaceChildren();
+  if (!rows) { POD.emptyRow(tb, 9, POD.statusMsg('products')); return; }
+  rows.filter((r) => !POD.cat || r.category === POD.cat)
+    .sort((a, b) => (a.status === 'Elak') - (b.status === 'Elak') || (b.profit_usd == null ? -1 : Number(b.profit_usd)) - (a.profit_usd == null ? -1 : Number(a.profit_usd)))
+    .forEach((r) => {
+      const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.id);
+      POD.cell(tr, r.product); POD.cell(tr, r.category);
+      POD.cell(tr, POD.usd(r.base_usd), 'pod-num'); POD.cell(tr, POD.usd(r.price_usd), 'pod-num'); POD.cell(tr, POD.usd(r.profit_usd), 'pod-num');
+      const st = document.createElement('td'); st.appendChild(POD.pill(r.status, null, r.status === 'Elak' ? 'bad' : 'ok')); tr.appendChild(st);
+      POD.cell(tr, r.cost_note, 'pod-wide'); POD.pillCell(tr, r.level); POD.linkCell(tr, r.source, 'buka');
+      tb.appendChild(tr);
+    });
+});
+
 dash.draw('monthly', {
-  mount(el) {
-    const msg = document.createElement('div'); msg.className = 'pod-msg';
-    const svgEl = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    svgEl.setAttribute('role', 'img');
-    svgEl.setAttribute('aria-label', 'Carta bar bertindan untung bulanan ikut niche bagi fasa matang, dengan garis untung tahun 1');
-    const tip = document.createElement('div'); tip.className = 'pod-tip'; tip.hidden = true;
-    el.append(msg, svgEl, tip);
-    return { msg, svg: d3.select(svgEl), tip };
-  },
+  mount(el) { return POD.chartShell(el, 'Carta bar untung bulanan bila matang, dengan garis untung tahun pertama 2027'); },
   update(el, { msg, svg, tip }) {
     const rows = POD.ok('model_monthly');
-    if (!rows || !rows.length) { svg.selectAll('*').remove(); svg.attr('height', 0); msg.hidden = false; msg.textContent = POD.statusMsg('model_monthly'); return; }
-    msg.hidden = true; tip.hidden = true;
-    const keys = POD.NICHES.map((n) => n.k);
-    const data = rows.map((r) => { const o = { month: r.month, total: Number(r.total), y1: Number(r.year1_profit) }; keys.forEach((k) => { o[k] = Number(r[k]) || 0; }); return o; });
-    const W = Math.max(280, el.clientWidth || 600), H = 300;
-    svg.selectAll('*').remove();
-    const maxV = d3.max(data, (d) => Math.max(d.total, d.y1)) || 1;
-    const y = d3.scaleLinear().domain([0, maxV]).nice().range([H - 28, 10]);
-    const ticks = y.ticks(5);
-    const ml = POD.measure(svg, ticks.map((t) => POD.usd0(t))) + 10, mr = 8;
-    const x = d3.scaleBand().domain(data.map((d) => d.month)).range([ml, W - mr]).padding(0.22);
+    svg.selectAll('*').remove(); tip.hidden = true;
+    if (!rows || !rows.length) { svg.attr('height', 0); msg.hidden = false; msg.textContent = POD.statusMsg('model_monthly'); return; }
+    msg.hidden = true;
+    const data = rows.map((r) => { const o = { month: r.month, total: Number(r.total), y1: Number(r.year1_profit) }; POD.NICHES.forEach((n) => { o[n.k] = Number(r[n.k]) || 0; }); return o; });
+    const W = Math.max(280, el.clientWidth || 600), H = 280, mb = 26;
+    const y = d3.scaleLinear().domain([0, d3.max(data, (d) => Math.max(d.total, d.y1)) || 1]).nice().range([H - mb, 18]);
+    const ticks = y.ticks(4);
+    const ml = POD.measure(svg, ticks.map((t) => POD.usd0(t))) + 10, mr = 6;
+    const x = d3.scaleBand().domain(data.map((d) => d.month)).range([ml, W - mr]).padding(0.25);
     svg.attr('width', '100%').attr('height', H).attr('viewBox', `0 0 ${W} ${H}`);
-    svg.append('g').attr('class', 'pod-grid').attr('transform', `translate(${ml},0)`)
-      .call(d3.axisLeft(y).tickValues(ticks).tickSize(-(W - ml - mr)).tickFormat(''));
-    svg.append('g').attr('class', 'pod-axis').attr('transform', `translate(${ml},0)`)
-      .call(d3.axisLeft(y).tickValues(ticks).tickFormat((t) => POD.usd0(t)).tickSize(0).tickPadding(6))
-      .call((g) => g.select('.domain').remove());
-    const every = x.bandwidth() < 26 ? 2 : 1;
-    svg.append('g').attr('class', 'pod-axis').attr('transform', `translate(0,${H - 28})`)
-      .call(d3.axisBottom(x).tickValues(x.domain().filter((_, i) => i % every === 0)).tickSize(0).tickPadding(8))
-      .call((g) => g.select('.domain').remove());
-    const stack = d3.stack().keys(keys)(data);
-    svg.append('g').selectAll('g').data(stack).join('g')
-      .each(function (layer, i) { d3.select(this).style('fill', POD.color(i)); })
-      .selectAll('rect').data((d) => d).join('rect')
-      .attr('x', (d) => x(d.data.month)).attr('width', x.bandwidth())
-      .attr('y', (d) => y(d[1])).attr('height', (d) => Math.max(0, y(d[0]) - y(d[1])));
+    svg.append('g').attr('class', 'pod-grid').attr('transform', `translate(${ml},0)`).call(d3.axisLeft(y).tickValues(ticks).tickSize(-(W - ml - mr)).tickFormat(''));
+    svg.append('g').attr('class', 'pod-axis').attr('transform', `translate(${ml},0)`).call(d3.axisLeft(y).tickValues(ticks).tickFormat((t) => POD.usd0(t)).tickSize(0).tickPadding(6)).call((g) => g.select('.domain').remove());
+    const every = x.bandwidth() < 24 ? 2 : 1;
+    svg.append('g').attr('class', 'pod-axis').attr('transform', `translate(0,${H - mb})`).call(d3.axisBottom(x).tickValues(x.domain().filter((_, i) => i % every === 0)).tickSize(0).tickPadding(8)).call((g) => g.select('.domain').remove());
+    svg.append('g').selectAll('rect').data(data).join('rect')
+      .attr('x', (d) => x(d.month)).attr('width', x.bandwidth()).attr('rx', 2)
+      .attr('y', (d) => y(d.total)).attr('height', (d) => Math.max(0, y(0) - y(d.total))).style('fill', POD.color(0));
+    if (x.bandwidth() >= 30) svg.append('g').selectAll('text').data(data).join('text').attr('class', 'pod-label pod-dim')
+      .attr('x', (d) => x(d.month) + x.bandwidth() / 2).attr('y', (d) => y(d.total) - 5).attr('text-anchor', 'middle').text((d) => POD.usd0(d.total));
     const line = d3.line().x((d) => x(d.month) + x.bandwidth() / 2).y((d) => y(d.y1));
     svg.append('path').datum(data).attr('d', line).style('fill', 'none').style('stroke', 'var(--color-fg)').style('stroke-width', 2);
-    svg.append('g').selectAll('circle').data(data).join('circle')
-      .attr('cx', (d) => x(d.month) + x.bandwidth() / 2).attr('cy', (d) => y(d.y1)).attr('r', 3)
+    svg.append('g').selectAll('circle').data(data).join('circle').attr('cx', (d) => x(d.month) + x.bandwidth() / 2).attr('cy', (d) => y(d.y1)).attr('r', 3)
       .style('fill', 'var(--color-bg)').style('stroke', 'var(--color-fg)').style('stroke-width', 1.5);
     svg.append('g').selectAll('rect').data(data).join('rect')
-      .attr('x', (d) => x(d.month) - (x.step() - x.bandwidth()) / 2).attr('width', x.step())
-      .attr('y', 0).attr('height', H - 28).style('fill', 'transparent')
+      .attr('x', (d) => x(d.month) - (x.step() - x.bandwidth()) / 2).attr('width', x.step()).attr('y', 0).attr('height', H - mb).style('fill', 'transparent')
       .on('pointerenter pointermove', (ev, d) => {
         const [px, py] = d3.pointer(ev, el);
         POD.tipShow(el, tip, px, py, (t) => {
           POD.tipLine(t, d.month, '', true);
-          POD.tipLine(t, 'Jumlah (matang)', POD.usd0(d.total));
-          POD.tipLine(t, 'Tahun 1 (2027)', POD.usd0(d.y1));
-          POD.NICHES.map((n) => ({ n: n.n, v: d[n.k] })).sort((a, b) => b.v - a.v).forEach((r) => POD.tipLine(t, r.n, POD.usd0(r.v)));
+          POD.tipLine(t, 'Bila matang', POD.usd0(d.total));
+          POD.tipLine(t, 'Tahun pertama', POD.usd0(d.y1));
+          POD.NICHES.map((n) => ({ n: n.n, v: d[n.k] })).sort((a, b) => b.v - a.v).slice(0, 4).forEach((r) => POD.tipLine(t, r.n, POD.usd0(r.v)));
         });
       })
       .on('pointerleave', () => { tip.hidden = true; });
   }
 });
 
+dash.draw('niche-profit', {
+  mount(el) { return POD.chartShell(el, 'Carta bar mendatar untung setahun bagi setiap niche bila matang'); },
+  update(el, parts) {
+    const rows = POD.ok('niche_profit');
+    if (!rows || !rows.length) { parts.svg.selectAll('*').remove(); parts.svg.attr('height', 0); parts.msg.hidden = false; parts.msg.textContent = POD.statusMsg('niche_profit'); return; }
+    POD.hbars(el, parts, rows, (r) => r.niche, (r) => Number(r.profit), POD.usd0, POD.color(0),
+      (t, d) => { POD.tipLine(t, d.niche, '', true); POD.tipLine(t, 'Untung setahun', POD.usd0(d.profit)); POD.tipLine(t, 'Bahagian', d.share + '%'); });
+  }
+});
+
 dash.draw('scenarios-body', (tb) => {
   const rows = POD.ok('scenarios'); tb.replaceChildren();
-  if (!rows) { POD.emptyRow(tb, 6, POD.statusMsg('scenarios')); return; }
+  if (!rows) { POD.emptyRow(tb, 5, POD.statusMsg('scenarios')); return; }
   rows.forEach((r) => {
     const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.scenario);
-    POD.cell(tr, r.scenario); POD.cell(tr, r.assumption, 'pod-wide');
-    POD.cell(tr, POD.usd0(r.year1_profit), 'pod-num'); POD.cell(tr, POD.usd0(r.steady_profit), 'pod-num');
-    POD.cell(tr, POD.int(r.steady_orders), 'pod-num'); POD.cell(tr, POD.usd0(r.steady_revenue), 'pod-num');
+    POD.cell(tr, r.scenario); POD.cell(tr, POD.usd0(r.year1_profit), 'pod-num'); POD.cell(tr, POD.usd0(r.steady_profit), 'pod-num');
+    POD.cell(tr, POD.int(r.steady_orders), 'pod-num'); POD.cell(tr, r.assumption);
     tb.appendChild(tr);
   });
 });
 
 dash.draw('niches-body', (tb) => {
   const rows = POD.ok('niches'); tb.replaceChildren();
-  if (!rows) { POD.emptyRow(tb, 13, POD.statusMsg('niches')); return; }
+  if (!rows) { POD.emptyRow(tb, 7, POD.statusMsg('niches')); return; }
   rows.slice().sort((a, b) => Number(a.rank) - Number(b.rank)).forEach((r) => {
     const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.id);
     POD.cell(tr, r.rank, 'pod-num'); POD.cell(tr, r.niche);
     const tot = POD.cell(tr, r.total, 'pod-num');
-    const bar = document.createElement('span'); bar.className = 'pod-scorebar'; bar.style.width = Math.round((Number(r.total) / 30) * 48) + 'px'; bar.style.background = POD.color(0); tot.appendChild(bar);
-    ['demand', 'competition', 'typography_fit', 'pinterest_fit', 'order_value', 'automation'].forEach((k) => POD.cell(tr, r[k], 'pod-num'));
-    POD.cell(tr, r.season); POD.cell(tr, r.wave);
-    const ev = POD.cell(tr, r.key_evidence, 'pod-wide');
-    const safe = POD.safeUrl(r.source);
-    if (safe) { ev.append(' '); const a = document.createElement('a'); a.href = safe; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.className = 'pod-link'; a.textContent = 'sumber'; ev.appendChild(a); }
+    const bar = document.createElement('span'); bar.className = 'pod-scorebar'; bar.style.width = Math.round((Number(r.total) / 30) * 52) + 'px'; bar.style.background = POD.color(0); tot.appendChild(bar);
+    POD.cell(tr, r.season);
+    const wv = document.createElement('td'); wv.appendChild(POD.pill(r.wave || '—', null, r.wave === 'Gelombang 1' ? 'ok' : null)); tr.appendChild(wv);
+    const ev = POD.cell(tr, r.key_evidence, 'pod-wide'); const a = POD.link(r.source, 'sumber'); if (a) { ev.append(' '); ev.appendChild(a); }
     POD.pillCell(tr, r.evidence_level);
+    tb.appendChild(tr);
+  });
+});
+
+dash.draw('scores-body', (tb) => {
+  const rows = POD.ok('niches'); tb.replaceChildren();
+  if (!rows) { POD.emptyRow(tb, 7, POD.statusMsg('niches')); return; }
+  rows.slice().sort((a, b) => Number(a.rank) - Number(b.rank)).forEach((r) => {
+    const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.id);
+    POD.cell(tr, r.niche);
+    ['demand', 'competition', 'typography_fit', 'pinterest_fit', 'order_value', 'automation'].forEach((k) => POD.cell(tr, r[k], 'pod-num'));
     tb.appendChild(tr);
   });
 });
@@ -537,42 +711,14 @@ dash.draw('kw-filter', (sel) => {
 });
 
 dash.draw('opportunity', {
-  mount(el) {
-    const msg = document.createElement('div'); msg.className = 'pod-msg';
-    const svgEl = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    svgEl.setAttribute('role', 'img');
-    svgEl.setAttribute('aria-label', 'Carta bar mendatar peluang kata kunci: carian bulanan bagi setiap 1,000 listing Etsy');
-    const tip = document.createElement('div'); tip.className = 'pod-tip'; tip.hidden = true;
-    el.append(msg, svgEl, tip);
-    return { msg, svg: d3.select(svgEl), tip };
-  },
-  update(el, { msg, svg, tip }) {
+  mount(el) { return POD.chartShell(el, 'Carta bar mendatar peluang kata kunci: carian bulanan bagi setiap 1,000 listing Etsy'); },
+  update(el, parts) {
     const all = POD.ok('keywords');
-    svg.selectAll('*').remove(); tip.hidden = true;
-    if (!all) { svg.attr('height', 0); msg.hidden = false; msg.textContent = POD.statusMsg('keywords'); return; }
+    if (!all) { parts.svg.selectAll('*').remove(); parts.svg.attr('height', 0); parts.msg.hidden = false; parts.msg.textContent = POD.statusMsg('keywords'); return; }
     const rows = all.filter((r) => r.opportunity != null && (!POD.kw || r.niche === POD.kw)).sort((a, b) => b.opportunity - a.opportunity);
-    if (!rows.length) { svg.attr('height', 0); msg.hidden = false; msg.textContent = 'Tiada kata kunci dengan data listing Etsy untuk niche ini.'; return; }
-    msg.hidden = true;
-    const W = Math.max(280, el.clientWidth || 600), rowH = 24, H = rows.length * rowH + 8;
-    const ml = Math.min(W * 0.45, POD.measure(svg, rows.map((r) => r.keyword)) + 10);
-    const vl = POD.measure(svg, rows.map((r) => POD.int(r.opportunity))) + 8;
-    const x = d3.scaleLinear().domain([0, d3.max(rows, (r) => r.opportunity) || 1]).range([ml, W - vl]);
-    svg.attr('width', '100%').attr('height', H).attr('viewBox', `0 0 ${W} ${H}`);
-    const g = svg.append('g').selectAll('g').data(rows).join('g').attr('transform', (d, i) => `translate(0,${i * rowH + 4})`);
-    g.append('text').attr('class', 'pod-label').attr('x', ml - 8).attr('y', rowH / 2).attr('dy', '0.32em').attr('text-anchor', 'end').text((d) => d.keyword);
-    g.append('rect').attr('x', ml).attr('y', 4).attr('height', rowH - 8).attr('width', (d) => Math.max(1, x(d.opportunity) - ml)).style('fill', POD.color(0));
-    g.append('text').attr('class', 'pod-label pod-dim').attr('x', (d) => x(d.opportunity) + 4).attr('y', rowH / 2).attr('dy', '0.32em').text((d) => POD.int(d.opportunity));
-    g.append('rect').attr('x', 0).attr('y', 0).attr('width', W).attr('height', rowH).style('fill', 'transparent')
-      .on('pointerenter pointermove', (ev, d) => {
-        const [px, py] = d3.pointer(ev, el);
-        POD.tipShow(el, tip, px, py, (t) => {
-          POD.tipLine(t, d.keyword, '', true);
-          POD.tipLine(t, 'Carian / bulan', POD.int(d.google_monthly));
-          POD.tipLine(t, 'Listing Etsy', POD.int(d.etsy_listings));
-          POD.tipLine(t, 'Peluang', POD.int(d.opportunity));
-        });
-      })
-      .on('pointerleave', () => { tip.hidden = true; });
+    if (!rows.length) { parts.svg.selectAll('*').remove(); parts.svg.attr('height', 0); parts.msg.hidden = false; parts.msg.textContent = 'Tiada kata kunci dengan data pesaing Etsy untuk niche ini.'; return; }
+    POD.hbars(el, parts, rows, (r) => r.keyword, (r) => Number(r.opportunity), POD.int, POD.color(1),
+      (t, d) => { POD.tipLine(t, d.keyword, '', true); POD.tipLine(t, 'Carian / bulan', POD.int(d.google_monthly)); POD.tipLine(t, 'Produk pesaing Etsy', POD.int(d.etsy_listings)); POD.tipLine(t, 'Peluang', POD.int(d.opportunity)); });
   }
 });
 
@@ -583,107 +729,81 @@ dash.draw('kw-body', (tb) => {
     const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.keyword);
     POD.cell(tr, r.niche); POD.cell(tr, r.keyword); POD.cell(tr, POD.int(r.google_monthly), 'pod-num'); POD.cell(tr, r.volume_type);
     POD.cell(tr, POD.int(r.etsy_listings), 'pod-num'); POD.cell(tr, POD.int(r.opportunity), 'pod-num'); POD.cell(tr, r.note);
-    POD.linkCell(tr, r.source, 'RankHero / tool');
+    POD.linkCell(tr, r.source, 'sumber');
     tb.appendChild(tr);
   });
 });
 </script>
 
 <script>
-dash.draw('products-chart', {
-  mount(el) {
-    const msg = document.createElement('div'); msg.className = 'pod-msg';
-    const svgEl = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    svgEl.setAttribute('role', 'img');
-    svgEl.setAttribute('aria-label', 'Carta bar mendatar untung setiap produk atau set dalam USD');
-    const tip = document.createElement('div'); tip.className = 'pod-tip'; tip.hidden = true;
-    el.append(msg, svgEl, tip);
-    return { msg, svg: d3.select(svgEl), tip };
-  },
-  update(el, { msg, svg, tip }) {
-    const all = POD.ok('products');
-    svg.selectAll('*').remove(); tip.hidden = true;
-    if (!all || !all.length) { svg.attr('height', 0); msg.hidden = false; msg.textContent = POD.statusMsg('products'); return; }
-    msg.hidden = true;
-    const rows = all.slice().sort((a, b) => Number(b.profit_usd) - Number(a.profit_usd));
-    const W = Math.max(280, el.clientWidth || 600), rowH = 24, H = rows.length * rowH + 8;
-    const ml = Math.min(W * 0.5, POD.measure(svg, rows.map((r) => r.product)) + 10);
-    const vl = POD.measure(svg, rows.map((r) => POD.usd(r.profit_usd))) + 8;
-    const x = d3.scaleLinear().domain([0, d3.max(rows, (r) => Number(r.profit_usd)) || 1]).range([ml, W - vl]);
-    svg.attr('width', '100%').attr('height', H).attr('viewBox', `0 0 ${W} ${H}`);
-    const g = svg.append('g').selectAll('g').data(rows).join('g').attr('transform', (d, i) => `translate(0,${i * rowH + 4})`);
-    g.append('text').attr('class', 'pod-label').attr('x', ml - 8).attr('y', rowH / 2).attr('dy', '0.32em').attr('text-anchor', 'end').text((d) => d.product);
-    g.append('rect').attr('x', ml).attr('y', 4).attr('height', rowH - 8).attr('width', (d) => Math.max(1, x(Number(d.profit_usd)) - ml))
-      .style('fill', (d) => (d.profit_note === 'set / bulk' ? POD.color(1) : POD.color(0)));
-    g.append('text').attr('class', 'pod-label pod-dim').attr('x', (d) => x(Number(d.profit_usd)) + 4).attr('y', rowH / 2).attr('dy', '0.32em').text((d) => POD.usd(d.profit_usd));
-    g.append('rect').attr('x', 0).attr('y', 0).attr('width', W).attr('height', rowH).style('fill', 'transparent')
-      .on('pointerenter pointermove', (ev, d) => {
-        const [px, py] = d3.pointer(ev, el);
-        POD.tipShow(el, tip, px, py, (t) => {
-          POD.tipLine(t, d.product, '', true);
-          POD.tipLine(t, 'Harga jual', POD.usd(d.price_usd));
-          POD.tipLine(t, 'Kos asas', POD.usd(d.base_usd));
-          POD.tipLine(t, 'Untung', POD.usd(d.profit_usd));
-        });
-      })
-      .on('pointerleave', () => { tip.hidden = true; });
-  }
-});
-
-dash.draw('products-body', (tb) => {
-  const rows = POD.ok('products'); tb.replaceChildren();
-  if (!rows) { POD.emptyRow(tb, 9, POD.statusMsg('products')); return; }
-  rows.slice().sort((a, b) => Number(b.profit_usd) - Number(a.profit_usd)).forEach((r) => {
-    const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.product);
-    POD.cell(tr, r.product); POD.cell(tr, POD.usd(r.base_usd), 'pod-num'); POD.cell(tr, POD.usd(r.premium_usd), 'pod-num');
-    POD.cell(tr, POD.usd(r.shipping_usd), 'pod-num'); POD.cell(tr, POD.usd(r.price_usd), 'pod-num'); POD.cell(tr, POD.usd(r.profit_usd), 'pod-num');
-    POD.cell(tr, r.profit_note); POD.pillCell(tr, r.level); POD.linkCell(tr, r.source, 'sumber');
-    tb.appendChild(tr);
-  });
-});
-
 dash.draw('personas', (box) => {
   const rows = POD.ok('personas'); box.replaceChildren();
   if (!rows) { const m = document.createElement('div'); m.className = 'pod-msg'; m.textContent = POD.statusMsg('personas'); box.appendChild(m); return; }
-  const tpl = document.getElementById('tpl-persona');
-  if (!tpl) return;
+  const tpl = document.getElementById('tpl-persona'); if (!tpl) return;
   rows.forEach((r, i) => {
     const node = tpl.content.cloneNode(true);
-    const name = node.querySelector('.pod-p-name');
-    if (name) { name.textContent = r.persona; name.dataset.source = 'personas'; name.dataset.field = 'persona'; name.dataset.row = String(i); }
-    const pill = node.querySelector('.pod-p-niche');
-    if (pill) { pill.textContent = r.niche; pill.dataset.source = 'personas'; pill.dataset.field = 'niche'; pill.dataset.row = String(i); }
+    const mark = (e, f) => { e.dataset.source = 'personas'; e.dataset.field = f; e.dataset.row = String(i); };
+    const name = node.querySelector('.pod-p-name'); if (name) { name.textContent = r.persona; mark(name, 'persona'); }
+    const pill = node.querySelector('.pod-p-niche'); if (pill) { pill.textContent = r.niche; mark(pill, 'niche'); }
     node.querySelectorAll('dd[data-f]').forEach((dd) => {
       const f = dd.dataset.f;
-      if (f === 'source') {
-        const safe = POD.safeUrl(r.source);
-        if (safe) { const a = document.createElement('a'); a.href = safe; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.className = 'pod-link'; a.textContent = new URL(safe).hostname.replace(/^www\./, ''); dd.replaceChildren(a); }
-        else dd.textContent = '—';
-        return;
-      }
-      dd.textContent = r[f] == null || r[f] === '' ? '—' : String(r[f]);
-      dd.dataset.source = 'personas'; dd.dataset.field = f; dd.dataset.row = String(i);
+      if (f === 'source') { const safe = POD.safeUrl(r.source); const a = safe ? POD.link(safe, new URL(safe).hostname.replace(/^www\./, '')) : null; if (a) dd.replaceChildren(a); else dd.textContent = '—'; return; }
+      dd.textContent = r[f] == null || r[f] === '' ? '—' : String(r[f]); mark(dd, f);
     });
     box.appendChild(node);
   });
 });
 
-dash.draw('templates', (el) => {
-  const all = POD.ok('pin_playbook'); el.replaceChildren();
-  if (!all) { const m = document.createElement('div'); m.className = 'pod-msg'; m.textContent = POD.statusMsg('pin_playbook'); el.appendChild(m); return; }
-  const rows = all.filter((r) => r.share_pct != null).sort((a, b) => b.share_pct - a.share_pct);
-  const svgEl = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-  svgEl.setAttribute('role', 'img'); svgEl.setAttribute('aria-label', 'Carta bar mendatar peratus pin bagi setiap templat');
-  el.appendChild(svgEl);
-  const svg = d3.select(svgEl);
-  const W = Math.max(280, el.clientWidth || 600), rowH = 24, H = rows.length * rowH + 8;
-  const ml = Math.min(W * 0.55, POD.measure(svg, rows.map((r) => r.item)) + 10);
-  const x = d3.scaleLinear().domain([0, d3.max(rows, (r) => r.share_pct) || 1]).range([ml, W - 44]);
-  svg.attr('width', '100%').attr('height', H).attr('viewBox', `0 0 ${W} ${H}`);
-  const g = svg.append('g').selectAll('g').data(rows).join('g').attr('transform', (d, i) => `translate(0,${i * rowH + 4})`);
-  g.append('text').attr('class', 'pod-label').attr('x', ml - 8).attr('y', rowH / 2).attr('dy', '0.32em').attr('text-anchor', 'end').text((d) => d.item);
-  g.append('rect').attr('x', ml).attr('y', 4).attr('height', rowH - 8).attr('width', (d) => Math.max(1, x(d.share_pct) - ml)).style('fill', POD.color(2));
-  g.append('text').attr('class', 'pod-label pod-dim').attr('x', (d) => x(d.share_pct) + 4).attr('y', rowH / 2).attr('dy', '0.32em').text((d) => d.share_pct + '%');
+dash.draw('heatmap', {
+  mount(el) { return POD.chartShell(el, 'Peta haba indeks jualan bulanan bagi setiap niche, Januari hingga Disember'); },
+  update(el, { msg, svg, tip }) {
+    const rows = POD.ok('seasonality');
+    svg.selectAll('*').remove(); tip.hidden = true;
+    if (!rows || !rows.length) { svg.attr('height', 0); msg.hidden = false; msg.textContent = POD.statusMsg('seasonality'); return; }
+    msg.hidden = true;
+    const niches = [...new Set(rows.map((r) => r.niche))];
+    const months = [...new Set(rows.slice().sort((a, b) => a.month_no - b.month_no).map((r) => r.month))];
+    const W = Math.max(440, el.clientWidth || 600), rowH = 30, mt = 22;
+    const ml = POD.measure(svg, niches) + 12;
+    const x = d3.scaleBand().domain(months).range([ml, W]).padding(0.06);
+    const y = d3.scaleBand().domain(niches).range([mt, mt + niches.length * rowH]).padding(0.08);
+    const H = mt + niches.length * rowH + 4;
+    svg.attr('width', '100%').attr('height', H).attr('viewBox', `0 0 ${W} ${H}`);
+    svg.append('g').selectAll('text').data(months).join('text').attr('class', 'pod-label pod-dim').attr('x', (m) => x(m) + x.bandwidth() / 2).attr('y', 14).attr('text-anchor', 'middle').text((m) => m);
+    svg.append('g').selectAll('text').data(niches).join('text').attr('class', 'pod-label').attr('x', ml - 8).attr('y', (n) => y(n) + y.bandwidth() / 2).attr('dy', '0.32em').attr('text-anchor', 'end').text((n) => n);
+    const op = (v) => 0.07 + 0.93 * Math.min(1, Number(v) / 200);
+    const showNum = x.bandwidth() >= 30;
+    const cells = svg.append('g').selectAll('g').data(rows).join('g');
+    cells.append('rect').attr('x', (d) => x(d.month)).attr('y', (d) => y(d.niche)).attr('width', x.bandwidth()).attr('height', y.bandwidth()).attr('rx', 2)
+      .style('fill', POD.color(0)).style('fill-opacity', (d) => op(d.index));
+    if (showNum) cells.append('text').attr('class', 'pod-label').attr('x', (d) => x(d.month) + x.bandwidth() / 2).attr('y', (d) => y(d.niche) + y.bandwidth() / 2)
+      .attr('dy', '0.32em').attr('text-anchor', 'middle').style('fill', (d) => (op(d.index) > 0.6 ? 'var(--color-bg)' : 'var(--color-fg)')).text((d) => d.index);
+    cells.on('pointerenter pointermove', (ev, d) => {
+      const [px, py] = d3.pointer(ev, el);
+      POD.tipShow(el, tip, px, py, (t) => { POD.tipLine(t, `${d.niche}, ${d.month}`, '', true); POD.tipLine(t, 'Indeks jualan', String(d.index)); });
+    }).on('pointerleave', () => { tip.hidden = true; });
+  }
+});
+
+dash.draw('calendar-body', (tb) => {
+  const rows = POD.ok('niches'); tb.replaceChildren();
+  if (!rows) { POD.emptyRow(tb, 3, POD.statusMsg('niches')); return; }
+  rows.filter((r) => r.pin_window).sort((a, b) => Number(a.rank) - Number(b.rank)).forEach((r) => {
+    const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.id);
+    POD.cell(tr, r.niche); POD.cell(tr, r.peak_months); POD.cell(tr, r.pin_window, 'pod-wide');
+    tb.appendChild(tr);
+  });
+});
+
+dash.draw('templates', {
+  mount(el) { return POD.chartShell(el, 'Carta bar mendatar peratus pin bagi setiap templat'); },
+  update(el, parts) {
+    const all = POD.ok('pin_playbook');
+    if (!all) { parts.svg.selectAll('*').remove(); parts.svg.attr('height', 0); parts.msg.hidden = false; parts.msg.textContent = POD.statusMsg('pin_playbook'); return; }
+    const rows = all.filter((r) => r.share_pct != null).sort((a, b) => b.share_pct - a.share_pct);
+    POD.hbars(el, parts, rows, (r) => r.item, (r) => Number(r.share_pct), (v) => v + '%', POD.color(2),
+      (t, d) => { POD.tipLine(t, d.item, '', true); POD.tipLine(t, 'Guna untuk', d.detail); POD.tipLine(t, 'Bahagian pin', d.share_pct + '%'); });
+  }
 });
 
 dash.draw('pins-body', (tb) => {
@@ -692,57 +812,6 @@ dash.draw('pins-body', (tb) => {
   rows.filter((r) => r.share_pct == null).forEach((r) => {
     const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.item);
     POD.cell(tr, r.kind); POD.cell(tr, r.item, 'pod-wide'); POD.pillCell(tr, r.level); POD.linkCell(tr, r.source, 'sumber');
-    tb.appendChild(tr);
-  });
-});
-
-dash.draw('heatmap', {
-  mount(el) {
-    const msg = document.createElement('div'); msg.className = 'pod-msg';
-    const svgEl = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    svgEl.setAttribute('role', 'img');
-    svgEl.setAttribute('aria-label', 'Peta haba indeks permintaan bulanan bagi setiap niche, Januari hingga Disember');
-    const tip = document.createElement('div'); tip.className = 'pod-tip'; tip.hidden = true;
-    el.append(msg, svgEl, tip);
-    return { msg, svg: d3.select(svgEl), tip };
-  },
-  update(el, { msg, svg, tip }) {
-    const rows = POD.ok('seasonality');
-    svg.selectAll('*').remove(); tip.hidden = true;
-    if (!rows || !rows.length) { svg.attr('height', 0); msg.hidden = false; msg.textContent = POD.statusMsg('seasonality'); return; }
-    msg.hidden = true;
-    const niches = [...new Set(rows.map((r) => r.niche))];
-    const months = [...new Set(rows.slice().sort((a, b) => a.month_no - b.month_no).map((r) => r.month))];
-    const W = Math.max(420, el.clientWidth || 600), rowH = 30;
-    const ml = POD.measure(svg, niches) + 12, mt = 22;
-    const x = d3.scaleBand().domain(months).range([ml, W]).padding(0.06);
-    const y = d3.scaleBand().domain(niches).range([mt, mt + niches.length * rowH]).padding(0.06);
-    const H = mt + niches.length * rowH + 4;
-    svg.attr('width', '100%').attr('height', H).attr('viewBox', `0 0 ${W} ${H}`);
-    svg.append('g').selectAll('text').data(months).join('text').attr('class', 'pod-label pod-dim')
-      .attr('x', (m) => x(m) + x.bandwidth() / 2).attr('y', 14).attr('text-anchor', 'middle').text((m) => m);
-    svg.append('g').selectAll('text').data(niches).join('text').attr('class', 'pod-label')
-      .attr('x', ml - 8).attr('y', (n) => y(n) + y.bandwidth() / 2).attr('dy', '0.32em').attr('text-anchor', 'end').text((n) => n);
-    const op = (v) => 0.06 + 0.94 * Math.min(1, Number(v) / 200);
-    const showNum = x.bandwidth() >= 30;
-    const cells = svg.append('g').selectAll('g').data(rows).join('g');
-    cells.append('rect').attr('x', (d) => x(d.month)).attr('y', (d) => y(d.niche)).attr('width', x.bandwidth()).attr('height', y.bandwidth())
-      .attr('rx', 2).style('fill', POD.color(0)).style('fill-opacity', (d) => op(d.index));
-    if (showNum) cells.append('text').attr('class', 'pod-label').attr('x', (d) => x(d.month) + x.bandwidth() / 2).attr('y', (d) => y(d.niche) + y.bandwidth() / 2)
-      .attr('dy', '0.32em').attr('text-anchor', 'middle').style('fill', (d) => (op(d.index) > 0.6 ? 'var(--color-bg)' : 'var(--color-fg)')).text((d) => d.index);
-    cells.on('pointerenter pointermove', (ev, d) => {
-      const [px, py] = d3.pointer(ev, el);
-      POD.tipShow(el, tip, px, py, (t) => { POD.tipLine(t, `${d.niche}, ${d.month}`, '', true); POD.tipLine(t, 'Indeks permintaan', String(d.index)); });
-    }).on('pointerleave', () => { tip.hidden = true; });
-  }
-});
-
-dash.draw('calendar-body', (tb) => {
-  const rows = POD.ok('niches'); tb.replaceChildren();
-  if (!rows) { POD.emptyRow(tb, 4, POD.statusMsg('niches')); return; }
-  rows.filter((r) => r.pin_window).sort((a, b) => Number(a.rank) - Number(b.rank)).forEach((r) => {
-    const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.id);
-    POD.cell(tr, r.niche); POD.cell(tr, r.season); POD.cell(tr, r.peak_months); POD.cell(tr, r.pin_window, 'pod-wide');
     tb.appendChild(tr);
   });
 });

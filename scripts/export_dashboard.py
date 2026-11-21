@@ -104,3 +104,18 @@ W("sources.json", rows)
 
 rows = [{"topic": c["topic"], "values": " | ".join(c["values"]), "resolution": c["resolution"]} for c in src["conflicts"]]
 W("conflicts.json", rows)
+
+# Katalog produk Printify + padanan niche (dari scripts/build_catalog.py)
+cat = L("catalog.json")
+W("catalog.json", cat["catalog"])
+byid = {c["id"]: c for c in cat["catalog"]}
+rows = []
+for n in cat["niche_products"]:
+    for role, ids in (("Utama", n["main"]), ("Tambahan", n["addon"])):
+        for pid in ids:
+            c = byid[pid]
+            rows.append({"key": f"{n['niche_id']}:{pid}", "niche_id": n["niche_id"], "niche": n["niche"], "role": role,
+                         "product_id": pid, "product": c["product"], "category": c["category"],
+                         "price_usd": c["price_usd"], "profit_usd": c["profit_usd"],
+                         "cost_note": c["cost_note"], "source": c["source"]})
+W("niche_products.json", rows)
