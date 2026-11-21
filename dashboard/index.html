@@ -1,0 +1,770 @@
+<meta name="dash-one-writer">
+<style>
+.pod { display: grid; gap: var(--cds-gap-xl); font-family: var(--font-anthropic-sans); color: var(--color-fg); }
+.pod h1 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); line-height: 1.15; margin: 0; text-wrap: balance; }
+.pod h2 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0; text-wrap: balance; }
+.pod h3 { font-size: var(--cds-font-size-body); font-weight: var(--cds-font-weight-medium); margin: 0; }
+.pod p { margin: 0; max-width: 72ch; line-height: 1.5; }
+.pod-section { display: grid; gap: var(--cds-gap-md); min-width: 0; }
+.pod-muted { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); line-height: 1.45; }
+.pod-lede b { font-variant-numeric: tabular-nums; }
+.pod-nav { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs) var(--cds-gap-sm); }
+.pod-nav a { color: var(--color-fg); text-decoration: none; border: 1px solid var(--color-border-line); border-radius: 999px; padding: 2px 10px; font-size: var(--cds-font-size-caption); }
+.pod-nav a:hover, .pod-nav a:focus-visible { background: var(--color-panel); }
+.pod-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: var(--cds-gap-md); }
+.pod-card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); min-width: 0; display: grid; gap: var(--cds-gap-xs); align-content: start; }
+.pod-big { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: 2rem; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.pod-chart { position: relative; min-height: 280px; min-width: 0; }
+.pod-chart.pod-short { min-height: 160px; }
+.pod-chart svg { display: block; overflow: visible; }
+.pod-msg { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); padding: var(--cds-pad-md) 0; }
+.pod-tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); box-shadow: var(--cds-shadow-popover); border-radius: var(--cds-radius); padding: var(--cds-pad-sm) var(--cds-pad-md); font-size: var(--cds-font-size-caption); min-width: 150px; z-index: 3; display: grid; gap: 2px; font-variant-numeric: tabular-nums; }
+.pod-tip strong { font-weight: var(--cds-font-weight-medium); }
+.pod-tip .pod-tip-row { display: flex; justify-content: space-between; gap: var(--cds-gap-md); color: var(--cds-text-secondary); }
+.pod-axis text { fill: var(--cds-text-secondary); font-size: var(--cds-font-size-caption); font-family: var(--font-anthropic-sans); }
+.pod-axis line, .pod-axis path { stroke: var(--cds-chart-axis); }
+.pod-grid line { stroke: var(--cds-chart-grid); }
+.pod-grid path { display: none; }
+.pod-label { fill: var(--color-fg); font-size: var(--cds-font-size-caption); font-family: var(--font-anthropic-sans); font-variant-numeric: tabular-nums; }
+.pod-label.pod-dim { fill: var(--cds-text-secondary); }
+.pod-legend { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs) var(--cds-gap-md); list-style: none; padding: 0; margin: 0; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.pod-sw { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; background: var(--cds-chart-muted); }
+.pod-sw.pod-line { height: 2px; width: 14px; vertical-align: 3px; background: var(--color-fg); }
+.pod-table-wrap { overflow-x: auto; min-width: 0; }
+.pod-scroll { max-height: 440px; overflow: auto; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); }
+.pod table { border-collapse: collapse; width: 100%; font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; }
+.pod th { position: sticky; top: 0; background: var(--color-bg); font-weight: var(--cds-font-weight-medium); color: var(--color-fg-muted); white-space: nowrap; }
+.pod th, .pod td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--color-border-line); vertical-align: top; }
+.pod td.pod-num, .pod th.pod-num { text-align: right; white-space: nowrap; }
+.pod td.pod-wide { min-width: 220px; }
+.pod a.pod-link { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.pod-pill { display: inline-block; padding: 0 8px; border-radius: 999px; font-size: var(--cds-font-size-caption); border: 1px solid var(--color-border-line); white-space: nowrap; line-height: 1.6; }
+.pod-pill[data-level="rasmi"] { color: var(--color-ok); border-color: currentColor; }
+.pod-pill[data-level="pihak_ketiga"] { color: var(--color-warn); border-color: currentColor; }
+.pod-pill[data-level="lemah"] { color: var(--color-bad); border-color: currentColor; }
+.pod-scorebar { display: inline-block; height: 6px; border-radius: 3px; margin-left: 6px; vertical-align: middle; background: var(--cds-chart-muted); }
+.pod-personas { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--cds-gap-md); }
+.pod-persona h3 { font-size: var(--cds-font-size-body); }
+.pod-dl { display: grid; grid-template-columns: max-content 1fr; gap: 4px var(--cds-gap-sm); font-size: var(--cds-font-size-caption); margin: 0; }
+.pod-dl dt { color: var(--color-fg-muted); }
+.pod-dl dd { margin: 0; min-width: 0; }
+.pod-select-row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--cds-gap-sm); }
+.pod-two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--cds-gap-lg); }
+.pod-two > * { min-width: 0; }
+.pod details summary { cursor: pointer; font-weight: var(--cds-font-weight-medium); }
+.pod details[open] > :not(summary) { margin-top: var(--cds-gap-sm); }
+@media print { .pod-scroll { max-height: none; overflow: visible; border: 0; } .pod-nav { display: none; } }
+</style>
+
+<div class="pod">
+
+<header id="ringkasan" class="pod-section">
+  <h1>Riset POD Typography</h1>
+  <p class="pod-lede">Senario asas: untung <b data-draw="lede-steady" data-source="scenarios" data-field="steady_profit" data-where="scenario=Asas">—</b> setahun bila matang. <b data-draw="lede-top" data-source="niche_profit" data-field="niche" data-row="0">—</b> menyumbang paling banyak, <b data-draw="lede-share" data-source="niche_profit" data-field="share" data-row="0">—</b>% daripada untung.</p>
+  <p class="pod-muted">Pasaran: pembeli Pinterest di US. Jualan melalui Printify dan produk digital. Data dikumpul pada 21 November 2026 daripada sumber awam.</p>
+  <nav class="pod-nav" aria-label="Bahagian dashboard">
+    <a href="#untung">Untung</a>
+    <a href="#niche">Niche</a>
+    <a href="#katakunci">Kata kunci</a>
+    <a href="#produk">Produk</a>
+    <a href="#persona">Persona</a>
+    <a href="#pin">Pin</a>
+    <a href="#kalendar">Kalendar</a>
+    <a href="#sumber">Sumber</a>
+  </nav>
+</header>
+
+<section id="untung" class="pod-section">
+  <h2>Unjuran untung</h2>
+  <div class="pod-tiles">
+    <div class="pod-card" id="kpi-matang">
+      <div class="pod-muted">Untung setahun, fasa matang</div>
+      <div class="pod-big" data-draw="kpi-steady" data-source="scenarios" data-field="steady_profit" data-where="scenario=Asas">—</div>
+      <div class="pod-muted">Senario asas, 3,000 pelawat Pinterest sebulan</div>
+    </div>
+    <div class="pod-card" id="kpi-tahun1">
+      <div class="pod-muted">Untung tahun 1 (2027)</div>
+      <div class="pod-big" data-draw="kpi-y1" data-source="scenarios" data-field="year1_profit" data-where="scenario=Asas">—</div>
+      <div class="pod-muted">Trafik naik dari 5% (Jan) ke 100% (Ogos)</div>
+    </div>
+    <div class="pod-card" id="kpi-pesanan">
+      <div class="pod-muted">Pesanan setahun, fasa matang</div>
+      <div class="pod-big" data-draw="kpi-orders" data-source="scenarios" data-field="steady_orders" data-where="scenario=Asas">—</div>
+      <div class="pod-muted">Senario asas</div>
+    </div>
+    <div class="pod-card" id="kpi-purata">
+      <div class="pod-muted">Purata untung sebulan</div>
+      <div class="pod-big" data-draw="kpi-avg" data-source="monthly_stats" data-field="avg" data-row="0">—</div>
+      <div class="pod-muted">Terendah <span data-draw="kpi-min-month" data-source="monthly_stats" data-field="min_month" data-row="0">—</span> (<span data-draw="kpi-min" data-source="monthly_stats" data-field="min" data-row="0">—</span>), tertinggi <span data-draw="kpi-max-month" data-source="monthly_stats" data-field="max_month" data-row="0">—</span> (<span data-draw="kpi-max" data-source="monthly_stats" data-field="max" data-row="0">—</span>)</div>
+    </div>
+  </div>
+
+  <h3 id="tajuk-bulanan">Untung bulanan ikut niche, fasa matang, dan tahun 1</h3>
+  <ul class="pod-legend" id="legend-monthly">
+    <li data-key="bridal"><span class="pod-sw"></span>Bridal</li>
+    <li data-key="teacher"><span class="pod-sw"></span>Cikgu</li>
+    <li data-key="nursery"><span class="pod-sw"></span>Nursery</li>
+    <li data-key="funny_home"><span class="pod-sw"></span>Tanda lucu rumah</li>
+    <li data-key="mama"><span class="pod-sw"></span>Mama</li>
+    <li data-key="christmas"><span class="pod-sw"></span>Krismas</li>
+    <li data-key="friendship"><span class="pod-sw"></span>Kawan / Galentine</li>
+    <li data-key="bookish"><span class="pod-sw"></span>Bookish</li>
+    <li><span class="pod-sw pod-line"></span>Tahun 1 (2027)</li>
+  </ul>
+  <div class="pod-chart" id="chart-monthly" data-draw="monthly" data-source="model_monthly"></div>
+  <p class="pod-muted">Andaian: conversion 1.5% (bridal 1.0%); untung setiap pesanan dari kos Printify yang disahkan; indeks musim ialah anggaran yang belum disahkan dengan Pinterest atau Google Trends.</p>
+
+  <h3 id="tajuk-senario">Tiga senario</h3>
+  <div class="pod-table-wrap">
+    <table id="table-scenarios" data-source="scenarios" data-row-key="scenario">
+      <thead><tr>
+        <th data-field="scenario">Senario</th>
+        <th data-field="assumption">Andaian</th>
+        <th class="pod-num" data-field="year1_profit">Tahun 1</th>
+        <th class="pod-num" data-field="steady_profit">Matang / tahun</th>
+        <th class="pod-num" data-field="steady_orders">Pesanan / tahun</th>
+        <th class="pod-num" data-field="steady_revenue">Jualan kasar / tahun</th>
+      </tr></thead>
+      <tbody data-draw="scenarios-body"></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="niche" class="pod-section">
+  <h2>Top niche</h2>
+  <p class="pod-muted">Skor 1–5 setiap kriteria, jumlah maksimum 30. D: permintaan. S: saingan (5 = kurang sesak). T: sesuai typography. P: padan pembeli Pinterest. B: nilai pesanan / bulk. A: mudah automasi. Skor ialah penilaian Claude berdasarkan bukti yang dipautkan.</p>
+  <div class="pod-table-wrap">
+    <table id="table-niches" data-source="niches" data-row-key="id">
+      <thead><tr>
+        <th class="pod-num" data-field="rank">#</th>
+        <th data-field="niche">Niche</th>
+        <th class="pod-num" data-field="total">Jumlah</th>
+        <th class="pod-num" data-field="demand">D</th>
+        <th class="pod-num" data-field="competition">S</th>
+        <th class="pod-num" data-field="typography_fit">T</th>
+        <th class="pod-num" data-field="pinterest_fit">P</th>
+        <th class="pod-num" data-field="order_value">B</th>
+        <th class="pod-num" data-field="automation">A</th>
+        <th data-field="season">Musim</th>
+        <th data-field="wave">Keputusan</th>
+        <th data-field="key_evidence">Bukti utama</th>
+        <th data-field="evidence_level">Tahap bukti</th>
+      </tr></thead>
+      <tbody data-draw="niches-body"></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="katakunci" class="pod-section">
+  <h2>Kata kunci dan jumlah carian</h2>
+  <p class="pod-muted">Volum carian Google ialah anggaran RankHero (global). Pinterest tidak menerbitkan jumlah carian mutlak; Pinterest Trends hanya memberi indeks relatif 0–100, jadi tiada angka Pinterest dipaparkan. Peluang = carian bulanan ÷ 1,000 listing Etsy.</p>
+  <div class="pod-select-row">
+    <label class="pod-muted" for="kw-niche">Tapis niche</label>
+    <select id="kw-niche" class="dash-select" data-draw="kw-filter" data-source="keywords" aria-label="Tapis niche"></select>
+  </div>
+  <h3 id="tajuk-peluang">Peluang: carian sebulan bagi setiap 1,000 listing Etsy</h3>
+  <div class="pod-chart pod-short" id="chart-opportunity" data-draw="opportunity" data-source="keywords"></div>
+  <div class="pod-table-wrap pod-scroll">
+    <table id="table-keywords" data-source="keywords" data-row-key="keyword">
+      <thead><tr>
+        <th data-field="niche">Niche</th>
+        <th data-field="keyword">Kata kunci</th>
+        <th class="pod-num" data-field="google_monthly">Carian / bulan</th>
+        <th data-field="volume_type">Jenis</th>
+        <th class="pod-num" data-field="etsy_listings">Listing Etsy</th>
+        <th class="pod-num" data-field="opportunity">Peluang</th>
+        <th data-field="note">Nota</th>
+        <th data-field="source">Sumber</th>
+      </tr></thead>
+      <tbody data-draw="kw-body"></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="produk" class="pod-section">
+  <h2>Produk Printify dan digital</h2>
+  <p class="pod-muted">Andaian: pelan Printify Free, pembeli di US bayar shipping, fee bayaran ~6% + $0.22. Kos "From USD" ialah saiz atau provider termurah; sahkan dalam editor Printify.</p>
+  <h3 id="tajuk-untung-produk">Untung setiap unit atau set (USD)</h3>
+  <div class="pod-chart" id="chart-products" data-draw="products-chart" data-source="products"></div>
+  <div class="pod-table-wrap">
+    <table id="table-products" data-source="products" data-row-key="product">
+      <thead><tr>
+        <th data-field="product">Produk</th>
+        <th class="pod-num" data-field="base_usd">Kos asas</th>
+        <th class="pod-num" data-field="premium_usd">Kos Premium</th>
+        <th class="pod-num" data-field="shipping_usd">Shipping US</th>
+        <th class="pod-num" data-field="price_usd">Harga jual</th>
+        <th class="pod-num" data-field="profit_usd">Untung</th>
+        <th data-field="profit_note">Nota</th>
+        <th data-field="level">Tahap bukti</th>
+        <th data-field="source">Sumber</th>
+      </tr></thead>
+      <tbody data-draw="products-body"></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="persona" class="pod-section">
+  <h2>Persona pembeli</h2>
+  <p class="pod-muted">Siapa mereka, berapa besar pasaran, berapa mereka belanja, kekerapan, bila dan bagaimana mereka membeli.</p>
+  <div class="pod-personas" id="persona-cards" data-draw="personas" data-source="personas"></div>
+  <template id="tpl-persona">
+    <article class="pod-card pod-persona">
+      <h3 class="pod-p-name"></h3>
+      <div><span class="pod-pill pod-p-niche"></span></div>
+      <dl class="pod-dl">
+        <dt>Siapa</dt><dd data-f="who"></dd>
+        <dt>Saiz pasaran</dt><dd data-f="market_size"></dd>
+        <dt>Belanja</dt><dd data-f="spend"></dd>
+        <dt>Kekerapan</dt><dd data-f="frequency"></dd>
+        <dt>Bila</dt><dd data-f="when"></dd>
+        <dt>Cara beli</dt><dd data-f="how"></dd>
+        <dt>Produk</dt><dd data-f="products"></dd>
+        <dt>Emosi</dt><dd data-f="emotion"></dd>
+        <dt>Sumber</dt><dd data-f="source"></dd>
+      </dl>
+    </article>
+  </template>
+</section>
+
+<section id="pin" class="pod-section">
+  <h2>Panduan pin Pinterest</h2>
+  <p class="pod-muted">Tiada data "top pins" awam setiap niche; panduan ini datang dari laporan rasmi Pinterest, kajian benchmark dan panduan penjual. Top pins sebenar akan dikesan dari analytics selepas pelancaran.</p>
+  <h3 id="tajuk-templat">Campuran templat pin (% daripada semua pin)</h3>
+  <div class="pod-chart pod-short" id="chart-templates" data-draw="templates" data-source="pin_playbook"></div>
+  <div class="pod-table-wrap">
+    <table id="table-pins" data-source="pin_playbook" data-row-key="item">
+      <thead><tr>
+        <th data-field="kind">Jenis</th>
+        <th data-field="item">Dapatan</th>
+        <th data-field="level">Tahap bukti</th>
+        <th data-field="source">Sumber</th>
+      </tr></thead>
+      <tbody data-draw="pins-body"></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="kalendar" class="pod-section">
+  <h2>Kalendar musim</h2>
+  <p class="pod-muted">Indeks permintaan bulanan setiap niche (100 = purata). Warna lebih pekat = bulan jualan lebih tinggi. Pin perlu dimulakan 45–90 hari sebelum puncak.</p>
+  <div class="pod-table-wrap">
+    <div class="pod-chart" id="chart-heatmap" data-draw="heatmap" data-source="seasonality"></div>
+  </div>
+  <h3 id="tajuk-tetingkap-pin">Tetingkap pin setiap niche</h3>
+  <div class="pod-table-wrap">
+    <table id="table-calendar" data-source="niches" data-row-key="id">
+      <thead><tr>
+        <th data-field="niche">Niche</th>
+        <th data-field="season">Musim</th>
+        <th data-field="peak_months">Bulan puncak</th>
+        <th data-field="pin_window">Tetingkap pin</th>
+      </tr></thead>
+      <tbody data-draw="calendar-body"></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="sumber" class="pod-section">
+  <h2>Sumber dan pengesahan</h2>
+  <p>Setiap angka dikumpul dari hasil carian web yang memetik halaman sumber. Halaman asal belum dapat dibuka terus dari persekitaran kerja (rangkaian disekat pada 21 November 2026), jadi statusnya disemak melalui indeks carian, bukan secara langsung.</p>
+  <div class="pod-tiles">
+    <div class="pod-card" id="src-rasmi">
+      <div class="pod-muted">Rasmi</div>
+      <div class="pod-big" data-draw="src-rasmi" data-source="source_counts" data-field="count" data-where="level=rasmi">—</div>
+      <div class="pod-muted">NRF, CDC, Printify, Pinterest, Etsy, The Knot, EdWeek, eRank</div>
+    </div>
+    <div class="pod-card" id="src-pihak">
+      <div class="pod-muted">Pihak ketiga</div>
+      <div class="pod-big" data-draw="src-pihak" data-source="source_counts" data-field="count" data-where="level=pihak_ketiga">—</div>
+      <div class="pod-muted">Tool kata kunci, blog vendor, media</div>
+    </div>
+    <div class="pod-card" id="src-lemah">
+      <div class="pod-muted">Lemah</div>
+      <div class="pod-big" data-draw="src-lemah" data-source="source_counts" data-field="count" data-where="level=lemah">—</div>
+      <div class="pod-muted">Satu sumber, anekdot atau tiada metodologi</div>
+    </div>
+  </div>
+
+  <h3 id="tajuk-percanggahan">Percanggahan data dan keputusan</h3>
+  <div class="pod-table-wrap">
+    <table id="table-conflicts" data-source="conflicts" data-row-key="topic">
+      <thead><tr>
+        <th data-field="topic">Topik</th>
+        <th data-field="values">Nilai bercanggah</th>
+        <th data-field="resolution">Keputusan</th>
+      </tr></thead>
+      <tbody data-draw="conflicts-body"></tbody>
+    </table>
+  </div>
+
+  <h3 id="tajuk-daftar">Daftar sumber</h3>
+  <div class="pod-table-wrap pod-scroll">
+    <table id="table-sources" data-source="sources" data-row-key="id">
+      <thead><tr>
+        <th data-field="id">ID</th>
+        <th data-field="domain">Domain</th>
+        <th data-field="level">Tahap</th>
+        <th data-field="stages">Peringkat</th>
+        <th data-field="claim">Dakwaan</th>
+        <th data-field="url">Pautan</th>
+      </tr></thead>
+      <tbody data-draw="sources-body"></tbody>
+    </table>
+  </div>
+
+  <details id="kaedah">
+    <summary>Cara data dikumpul dan hadnya</summary>
+    <p>Riset dibuat dalam 7 peringkat: niche, kata kunci, pin, produk, persona, model untung dan daftar sumber. Angka Pinterest mutlak tidak wujud secara awam. Volum carian Google ialah anggaran pihak ketiga. Indeks musim dan unjuran untung ialah model anggaran yang akan dikemas kini apabila data jualan dan analytics sebenar tersedia. Yuran sebenar Printify Premium masih belum disahkan.</p>
+  </details>
+</div>
+
+<script>
+window.POD = window.POD || {};
+POD.NICHES = [
+  { k: 'bridal', n: 'Bridal' }, { k: 'teacher', n: 'Cikgu' }, { k: 'nursery', n: 'Nursery' },
+  { k: 'funny_home', n: 'Tanda lucu rumah' }, { k: 'mama', n: 'Mama' }, { k: 'christmas', n: 'Krismas' },
+  { k: 'friendship', n: 'Kawan / Galentine' }, { k: 'bookish', n: 'Bookish' }
+];
+POD.usd0 = d3.format('$,.0f');
+POD.usd = (v) => (v == null || v === '' ? '—' : d3.format('$,.2~f')(Number(v)));
+POD.int = (v) => (v == null || v === '' ? '—' : d3.format(',.0f')(Number(v)));
+POD.ok = (id) => { const d = dash.data(id); return d.status === 'ok' ? d.data : null; };
+POD.statusMsg = (id) => { const s = dash.data(id).status; return s === 'error' ? 'Data gagal dimuatkan.' : s === 'loading' ? 'Memuatkan…' : '—'; };
+POD.safeUrl = (u) => (typeof u === 'string' && /^https?:\/\//.test(u) ? u : null);
+POD.levelText = { rasmi: 'Rasmi', pihak_ketiga: 'Pihak ketiga', lemah: 'Lemah' };
+POD.color = (i) => dash.colors[i % dash.colors.length];
+POD.enc = (s) => String(s).replace(/%/g, '%25').replace(/&/g, '%26').replace(/=/g, '%3D').replace(/,/g, '%2C');
+POD.kw = '';
+
+POD.cell = (tr, text, cls) => { const td = document.createElement('td'); if (cls) td.className = cls; td.textContent = text == null || text === '' ? '—' : String(text); tr.appendChild(td); return td; };
+POD.linkCell = (tr, url, label) => {
+  const td = document.createElement('td'); const safe = POD.safeUrl(url);
+  if (safe) { const a = document.createElement('a'); a.href = safe; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.className = 'pod-link'; a.textContent = label || 'sumber'; td.appendChild(a); }
+  else td.textContent = url ? String(url) : '—';
+  tr.appendChild(td); return td;
+};
+POD.pillCell = (tr, level) => {
+  const td = document.createElement('td'); const s = document.createElement('span');
+  s.className = 'pod-pill'; const key = String(level || '');
+  const base = key.startsWith('rasmi') ? 'rasmi' : key.startsWith('pihak') ? 'pihak_ketiga' : key.startsWith('lemah') ? 'lemah' : '';
+  if (base) s.dataset.level = base;
+  s.textContent = POD.levelText[key] || key || '—'; td.appendChild(s); tr.appendChild(td); return td;
+};
+POD.emptyRow = (tbody, cols, msg) => { const tr = document.createElement('tr'); const td = document.createElement('td'); td.colSpan = cols; td.className = 'pod-msg'; td.textContent = msg; tr.appendChild(td); tbody.appendChild(tr); };
+POD.tipShow = (el, tip, x, y, build) => {
+  tip.replaceChildren(); build(tip); tip.hidden = false;
+  const w = tip.offsetWidth, h = tip.offsetHeight, W = el.clientWidth;
+  let left = x + 12; if (left + w > W) left = Math.max(0, x - w - 12);
+  tip.style.left = left + 'px'; tip.style.top = Math.max(0, y - h / 2) + 'px';
+};
+POD.tipLine = (tip, label, value, strong) => {
+  const row = document.createElement('div'); row.className = strong ? '' : 'pod-tip-row';
+  if (strong) { const b = document.createElement('strong'); b.textContent = label; row.appendChild(b); }
+  else { const a = document.createElement('span'); a.textContent = label; const b = document.createElement('span'); b.textContent = value; row.append(a, b); }
+  tip.appendChild(row);
+};
+POD.measure = (svg, texts) => {
+  const g = svg.append('g').attr('class', 'pod-axis');
+  let w = 0; texts.forEach((t) => { const n = g.append('text').text(t).node(); w = Math.max(w, n.getComputedTextLength ? n.getComputedTextLength() : 0); });
+  g.remove(); return Math.ceil(w);
+};
+
+document.querySelectorAll('#legend-monthly [data-key]').forEach((li) => {
+  const i = POD.NICHES.findIndex((n) => n.k === li.dataset.key);
+  const sw = li.querySelector('.pod-sw');
+  if (sw && i >= 0) sw.style.background = POD.color(i);
+});
+
+dash.calc('niche_profit', {
+  title: 'Untung setahun ikut niche',
+  description: 'Jumlah 12 bulan bagi setiap niche dalam model senario asas (fasa matang), dengan bahagian peratus daripada jumlah keseluruhan.',
+  inputs: ['model_monthly'],
+  fn: (months) => {
+    const keys = [['bridal', 'Bridal'], ['teacher', 'Cikgu'], ['nursery', 'Nursery'], ['funny_home', 'Tanda lucu rumah'], ['mama', 'Mama'], ['christmas', 'Krismas'], ['friendship', 'Kawan / Galentine'], ['bookish', 'Bookish']];
+    const total = months.reduce((s, m) => s + Number(m.total), 0);
+    return keys.map(([k, n]) => {
+      const p = months.reduce((s, m) => s + Number(m[k]), 0);
+      return { niche_id: k, niche: n, profit: Math.round(p), share: total ? Math.round((p / total) * 100) : 0 };
+    }).sort((a, b) => b.profit - a.profit);
+  }
+});
+
+dash.calc('monthly_stats', {
+  title: 'Purata, terendah dan tertinggi untung bulanan',
+  description: 'Dikira dari jumlah untung setiap bulan dalam model senario asas (fasa matang).',
+  inputs: ['model_monthly'],
+  fn: (months) => {
+    if (!months.length) return [];
+    const t = months.map((m) => ({ month: m.month, v: Number(m.total) }));
+    let min = t[0], max = t[0], sum = 0;
+    t.forEach((d) => { sum += d.v; if (d.v < min.v) min = d; if (d.v > max.v) max = d; });
+    return [{ avg: Math.round(sum / t.length), min: Math.round(min.v), min_month: min.month, max: Math.round(max.v), max_month: max.month }];
+  }
+});
+
+dash.calc('source_counts', {
+  title: 'Bilangan sumber ikut tahap',
+  description: 'Kiraan sumber dalam daftar mengikut tahap pengesahan (rasmi, pihak ketiga, lemah).',
+  inputs: ['sources'],
+  fn: (sources) => {
+    const c = {};
+    sources.forEach((s) => { c[s.level] = (c[s.level] || 0) + 1; });
+    return ['rasmi', 'pihak_ketiga', 'lemah'].map((l) => ({ level: l, count: c[l] || 0 }));
+  }
+});
+
+POD.text = (name, id, pick, fmt) => dash.draw(name, (el) => {
+  const rows = POD.ok(id);
+  const v = rows && rows.length ? pick(rows) : null;
+  el.textContent = v == null ? '—' : fmt ? fmt(v) : String(v);
+});
+const asas = (rows) => rows.find((r) => r.scenario === 'Asas') || {};
+POD.text('lede-steady', 'scenarios', (r) => asas(r).steady_profit, POD.usd0);
+POD.text('kpi-steady', 'scenarios', (r) => asas(r).steady_profit, POD.usd0);
+POD.text('kpi-y1', 'scenarios', (r) => asas(r).year1_profit, POD.usd0);
+POD.text('kpi-orders', 'scenarios', (r) => asas(r).steady_orders, POD.int);
+POD.text('lede-top', 'niche_profit', (r) => r[0].niche);
+POD.text('lede-share', 'niche_profit', (r) => r[0].share);
+POD.text('kpi-avg', 'monthly_stats', (r) => r[0].avg, POD.usd0);
+POD.text('kpi-min', 'monthly_stats', (r) => r[0].min, POD.usd0);
+POD.text('kpi-max', 'monthly_stats', (r) => r[0].max, POD.usd0);
+POD.text('kpi-min-month', 'monthly_stats', (r) => r[0].min_month);
+POD.text('kpi-max-month', 'monthly_stats', (r) => r[0].max_month);
+const lvl = (l) => (rows) => (rows.find((r) => r.level === l) || {}).count;
+POD.text('src-rasmi', 'source_counts', lvl('rasmi'), POD.int);
+POD.text('src-pihak', 'source_counts', lvl('pihak_ketiga'), POD.int);
+POD.text('src-lemah', 'source_counts', lvl('lemah'), POD.int);
+</script>
+
+<script>
+dash.draw('monthly', {
+  mount(el) {
+    const msg = document.createElement('div'); msg.className = 'pod-msg';
+    const svgEl = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svgEl.setAttribute('role', 'img');
+    svgEl.setAttribute('aria-label', 'Carta bar bertindan untung bulanan ikut niche bagi fasa matang, dengan garis untung tahun 1');
+    const tip = document.createElement('div'); tip.className = 'pod-tip'; tip.hidden = true;
+    el.append(msg, svgEl, tip);
+    return { msg, svg: d3.select(svgEl), tip };
+  },
+  update(el, { msg, svg, tip }) {
+    const rows = POD.ok('model_monthly');
+    if (!rows || !rows.length) { svg.selectAll('*').remove(); svg.attr('height', 0); msg.hidden = false; msg.textContent = POD.statusMsg('model_monthly'); return; }
+    msg.hidden = true; tip.hidden = true;
+    const keys = POD.NICHES.map((n) => n.k);
+    const data = rows.map((r) => { const o = { month: r.month, total: Number(r.total), y1: Number(r.year1_profit) }; keys.forEach((k) => { o[k] = Number(r[k]) || 0; }); return o; });
+    const W = Math.max(280, el.clientWidth || 600), H = 300;
+    svg.selectAll('*').remove();
+    const maxV = d3.max(data, (d) => Math.max(d.total, d.y1)) || 1;
+    const y = d3.scaleLinear().domain([0, maxV]).nice().range([H - 28, 10]);
+    const ticks = y.ticks(5);
+    const ml = POD.measure(svg, ticks.map((t) => POD.usd0(t))) + 10, mr = 8;
+    const x = d3.scaleBand().domain(data.map((d) => d.month)).range([ml, W - mr]).padding(0.22);
+    svg.attr('width', '100%').attr('height', H).attr('viewBox', `0 0 ${W} ${H}`);
+    svg.append('g').attr('class', 'pod-grid').attr('transform', `translate(${ml},0)`)
+      .call(d3.axisLeft(y).tickValues(ticks).tickSize(-(W - ml - mr)).tickFormat(''));
+    svg.append('g').attr('class', 'pod-axis').attr('transform', `translate(${ml},0)`)
+      .call(d3.axisLeft(y).tickValues(ticks).tickFormat((t) => POD.usd0(t)).tickSize(0).tickPadding(6))
+      .call((g) => g.select('.domain').remove());
+    const every = x.bandwidth() < 26 ? 2 : 1;
+    svg.append('g').attr('class', 'pod-axis').attr('transform', `translate(0,${H - 28})`)
+      .call(d3.axisBottom(x).tickValues(x.domain().filter((_, i) => i % every === 0)).tickSize(0).tickPadding(8))
+      .call((g) => g.select('.domain').remove());
+    const stack = d3.stack().keys(keys)(data);
+    svg.append('g').selectAll('g').data(stack).join('g')
+      .each(function (layer, i) { d3.select(this).style('fill', POD.color(i)); })
+      .selectAll('rect').data((d) => d).join('rect')
+      .attr('x', (d) => x(d.data.month)).attr('width', x.bandwidth())
+      .attr('y', (d) => y(d[1])).attr('height', (d) => Math.max(0, y(d[0]) - y(d[1])));
+    const line = d3.line().x((d) => x(d.month) + x.bandwidth() / 2).y((d) => y(d.y1));
+    svg.append('path').datum(data).attr('d', line).style('fill', 'none').style('stroke', 'var(--color-fg)').style('stroke-width', 2);
+    svg.append('g').selectAll('circle').data(data).join('circle')
+      .attr('cx', (d) => x(d.month) + x.bandwidth() / 2).attr('cy', (d) => y(d.y1)).attr('r', 3)
+      .style('fill', 'var(--color-bg)').style('stroke', 'var(--color-fg)').style('stroke-width', 1.5);
+    svg.append('g').selectAll('rect').data(data).join('rect')
+      .attr('x', (d) => x(d.month) - (x.step() - x.bandwidth()) / 2).attr('width', x.step())
+      .attr('y', 0).attr('height', H - 28).style('fill', 'transparent')
+      .on('pointerenter pointermove', (ev, d) => {
+        const [px, py] = d3.pointer(ev, el);
+        POD.tipShow(el, tip, px, py, (t) => {
+          POD.tipLine(t, d.month, '', true);
+          POD.tipLine(t, 'Jumlah (matang)', POD.usd0(d.total));
+          POD.tipLine(t, 'Tahun 1 (2027)', POD.usd0(d.y1));
+          POD.NICHES.map((n) => ({ n: n.n, v: d[n.k] })).sort((a, b) => b.v - a.v).forEach((r) => POD.tipLine(t, r.n, POD.usd0(r.v)));
+        });
+      })
+      .on('pointerleave', () => { tip.hidden = true; });
+  }
+});
+
+dash.draw('scenarios-body', (tb) => {
+  const rows = POD.ok('scenarios'); tb.replaceChildren();
+  if (!rows) { POD.emptyRow(tb, 6, POD.statusMsg('scenarios')); return; }
+  rows.forEach((r) => {
+    const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.scenario);
+    POD.cell(tr, r.scenario); POD.cell(tr, r.assumption, 'pod-wide');
+    POD.cell(tr, POD.usd0(r.year1_profit), 'pod-num'); POD.cell(tr, POD.usd0(r.steady_profit), 'pod-num');
+    POD.cell(tr, POD.int(r.steady_orders), 'pod-num'); POD.cell(tr, POD.usd0(r.steady_revenue), 'pod-num');
+    tb.appendChild(tr);
+  });
+});
+
+dash.draw('niches-body', (tb) => {
+  const rows = POD.ok('niches'); tb.replaceChildren();
+  if (!rows) { POD.emptyRow(tb, 13, POD.statusMsg('niches')); return; }
+  rows.slice().sort((a, b) => Number(a.rank) - Number(b.rank)).forEach((r) => {
+    const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.id);
+    POD.cell(tr, r.rank, 'pod-num'); POD.cell(tr, r.niche);
+    const tot = POD.cell(tr, r.total, 'pod-num');
+    const bar = document.createElement('span'); bar.className = 'pod-scorebar'; bar.style.width = Math.round((Number(r.total) / 30) * 48) + 'px'; bar.style.background = POD.color(0); tot.appendChild(bar);
+    ['demand', 'competition', 'typography_fit', 'pinterest_fit', 'order_value', 'automation'].forEach((k) => POD.cell(tr, r[k], 'pod-num'));
+    POD.cell(tr, r.season); POD.cell(tr, r.wave);
+    const ev = POD.cell(tr, r.key_evidence, 'pod-wide');
+    const safe = POD.safeUrl(r.source);
+    if (safe) { ev.append(' '); const a = document.createElement('a'); a.href = safe; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.className = 'pod-link'; a.textContent = 'sumber'; ev.appendChild(a); }
+    POD.pillCell(tr, r.evidence_level);
+    tb.appendChild(tr);
+  });
+});
+
+dash.draw('kw-filter', (sel) => {
+  const rows = POD.ok('keywords') || [];
+  const niches = [...new Set(rows.map((r) => r.niche))];
+  sel.replaceChildren(new Option('Semua niche', ''), ...niches.map((n) => new Option(n, n)));
+  sel.value = niches.includes(POD.kw) ? POD.kw : '';
+  sel.onchange = () => { POD.kw = sel.value; dash.draw('opportunity'); dash.draw('kw-body'); };
+});
+
+dash.draw('opportunity', {
+  mount(el) {
+    const msg = document.createElement('div'); msg.className = 'pod-msg';
+    const svgEl = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svgEl.setAttribute('role', 'img');
+    svgEl.setAttribute('aria-label', 'Carta bar mendatar peluang kata kunci: carian bulanan bagi setiap 1,000 listing Etsy');
+    const tip = document.createElement('div'); tip.className = 'pod-tip'; tip.hidden = true;
+    el.append(msg, svgEl, tip);
+    return { msg, svg: d3.select(svgEl), tip };
+  },
+  update(el, { msg, svg, tip }) {
+    const all = POD.ok('keywords');
+    svg.selectAll('*').remove(); tip.hidden = true;
+    if (!all) { svg.attr('height', 0); msg.hidden = false; msg.textContent = POD.statusMsg('keywords'); return; }
+    const rows = all.filter((r) => r.opportunity != null && (!POD.kw || r.niche === POD.kw)).sort((a, b) => b.opportunity - a.opportunity);
+    if (!rows.length) { svg.attr('height', 0); msg.hidden = false; msg.textContent = 'Tiada kata kunci dengan data listing Etsy untuk niche ini.'; return; }
+    msg.hidden = true;
+    const W = Math.max(280, el.clientWidth || 600), rowH = 24, H = rows.length * rowH + 8;
+    const ml = Math.min(W * 0.45, POD.measure(svg, rows.map((r) => r.keyword)) + 10);
+    const vl = POD.measure(svg, rows.map((r) => POD.int(r.opportunity))) + 8;
+    const x = d3.scaleLinear().domain([0, d3.max(rows, (r) => r.opportunity) || 1]).range([ml, W - vl]);
+    svg.attr('width', '100%').attr('height', H).attr('viewBox', `0 0 ${W} ${H}`);
+    const g = svg.append('g').selectAll('g').data(rows).join('g').attr('transform', (d, i) => `translate(0,${i * rowH + 4})`);
+    g.append('text').attr('class', 'pod-label').attr('x', ml - 8).attr('y', rowH / 2).attr('dy', '0.32em').attr('text-anchor', 'end').text((d) => d.keyword);
+    g.append('rect').attr('x', ml).attr('y', 4).attr('height', rowH - 8).attr('width', (d) => Math.max(1, x(d.opportunity) - ml)).style('fill', POD.color(0));
+    g.append('text').attr('class', 'pod-label pod-dim').attr('x', (d) => x(d.opportunity) + 4).attr('y', rowH / 2).attr('dy', '0.32em').text((d) => POD.int(d.opportunity));
+    g.append('rect').attr('x', 0).attr('y', 0).attr('width', W).attr('height', rowH).style('fill', 'transparent')
+      .on('pointerenter pointermove', (ev, d) => {
+        const [px, py] = d3.pointer(ev, el);
+        POD.tipShow(el, tip, px, py, (t) => {
+          POD.tipLine(t, d.keyword, '', true);
+          POD.tipLine(t, 'Carian / bulan', POD.int(d.google_monthly));
+          POD.tipLine(t, 'Listing Etsy', POD.int(d.etsy_listings));
+          POD.tipLine(t, 'Peluang', POD.int(d.opportunity));
+        });
+      })
+      .on('pointerleave', () => { tip.hidden = true; });
+  }
+});
+
+dash.draw('kw-body', (tb) => {
+  const all = POD.ok('keywords'); tb.replaceChildren();
+  if (!all) { POD.emptyRow(tb, 8, POD.statusMsg('keywords')); return; }
+  all.filter((r) => !POD.kw || r.niche === POD.kw).slice().sort((a, b) => Number(b.google_monthly) - Number(a.google_monthly)).forEach((r) => {
+    const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.keyword);
+    POD.cell(tr, r.niche); POD.cell(tr, r.keyword); POD.cell(tr, POD.int(r.google_monthly), 'pod-num'); POD.cell(tr, r.volume_type);
+    POD.cell(tr, POD.int(r.etsy_listings), 'pod-num'); POD.cell(tr, POD.int(r.opportunity), 'pod-num'); POD.cell(tr, r.note);
+    POD.linkCell(tr, r.source, 'RankHero / tool');
+    tb.appendChild(tr);
+  });
+});
+</script>
+
+<script>
+dash.draw('products-chart', {
+  mount(el) {
+    const msg = document.createElement('div'); msg.className = 'pod-msg';
+    const svgEl = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svgEl.setAttribute('role', 'img');
+    svgEl.setAttribute('aria-label', 'Carta bar mendatar untung setiap produk atau set dalam USD');
+    const tip = document.createElement('div'); tip.className = 'pod-tip'; tip.hidden = true;
+    el.append(msg, svgEl, tip);
+    return { msg, svg: d3.select(svgEl), tip };
+  },
+  update(el, { msg, svg, tip }) {
+    const all = POD.ok('products');
+    svg.selectAll('*').remove(); tip.hidden = true;
+    if (!all || !all.length) { svg.attr('height', 0); msg.hidden = false; msg.textContent = POD.statusMsg('products'); return; }
+    msg.hidden = true;
+    const rows = all.slice().sort((a, b) => Number(b.profit_usd) - Number(a.profit_usd));
+    const W = Math.max(280, el.clientWidth || 600), rowH = 24, H = rows.length * rowH + 8;
+    const ml = Math.min(W * 0.5, POD.measure(svg, rows.map((r) => r.product)) + 10);
+    const vl = POD.measure(svg, rows.map((r) => POD.usd(r.profit_usd))) + 8;
+    const x = d3.scaleLinear().domain([0, d3.max(rows, (r) => Number(r.profit_usd)) || 1]).range([ml, W - vl]);
+    svg.attr('width', '100%').attr('height', H).attr('viewBox', `0 0 ${W} ${H}`);
+    const g = svg.append('g').selectAll('g').data(rows).join('g').attr('transform', (d, i) => `translate(0,${i * rowH + 4})`);
+    g.append('text').attr('class', 'pod-label').attr('x', ml - 8).attr('y', rowH / 2).attr('dy', '0.32em').attr('text-anchor', 'end').text((d) => d.product);
+    g.append('rect').attr('x', ml).attr('y', 4).attr('height', rowH - 8).attr('width', (d) => Math.max(1, x(Number(d.profit_usd)) - ml))
+      .style('fill', (d) => (d.profit_note === 'set / bulk' ? POD.color(1) : POD.color(0)));
+    g.append('text').attr('class', 'pod-label pod-dim').attr('x', (d) => x(Number(d.profit_usd)) + 4).attr('y', rowH / 2).attr('dy', '0.32em').text((d) => POD.usd(d.profit_usd));
+    g.append('rect').attr('x', 0).attr('y', 0).attr('width', W).attr('height', rowH).style('fill', 'transparent')
+      .on('pointerenter pointermove', (ev, d) => {
+        const [px, py] = d3.pointer(ev, el);
+        POD.tipShow(el, tip, px, py, (t) => {
+          POD.tipLine(t, d.product, '', true);
+          POD.tipLine(t, 'Harga jual', POD.usd(d.price_usd));
+          POD.tipLine(t, 'Kos asas', POD.usd(d.base_usd));
+          POD.tipLine(t, 'Untung', POD.usd(d.profit_usd));
+        });
+      })
+      .on('pointerleave', () => { tip.hidden = true; });
+  }
+});
+
+dash.draw('products-body', (tb) => {
+  const rows = POD.ok('products'); tb.replaceChildren();
+  if (!rows) { POD.emptyRow(tb, 9, POD.statusMsg('products')); return; }
+  rows.slice().sort((a, b) => Number(b.profit_usd) - Number(a.profit_usd)).forEach((r) => {
+    const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.product);
+    POD.cell(tr, r.product); POD.cell(tr, POD.usd(r.base_usd), 'pod-num'); POD.cell(tr, POD.usd(r.premium_usd), 'pod-num');
+    POD.cell(tr, POD.usd(r.shipping_usd), 'pod-num'); POD.cell(tr, POD.usd(r.price_usd), 'pod-num'); POD.cell(tr, POD.usd(r.profit_usd), 'pod-num');
+    POD.cell(tr, r.profit_note); POD.pillCell(tr, r.level); POD.linkCell(tr, r.source, 'sumber');
+    tb.appendChild(tr);
+  });
+});
+
+dash.draw('personas', (box) => {
+  const rows = POD.ok('personas'); box.replaceChildren();
+  if (!rows) { const m = document.createElement('div'); m.className = 'pod-msg'; m.textContent = POD.statusMsg('personas'); box.appendChild(m); return; }
+  const tpl = document.getElementById('tpl-persona');
+  if (!tpl) return;
+  rows.forEach((r, i) => {
+    const node = tpl.content.cloneNode(true);
+    const name = node.querySelector('.pod-p-name');
+    if (name) { name.textContent = r.persona; name.dataset.source = 'personas'; name.dataset.field = 'persona'; name.dataset.row = String(i); }
+    const pill = node.querySelector('.pod-p-niche');
+    if (pill) { pill.textContent = r.niche; pill.dataset.source = 'personas'; pill.dataset.field = 'niche'; pill.dataset.row = String(i); }
+    node.querySelectorAll('dd[data-f]').forEach((dd) => {
+      const f = dd.dataset.f;
+      if (f === 'source') {
+        const safe = POD.safeUrl(r.source);
+        if (safe) { const a = document.createElement('a'); a.href = safe; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.className = 'pod-link'; a.textContent = new URL(safe).hostname.replace(/^www\./, ''); dd.replaceChildren(a); }
+        else dd.textContent = '—';
+        return;
+      }
+      dd.textContent = r[f] == null || r[f] === '' ? '—' : String(r[f]);
+      dd.dataset.source = 'personas'; dd.dataset.field = f; dd.dataset.row = String(i);
+    });
+    box.appendChild(node);
+  });
+});
+
+dash.draw('templates', (el) => {
+  const all = POD.ok('pin_playbook'); el.replaceChildren();
+  if (!all) { const m = document.createElement('div'); m.className = 'pod-msg'; m.textContent = POD.statusMsg('pin_playbook'); el.appendChild(m); return; }
+  const rows = all.filter((r) => r.share_pct != null).sort((a, b) => b.share_pct - a.share_pct);
+  const svgEl = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svgEl.setAttribute('role', 'img'); svgEl.setAttribute('aria-label', 'Carta bar mendatar peratus pin bagi setiap templat');
+  el.appendChild(svgEl);
+  const svg = d3.select(svgEl);
+  const W = Math.max(280, el.clientWidth || 600), rowH = 24, H = rows.length * rowH + 8;
+  const ml = Math.min(W * 0.55, POD.measure(svg, rows.map((r) => r.item)) + 10);
+  const x = d3.scaleLinear().domain([0, d3.max(rows, (r) => r.share_pct) || 1]).range([ml, W - 44]);
+  svg.attr('width', '100%').attr('height', H).attr('viewBox', `0 0 ${W} ${H}`);
+  const g = svg.append('g').selectAll('g').data(rows).join('g').attr('transform', (d, i) => `translate(0,${i * rowH + 4})`);
+  g.append('text').attr('class', 'pod-label').attr('x', ml - 8).attr('y', rowH / 2).attr('dy', '0.32em').attr('text-anchor', 'end').text((d) => d.item);
+  g.append('rect').attr('x', ml).attr('y', 4).attr('height', rowH - 8).attr('width', (d) => Math.max(1, x(d.share_pct) - ml)).style('fill', POD.color(2));
+  g.append('text').attr('class', 'pod-label pod-dim').attr('x', (d) => x(d.share_pct) + 4).attr('y', rowH / 2).attr('dy', '0.32em').text((d) => d.share_pct + '%');
+});
+
+dash.draw('pins-body', (tb) => {
+  const rows = POD.ok('pin_playbook'); tb.replaceChildren();
+  if (!rows) { POD.emptyRow(tb, 4, POD.statusMsg('pin_playbook')); return; }
+  rows.filter((r) => r.share_pct == null).forEach((r) => {
+    const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.item);
+    POD.cell(tr, r.kind); POD.cell(tr, r.item, 'pod-wide'); POD.pillCell(tr, r.level); POD.linkCell(tr, r.source, 'sumber');
+    tb.appendChild(tr);
+  });
+});
+
+dash.draw('heatmap', {
+  mount(el) {
+    const msg = document.createElement('div'); msg.className = 'pod-msg';
+    const svgEl = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svgEl.setAttribute('role', 'img');
+    svgEl.setAttribute('aria-label', 'Peta haba indeks permintaan bulanan bagi setiap niche, Januari hingga Disember');
+    const tip = document.createElement('div'); tip.className = 'pod-tip'; tip.hidden = true;
+    el.append(msg, svgEl, tip);
+    return { msg, svg: d3.select(svgEl), tip };
+  },
+  update(el, { msg, svg, tip }) {
+    const rows = POD.ok('seasonality');
+    svg.selectAll('*').remove(); tip.hidden = true;
+    if (!rows || !rows.length) { svg.attr('height', 0); msg.hidden = false; msg.textContent = POD.statusMsg('seasonality'); return; }
+    msg.hidden = true;
+    const niches = [...new Set(rows.map((r) => r.niche))];
+    const months = [...new Set(rows.slice().sort((a, b) => a.month_no - b.month_no).map((r) => r.month))];
+    const W = Math.max(420, el.clientWidth || 600), rowH = 30;
+    const ml = POD.measure(svg, niches) + 12, mt = 22;
+    const x = d3.scaleBand().domain(months).range([ml, W]).padding(0.06);
+    const y = d3.scaleBand().domain(niches).range([mt, mt + niches.length * rowH]).padding(0.06);
+    const H = mt + niches.length * rowH + 4;
+    svg.attr('width', '100%').attr('height', H).attr('viewBox', `0 0 ${W} ${H}`);
+    svg.append('g').selectAll('text').data(months).join('text').attr('class', 'pod-label pod-dim')
+      .attr('x', (m) => x(m) + x.bandwidth() / 2).attr('y', 14).attr('text-anchor', 'middle').text((m) => m);
+    svg.append('g').selectAll('text').data(niches).join('text').attr('class', 'pod-label')
+      .attr('x', ml - 8).attr('y', (n) => y(n) + y.bandwidth() / 2).attr('dy', '0.32em').attr('text-anchor', 'end').text((n) => n);
+    const op = (v) => 0.06 + 0.94 * Math.min(1, Number(v) / 200);
+    const showNum = x.bandwidth() >= 30;
+    const cells = svg.append('g').selectAll('g').data(rows).join('g');
+    cells.append('rect').attr('x', (d) => x(d.month)).attr('y', (d) => y(d.niche)).attr('width', x.bandwidth()).attr('height', y.bandwidth())
+      .attr('rx', 2).style('fill', POD.color(0)).style('fill-opacity', (d) => op(d.index));
+    if (showNum) cells.append('text').attr('class', 'pod-label').attr('x', (d) => x(d.month) + x.bandwidth() / 2).attr('y', (d) => y(d.niche) + y.bandwidth() / 2)
+      .attr('dy', '0.32em').attr('text-anchor', 'middle').style('fill', (d) => (op(d.index) > 0.6 ? 'var(--color-bg)' : 'var(--color-fg)')).text((d) => d.index);
+    cells.on('pointerenter pointermove', (ev, d) => {
+      const [px, py] = d3.pointer(ev, el);
+      POD.tipShow(el, tip, px, py, (t) => { POD.tipLine(t, `${d.niche}, ${d.month}`, '', true); POD.tipLine(t, 'Indeks permintaan', String(d.index)); });
+    }).on('pointerleave', () => { tip.hidden = true; });
+  }
+});
+
+dash.draw('calendar-body', (tb) => {
+  const rows = POD.ok('niches'); tb.replaceChildren();
+  if (!rows) { POD.emptyRow(tb, 4, POD.statusMsg('niches')); return; }
+  rows.filter((r) => r.pin_window).sort((a, b) => Number(a.rank) - Number(b.rank)).forEach((r) => {
+    const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.id);
+    POD.cell(tr, r.niche); POD.cell(tr, r.season); POD.cell(tr, r.peak_months); POD.cell(tr, r.pin_window, 'pod-wide');
+    tb.appendChild(tr);
+  });
+});
+
+dash.draw('conflicts-body', (tb) => {
+  const rows = POD.ok('conflicts'); tb.replaceChildren();
+  if (!rows) { POD.emptyRow(tb, 3, POD.statusMsg('conflicts')); return; }
+  rows.forEach((r) => {
+    const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.topic);
+    POD.cell(tr, r.topic); POD.cell(tr, r.values, 'pod-wide'); POD.cell(tr, r.resolution);
+    tb.appendChild(tr);
+  });
+});
+
+dash.draw('sources-body', (tb) => {
+  const rows = POD.ok('sources'); tb.replaceChildren();
+  if (!rows) { POD.emptyRow(tb, 6, POD.statusMsg('sources')); return; }
+  rows.forEach((r) => {
+    const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.id);
+    POD.cell(tr, r.id); POD.cell(tr, r.domain); POD.pillCell(tr, r.level); POD.cell(tr, r.stages);
+    POD.cell(tr, r.claim, 'pod-wide'); POD.linkCell(tr, r.url, 'buka');
+    tb.appendChild(tr);
+  });
+});
+</script>

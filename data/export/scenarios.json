@@ -1,0 +1,5 @@
+[
+{"scenario": "Pesimis", "assumption": "trafik x0.5, conversion x0.67 (bridal x0.5)", "year1_profit": 2807, "steady_profit": 4275, "steady_orders": 166, "steady_revenue": 8095},
+{"scenario": "Asas", "assumption": "3,000 pelawat/bulan; conversion 1.5% (bridal 1.0%)", "year1_profit": 8978, "steady_profit": 13765, "steady_orders": 512, "steady_revenue": 26436},
+{"scenario": "Optimis", "assumption": "trafik x2 (6,000 pelawat/bulan)", "year1_profit": 17955, "steady_profit": 27529, "steady_orders": 1025, "steady_revenue": 52871}
+]

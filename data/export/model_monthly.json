@@ -1,0 +1,14 @@
+[
+{"month": "Jan", "month_no": 1, "bridal": 346, "teacher": 76, "nursery": 160, "funny_home": 178, "mama": 76, "christmas": 9, "friendship": 178, "bookish": 88, "total": 1111, "orders": 40.3, "revenue": 2165, "year1_profit": 56},
+{"month": "Feb", "month_no": 2, "bridal": 346, "teacher": 65, "nursery": 160, "funny_home": 158, "mama": 76, "christmas": 0, "friendship": 250, "bookish": 83, "total": 1138, "orders": 41.5, "revenue": 2215, "year1_profit": 114},
+{"month": "Mac", "month_no": 3, "bridal": 362, "teacher": 76, "nursery": 177, "funny_home": 188, "mama": 97, "christmas": 0, "friendship": 24, "bookish": 88, "total": 1012, "orders": 35.4, "revenue": 1990, "year1_profit": 202},
+{"month": "Apr", "month_no": 4, "bridal": 394, "teacher": 130, "nursery": 202, "funny_home": 208, "mama": 151, "christmas": 0, "friendship": 24, "bookish": 88, "total": 1196, "orders": 43.2, "revenue": 2333, "year1_profit": 395},
+{"month": "Mei", "month_no": 5, "bridal": 394, "teacher": 162, "nursery": 177, "funny_home": 198, "mama": 205, "christmas": 0, "friendship": 24, "bookish": 92, "total": 1252, "orders": 46.3, "revenue": 2429, "year1_profit": 626},
+{"month": "Jun", "month_no": 6, "bridal": 299, "teacher": 86, "nursery": 160, "funny_home": 178, "mama": 76, "christmas": 0, "friendship": 24, "bookish": 92, "total": 916, "orders": 33.1, "revenue": 1787, "year1_profit": 614},
+{"month": "Jul", "month_no": 7, "bridal": 315, "teacher": 151, "nursery": 160, "funny_home": 168, "mama": 65, "christmas": 9, "friendship": 24, "bookish": 97, "total": 990, "orders": 36.2, "revenue": 1925, "year1_profit": 822},
+{"month": "Ogos", "month_no": 8, "bridal": 378, "teacher": 173, "nursery": 160, "funny_home": 188, "mama": 65, "christmas": 28, "friendship": 24, "bookish": 97, "total": 1113, "orders": 39.8, "revenue": 2175, "year1_profit": 1113},
+{"month": "Sep", "month_no": 9, "bridal": 362, "teacher": 97, "nursery": 160, "funny_home": 198, "mama": 76, "christmas": 75, "friendship": 24, "bookish": 97, "total": 1089, "orders": 38.6, "revenue": 2125, "year1_profit": 1089},
+{"month": "Okt", "month_no": 10, "bridal": 220, "teacher": 65, "nursery": 160, "funny_home": 218, "mama": 97, "christmas": 187, "friendship": 24, "bookish": 102, "total": 1074, "orders": 41.5, "revenue": 2021, "year1_profit": 1074},
+{"month": "Nov", "month_no": 11, "bridal": 158, "teacher": 86, "nursery": 169, "funny_home": 248, "mama": 140, "christmas": 393, "friendship": 36, "bookish": 122, "total": 1351, "orders": 55.1, "revenue": 2472, "year1_profit": 1351},
+{"month": "Dis", "month_no": 12, "bridal": 205, "teacher": 130, "nursery": 177, "funny_home": 248, "mama": 162, "christmas": 421, "friendship": 59, "bookish": 122, "total": 1523, "orders": 61.5, "revenue": 2800, "year1_profit": 1523}
+]
