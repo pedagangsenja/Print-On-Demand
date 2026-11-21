@@ -1,0 +1,494 @@
+{
+  "stage": "P4",
+  "title": "Format poster Printify + digital",
+  "updated": "2026-11-21",
+  "assumptions": "Pelan Printify Free; pembeli di US bayar shipping; fee bayaran 6% x (harga + shipping) + $0.22. Kos 'termurah' ialah saiz/provider paling murah; banyak kos saiz ialah anggaran.",
+  "market_benchmarks": [
+    {
+      "claim": "Harga jualan poster POD saiz popular: $28-55, $32-65, $45-85",
+      "source": "https://merchize.com/poster-sizes/",
+      "level": "pihak_ketiga"
+    },
+    {
+      "claim": "Printable digital $5-25 sekeping; kebanyakan penjual berjaya $12-18",
+      "source": "https://sellertoolshq.com/guides/how-to-sell-wall-art-etsy/",
+      "level": "pihak_ketiga"
+    },
+    {
+      "claim": "18×24 = pilihan ramai; 24×36 = karya utama dengan harga premium (kos & shipping lebih tinggi)",
+      "source": "https://printify.com/knowledge-hub/poster-sizes-that-sell/",
+      "level": "rasmi"
+    },
+    {
+      "claim": "Tawarkan beberapa saiz yang muat bingkai sedia ada; terlalu banyak saiz mengelirukan pembeli",
+      "source": "https://printify.com/knowledge-hub/poster-sizes-that-sell/",
+      "level": "rasmi"
+    },
+    {
+      "claim": "Saiz biasa: 8×10, 11×14, 16×20, 18×24 (nisbah 4:5, 2:3, 3:4)",
+      "source": "https://elistit-web.pages.dev/blog/etsy-wall-art-sizes-2026-complete-guide/",
+      "level": "pihak_ketiga"
+    },
+    {
+      "claim": "Kanvas dalam kumpulan saiz sama: item pertama + item tambahan; saiz berbeza: setiap satu kadar item pertama",
+      "source": "https://help.printify.com/hc/en-us/articles/4483643971473",
+      "level": "rasmi"
+    }
+  ],
+  "formats": [
+    {
+      "id": "rolled",
+      "format": "Rolled poster",
+      "base_min_usd": 2.98,
+      "premium_min_usd": 2.13,
+      "sizes": "102 saiz, 4 provider",
+      "source": "https://printify.com/app/products/home-and-living/canvas",
+      "level": "rasmi",
+      "use": "Poster kecil paling murah",
+      "recommendation": "Pilihan untuk saiz kecil"
+    },
+    {
+      "id": "matte",
+      "format": "Poster matte",
+      "base_min_usd": 4.96,
+      "premium_min_usd": 3.61,
+      "sizes": "47 saiz (8×10 hingga 28×28); hanya ke US (Today's Graphics)",
+      "source": "https://printify.com/app/products/282/generic-brand/matte-vertical-posters",
+      "level": "rasmi",
+      "use": "Format teras semua niche",
+      "recommendation": "Teras"
+    },
+    {
+      "id": "satin_archival",
+      "format": "Satin & archival matte",
+      "base_min_usd": null,
+      "premium_min_usd": 2.44,
+      "sizes": "Premium bermula $2.44",
+      "source": "https://printify.com/app/products/1309/generic-brand/satin-and-archival-matte-posters",
+      "level": "pihak_ketiga",
+      "use": "Alternatif kertas",
+      "recommendation": "Pilihan"
+    },
+    {
+      "id": "uncoated",
+      "format": "Poster uncoated",
+      "base_min_usd": 6.87,
+      "premium_min_usd": 4.97,
+      "sizes": "",
+      "source": "https://printify.com/app/products/1079/generic-brand/unframed-posters",
+      "level": "pihak_ketiga",
+      "use": "Alternatif kertas",
+      "recommendation": "Pilihan"
+    },
+    {
+      "id": "fine_art",
+      "format": "Fine art (Giclée 220gsm)",
+      "base_min_usd": 8.39,
+      "premium_min_usd": 6.08,
+      "sizes": "10×8 hingga 30×30 (Print Clever)",
+      "source": "https://printify.com/app/products/804/generic-brand/fine-art-posters",
+      "level": "rasmi",
+      "use": "Naik taraf kualiti",
+      "recommendation": "Upsell"
+    },
+    {
+      "id": "satin300",
+      "format": "Poster satin 300gsm",
+      "base_min_usd": 9.47,
+      "premium_min_usd": 6.86,
+      "sizes": "14-26 saiz (Sensaria)",
+      "source": "https://printify.com/app/products/829/generic-brand/satin-posters-300gsm",
+      "level": "rasmi",
+      "use": "Kurang silau",
+      "recommendation": "Pilihan"
+    },
+    {
+      "id": "foam_board",
+      "format": "Foam board",
+      "base_min_usd": 7.72,
+      "premium_min_usd": 5.59,
+      "sizes": "19 saiz, 2 provider",
+      "source": "https://printify.com/app/products/promotional-collections/trending-wall-art-picks",
+      "level": "pihak_ketiga",
+      "use": "Papan tanda perkahwinan / majlis",
+      "recommendation": "Fasa 2 (wedding)"
+    },
+    {
+      "id": "framed_budget",
+      "format": "Poster berbingkai (asas)",
+      "base_min_usd": 13.19,
+      "premium_min_usd": null,
+      "sizes": "7 saiz, 11×14 hingga 16×16; produksi ~3 hari",
+      "source": "https://printify.com/app/products/540/generic-brand/framed-vertical-poster",
+      "level": "rasmi",
+      "use": "Hadiah, bilik air (tahan lembap lebih baik)",
+      "recommendation": "Teras"
+    },
+    {
+      "id": "metal_sign",
+      "format": "Metal art sign (aluminium)",
+      "base_min_usd": 13.8,
+      "premium_min_usd": 10.3,
+      "sizes": "18 saiz, 2 provider",
+      "source": "https://printify.com/app/products/1206/generic-brand/metal-art-sign",
+      "level": "rasmi",
+      "use": "Bilik air, gym, dobi, garaj (tahan lembap)",
+      "recommendation": "Disyorkan untuk bilik lembap"
+    },
+    {
+      "id": "acrylic_panel",
+      "format": "Panel akrilik",
+      "base_min_usd": 14.16,
+      "premium_min_usd": 10.56,
+      "sizes": "Dalaman sahaja",
+      "source": "https://printify.com/app/products/1098/generic-brand/acrylic-wall-art-panels",
+      "level": "rasmi",
+      "use": "Premium moden",
+      "recommendation": "Pilihan"
+    },
+    {
+      "id": "framed_canvas",
+      "format": "Canvas berbingkai",
+      "base_min_usd": 19.6,
+      "premium_min_usd": 15.21,
+      "sizes": "Pelbagai warna bingkai",
+      "source": "https://printify.com/app/products/944/generic-brand/matte-canvas-black-frame",
+      "level": "rasmi",
+      "use": "Premium",
+      "recommendation": "Upsell"
+    },
+    {
+      "id": "canvas",
+      "format": "Canvas stretched 1.25\"",
+      "base_min_usd": 10.63,
+      "premium_min_usd": 7.94,
+      "sizes": "Saiz termurah; 16×20 dianggar $15-22, 24×36 $25-35",
+      "source": "https://printify.com/app/products/home-and-living/canvas",
+      "level": "rasmi",
+      "use": "Ruang tamu, bilik tidur, nursery",
+      "recommendation": "Teras (untung dolar tertinggi)"
+    },
+    {
+      "id": "framed_premium",
+      "format": "Poster berbingkai premium",
+      "base_min_usd": 42.29,
+      "premium_min_usd": null,
+      "sizes": "8×11 hingga 24×36",
+      "source": "https://printify.com/app/products/492/generic-brand/premium-framed-vertical-poster",
+      "level": "rasmi",
+      "use": "Hadiah premium",
+      "recommendation": "Upsell"
+    },
+    {
+      "id": "framed_roma",
+      "format": "Poster berbingkai (Roma)",
+      "base_min_usd": 35.89,
+      "premium_min_usd": 26.01,
+      "sizes": "",
+      "source": "https://printify.com/app/products/540/roma-imaging/framed-vertical-poster",
+      "level": "rasmi",
+      "use": "Hadiah",
+      "recommendation": "Pilihan"
+    },
+    {
+      "id": "acrylic_print",
+      "format": "Acrylic print (French cleat)",
+      "base_min_usd": 54.75,
+      "premium_min_usd": 39.69,
+      "sizes": "",
+      "source": "https://printify.com/app/products/promotional-collections/trending-wall-art-picks",
+      "level": "pihak_ketiga",
+      "use": "Premium tinggi",
+      "recommendation": "Elak buat masa ini (modal tinggi)"
+    },
+    {
+      "id": "digital",
+      "format": "Printable digital",
+      "base_min_usd": 0,
+      "premium_min_usd": null,
+      "sizes": "Fail muat turun",
+      "source": "https://sellertoolshq.com/guides/how-to-sell-wall-art-etsy/",
+      "level": "pihak_ketiga",
+      "use": "Semua niche; kelas & calm corner",
+      "recommendation": "Teras (margin ~100%)"
+    }
+  ],
+  "profit_by_size": [
+    {
+      "key": "Poster matte 8×10",
+      "format": "Poster matte",
+      "size": "8×10",
+      "base_usd": 4.96,
+      "shipping_usd": 7.39,
+      "price_usd": 14.99,
+      "profit_usd": 8.5,
+      "margin_pct": 57,
+      "cost_note": "Kos termurah",
+      "shipping_note": "Anggaran (tier Today's Graphics)"
+    },
+    {
+      "key": "Poster matte 11×14",
+      "format": "Poster matte",
+      "size": "11×14",
+      "base_usd": 5.5,
+      "shipping_usd": 7.39,
+      "price_usd": 19.99,
+      "profit_usd": 12.6,
+      "margin_pct": 63,
+      "cost_note": "Anggaran",
+      "shipping_note": "Anggaran"
+    },
+    {
+      "key": "Poster matte 12×18",
+      "format": "Poster matte",
+      "size": "12×18",
+      "base_usd": 6.5,
+      "shipping_usd": 7.39,
+      "price_usd": 22.99,
+      "profit_usd": 14.4,
+      "margin_pct": 63,
+      "cost_note": "Anggaran",
+      "shipping_note": "Anggaran"
+    },
+    {
+      "key": "Poster matte 16×20",
+      "format": "Poster matte",
+      "size": "16×20",
+      "base_usd": 7.5,
+      "shipping_usd": 7.39,
+      "price_usd": 27.99,
+      "profit_usd": 18.1,
+      "margin_pct": 65,
+      "cost_note": "Anggaran",
+      "shipping_note": "Today's Graphics $7.39 (+$1.99)"
+    },
+    {
+      "key": "Poster matte 18×24",
+      "format": "Poster matte",
+      "size": "18×24",
+      "base_usd": 8.5,
+      "shipping_usd": 7.39,
+      "price_usd": 29.99,
+      "profit_usd": 19.0,
+      "margin_pct": 63,
+      "cost_note": "Anggaran",
+      "shipping_note": "Today's Graphics $7.39 (+$1.99)"
+    },
+    {
+      "key": "Poster matte 24×36",
+      "format": "Poster matte",
+      "size": "24×36",
+      "base_usd": 10.39,
+      "shipping_usd": 11.59,
+      "price_usd": 39.99,
+      "profit_usd": 26.3,
+      "margin_pct": 66,
+      "cost_note": "Dari kedai Printify",
+      "shipping_note": "Sensaria $11.59 (+$6.19)"
+    },
+    {
+      "key": "Rolled poster 8×12",
+      "format": "Rolled poster",
+      "size": "8×12",
+      "base_usd": 2.98,
+      "shipping_usd": 5.79,
+      "price_usd": 12.99,
+      "profit_usd": 8.7,
+      "margin_pct": 67,
+      "cost_note": "Kos termurah",
+      "shipping_note": "Jondo economy $5.79 (+$0.39)"
+    },
+    {
+      "key": "Satin 300gsm 18×24",
+      "format": "Satin 300gsm",
+      "size": "18×24",
+      "base_usd": 11.0,
+      "shipping_usd": 7.39,
+      "price_usd": 32.99,
+      "profit_usd": 19.3,
+      "margin_pct": 59,
+      "cost_note": "Anggaran (termurah $9.47)",
+      "shipping_note": "Anggaran"
+    },
+    {
+      "key": "Fine art Giclée 16×20",
+      "format": "Fine art Giclée",
+      "size": "16×20",
+      "base_usd": 12.0,
+      "shipping_usd": 8.09,
+      "price_usd": 34.99,
+      "profit_usd": 20.2,
+      "margin_pct": 58,
+      "cost_note": "Anggaran (termurah $8.39)",
+      "shipping_note": "Printify Choice fine art $8.09 (+$1.99)"
+    },
+    {
+      "key": "Berbingkai asas 11×14",
+      "format": "Berbingkai asas",
+      "size": "11×14",
+      "base_usd": 13.19,
+      "shipping_usd": 10.0,
+      "price_usd": 49.99,
+      "profit_usd": 33.0,
+      "margin_pct": 66,
+      "cost_note": "Kos termurah",
+      "shipping_note": "Anggaran"
+    },
+    {
+      "key": "Berbingkai (Roma) terkecil",
+      "format": "Berbingkai (Roma)",
+      "size": "terkecil",
+      "base_usd": 35.89,
+      "shipping_usd": 12.8,
+      "price_usd": 74.99,
+      "profit_usd": 33.6,
+      "margin_pct": 45,
+      "cost_note": "Kos termurah",
+      "shipping_note": "~$12.49-13.19"
+    },
+    {
+      "key": "Metal art sign terkecil",
+      "format": "Metal art sign",
+      "size": "terkecil",
+      "base_usd": 13.8,
+      "shipping_usd": 8.0,
+      "price_usd": 34.99,
+      "profit_usd": 18.4,
+      "margin_pct": 53,
+      "cost_note": "Kos termurah",
+      "shipping_note": "Anggaran"
+    },
+    {
+      "key": "Panel akrilik terkecil",
+      "format": "Panel akrilik",
+      "size": "terkecil",
+      "base_usd": 14.16,
+      "shipping_usd": 8.0,
+      "price_usd": 39.99,
+      "profit_usd": 22.7,
+      "margin_pct": 57,
+      "cost_note": "Kos termurah",
+      "shipping_note": "Anggaran"
+    },
+    {
+      "key": "Foam board terkecil",
+      "format": "Foam board",
+      "size": "terkecil",
+      "base_usd": 7.72,
+      "shipping_usd": 9.0,
+      "price_usd": 34.99,
+      "profit_usd": 24.4,
+      "margin_pct": 70,
+      "cost_note": "Kos termurah; saiz papan tanda lebih mahal",
+      "shipping_note": "Anggaran"
+    },
+    {
+      "key": "Canvas 16×20",
+      "format": "Canvas",
+      "size": "16×20",
+      "base_usd": 18.5,
+      "shipping_usd": 10.0,
+      "price_usd": 69.99,
+      "profit_usd": 46.5,
+      "margin_pct": 66,
+      "cost_note": "Anggaran $15-22",
+      "shipping_note": "Anggaran"
+    },
+    {
+      "key": "Canvas 24×36",
+      "format": "Canvas",
+      "size": "24×36",
+      "base_usd": 30.0,
+      "shipping_usd": 12.0,
+      "price_usd": 99.99,
+      "profit_usd": 63.1,
+      "margin_pct": 63,
+      "cost_note": "Anggaran $25-35",
+      "shipping_note": "Anggaran"
+    },
+    {
+      "key": "Digital 1 fail",
+      "format": "Digital",
+      "size": "1 fail",
+      "base_usd": 0,
+      "shipping_usd": 0,
+      "price_usd": 6.99,
+      "profit_usd": 6.4,
+      "margin_pct": 92,
+      "cost_note": "",
+      "shipping_note": "Tiada"
+    },
+    {
+      "key": "Digital Bundle 3",
+      "format": "Digital",
+      "size": "Bundle 3",
+      "base_usd": 0,
+      "shipping_usd": 0,
+      "price_usd": 12.99,
+      "profit_usd": 12.0,
+      "margin_pct": 92,
+      "cost_note": "",
+      "shipping_note": "Tiada"
+    },
+    {
+      "key": "Digital Bundle kelas 12",
+      "format": "Digital",
+      "size": "Bundle kelas 12",
+      "base_usd": 0,
+      "shipping_usd": 0,
+      "price_usd": 24.99,
+      "profit_usd": 23.3,
+      "margin_pct": 93,
+      "cost_note": "",
+      "shipping_note": "Tiada"
+    },
+    {
+      "key": "Set 3 poster matte 11×14",
+      "format": "Set gallery wall",
+      "size": "matte 11×14",
+      "base_usd": 16.5,
+      "shipping_usd": 11.37,
+      "price_usd": 49.99,
+      "profit_usd": 29.6,
+      "margin_pct": 59,
+      "cost_note": "Dikira dari kos seunit",
+      "shipping_note": "Item tambahan lebih murah"
+    },
+    {
+      "key": "Set 3 poster matte 18×24",
+      "format": "Set gallery wall",
+      "size": "matte 18×24",
+      "base_usd": 25.5,
+      "shipping_usd": 11.37,
+      "price_usd": 69.99,
+      "profit_usd": 39.4,
+      "margin_pct": 56,
+      "cost_note": "Dikira dari kos seunit",
+      "shipping_note": "Item tambahan lebih murah"
+    },
+    {
+      "key": "Set 2 berbingkai asas 11×14 (atas katil)",
+      "format": "Set gallery wall",
+      "size": "asas 11×14 (atas katil)",
+      "base_usd": 26.38,
+      "shipping_usd": 20.0,
+      "price_usd": 89.99,
+      "profit_usd": 56.8,
+      "margin_pct": 63,
+      "cost_note": "Dikira dari kos seunit",
+      "shipping_note": "Anggaran"
+    },
+    {
+      "key": "Set 12 poster matte 11×14 (kelas)",
+      "format": "Set gallery wall",
+      "size": "matte 11×14 (kelas)",
+      "base_usd": 66.0,
+      "shipping_usd": 29.28,
+      "price_usd": 99.99,
+      "profit_usd": 26.0,
+      "margin_pct": 26,
+      "cost_note": "Dikira dari kos seunit",
+      "shipping_note": "Item tambahan lebih murah"
+    }
+  ]
+}
