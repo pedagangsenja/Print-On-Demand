@@ -1,0 +1,11 @@
+[
+{"topic": "Punca pulangan baju kerana saiz/fit", "values": "~53% (Coresight, 2023) | ~56% (Loop, 2026)", "resolution": "Guna julat 53–56%; kedua-dua sokong poster lebih rendah risiko"},
+{"topic": "Bahagian isi rumah US menyewa", "values": "~1/3 (pemilikan 65.2%, USAFacts 2025) | ~35% / 44.6 juta (VerticalRent)", "resolution": "Konsisten; guna ~1/3"},
+{"topic": "Gelombang niche kaunselor", "values": "Gelombang 2 (skor P1 = 22) | Gelombang 1 (peluang kata kunci 276, P2)", "resolution": "Guna Gelombang 1 (data kata kunci lebih kukuh)"},
+{"topic": "Home office: permintaan vs saingan", "values": "Pinterest 'chic cubicle decor' +1,543% | 'office art' 4.86 juta listing Etsy", "resolution": "Kekal Gelombang 1; sasar long-tail sahaja"},
+{"topic": "Volum 'bookish print'", "values": "40,500/bulan (RankHero) | kata kunci sejenis jauh lebih rendah", "resolution": "Tidak digunakan dalam model sehingga disahkan"},
+{"topic": "Margin printable digital", "values": "~100% (tiada kos cetak) | ~92% (selepas fee bayaran 6% + $0.22)", "resolution": "Guna 92%"},
+{"topic": "Kos canvas 16×20 & 24×36", "values": "Min $10.63 (saiz terkecil, Printify) | anggaran $15–22 dan $25–35", "resolution": "Model guna anggaran ($18.50, $30); sahkan dalam editor Printify"},
+{"topic": "Shipping berbingkai/canvas/metal", "values": "Tiada angka rasmi ikut saiz | anggaran $8–12", "resolution": "Guna anggaran; sahkan dalam editor Printify"},
+{"topic": "Belanja cikgu dari duit sendiri", "values": "$600 (DonorsChoose/EdWeek 2025-26) | ~$895 (AdoptAClassroom)", "resolution": "Guna $600 (terkini)"}
+]

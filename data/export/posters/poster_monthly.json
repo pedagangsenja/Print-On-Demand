@@ -1,0 +1,14 @@
+[
+{"month": "Jan", "month_no": 1, "profit_steady": 1087, "orders_steady": 40.4, "revenue_steady": 1940, "profit_year1": 54, "profit_pessimistic": 363, "profit_optimistic": 2174},
+{"month": "Feb", "month_no": 2, "profit_steady": 1000, "orders_steady": 37.1, "revenue_steady": 1801, "profit_year1": 100, "profit_pessimistic": 334, "profit_optimistic": 2001},
+{"month": "Mac", "month_no": 3, "profit_steady": 1060, "orders_steady": 38.4, "revenue_steady": 1924, "profit_year1": 212, "profit_pessimistic": 354, "profit_optimistic": 2121},
+{"month": "Apr", "month_no": 4, "profit_steady": 1106, "orders_steady": 39.7, "revenue_steady": 2011, "profit_year1": 365, "profit_pessimistic": 369, "profit_optimistic": 2212},
+{"month": "Mei", "month_no": 5, "profit_steady": 1052, "orders_steady": 38.0, "revenue_steady": 1905, "profit_year1": 526, "profit_pessimistic": 351, "profit_optimistic": 2103},
+{"month": "Jun", "month_no": 6, "profit_steady": 988, "orders_steady": 36.0, "revenue_steady": 1779, "profit_year1": 662, "profit_pessimistic": 330, "profit_optimistic": 1977},
+{"month": "Jul", "month_no": 7, "profit_steady": 1059, "orders_steady": 39.9, "revenue_steady": 1841, "profit_year1": 879, "profit_pessimistic": 353, "profit_optimistic": 2117},
+{"month": "Ogos", "month_no": 8, "profit_steady": 1176, "orders_steady": 44.9, "revenue_steady": 2024, "profit_year1": 1176, "profit_pessimistic": 392, "profit_optimistic": 2352},
+{"month": "Sep", "month_no": 9, "profit_steady": 1157, "orders_steady": 43.9, "revenue_steady": 2047, "profit_year1": 1157, "profit_pessimistic": 386, "profit_optimistic": 2314},
+{"month": "Okt", "month_no": 10, "profit_steady": 1156, "orders_steady": 44.2, "revenue_steady": 2069, "profit_year1": 1156, "profit_pessimistic": 386, "profit_optimistic": 2312},
+{"month": "Nov", "month_no": 11, "profit_steady": 1358, "orders_steady": 55.1, "revenue_steady": 2402, "profit_year1": 1358, "profit_pessimistic": 453, "profit_optimistic": 2715},
+{"month": "Dis", "month_no": 12, "profit_steady": 1376, "orders_steady": 56.5, "revenue_steady": 2424, "profit_year1": 1376, "profit_pessimistic": 459, "profit_optimistic": 2753}
+]

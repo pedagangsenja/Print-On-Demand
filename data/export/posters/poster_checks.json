@@ -1,0 +1,17 @@
+[
+{"check": "ID niche kata kunci wujud di P1", "status": "LULUS", "detail": "55 kata kunci; 'sets' = kategori set"},
+{"check": "ID niche gaya wujud di P1", "status": "LULUS", "detail": "12 panduan gaya"},
+{"check": "ID niche model wujud di P1", "status": "LULUS", "detail": "11 niche dalam model"},
+{"check": "Bahagian trafik model = 100%", "status": "LULUS", "detail": "1.00"},
+{"check": "Indeks musim purata 100 setiap niche", "status": "LULUS", "detail": "11 niche × 12 bulan"},
+{"check": "Untung P4 = harga − kos − (6% × (harga + shipping) + $0.22)", "status": "LULUS", "detail": "23 produk; beza maks $0.05"},
+{"check": "Jumlah bulanan = jumlah tahunan (pesimis, steady)", "status": "LULUS", "detail": "$4,530 vs $4,530"},
+{"check": "Jumlah bulanan = jumlah tahunan (pesimis, year1)", "status": "LULUS", "detail": "$3,009 vs $3,009"},
+{"check": "Jumlah bulanan = jumlah tahunan (asas, steady)", "status": "LULUS", "detail": "$13,575 vs $13,575"},
+{"check": "Jumlah bulanan = jumlah tahunan (asas, year1)", "status": "LULUS", "detail": "$9,021 vs $9,021"},
+{"check": "Jumlah bulanan = jumlah tahunan (optimis, steady)", "status": "LULUS", "detail": "$27,151 vs $27,151"},
+{"check": "Jumlah bulanan = jumlah tahunan (optimis, year1)", "status": "LULUS", "detail": "$18,043 vs $18,043"},
+{"check": "Model hanya guna niche Gelombang 1 (selepas kemas kini P2)", "status": "LULUS", "detail": "11/11 Gelombang 1"},
+{"check": "Semua niche Gelombang 1 ada dalam model", "status": "LULUS", "detail": "11 niche Gelombang 1"},
+{"check": "Semua niche Gelombang 1 ada panduan gaya", "status": "LULUS", "detail": "lengkap"}
+]

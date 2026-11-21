@@ -1,0 +1,2071 @@
+{
+  "stage": "P7",
+  "updated": "2026-11-21",
+  "verification": {
+    "status": "Disemak melalui indeks carian; belum disemak secara langsung pada halaman asal (rangkaian persekitaran ini menyekat domain sumber)",
+    "levels": {
+      "rasmi": "Platform/organisasi asal (Printify, Pinterest, CDC, Census, EdWeek, NRF)",
+      "pihak_ketiga": "Tool kata kunci, blog vendor, media",
+      "lemah": "Satu sumber/anekdot"
+    }
+  },
+  "reclassified": [
+    {
+      "domain": "aol.com",
+      "from": "rasmi",
+      "to": "pihak_ketiga",
+      "reason": "Media yang memetik laporan Pinterest, bukan laporan asal"
+    },
+    {
+      "domain": "homesandgardens.com",
+      "from": "rasmi",
+      "to": "pihak_ketiga",
+      "reason": "Media hiasan rumah"
+    },
+    {
+      "domain": "minted.com",
+      "from": "rasmi",
+      "to": "pihak_ketiga",
+      "reason": "Vendor (kedai)"
+    }
+  ],
+  "counts": {
+    "total": 140,
+    "rasmi": 33,
+    "pihak_ketiga": 104,
+    "lemah": 3,
+    "also_in_main_registry": 34
+  },
+  "top_domains": [
+    [
+      "rankhero.com",
+      52
+    ],
+    [
+      "printify.com",
+      15
+    ],
+    [
+      "etsy.com",
+      3
+    ],
+    [
+      "help.printify.com",
+      3
+    ],
+    [
+      "gelato.com",
+      3
+    ],
+    [
+      "walmart.com",
+      3
+    ],
+    [
+      "edweek.org",
+      2
+    ],
+    [
+      "help.erank.com",
+      2
+    ]
+  ],
+  "checks": [
+    {
+      "check": "ID niche kata kunci wujud di P1",
+      "status": "LULUS",
+      "detail": "55 kata kunci; 'sets' = kategori set"
+    },
+    {
+      "check": "ID niche gaya wujud di P1",
+      "status": "LULUS",
+      "detail": "12 panduan gaya"
+    },
+    {
+      "check": "ID niche model wujud di P1",
+      "status": "LULUS",
+      "detail": "11 niche dalam model"
+    },
+    {
+      "check": "Bahagian trafik model = 100%",
+      "status": "LULUS",
+      "detail": "1.00"
+    },
+    {
+      "check": "Indeks musim purata 100 setiap niche",
+      "status": "LULUS",
+      "detail": "11 niche × 12 bulan"
+    },
+    {
+      "check": "Untung P4 = harga − kos − (6% × (harga + shipping) + $0.22)",
+      "status": "LULUS",
+      "detail": "23 produk; beza maks $0.05"
+    },
+    {
+      "check": "Jumlah bulanan = jumlah tahunan (pesimis, steady)",
+      "status": "LULUS",
+      "detail": "$4,530 vs $4,530"
+    },
+    {
+      "check": "Jumlah bulanan = jumlah tahunan (pesimis, year1)",
+      "status": "LULUS",
+      "detail": "$3,009 vs $3,009"
+    },
+    {
+      "check": "Jumlah bulanan = jumlah tahunan (asas, steady)",
+      "status": "LULUS",
+      "detail": "$13,575 vs $13,575"
+    },
+    {
+      "check": "Jumlah bulanan = jumlah tahunan (asas, year1)",
+      "status": "LULUS",
+      "detail": "$9,021 vs $9,021"
+    },
+    {
+      "check": "Jumlah bulanan = jumlah tahunan (optimis, steady)",
+      "status": "LULUS",
+      "detail": "$27,151 vs $27,151"
+    },
+    {
+      "check": "Jumlah bulanan = jumlah tahunan (optimis, year1)",
+      "status": "LULUS",
+      "detail": "$18,043 vs $18,043"
+    },
+    {
+      "check": "Model hanya guna niche Gelombang 1 (selepas kemas kini P2)",
+      "status": "LULUS",
+      "detail": "11/11 Gelombang 1"
+    },
+    {
+      "check": "Semua niche Gelombang 1 ada dalam model",
+      "status": "LULUS",
+      "detail": "11 niche Gelombang 1"
+    },
+    {
+      "check": "Semua niche Gelombang 1 ada panduan gaya",
+      "status": "LULUS",
+      "detail": "lengkap"
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "Punca pulangan baju kerana saiz/fit",
+      "values": "~53% (Coresight, 2023) | ~56% (Loop, 2026)",
+      "resolution": "Guna julat 53–56%; kedua-dua sokong poster lebih rendah risiko"
+    },
+    {
+      "topic": "Bahagian isi rumah US menyewa",
+      "values": "~1/3 (pemilikan 65.2%, USAFacts 2025) | ~35% / 44.6 juta (VerticalRent)",
+      "resolution": "Konsisten; guna ~1/3"
+    },
+    {
+      "topic": "Gelombang niche kaunselor",
+      "values": "Gelombang 2 (skor P1 = 22) | Gelombang 1 (peluang kata kunci 276, P2)",
+      "resolution": "Guna Gelombang 1 (data kata kunci lebih kukuh)"
+    },
+    {
+      "topic": "Home office: permintaan vs saingan",
+      "values": "Pinterest 'chic cubicle decor' +1,543% | 'office art' 4.86 juta listing Etsy",
+      "resolution": "Kekal Gelombang 1; sasar long-tail sahaja"
+    },
+    {
+      "topic": "Volum 'bookish print'",
+      "values": "40,500/bulan (RankHero) | kata kunci sejenis jauh lebih rendah",
+      "resolution": "Tidak digunakan dalam model sehingga disahkan"
+    },
+    {
+      "topic": "Margin printable digital",
+      "values": "~100% (tiada kos cetak) | ~92% (selepas fee bayaran 6% + $0.22)",
+      "resolution": "Guna 92%"
+    },
+    {
+      "topic": "Kos canvas 16×20 & 24×36",
+      "values": "Min $10.63 (saiz terkecil, Printify) | anggaran $15–22 dan $25–35",
+      "resolution": "Model guna anggaran ($18.50, $30); sahkan dalam editor Printify"
+    },
+    {
+      "topic": "Shipping berbingkai/canvas/metal",
+      "values": "Tiada angka rasmi ikut saiz | anggaran $8–12",
+      "resolution": "Guna anggaran; sahkan dalam editor Printify"
+    },
+    {
+      "topic": "Belanja cikgu dari duit sendiri",
+      "values": "$600 (DonorsChoose/EdWeek 2025-26) | ~$895 (AdoptAClassroom)",
+      "resolution": "Guna $600 (terkini)"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.bls.gov/opub/ted/2026/22-6-percent-of-workers-teleworked-in-march-2026.htm",
+      "domain": "bls.gov",
+      "stages": [
+        "P5"
+      ],
+      "claims": [
+        "22.6% pekerja telework/bekerja dari rumah (Mac 2026)"
+      ],
+      "level": "rasmi",
+      "id": "PS001",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://cdc.gov/nchs/pressroom/releases/20260409.html",
+      "domain": "cdc.gov",
+      "stages": [
+        "P5"
+      ],
+      "claims": [
+        "3,606,400 kelahiran di US (2025, provisional)"
+      ],
+      "level": "rasmi",
+      "id": "PS002",
+      "in_main_registry": true
+    },
+    {
+      "url": "https://community.etsy.com/forum/etsy-success-300/topic/etsy-insights-explore-the-trends-shaping-spring-and-summer-2026-165859/",
+      "domain": "community.etsy.com",
+      "stages": [
+        "P1"
+      ],
+      "claims": [
+        "Carian 'wall art decor' +110%, 'gallery prints' +80% (Etsy S/S 2026, Everyday Exhibits)"
+      ],
+      "level": "rasmi",
+      "id": "PS003",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://create.pinterest.com/blog/home-decor-content-ideas-examples/",
+      "domain": "create.pinterest.com",
+      "stages": [
+        "P3"
+      ],
+      "claims": [
+        "Pin imej membawa lebih banyak klik keluar berbanding pin video (kajian home decor Pinterest, Ogos 2026)",
+        "Pin yang menunjukkan gaya keseluruhan bilik lebih kerap dalam kandungan engagement tinggi berbanding close-up satu item",
+        "Teks overlay: namakan bilik, projek atau hasil dalam beberapa perkataan",
+        "Deskripsi lebih informatif cenderung dapat lebih banyak klik"
+      ],
+      "level": "rasmi",
+      "id": "PS004",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.edweek.org/leadership/see-the-school-supplies-teachers-buy-for-students/2026/08",
+      "domain": "edweek.org",
+      "stages": [
+        "P1",
+        "P5"
+      ],
+      "claims": [
+        "Cikgu belanja purata $600 duit sendiri setahun untuk kelas",
+        "Purata $600 duit sendiri untuk kelas (2025-26)"
+      ],
+      "level": "rasmi",
+      "id": "PS005",
+      "in_main_registry": true
+    },
+    {
+      "url": "https://www.edweek.org/ew/issues/education-statistics/index.html",
+      "domain": "edweek.org",
+      "stages": [
+        "P5"
+      ],
+      "claims": [
+        "~3.19 juta cikgu sekolah awam (unjuran 2026)"
+      ],
+      "level": "rasmi",
+      "id": "PS006",
+      "in_main_registry": true
+    },
+    {
+      "url": "https://www.etsy.com/listing/1343560341",
+      "domain": "etsy.com",
+      "stages": [
+        "P1",
+        "P3"
+      ],
+      "claims": [
+        "Printable Krismas di Etsy kebanyakan $2-3 (saingan harga tinggi)",
+        "Printable Krismas vintage, neutral, gothic antara yang tersenarai di Etsy ($2-3)"
+      ],
+      "level": "rasmi",
+      "id": "PS007",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.etsy.com/shop/KAMDesignHaus",
+      "domain": "etsy.com",
+      "stages": [
+        "P1"
+      ],
+      "claims": [
+        "Kedai Etsy ayat Bible 'KAM DesignHaus' ~26,289 jualan"
+      ],
+      "level": "rasmi",
+      "id": "PS008",
+      "in_main_registry": true
+    },
+    {
+      "url": "https://www.etsy.com/listing/1161346307",
+      "domain": "etsy.com",
+      "stages": [
+        "P3"
+      ],
+      "claims": [
+        "Penjual Etsy gabung humor dengan Art Deco/maximalist"
+      ],
+      "level": "rasmi",
+      "id": "PS009",
+      "in_main_registry": true
+    },
+    {
+      "url": "https://www.gallup.com/401384/indicator-hybrid-work.aspx",
+      "domain": "gallup.com",
+      "stages": [
+        "P5"
+      ],
+      "claims": [
+        "Pekerja remote-capable: 54% hybrid, 25% remote penuh"
+      ],
+      "level": "rasmi",
+      "id": "PS010",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://help.erank.com/blog/top-etsy-searches-q3-2026/",
+      "domain": "help.erank.com",
+      "stages": [
+        "P1"
+      ],
+      "claims": [
+        "'wall art' kata kunci #4 Etsy US, Q3 2026",
+        "'halloween' kata kunci #2 Etsy US, Q3 2026"
+      ],
+      "level": "rasmi",
+      "id": "PS011",
+      "in_main_registry": true
+    },
+    {
+      "url": "https://help.erank.com/blog/top-keywords-on-etsy/",
+      "domain": "help.erank.com",
+      "stages": [
+        "P1"
+      ],
+      "claims": [
+        "'christmas' kata kunci #1 Etsy US, Oktober 2026"
+      ],
+      "level": "rasmi",
+      "id": "PS012",
+      "in_main_registry": true
+    },
+    {
+      "url": "https://help.printify.com/hc/en-us/articles/4483630299025",
+      "domain": "help.printify.com",
+      "stages": [
+        "P1"
+      ],
+      "claims": [
+        "Printify tidak sokong pulangan kerana salah saiz atau tukar fikiran; kos ditanggung penjual"
+      ],
+      "level": "rasmi",
+      "id": "PS013",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://help.printify.com/hc/en-us/articles/4483625769105",
+      "domain": "help.printify.com",
+      "stages": [
+        "P1"
+      ],
+      "claims": [
+        "Kerosakan semasa penghantaran / salah cetak: cetak semula atau refund percuma dalam 30 hari"
+      ],
+      "level": "rasmi",
+      "id": "PS014",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://help.printify.com/hc/en-us/articles/4483643971473",
+      "domain": "help.printify.com",
+      "stages": [
+        "P4"
+      ],
+      "claims": [
+        "Kanvas dalam kumpulan saiz sama: item pertama + item tambahan; saiz berbeza: setiap satu kadar item pertama"
+      ],
+      "level": "rasmi",
+      "id": "PS015",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.jchs.harvard.edu/press-releases/new-report-finds-cooling-rental-markets-affordability-crisis-deepens-renters",
+      "domain": "jchs.harvard.edu",
+      "stages": [
+        "P5"
+      ],
+      "claims": [
+        "49% isi rumah penyewa terbeban kos (rekod 22.7 juta, 2024)"
+      ],
+      "level": "rasmi",
+      "id": "PS016",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.nar.realtor/newsroom/first-time-home-buyer-share-falls-to-historic-low-of-21-median-age-rises-to-40",
+      "domain": "nar.realtor",
+      "stages": [
+        "P5"
+      ],
+      "claims": [
+        "Pembeli kali pertama 21% (rekod terendah), umur median 40"
+      ],
+      "level": "rasmi",
+      "id": "PS017",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://newsroom.pinterest.com/news/spring-trend-report-2026/",
+      "domain": "newsroom.pinterest.com",
+      "stages": [
+        "P1"
+      ],
+      "claims": [
+        "Pinterest Spring 2026: dapur, ruang makan kreatif dan reading nook antara trend"
+      ],
+      "level": "rasmi",
+      "id": "PS018",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://newsroom.pinterest.com/news/the-2025-pinterest-fall-trend-report/",
+      "domain": "newsroom.pinterest.com",
+      "stages": [
+        "P1",
+        "P5"
+      ],
+      "claims": [
+        "Pinterest Fall 2025: 'chic cubicle decor' +1,543%, 'work office makeover' +2,652%",
+        "'chic cubicle decor' +1,543% di Pinterest"
+      ],
+      "level": "rasmi",
+      "id": "PS019",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://nrf.com/blog/2026-mothers-day-shopping-plans",
+      "domain": "nrf.com",
+      "stages": [
+        "P5"
+      ],
+      "claims": [
+        "Purata Mother's Day $284.25 seorang (2026)"
+      ],
+      "level": "rasmi",
+      "id": "PS020",
+      "in_main_registry": true
+    },
+    {
+      "url": "https://printify.com/knowledge-hub/poster-sizes-that-sell/",
+      "domain": "printify.com",
+      "stages": [
+        "P4"
+      ],
+      "claims": [
+        "18×24 = pilihan ramai; 24×36 = karya utama dengan harga premium (kos & shipping lebih tinggi)",
+        "Tawarkan beberapa saiz yang muat bingkai sedia ada; terlalu banyak saiz mengelirukan pembeli"
+      ],
+      "level": "rasmi",
+      "id": "PS021",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://printify.com/app/products/home-and-living/canvas",
+      "domain": "printify.com",
+      "stages": [
+        "P4"
+      ],
+      "claims": [
+        "Rolled poster",
+        "Canvas stretched 1.25\""
+      ],
+      "level": "rasmi",
+      "id": "PS022",
+      "in_main_registry": true
+    },
+    {
+      "url": "https://printify.com/app/products/282/generic-brand/matte-vertical-posters",
+      "domain": "printify.com",
+      "stages": [
+        "P4"
+      ],
+      "claims": [
+        "Poster matte"
+      ],
+      "level": "rasmi",
+      "id": "PS023",
+      "in_main_registry": true
+    },
+    {
+      "url": "https://printify.com/app/products/804/generic-brand/fine-art-posters",
+      "domain": "printify.com",
+      "stages": [
+        "P4"
+      ],
+      "claims": [
+        "Fine art (Giclée 220gsm)"
+      ],
+      "level": "rasmi",
+      "id": "PS024",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://printify.com/app/products/829/generic-brand/satin-posters-300gsm",
+      "domain": "printify.com",
+      "stages": [
+        "P4"
+      ],
+      "claims": [
+        "Poster satin 300gsm"
+      ],
+      "level": "rasmi",
+      "id": "PS025",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://printify.com/app/products/540/generic-brand/framed-vertical-poster",
+      "domain": "printify.com",
+      "stages": [
+        "P4"
+      ],
+      "claims": [
+        "Poster berbingkai (asas)"
+      ],
+      "level": "rasmi",
+      "id": "PS026",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://printify.com/app/products/1206/generic-brand/metal-art-sign",
+      "domain": "printify.com",
+      "stages": [
+        "P4"
+      ],
+      "claims": [
+        "Metal art sign (aluminium)"
+      ],
+      "level": "rasmi",
+      "id": "PS027",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://printify.com/app/products/1098/generic-brand/acrylic-wall-art-panels",
+      "domain": "printify.com",
+      "stages": [
+        "P4"
+      ],
+      "claims": [
+        "Panel akrilik"
+      ],
+      "level": "rasmi",
+      "id": "PS028",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://printify.com/app/products/944/generic-brand/matte-canvas-black-frame",
+      "domain": "printify.com",
+      "stages": [
+        "P4"
+      ],
+      "claims": [
+        "Canvas berbingkai"
+      ],
+      "level": "rasmi",
+      "id": "PS029",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://printify.com/app/products/492/generic-brand/premium-framed-vertical-poster",
+      "domain": "printify.com",
+      "stages": [
+        "P4"
+      ],
+      "claims": [
+        "Poster berbingkai premium"
+      ],
+      "level": "rasmi",
+      "id": "PS030",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://printify.com/app/products/540/roma-imaging/framed-vertical-poster",
+      "domain": "printify.com",
+      "stages": [
+        "P4"
+      ],
+      "claims": [
+        "Poster berbingkai (Roma)"
+      ],
+      "level": "rasmi",
+      "id": "PS031",
+      "in_main_registry": true
+    },
+    {
+      "url": "https://www.schoolcounselor.org/getmedia/62807f33-a020-4c4f-ac6f-bf284803fd97/pr_ratios-24-25.pdf",
+      "domain": "schoolcounselor.org",
+      "stages": [
+        "P5"
+      ],
+      "claims": [
+        "Nisbah murid kepada kaunselor 371:1 (2024-25); cadangan ASCA 250:1"
+      ],
+      "level": "rasmi",
+      "id": "PS032",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://usafacts.org/articles/homeownership-rates-by-race/",
+      "domain": "usafacts.org",
+      "stages": [
+        "P5"
+      ],
+      "claims": [
+        "Kadar pemilikan rumah US 65.2% (2025), iaitu ~1/3 isi rumah menyewa"
+      ],
+      "level": "rasmi",
+      "id": "PS033",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://aboutwallart.com/blogs/news-articles-home-decor-inspiration/kitchen-wall-art-expert-interior-design-tips-trends-2026",
+      "domain": "aboutwallart.com",
+      "stages": [
+        "P3"
+      ],
+      "claims": [
+        "Quote 'kitchen' generik dengan fon klise semakin tidak digemari",
+        "Kitchen 2026: tekstur, warna, nostalgia; papan gaya menu"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS034",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.accio.com/business/inspirational-wall-decor",
+      "domain": "accio.com",
+      "stages": [
+        "P1"
+      ],
+      "claims": [
+        "Pasaran quote generik tepu; typography minimal tinggi permintaan tetapi saingan tinggi"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS035",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://adtargeting.io/industry/wall-decoration-keywords",
+      "domain": "adtargeting.io",
+      "stages": [
+        "P1",
+        "P2"
+      ],
+      "claims": [
+        "'nursery art' ~8,100 carian/bulan; minat memuncak April",
+        "nursery art"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS036",
+      "in_main_registry": true
+    },
+    {
+      "url": "https://ally.com/stories/spend/how-much-should-you-spend-on-a-gift-for-any-occasion",
+      "domain": "ally.com",
+      "stages": [
+        "P5"
+      ],
+      "claims": [
+        "Hadiah rumah baru: kebanyakan orang belanja ~$40"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS037",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://americanfarmhousestyle.com/shopping/sign-art",
+      "domain": "americanfarmhousestyle.com",
+      "stages": [
+        "P1"
+      ],
+      "claims": [
+        "Sign art = trend hangat farmhouse; tanda mudroom & dobi disyorkan"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS038",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.aol.com/articles/pinterests-2026-interior-design-trends-171800656.html",
+      "domain": "aol.com",
+      "stages": [
+        "P1",
+        "P3"
+      ],
+      "claims": [
+        "Pinterest: 'circus nursery' +50%, 'vintage circus aesthetic' +70%",
+        "'circus nursery' +50% (Pinterest)"
+      ],
+      "level": "pihak_ketiga",
+      "reclassified": "Media yang memetik laporan Pinterest, bukan laporan asal",
+      "id": "PS039",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.aol.com/articles/pinterest-predicts-biggest-interior-design-211700524.html",
+      "domain": "aol.com",
+      "stages": [
+        "P3"
+      ],
+      "claims": [
+        "Pinterest Fall 2025: Art Deco Revival & Chic Cubicle Decor; palet jewel tone + brass"
+      ],
+      "level": "pihak_ketiga",
+      "reclassified": "Media yang memetik laporan Pinterest, bukan laporan asal",
+      "id": "PS040",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://bridebook.com/uk/article/wedding-signs",
+      "domain": "bridebook.com",
+      "stages": [
+        "P1"
+      ],
+      "claims": [
+        "Welcome sign antara dekor perkahwinan paling banyak difoto; seating chart 16×20 / 18×24"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS041",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.charleagency.com/articles/pinterest-statistics/",
+      "domain": "charleagency.com",
+      "stages": [
+        "P5"
+      ],
+      "claims": [
+        "~70% pengguna Pinterest wanita"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS042",
+      "in_main_registry": true
+    },
+    {
+      "url": "https://www.coohom.com/article/laundry-room-sign-ideas-5-creative-options",
+      "domain": "coohom.com",
+      "stages": [
+        "P1",
+        "P3"
+      ],
+      "claims": [
+        "Tanda bilik dobi: trend 'design moment' kecil dalam rumah kecil (Jan 2026)",
+        "Trend 'design moment' kecil di bilik dobi; tanda minimalis/ikon"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS043",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://coresight.com/research/the-true-cost-of-apparel-returns/",
+      "domain": "coresight.com",
+      "stages": [
+        "P1"
+      ],
+      "claims": [
+        "Saiz/fit = ~53% pulangan baju online (2023); ~56% (2026)"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS044",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.dormtherapy.com/what-is-a-hobby-wall-100013955",
+      "domain": "dormtherapy.com",
+      "stages": [
+        "P1",
+        "P5"
+      ],
+      "claims": [
+        "Dorm 2026-27: 'hobby walls' dan dinding tersusun peribadi",
+        "Trend 2026-27: 'hobby walls' dan dinding peribadi tersusun"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS045",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://dynamicmockups.com/trends/poetcore-mockups-2026-aesthetic/",
+      "domain": "dynamicmockups.com",
+      "stages": [
+        "P3"
+      ],
+      "claims": [
+        "Estetik poetcore 2026"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS046",
+      "in_main_registry": true
+    },
+    {
+      "url": "https://elistit-web.pages.dev/blog/etsy-wall-art-sizes-2026-complete-guide/",
+      "domain": "elistit-web.pages.dev",
+      "stages": [
+        "P4"
+      ],
+      "claims": [
+        "Saiz biasa: 8×10, 11×14, 16×20, 18×24 (nisbah 4:5, 2:3, 3:4)"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS047",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.fab-art.co/blogs/news/teen-bedroom-wall-art-ideas",
+      "domain": "fab-art.co",
+      "stages": [
+        "P1"
+      ],
+      "claims": [
+        "Bilik remaja: koleksi tersusun menggantikan poster rawak"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS048",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.featherandblack.com/inspiration/how-often-the-uk-redecorates",
+      "domain": "featherandblack.com",
+      "stages": [
+        "P5"
+      ],
+      "claims": [
+        "UK: 25% refresh rumah setiap tahun, 18% setiap 6 bulan"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS049",
+      "in_main_registry": true
+    },
+    {
+      "url": "https://www.gelato.com/de/blog/wall-decor-by-room-guide",
+      "domain": "gelato.com",
+      "stages": [
+        "P1"
+      ],
+      "claims": [
+        "Home office: kategori carian wall art paling cepat berkembang sejak 2020"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS050",
+      "in_main_registry": true
+    },
+    {
+      "url": "https://www.gelato.com/ja/blog/wall-decor-by-room-guide",
+      "domain": "gelato.com",
+      "stages": [
+        "P1",
+        "P3"
+      ],
+      "claims": [
+        "Ruang tamu bilik paling penting untuk wall decor; dinding atas kepala katil = penempatan bilik tidur paling dicari",
+        "Dinding atas kepala katil = penempatan bilik tidur paling dicari"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS051",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.gelato.com/au/blog/bathroom-wall-art-ideas",
+      "domain": "gelato.com",
+      "stages": [
+        "P3"
+      ],
+      "claims": [
+        "Kertas tanpa bingkai melengkung dalam kelembapan bilik air dalam beberapa minggu; bingkai/akrilik lebih selamat"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS052",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.hakyarts.com/blogs/general/top-wall-art-poster-trends-to-watch-in-2026",
+      "domain": "hakyarts.com",
+      "stages": [
+        "P3"
+      ],
+      "claims": [
+        "Typography kini staple wall art: quote berani, type minimal, mesej peribadi"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS053",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.homesandgardens.com/celebrity-homes/ina-garten-kitchen-wall-art",
+      "domain": "homesandgardens.com",
+      "stages": [
+        "P3"
+      ],
+      "claims": [
+        "Gaya bistro Paris vintage dalam gallery wall dapur"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS054",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.homesandgardens.com/interior-design/pinterest-palette-2026",
+      "domain": "homesandgardens.com",
+      "stages": [
+        "P3"
+      ],
+      "claims": [
+        "Plum Noir antara warna Pinterest 2026",
+        "Cool Blue +85% minat (Pinterest 2026)"
+      ],
+      "level": "pihak_ketiga",
+      "reclassified": "Media hiasan rumah",
+      "id": "PS055",
+      "in_main_registry": true
+    },
+    {
+      "url": "https://www.homesnacks.com/moving-statistics/",
+      "domain": "homesnacks.com",
+      "stages": [
+        "P5"
+      ],
+      "claims": [
+        "~39.6 juta orang berpindah (11.8%, 2024)"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS056",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.loopreturns.com/blog/items-returned-most-often-ecommerce/",
+      "domain": "loopreturns.com",
+      "stages": [
+        "P1"
+      ],
+      "claims": [
+        "Data 2026: fit/saiz 56% pulangan apparel"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS057",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.lowes.com/n/buying-guide/wall-art-decor-buying-guide",
+      "domain": "lowes.com",
+      "stages": [
+        "P1",
+        "P3"
+      ],
+      "claims": [
+        "Tema popular ruang tamu: fotografi, landskap, abstrak (typography bukan dominan)",
+        "Tema ruang tamu didominasi foto/landskap/abstrak"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS058",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://merchize.com/poster-sizes/",
+      "domain": "merchize.com",
+      "stages": [
+        "P4"
+      ],
+      "claims": [
+        "Harga jualan poster POD saiz popular: $28-55, $32-65, $45-85"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS059",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.minted.com/lp/wedding-signs",
+      "domain": "minted.com",
+      "stages": [
+        "P1"
+      ],
+      "claims": [
+        "Seating chart biasa dalam saiz 16×20 dan 18×24"
+      ],
+      "level": "pihak_ketiga",
+      "reclassified": "Vendor (kedai)",
+      "id": "PS060",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://missjacobslittlelearners.com/blogs/blog/2026-classroom-decor-trends",
+      "domain": "missjacobslittlelearners.com",
+      "stages": [
+        "P3"
+      ],
+      "claims": [
+        "Kelas pastel antara trend dekor terbesar 2026; neutral kekal digemari"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS061",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://mixtiles.com/blog/wall-art-home-decor/trending-bathroom-home-decors-ideas",
+      "domain": "mixtiles.com",
+      "stages": [
+        "P3"
+      ],
+      "claims": [
+        "Gaya vintage untuk bilik air berkarakter (2026)"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS062",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.myartbroker.com/the-print-collectors-survey-2025",
+      "domain": "myartbroker.com",
+      "stages": [
+        "P5"
+      ],
+      "claims": [
+        "Pembeli bawah 40: 2x lebih cenderung beli terus dari artis; 'mampu milik' antara sebab utama (65%)"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS063",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.nestig.com/blogs/get-inspired/the-nursery-and-kids-room-trends-designers-are-backing-in-2026",
+      "domain": "nestig.com",
+      "stages": [
+        "P3"
+      ],
+      "claims": [
+        "Gender-neutral boho: oat, cream, tan, sage"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS064",
+      "in_main_registry": true
+    },
+    {
+      "url": "https://posterscape.com/blogs/wall-decor/poster-trends-the-must-have-decorative-wall-art-styles",
+      "domain": "posterscape.com",
+      "stages": [
+        "P3"
+      ],
+      "claims": [
+        "Poster teks lebih 'deliberate': serif elegan dan ruang lapang"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS065",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://printify.com/knowledge-hub/booktok-trope-merch-2026-playbook-high-margin-print-on-demand-profit/",
+      "domain": "printify.com",
+      "stages": [
+        "P3"
+      ],
+      "claims": [
+        "Design ikut trope lebih laku"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS066",
+      "in_main_registry": true
+    },
+    {
+      "url": "https://printify.com/app/products/1309/generic-brand/satin-and-archival-matte-posters",
+      "domain": "printify.com",
+      "stages": [
+        "P4"
+      ],
+      "claims": [
+        "Satin & archival matte"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS067",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://printify.com/app/products/1079/generic-brand/unframed-posters",
+      "domain": "printify.com",
+      "stages": [
+        "P4"
+      ],
+      "claims": [
+        "Poster uncoated"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS068",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://printify.com/app/products/promotional-collections/trending-wall-art-picks",
+      "domain": "printify.com",
+      "stages": [
+        "P4"
+      ],
+      "claims": [
+        "Foam board",
+        "Acrylic print (French cleat)"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS069",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.propertyreporter.co.uk/at-home/chosing-the-right-housewarming-gift.html",
+      "domain": "propertyreporter.co.uk",
+      "stages": [
+        "P5"
+      ],
+      "claims": [
+        "Quote klise seperti 'live laugh love' dianggap hadiah rumah baru yang lemah (survei UK)"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS070",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/classroom-posters",
+      "domain": "rankhero.com",
+      "stages": [
+        "P1",
+        "P2"
+      ],
+      "claims": [
+        "'classroom posters' ~6,600 carian/bulan, 144,725 listing Etsy (peluang 46)",
+        "classroom posters"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS071",
+      "in_main_registry": true
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/funny-bathroom-sign",
+      "domain": "rankhero.com",
+      "stages": [
+        "P1",
+        "P2",
+        "P5"
+      ],
+      "claims": [
+        "'funny bathroom sign' ~8,100 carian/bulan, 36,886 listing Etsy (peluang 220)",
+        "funny bathroom sign",
+        "'funny bathroom sign' 8,100 carian/bulan"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS072",
+      "in_main_registry": true
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/kitchen-art",
+      "domain": "rankhero.com",
+      "stages": [
+        "P1",
+        "P2"
+      ],
+      "claims": [
+        "'kitchen art' ~22,200 carian/bulan; 'kitchen sign' ~5,400",
+        "kitchen art"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS073",
+      "in_main_registry": true
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/laundry-room-sign",
+      "domain": "rankhero.com",
+      "stages": [
+        "P1",
+        "P2"
+      ],
+      "claims": [
+        "'laundry room sign' ~2,900 carian/bulan",
+        "laundry room sign"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS074",
+      "in_main_registry": true
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/calm-corner",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2",
+        "P5"
+      ],
+      "claims": [
+        "calm corner",
+        "'calm corner' 6,600 carian/bulan, 23,904 listing Etsy"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS075",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/calming-wall-art",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "calming wall art"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS076",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/bathroom-sign",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "bathroom sign"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS077",
+      "in_main_registry": true
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/bath-wall-decor",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "bath wall decor"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS078",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/toilet-wall-art",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "toilet wall art"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS079",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/cat-bathroom-art",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "cat bathroom art"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS080",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/funny-bathroom",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "funny bathroom"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS081",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/bath-decor",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "bath decor"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS082",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/teacher-decorations",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "teacher decorations"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS083",
+      "in_main_registry": true
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/kitchen-sign",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "kitchen sign"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS084",
+      "in_main_registry": true
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/kitchen-poster",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "kitchen poster"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS085",
+      "in_main_registry": true
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/coffee-bar",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "coffee bar"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS086",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/office-wall-décor",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "office wall décor"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS087",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/office-art",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "office art"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS088",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/wall-decor-for-home-office",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "wall decor for home office"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS089",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/bookish-print",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "bookish print"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS090",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/bookish-wall-art",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "bookish wall art"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS091",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/reading-wall-art",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "reading wall art"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS092",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/book-nook",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "book nook"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS093",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/livingroom-art",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "livingroom art"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS094",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/wall-art-decor",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "wall art decor"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS095",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/home-decor-wall-art",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "home decor wall art"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS096",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/home-wall-art",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "home wall art"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS097",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/bedroom-art",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "bedroom art"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS098",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/above-bed-art",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "above bed art"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS099",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/bedroom-decor",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "bedroom decor"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS100",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/nursery-wall-sticker",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "nursery wall sticker"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS101",
+      "in_main_registry": true
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/bible-verse-nursery",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "bible verse nursery"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS102",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/nursery-wall-print",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "nursery wall print"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS103",
+      "in_main_registry": true
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/laundry-wall-art",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "laundry wall art"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS104",
+      "in_main_registry": true
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/christmas-art",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "christmas art"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS105",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/wedding-sign",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2",
+        "P5"
+      ],
+      "claims": [
+        "wedding sign",
+        "'wedding sign' 27,100 carian/bulan"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS106",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/welcome-sign",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "welcome sign"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS107",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/gym-poster",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2",
+        "P5"
+      ],
+      "claims": [
+        "gym poster",
+        "'gym poster' ~9,900 carian/bulan"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS108",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/home-gym-decor",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "home gym decor"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS109",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/dorm-decor",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2",
+        "P5"
+      ],
+      "claims": [
+        "dorm decor",
+        "'dorm decor' 8,100 carian/bulan tetapi 2.37 juta listing"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS110",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/dorm-posters",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "dorm posters"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS111",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/bible-art",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "bible art"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS112",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/bible-poster",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "bible poster"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS113",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/church-wall-decor",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "church wall decor"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS114",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/bible-verse",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "bible verse"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS115",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/playroom-wall-art",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "playroom wall art"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS116",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/kitchen-dining-room",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "kitchen dining room"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS117",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/dining-room",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "dining room"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS118",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/wall-art-printable",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "wall art printable"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS119",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/printable-wallart",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "printable wallart"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS120",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/wall-art-set-of-3",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "wall art set of 3"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS121",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/set-of-three-prints",
+      "domain": "rankhero.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "set of three prints"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS122",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.retailtouchpoints.com/resources/unwrap-the-latest-data-on-gifting",
+      "domain": "retailtouchpoints.com",
+      "stages": [
+        "P5"
+      ],
+      "claims": [
+        "Purata hadiah rumah baru $51.40"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS123",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://sellertoolshq.com/guides/how-to-sell-wall-art-etsy/",
+      "domain": "sellertoolshq.com",
+      "stages": [
+        "P4"
+      ],
+      "claims": [
+        "Printable digital $5-25 sekeping; kebanyakan penjual berjaya $12-18",
+        "Printable digital"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS124",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://treendly.com/trend/office-decor",
+      "domain": "treendly.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "office decor"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS125",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.twinkl.com/blog/back-to-school-2025-classroom-decor-ideas",
+      "domain": "twinkl.com",
+      "stages": [
+        "P3"
+      ],
+      "claims": [
+        "Bilik darjah retro berwarna lawan minimalis"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS126",
+      "in_main_registry": true
+    },
+    {
+      "url": "https://www.twinkl.com/resource/pampas-grass-boho-neutral-editable-poster-t-ag-1688820834",
+      "domain": "twinkl.com",
+      "stages": [
+        "P3"
+      ],
+      "claims": [
+        "Sempadan botanikal memberi rasa tenang dan neutral yang tidak mengganggu deria"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS127",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://unicornseo.com/best-keywords-niche/Baby%20Nursery",
+      "domain": "unicornseo.com",
+      "stages": [
+        "P2"
+      ],
+      "claims": [
+        "baby nursery wall decor"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS128",
+      "in_main_registry": true
+    },
+    {
+      "url": "https://urbanroad.com/blogs/trends/2026-interior-art-trends-for-living-rooms-bedrooms-and-beyond",
+      "domain": "urbanroad.com",
+      "stages": [
+        "P1"
+      ],
+      "claims": [
+        "Bilik anak lebih 'design-forward', ibu bapa pilih karya yang padan dengan rumah"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS129",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.verticalrent.com/blog/rental-market-statistics-2026",
+      "domain": "verticalrent.com",
+      "stages": [
+        "P5"
+      ],
+      "claims": [
+        "~44.6 juta isi rumah penyewa (~35%)"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS130",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.wallpics.com/blogs/news/transform-your-workout-space-home-gym-wall-art-trends",
+      "domain": "wallpics.com",
+      "stages": [
+        "P3"
+      ],
+      "claims": [
+        "Prints kalis air/akrilik/laminasi sesuai gym lembap"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS131",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.walmart.com/c/kp/work-out-posters",
+      "domain": "walmart.com",
+      "stages": [
+        "P1"
+      ],
+      "claims": [
+        "Poster gym/motivasi banyak di Walmart, kebanyakan bawah $30; pemilik guna 3-5 poster"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS132",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.walmart.com/c/kp/classroom-calming-corner",
+      "domain": "walmart.com",
+      "stages": [
+        "P1"
+      ],
+      "claims": [
+        "Set poster calm corner Walmart ~$10; bundle digital Etsy $3.50-16.81"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS133",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.walmart.com/c/kp/man-caves",
+      "domain": "walmart.com",
+      "stages": [
+        "P1"
+      ],
+      "claims": [
+        "Tin sign man cave/bar murah $6-9 membanjiri pasaran"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS134",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.wayfair.com/shop/o/coffee-bar-decor-ideas",
+      "domain": "wayfair.com",
+      "stages": [
+        "P1"
+      ],
+      "claims": [
+        "Tanda coffee bar banyak dijual ($5-40) di Wayfair/Walmart/Kohl's"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS135",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://wedding.report/index.cfm/action/wedding_statistics/view/market/",
+      "domain": "wedding.report",
+      "stages": [
+        "P5"
+      ],
+      "claims": [
+        "~2.01 juta perkahwinan di US (2025)"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS136",
+      "in_main_registry": true
+    },
+    {
+      "url": "https://wix.com/wixel/resources/typography-trends",
+      "domain": "wix.com",
+      "stages": [
+        "P3"
+      ],
+      "claims": [
+        "Fon tulisan tangan dan estetik analog berterusan ke 2026; arah ke typography berani dan playful, bukan minimal semata-mata"
+      ],
+      "level": "pihak_ketiga",
+      "id": "PS137",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://markus-hagner-photography.com/best-wall-art-for-home-gyms/",
+      "domain": "markus-hagner-photography.com",
+      "stages": [
+        "P5"
+      ],
+      "claims": [
+        "Pemilik home gym guna 3-5 poster (anekdot)"
+      ],
+      "level": "lemah",
+      "id": "PS138",
+      "in_main_registry": false
+    },
+    {
+      "url": "https://www.somethingdifferentwholesale.com/uk/blog/book-gift-trend/",
+      "domain": "somethingdifferentwholesale.com",
+      "stages": [
+        "P1",
+        "P5"
+      ],
+      "claims": [
+        "Bookish: carian 'book totes' +148%, romantasy +77% (Faire)",
+        "Carian 'book totes' +148% (Faire)"
+      ],
+      "level": "lemah",
+      "id": "PS139",
+      "in_main_registry": true
+    },
+    {
+      "url": "https://www.wildlifeartstore.com/selling-art-on-pinterest/",
+      "domain": "wildlifeartstore.com",
+      "stages": [
+        "P3"
+      ],
+      "claims": [
+        "Pin wall art sebagai 'Home Decor' (cth. 'Art for a Scandinavian living room'), bukan sebagai 'Art'"
+      ],
+      "level": "lemah",
+      "id": "PS140",
+      "in_main_registry": false
+    }
+  ]
+}

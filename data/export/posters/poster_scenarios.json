@@ -1,0 +1,5 @@
+[
+{"scenario": "Pesimis", "assumption": "Trafik ×0.5, conversion ×0.67", "profit_steady": 4530, "orders_steady": 172, "revenue_steady": 8060, "profit_year1": 3009, "orders_year1": 116},
+{"scenario": "Asas", "assumption": "3,000 pelawat/bulan, conversion 1.2–1.5%", "profit_steady": 13575, "orders_steady": 514, "revenue_steady": 24167, "profit_year1": 9021, "orders_year1": 347},
+{"scenario": "Optimis", "assumption": "Trafik ×2", "profit_steady": 27151, "orders_steady": 1028, "revenue_steady": 48334, "profit_year1": 18043, "orders_year1": 695}
+]
