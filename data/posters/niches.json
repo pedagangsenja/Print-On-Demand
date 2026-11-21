@@ -1,0 +1,682 @@
+{
+  "stage": "P1",
+  "title": "Niche poster ikut bilik, tempat dan tema",
+  "updated": "2026-11-21",
+  "scoring": "1-5 setiap kriteria (permintaan, saingan rendah, typography, padan Pinterest, nilai pesanan/set, automasi); jumlah maks 30; penilaian Claude berdasarkan bukti",
+  "risk_note": [
+    {
+      "claim": "Printify tidak sokong pulangan kerana salah saiz atau tukar fikiran; kos ditanggung penjual",
+      "source": "https://help.printify.com/hc/en-us/articles/4483630299025",
+      "level": "rasmi"
+    },
+    {
+      "claim": "Kerosakan semasa penghantaran / salah cetak: cetak semula atau refund percuma dalam 30 hari",
+      "source": "https://help.printify.com/hc/en-us/articles/4483625769105",
+      "level": "rasmi"
+    },
+    {
+      "claim": "Saiz/fit = ~53% pulangan baju online (2023); ~56% (2026)",
+      "source": "https://coresight.com/research/the-true-cost-of-apparel-returns/",
+      "level": "pihak_ketiga"
+    },
+    {
+      "claim": "Data 2026: fit/saiz 56% pulangan apparel",
+      "source": "https://www.loopreturns.com/blog/items-returned-most-often-ecommerce/",
+      "level": "pihak_ketiga"
+    }
+  ],
+  "niches": [
+    {
+      "id": "classroom",
+      "niche": "Kelas (classroom)",
+      "group": "Pendidikan",
+      "demand": 4,
+      "competition": 2,
+      "typography_fit": 5,
+      "pinterest_fit": 5,
+      "order_value": 5,
+      "automation": 5,
+      "total": 26,
+      "season": "Bermusim",
+      "peak_months": "Jul-Ogos, Jan",
+      "decision": "Gelombang 1",
+      "evidence": [
+        {
+          "claim": "'classroom posters' ~6,600 carian/bulan, 144,725 listing Etsy (peluang 46)",
+          "source": "https://www.rankhero.com/keywords/classroom-posters",
+          "level": "pihak_ketiga"
+        },
+        {
+          "claim": "Cikgu belanja purata $600 duit sendiri setahun untuk kelas",
+          "source": "https://www.edweek.org/leadership/see-the-school-supplies-teachers-buy-for-students/2026/08",
+          "level": "rasmi"
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "id": "bathroom",
+      "niche": "Bilik air (lucu)",
+      "group": "Rumah",
+      "demand": 4,
+      "competition": 3,
+      "typography_fit": 5,
+      "pinterest_fit": 4,
+      "order_value": 4,
+      "automation": 5,
+      "total": 25,
+      "season": "Sepanjang tahun",
+      "peak_months": "Rata; naik Q4",
+      "decision": "Gelombang 1",
+      "evidence": [
+        {
+          "claim": "'funny bathroom sign' ~8,100 carian/bulan, 36,886 listing Etsy (peluang 220)",
+          "source": "https://www.rankhero.com/keywords/funny-bathroom-sign",
+          "level": "pihak_ketiga"
+        }
+      ],
+      "rank": 2
+    },
+    {
+      "id": "kitchen",
+      "niche": "Dapur & coffee bar",
+      "group": "Rumah",
+      "demand": 4,
+      "competition": 2,
+      "typography_fit": 5,
+      "pinterest_fit": 5,
+      "order_value": 3,
+      "automation": 5,
+      "total": 24,
+      "season": "Sepanjang tahun",
+      "peak_months": "Q4, musim bunga",
+      "decision": "Gelombang 1",
+      "evidence": [
+        {
+          "claim": "'kitchen art' ~22,200 carian/bulan; 'kitchen sign' ~5,400",
+          "source": "https://www.rankhero.com/keywords/kitchen-art",
+          "level": "pihak_ketiga"
+        },
+        {
+          "claim": "Pinterest Spring 2026: dapur, ruang makan kreatif dan reading nook antara trend",
+          "source": "https://newsroom.pinterest.com/news/spring-trend-report-2026/",
+          "level": "rasmi"
+        },
+        {
+          "claim": "Tanda coffee bar banyak dijual ($5-40) di Wayfair/Walmart/Kohl's",
+          "source": "https://www.wayfair.com/shop/o/coffee-bar-decor-ideas",
+          "level": "pihak_ketiga"
+        }
+      ],
+      "rank": 3
+    },
+    {
+      "id": "home_office",
+      "niche": "Home office & cubicle",
+      "group": "Rumah / kerja",
+      "demand": 4,
+      "competition": 3,
+      "typography_fit": 5,
+      "pinterest_fit": 4,
+      "order_value": 3,
+      "automation": 5,
+      "total": 24,
+      "season": "Sepanjang tahun",
+      "peak_months": "Jan, Sep",
+      "decision": "Gelombang 1",
+      "evidence": [
+        {
+          "claim": "Pinterest Fall 2025: 'chic cubicle decor' +1,543%, 'work office makeover' +2,652%",
+          "source": "https://newsroom.pinterest.com/news/the-2025-pinterest-fall-trend-report/",
+          "level": "rasmi"
+        },
+        {
+          "claim": "Home office: kategori carian wall art paling cepat berkembang sejak 2020",
+          "source": "https://www.gelato.com/de/blog/wall-decor-by-room-guide",
+          "level": "pihak_ketiga"
+        }
+      ],
+      "rank": 4
+    },
+    {
+      "id": "reading_nook",
+      "niche": "Reading nook & bookish",
+      "group": "Rumah",
+      "demand": 3,
+      "competition": 3,
+      "typography_fit": 5,
+      "pinterest_fit": 5,
+      "order_value": 3,
+      "automation": 5,
+      "total": 24,
+      "season": "Sepanjang tahun",
+      "peak_months": "Q4",
+      "decision": "Gelombang 1",
+      "evidence": [
+        {
+          "claim": "Pinterest Spring 2026: dapur, ruang makan kreatif dan reading nook antara trend",
+          "source": "https://newsroom.pinterest.com/news/spring-trend-report-2026/",
+          "level": "rasmi"
+        },
+        {
+          "claim": "Bookish: carian 'book totes' +148%, romantasy +77% (Faire)",
+          "source": "https://www.somethingdifferentwholesale.com/uk/blog/book-gift-trend/",
+          "level": "lemah"
+        }
+      ],
+      "rank": 5
+    },
+    {
+      "id": "bedroom",
+      "niche": "Bilik tidur",
+      "group": "Rumah",
+      "demand": 4,
+      "competition": 3,
+      "typography_fit": 4,
+      "pinterest_fit": 5,
+      "order_value": 3,
+      "automation": 5,
+      "total": 24,
+      "season": "Sepanjang tahun",
+      "peak_months": "Jan-Apr, Feb (Valentine)",
+      "decision": "Gelombang 1",
+      "evidence": [
+        {
+          "claim": "Ruang tamu bilik paling penting untuk wall decor; dinding atas kepala katil = penempatan bilik tidur paling dicari",
+          "source": "https://www.gelato.com/ja/blog/wall-decor-by-room-guide",
+          "level": "pihak_ketiga"
+        },
+        {
+          "claim": "Carian 'wall art decor' +110%, 'gallery prints' +80% (Etsy S/S 2026, Everyday Exhibits)",
+          "source": "https://community.etsy.com/forum/etsy-success-300/topic/etsy-insights-explore-the-trends-shaping-spring-and-summer-2026-165859/",
+          "level": "rasmi"
+        }
+      ],
+      "rank": 6
+    },
+    {
+      "id": "living_room",
+      "niche": "Ruang tamu",
+      "group": "Rumah",
+      "demand": 5,
+      "competition": 2,
+      "typography_fit": 3,
+      "pinterest_fit": 5,
+      "order_value": 4,
+      "automation": 5,
+      "total": 24,
+      "season": "Sepanjang tahun",
+      "peak_months": "Jan-Apr, Q4",
+      "decision": "Gelombang 1",
+      "evidence": [
+        {
+          "claim": "Carian 'wall art decor' +110%, 'gallery prints' +80% (Etsy S/S 2026, Everyday Exhibits)",
+          "source": "https://community.etsy.com/forum/etsy-success-300/topic/etsy-insights-explore-the-trends-shaping-spring-and-summer-2026-165859/",
+          "level": "rasmi"
+        },
+        {
+          "claim": "'wall art' kata kunci #4 Etsy US, Q3 2026",
+          "source": "https://help.erank.com/blog/top-etsy-searches-q3-2026/",
+          "level": "rasmi"
+        },
+        {
+          "claim": "Tema popular ruang tamu: fotografi, landskap, abstrak (typography bukan dominan)",
+          "source": "https://www.lowes.com/n/buying-guide/wall-art-decor-buying-guide",
+          "level": "pihak_ketiga"
+        }
+      ],
+      "rank": 7
+    },
+    {
+      "id": "nursery",
+      "niche": "Nursery",
+      "group": "Rumah",
+      "demand": 4,
+      "competition": 3,
+      "typography_fit": 4,
+      "pinterest_fit": 5,
+      "order_value": 3,
+      "automation": 4,
+      "total": 23,
+      "season": "Sepanjang tahun",
+      "peak_months": "Apr",
+      "decision": "Gelombang 1",
+      "evidence": [
+        {
+          "claim": "'nursery art' ~8,100 carian/bulan; minat memuncak April",
+          "source": "https://adtargeting.io/industry/wall-decoration-keywords",
+          "level": "pihak_ketiga"
+        },
+        {
+          "claim": "Pinterest: 'circus nursery' +50%, 'vintage circus aesthetic' +70%",
+          "source": "https://www.aol.com/articles/pinterests-2026-interior-design-trends-171800656.html",
+          "level": "rasmi"
+        }
+      ],
+      "rank": 8
+    },
+    {
+      "id": "laundry",
+      "niche": "Bilik dobi",
+      "group": "Rumah",
+      "demand": 3,
+      "competition": 3,
+      "typography_fit": 5,
+      "pinterest_fit": 4,
+      "order_value": 3,
+      "automation": 5,
+      "total": 23,
+      "season": "Sepanjang tahun",
+      "peak_months": "Rata",
+      "decision": "Gelombang 1",
+      "evidence": [
+        {
+          "claim": "'laundry room sign' ~2,900 carian/bulan",
+          "source": "https://www.rankhero.com/keywords/laundry-room-sign",
+          "level": "pihak_ketiga"
+        },
+        {
+          "claim": "Tanda bilik dobi: trend 'design moment' kecil dalam rumah kecil (Jan 2026)",
+          "source": "https://www.coohom.com/article/laundry-room-sign-ideas-5-creative-options",
+          "level": "pihak_ketiga"
+        }
+      ],
+      "rank": 9
+    },
+    {
+      "id": "seasonal_xmas",
+      "niche": "Krismas & musim cuti",
+      "group": "Musim",
+      "demand": 5,
+      "competition": 1,
+      "typography_fit": 4,
+      "pinterest_fit": 5,
+      "order_value": 3,
+      "automation": 5,
+      "total": 23,
+      "season": "Bermusim",
+      "peak_months": "Okt-Dis",
+      "decision": "Gelombang 1",
+      "evidence": [
+        {
+          "claim": "'christmas' kata kunci #1 Etsy US, Oktober 2026",
+          "source": "https://help.erank.com/blog/top-keywords-on-etsy/",
+          "level": "rasmi"
+        },
+        {
+          "claim": "Printable Krismas di Etsy kebanyakan $2-3 (saingan harga tinggi)",
+          "source": "https://www.etsy.com/listing/1343560341",
+          "level": "rasmi"
+        }
+      ],
+      "rank": 10
+    },
+    {
+      "id": "wedding_signs",
+      "niche": "Papan tanda perkahwinan",
+      "group": "Majlis",
+      "demand": 4,
+      "competition": 3,
+      "typography_fit": 5,
+      "pinterest_fit": 5,
+      "order_value": 4,
+      "automation": 2,
+      "total": 23,
+      "season": "Bermusim",
+      "peak_months": "Mac-Okt",
+      "decision": "Fasa 2 (personalisasi)",
+      "evidence": [
+        {
+          "claim": "Welcome sign antara dekor perkahwinan paling banyak difoto; seating chart 16×20 / 18×24",
+          "source": "https://bridebook.com/uk/article/wedding-signs",
+          "level": "pihak_ketiga"
+        },
+        {
+          "claim": "Seating chart biasa dalam saiz 16×20 dan 18×24",
+          "source": "https://www.minted.com/lp/wedding-signs",
+          "level": "rasmi"
+        }
+      ],
+      "rank": 11
+    },
+    {
+      "id": "home_gym",
+      "niche": "Home gym",
+      "group": "Rumah",
+      "demand": 3,
+      "competition": 2,
+      "typography_fit": 5,
+      "pinterest_fit": 3,
+      "order_value": 4,
+      "automation": 5,
+      "total": 22,
+      "season": "Sepanjang tahun",
+      "peak_months": "Jan",
+      "decision": "Gelombang 2",
+      "evidence": [
+        {
+          "claim": "Poster gym/motivasi banyak di Walmart, kebanyakan bawah $30; pemilik guna 3-5 poster",
+          "source": "https://www.walmart.com/c/kp/work-out-posters",
+          "level": "pihak_ketiga"
+        }
+      ],
+      "rank": 12
+    },
+    {
+      "id": "dorm",
+      "niche": "Asrama / dorm",
+      "group": "Pendidikan",
+      "demand": 3,
+      "competition": 3,
+      "typography_fit": 4,
+      "pinterest_fit": 4,
+      "order_value": 3,
+      "automation": 5,
+      "total": 22,
+      "season": "Bermusim",
+      "peak_months": "Jul-Ogos",
+      "decision": "Gelombang 2",
+      "evidence": [
+        {
+          "claim": "Dorm 2026-27: 'hobby walls' dan dinding tersusun peribadi",
+          "source": "https://www.dormtherapy.com/what-is-a-hobby-wall-100013955",
+          "level": "pihak_ketiga"
+        }
+      ],
+      "rank": 13
+    },
+    {
+      "id": "counselor",
+      "niche": "Bilik kaunselor / calm corner",
+      "group": "Pendidikan",
+      "demand": 2,
+      "competition": 2,
+      "typography_fit": 5,
+      "pinterest_fit": 4,
+      "order_value": 4,
+      "automation": 5,
+      "total": 22,
+      "season": "Sepanjang tahun",
+      "peak_months": "Ogos-Sep",
+      "decision": "Gelombang 2",
+      "evidence": [
+        {
+          "claim": "Set poster calm corner Walmart ~$10; bundle digital Etsy $3.50-16.81",
+          "source": "https://www.walmart.com/c/kp/classroom-calming-corner",
+          "level": "pihak_ketiga"
+        }
+      ],
+      "rank": 14
+    },
+    {
+      "id": "faith",
+      "niche": "Iman / Kristian",
+      "group": "Tema",
+      "demand": 3,
+      "competition": 2,
+      "typography_fit": 5,
+      "pinterest_fit": 4,
+      "order_value": 3,
+      "automation": 5,
+      "total": 22,
+      "season": "Sepanjang tahun",
+      "peak_months": "Easter, Krismas",
+      "decision": "Gelombang 2",
+      "evidence": [
+        {
+          "claim": "Kedai Etsy ayat Bible 'KAM DesignHaus' ~26,289 jualan",
+          "source": "https://www.etsy.com/shop/KAMDesignHaus",
+          "level": "rasmi"
+        }
+      ],
+      "rank": 15
+    },
+    {
+      "id": "playroom",
+      "niche": "Bilik anak & playroom",
+      "group": "Rumah",
+      "demand": 3,
+      "competition": 3,
+      "typography_fit": 4,
+      "pinterest_fit": 4,
+      "order_value": 3,
+      "automation": 4,
+      "total": 21,
+      "season": "Sepanjang tahun",
+      "peak_months": "Rata",
+      "decision": "Gelombang 2",
+      "evidence": [
+        {
+          "claim": "Bilik anak lebih 'design-forward', ibu bapa pilih karya yang padan dengan rumah",
+          "source": "https://urbanroad.com/blogs/trends/2026-interior-art-trends-for-living-rooms-bedrooms-and-beyond",
+          "level": "pihak_ketiga"
+        }
+      ],
+      "rank": 16
+    },
+    {
+      "id": "dining",
+      "niche": "Ruang makan",
+      "group": "Rumah",
+      "demand": 3,
+      "competition": 3,
+      "typography_fit": 4,
+      "pinterest_fit": 4,
+      "order_value": 2,
+      "automation": 5,
+      "total": 21,
+      "season": "Sepanjang tahun",
+      "peak_months": "Nov (Thanksgiving)",
+      "decision": "Gelombang 2",
+      "evidence": [
+        {
+          "claim": "Pinterest Spring 2026: dapur, ruang makan kreatif dan reading nook antara trend",
+          "source": "https://newsroom.pinterest.com/news/spring-trend-report-2026/",
+          "level": "rasmi"
+        }
+      ],
+      "rank": 17
+    },
+    {
+      "id": "entryway",
+      "niche": "Pintu masuk & mudroom",
+      "group": "Rumah",
+      "demand": 3,
+      "competition": 3,
+      "typography_fit": 5,
+      "pinterest_fit": 4,
+      "order_value": 2,
+      "automation": 4,
+      "total": 21,
+      "season": "Sepanjang tahun",
+      "peak_months": "Musim bunga, Q4",
+      "decision": "Gelombang 2",
+      "evidence": [
+        {
+          "claim": "Sign art = trend hangat farmhouse; tanda mudroom & dobi disyorkan",
+          "source": "https://americanfarmhousestyle.com/shopping/sign-art",
+          "level": "pihak_ketiga"
+        }
+      ],
+      "rank": 18
+    },
+    {
+      "id": "affirmation",
+      "niche": "Afirmasi & motivasi",
+      "group": "Tema",
+      "demand": 3,
+      "competition": 1,
+      "typography_fit": 5,
+      "pinterest_fit": 4,
+      "order_value": 3,
+      "automation": 5,
+      "total": 21,
+      "season": "Sepanjang tahun",
+      "peak_months": "Jan",
+      "decision": "Gelombang 2",
+      "evidence": [
+        {
+          "claim": "Pasaran quote generik tepu; typography minimal tinggi permintaan tetapi saingan tinggi",
+          "source": "https://www.accio.com/business/inspirational-wall-decor",
+          "level": "pihak_ketiga"
+        }
+      ],
+      "rank": 19
+    },
+    {
+      "id": "seasonal_other",
+      "niche": "Halloween, Thanksgiving, Easter",
+      "group": "Musim",
+      "demand": 4,
+      "competition": 1,
+      "typography_fit": 4,
+      "pinterest_fit": 4,
+      "order_value": 2,
+      "automation": 5,
+      "total": 20,
+      "season": "Bermusim",
+      "peak_months": "Sep-Okt, Nov, Mac-Apr",
+      "decision": "Gelombang 2",
+      "evidence": [
+        {
+          "claim": "'halloween' kata kunci #2 Etsy US, Q3 2026",
+          "source": "https://help.erank.com/blog/top-etsy-searches-q3-2026/",
+          "level": "rasmi"
+        }
+      ],
+      "rank": 20
+    },
+    {
+      "id": "teen",
+      "niche": "Bilik remaja",
+      "group": "Rumah",
+      "demand": 2,
+      "competition": 3,
+      "typography_fit": 4,
+      "pinterest_fit": 3,
+      "order_value": 3,
+      "automation": 5,
+      "total": 20,
+      "season": "Sepanjang tahun",
+      "peak_months": "Ogos",
+      "decision": "Kemudian",
+      "evidence": [
+        {
+          "claim": "Bilik remaja: koleksi tersusun menggantikan poster rawak",
+          "source": "https://www.fab-art.co/blogs/news/teen-bedroom-wall-art-ideas",
+          "level": "pihak_ketiga"
+        }
+      ],
+      "rank": 21
+    },
+    {
+      "id": "party_signs",
+      "niche": "Papan tanda parti & baby shower",
+      "group": "Majlis",
+      "demand": 3,
+      "competition": 3,
+      "typography_fit": 5,
+      "pinterest_fit": 4,
+      "order_value": 3,
+      "automation": 2,
+      "total": 20,
+      "season": "Sepanjang tahun",
+      "peak_months": "Rata",
+      "decision": "Fasa 2 (personalisasi)",
+      "evidence": [
+        {
+          "claim": "Welcome sign antara dekor perkahwinan paling banyak difoto; seating chart 16×20 / 18×24",
+          "source": "https://bridebook.com/uk/article/wedding-signs",
+          "level": "pihak_ketiga"
+        }
+      ],
+      "rank": 22
+    },
+    {
+      "id": "gym_b2b",
+      "niche": "Gym & studio (bisnes)",
+      "group": "Bisnes",
+      "demand": 2,
+      "competition": 3,
+      "typography_fit": 5,
+      "pinterest_fit": 2,
+      "order_value": 3,
+      "automation": 5,
+      "total": 20,
+      "season": "Sepanjang tahun",
+      "peak_months": "Jan",
+      "decision": "Kemudian",
+      "evidence": [
+        {
+          "claim": "Poster gym/motivasi banyak di Walmart, kebanyakan bawah $30; pemilik guna 3-5 poster",
+          "source": "https://www.walmart.com/c/kp/work-out-posters",
+          "level": "pihak_ketiga"
+        }
+      ],
+      "rank": 23
+    },
+    {
+      "id": "man_cave",
+      "niche": "Man cave, garaj & bar",
+      "group": "Rumah",
+      "demand": 3,
+      "competition": 1,
+      "typography_fit": 5,
+      "pinterest_fit": 2,
+      "order_value": 3,
+      "automation": 5,
+      "total": 19,
+      "season": "Sepanjang tahun",
+      "peak_months": "Jun (Father's Day), Dis",
+      "decision": "Elak buat masa ini",
+      "evidence": [
+        {
+          "claim": "Tin sign man cave/bar murah $6-9 membanjiri pasaran",
+          "source": "https://www.walmart.com/c/kp/man-caves",
+          "level": "pihak_ketiga"
+        }
+      ],
+      "rank": 24
+    },
+    {
+      "id": "family_est",
+      "niche": "Nama keluarga 'Est.'",
+      "group": "Tema",
+      "demand": 3,
+      "competition": 2,
+      "typography_fit": 5,
+      "pinterest_fit": 4,
+      "order_value": 2,
+      "automation": 2,
+      "total": 18,
+      "season": "Sepanjang tahun",
+      "peak_months": "Musim kahwin, Q4",
+      "decision": "Fasa 2 (personalisasi)",
+      "evidence": [
+        {
+          "claim": "Ruang tamu bilik paling penting untuk wall decor; dinding atas kepala katil = penempatan bilik tidur paling dicari",
+          "source": "https://www.gelato.com/ja/blog/wall-decor-by-room-guide",
+          "level": "pihak_ketiga"
+        }
+      ],
+      "rank": 25
+    },
+    {
+      "id": "salon_cafe",
+      "niche": "Salon, kafe & klinik (bisnes)",
+      "group": "Bisnes",
+      "demand": 2,
+      "competition": 3,
+      "typography_fit": 4,
+      "pinterest_fit": 2,
+      "order_value": 2,
+      "automation": 3,
+      "total": 16,
+      "season": "Sepanjang tahun",
+      "peak_months": "Rata",
+      "decision": "Elak buat masa ini",
+      "evidence": [],
+      "rank": 26
+    }
+  ]
+}
