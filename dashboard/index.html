@@ -113,7 +113,13 @@
 .pod-analyses { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: var(--cds-gap-md); }
 .pod-analysis { gap: var(--cds-gap-sm); }
 .pod-analysis table th { background: var(--color-panel); }
-@media print { .pod-scroll { max-height: none; overflow: visible; border: 0; } .pod-nav, .pod-tabbar { display: none; } .pod details { border: 0; } #tab-prestasi, #tab-utama { break-before: page; } }
+.pod-progress { height: 10px; border-radius: 5px; background: var(--color-border-line); overflow: hidden; max-width: 520px; }
+.pod-progress-bar { height: 100%; border-radius: 5px; width: 0; }
+.pod-phases { display: grid; gap: var(--cds-gap-md); }
+.pod-wf { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--cds-gap-xs); }
+.pod-wf li { display: grid; gap: 2px; padding: var(--cds-pad-sm) var(--cds-pad-md); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background: var(--color-panel); }
+.pod-wf-meta { font-size: var(--cds-font-size-caption); }
+@media print { .pod-scroll { max-height: none; overflow: visible; border: 0; } .pod-nav, .pod-tabbar { display: none; } .pod details { border: 0; } #tab-setup, #tab-workflow, #tab-prestasi, #tab-utama { break-before: page; } }
 </style>
 
 <div class="pod">
@@ -123,6 +129,8 @@
   <h1>Riset POD Typography</h1>
   <div class="pod-tabbar" role="tablist" aria-label="Tab dashboard">
     <button type="button" class="pod-tab-btn" role="tab" id="btn-poster" data-tab="tab-poster" aria-controls="tab-poster" aria-selected="true">Poster</button>
+    <button type="button" class="pod-tab-btn" role="tab" id="btn-setup" data-tab="tab-setup" aria-controls="tab-setup" aria-selected="false" tabindex="-1">Setup</button>
+    <button type="button" class="pod-tab-btn" role="tab" id="btn-workflow" data-tab="tab-workflow" aria-controls="tab-workflow" aria-selected="false" tabindex="-1">Workflow</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-prestasi" data-tab="tab-prestasi" aria-controls="tab-prestasi" aria-selected="false" tabindex="-1">Prestasi</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-utama" data-tab="tab-utama" aria-controls="tab-utama" aria-selected="false" tabindex="-1">Semua produk</button>
   </div>
@@ -498,6 +506,116 @@
       </table>
     </div>
   </details>
+</section>
+
+</section>
+
+<section id="tab-setup" class="pod-tab" role="tabpanel" aria-labelledby="btn-setup" hidden>
+
+<div id="st-intro" class="pod-section pod-first">
+  <p class="pod-lede"><b data-draw="st-done" data-source="setup_progress" data-field="done" data-row="0">—</b> daripada <b data-draw="st-total" data-source="setup_progress" data-field="total" data-row="0">—</b> langkah setup siap. Claude menyemak dan menanda setiap langkah; semakan terakhir <b data-draw="st-last" data-source="setup_progress" data-field="last_checked" data-row="0">—</b>.</p>
+  <div class="pod-progress" id="st-progress" aria-hidden="true"><div class="pod-progress-bar" data-draw="st-bar" data-source="setup_progress"></div></div>
+  <div class="pod-two">
+    <div>
+      <h3 id="st-tajuk-anda">Langkah seterusnya untuk anda</h3>
+      <ol class="pod-rules" id="st-next-user" data-draw="st-next-user" data-source="setup_checklist"></ol>
+    </div>
+    <div>
+      <h3 id="st-tajuk-claude">Claude akan buat seterusnya</h3>
+      <ol class="pod-rules" id="st-next-claude" data-draw="st-next-claude" data-source="setup_checklist"></ol>
+    </div>
+  </div>
+</div>
+
+<section id="st-senarai" class="pod-section">
+  <h2>Checklist ikut fasa</h2>
+  <p class="pod-muted">Status ditanda oleh Claude selepas menyemak. "Bersama" bermaksud Claude sediakan, anda klik atau tampal.</p>
+  <div class="pod-phases" id="st-phases" data-draw="st-phases" data-source="setup_checklist"></div>
+  <template id="tpl-st-phase">
+    <article class="pod-card pod-analysis">
+      <div class="pod-guide-head">
+        <h3 class="st-p-title"></h3>
+        <span class="pod-pill st-p-count"></span>
+      </div>
+      <div class="pod-table-wrap">
+        <table data-source="setup_checklist" data-row-key="id">
+          <thead><tr>
+            <th data-field="status">Status</th>
+            <th data-field="step">Langkah</th>
+            <th data-field="who">Siapa</th>
+            <th data-field="connect">Sambung</th>
+            <th data-field="result">Hasil semakan</th>
+          </tr></thead>
+          <tbody class="st-p-body"></tbody>
+        </table>
+      </div>
+    </article>
+  </template>
+  <details id="st-cara">
+    <summary>Cara Claude menyemak setiap langkah</summary>
+    <div class="pod-table-wrap pod-scroll">
+      <table id="st-table-cara" data-source="setup_checklist" data-row-key="id">
+        <thead><tr>
+          <th class="pod-num" data-field="no">#</th>
+          <th data-field="step">Langkah</th>
+          <th data-field="how_check">Cara semak</th>
+          <th data-field="checked_at">Disemak</th>
+        </tr></thead>
+        <tbody data-draw="st-cara-body"></tbody>
+      </table>
+    </div>
+  </details>
+</section>
+
+</section>
+
+<section id="tab-workflow" class="pod-tab" role="tabpanel" aria-labelledby="btn-workflow" hidden>
+
+<div id="wf-intro" class="pod-section pod-first">
+  <p class="pod-lede">Claude buat kerja berulang secara automatik; anda hanya luluskan dan semak. Automasi bermula selepas laman web, Printify dan Pinterest disambung (tab Setup).</p>
+  <div class="pod-kpis" id="wf-masa">
+    <div class="pod-kpi" id="wf-masa-harian">
+      <div class="pod-q">Masa anda sehari</div>
+      <div class="pod-big"><span data-draw="wf-t-h" data-source="workflow_time" data-field="user_min" data-where="frequency=Harian">—</span> min</div>
+    </div>
+    <div class="pod-kpi" id="wf-masa-mingguan">
+      <div class="pod-q">Masa anda seminggu (tambahan)</div>
+      <div class="pod-big"><span data-draw="wf-t-m" data-source="workflow_time" data-field="user_min" data-where="frequency=Mingguan">—</span> min</div>
+    </div>
+    <div class="pod-kpi" id="wf-masa-bulanan">
+      <div class="pod-q">Masa anda sebulan (tambahan)</div>
+      <div class="pod-big"><span data-draw="wf-t-b" data-source="workflow_time" data-field="user_min" data-where="frequency=Bulanan">—</span> min</div>
+    </div>
+  </div>
+  <nav class="pod-nav" aria-label="Bahagian workflow">
+    <a href="#wf-harian">Harian</a>
+    <a href="#wf-mingguan">Mingguan</a>
+    <a href="#wf-bulanan">Bulanan</a>
+  </nav>
+</div>
+
+<section id="wf-harian" class="pod-section">
+  <h2>Harian</h2>
+  <div class="pod-two">
+    <div><h3 id="wf-h-tajuk-anda">Anda</h3><ul class="pod-wf" data-draw="wf-h-anda" data-source="workflow"></ul></div>
+    <div><h3 id="wf-h-tajuk-claude">Claude (automatik)</h3><ul class="pod-wf" data-draw="wf-h-claude" data-source="workflow"></ul></div>
+  </div>
+</section>
+
+<section id="wf-mingguan" class="pod-section">
+  <h2>Mingguan</h2>
+  <div class="pod-two">
+    <div><h3 id="wf-m-tajuk-anda">Anda</h3><ul class="pod-wf" data-draw="wf-m-anda" data-source="workflow"></ul></div>
+    <div><h3 id="wf-m-tajuk-claude">Claude (automatik)</h3><ul class="pod-wf" data-draw="wf-m-claude" data-source="workflow"></ul></div>
+  </div>
+</section>
+
+<section id="wf-bulanan" class="pod-section">
+  <h2>Bulanan</h2>
+  <div class="pod-two">
+    <div><h3 id="wf-b-tajuk-anda">Anda</h3><ul class="pod-wf" data-draw="wf-b-anda" data-source="workflow"></ul></div>
+    <div><h3 id="wf-b-tajuk-claude">Claude (automatik)</h3><ul class="pod-wf" data-draw="wf-b-claude" data-source="workflow"></ul></div>
+  </div>
 </section>
 
 </section>
@@ -2021,5 +2139,112 @@ dash.draw('k-tools-body', (tb) => {
     const st = document.createElement('td'); st.appendChild(POD.pill(r.status, null, 'warn')); tr.appendChild(st);
     tb.appendChild(tr);
   });
+});
+
+POD.BULAN = ['Jan', 'Feb', 'Mac', 'Apr', 'Mei', 'Jun', 'Jul', 'Ogos', 'Sep', 'Okt', 'Nov', 'Dis'];
+POD.tarikh = (s) => { const d = d3.utcParse('%Y-%m-%d')(String(s || '')); return d ? d.getUTCDate() + ' ' + POD.BULAN[d.getUTCMonth()] + ' ' + d.getUTCFullYear() : '—'; };
+POD.stTone = { 'Siap': 'ok', 'Sedang': 'warn', 'Perlu keputusan anda': 'bad' };
+
+dash.calc('setup_progress', {
+  title: 'Kemajuan setup',
+  description: 'Bilangan langkah setup bertanda Siap berbanding jumlah langkah, dan tarikh semakan terakhir oleh Claude.',
+  inputs: ['setup_checklist'],
+  fn: (steps) => {
+    const done = steps.filter((s) => s.status === 'Siap').length;
+    const last = steps.map((s) => String(s.checked_at || '')).sort().pop() || '';
+    return [{ done, total: steps.length, pct: steps.length ? Math.round((done / steps.length) * 100) : 0, last_checked: last }];
+  }
+});
+
+dash.calc('workflow_time', {
+  title: 'Masa anda ikut kekerapan',
+  description: 'Jumlah minit tugas "Anda" dan bilangan tugas setiap pihak bagi harian, mingguan dan bulanan.',
+  inputs: ['workflow'],
+  fn: (tasks) => ['Harian', 'Mingguan', 'Bulanan'].map((f) => {
+    const t = tasks.filter((x) => x.frequency === f);
+    return { frequency: f, user_min: t.filter((x) => x.who === 'Anda').reduce((s, x) => s + Number(x.user_min || 0), 0), user_tasks: t.filter((x) => x.who === 'Anda').length, claude_tasks: t.filter((x) => x.who === 'Claude').length };
+  })
+});
+
+POD.text('st-done', 'setup_progress', (r) => r[0].done, POD.int);
+POD.text('st-total', 'setup_progress', (r) => r[0].total, POD.int);
+POD.text('st-last', 'setup_progress', (r) => r[0].last_checked, POD.tarikh);
+dash.draw('st-bar', (el) => {
+  const r = POD.ok('setup_progress');
+  el.style.width = (r && r.length ? Math.max(2, r[0].pct) : 0) + '%';
+  el.style.background = POD.color(0);
+});
+const wfMin = (f) => (rows) => (rows.find((r) => r.frequency === f) || {}).user_min;
+POD.text('wf-t-h', 'workflow_time', wfMin('Harian'), POD.int);
+POD.text('wf-t-m', 'workflow_time', wfMin('Mingguan'), POD.int);
+POD.text('wf-t-b', 'workflow_time', wfMin('Bulanan'), POD.int);
+
+POD.stNext = (ol, whoList) => {
+  const rows = POD.ok('setup_checklist'); ol.replaceChildren();
+  if (!rows) { const li = document.createElement('li'); li.className = 'pod-msg'; li.textContent = POD.statusMsg('setup_checklist'); ol.appendChild(li); return; }
+  const next = rows.filter((r) => r.status !== 'Siap' && whoList.includes(r.who)).sort((a, b) => (b.ready === true) - (a.ready === true) || Number(a.no) - Number(b.no)).slice(0, 4);
+  if (!next.length) { const li = document.createElement('li'); li.className = 'pod-msg'; li.textContent = 'Tiada langkah tertangguh.'; ol.appendChild(li); return; }
+  next.forEach((r) => {
+    const li = document.createElement('li');
+    const s = document.createElement('span'); s.textContent = r.step; s.dataset.source = 'setup_checklist'; s.dataset.field = 'step'; s.dataset.where = 'id=' + POD.enc(r.id);
+    li.appendChild(s);
+    if (r.status !== 'Belum') { li.append(' '); li.appendChild(POD.pill(r.status, null, POD.stTone[r.status])); }
+    else if (r.ready !== true) { const w = document.createElement('span'); w.className = 'pod-muted'; w.textContent = ' (menunggu langkah lain)'; li.appendChild(w); }
+    ol.appendChild(li);
+  });
+};
+dash.draw('st-next-user', (ol) => POD.stNext(ol, ['Anda', 'Bersama']));
+dash.draw('st-next-claude', (ol) => POD.stNext(ol, ['Claude']));
+
+dash.draw('st-phases', (box) => {
+  const rows = POD.ok('setup_checklist'); box.replaceChildren();
+  if (!rows) { const m = document.createElement('div'); m.className = 'pod-msg'; m.textContent = POD.statusMsg('setup_checklist'); box.appendChild(m); return; }
+  const tpl = document.getElementById('tpl-st-phase'); if (!tpl) return;
+  d3.groups(rows.slice().sort((a, b) => Number(a.no) - Number(b.no)), (r) => r.phase_no).forEach(([no, items]) => {
+    const node = tpl.content.cloneNode(true);
+    const art = node.querySelector('article'); if (art) art.id = 'st-fasa-' + no;
+    const t = node.querySelector('.st-p-title');
+    if (t) { t.textContent = 'Fasa ' + no + ' · ' + items[0].phase; t.dataset.source = 'setup_checklist'; t.dataset.field = 'phase'; t.dataset.where = 'phase_no=' + no; }
+    const done = items.filter((r) => r.status === 'Siap').length;
+    const c = node.querySelector('.st-p-count'); if (c) { c.textContent = done + ' / ' + items.length + ' siap'; if (done === items.length) c.dataset.tone = 'ok'; }
+    const tb = node.querySelector('.st-p-body');
+    items.forEach((r) => {
+      const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.id);
+      const st = document.createElement('td'); st.appendChild(POD.pill(r.status, null, POD.stTone[r.status])); tr.appendChild(st);
+      POD.cell(tr, r.step, 'pod-wide'); POD.cell(tr, r.who); POD.cell(tr, r.connect); POD.cell(tr, r.result, 'pod-wide');
+      if (tb) tb.appendChild(tr);
+    });
+    box.appendChild(node);
+  });
+});
+
+dash.draw('st-cara-body', (tb) => {
+  const rows = POD.ok('setup_checklist'); tb.replaceChildren();
+  if (!rows) { POD.emptyRow(tb, 4, POD.statusMsg('setup_checklist')); return; }
+  rows.slice().sort((a, b) => Number(a.no) - Number(b.no)).forEach((r) => {
+    const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.id);
+    POD.cell(tr, r.no, 'pod-num'); POD.cell(tr, r.step, 'pod-wide'); POD.cell(tr, r.how_check, 'pod-wide'); POD.cell(tr, POD.tarikh(r.checked_at));
+    tb.appendChild(tr);
+  });
+});
+
+POD.wfList = (ul, freq, who) => {
+  const rows = POD.ok('workflow'); ul.replaceChildren();
+  if (!rows) { const li = document.createElement('li'); li.className = 'pod-msg'; li.textContent = POD.statusMsg('workflow'); ul.appendChild(li); return; }
+  rows.filter((r) => r.frequency === freq && r.who === who).forEach((r) => {
+    const where = 'id=' + POD.enc(r.id);
+    const li = document.createElement('li');
+    const t = document.createElement('span'); t.textContent = r.task; t.dataset.source = 'workflow'; t.dataset.field = 'task'; t.dataset.where = where;
+    const meta = document.createElement('span'); meta.className = 'pod-muted pod-wf-meta';
+    if (who === 'Anda') {
+      const m = document.createElement('span'); m.textContent = String(r.user_min); m.dataset.source = 'workflow'; m.dataset.field = 'user_min'; m.dataset.where = where;
+      meta.append(m, ' min · ' + r.tool);
+    } else meta.textContent = r.tool;
+    li.append(t, meta); ul.appendChild(li);
+  });
+};
+[['h', 'Harian'], ['m', 'Mingguan'], ['b', 'Bulanan']].forEach(([k, f]) => {
+  dash.draw('wf-' + k + '-anda', (ul) => POD.wfList(ul, f, 'Anda'));
+  dash.draw('wf-' + k + '-claude', (ul) => POD.wfList(ul, f, 'Claude'));
 });
 </script>

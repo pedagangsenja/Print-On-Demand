@@ -1,0 +1,23 @@
+[
+{"id": "w01", "frequency": "Harian", "freq_no": 1, "who": "Claude", "task": "Jana 8–10 design poster baru dari senarai frasa", "user_min": 0, "tool": "Skrip design"},
+{"id": "w02", "frequency": "Harian", "freq_no": 1, "who": "Claude", "task": "Semak trademark frasa baru", "user_min": 0, "tool": "USPTO"},
+{"id": "w03", "frequency": "Harian", "freq_no": 1, "who": "Claude", "task": "Jana mockup bilik dan pin untuk produk baru", "user_min": 0, "tool": "Skrip mockup"},
+{"id": "w04", "frequency": "Harian", "freq_no": 1, "who": "Claude", "task": "Upload produk baru ke Printify / WooCommerce sebagai draf", "user_min": 0, "tool": "Printify API"},
+{"id": "w05", "frequency": "Harian", "freq_no": 1, "who": "Claude", "task": "Jadualkan 10 pin (1 URL setiap 7 hari, tag UTM)", "user_min": 0, "tool": "Pinterest API"},
+{"id": "w06", "frequency": "Harian", "freq_no": 1, "who": "Claude", "task": "Semak pesanan dan masalah Printify; beritahu jika ada isu", "user_min": 0, "tool": "Printify"},
+{"id": "w07", "frequency": "Harian", "freq_no": 1, "who": "Anda", "task": "Luluskan design, produk dan pin hari ini", "user_min": 15, "tool": "Dashboard / chat"},
+{"id": "w08", "frequency": "Harian", "freq_no": 1, "who": "Anda", "task": "Jawab emel pelanggan", "user_min": 10, "tool": "Emel"},
+{"id": "w09", "frequency": "Mingguan", "freq_no": 2, "who": "Claude", "task": "Laporan prestasi mingguan ke tab Prestasi (Pinterest, GA4, WooCommerce)", "user_min": 0, "tool": "Dashboard"},
+{"id": "w10", "frequency": "Mingguan", "freq_no": 2, "who": "Claude", "task": "Cari pin dan produk yang menang; jana variasi baru", "user_min": 0, "tool": "Pinterest Analytics"},
+{"id": "w11", "frequency": "Mingguan", "freq_no": 2, "who": "Claude", "task": "Cadang 3–5 tindakan untuk peringkat corong paling lemah", "user_min": 0, "tool": "Dashboard"},
+{"id": "w12", "frequency": "Mingguan", "freq_no": 2, "who": "Claude", "task": "Semak kelajuan laman dan tetapan Cloudflare", "user_min": 0, "tool": "PageSpeed, Cloudflare"},
+{"id": "w13", "frequency": "Mingguan", "freq_no": 2, "who": "Anda", "task": "Baca laporan dan pilih tindakan", "user_min": 15, "tool": "Dashboard"},
+{"id": "w14", "frequency": "Mingguan", "freq_no": 2, "who": "Anda", "task": "Semak 10 produk di telefon (gambar, harga, checkout)", "user_min": 15, "tool": "Laman web"},
+{"id": "w15", "frequency": "Bulanan", "freq_no": 3, "who": "Claude", "task": "Banding jualan dengan milestone; kemas kini ramalan", "user_min": 0, "tool": "Dashboard"},
+{"id": "w16", "frequency": "Bulanan", "freq_no": 3, "who": "Claude", "task": "Rancang tema musim 45–90 hari ke depan (kata kunci, board, design)", "user_min": 0, "tool": "Pinterest Trends"},
+{"id": "w17", "frequency": "Bulanan", "freq_no": 3, "who": "Claude", "task": "Arkibkan produk tanpa paparan selepas 90 hari", "user_min": 0, "tool": "WooCommerce"},
+{"id": "w18", "frequency": "Bulanan", "freq_no": 3, "who": "Claude", "task": "Semak kemas kini plugin, backup dan kos", "user_min": 0, "tool": "WordPress"},
+{"id": "w19", "frequency": "Bulanan", "freq_no": 3, "who": "Anda", "task": "Order 1–2 sampel produk baru untuk semak kualiti", "user_min": 15, "tool": "Printify"},
+{"id": "w20", "frequency": "Bulanan", "freq_no": 3, "who": "Anda", "task": "Semak bayaran Stripe/PayPal dan kos (hosting, sampel)", "user_min": 15, "tool": "Stripe, PayPal"},
+{"id": "w21", "frequency": "Bulanan", "freq_no": 3, "who": "Anda", "task": "Luluskan tema musim seterusnya", "user_min": 10, "tool": "Chat"}
+]
