@@ -1,0 +1,181 @@
+{
+  "stage": 5,
+  "title": "Persona & target buyer",
+  "updated": "2026-11-21",
+  "platform_audience": [
+    {"claim": "~70% pengguna Pinterest wanita", "source": "https://www.charleagency.com/articles/pinterest-statistics/", "level": "pihak_ketiga"},
+    {"claim": "Pew 2023: 41% isi rumah $100k+ guna Pinterest vs 27% bawah $30k", "source": "https://branvas.com/blogs/news/pinterest-shopping-statistics-jewelry", "level": "pihak_ketiga"},
+    {"claim": "Kadar pembeli ulangan brand POD yang berjaya ~10%", "source": "https://podvector.ai/articles/profit-analytics/benchmarks/what-is-a-good-repeat-customer-rate", "level": "lemah"}
+  ],
+  "personas": [
+    {
+      "id": "bride",
+      "name": "Pengantin & ketua bridal party",
+      "niche": "bridal",
+      "who": "Wanita 24-34, bertunang, merancang di Pinterest",
+      "market_size": [
+        {"claim": "~2,011,044 perkahwinan di US pada 2025", "source": "https://wedding.report/index.cfm/action/wedding_statistics/view/market/", "level": "pihak_ketiga"},
+        {"claim": "77% pasangan guna Pinterest untuk inspirasi (83% Gen Z)", "source": "https://www.zola.com/expert-advice/social-media-wedding-inspiration", "level": "pihak_ketiga"}
+      ],
+      "spend": [
+        {"claim": "Purata kos menjadi bridesmaid $1,324 setiap majlis; shower + bachelorette ~40% (~$500)", "source": "https://www.cbsnews.com/news/the-ever-escalating-bill-for-being-a-bridesmaid", "level": "pihak_ketiga"},
+        {"claim": "Hadiah bridesmaid untuk majlis kahwin ~$170 (data The Knot lama)", "source": "https://www.theknot.com/content/average-bridesmaid-dress-cost", "level": "pihak_ketiga"}
+      ],
+      "frequency": "Sekali setiap perkahwinan; bridesmaid kemudian menjadi pengantin (rujukan)",
+      "when": "Proposal Dis-Mac (19% lamaran pada Disember); set bridal party 1-3 bulan sebelum majlis (anggaran); 76% majlis Mei-Okt",
+      "how": "BULK: 1 pesanan untuk 4-8 orang (purata party 8, 4 setiap pihak)",
+      "products": ["Set sweatshirt/tee bridal", "tote", "tumbler", "stickers kotak proposal"],
+      "emotion": "Rasa sekumpulan, kenangan, penghargaan kepada kawan"
+    },
+    {
+      "id": "teacher",
+      "name": "Cikgu",
+      "niche": "teacher",
+      "who": "Cikgu sekolah rendah/menengah, kebanyakan wanita, aktif di Pinterest untuk idea kelas",
+      "market_size": [
+        {"claim": "~3.19 juta cikgu sekolah awam (unjuran musim luruh 2026)", "source": "https://www.edweek.org/ew/issues/education-statistics/index.html", "level": "rasmi"},
+        {"claim": "~483,000 cikgu sekolah swasta (2021-22)", "source": "https://www.ed.gov/birth-grade-12-education/school-choice/school-choice-education-statistics", "level": "rasmi"}
+      ],
+      "spend": [
+        {"claim": "Purata $600 duit sendiri untuk kelas (tahun 2025-26; 2,501 cikgu)", "source": "https://www.edweek.org/leadership/see-the-school-supplies-teachers-buy-for-students/2026/08", "level": "rasmi"},
+        {"claim": "Purata ~$895 (AdoptAClassroom, tahun survei tidak jelas)", "source": "https://www.adoptaclassroom.org/2025/06/09/2025-teacher-survey-spending-stats-classroom-needs/", "level": "pihak_ketiga"},
+        {"claim": "95% cikgu sekolah awam guna duit sendiri untuk bekalan kelas", "source": "https://www.edweek.org/teaching-learning/most-teachers-spend-their-own-money-on-school-supplies-should-they/2023/08", "level": "rasmi"}
+      ],
+      "frequency": "Setiap tahun persekolahan (refresh kelas) + pembelian pertengahan tahun",
+      "when": "Jul-Ogos (back-to-school), Januari (semester baru)",
+      "how": "SET: bundle poster kelas (6-12), printable digital; apparel satu-satu",
+      "products": ["Bundle printable kelas", "set poster matte", "tote", "tumbler", "tee"],
+      "emotion": "Bangga dengan kerjaya, lucu, inspirasi pelajar"
+    },
+    {
+      "id": "parent_teacher_gift",
+      "name": "Ibu bapa pemberi hadiah cikgu",
+      "niche": "teacher",
+      "who": "Ibu (kebanyakan) yang membeli hadiah untuk cikgu anak",
+      "market_size": [
+        {"claim": "'teacher gift' ~60,500 carian/bulan, puncak Disember", "source": "https://www.rankhero.com/keywords/teacher-gift", "level": "pihak_ketiga"}
+      ],
+      "spend": [
+        {"claim": "Julat paling biasa $10-20 setiap hadiah (52%); 26% lebih $20 (poll, tarikh tidak dinyatakan)", "source": "https://blog.timesunion.com/savings/?p=12197", "level": "lemah"}
+      ],
+      "frequency": "2-3 kali setahun (Krismas, Teacher Appreciation, hujung tahun)",
+      "when": "Dis; awal Mei (Teacher Appreciation Week, inferens); Mei-Jun (hujung tahun)",
+      "how": "SATU-SATU; kadang-kadang hadiah kumpulan kelas",
+      "products": ["Mug", "tote", "tumbler", "poster kecil"],
+      "emotion": "Terima kasih, penghargaan"
+    },
+    {
+      "id": "new_mom",
+      "name": "Ibu baru / bakal ibu (nursery)",
+      "niche": "nursery",
+      "who": "Wanita 25-38, menyediakan nursery; juga pemberi hadiah baby shower",
+      "market_size": [
+        {"claim": "3,606,400 kelahiran di US pada 2025 (provisional)", "source": "https://cdc.gov/nchs/pressroom/releases/20260409.html", "level": "rasmi"}
+      ],
+      "spend": [],
+      "frequency": "Sekali setiap anak (set nursery) + hadiah baby shower",
+      "when": "Sepanjang tahun; minat nursery wall art memuncak April",
+      "how": "SET (2-3 poster sepadan) atau satu poster utama",
+      "products": ["Poster matte", "poster berbingkai", "canvas", "printable", "velveteen blanket"],
+      "emotion": "Kasih sayang, harapan"
+    },
+    {
+      "id": "mom_gifter",
+      "name": "Pemberi hadiah untuk ibu",
+      "niche": "mama",
+      "who": "Anak dewasa / pasangan membeli hadiah untuk ibu",
+      "market_size": [
+        {"claim": "84% orang dewasa US raikan Mother's Day; jumlah belanja rekod $38 bilion (2026)", "source": "https://nrf.com/media-center/press-releases/mother-s-day-spending-expected-to-hit-record-38-billion", "level": "rasmi"}
+      ],
+      "spend": [
+        {"claim": "Purata $284.25 setiap orang (Mother's Day 2026); lelaki $346, wanita $225", "source": "https://nrf.com/blog/2026-mothers-day-shopping-plans", "level": "rasmi"}
+      ],
+      "frequency": "2-3 kali setahun (Mother's Day, hari jadi, Krismas)",
+      "when": "Carian 'mothers day' melonjak ~1 minggu sebelum; carian hadiah umum lebih awal; Mother's Day 2027 = 9 Mei",
+      "how": "SATU-SATU",
+      "products": ["Mug", "poster berbingkai", "velveteen blanket", "tote", "sweatshirt"],
+      "emotion": "Kasih sayang, terima kasih"
+    },
+    {
+      "id": "home_decorator",
+      "name": "Peminat hiasan rumah (tanda lucu, ikut bilik)",
+      "niche": "funny_home",
+      "who": "Wanita pemilik/penyewa rumah, suka humor dan estetik",
+      "market_size": [
+        {"claim": "'funny bathroom sign' ~8,100 carian/bulan; 'bathroom sign' ~22,200", "source": "https://www.rankhero.com/keywords/funny-bathroom-sign", "level": "pihak_ketiga"}
+      ],
+      "spend": [],
+      "frequency_evidence": [
+        {"claim": "UK: 25% refresh rumah setiap tahun, 18% setiap 6 bulan", "source": "https://www.featherandblack.com/inspiration/how-often-the-uk-redecorates", "level": "pihak_ketiga"},
+        {"claim": "US 2017: 49% Baby Boomer beli wall art dalam 12 bulan lepas", "source": "https://statista.com/statistics/764304/wall-art-purchase-by-american-households-in-the-last-twelve-months-by-generation", "level": "pihak_ketiga"},
+        {"claim": "US 2016: 79% tidak membeli seni untuk rumah dalam setahun", "source": "https://statista.com/statistics/582502/adults-who-have-purchased-art-for-their-home-us", "level": "pihak_ketiga"}
+      ],
+      "frequency": "~1 kali setahun bagi peminat hiasan aktif (data lama/UK)",
+      "when": "Jan-Apr (refresh), Q4 (hadiah rumah baru)",
+      "how": "SET 3 (gallery wall) atau satu-satu",
+      "products": ["Set 3 poster", "poster matte", "printable", "poster berbingkai", "mug dapur"],
+      "emotion": "Humor, 'itu aku sangat', estetik"
+    },
+    {
+      "id": "friend_gifter",
+      "name": "Pemberi hadiah kawan (Galentine)",
+      "niche": "friendship",
+      "who": "Wanita muda (Gen Z/millennial) membeli untuk kumpulan kawan",
+      "market_size": [
+        {"claim": "33% pengguna merancang hadiah untuk kawan pada Valentine 2026 ($2.4 bilion)", "source": "https://nrf.com/media-center/press-releases/valentine-s-day-spending-expected-to-reach-new-records", "level": "rasmi"},
+        {"claim": "Carian hadiah personalisasi untuk kawan +1,400% (Etsy F/W 2026)", "source": "https://community.etsy.com/forum/etsy-success-300/topic/etsy-insights-etsy-trend-edit-fallwinter-26-190171/", "level": "rasmi"}
+      ],
+      "spend": [
+        {"claim": "Purata belanja Valentine $199.78 setiap orang (2026)", "source": "https://nrf.com/research-insights/holiday-data-and-trends/valentines-day", "level": "rasmi"}
+      ],
+      "frequency": "1-2 kali setahun (Galentine, Friendsmas, hari jadi)",
+      "when": "Akhir Jan - 13 Feb; Disember",
+      "how": "BEBERAPA ITEM kecil untuk kumpulan kawan",
+      "products": ["Mug", "tumbler", "stickers", "tee"],
+      "emotion": "Persahabatan, lucu, rasa sekumpulan"
+    },
+    {
+      "id": "holiday_shopper",
+      "name": "Pembeli hadiah Krismas",
+      "niche": "christmas",
+      "who": "Semua umur; wanita merancang hadiah keluarga",
+      "market_size": [
+        {"claim": "Jualan runcit Nov-Dis 2026 diunjur $1.013 trilion (+4.2%)", "source": "https://nrf.com/media-center/press-releases/nrf-forecasts-2026-holiday-sales-growth-as-consumers-remain-resilient", "level": "rasmi"}
+      ],
+      "spend": [
+        {"claim": "Purata $890.49 setiap orang untuk hadiah, makanan dan hiasan (2025)", "source": "https://www.axios.com/2025/11/06/holiday-sales-2025-nrf-forecast-trillion-dollar", "level": "rasmi"}
+      ],
+      "frequency": "Sekali setahun, beberapa hadiah",
+      "when": "Okt-Dis (pin Jul-Sep); cutoff shipping pertengahan Dis",
+      "how": "BEBERAPA HADIAH setiap pesanan",
+      "products": ["Sweatshirt", "mug", "velveteen blanket", "poster"],
+      "emotion": "Kehangatan keluarga, nostalgia"
+    },
+    {
+      "id": "reader",
+      "name": "Pencinta buku",
+      "niche": "bookish",
+      "who": "Wanita 20-40, BookTok/Bookstagram, suka trope (romantasy dll.)",
+      "market_size": [
+        {"claim": "'bookish' ~135,000 carian/bulan (istilah luas)", "source": "https://www.rankhero.com/keywords/bookish", "level": "pihak_ketiga"},
+        {"claim": "Carian 'book totes' +148% (data Faire)", "source": "https://www.somethingdifferentwholesale.com/uk/blog/book-gift-trend/", "level": "lemah"}
+      ],
+      "spend": [],
+      "frequency": "Tidak diketahui (tiada data); beli untuk diri sendiri + hadiah Q4",
+      "when": "Sepanjang tahun; naik Q4",
+      "how": "SATU-SATU",
+      "products": ["Tote", "sweatshirt", "stickers", "poster reading nook", "SVG"],
+      "emotion": "Identiti, inside joke trope"
+    }
+  ],
+  "bulk_vs_single": {
+    "bulk": ["bride (4-8 item)", "teacher (set 6-12)", "friend_gifter (beberapa item kecil)", "holiday_shopper (beberapa hadiah)"],
+    "set_or_single": ["new_mom", "home_decorator"],
+    "single": ["parent_teacher_gift", "mom_gifter", "reader"]
+  },
+  "gaps": [
+    "Tiada data kekerapan beli khusus untuk wall art di US yang terkini (data 2016-2017 / UK).",
+    "Tiada data belanja khusus pencinta buku dan ibu baru untuk hiasan nursery.",
+    "Tarikh Teacher Appreciation Week 2027 belum disahkan."
+  ]
+}
