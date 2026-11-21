@@ -1,0 +1,326 @@
+{
+  "stage": "P3",
+  "title": "Gaya design & pin wall art",
+  "updated": "2026-11-21",
+  "font_note": "Fon ialah cadangan keluarga Google Fonts berlesen SIL OFL; sahkan lesen setiap fon sebelum digunakan (termasuk untuk jualan fail digital).",
+  "pin_rules": [
+    {
+      "rule": "Pin imej membawa lebih banyak klik keluar berbanding pin video (kajian home decor Pinterest, Ogos 2026)",
+      "source": "https://create.pinterest.com/blog/home-decor-content-ideas-examples/",
+      "level": "rasmi"
+    },
+    {
+      "rule": "Pin yang menunjukkan gaya keseluruhan bilik lebih kerap dalam kandungan engagement tinggi berbanding close-up satu item",
+      "source": "https://create.pinterest.com/blog/home-decor-content-ideas-examples/",
+      "level": "rasmi"
+    },
+    {
+      "rule": "Teks overlay: namakan bilik, projek atau hasil dalam beberapa perkataan",
+      "source": "https://create.pinterest.com/blog/home-decor-content-ideas-examples/",
+      "level": "rasmi"
+    },
+    {
+      "rule": "Deskripsi lebih informatif cenderung dapat lebih banyak klik",
+      "source": "https://create.pinterest.com/blog/home-decor-content-ideas-examples/",
+      "level": "rasmi"
+    },
+    {
+      "rule": "Pin wall art sebagai 'Home Decor' (cth. 'Art for a Scandinavian living room'), bukan sebagai 'Art'",
+      "source": "https://www.wildlifeartstore.com/selling-art-on-pinterest/",
+      "level": "lemah"
+    },
+    {
+      "rule": "Typography kini staple wall art: quote berani, type minimal, mesej peribadi",
+      "source": "https://www.hakyarts.com/blogs/general/top-wall-art-poster-trends-to-watch-in-2026",
+      "level": "pihak_ketiga"
+    },
+    {
+      "rule": "Poster teks lebih 'deliberate': serif elegan dan ruang lapang",
+      "source": "https://posterscape.com/blogs/wall-decor/poster-trends-the-must-have-decorative-wall-art-styles",
+      "level": "pihak_ketiga"
+    },
+    {
+      "rule": "Fon tulisan tangan dan estetik analog berterusan ke 2026; arah ke typography berani dan playful, bukan minimal semata-mata",
+      "source": "https://wix.com/wixel/resources/typography-trends",
+      "level": "pihak_ketiga"
+    },
+    {
+      "rule": "Quote 'kitchen' generik dengan fon klise semakin tidak digemari",
+      "source": "https://aboutwallart.com/blogs/news-articles-home-decor-inspiration/kitchen-wall-art-expert-interior-design-tips-trends-2026",
+      "level": "pihak_ketiga"
+    },
+    {
+      "rule": "Kertas tanpa bingkai melengkung dalam kelembapan bilik air dalam beberapa minggu; bingkai/akrilik lebih selamat",
+      "source": "https://www.gelato.com/au/blog/bathroom-wall-art-ideas",
+      "level": "pihak_ketiga"
+    }
+  ],
+  "pin_templates_wallart": [
+    {
+      "id": "W1",
+      "template": "Mockup bilik penuh + overlay nama bilik",
+      "share_pct": 40
+    },
+    {
+      "id": "W2",
+      "template": "Gallery wall / set 3 dalam bilik",
+      "share_pct": 20
+    },
+    {
+      "id": "W3",
+      "template": "Close-up typography + tekstur kertas/bingkai",
+      "share_pct": 15
+    },
+    {
+      "id": "W4",
+      "template": "Kolaj pilihan warna/saiz",
+      "share_pct": 10
+    },
+    {
+      "id": "W5",
+      "template": "Video pendek (zoom ke bilik)",
+      "share_pct": 15
+    }
+  ],
+  "styles": [
+    {
+      "niche_id": "classroom",
+      "style": "Retro berwarna atau boho neutral; set bertema",
+      "palette": "Pastel (hijau, biru lembut) atau neutral + aksen retro",
+      "fonts": "Rounded/playful: Fredoka, Baloo 2; retro: Shrikhand",
+      "phrases": "Peraturan kelas, growth mindset, sambutan",
+      "mockup": "Dinding kelas dengan set 6-12 poster",
+      "format": "Set poster matte + bundle printable",
+      "pin_overlay": "Retro Classroom Decor Set of 12",
+      "evidence": [
+        {
+          "claim": "Kelas pastel antara trend dekor terbesar 2026; neutral kekal digemari",
+          "source": "https://missjacobslittlelearners.com/blogs/blog/2026-classroom-decor-trends",
+          "level": "pihak_ketiga"
+        },
+        {
+          "claim": "Bilik darjah retro berwarna lawan minimalis",
+          "source": "https://www.twinkl.com/blog/back-to-school-2025-classroom-decor-ideas",
+          "level": "pihak_ketiga"
+        }
+      ]
+    },
+    {
+      "niche_id": "counselor",
+      "style": "Lembut, tenang, botanikal; ikon perasaan ringkas",
+      "palette": "Hijau sage, biru lembut, krim",
+      "fonts": "Rounded sans: Nunito, Quicksand",
+      "phrases": "Kemahiran tenang, afirmasi, carta perasaan",
+      "mockup": "Sudut calm corner dengan bantal & tumbuhan",
+      "format": "Bundle printable + set poster",
+      "pin_overlay": "Calm Corner Posters Set",
+      "evidence": [
+        {
+          "claim": "Sempadan botanikal memberi rasa tenang dan neutral yang tidak mengganggu deria",
+          "source": "https://www.twinkl.com/resource/pampas-grass-boho-neutral-editable-poster-t-ag-1688820834",
+          "level": "pihak_ketiga"
+        }
+      ]
+    },
+    {
+      "niche_id": "bathroom",
+      "style": "Vintage / Art Deco + humor; set 3",
+      "palette": "Hitam-putih, hijau jade, aksen emas",
+      "fonts": "Art Deco: Poiret One, Limelight; serif klasik: Playfair Display",
+      "phrases": "Tanda lucu bilik air",
+      "mockup": "Dinding atas tandas / tepi cermin",
+      "format": "Poster berbingkai (tahan lembap) + set 3",
+      "pin_overlay": "Funny Bathroom Wall Art Set of 3",
+      "evidence": [
+        {
+          "claim": "Gaya vintage untuk bilik air berkarakter (2026)",
+          "source": "https://mixtiles.com/blog/wall-art-home-decor/trending-bathroom-home-decors-ideas",
+          "level": "pihak_ketiga"
+        },
+        {
+          "claim": "Penjual Etsy gabung humor dengan Art Deco/maximalist",
+          "source": "https://www.etsy.com/listing/1161346307",
+          "level": "rasmi"
+        }
+      ]
+    },
+    {
+      "niche_id": "kitchen",
+      "style": "Retro bistro / gaya 'menu'; elak quote klise",
+      "palette": "Krim, merah tomato, hijau zaitun",
+      "fonts": "Retro serif: Fraunces; slab vintage: Alfa Slab One",
+      "phrases": "Menu kopi, quote dapur lucu, hidangan keluarga",
+      "mockup": "Coffee bar atau dinding dapur",
+      "format": "Poster matte / berbingkai, set 2-3",
+      "pin_overlay": "Retro Coffee Bar Sign Print",
+      "evidence": [
+        {
+          "claim": "Kitchen 2026: tekstur, warna, nostalgia; papan gaya menu",
+          "source": "https://aboutwallart.com/blogs/news-articles-home-decor-inspiration/kitchen-wall-art-expert-interior-design-tips-trends-2026",
+          "level": "pihak_ketiga"
+        },
+        {
+          "claim": "Gaya bistro Paris vintage dalam gallery wall dapur",
+          "source": "https://www.homesandgardens.com/celebrity-homes/ina-garten-kitchen-wall-art",
+          "level": "pihak_ketiga"
+        }
+      ]
+    },
+    {
+      "niche_id": "home_office",
+      "style": "Neo Deco / luxe office; motivasi elegan",
+      "palette": "Hijau emerald, biru safir, burgundy + emas/brass",
+      "fonts": "Art Deco: Poiret One; serif mewah: Cormorant Garamond",
+      "phrases": "Motivasi kerja, humor pejabat",
+      "mockup": "Meja kerja / cubicle dengan aksesori brass",
+      "format": "Poster berbingkai, poster matte kecil",
+      "pin_overlay": "Chic Cubicle Decor Print",
+      "evidence": [
+        {
+          "claim": "Pinterest Fall 2025: Art Deco Revival & Chic Cubicle Decor; palet jewel tone + brass",
+          "source": "https://www.aol.com/articles/pinterest-predicts-biggest-interior-design-211700524.html",
+          "level": "rasmi"
+        }
+      ]
+    },
+    {
+      "niche_id": "reading_nook",
+      "style": "Poetcore / akademik vintage; ikut trope buku",
+      "palette": "Coklat, hijau gelap, krim kertas lama",
+      "fonts": "Serif klasik: Cormorant Garamond, EB Garamond",
+      "phrases": "Quote buku, trope romantasy, 'just one more chapter'",
+      "mockup": "Sudut membaca dengan rak buku & lampu",
+      "format": "Poster matte, set 2-3, printable",
+      "pin_overlay": "Reading Nook Wall Art Print",
+      "evidence": [
+        {
+          "claim": "Estetik poetcore 2026",
+          "source": "https://dynamicmockups.com/trends/poetcore-mockups-2026-aesthetic/",
+          "level": "pihak_ketiga"
+        },
+        {
+          "claim": "Design ikut trope lebih laku",
+          "source": "https://printify.com/knowledge-hub/booktok-trope-merch-2026-playbook-high-margin-print-on-demand-profit/",
+          "level": "pihak_ketiga"
+        }
+      ]
+    },
+    {
+      "niche_id": "bedroom",
+      "style": "Script romantik / serif elegan, ruang lapang",
+      "palette": "Neutral hangat, plum gelap (Plum Noir)",
+      "fonts": "Script: Dancing Script, Great Vibes; serif: Playfair Display",
+      "phrases": "Quote cinta, tidur, pasangan",
+      "mockup": "Dinding atas kepala katil (penempatan paling dicari)",
+      "format": "Set 2 berbingkai / canvas",
+      "pin_overlay": "Above Bed Wall Art Set of 2",
+      "evidence": [
+        {
+          "claim": "Dinding atas kepala katil = penempatan bilik tidur paling dicari",
+          "source": "https://www.gelato.com/ja/blog/wall-decor-by-room-guide",
+          "level": "pihak_ketiga"
+        },
+        {
+          "claim": "Plum Noir antara warna Pinterest 2026",
+          "source": "https://www.homesandgardens.com/interior-design/pinterest-palette-2026",
+          "level": "rasmi"
+        }
+      ]
+    },
+    {
+      "niche_id": "living_room",
+      "style": "Typography besar minimal atau dalam bingkai hiasan; gabung abstrak",
+      "palette": "Cool Blue, Jade, neutral",
+      "fonts": "Serif besar: Fraunces; sans bersih: Montserrat",
+      "phrases": "Quote keluarga, rumah, 'gather'",
+      "mockup": "Ruang tamu penuh (gaya bilik keseluruhan)",
+      "format": "Canvas / berbingkai besar, set gallery wall",
+      "pin_overlay": "Living Room Gallery Wall Set",
+      "evidence": [
+        {
+          "claim": "Cool Blue +85% minat (Pinterest 2026)",
+          "source": "https://www.homesandgardens.com/interior-design/pinterest-palette-2026",
+          "level": "rasmi"
+        },
+        {
+          "claim": "Tema ruang tamu didominasi foto/landskap/abstrak",
+          "source": "https://www.lowes.com/n/buying-guide/wall-art-decor-buying-guide",
+          "level": "pihak_ketiga"
+        }
+      ]
+    },
+    {
+      "niche_id": "nursery",
+      "style": "Boho neutral atau circus/Funhaus",
+      "palette": "Oat, krim, sage; atau merah-krim circus",
+      "fonts": "Script lembut: Caveat; rounded: Fredoka",
+      "phrases": "Afirmasi bayi, nama (fasa 2), ayat iman",
+      "mockup": "Nursery neutral dengan satu poster berbingkai",
+      "format": "Poster berbingkai, canvas, set 3",
+      "pin_overlay": "Neutral Nursery Wall Art Print",
+      "evidence": [
+        {
+          "claim": "Gender-neutral boho: oat, cream, tan, sage",
+          "source": "https://www.nestig.com/blogs/get-inspired/the-nursery-and-kids-room-trends-designers-are-backing-in-2026",
+          "level": "pihak_ketiga"
+        },
+        {
+          "claim": "'circus nursery' +50% (Pinterest)",
+          "source": "https://www.aol.com/articles/pinterests-2026-interior-design-trends-171800656.html",
+          "level": "rasmi"
+        }
+      ]
+    },
+    {
+      "niche_id": "laundry",
+      "style": "Tanda vintage / farmhouse, ikon ringkas",
+      "palette": "Biru pudar, krim, hitam",
+      "fonts": "Vintage sign: Rye, Alfa Slab One",
+      "phrases": "Humor dobi, arah zon",
+      "mockup": "Rak dobi kecil",
+      "format": "Poster matte, set 2",
+      "pin_overlay": "Vintage Laundry Room Sign",
+      "evidence": [
+        {
+          "claim": "Trend 'design moment' kecil di bilik dobi; tanda minimalis/ikon",
+          "source": "https://www.coohom.com/article/laundry-room-sign-ideas-5-creative-options",
+          "level": "pihak_ketiga"
+        }
+      ]
+    },
+    {
+      "niche_id": "seasonal_xmas",
+      "style": "Vintage, neutral atau gothic Victorian",
+      "palette": "Merah gelap, hijau pine, krim",
+      "fonts": "Serif vintage: Playfair Display; script: Great Vibes",
+      "phrases": "Ucapan Krismas, lagu, nostalgia",
+      "mockup": "Mantel / dinding ruang tamu berhias",
+      "format": "Printable + poster matte",
+      "pin_overlay": "Vintage Christmas Wall Art Printable",
+      "evidence": [
+        {
+          "claim": "Printable Krismas vintage, neutral, gothic antara yang tersenarai di Etsy ($2-3)",
+          "source": "https://www.etsy.com/listing/1343560341",
+          "level": "rasmi"
+        }
+      ]
+    },
+    {
+      "niche_id": "home_gym",
+      "style": "Bold condensed, motivasi; tahan lembap",
+      "palette": "Hitam, kelabu, satu warna terang",
+      "fonts": "Condensed: Bebas Neue, Oswald",
+      "phrases": "Motivasi latihan",
+      "mockup": "Dinding gym rumah",
+      "format": "Poster laminasi/berbingkai, set 3-5",
+      "pin_overlay": "Home Gym Motivation Poster Set",
+      "evidence": [
+        {
+          "claim": "Prints kalis air/akrilik/laminasi sesuai gym lembap",
+          "source": "https://www.wallpics.com/blogs/news/transform-your-workout-space-home-gym-wall-art-trends",
+          "level": "pihak_ketiga"
+        }
+      ]
+    }
+  ]
+}
