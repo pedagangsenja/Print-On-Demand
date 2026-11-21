@@ -1,0 +1,3292 @@
+{
+  "niches": {
+    "stage": 1,
+    "title": "Top niche (typography + pembeli Pinterest)",
+    "updated": "2026-11-21",
+    "scoring": {
+      "scale": "1-5 (5 = terbaik)",
+      "criteria": {
+        "demand": "Bukti permintaan (volum carian / ranking / laporan)",
+        "competition": "Tahap saingan (5 = kurang sesak)",
+        "typography_fit": "Sesuai design typography sahaja",
+        "pinterest_fit": "Padan dengan pembeli Pinterest (wanita, merancang)",
+        "order_value": "Nilai pesanan / potensi bulk",
+        "automation": "Mudah diautomasi tanpa personalisasi"
+      },
+      "note": "Skor ialah penilaian Claude berdasarkan bukti di bawah; bukan data rasmi."
+    },
+    "verification_levels": {
+      "rasmi": "Data platform / organisasi utama (Etsy, Pinterest, The Knot, eRank laporan sendiri)",
+      "pihak_ketiga": "Tool kata kunci / blog vendor / media; belum disahkan silang",
+      "lemah": "Satu sumber, tiada metodologi"
+    },
+    "niches": [
+      {
+        "id": "bridal",
+        "name": "Bridal party & bachelorette",
+        "scores": {
+          "demand": 4,
+          "competition": 3,
+          "typography_fit": 5,
+          "pinterest_fit": 5,
+          "order_value": 5,
+          "automation": 4
+        },
+        "total": 26,
+        "season": "bermusim",
+        "peak_months": "Dis-Mac (proposal), Mac-Sep (set bridal party)",
+        "evidence": [
+          {
+            "claim": "77% pasangan guna Pinterest untuk inspirasi perkahwinan (83% Gen Z)",
+            "source": "https://www.zola.com/expert-advice/social-media-wedding-inspiration",
+            "level": "pihak_ketiga"
+          },
+          {
+            "claim": ">3 bilion carian berkaitan perkahwinan setahun (global)",
+            "source": "https://newsroom.pinterest.com/en-us/news/the-pinterest-2024-wedding-report/",
+            "level": "rasmi"
+          },
+          {
+            "claim": "Purata wedding party 8 orang (4 setiap pihak), turun dari 10 pada 2019",
+            "source": "https://www.axios.com/2026/01/17/wedding-party-bridesmaid-groomsmen-cost",
+            "level": "rasmi"
+          },
+          {
+            "claim": "19% lamaran berlaku pada Disember",
+            "source": "https://www.theknot.com/content/popular-day-to-get-engaged",
+            "level": "rasmi"
+          },
+          {
+            "claim": "76% majlis kahwin pada Mei-Oktober",
+            "source": "https://www.theknot.com/content/is-there-an-off-season-for-weddings",
+            "level": "rasmi"
+          }
+        ]
+      },
+      {
+        "id": "teacher",
+        "name": "Cikgu (poster kelas + hadiah cikgu)",
+        "scores": {
+          "demand": 5,
+          "competition": 2,
+          "typography_fit": 5,
+          "pinterest_fit": 5,
+          "order_value": 3,
+          "automation": 5
+        },
+        "total": 25,
+        "season": "bermusim (3 puncak)",
+        "peak_months": "Apr-Mei (teacher appreciation), Jul-Ogos (back-to-school), Dis",
+        "evidence": [
+          {
+            "claim": "'Teacher gifts' ~453k carian/bulan (Google), >200k walaupun bulan perlahan",
+            "source": "https://merchone.com/blog/sell-teacher-gifts-with-print-on-demand/",
+            "level": "pihak_ketiga"
+          },
+          {
+            "claim": "Carian 'teacher appreciation gifts' memuncak minggu pertama Mei (data eRank)",
+            "source": "https://merchone.com/blog/sell-teacher-gifts-with-print-on-demand/",
+            "level": "pihak_ketiga"
+          },
+          {
+            "claim": "Poster antara produk back-to-school paling dicari",
+            "source": "https://merchone.com/blog/back-to-school-print-on-demand-products/",
+            "level": "pihak_ketiga"
+          },
+          {
+            "claim": "Saingan printable percuma di Teachers Pay Teachers",
+            "source": "https://www.teacherspayteachers.com/Product/First-Day-of-School-Picture-Posters-FREE-Back-to-School-2024-2025-1267471",
+            "level": "rasmi"
+          }
+        ]
+      },
+      {
+        "id": "nursery",
+        "name": "Nursery & bilik anak",
+        "scores": {
+          "demand": 4,
+          "competition": 3,
+          "typography_fit": 4,
+          "pinterest_fit": 5,
+          "order_value": 3,
+          "automation": 4
+        },
+        "total": 23,
+        "season": "sepanjang tahun",
+        "peak_months": "April (puncak), baby shower sepanjang tahun",
+        "evidence": [
+          {
+            "claim": "'nursery art' ~8,100 carian/bulan global (anggaran tool)",
+            "source": "https://adtargeting.io/industry/wall-decoration-keywords",
+            "level": "pihak_ketiga"
+          },
+          {
+            "claim": "'baby nursery wall decor' ~480, 'baby nursery wall art' ~260 carian/bulan",
+            "source": "https://unicornseo.com/best-keywords-niche/Baby%20Nursery",
+            "level": "pihak_ketiga"
+          },
+          {
+            "claim": "400+ carian 'nursery art' sehari di Etsy (Etsy Search Insights, blog penjual)",
+            "source": "https://queststudio.io/blog/etsy-nursery-art-keywords",
+            "level": "lemah"
+          },
+          {
+            "claim": "Permintaan memuncak April",
+            "source": "https://www.listifyai.net/keyword/nursery-wall-art",
+            "level": "pihak_ketiga"
+          }
+        ]
+      },
+      {
+        "id": "funny_home",
+        "name": "Tanda lucu rumah (bilik air, dapur, dobi)",
+        "scores": {
+          "demand": 4,
+          "competition": 2,
+          "typography_fit": 5,
+          "pinterest_fit": 4,
+          "order_value": 3,
+          "automation": 5
+        },
+        "total": 23,
+        "season": "sepanjang tahun",
+        "peak_months": "Rata; naik Q4 (hadiah rumah baru)",
+        "evidence": [
+          {
+            "claim": "'Seat Yourself' bathroom art berlabel best seller (130 ulasan) di Walmart",
+            "source": "https://www.walmart.com/ip/Funny-Bathroom-Wall-Art-Seat-Yourself/421497500",
+            "level": "rasmi"
+          },
+          {
+            "claim": "Etsy: varian 'Hello Sweet Cheeks' $2.49 (printable) hingga ~$37 (fizikal)",
+            "source": "https://www.etsy.com/listing/4333199924",
+            "level": "rasmi"
+          },
+          {
+            "claim": "Ranking jualan bathroom prints Etsy (tarikh kemas kini tidak dinyatakan)",
+            "source": "https://etsyhunt.com/etsy-competitor-research/best-etsy-bathroom-prints",
+            "level": "pihak_ketiga"
+          }
+        ]
+      },
+      {
+        "id": "christmas",
+        "name": "Krismas & hadiah cuti",
+        "scores": {
+          "demand": 5,
+          "competition": 1,
+          "typography_fit": 4,
+          "pinterest_fit": 5,
+          "order_value": 3,
+          "automation": 5
+        },
+        "total": 23,
+        "season": "bermusim",
+        "peak_months": "Sep-Dis (pin Jul-Sep)",
+        "evidence": [
+          {
+            "claim": "'christmas' kata kunci #1 di Etsy US, Oktober 2026",
+            "source": "https://help.erank.com/blog/top-keywords-on-etsy/",
+            "level": "rasmi"
+          },
+          {
+            "claim": "~40% jualan POD setahun berlaku pada Q4",
+            "source": "https://www.zikanalytics.com/blog/print-on-demand-statistics/",
+            "level": "pihak_ketiga"
+          }
+        ]
+      },
+      {
+        "id": "mama",
+        "name": "Mama & motherhood",
+        "scores": {
+          "demand": 4,
+          "competition": 2,
+          "typography_fit": 5,
+          "pinterest_fit": 5,
+          "order_value": 2,
+          "automation": 4
+        },
+        "total": 22,
+        "season": "sepanjang tahun + puncak",
+        "peak_months": "Apr-Mei (Mother's Day), Q4",
+        "evidence": [
+          {
+            "claim": "'mothers day' & 'mothers day gift' #4-5 kata kunci Etsy, April 2026",
+            "source": "https://help.erank.com/blog/top-keywords-on-etsy-april-2026/",
+            "level": "rasmi"
+          },
+          {
+            "claim": "Anggaran belanja Mother's Day 2026 di US: $38 bilion",
+            "source": "https://www.shopify.com/blog/unique-personalized-gifts",
+            "level": "pihak_ketiga"
+          }
+        ]
+      },
+      {
+        "id": "friendship",
+        "name": "Valentine / Galentine & persahabatan",
+        "scores": {
+          "demand": 4,
+          "competition": 2,
+          "typography_fit": 5,
+          "pinterest_fit": 4,
+          "order_value": 3,
+          "automation": 4
+        },
+        "total": 22,
+        "season": "bermusim",
+        "peak_months": "Jan-Feb, Dis (Friendsmas)",
+        "evidence": [
+          {
+            "claim": "Carian hadiah personalisasi untuk kawan +1,400% (laporan Etsy F/W 2026; asas tidak dinyatakan)",
+            "source": "https://community.etsy.com/forum/etsy-success-300/topic/etsy-insights-etsy-trend-edit-fallwinter-26-190171/",
+            "level": "rasmi"
+          },
+          {
+            "claim": "Anggaran belanja Valentine 2026 di US: $29 bilion",
+            "source": "https://www.shopify.com/blog/unique-personalized-gifts",
+            "level": "pihak_ketiga"
+          }
+        ]
+      },
+      {
+        "id": "bookish",
+        "name": "Bookish / pencinta buku",
+        "scores": {
+          "demand": 3,
+          "competition": 3,
+          "typography_fit": 5,
+          "pinterest_fit": 4,
+          "order_value": 2,
+          "automation": 4
+        },
+        "total": 21,
+        "season": "sepanjang tahun",
+        "peak_months": "Rata; naik Q4",
+        "evidence": [
+          {
+            "claim": "Carian 'book totes' +148%, romantasy +77% (data Faire)",
+            "source": "https://www.somethingdifferentwholesale.com/uk/blog/book-gift-trend/",
+            "level": "lemah"
+          },
+          {
+            "claim": "Design ikut 'trope' (romantasy, dark romance) lebih laku; design generik sesak",
+            "source": "https://printify.com/knowledge-hub/booktok-trope-merch-2026-playbook-high-margin-print-on-demand-profit/",
+            "level": "pihak_ketiga"
+          }
+        ]
+      },
+      {
+        "id": "home_office",
+        "name": "Home office / humor kerja",
+        "scores": {
+          "demand": 3,
+          "competition": 3,
+          "typography_fit": 5,
+          "pinterest_fit": 3,
+          "order_value": 2,
+          "automation": 5
+        },
+        "total": 21,
+        "season": "sepanjang tahun",
+        "peak_months": "Januari",
+        "evidence": [
+          {
+            "claim": "Home office wall decor: kategori carian wall art paling cepat berkembang sejak 2020",
+            "source": "https://www.gelato.com/de/blog/wall-decor-by-room-guide",
+            "level": "pihak_ketiga"
+          }
+        ]
+      },
+      {
+        "id": "faith",
+        "name": "Iman / Kristian (ayat Bible)",
+        "scores": {
+          "demand": 3,
+          "competition": 2,
+          "typography_fit": 5,
+          "pinterest_fit": 4,
+          "order_value": 2,
+          "automation": 5
+        },
+        "total": 21,
+        "season": "sepanjang tahun",
+        "peak_months": "Easter, Krismas",
+        "evidence": [
+          {
+            "claim": "Kedai Etsy 'KAM DesignHaus' ~26,289 jualan (sejak 2019)",
+            "source": "https://www.etsy.com/shop/KAMDesignHaus",
+            "level": "rasmi"
+          },
+          {
+            "claim": "Kedai Etsy 'Crafty Cow Design' ~6,120 jualan (sejak 2013)",
+            "source": "https://www.etsy.com/shop/CraftyCowDesign",
+            "level": "rasmi"
+          }
+        ]
+      },
+      {
+        "id": "sports_mom",
+        "name": "Sports mom (baseball, soccer)",
+        "scores": {
+          "demand": 3,
+          "competition": 2,
+          "typography_fit": 5,
+          "pinterest_fit": 4,
+          "order_value": 4,
+          "automation": 3
+        },
+        "total": 21,
+        "season": "bermusim",
+        "peak_months": "Feb-Jun (baseball/softball), Ogos-Nov (soccer/football)",
+        "evidence": [
+          {
+            "claim": "Sports mom tees disenaraikan dalam laporan trend penjual Etsy S/S 2026",
+            "source": "https://www.kittl.com/blogs/2026-t-shirt-design-ideas-trends-dsi/",
+            "level": "pihak_ketiga"
+          },
+          {
+            "claim": "Design 'soccer mom' konsisten tinggi permintaan di Etsy",
+            "source": "https://merchize.com/soccer-shirt-design/",
+            "level": "lemah"
+          }
+        ]
+      },
+      {
+        "id": "halloween",
+        "name": "Halloween",
+        "scores": {
+          "demand": 5,
+          "competition": 1,
+          "typography_fit": 4,
+          "pinterest_fit": 4,
+          "order_value": 2,
+          "automation": 5
+        },
+        "total": 21,
+        "season": "bermusim",
+        "peak_months": "Ogos-Okt",
+        "evidence": [
+          {
+            "claim": "'halloween' kata kunci #2 di Etsy US, Q3 2026",
+            "source": "https://help.erank.com/blog/top-etsy-searches-q3-2026/",
+            "level": "rasmi"
+          }
+        ]
+      },
+      {
+        "id": "affirmation",
+        "name": "Afirmasi / kesihatan mental / kaunselor",
+        "scores": {
+          "demand": 2,
+          "competition": 2,
+          "typography_fit": 5,
+          "pinterest_fit": 4,
+          "order_value": 3,
+          "automation": 5
+        },
+        "total": 21,
+        "season": "sepanjang tahun",
+        "peak_months": "Rata; back-to-school untuk kaunselor",
+        "evidence": [
+          {
+            "claim": "Poster afirmasi di Walmart dari $13.25; banyak bekalan",
+            "source": "https://www.walmart.com/c/kp/affirmations-poster",
+            "level": "rasmi"
+          },
+          {
+            "claim": "Bundle digital calm corner di Etsy $3.50-16.81",
+            "source": "https://www.etsy.com/listing/4567285134",
+            "level": "rasmi"
+          }
+        ]
+      },
+      {
+        "id": "pet",
+        "name": "Ibu bapa haiwan (ikut baka)",
+        "scores": {
+          "demand": 4,
+          "competition": 3,
+          "typography_fit": 3,
+          "pinterest_fit": 4,
+          "order_value": 2,
+          "automation": 4
+        },
+        "total": 20,
+        "season": "sepanjang tahun + Q4",
+        "peak_months": "Nov-Dis",
+        "evidence": [
+          {
+            "claim": "Carian hadiah haiwan peliharaan ~2x tahun ke tahun (laporan Etsy F/W 2026)",
+            "source": "https://community.etsy.com/forum/etsy-success-300/topic/etsy-insights-etsy-trend-edit-fallwinter-26-190171/",
+            "level": "rasmi"
+          }
+        ]
+      },
+      {
+        "id": "grandma",
+        "name": "Nenek (Nana, Gigi, Grandma)",
+        "scores": {
+          "demand": 3,
+          "competition": 2,
+          "typography_fit": 5,
+          "pinterest_fit": 4,
+          "order_value": 2,
+          "automation": 3
+        },
+        "total": 19,
+        "season": "sepanjang tahun + puncak",
+        "peak_months": "Mother's Day, Grandparents Day (Sep), Krismas",
+        "evidence": [
+          {
+            "claim": "'personalized grandma shirt' ~1,300 carian/bulan; 71,260 listing Etsy; saingan tinggi; CPC $1.25",
+            "source": "https://www.rankhero.com/keywords/personalized-grandma-shirt",
+            "level": "pihak_ketiga"
+          },
+          {
+            "claim": "Grandma gift shirts disenaraikan dalam laporan trend Etsy S/S 2026",
+            "source": "https://www.kittl.com/blogs/2026-t-shirt-design-ideas-trends-dsi/",
+            "level": "pihak_ketiga"
+          }
+        ]
+      },
+      {
+        "id": "family_est",
+        "name": "Nama keluarga 'Est.' (personalisasi)",
+        "scores": {
+          "demand": 3,
+          "competition": 2,
+          "typography_fit": 5,
+          "pinterest_fit": 4,
+          "order_value": 2,
+          "automation": 2
+        },
+        "total": 18,
+        "season": "sepanjang tahun",
+        "peak_months": "Wedding, housewarming, Krismas",
+        "evidence": [
+          {
+            "claim": "Tiada data permintaan khusus dijumpai; perlu personalisasi (fasa 2)",
+            "source": null,
+            "level": "lemah"
+          }
+        ]
+      }
+    ],
+    "general_evidence": [
+      {
+        "claim": "'wall art' kata kunci #4 di Etsy US, Q3 2026 (dan #4 Mei 2026)",
+        "source": "https://help.erank.com/blog/top-etsy-searches-q3-2026/",
+        "level": "rasmi"
+      },
+      {
+        "claim": "'shirt' kata kunci #1 di Etsy US, Q3 2026",
+        "source": "https://help.erank.com/blog/top-etsy-searches-q3-2026/",
+        "level": "rasmi"
+      }
+    ],
+    "decision": {
+      "wave_1": [
+        "bridal",
+        "teacher",
+        "nursery",
+        "funny_home",
+        "mama",
+        "christmas",
+        "friendship",
+        "bookish"
+      ],
+      "wave_2": [
+        "home_office",
+        "faith",
+        "sports_mom",
+        "halloween",
+        "affirmation",
+        "pet",
+        "grandma"
+      ],
+      "phase_2_personalization": [
+        "family_est"
+      ]
+    }
+  },
+  "keywords": {
+    "stage": 2,
+    "title": "Top keywords + jumlah carian bulanan",
+    "updated": "2026-11-21",
+    "method": {
+      "google_volume": "Anggaran RankHero (purata carian bulanan global, data gaya Google Ads). Setiap halaman ada tarikh kemas kini berbeza (akhir 2025 - 2026).",
+      "etsy_listings": "Bilangan listing Etsy yang menyasarkan kata kunci (RankHero).",
+      "opportunity": "Carian bulanan / 1,000 listing Etsy. Lebih tinggi = permintaan lebih besar berbanding saingan.",
+      "pinterest_volume": "Pinterest tidak menerbitkan jumlah carian mutlak. Pinterest Trends hanya menunjukkan indeks relatif 0-100. Tiada angka awam yang sah untuk setiap kata kunci.",
+      "verification": "Semua volum ialah anggaran pihak ketiga; bukan data rasmi Google/Pinterest."
+    },
+    "pinterest_platform_facts": [
+      {
+        "claim": "Pinterest Trends menormalkan volum carian berbanding jumlah carian platform; graf indeks 0-100; tiada akaun diperlukan",
+        "source": "https://help.pinterest.com/en/business/article/pinterest-trends",
+        "level": "rasmi"
+      },
+      {
+        "claim": "API Trends Pinterest memberi volum relatif mingguan (0-100) setiap kata kunci",
+        "source": "https://developers.pinterest.com/docs/analytics-and-reports/trends/",
+        "level": "rasmi"
+      },
+      {
+        "claim": "Tiada tool boleh tunjuk volum carian Pinterest sebenar; banyak guna volum Google sebagai ganti",
+        "source": "https://keywordseverywhere.com/tools/pinterest-keyword-generator/",
+        "level": "pihak_ketiga"
+      },
+      {
+        "claim": ">3 bilion carian perkahwinan setahun di Pinterest (global)",
+        "source": "https://newsroom.pinterest.com/en-us/news/the-pinterest-2024-wedding-report/",
+        "level": "rasmi"
+      }
+    ],
+    "niches": {
+      "bridal": [
+        {
+          "keyword": "bridesmaids",
+          "google_monthly": 550000,
+          "us_monthly": 201000,
+          "etsy_listings": 1338784,
+          "opportunity": 411,
+          "note": "Turun 18% Jul 2025-Jun 2026",
+          "source": "https://www.rankhero.com/keywords/bridesmaids"
+        },
+        {
+          "keyword": "gift for bridesmaids",
+          "google_monthly": 33100,
+          "etsy_listings": null,
+          "opportunity": null,
+          "source": "https://www.rankhero.com/keywords/gift-for-bridesmaids"
+        },
+        {
+          "keyword": "bride box",
+          "google_monthly": 2400,
+          "us_share": 0.42,
+          "etsy_listings": 41715,
+          "opportunity": 58,
+          "cpc_usd": 7.21,
+          "difficulty": 46,
+          "source": "https://www.rankhero.com/keywords/bride-box"
+        },
+        {
+          "keyword": "proposal gift",
+          "google_monthly": 880,
+          "source": "https://www.rankhero.com/keywords/proposal-gift"
+        },
+        {
+          "keyword": "proposal card",
+          "google_monthly": 720,
+          "us_share": 0.15,
+          "source": "https://www.rankhero.com/keywords/proposal-card"
+        },
+        {
+          "keyword": "bridesmaid set",
+          "google_monthly": 320,
+          "source": "https://www.rankhero.com/keywords/bridesmaid-set"
+        }
+      ],
+      "teacher": [
+        {
+          "keyword": "teacher gift",
+          "google_monthly": 60500,
+          "etsy_listings": 1835056,
+          "opportunity": 33,
+          "note": "Puncak Disember",
+          "source": "https://www.rankhero.com/keywords/teacher-gift"
+        },
+        {
+          "keyword": "teacher gift ideas",
+          "google_monthly_peak": 90500,
+          "peak_month": "2025-12",
+          "source": "https://www.rankhero.com/keywords/teacher-gift-ideas"
+        },
+        {
+          "keyword": "teacher appreciation",
+          "google_monthly": 18100,
+          "etsy_listings": 547604,
+          "opportunity": 33,
+          "source": "https://www.rankhero.com/keywords/teacher-appreciation"
+        },
+        {
+          "keyword": "shirt for teacher",
+          "google_monthly": 9900,
+          "etsy_listings": 831332,
+          "opportunity": 12,
+          "source": "https://www.rankhero.com/keywords/shirt-for-teacher"
+        },
+        {
+          "keyword": "classroom posters",
+          "google_monthly": 6600,
+          "us_share": 0.55,
+          "etsy_listings": 144725,
+          "opportunity": 46,
+          "source": "https://www.rankhero.com/keywords/classroom-posters"
+        },
+        {
+          "keyword": "teacher tee",
+          "google_monthly": 2900,
+          "etsy_listings": 652995,
+          "opportunity": 4,
+          "source": "https://www.rankhero.com/keywords/teacher-tee"
+        },
+        {
+          "keyword": "teacher decorations",
+          "google_monthly": 1000,
+          "source": "https://www.rankhero.com/keywords/teacher-decorations"
+        },
+        {
+          "keyword": "teacher xmas",
+          "google_monthly_peak": 1000,
+          "peak_month": "2025-12",
+          "low": 20,
+          "etsy_listings": 53049,
+          "source": "https://www.rankhero.com/keywords/teacher-xmas"
+        }
+      ],
+      "nursery": [
+        {
+          "keyword": "nursery",
+          "google_monthly": 673000,
+          "difficulty": 50,
+          "note": "Istilah luas",
+          "source": "https://www.rankhero.com/keywords/nursery"
+        },
+        {
+          "keyword": "nursery wall sticker(s)",
+          "google_monthly": 8100,
+          "etsy_listings": 110571,
+          "opportunity": 73,
+          "source": "https://www.rankhero.com/keywords/nursery-wall-sticker"
+        },
+        {
+          "keyword": "nursery art",
+          "google_monthly": 8100,
+          "difficulty": 64,
+          "source": "https://adtargeting.io/industry/wall-decoration-keywords",
+          "source_2": "https://www.rankhero.com/keywords/nursery-art"
+        },
+        {
+          "keyword": "baby nursery wall decor",
+          "google_monthly": 480,
+          "source": "https://unicornseo.com/best-keywords-niche/Baby%20Nursery"
+        },
+        {
+          "keyword": "nursery wall print",
+          "google_monthly": 390,
+          "note": "Menurun 590 -> 320 (Ogos-akhir 2025)",
+          "source": "https://www.rankhero.com/keywords/nursery-wall-print"
+        },
+        {
+          "keyword": "baby nursery wall art",
+          "google_monthly": 260,
+          "source": "https://unicornseo.com/best-keywords-niche/Baby%20Nursery"
+        },
+        {
+          "keyword": "nursery wall art print",
+          "google_monthly": 110,
+          "etsy_listings": 1219311,
+          "difficulty": 84,
+          "source": "https://www.rankhero.com/keywords/nursery-wall-art-print"
+        }
+      ],
+      "funny_home": [
+        {
+          "keyword": "laundry room",
+          "google_monthly": 90500,
+          "note": "Istilah luas",
+          "source": "https://www.rankhero.com/keywords/laundry-room"
+        },
+        {
+          "keyword": "bathroom sign",
+          "google_monthly": 22200,
+          "etsy_listings": 145867,
+          "opportunity": 152,
+          "source": "https://www.rankhero.com/keywords/bathroom-sign"
+        },
+        {
+          "keyword": "kitchen art",
+          "google_monthly": 22200,
+          "source": "https://www.rankhero.com/keywords/kitchen-art"
+        },
+        {
+          "keyword": "funny bathroom sign",
+          "google_monthly": 8100,
+          "us_share": 0.81,
+          "etsy_listings": 36886,
+          "opportunity": 220,
+          "cpc_usd": 0.41,
+          "difficulty": 40,
+          "source": "https://www.rankhero.com/keywords/funny-bathroom-sign"
+        },
+        {
+          "keyword": "kitchen sign",
+          "google_monthly": 5400,
+          "source": "https://www.rankhero.com/keywords/kitchen-sign"
+        },
+        {
+          "keyword": "laundry room sign",
+          "google_monthly": 2900,
+          "us_share": 0.66,
+          "source": "https://www.rankhero.com/keywords/laundry-room-sign"
+        },
+        {
+          "keyword": "kitchen poster",
+          "google_monthly_range": "1,300-1,600 (Sep-Dis 2025)",
+          "source": "https://www.rankhero.com/keywords/kitchen-poster"
+        },
+        {
+          "keyword": "laundry wall art",
+          "google_monthly": 590,
+          "source": "https://www.rankhero.com/keywords/laundry-wall-art"
+        }
+      ],
+      "mama": [
+        {
+          "keyword": "mama shirt",
+          "google_monthly": 4400,
+          "etsy_listings": 741040,
+          "opportunity": 6,
+          "source": "https://www.rankhero.com/keywords/mama-shirt"
+        },
+        {
+          "keyword": "mother sweatshirt",
+          "google_monthly": 3600,
+          "us_share": 0.67,
+          "etsy_listings": 318199,
+          "opportunity": 11,
+          "source": "https://www.rankhero.com/keywords/mother-sweatshirt"
+        },
+        {
+          "keyword": "mama crewneck",
+          "google_monthly": 590,
+          "etsy_listings": 98374,
+          "opportunity": 6,
+          "source": "https://www.rankhero.com/keywords/mama-crewneck"
+        },
+        {
+          "keyword": "mama outfit",
+          "google_monthly": 590,
+          "difficulty": 60,
+          "source": "https://www.rankhero.com/keywords/mama-outfit"
+        },
+        {
+          "keyword": "dog mama sweatshirt",
+          "google_monthly": 130,
+          "etsy_listings": 47630,
+          "opportunity": 3,
+          "source": "https://www.rankhero.com/keywords/dog-mama-sweatshirt"
+        }
+      ],
+      "christmas": [
+        {
+          "keyword": "christmas sweatshirt",
+          "google_monthly": 22200,
+          "source": "https://www.rankhero.com/keywords/christmas-sweatshirt"
+        },
+        {
+          "keyword": "christmas gift ideas for mom",
+          "google_monthly": 14800,
+          "us_share": 0.67,
+          "difficulty": 48,
+          "source": "https://www.rankhero.com/keywords/christmas-gift-ideas-for-mom"
+        },
+        {
+          "keyword": "christmas",
+          "etsy_rank": "#1 US Oktober 2026",
+          "source": "https://help.erank.com/blog/top-keywords-on-etsy/"
+        }
+      ],
+      "friendship": [
+        {
+          "keyword": "galentines gift",
+          "google_monthly": 5400,
+          "us_share": 0.44,
+          "difficulty": 48,
+          "source": "https://www.rankhero.com/keywords/galentines-gift"
+        },
+        {
+          "keyword": "galentine gift",
+          "google_monthly": 5400,
+          "google_monthly_peak": 33100,
+          "peak_month": "2026-02",
+          "low": 170,
+          "source": "https://www.rankhero.com/keywords/galentine-gift"
+        }
+      ],
+      "bookish": [
+        {
+          "keyword": "bookish",
+          "google_monthly": 135000,
+          "note": "Istilah luas",
+          "source": "https://www.rankhero.com/keywords/bookish"
+        },
+        {
+          "keyword": "bookish shirt",
+          "google_monthly": 4400,
+          "source": "https://www.rankhero.com/keywords/bookish-shirt"
+        },
+        {
+          "keyword": "book sweatshirt",
+          "google_monthly": 1600,
+          "us_share": 0.81,
+          "source": "https://www.rankhero.com/keywords/book-sweatshirt"
+        },
+        {
+          "keyword": "gifts for bookworms",
+          "google_monthly": 1300,
+          "source": "https://www.rankhero.com/keywords/gifts-for-bookworms"
+        },
+        {
+          "keyword": "bookish crewneck",
+          "google_monthly": 90,
+          "source": "https://www.rankhero.com/keywords/bookish-crewneck"
+        }
+      ],
+      "grandma_ref": [
+        {
+          "keyword": "personalized grandma shirt",
+          "google_monthly": 1300,
+          "etsy_listings": 71260,
+          "opportunity": 18,
+          "cpc_usd": 1.25,
+          "source": "https://www.rankhero.com/keywords/personalized-grandma-shirt"
+        }
+      ]
+    },
+    "seasonality_signals": [
+      {
+        "claim": "Carian 'mothers day' melonjak ~1 minggu sebelum; carian hadiah umum naik lebih awal",
+        "source": "https://about.ads.microsoft.com/en-us/blog/post/april-2022/april-monthly-insights-for-gifting-season",
+        "level": "rasmi"
+      },
+      {
+        "claim": "Trafik Mother's Day naik 2 minggu sebelum; hari tertinggi Isnin sebelum cuti (2023)",
+        "source": "https://www.bloomreach.com/en/blog/2023/mothers-day-trends-2023",
+        "level": "pihak_ketiga"
+      },
+      {
+        "claim": "Senarai 729 kata kunci perkahwinan, ~34.5 juta carian/bulan gabungan (Okt 2026)",
+        "source": "https://keywordseverywhere.com/ctl/top/wedding-keywords",
+        "level": "pihak_ketiga"
+      }
+    ],
+    "excluded_anomalies": [
+      {
+        "keyword": "teach shirt",
+        "reported": 1500000,
+        "reason": "Tidak munasabah berbanding kata kunci cikgu lain; berkemungkinan ralat data",
+        "source": "https://www.rankhero.com/keywords/teach-shirt"
+      },
+      {
+        "keyword": "galentines",
+        "reported": "8,100 (Okt) -> 1,000,000 (Feb)",
+        "reason": "Lonjakan 1 juta tidak konsisten dengan 'galentines gift' (puncak 33,100)",
+        "source": "https://www.rankhero.com/keywords/galentines"
+      }
+    ],
+    "findings": [
+      "Peluang terbaik (carian per 1,000 listing): bridesmaids 411, funny bathroom sign 220, bathroom sign 152, nursery wall sticker 73, bride box 58, classroom posters 46.",
+      "Apparel 'mama' sangat sesak: mama shirt 6, mama crewneck 6, mother sweatshirt 11, dog mama sweatshirt 3.",
+      "Apparel cikgu sesak (shirt for teacher 12, teacher tee 4); poster kelas lebih berpeluang (46).",
+      "Kata kunci hadiah sangat bermusim: teacher gift puncak Dis; galentine gift 33,100 (Feb) vs 170 (Apr-Mei)."
+    ]
+  },
+  "pins": {
+    "stage": 3,
+    "title": "Top pins & corak visual",
+    "updated": "2026-11-21",
+    "limitation": "Pinterest disekat dari persekitaran ini dan tiada data 'top pins' awam per niche. Dapatan berdasarkan laporan rasmi Pinterest, kajian benchmark, dan panduan penjual. Top pins sebenar akan dikenal pasti dari analytics akaun selepas pelancaran.",
+    "format_rules": [
+      {
+        "rule": "Saiz 1000x1500 (2:3)",
+        "source": "https://www.artomate.app/blog/pinterest-etsy-poster-sellers-free-traffic",
+        "level": "pihak_ketiga"
+      },
+      {
+        "rule": "Mockup bilik (lifestyle) menggandakan saves & klik berbanding foto rata (seorang penjual)",
+        "source": "https://www.artomate.app/blog/pinterest-etsy-poster-sellers-free-traffic",
+        "level": "lemah"
+      },
+      {
+        "rule": "Tajuk teks di bahagian atas pin; tajuk kata kunci spesifik ('Funny mugs for nurses' > 'funny mugs')",
+        "source": "https://merchtitans.com/blog/pinterest-marketing-print-on-demand",
+        "level": "pihak_ketiga"
+      },
+      {
+        "rule": "Pautkan terus ke halaman produk, bukan homepage/kategori",
+        "source": "https://merchtitans.com/blog/pinterest-marketing-print-on-demand",
+        "level": "pihak_ketiga"
+      },
+      {
+        "rule": "Logo di sepertiga atas/tengah; visual khas, bukan imej laman web mentah",
+        "source": "https://blog.hootsuite.com/pinterest-marketing/",
+        "level": "pihak_ketiga"
+      },
+      {
+        "rule": "Alt text: +123% klik keluar, +25% impressions",
+        "source": "https://www.tailwindapp.com/pinterest-marketing/research/2025-benchmark-study-part-1",
+        "level": "pihak_ketiga"
+      },
+      {
+        "rule": "Static ~4.8 klik/1,000 impressions vs video ~1.6; video +185% impressions; carousel hampir setara static untuk klik tetapi lebih banyak saves",
+        "source": "https://gensumo.com/research/pinterest-marketing-benchmarks-report/",
+        "level": "pihak_ketiga"
+      },
+      {
+        "rule": "Sasaran CTR pin static ~0.5-1.5%; conversion pin-ke-jualan 1-3%",
+        "source": "https://merchtitans.com/blog/pinterest-marketing-print-on-demand",
+        "level": "lemah"
+      },
+      {
+        "rule": ">60% saves dari pin berumur >1 tahun; 1% pin teratas = >50% impressions & klik",
+        "source": "https://www.tailwindapp.com/pinterest-marketing/research/2025-benchmark-study-part-2",
+        "level": "pihak_ketiga"
+      }
+    ],
+    "pinterest_2026_trends": [
+      {
+        "trend": "Warna 2026: Cool Blue (+85% minat), Jade, Plum Noir, Wasabi, Persimmon",
+        "source": "https://www.homesandgardens.com/interior-design/pinterest-palette-2026",
+        "level": "rasmi"
+      },
+      {
+        "trend": "Afrohemian: carian 'afrobohemian home decor' +220%",
+        "source": "https://www.aol.com/articles/pinterest-just-announced-top-home-130000967.html",
+        "level": "rasmi"
+      },
+      {
+        "trend": "Funhaus / vintage circus +70%; 'circus nursery' meningkat",
+        "source": "https://www.cubbyathome.com/2026-pinterest-predicts-nursery-tour-80046553",
+        "level": "rasmi"
+      },
+      {
+        "trend": "Bilik anak retro (nostalgia)",
+        "source": "https://www.aol.com/articles/pinterests-2026-report-shows-retro-165500035.html",
+        "level": "rasmi"
+      },
+      {
+        "trend": "Neo Deco (glamor berstruktur)",
+        "source": "https://www.apartmenttherapy.com/pinterest-predicts-2026-37522611",
+        "level": "rasmi"
+      },
+      {
+        "trend": "Pen Pals (tulisan tangan, stationery)",
+        "source": "https://dynamicmockups.com/?p=58253",
+        "level": "pihak_ketiga"
+      },
+      {
+        "trend": "Senarai rasmi 21 trend Pinterest Predicts 2026",
+        "source": "https://newsroom.pinterest.com/en-ca/news/pinterest-predicts-nonconformity-self-preservation-and-escapism-drive-21-trends-for-2026/",
+        "level": "rasmi"
+      }
+    ],
+    "typography_trends": [
+      {
+        "trend": "Modern retro serif",
+        "source": "https://www.adobe.com/express/learn/blog/microtrend-modern-retro-serif",
+        "level": "pihak_ketiga"
+      },
+      {
+        "trend": "Serif 70-an yang 'funky', saiz besar, huruf dalam bingkai hiasan",
+        "source": "https://elements.envato.com/learn/font-trends",
+        "level": "pihak_ketiga"
+      },
+      {
+        "trend": "Retro/Y2K dominan untuk t-shirt 2026",
+        "source": "https://www.printful.com/blog/best-fonts-for-t-shirts",
+        "level": "pihak_ketiga"
+      },
+      {
+        "trend": "Tidak sempurna / tulisan tangan",
+        "source": "https://www.spreadshirt.com/custom/blog/2026-design-trends/",
+        "level": "pihak_ketiga"
+      },
+      {
+        "trend": "Perkataan berulang (repeated words)",
+        "source": "https://sellfy.com/blog/trending-t-shirt-designs/",
+        "level": "pihak_ketiga"
+      }
+    ],
+    "niche_visual_playbook": {
+      "bridal": {
+        "visual": "Flat lay kotak proposal / sweatshirt dilipat, reben (bow), palet lembut",
+        "pin_text": "Will You Be My Bridesmaid? Proposal Gift",
+        "evidence": [
+          {
+            "claim": "Reben (bow) ialah butiran 'it' untuk proposal musim ini",
+            "source": "https://www.theknot.com/content/creative-ways-to-ask-bridesmaids"
+          },
+          {
+            "claim": "Hadiah praktikal (tumbler, tote) sedang trend",
+            "source": "https://www.theknot.com/content/inspiring-bridesmaid-gift-ideas"
+          }
+        ]
+      },
+      "teacher": {
+        "visual": "Kolaj set poster kelas (grid 6-12) / carousel; tema retro atau minimal",
+        "pin_text": "Retro Classroom Decor Set of 12",
+        "evidence": [
+          {
+            "claim": "Bilik darjah retro berwarna lawan minimalis",
+            "source": "https://www.twinkl.com/blog/back-to-school-2025-classroom-decor-ideas"
+          }
+        ]
+      },
+      "nursery": {
+        "visual": "Satu poster berbingkai dalam nursery neutral (oat, cream, sage); alternatif circus/Funhaus",
+        "pin_text": "Neutral Nursery Wall Art Print",
+        "evidence": [
+          {
+            "claim": "Gender-neutral boho: oat, cream, tan, sage",
+            "source": "https://www.nestig.com/blogs/get-inspired/the-nursery-and-kids-room-trends-designers-are-backing-in-2026"
+          },
+          {
+            "claim": "Satu poster berbingkai boleh menjadi fokus dinding",
+            "source": "https://woodemon.com/blogs/the-q-a-spot/what-are-the-best-gender-neutral-nursery-wall-decor-trends-for-2026"
+          }
+        ]
+      },
+      "funny_home": {
+        "visual": "Mockup bilik air/dapur; gaya Art Deco atau maximalist; set 3",
+        "pin_text": "Funny Bathroom Wall Art Set of 3",
+        "evidence": [
+          {
+            "claim": "Penjual Etsy gabungkan humor dengan gaya Art Deco/maximalist",
+            "source": "https://www.etsy.com/listing/1161346307"
+          }
+        ]
+      },
+      "mama": {
+        "visual": "Typography retro/varsity; mockup hadiah Mother's Day",
+        "pin_text": "Mama Gift for Mother's Day",
+        "evidence": [
+          {
+            "claim": "Retro/Y2K dominan",
+            "source": "https://www.printful.com/blog/best-fonts-for-t-shirts"
+          }
+        ]
+      },
+      "christmas": {
+        "visual": "Suasana cozy, hadiah berbalut",
+        "pin_text": "Christmas Gift for Mom",
+        "evidence": []
+      },
+      "friendship": {
+        "visual": "Palet pink/merah, kumpulan kawan",
+        "pin_text": "Galentine's Day Gift for Best Friend",
+        "evidence": []
+      },
+      "bookish": {
+        "visual": "Reading nook cozy; design ikut trope (romantasy dll.); estetik poetcore",
+        "pin_text": "Bookish Sweatshirt for Romantasy Readers",
+        "evidence": [
+          {
+            "claim": "Estetik poetcore 2026",
+            "source": "https://dynamicmockups.com/trends/poetcore-mockups-2026-aesthetic/"
+          },
+          {
+            "claim": "Design ikut trope lebih laku",
+            "source": "https://printify.com/knowledge-hub/booktok-trope-merch-2026-playbook-high-margin-print-on-demand-profit/"
+          }
+        ]
+      }
+    },
+    "pin_templates": [
+      {
+        "id": "T1",
+        "name": "Mockup bilik + tajuk atas",
+        "use": "Wall art (semua niche)",
+        "share": "35%"
+      },
+      {
+        "id": "T2",
+        "name": "Flat lay produk + tajuk",
+        "use": "Apparel, bridal, hadiah",
+        "share": "20%"
+      },
+      {
+        "id": "T3",
+        "name": "Kolaj set (carousel 2-5 imej)",
+        "use": "Set poster, bridal party",
+        "share": "15%"
+      },
+      {
+        "id": "T4",
+        "name": "Close-up typography",
+        "use": "Semua",
+        "share": "10%"
+      },
+      {
+        "id": "T5",
+        "name": "Video slideshow 6-15s",
+        "use": "Capaian & saves",
+        "share": "20%"
+      }
+    ]
+  },
+  "products": {
+    "stage": 4,
+    "title": "Top produk Printify + digital",
+    "updated": "2026-11-21",
+    "assumptions": {
+      "plan": "Printify Free (harga Premium dicatat jika ada)",
+      "market": "Pembeli di US",
+      "shipping": "Pembeli bayar shipping (pass-through)",
+      "payment_fee": "~6% x (harga + shipping) + $0.22 (Stripe Malaysia, kad antarabangsa + tukaran)",
+      "profit_formula": "harga - kos asas - fee bayaran",
+      "note": "Kos asas 'From USD' ialah saiz/provider termurah di halaman Printify; saiz lain lebih mahal. Sahkan dalam editor Printify sebelum menetapkan harga."
+    },
+    "products": [
+      {
+        "id": "poster_matte",
+        "name": "Poster matte (vertical)",
+        "base_usd": 4.96,
+        "base_premium_usd": 3.61,
+        "base_note": "Saiz termurah; 47 saiz; 18x24 dianggar ~$8.50, 24x36 ~$10.39",
+        "shipping_usd": 7.39,
+        "shipping_additional_usd": 1.99,
+        "shipping_note": "Today's Graphics 16x20/18x24 ke US",
+        "price_usd": 29.99,
+        "profit_usd": 19.0,
+        "profit_note": "Saiz 18x24",
+        "sources": [
+          "https://printify.com/app/products/282/generic-brand/matte-vertical-posters",
+          "https://printify.com/app/products/home-and-living/posters",
+          "https://printify.com/shipping-rates/todays-graphics/"
+        ],
+        "level": "rasmi (kos permulaan); anggaran (saiz 18x24)"
+      },
+      {
+        "id": "poster_framed",
+        "name": "Poster berbingkai (vertical)",
+        "base_usd": 35.89,
+        "base_premium_usd": 26.01,
+        "shipping_usd": 12.8,
+        "shipping_note": "~$12.49-13.19 (data halaman produk)",
+        "price_usd": 74.99,
+        "profit_usd": 33.6,
+        "sources": [
+          "https://printify.com/app/products/540/roma-imaging/framed-vertical-poster"
+        ],
+        "level": "rasmi"
+      },
+      {
+        "id": "canvas",
+        "name": "Canvas stretched",
+        "base_usd": 10.63,
+        "base_premium_usd": 7.94,
+        "base_note": "Matte Canvas 1.25\" saiz termurah; 16x20 dianggar $15-22",
+        "shipping_usd": 10,
+        "shipping_note": "Anggaran",
+        "price_usd": 69.99,
+        "profit_usd_range": "43-50",
+        "profit_note": "Saiz 16x20 (kos anggaran)",
+        "sources": [
+          "https://printify.com/app/products/home-and-living/canvas",
+          "https://apparelhub.ai/blog/best-print-on-demand-supplier-for-canvas-prints"
+        ],
+        "level": "rasmi (kos permulaan); anggaran (16x20)"
+      },
+      {
+        "id": "mug_11oz",
+        "name": "Mug seramik 11oz",
+        "base_usd": 4.93,
+        "base_premium_usd": 3.68,
+        "shipping_usd": 5.49,
+        "shipping_additional_usd": 2.99,
+        "shipping_note": "Printify Choice (baris jadual tidak dilabel; belum disahkan); SwiftPOD $6.99",
+        "price_usd": 19.99,
+        "profit_usd": 13.3,
+        "sources": [
+          "https://printify.com/app/products/478/generic-brand/ceramic-mug-11oz-15oz",
+          "https://printify.com/shipping-rates/printify-choice/",
+          "https://printify.com/shipping-rates/swiftpod/"
+        ],
+        "level": "rasmi"
+      },
+      {
+        "id": "tote",
+        "name": "Tote bag cotton canvas (Liberty Bags)",
+        "base_usd": 9.67,
+        "shipping_usd": 5,
+        "shipping_note": "Anggaran (kadar Printify tidak dijumpai)",
+        "price_usd": 24.99,
+        "profit_usd": 13.3,
+        "sources": [
+          "https://printify.com/app/brand/94/liberty-bags"
+        ],
+        "level": "rasmi (kos); anggaran (shipping)"
+      },
+      {
+        "id": "stickers",
+        "name": "Kiss-cut stickers",
+        "base_usd": 1.21,
+        "base_note": "Bermula $1.21 sekeping; Premium hingga 20% diskaun",
+        "shipping_usd": 4,
+        "shipping_note": "Anggaran",
+        "price_usd": 4.99,
+        "profit_usd": 3.0,
+        "use": "Tambahan (add-on) untuk kotak bridal, cikgu, bookish",
+        "sources": [
+          "https://printify.com/make-your-own-stickers"
+        ],
+        "level": "rasmi (kos); anggaran (shipping)"
+      },
+      {
+        "id": "tumbler_20oz",
+        "name": "Tumbler stainless 20oz",
+        "base_note": "EUR 18.59 (Premium EUR 16.48); harga USD tidak dijumpai; pihak ketiga $12-16",
+        "shipping_note": "EUR 5.56",
+        "price_usd": 32.99,
+        "profit_usd_range": "10-16",
+        "sources": [
+          "https://printify.com/app/products/1927/generic-brand/stainless-steel-tumbler-20oz",
+          "https://merchtitans.com/blog/print-on-demand-tumblers-guide"
+        ],
+        "level": "rasmi (EUR); anggaran (USD)"
+      },
+      {
+        "id": "gildan_18000",
+        "name": "Sweatshirt Gildan 18000",
+        "base_usd": 17.87,
+        "shipping_usd": 8,
+        "shipping_note": "Anggaran $5.99-8.79",
+        "price_usd": 44.99,
+        "profit_usd": 23.7,
+        "sources": [
+          "https://printify.com/app/products/49/gildan/unisex-heavy-blendtm-crewneck-sweatshirt",
+          "https://printify.com/blog/gildan-sweatshirts/"
+        ],
+        "level": "rasmi"
+      },
+      {
+        "id": "gildan_18000_embroidered",
+        "name": "Sweatshirt Gildan 18000 bersulam",
+        "base_usd": 19.61,
+        "shipping_usd": 8,
+        "price_usd": 54.99,
+        "profit_usd": 31.4,
+        "sources": [
+          "https://printify.com/custom-embroidered-hoodies/"
+        ],
+        "level": "rasmi"
+      },
+      {
+        "id": "cc_1566",
+        "name": "Sweatshirt Comfort Colors 1566",
+        "base_usd": 31.29,
+        "base_premium_usd": 23.85,
+        "shipping_usd": 8,
+        "price_usd": 59.99,
+        "profit_usd": 24.4,
+        "profit_premium_usd": 31.8,
+        "sources": [
+          "https://printify.com/app/products/bestsellers"
+        ],
+        "level": "rasmi"
+      },
+      {
+        "id": "cc_1717",
+        "name": "T-shirt Comfort Colors 1717",
+        "base_usd": 12.41,
+        "shipping_usd": 4.75,
+        "shipping_additional_usd": 2.4,
+        "price_usd": 32.99,
+        "profit_usd": 18.1,
+        "sources": [
+          "https://printify.com/custom-t-shirts-ab/",
+          "https://printify.com/shipping-rates/printify-choice/"
+        ],
+        "level": "rasmi"
+      },
+      {
+        "id": "velveteen_blanket",
+        "name": "Velveteen plush blanket",
+        "base_usd": 13.64,
+        "base_premium_usd": 9.88,
+        "base_note": "Saiz termurah",
+        "shipping_usd": 5.69,
+        "price_usd": 44.99,
+        "profit_usd": 28.1,
+        "sources": [
+          "https://printify.com/app/products/522/generic-brand/velveteen-plush-blanket"
+        ],
+        "level": "rasmi"
+      },
+      {
+        "id": "digital_printable_bundle",
+        "name": "Printable digital (bundle 3-12)",
+        "base_usd": 0,
+        "price_usd": 12.99,
+        "profit_usd": 12.0,
+        "market_prices": "Etsy: set 12 cetakan $2.70; set 25 cetakan $14.62-18.22; bundle kelas 15 produk $32.99; quote minimal $5-18",
+        "fulfilment": "WooCommerce produk 'downloadable' (percuma)",
+        "sources": [
+          "https://www.etsy.com/listing/4315142864",
+          "https://www.etsy.com/listing/4323688674",
+          "https://www.insightagent.app/guides/best-selling-printable-wall-art-etsy"
+        ],
+        "level": "rasmi (harga listing Etsy)"
+      },
+      {
+        "id": "digital_svg_bundle",
+        "name": "Fail SVG/PNG (Cricut, sublimation)",
+        "base_usd": 0,
+        "price_usd": 9.99,
+        "profit_usd": 9.2,
+        "market_prices": "Sefail $2-6; bundle $6-15",
+        "sources": [
+          "https://mydesigns.io/blog/svg-files-for-cricut/",
+          "https://merchtitans.com/blog/how-to-sell-svg-files-online"
+        ],
+        "level": "pihak_ketiga"
+      }
+    ],
+    "bundles": [
+      {
+        "id": "bridal_sweatshirt_set",
+        "name": "Set bridal 5 x Gildan 18000 @ $38",
+        "revenue_usd": 190,
+        "profit_usd": 88,
+        "note": "Shipping pembeli: $8 + 4 x ~$2.50"
+      },
+      {
+        "id": "bridal_tee_set",
+        "name": "Set bridal 5 x Comfort Colors 1717 @ $29.99",
+        "revenue_usd": 149.95,
+        "profit_usd": 78,
+        "note": "Shipping pembeli: $4.75 + 4 x $2.40"
+      },
+      {
+        "id": "poster_set_3",
+        "name": "Set 3 poster 18x24 @ $69.99",
+        "revenue_usd": 69.99,
+        "profit_usd": 39,
+        "note": "Shipping pembeli: $7.39 + 2 x $1.99"
+      }
+    ],
+    "niche_product_map": {
+      "bridal": [
+        "bridal_sweatshirt_set",
+        "bridal_tee_set",
+        "tote",
+        "tumbler_20oz",
+        "stickers"
+      ],
+      "teacher": [
+        "digital_printable_bundle",
+        "poster_matte",
+        "tote",
+        "tumbler_20oz",
+        "mug_11oz"
+      ],
+      "nursery": [
+        "poster_matte",
+        "poster_framed",
+        "canvas",
+        "digital_printable_bundle",
+        "velveteen_blanket"
+      ],
+      "funny_home": [
+        "poster_set_3",
+        "poster_matte",
+        "digital_printable_bundle",
+        "poster_framed",
+        "mug_11oz"
+      ],
+      "mama": [
+        "mug_11oz",
+        "poster_framed",
+        "velveteen_blanket",
+        "tote",
+        "cc_1566"
+      ],
+      "christmas": [
+        "gildan_18000",
+        "mug_11oz",
+        "velveteen_blanket",
+        "poster_matte"
+      ],
+      "friendship": [
+        "mug_11oz",
+        "tumbler_20oz",
+        "stickers",
+        "cc_1717"
+      ],
+      "bookish": [
+        "tote",
+        "gildan_18000",
+        "stickers",
+        "poster_matte",
+        "digital_svg_bundle"
+      ]
+    },
+    "corrections": [
+      "Kos Gildan 18000 disahkan $17.87 di halaman Printify (anggaran sebelum ini $15.24): untung sehelai ~$23.7 (bukan ~$26); set bridal 5 helai ~$88 (bukan ~$101).",
+      "Kos mug 11oz disahkan $4.93 (anggaran sebelum ini $7.25): untung ~$13.3 (bukan ~$11)."
+    ]
+  },
+  "personas": {
+    "stage": 5,
+    "title": "Persona & target buyer",
+    "updated": "2026-11-21",
+    "platform_audience": [
+      {
+        "claim": "~70% pengguna Pinterest wanita",
+        "source": "https://www.charleagency.com/articles/pinterest-statistics/",
+        "level": "pihak_ketiga"
+      },
+      {
+        "claim": "Pew 2023: 41% isi rumah $100k+ guna Pinterest vs 27% bawah $30k",
+        "source": "https://branvas.com/blogs/news/pinterest-shopping-statistics-jewelry",
+        "level": "pihak_ketiga"
+      },
+      {
+        "claim": "Kadar pembeli ulangan brand POD yang berjaya ~10%",
+        "source": "https://podvector.ai/articles/profit-analytics/benchmarks/what-is-a-good-repeat-customer-rate",
+        "level": "lemah"
+      }
+    ],
+    "personas": [
+      {
+        "id": "bride",
+        "name": "Pengantin & ketua bridal party",
+        "niche": "bridal",
+        "who": "Wanita 24-34, bertunang, merancang di Pinterest",
+        "market_size": [
+          {
+            "claim": "~2,011,044 perkahwinan di US pada 2025",
+            "source": "https://wedding.report/index.cfm/action/wedding_statistics/view/market/",
+            "level": "pihak_ketiga"
+          },
+          {
+            "claim": "77% pasangan guna Pinterest untuk inspirasi (83% Gen Z)",
+            "source": "https://www.zola.com/expert-advice/social-media-wedding-inspiration",
+            "level": "pihak_ketiga"
+          }
+        ],
+        "spend": [
+          {
+            "claim": "Purata kos menjadi bridesmaid $1,324 setiap majlis; shower + bachelorette ~40% (~$500)",
+            "source": "https://www.cbsnews.com/news/the-ever-escalating-bill-for-being-a-bridesmaid",
+            "level": "pihak_ketiga"
+          },
+          {
+            "claim": "Hadiah bridesmaid untuk majlis kahwin ~$170 (data The Knot lama)",
+            "source": "https://www.theknot.com/content/average-bridesmaid-dress-cost",
+            "level": "pihak_ketiga"
+          }
+        ],
+        "frequency": "Sekali setiap perkahwinan; bridesmaid kemudian menjadi pengantin (rujukan)",
+        "when": "Proposal Dis-Mac (19% lamaran pada Disember); set bridal party 1-3 bulan sebelum majlis (anggaran); 76% majlis Mei-Okt",
+        "how": "BULK: 1 pesanan untuk 4-8 orang (purata party 8, 4 setiap pihak)",
+        "products": [
+          "Set sweatshirt/tee bridal",
+          "tote",
+          "tumbler",
+          "stickers kotak proposal"
+        ],
+        "emotion": "Rasa sekumpulan, kenangan, penghargaan kepada kawan"
+      },
+      {
+        "id": "teacher",
+        "name": "Cikgu",
+        "niche": "teacher",
+        "who": "Cikgu sekolah rendah/menengah, kebanyakan wanita, aktif di Pinterest untuk idea kelas",
+        "market_size": [
+          {
+            "claim": "~3.19 juta cikgu sekolah awam (unjuran musim luruh 2026)",
+            "source": "https://www.edweek.org/ew/issues/education-statistics/index.html",
+            "level": "rasmi"
+          },
+          {
+            "claim": "~483,000 cikgu sekolah swasta (2021-22)",
+            "source": "https://www.ed.gov/birth-grade-12-education/school-choice/school-choice-education-statistics",
+            "level": "rasmi"
+          }
+        ],
+        "spend": [
+          {
+            "claim": "Purata $600 duit sendiri untuk kelas (tahun 2025-26; 2,501 cikgu)",
+            "source": "https://www.edweek.org/leadership/see-the-school-supplies-teachers-buy-for-students/2026/08",
+            "level": "rasmi"
+          },
+          {
+            "claim": "Purata ~$895 (AdoptAClassroom, tahun survei tidak jelas)",
+            "source": "https://www.adoptaclassroom.org/2025/06/09/2025-teacher-survey-spending-stats-classroom-needs/",
+            "level": "pihak_ketiga"
+          },
+          {
+            "claim": "95% cikgu sekolah awam guna duit sendiri untuk bekalan kelas",
+            "source": "https://www.edweek.org/teaching-learning/most-teachers-spend-their-own-money-on-school-supplies-should-they/2023/08",
+            "level": "rasmi"
+          }
+        ],
+        "frequency": "Setiap tahun persekolahan (refresh kelas) + pembelian pertengahan tahun",
+        "when": "Jul-Ogos (back-to-school), Januari (semester baru)",
+        "how": "SET: bundle poster kelas (6-12), printable digital; apparel satu-satu",
+        "products": [
+          "Bundle printable kelas",
+          "set poster matte",
+          "tote",
+          "tumbler",
+          "tee"
+        ],
+        "emotion": "Bangga dengan kerjaya, lucu, inspirasi pelajar"
+      },
+      {
+        "id": "parent_teacher_gift",
+        "name": "Ibu bapa pemberi hadiah cikgu",
+        "niche": "teacher",
+        "who": "Ibu (kebanyakan) yang membeli hadiah untuk cikgu anak",
+        "market_size": [
+          {
+            "claim": "'teacher gift' ~60,500 carian/bulan, puncak Disember",
+            "source": "https://www.rankhero.com/keywords/teacher-gift",
+            "level": "pihak_ketiga"
+          }
+        ],
+        "spend": [
+          {
+            "claim": "Julat paling biasa $10-20 setiap hadiah (52%); 26% lebih $20 (poll, tarikh tidak dinyatakan)",
+            "source": "https://blog.timesunion.com/savings/?p=12197",
+            "level": "lemah"
+          }
+        ],
+        "frequency": "2-3 kali setahun (Krismas, Teacher Appreciation, hujung tahun)",
+        "when": "Dis; awal Mei (Teacher Appreciation Week, inferens); Mei-Jun (hujung tahun)",
+        "how": "SATU-SATU; kadang-kadang hadiah kumpulan kelas",
+        "products": [
+          "Mug",
+          "tote",
+          "tumbler",
+          "poster kecil"
+        ],
+        "emotion": "Terima kasih, penghargaan"
+      },
+      {
+        "id": "new_mom",
+        "name": "Ibu baru / bakal ibu (nursery)",
+        "niche": "nursery",
+        "who": "Wanita 25-38, menyediakan nursery; juga pemberi hadiah baby shower",
+        "market_size": [
+          {
+            "claim": "3,606,400 kelahiran di US pada 2025 (provisional)",
+            "source": "https://cdc.gov/nchs/pressroom/releases/20260409.html",
+            "level": "rasmi"
+          }
+        ],
+        "spend": [],
+        "frequency": "Sekali setiap anak (set nursery) + hadiah baby shower",
+        "when": "Sepanjang tahun; minat nursery wall art memuncak April",
+        "how": "SET (2-3 poster sepadan) atau satu poster utama",
+        "products": [
+          "Poster matte",
+          "poster berbingkai",
+          "canvas",
+          "printable",
+          "velveteen blanket"
+        ],
+        "emotion": "Kasih sayang, harapan"
+      },
+      {
+        "id": "mom_gifter",
+        "name": "Pemberi hadiah untuk ibu",
+        "niche": "mama",
+        "who": "Anak dewasa / pasangan membeli hadiah untuk ibu",
+        "market_size": [
+          {
+            "claim": "84% orang dewasa US raikan Mother's Day; jumlah belanja rekod $38 bilion (2026)",
+            "source": "https://nrf.com/media-center/press-releases/mother-s-day-spending-expected-to-hit-record-38-billion",
+            "level": "rasmi"
+          }
+        ],
+        "spend": [
+          {
+            "claim": "Purata $284.25 setiap orang (Mother's Day 2026); lelaki $346, wanita $225",
+            "source": "https://nrf.com/blog/2026-mothers-day-shopping-plans",
+            "level": "rasmi"
+          }
+        ],
+        "frequency": "2-3 kali setahun (Mother's Day, hari jadi, Krismas)",
+        "when": "Carian 'mothers day' melonjak ~1 minggu sebelum; carian hadiah umum lebih awal; Mother's Day 2027 = 9 Mei",
+        "how": "SATU-SATU",
+        "products": [
+          "Mug",
+          "poster berbingkai",
+          "velveteen blanket",
+          "tote",
+          "sweatshirt"
+        ],
+        "emotion": "Kasih sayang, terima kasih"
+      },
+      {
+        "id": "home_decorator",
+        "name": "Peminat hiasan rumah (tanda lucu, ikut bilik)",
+        "niche": "funny_home",
+        "who": "Wanita pemilik/penyewa rumah, suka humor dan estetik",
+        "market_size": [
+          {
+            "claim": "'funny bathroom sign' ~8,100 carian/bulan; 'bathroom sign' ~22,200",
+            "source": "https://www.rankhero.com/keywords/funny-bathroom-sign",
+            "level": "pihak_ketiga"
+          }
+        ],
+        "spend": [],
+        "frequency_evidence": [
+          {
+            "claim": "UK: 25% refresh rumah setiap tahun, 18% setiap 6 bulan",
+            "source": "https://www.featherandblack.com/inspiration/how-often-the-uk-redecorates",
+            "level": "pihak_ketiga"
+          },
+          {
+            "claim": "US 2017: 49% Baby Boomer beli wall art dalam 12 bulan lepas",
+            "source": "https://statista.com/statistics/764304/wall-art-purchase-by-american-households-in-the-last-twelve-months-by-generation",
+            "level": "pihak_ketiga"
+          },
+          {
+            "claim": "US 2016: 79% tidak membeli seni untuk rumah dalam setahun",
+            "source": "https://statista.com/statistics/582502/adults-who-have-purchased-art-for-their-home-us",
+            "level": "pihak_ketiga"
+          }
+        ],
+        "frequency": "~1 kali setahun bagi peminat hiasan aktif (data lama/UK)",
+        "when": "Jan-Apr (refresh), Q4 (hadiah rumah baru)",
+        "how": "SET 3 (gallery wall) atau satu-satu",
+        "products": [
+          "Set 3 poster",
+          "poster matte",
+          "printable",
+          "poster berbingkai",
+          "mug dapur"
+        ],
+        "emotion": "Humor, 'itu aku sangat', estetik"
+      },
+      {
+        "id": "friend_gifter",
+        "name": "Pemberi hadiah kawan (Galentine)",
+        "niche": "friendship",
+        "who": "Wanita muda (Gen Z/millennial) membeli untuk kumpulan kawan",
+        "market_size": [
+          {
+            "claim": "33% pengguna merancang hadiah untuk kawan pada Valentine 2026 ($2.4 bilion)",
+            "source": "https://nrf.com/media-center/press-releases/valentine-s-day-spending-expected-to-reach-new-records",
+            "level": "rasmi"
+          },
+          {
+            "claim": "Carian hadiah personalisasi untuk kawan +1,400% (Etsy F/W 2026)",
+            "source": "https://community.etsy.com/forum/etsy-success-300/topic/etsy-insights-etsy-trend-edit-fallwinter-26-190171/",
+            "level": "rasmi"
+          }
+        ],
+        "spend": [
+          {
+            "claim": "Purata belanja Valentine $199.78 setiap orang (2026)",
+            "source": "https://nrf.com/research-insights/holiday-data-and-trends/valentines-day",
+            "level": "rasmi"
+          }
+        ],
+        "frequency": "1-2 kali setahun (Galentine, Friendsmas, hari jadi)",
+        "when": "Akhir Jan - 13 Feb; Disember",
+        "how": "BEBERAPA ITEM kecil untuk kumpulan kawan",
+        "products": [
+          "Mug",
+          "tumbler",
+          "stickers",
+          "tee"
+        ],
+        "emotion": "Persahabatan, lucu, rasa sekumpulan"
+      },
+      {
+        "id": "holiday_shopper",
+        "name": "Pembeli hadiah Krismas",
+        "niche": "christmas",
+        "who": "Semua umur; wanita merancang hadiah keluarga",
+        "market_size": [
+          {
+            "claim": "Jualan runcit Nov-Dis 2026 diunjur $1.013 trilion (+4.2%)",
+            "source": "https://nrf.com/media-center/press-releases/nrf-forecasts-2026-holiday-sales-growth-as-consumers-remain-resilient",
+            "level": "rasmi"
+          }
+        ],
+        "spend": [
+          {
+            "claim": "Purata $890.49 setiap orang untuk hadiah, makanan dan hiasan (2025)",
+            "source": "https://www.axios.com/2025/11/06/holiday-sales-2025-nrf-forecast-trillion-dollar",
+            "level": "rasmi"
+          }
+        ],
+        "frequency": "Sekali setahun, beberapa hadiah",
+        "when": "Okt-Dis (pin Jul-Sep); cutoff shipping pertengahan Dis",
+        "how": "BEBERAPA HADIAH setiap pesanan",
+        "products": [
+          "Sweatshirt",
+          "mug",
+          "velveteen blanket",
+          "poster"
+        ],
+        "emotion": "Kehangatan keluarga, nostalgia"
+      },
+      {
+        "id": "reader",
+        "name": "Pencinta buku",
+        "niche": "bookish",
+        "who": "Wanita 20-40, BookTok/Bookstagram, suka trope (romantasy dll.)",
+        "market_size": [
+          {
+            "claim": "'bookish' ~135,000 carian/bulan (istilah luas)",
+            "source": "https://www.rankhero.com/keywords/bookish",
+            "level": "pihak_ketiga"
+          },
+          {
+            "claim": "Carian 'book totes' +148% (data Faire)",
+            "source": "https://www.somethingdifferentwholesale.com/uk/blog/book-gift-trend/",
+            "level": "lemah"
+          }
+        ],
+        "spend": [],
+        "frequency": "Tidak diketahui (tiada data); beli untuk diri sendiri + hadiah Q4",
+        "when": "Sepanjang tahun; naik Q4",
+        "how": "SATU-SATU",
+        "products": [
+          "Tote",
+          "sweatshirt",
+          "stickers",
+          "poster reading nook",
+          "SVG"
+        ],
+        "emotion": "Identiti, inside joke trope"
+      }
+    ],
+    "bulk_vs_single": {
+      "bulk": [
+        "bride (4-8 item)",
+        "teacher (set 6-12)",
+        "friend_gifter (beberapa item kecil)",
+        "holiday_shopper (beberapa hadiah)"
+      ],
+      "set_or_single": [
+        "new_mom",
+        "home_decorator"
+      ],
+      "single": [
+        "parent_teacher_gift",
+        "mom_gifter",
+        "reader"
+      ]
+    },
+    "gaps": [
+      "Tiada data kekerapan beli khusus untuk wall art di US yang terkini (data 2016-2017 / UK).",
+      "Tiada data belanja khusus pencinta buku dan ibu baru untuk hiasan nursery.",
+      "Tarikh Teacher Appreciation Week 2027 belum disahkan."
+    ]
+  },
+  "model": {
+    "stage": 6,
+    "title": "Kalendar musim + model untung setahun",
+    "updated": "2026-11-21",
+    "assumptions": {
+      "steady_visitors_per_month": 3000,
+      "ramp_year1": {
+        "Jan": 0.05,
+        "Feb": 0.1,
+        "Mac": 0.2,
+        "Apr": 0.33,
+        "Mei": 0.5,
+        "Jun": 0.67,
+        "Jul": 0.83,
+        "Ogos": 1,
+        "Sep": 1,
+        "Okt": 1,
+        "Nov": 1,
+        "Dis": 1
+      },
+      "conversion": "1.5% satu-satu; 1.0% bridal (anggaran berdasarkan purata kedai POD ~1.7%)",
+      "profit_per_order": "Dari Peringkat 4 (kos Printify disahkan), campuran produk setiap niche",
+      "seasonality": "Indeks anggaran Claude berdasarkan bukti Peringkat 1-5 (jumlah 1200 = purata 100/bulan); belum disahkan dengan Pinterest/Google Trends",
+      "pessimistic": "trafik x0.5, conversion x0.67 (bridal x0.5)",
+      "optimistic": "trafik x2 (6,000 pelawat/bulan)"
+    },
+    "niches": {
+      "bridal": {
+        "name": "Bridal",
+        "share": 0.15,
+        "conv": 0.01,
+        "profit": 70,
+        "revenue": 160,
+        "type": "bermusim",
+        "idx": [
+          110,
+          110,
+          115,
+          125,
+          125,
+          95,
+          100,
+          120,
+          115,
+          70,
+          50,
+          65
+        ],
+        "pin": "Nov-Feb (proposal), Jan-Ogos (set bridal party)"
+      },
+      "teacher": {
+        "name": "Cikgu",
+        "share": 0.12,
+        "conv": 0.015,
+        "profit": 20,
+        "revenue": 35,
+        "type": "bermusim",
+        "idx": [
+          70,
+          60,
+          70,
+          120,
+          150,
+          80,
+          140,
+          160,
+          90,
+          60,
+          80,
+          120
+        ],
+        "pin": "Mac-Apr (appreciation), Mei-Jul (back-to-school), Okt-Nov (hadiah Krismas)"
+      },
+      "nursery": {
+        "name": "Nursery",
+        "share": 0.15,
+        "conv": 0.015,
+        "profit": 25,
+        "revenue": 45,
+        "type": "sepanjang tahun",
+        "idx": [
+          95,
+          95,
+          105,
+          120,
+          105,
+          95,
+          95,
+          95,
+          95,
+          95,
+          100,
+          105
+        ],
+        "pin": "Sepanjang tahun; tambah Feb-Mac"
+      },
+      "funny_home": {
+        "name": "Tanda lucu rumah",
+        "share": 0.2,
+        "conv": 0.015,
+        "profit": 22,
+        "revenue": 40,
+        "type": "sepanjang tahun",
+        "idx": [
+          90,
+          80,
+          95,
+          105,
+          100,
+          90,
+          85,
+          95,
+          100,
+          110,
+          125,
+          125
+        ],
+        "pin": "Sepanjang tahun; tambah Dis-Feb dan Ogos-Okt"
+      },
+      "mama": {
+        "name": "Mama",
+        "share": 0.12,
+        "conv": 0.015,
+        "profit": 20,
+        "revenue": 35,
+        "type": "sepanjang tahun + puncak",
+        "idx": [
+          70,
+          70,
+          90,
+          140,
+          190,
+          70,
+          60,
+          60,
+          70,
+          90,
+          130,
+          150
+        ],
+        "pin": "Feb-Apr (Mother's Day), Sep-Okt (Krismas)"
+      },
+      "christmas": {
+        "name": "Krismas",
+        "share": 0.08,
+        "conv": 0.015,
+        "profit": 26,
+        "revenue": 45,
+        "type": "bermusim",
+        "idx": [
+          10,
+          0,
+          0,
+          0,
+          0,
+          0,
+          10,
+          30,
+          80,
+          200,
+          420,
+          450
+        ],
+        "pin": "Jul-Okt"
+      },
+      "friendship": {
+        "name": "Kawan / Galentine",
+        "share": 0.06,
+        "conv": 0.015,
+        "profit": 22,
+        "revenue": 40,
+        "type": "bermusim",
+        "idx": [
+          300,
+          420,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          40,
+          60,
+          100
+        ],
+        "pin": "Nov-Jan"
+      },
+      "bookish": {
+        "name": "Bookish",
+        "share": 0.12,
+        "conv": 0.015,
+        "profit": 18,
+        "revenue": 32,
+        "type": "sepanjang tahun",
+        "idx": [
+          90,
+          85,
+          90,
+          90,
+          95,
+          95,
+          100,
+          100,
+          100,
+          105,
+          125,
+          125
+        ],
+        "pin": "Sepanjang tahun; tambah Ogos-Okt"
+      }
+    },
+    "results": {
+      "pesimis": {
+        "steady": {
+          "months": [
+            {
+              "month": "Jan",
+              "by_niche": {
+                "bridal": 86.6,
+                "teacher": 25.2,
+                "nursery": 53.5,
+                "funny_home": 59.4,
+                "mama": 25.2,
+                "christmas": 3.1,
+                "friendship": 59.4,
+                "bookish": 29.2
+              },
+              "profit": 341.7,
+              "orders": 13.0,
+              "revenue": 655.9
+            },
+            {
+              "month": "Feb",
+              "by_niche": {
+                "bridal": 86.6,
+                "teacher": 21.6,
+                "nursery": 53.5,
+                "funny_home": 52.8,
+                "mama": 25.2,
+                "christmas": 0.0,
+                "friendship": 83.2,
+                "bookish": 27.6
+              },
+              "profit": 350.5,
+              "orders": 13.4,
+              "revenue": 672.5
+            },
+            {
+              "month": "Mac",
+              "by_niche": {
+                "bridal": 90.6,
+                "teacher": 25.2,
+                "nursery": 59.1,
+                "funny_home": 62.7,
+                "mama": 32.4,
+                "christmas": 0.0,
+                "friendship": 7.9,
+                "bookish": 29.2
+              },
+              "profit": 307.1,
+              "orders": 11.4,
+              "revenue": 594.5
+            },
+            {
+              "month": "Apr",
+              "by_niche": {
+                "bridal": 98.4,
+                "teacher": 43.2,
+                "nursery": 67.5,
+                "funny_home": 69.3,
+                "mama": 50.4,
+                "christmas": 0.0,
+                "friendship": 7.9,
+                "bookish": 29.2
+              },
+              "profit": 366.1,
+              "orders": 13.9,
+              "revenue": 702.8
+            },
+            {
+              "month": "Mei",
+              "by_niche": {
+                "bridal": 98.4,
+                "teacher": 54.0,
+                "nursery": 59.1,
+                "funny_home": 66.0,
+                "mama": 68.4,
+                "christmas": 0.0,
+                "friendship": 7.9,
+                "bookish": 30.8
+              },
+              "profit": 384.7,
+              "orders": 15.0,
+              "revenue": 734.9
+            },
+            {
+              "month": "Jun",
+              "by_niche": {
+                "bridal": 74.8,
+                "teacher": 28.8,
+                "nursery": 53.5,
+                "funny_home": 59.4,
+                "mama": 25.2,
+                "christmas": 0.0,
+                "friendship": 7.9,
+                "bookish": 30.8
+              },
+              "profit": 280.5,
+              "orders": 10.7,
+              "revenue": 539.0
+            },
+            {
+              "month": "Jul",
+              "by_niche": {
+                "bridal": 78.8,
+                "teacher": 50.4,
+                "nursery": 53.5,
+                "funny_home": 56.1,
+                "mama": 21.6,
+                "christmas": 3.1,
+                "friendship": 7.9,
+                "bookish": 32.4
+              },
+              "profit": 303.8,
+              "orders": 11.7,
+              "revenue": 581.8
+            },
+            {
+              "month": "Ogos",
+              "by_niche": {
+                "bridal": 94.5,
+                "teacher": 57.6,
+                "nursery": 53.5,
+                "funny_home": 62.7,
+                "mama": 21.6,
+                "christmas": 9.4,
+                "friendship": 7.9,
+                "bookish": 32.4
+              },
+              "profit": 339.6,
+              "orders": 12.8,
+              "revenue": 653.2
+            },
+            {
+              "month": "Sep",
+              "by_niche": {
+                "bridal": 90.6,
+                "teacher": 32.4,
+                "nursery": 53.5,
+                "funny_home": 66.0,
+                "mama": 25.2,
+                "christmas": 25.0,
+                "friendship": 7.9,
+                "bookish": 32.4
+              },
+              "profit": 333.0,
+              "orders": 12.4,
+              "revenue": 639.4
+            },
+            {
+              "month": "Okt",
+              "by_niche": {
+                "bridal": 55.1,
+                "teacher": 21.6,
+                "nursery": 53.5,
+                "funny_home": 72.6,
+                "mama": 32.4,
+                "christmas": 62.4,
+                "friendship": 7.9,
+                "bookish": 34.0
+              },
+              "profit": 339.6,
+              "orders": 13.6,
+              "revenue": 631.8
+            },
+            {
+              "month": "Nov",
+              "by_niche": {
+                "bridal": 39.4,
+                "teacher": 28.8,
+                "nursery": 56.3,
+                "funny_home": 82.5,
+                "mama": 46.8,
+                "christmas": 131.1,
+                "friendship": 11.9,
+                "bookish": 40.5
+              },
+              "profit": 437.3,
+              "orders": 18.2,
+              "revenue": 794.3
+            },
+            {
+              "month": "Dis",
+              "by_niche": {
+                "bridal": 51.2,
+                "teacher": 43.2,
+                "nursery": 59.1,
+                "funny_home": 82.5,
+                "mama": 54.0,
+                "christmas": 140.5,
+                "friendship": 19.8,
+                "bookish": 40.5
+              },
+              "profit": 490.9,
+              "orders": 20.3,
+              "revenue": 894.8
+            }
+          ],
+          "total": {
+            "profit": 4274.8,
+            "orders": 166.4,
+            "revenue": 8094.9
+          }
+        },
+        "year1": {
+          "months": [
+            {
+              "month": "Jan",
+              "by_niche": {
+                "bridal": 4.3,
+                "teacher": 1.3,
+                "nursery": 2.7,
+                "funny_home": 3.0,
+                "mama": 1.3,
+                "christmas": 0.2,
+                "friendship": 3.0,
+                "bookish": 1.5
+              },
+              "profit": 17.1,
+              "orders": 0.7,
+              "revenue": 32.8
+            },
+            {
+              "month": "Feb",
+              "by_niche": {
+                "bridal": 8.7,
+                "teacher": 2.2,
+                "nursery": 5.3,
+                "funny_home": 5.3,
+                "mama": 2.5,
+                "christmas": 0.0,
+                "friendship": 8.3,
+                "bookish": 2.8
+              },
+              "profit": 35.0,
+              "orders": 1.3,
+              "revenue": 67.2
+            },
+            {
+              "month": "Mac",
+              "by_niche": {
+                "bridal": 18.1,
+                "teacher": 5.0,
+                "nursery": 11.8,
+                "funny_home": 12.5,
+                "mama": 6.5,
+                "christmas": 0.0,
+                "friendship": 1.6,
+                "bookish": 5.8
+              },
+              "profit": 61.4,
+              "orders": 2.3,
+              "revenue": 118.9
+            },
+            {
+              "month": "Apr",
+              "by_niche": {
+                "bridal": 32.5,
+                "teacher": 14.3,
+                "nursery": 22.3,
+                "funny_home": 22.9,
+                "mama": 16.6,
+                "christmas": 0.0,
+                "friendship": 2.6,
+                "bookish": 9.6
+              },
+              "profit": 120.8,
+              "orders": 4.6,
+              "revenue": 231.9
+            },
+            {
+              "month": "Mei",
+              "by_niche": {
+                "bridal": 49.2,
+                "teacher": 27.0,
+                "nursery": 29.5,
+                "funny_home": 33.0,
+                "mama": 34.2,
+                "christmas": 0.0,
+                "friendship": 4.0,
+                "bookish": 15.4
+              },
+              "profit": 192.4,
+              "orders": 7.5,
+              "revenue": 367.4
+            },
+            {
+              "month": "Jun",
+              "by_niche": {
+                "bridal": 50.1,
+                "teacher": 19.3,
+                "nursery": 35.8,
+                "funny_home": 39.8,
+                "mama": 16.9,
+                "christmas": 0.0,
+                "friendship": 5.3,
+                "bookish": 20.6
+              },
+              "profit": 187.9,
+              "orders": 7.2,
+              "revenue": 361.1
+            },
+            {
+              "month": "Jul",
+              "by_niche": {
+                "bridal": 65.4,
+                "teacher": 41.9,
+                "nursery": 44.4,
+                "funny_home": 46.6,
+                "mama": 17.9,
+                "christmas": 2.6,
+                "friendship": 6.6,
+                "bookish": 26.9
+              },
+              "profit": 252.2,
+              "orders": 9.7,
+              "revenue": 482.9
+            },
+            {
+              "month": "Ogos",
+              "by_niche": {
+                "bridal": 94.5,
+                "teacher": 57.6,
+                "nursery": 53.5,
+                "funny_home": 62.7,
+                "mama": 21.6,
+                "christmas": 9.4,
+                "friendship": 7.9,
+                "bookish": 32.4
+              },
+              "profit": 339.6,
+              "orders": 12.8,
+              "revenue": 653.2
+            },
+            {
+              "month": "Sep",
+              "by_niche": {
+                "bridal": 90.6,
+                "teacher": 32.4,
+                "nursery": 53.5,
+                "funny_home": 66.0,
+                "mama": 25.2,
+                "christmas": 25.0,
+                "friendship": 7.9,
+                "bookish": 32.4
+              },
+              "profit": 333.0,
+              "orders": 12.4,
+              "revenue": 639.4
+            },
+            {
+              "month": "Okt",
+              "by_niche": {
+                "bridal": 55.1,
+                "teacher": 21.6,
+                "nursery": 53.5,
+                "funny_home": 72.6,
+                "mama": 32.4,
+                "christmas": 62.4,
+                "friendship": 7.9,
+                "bookish": 34.0
+              },
+              "profit": 339.6,
+              "orders": 13.6,
+              "revenue": 631.8
+            },
+            {
+              "month": "Nov",
+              "by_niche": {
+                "bridal": 39.4,
+                "teacher": 28.8,
+                "nursery": 56.3,
+                "funny_home": 82.5,
+                "mama": 46.8,
+                "christmas": 131.1,
+                "friendship": 11.9,
+                "bookish": 40.5
+              },
+              "profit": 437.3,
+              "orders": 18.2,
+              "revenue": 794.3
+            },
+            {
+              "month": "Dis",
+              "by_niche": {
+                "bridal": 51.2,
+                "teacher": 43.2,
+                "nursery": 59.1,
+                "funny_home": 82.5,
+                "mama": 54.0,
+                "christmas": 140.5,
+                "friendship": 19.8,
+                "bookish": 40.5
+              },
+              "profit": 490.9,
+              "orders": 20.3,
+              "revenue": 894.8
+            }
+          ],
+          "total": {
+            "profit": 2807.2,
+            "orders": 110.6,
+            "revenue": 5275.7
+          }
+        }
+      },
+      "asas": {
+        "steady": {
+          "months": [
+            {
+              "month": "Jan",
+              "by_niche": {
+                "bridal": 346.5,
+                "teacher": 75.6,
+                "nursery": 160.3,
+                "funny_home": 178.2,
+                "mama": 75.6,
+                "christmas": 9.4,
+                "friendship": 178.2,
+                "bookish": 87.5
+              },
+              "profit": 1111.3,
+              "orders": 40.3,
+              "revenue": 2164.9
+            },
+            {
+              "month": "Feb",
+              "by_niche": {
+                "bridal": 346.5,
+                "teacher": 64.8,
+                "nursery": 160.3,
+                "funny_home": 158.4,
+                "mama": 75.6,
+                "christmas": 0.0,
+                "friendship": 249.5,
+                "bookish": 82.6
+              },
+              "profit": 1137.7,
+              "orders": 41.5,
+              "revenue": 2214.7
+            },
+            {
+              "month": "Mac",
+              "by_niche": {
+                "bridal": 362.2,
+                "teacher": 75.6,
+                "nursery": 177.2,
+                "funny_home": 188.1,
+                "mama": 97.2,
+                "christmas": 0.0,
+                "friendship": 23.8,
+                "bookish": 87.5
+              },
+              "profit": 1011.6,
+              "orders": 35.4,
+              "revenue": 1990.1
+            },
+            {
+              "month": "Apr",
+              "by_niche": {
+                "bridal": 393.8,
+                "teacher": 129.6,
+                "nursery": 202.5,
+                "funny_home": 207.9,
+                "mama": 151.2,
+                "christmas": 0.0,
+                "friendship": 23.8,
+                "bookish": 87.5
+              },
+              "profit": 1196.2,
+              "orders": 43.2,
+              "revenue": 2332.6
+            },
+            {
+              "month": "Mei",
+              "by_niche": {
+                "bridal": 393.8,
+                "teacher": 162.0,
+                "nursery": 177.2,
+                "funny_home": 198.0,
+                "mama": 205.2,
+                "christmas": 0.0,
+                "friendship": 23.8,
+                "bookish": 92.3
+              },
+              "profit": 1252.2,
+              "orders": 46.3,
+              "revenue": 2428.9
+            },
+            {
+              "month": "Jun",
+              "by_niche": {
+                "bridal": 299.2,
+                "teacher": 86.4,
+                "nursery": 160.3,
+                "funny_home": 178.2,
+                "mama": 75.6,
+                "christmas": 0.0,
+                "friendship": 23.8,
+                "bookish": 92.3
+              },
+              "profit": 915.9,
+              "orders": 33.1,
+              "revenue": 1787.4
+            },
+            {
+              "month": "Jul",
+              "by_niche": {
+                "bridal": 315.0,
+                "teacher": 151.2,
+                "nursery": 160.3,
+                "funny_home": 168.3,
+                "mama": 64.8,
+                "christmas": 9.4,
+                "friendship": 23.8,
+                "bookish": 97.2
+              },
+              "profit": 989.9,
+              "orders": 36.2,
+              "revenue": 1924.8
+            },
+            {
+              "month": "Ogos",
+              "by_niche": {
+                "bridal": 378.0,
+                "teacher": 172.8,
+                "nursery": 160.3,
+                "funny_home": 188.1,
+                "mama": 64.8,
+                "christmas": 28.1,
+                "friendship": 23.8,
+                "bookish": 97.2
+              },
+              "profit": 1113.1,
+              "orders": 39.8,
+              "revenue": 2175.0
+            },
+            {
+              "month": "Sep",
+              "by_niche": {
+                "bridal": 362.2,
+                "teacher": 97.2,
+                "nursery": 160.3,
+                "funny_home": 198.0,
+                "mama": 75.6,
+                "christmas": 74.9,
+                "friendship": 23.8,
+                "bookish": 97.2
+              },
+              "profit": 1089.2,
+              "orders": 38.6,
+              "revenue": 2124.6
+            },
+            {
+              "month": "Okt",
+              "by_niche": {
+                "bridal": 220.5,
+                "teacher": 64.8,
+                "nursery": 160.3,
+                "funny_home": 217.8,
+                "mama": 97.2,
+                "christmas": 187.2,
+                "friendship": 23.8,
+                "bookish": 102.1
+              },
+              "profit": 1073.6,
+              "orders": 41.5,
+              "revenue": 2020.7
+            },
+            {
+              "month": "Nov",
+              "by_niche": {
+                "bridal": 157.5,
+                "teacher": 86.4,
+                "nursery": 168.8,
+                "funny_home": 247.5,
+                "mama": 140.4,
+                "christmas": 393.1,
+                "friendship": 35.6,
+                "bookish": 121.5
+              },
+              "profit": 1350.8,
+              "orders": 55.1,
+              "revenue": 2471.9
+            },
+            {
+              "month": "Dis",
+              "by_niche": {
+                "bridal": 204.8,
+                "teacher": 129.6,
+                "nursery": 177.2,
+                "funny_home": 247.5,
+                "mama": 162.0,
+                "christmas": 421.2,
+                "friendship": 59.4,
+                "bookish": 121.5
+              },
+              "profit": 1523.1,
+              "orders": 61.5,
+              "revenue": 2800.2
+            }
+          ],
+          "total": {
+            "profit": 13764.6,
+            "orders": 512.5,
+            "revenue": 26435.8
+          }
+        },
+        "year1": {
+          "months": [
+            {
+              "month": "Jan",
+              "by_niche": {
+                "bridal": 17.3,
+                "teacher": 3.8,
+                "nursery": 8.0,
+                "funny_home": 8.9,
+                "mama": 3.8,
+                "christmas": 0.5,
+                "friendship": 8.9,
+                "bookish": 4.4
+              },
+              "profit": 55.6,
+              "orders": 2.0,
+              "revenue": 108.2
+            },
+            {
+              "month": "Feb",
+              "by_niche": {
+                "bridal": 34.6,
+                "teacher": 6.5,
+                "nursery": 16.0,
+                "funny_home": 15.8,
+                "mama": 7.6,
+                "christmas": 0.0,
+                "friendship": 24.9,
+                "bookish": 8.3
+              },
+              "profit": 113.8,
+              "orders": 4.2,
+              "revenue": 221.5
+            },
+            {
+              "month": "Mac",
+              "by_niche": {
+                "bridal": 72.4,
+                "teacher": 15.1,
+                "nursery": 35.4,
+                "funny_home": 37.6,
+                "mama": 19.4,
+                "christmas": 0.0,
+                "friendship": 4.8,
+                "bookish": 17.5
+              },
+              "profit": 202.3,
+              "orders": 7.1,
+              "revenue": 398.0
+            },
+            {
+              "month": "Apr",
+              "by_niche": {
+                "bridal": 129.9,
+                "teacher": 42.8,
+                "nursery": 66.8,
+                "funny_home": 68.6,
+                "mama": 49.9,
+                "christmas": 0.0,
+                "friendship": 7.8,
+                "bookish": 28.9
+              },
+              "profit": 394.7,
+              "orders": 14.2,
+              "revenue": 769.8
+            },
+            {
+              "month": "Mei",
+              "by_niche": {
+                "bridal": 196.9,
+                "teacher": 81.0,
+                "nursery": 88.6,
+                "funny_home": 99.0,
+                "mama": 102.6,
+                "christmas": 0.0,
+                "friendship": 11.9,
+                "bookish": 46.2
+              },
+              "profit": 626.1,
+              "orders": 23.1,
+              "revenue": 1214.4
+            },
+            {
+              "month": "Jun",
+              "by_niche": {
+                "bridal": 200.5,
+                "teacher": 57.9,
+                "nursery": 107.4,
+                "funny_home": 119.4,
+                "mama": 50.7,
+                "christmas": 0.0,
+                "friendship": 15.9,
+                "bookish": 61.9
+              },
+              "profit": 613.6,
+              "orders": 22.2,
+              "revenue": 1197.6
+            },
+            {
+              "month": "Jul",
+              "by_niche": {
+                "bridal": 261.4,
+                "teacher": 125.5,
+                "nursery": 133.1,
+                "funny_home": 139.7,
+                "mama": 53.8,
+                "christmas": 7.8,
+                "friendship": 19.7,
+                "bookish": 80.7
+              },
+              "profit": 821.6,
+              "orders": 30.0,
+              "revenue": 1597.6
+            },
+            {
+              "month": "Ogos",
+              "by_niche": {
+                "bridal": 378.0,
+                "teacher": 172.8,
+                "nursery": 160.3,
+                "funny_home": 188.1,
+                "mama": 64.8,
+                "christmas": 28.1,
+                "friendship": 23.8,
+                "bookish": 97.2
+              },
+              "profit": 1113.1,
+              "orders": 39.8,
+              "revenue": 2175.0
+            },
+            {
+              "month": "Sep",
+              "by_niche": {
+                "bridal": 362.2,
+                "teacher": 97.2,
+                "nursery": 160.3,
+                "funny_home": 198.0,
+                "mama": 75.6,
+                "christmas": 74.9,
+                "friendship": 23.8,
+                "bookish": 97.2
+              },
+              "profit": 1089.2,
+              "orders": 38.6,
+              "revenue": 2124.6
+            },
+            {
+              "month": "Okt",
+              "by_niche": {
+                "bridal": 220.5,
+                "teacher": 64.8,
+                "nursery": 160.3,
+                "funny_home": 217.8,
+                "mama": 97.2,
+                "christmas": 187.2,
+                "friendship": 23.8,
+                "bookish": 102.1
+              },
+              "profit": 1073.6,
+              "orders": 41.5,
+              "revenue": 2020.7
+            },
+            {
+              "month": "Nov",
+              "by_niche": {
+                "bridal": 157.5,
+                "teacher": 86.4,
+                "nursery": 168.8,
+                "funny_home": 247.5,
+                "mama": 140.4,
+                "christmas": 393.1,
+                "friendship": 35.6,
+                "bookish": 121.5
+              },
+              "profit": 1350.8,
+              "orders": 55.1,
+              "revenue": 2471.9
+            },
+            {
+              "month": "Dis",
+              "by_niche": {
+                "bridal": 204.8,
+                "teacher": 129.6,
+                "nursery": 177.2,
+                "funny_home": 247.5,
+                "mama": 162.0,
+                "christmas": 421.2,
+                "friendship": 59.4,
+                "bookish": 121.5
+              },
+              "profit": 1523.1,
+              "orders": 61.5,
+              "revenue": 2800.2
+            }
+          ],
+          "total": {
+            "profit": 8977.5,
+            "orders": 339.3,
+            "revenue": 17099.5
+          }
+        }
+      },
+      "optimis": {
+        "steady": {
+          "months": [
+            {
+              "month": "Jan",
+              "by_niche": {
+                "bridal": 693.0,
+                "teacher": 151.2,
+                "nursery": 320.6,
+                "funny_home": 356.4,
+                "mama": 151.2,
+                "christmas": 18.7,
+                "friendship": 356.4,
+                "bookish": 175.0
+              },
+              "profit": 2222.5,
+              "orders": 80.7,
+              "revenue": 4329.8
+            },
+            {
+              "month": "Feb",
+              "by_niche": {
+                "bridal": 693.0,
+                "teacher": 129.6,
+                "nursery": 320.6,
+                "funny_home": 316.8,
+                "mama": 151.2,
+                "christmas": 0.0,
+                "friendship": 499.0,
+                "bookish": 165.2
+              },
+              "profit": 2275.4,
+              "orders": 83.0,
+              "revenue": 4429.5
+            },
+            {
+              "month": "Mac",
+              "by_niche": {
+                "bridal": 724.5,
+                "teacher": 151.2,
+                "nursery": 354.4,
+                "funny_home": 376.2,
+                "mama": 194.4,
+                "christmas": 0.0,
+                "friendship": 47.5,
+                "bookish": 175.0
+              },
+              "profit": 2023.2,
+              "orders": 70.8,
+              "revenue": 3980.1
+            },
+            {
+              "month": "Apr",
+              "by_niche": {
+                "bridal": 787.5,
+                "teacher": 259.2,
+                "nursery": 405.0,
+                "funny_home": 415.8,
+                "mama": 302.4,
+                "christmas": 0.0,
+                "friendship": 47.5,
+                "bookish": 175.0
+              },
+              "profit": 2392.4,
+              "orders": 86.3,
+              "revenue": 4665.2
+            },
+            {
+              "month": "Mei",
+              "by_niche": {
+                "bridal": 787.5,
+                "teacher": 324.0,
+                "nursery": 354.4,
+                "funny_home": 396.0,
+                "mama": 410.4,
+                "christmas": 0.0,
+                "friendship": 47.5,
+                "bookish": 184.7
+              },
+              "profit": 2504.5,
+              "orders": 92.6,
+              "revenue": 4857.8
+            },
+            {
+              "month": "Jun",
+              "by_niche": {
+                "bridal": 598.5,
+                "teacher": 172.8,
+                "nursery": 320.6,
+                "funny_home": 356.4,
+                "mama": 151.2,
+                "christmas": 0.0,
+                "friendship": 47.5,
+                "bookish": 184.7
+              },
+              "profit": 1831.7,
+              "orders": 66.2,
+              "revenue": 3574.8
+            },
+            {
+              "month": "Jul",
+              "by_niche": {
+                "bridal": 630.0,
+                "teacher": 302.4,
+                "nursery": 320.6,
+                "funny_home": 336.6,
+                "mama": 129.6,
+                "christmas": 18.7,
+                "friendship": 47.5,
+                "bookish": 194.4
+              },
+              "profit": 1979.9,
+              "orders": 72.4,
+              "revenue": 3849.5
+            },
+            {
+              "month": "Ogos",
+              "by_niche": {
+                "bridal": 756.0,
+                "teacher": 345.6,
+                "nursery": 320.6,
+                "funny_home": 376.2,
+                "mama": 129.6,
+                "christmas": 56.2,
+                "friendship": 47.5,
+                "bookish": 194.4
+              },
+              "profit": 2226.1,
+              "orders": 79.6,
+              "revenue": 4349.9
+            },
+            {
+              "month": "Sep",
+              "by_niche": {
+                "bridal": 724.5,
+                "teacher": 194.4,
+                "nursery": 320.6,
+                "funny_home": 396.0,
+                "mama": 151.2,
+                "christmas": 149.8,
+                "friendship": 47.5,
+                "bookish": 194.4
+              },
+              "profit": 2178.4,
+              "orders": 77.2,
+              "revenue": 4249.1
+            },
+            {
+              "month": "Okt",
+              "by_niche": {
+                "bridal": 441.0,
+                "teacher": 129.6,
+                "nursery": 320.6,
+                "funny_home": 435.6,
+                "mama": 194.4,
+                "christmas": 374.4,
+                "friendship": 47.5,
+                "bookish": 204.1
+              },
+              "profit": 2147.3,
+              "orders": 83.0,
+              "revenue": 4041.4
+            },
+            {
+              "month": "Nov",
+              "by_niche": {
+                "bridal": 315.0,
+                "teacher": 172.8,
+                "nursery": 337.5,
+                "funny_home": 495.0,
+                "mama": 280.8,
+                "christmas": 786.2,
+                "friendship": 71.3,
+                "bookish": 243.0
+              },
+              "profit": 2701.6,
+              "orders": 110.2,
+              "revenue": 4943.7
+            },
+            {
+              "month": "Dis",
+              "by_niche": {
+                "bridal": 409.5,
+                "teacher": 259.2,
+                "nursery": 354.4,
+                "funny_home": 495.0,
+                "mama": 324.0,
+                "christmas": 842.4,
+                "friendship": 118.8,
+                "bookish": 243.0
+              },
+              "profit": 3046.3,
+              "orders": 123.0,
+              "revenue": 5600.5
+            }
+          ],
+          "total": {
+            "profit": 27529.3,
+            "orders": 1025.0,
+            "revenue": 52871.3
+          }
+        },
+        "year1": {
+          "months": [
+            {
+              "month": "Jan",
+              "by_niche": {
+                "bridal": 34.6,
+                "teacher": 7.6,
+                "nursery": 16.0,
+                "funny_home": 17.8,
+                "mama": 7.6,
+                "christmas": 0.9,
+                "friendship": 17.8,
+                "bookish": 8.7
+              },
+              "profit": 111.1,
+              "orders": 4.0,
+              "revenue": 216.5
+            },
+            {
+              "month": "Feb",
+              "by_niche": {
+                "bridal": 69.3,
+                "teacher": 13.0,
+                "nursery": 32.1,
+                "funny_home": 31.7,
+                "mama": 15.1,
+                "christmas": 0.0,
+                "friendship": 49.9,
+                "bookish": 16.5
+              },
+              "profit": 227.5,
+              "orders": 8.3,
+              "revenue": 442.9
+            },
+            {
+              "month": "Mac",
+              "by_niche": {
+                "bridal": 144.9,
+                "teacher": 30.2,
+                "nursery": 70.9,
+                "funny_home": 75.2,
+                "mama": 38.9,
+                "christmas": 0.0,
+                "friendship": 9.5,
+                "bookish": 35.0
+              },
+              "profit": 404.6,
+              "orders": 14.2,
+              "revenue": 796.0
+            },
+            {
+              "month": "Apr",
+              "by_niche": {
+                "bridal": 259.9,
+                "teacher": 85.5,
+                "nursery": 133.7,
+                "funny_home": 137.2,
+                "mama": 99.8,
+                "christmas": 0.0,
+                "friendship": 15.7,
+                "bookish": 57.7
+              },
+              "profit": 789.5,
+              "orders": 28.5,
+              "revenue": 1539.5
+            },
+            {
+              "month": "Mei",
+              "by_niche": {
+                "bridal": 393.8,
+                "teacher": 162.0,
+                "nursery": 177.2,
+                "funny_home": 198.0,
+                "mama": 205.2,
+                "christmas": 0.0,
+                "friendship": 23.8,
+                "bookish": 92.3
+              },
+              "profit": 1252.2,
+              "orders": 46.3,
+              "revenue": 2428.9
+            },
+            {
+              "month": "Jun",
+              "by_niche": {
+                "bridal": 401.0,
+                "teacher": 115.8,
+                "nursery": 214.8,
+                "funny_home": 238.8,
+                "mama": 101.3,
+                "christmas": 0.0,
+                "friendship": 31.8,
+                "bookish": 123.7
+              },
+              "profit": 1227.3,
+              "orders": 44.4,
+              "revenue": 2395.1
+            },
+            {
+              "month": "Jul",
+              "by_niche": {
+                "bridal": 522.9,
+                "teacher": 251.0,
+                "nursery": 266.1,
+                "funny_home": 279.4,
+                "mama": 107.6,
+                "christmas": 15.5,
+                "friendship": 39.4,
+                "bookish": 161.4
+              },
+              "profit": 1643.3,
+              "orders": 60.1,
+              "revenue": 3195.1
+            },
+            {
+              "month": "Ogos",
+              "by_niche": {
+                "bridal": 756.0,
+                "teacher": 345.6,
+                "nursery": 320.6,
+                "funny_home": 376.2,
+                "mama": 129.6,
+                "christmas": 56.2,
+                "friendship": 47.5,
+                "bookish": 194.4
+              },
+              "profit": 2226.1,
+              "orders": 79.6,
+              "revenue": 4349.9
+            },
+            {
+              "month": "Sep",
+              "by_niche": {
+                "bridal": 724.5,
+                "teacher": 194.4,
+                "nursery": 320.6,
+                "funny_home": 396.0,
+                "mama": 151.2,
+                "christmas": 149.8,
+                "friendship": 47.5,
+                "bookish": 194.4
+              },
+              "profit": 2178.4,
+              "orders": 77.2,
+              "revenue": 4249.1
+            },
+            {
+              "month": "Okt",
+              "by_niche": {
+                "bridal": 441.0,
+                "teacher": 129.6,
+                "nursery": 320.6,
+                "funny_home": 435.6,
+                "mama": 194.4,
+                "christmas": 374.4,
+                "friendship": 47.5,
+                "bookish": 204.1
+              },
+              "profit": 2147.3,
+              "orders": 83.0,
+              "revenue": 4041.4
+            },
+            {
+              "month": "Nov",
+              "by_niche": {
+                "bridal": 315.0,
+                "teacher": 172.8,
+                "nursery": 337.5,
+                "funny_home": 495.0,
+                "mama": 280.8,
+                "christmas": 786.2,
+                "friendship": 71.3,
+                "bookish": 243.0
+              },
+              "profit": 2701.6,
+              "orders": 110.2,
+              "revenue": 4943.7
+            },
+            {
+              "month": "Dis",
+              "by_niche": {
+                "bridal": 409.5,
+                "teacher": 259.2,
+                "nursery": 354.4,
+                "funny_home": 495.0,
+                "mama": 324.0,
+                "christmas": 842.4,
+                "friendship": 118.8,
+                "bookish": 243.0
+              },
+              "profit": 3046.3,
+              "orders": 123.0,
+              "revenue": 5600.5
+            }
+          ],
+          "total": {
+            "profit": 17955.2,
+            "orders": 678.8,
+            "revenue": 34198.6
+          }
+        }
+      }
+    }
+  },
+  "registry": {
+    "counts": {
+      "total": 151,
+      "rasmi": 57,
+      "pihak_ketiga": 89,
+      "lemah": 5
+    },
+    "conflicts": [
+      {
+        "topic": "Kos Gildan 18000 (Printify)",
+        "values": [
+          "$15.24 (Podvector, pihak ketiga)",
+          "$17.87 (halaman Printify)"
+        ],
+        "resolution": "Guna $17.87 (rasmi)"
+      },
+      {
+        "topic": "Kos mug 11oz (Printify)",
+        "values": [
+          "$6.45-8.25 (blog)",
+          "$4.93 (halaman Printify, saiz/provider termurah)"
+        ],
+        "resolution": "Guna $4.93; sahkan provider dalam editor"
+      },
+      {
+        "topic": "Yuran Printify Premium",
+        "values": [
+          "$29/bulan (sumber lama)",
+          "$39/bulan atau $299/tahun (ApparelHub 2026)"
+        ],
+        "resolution": "BELUM SELESAI - semak printify.com/pricing"
+      },
+      {
+        "topic": "Peratus wanita di Pinterest",
+        "values": [
+          "~70%",
+          "71-72%"
+        ],
+        "resolution": "Guna ~70%"
+      },
+      {
+        "topic": "Belanja cikgu dari duit sendiri",
+        "values": [
+          "$600 (DonorsChoose 2025-26)",
+          "~$895 (AdoptAClassroom, tahun tidak jelas)",
+          "$655 (DonorsChoose 2024-25)"
+        ],
+        "resolution": "Guna $600 (terkini, sampel 2,501)"
+      },
+      {
+        "topic": "Bilangan majlis kahwin US",
+        "values": [
+          "2,011,044 (The Wedding Report 2025)",
+          "2.5 juta 2026 (Zippia, tiada sumber)"
+        ],
+        "resolution": "Guna 2.01 juta"
+      },
+      {
+        "topic": "Volum 'teach shirt' & 'galentines' (RankHero)",
+        "values": [
+          "1,500,000",
+          "1,000,000 (Feb)"
+        ],
+        "resolution": "Dikecualikan sebagai anomali"
+      }
+    ],
+    "verification": {
+      "method": "Setiap angka dikumpul dari hasil carian web yang memetik halaman sumber. Halaman sumber TIDAK dapat dibuka terus dari persekitaran ini (rangkaian disekat; percubaan fetch 8 halaman utama gagal pada 2026-11-21).",
+      "levels": {
+        "rasmi": "Organisasi/platform asal (NRF, CDC, Printify, Pinterest, Etsy, The Knot, EdWeek, eRank)",
+        "pihak_ketiga": "Tool kata kunci, blog vendor, media",
+        "lemah": "Satu sumber, anekdot atau tiada metodologi"
+      },
+      "status": "Disemak melalui indeks carian; belum disemak secara langsung pada halaman asal",
+      "next_step": "Benarkan akses rangkaian ke domain utama (nrf.com, cdc.gov, printify.com, theknot.com, rankhero.com) untuk semakan langsung, atau semak manual 10 angka kritikal."
+    }
+  }
+}

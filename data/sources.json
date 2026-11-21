@@ -1,0 +1,1929 @@
+{
+  "stage": 7,
+  "updated": "2026-11-21",
+  "verification": {
+    "method": "Setiap angka dikumpul dari hasil carian web yang memetik halaman sumber. Halaman sumber TIDAK dapat dibuka terus dari persekitaran ini (rangkaian disekat; percubaan fetch 8 halaman utama gagal pada 2026-11-21).",
+    "levels": {
+      "rasmi": "Organisasi/platform asal (NRF, CDC, Printify, Pinterest, Etsy, The Knot, EdWeek, eRank)",
+      "pihak_ketiga": "Tool kata kunci, blog vendor, media",
+      "lemah": "Satu sumber, anekdot atau tiada metodologi"
+    },
+    "status": "Disemak melalui indeks carian; belum disemak secara langsung pada halaman asal",
+    "next_step": "Benarkan akses rangkaian ke domain utama (nrf.com, cdc.gov, printify.com, theknot.com, rankhero.com) untuk semakan langsung, atau semak manual 10 angka kritikal."
+  },
+  "counts": {
+    "total": 151,
+    "rasmi": 57,
+    "pihak_ketiga": 89,
+    "lemah": 5
+  },
+  "conflicts": [
+    {
+      "topic": "Kos Gildan 18000 (Printify)",
+      "values": [
+        "$15.24 (Podvector, pihak ketiga)",
+        "$17.87 (halaman Printify)"
+      ],
+      "resolution": "Guna $17.87 (rasmi)"
+    },
+    {
+      "topic": "Kos mug 11oz (Printify)",
+      "values": [
+        "$6.45-8.25 (blog)",
+        "$4.93 (halaman Printify, saiz/provider termurah)"
+      ],
+      "resolution": "Guna $4.93; sahkan provider dalam editor"
+    },
+    {
+      "topic": "Yuran Printify Premium",
+      "values": [
+        "$29/bulan (sumber lama)",
+        "$39/bulan atau $299/tahun (ApparelHub 2026)"
+      ],
+      "resolution": "BELUM SELESAI - semak printify.com/pricing"
+    },
+    {
+      "topic": "Peratus wanita di Pinterest",
+      "values": [
+        "~70%",
+        "71-72%"
+      ],
+      "resolution": "Guna ~70%"
+    },
+    {
+      "topic": "Belanja cikgu dari duit sendiri",
+      "values": [
+        "$600 (DonorsChoose 2025-26)",
+        "~$895 (AdoptAClassroom, tahun tidak jelas)",
+        "$655 (DonorsChoose 2024-25)"
+      ],
+      "resolution": "Guna $600 (terkini, sampel 2,501)"
+    },
+    {
+      "topic": "Bilangan majlis kahwin US",
+      "values": [
+        "2,011,044 (The Wedding Report 2025)",
+        "2.5 juta 2026 (Zippia, tiada sumber)"
+      ],
+      "resolution": "Guna 2.01 juta"
+    },
+    {
+      "topic": "Volum 'teach shirt' & 'galentines' (RankHero)",
+      "values": [
+        "1,500,000",
+        "1,000,000 (Feb)"
+      ],
+      "resolution": "Dikecualikan sebagai anomali"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://about.ads.microsoft.com/en-us/blog/post/april-2022/april-monthly-insights-for-gifting-season",
+      "domain": "about.ads.microsoft.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "Carian 'mothers day' melonjak ~1 minggu sebelum; carian hadiah umum naik lebih awal"
+      ],
+      "level": "rasmi",
+      "id": "S001"
+    },
+    {
+      "url": "https://www.aol.com/articles/pinterest-just-announced-top-home-130000967.html",
+      "domain": "aol.com",
+      "stages": [
+        3
+      ],
+      "claims": [
+        "Afrohemian: carian 'afrobohemian home decor' +220%"
+      ],
+      "level": "rasmi",
+      "id": "S002"
+    },
+    {
+      "url": "https://www.aol.com/articles/pinterests-2026-report-shows-retro-165500035.html",
+      "domain": "aol.com",
+      "stages": [
+        3
+      ],
+      "claims": [
+        "Bilik anak retro (nostalgia)"
+      ],
+      "level": "rasmi",
+      "id": "S003"
+    },
+    {
+      "url": "https://www.apartmenttherapy.com/pinterest-predicts-2026-37522611",
+      "domain": "apartmenttherapy.com",
+      "stages": [
+        3
+      ],
+      "claims": [
+        "Neo Deco (glamor berstruktur)"
+      ],
+      "level": "rasmi",
+      "id": "S004"
+    },
+    {
+      "url": "https://www.axios.com/2026/01/17/wedding-party-bridesmaid-groomsmen-cost",
+      "domain": "axios.com",
+      "stages": [
+        1
+      ],
+      "claims": [
+        "Purata wedding party 8 orang (4 setiap pihak), turun dari 10 pada 2019"
+      ],
+      "level": "rasmi",
+      "id": "S005"
+    },
+    {
+      "url": "https://www.axios.com/2025/11/06/holiday-sales-2025-nrf-forecast-trillion-dollar",
+      "domain": "axios.com",
+      "stages": [
+        5
+      ],
+      "claims": [
+        "Purata $890.49 setiap orang untuk hadiah, makanan dan hiasan (2025)"
+      ],
+      "level": "rasmi",
+      "id": "S006"
+    },
+    {
+      "url": "https://cdc.gov/nchs/pressroom/releases/20260409.html",
+      "domain": "cdc.gov",
+      "stages": [
+        5
+      ],
+      "claims": [
+        "3,606,400 kelahiran di US pada 2025 (provisional)"
+      ],
+      "level": "rasmi",
+      "id": "S007"
+    },
+    {
+      "url": "https://community.etsy.com/forum/etsy-success-300/topic/etsy-insights-etsy-trend-edit-fallwinter-26-190171/",
+      "domain": "community.etsy.com",
+      "stages": [
+        1,
+        5
+      ],
+      "claims": [
+        "Carian hadiah personalisasi untuk kawan +1,400% (laporan Etsy F/W 2026; asas tidak dinyatakan)",
+        "Carian hadiah haiwan peliharaan ~2x tahun ke tahun (laporan Etsy F/W 2026)",
+        "Carian hadiah personalisasi untuk kawan +1,400% (Etsy F/W 2026)"
+      ],
+      "level": "rasmi",
+      "id": "S008"
+    },
+    {
+      "url": "https://www.cubbyathome.com/2026-pinterest-predicts-nursery-tour-80046553",
+      "domain": "cubbyathome.com",
+      "stages": [
+        3
+      ],
+      "claims": [
+        "Funhaus / vintage circus +70%; 'circus nursery' meningkat"
+      ],
+      "level": "rasmi",
+      "id": "S009"
+    },
+    {
+      "url": "https://developers.pinterest.com/docs/analytics-and-reports/trends/",
+      "domain": "developers.pinterest.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "API Trends Pinterest memberi volum relatif mingguan (0-100) setiap kata kunci"
+      ],
+      "level": "rasmi",
+      "id": "S010"
+    },
+    {
+      "url": "https://www.ed.gov/birth-grade-12-education/school-choice/school-choice-education-statistics",
+      "domain": "ed.gov",
+      "stages": [
+        5
+      ],
+      "claims": [
+        "~483,000 cikgu sekolah swasta (2021-22)"
+      ],
+      "level": "rasmi",
+      "id": "S011"
+    },
+    {
+      "url": "https://www.edweek.org/ew/issues/education-statistics/index.html",
+      "domain": "edweek.org",
+      "stages": [
+        5
+      ],
+      "claims": [
+        "~3.19 juta cikgu sekolah awam (unjuran musim luruh 2026)"
+      ],
+      "level": "rasmi",
+      "id": "S012"
+    },
+    {
+      "url": "https://www.edweek.org/leadership/see-the-school-supplies-teachers-buy-for-students/2026/08",
+      "domain": "edweek.org",
+      "stages": [
+        5
+      ],
+      "claims": [
+        "Purata $600 duit sendiri untuk kelas (tahun 2025-26; 2,501 cikgu)"
+      ],
+      "level": "rasmi",
+      "id": "S013"
+    },
+    {
+      "url": "https://www.edweek.org/teaching-learning/most-teachers-spend-their-own-money-on-school-supplies-should-they/2023/08",
+      "domain": "edweek.org",
+      "stages": [
+        5
+      ],
+      "claims": [
+        "95% cikgu sekolah awam guna duit sendiri untuk bekalan kelas"
+      ],
+      "level": "rasmi",
+      "id": "S014"
+    },
+    {
+      "url": "https://www.etsy.com/listing/4333199924",
+      "domain": "etsy.com",
+      "stages": [
+        1
+      ],
+      "claims": [
+        "Etsy: varian 'Hello Sweet Cheeks' $2.49 (printable) hingga ~$37 (fizikal)"
+      ],
+      "level": "rasmi",
+      "id": "S015"
+    },
+    {
+      "url": "https://www.etsy.com/shop/KAMDesignHaus",
+      "domain": "etsy.com",
+      "stages": [
+        1
+      ],
+      "claims": [
+        "Kedai Etsy 'KAM DesignHaus' ~26,289 jualan (sejak 2019)"
+      ],
+      "level": "rasmi",
+      "id": "S016"
+    },
+    {
+      "url": "https://www.etsy.com/shop/CraftyCowDesign",
+      "domain": "etsy.com",
+      "stages": [
+        1
+      ],
+      "claims": [
+        "Kedai Etsy 'Crafty Cow Design' ~6,120 jualan (sejak 2013)"
+      ],
+      "level": "rasmi",
+      "id": "S017"
+    },
+    {
+      "url": "https://www.etsy.com/listing/4567285134",
+      "domain": "etsy.com",
+      "stages": [
+        1
+      ],
+      "claims": [
+        "Bundle digital calm corner di Etsy $3.50-16.81"
+      ],
+      "level": "rasmi",
+      "id": "S018"
+    },
+    {
+      "url": "https://www.etsy.com/listing/1161346307",
+      "domain": "etsy.com",
+      "stages": [
+        3
+      ],
+      "claims": [
+        "Penjual Etsy gabungkan humor dengan gaya Art Deco/maximalist"
+      ],
+      "level": "rasmi",
+      "id": "S019"
+    },
+    {
+      "url": "https://www.etsy.com/listing/4315142864",
+      "domain": "etsy.com",
+      "stages": [
+        4
+      ],
+      "claims": [
+        "Printable digital (bundle 3-12)"
+      ],
+      "level": "rasmi",
+      "id": "S020"
+    },
+    {
+      "url": "https://www.etsy.com/listing/4323688674",
+      "domain": "etsy.com",
+      "stages": [
+        4
+      ],
+      "claims": [
+        "Printable digital (bundle 3-12)"
+      ],
+      "level": "rasmi",
+      "id": "S021"
+    },
+    {
+      "url": "https://help.erank.com/blog/top-keywords-on-etsy/",
+      "domain": "help.erank.com",
+      "stages": [
+        1,
+        2
+      ],
+      "claims": [
+        "'christmas' kata kunci #1 di Etsy US, Oktober 2026",
+        "christmas"
+      ],
+      "level": "rasmi",
+      "id": "S022"
+    },
+    {
+      "url": "https://help.erank.com/blog/top-keywords-on-etsy-april-2026/",
+      "domain": "help.erank.com",
+      "stages": [
+        1
+      ],
+      "claims": [
+        "'mothers day' & 'mothers day gift' #4-5 kata kunci Etsy, April 2026"
+      ],
+      "level": "rasmi",
+      "id": "S023"
+    },
+    {
+      "url": "https://help.erank.com/blog/top-etsy-searches-q3-2026/",
+      "domain": "help.erank.com",
+      "stages": [
+        1
+      ],
+      "claims": [
+        "'halloween' kata kunci #2 di Etsy US, Q3 2026",
+        "'wall art' kata kunci #4 di Etsy US, Q3 2026 (dan #4 Mei 2026)",
+        "'shirt' kata kunci #1 di Etsy US, Q3 2026"
+      ],
+      "level": "rasmi",
+      "id": "S024"
+    },
+    {
+      "url": "https://help.pinterest.com/en/business/article/pinterest-trends",
+      "domain": "help.pinterest.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "Pinterest Trends menormalkan volum carian berbanding jumlah carian platform; graf indeks 0-100; tiada akaun diperlukan"
+      ],
+      "level": "rasmi",
+      "id": "S025"
+    },
+    {
+      "url": "https://www.homesandgardens.com/interior-design/pinterest-palette-2026",
+      "domain": "homesandgardens.com",
+      "stages": [
+        3
+      ],
+      "claims": [
+        "Warna 2026: Cool Blue (+85% minat), Jade, Plum Noir, Wasabi, Persimmon"
+      ],
+      "level": "rasmi",
+      "id": "S026"
+    },
+    {
+      "url": "https://newsroom.pinterest.com/en-us/news/the-pinterest-2024-wedding-report/",
+      "domain": "newsroom.pinterest.com",
+      "stages": [
+        1,
+        2
+      ],
+      "claims": [
+        ">3 bilion carian berkaitan perkahwinan setahun (global)",
+        ">3 bilion carian perkahwinan setahun di Pinterest (global)"
+      ],
+      "level": "rasmi",
+      "id": "S027"
+    },
+    {
+      "url": "https://newsroom.pinterest.com/en-ca/news/pinterest-predicts-nonconformity-self-preservation-and-escapism-drive-21-trends-for-2026/",
+      "domain": "newsroom.pinterest.com",
+      "stages": [
+        3
+      ],
+      "claims": [
+        "Senarai rasmi 21 trend Pinterest Predicts 2026"
+      ],
+      "level": "rasmi",
+      "id": "S028"
+    },
+    {
+      "url": "https://nrf.com/media-center/press-releases/mother-s-day-spending-expected-to-hit-record-38-billion",
+      "domain": "nrf.com",
+      "stages": [
+        5
+      ],
+      "claims": [
+        "84% orang dewasa US raikan Mother's Day; jumlah belanja rekod $38 bilion (2026)"
+      ],
+      "level": "rasmi",
+      "id": "S029"
+    },
+    {
+      "url": "https://nrf.com/blog/2026-mothers-day-shopping-plans",
+      "domain": "nrf.com",
+      "stages": [
+        5
+      ],
+      "claims": [
+        "Purata $284.25 setiap orang (Mother's Day 2026); lelaki $346, wanita $225"
+      ],
+      "level": "rasmi",
+      "id": "S030"
+    },
+    {
+      "url": "https://nrf.com/media-center/press-releases/valentine-s-day-spending-expected-to-reach-new-records",
+      "domain": "nrf.com",
+      "stages": [
+        5
+      ],
+      "claims": [
+        "33% pengguna merancang hadiah untuk kawan pada Valentine 2026 ($2.4 bilion)"
+      ],
+      "level": "rasmi",
+      "id": "S031"
+    },
+    {
+      "url": "https://nrf.com/research-insights/holiday-data-and-trends/valentines-day",
+      "domain": "nrf.com",
+      "stages": [
+        5
+      ],
+      "claims": [
+        "Purata belanja Valentine $199.78 setiap orang (2026)"
+      ],
+      "level": "rasmi",
+      "id": "S032"
+    },
+    {
+      "url": "https://nrf.com/media-center/press-releases/nrf-forecasts-2026-holiday-sales-growth-as-consumers-remain-resilient",
+      "domain": "nrf.com",
+      "stages": [
+        5
+      ],
+      "claims": [
+        "Jualan runcit Nov-Dis 2026 diunjur $1.013 trilion (+4.2%)"
+      ],
+      "level": "rasmi",
+      "id": "S033"
+    },
+    {
+      "url": "https://printify.com/app/products/282/generic-brand/matte-vertical-posters",
+      "domain": "printify.com",
+      "stages": [
+        4
+      ],
+      "claims": [
+        "Poster matte (vertical)"
+      ],
+      "level": "rasmi",
+      "id": "S034"
+    },
+    {
+      "url": "https://printify.com/app/products/home-and-living/posters",
+      "domain": "printify.com",
+      "stages": [
+        4
+      ],
+      "claims": [
+        "Poster matte (vertical)"
+      ],
+      "level": "rasmi",
+      "id": "S035"
+    },
+    {
+      "url": "https://printify.com/shipping-rates/todays-graphics/",
+      "domain": "printify.com",
+      "stages": [
+        4
+      ],
+      "claims": [
+        "Poster matte (vertical)"
+      ],
+      "level": "rasmi",
+      "id": "S036"
+    },
+    {
+      "url": "https://printify.com/app/products/540/roma-imaging/framed-vertical-poster",
+      "domain": "printify.com",
+      "stages": [
+        4
+      ],
+      "claims": [
+        "Poster berbingkai (vertical)"
+      ],
+      "level": "rasmi",
+      "id": "S037"
+    },
+    {
+      "url": "https://printify.com/app/products/home-and-living/canvas",
+      "domain": "printify.com",
+      "stages": [
+        4
+      ],
+      "claims": [
+        "Canvas stretched"
+      ],
+      "level": "rasmi",
+      "id": "S038"
+    },
+    {
+      "url": "https://printify.com/app/products/478/generic-brand/ceramic-mug-11oz-15oz",
+      "domain": "printify.com",
+      "stages": [
+        4
+      ],
+      "claims": [
+        "Mug seramik 11oz"
+      ],
+      "level": "rasmi",
+      "id": "S039"
+    },
+    {
+      "url": "https://printify.com/shipping-rates/printify-choice/",
+      "domain": "printify.com",
+      "stages": [
+        4
+      ],
+      "claims": [
+        "Mug seramik 11oz",
+        "T-shirt Comfort Colors 1717"
+      ],
+      "level": "rasmi",
+      "id": "S040"
+    },
+    {
+      "url": "https://printify.com/shipping-rates/swiftpod/",
+      "domain": "printify.com",
+      "stages": [
+        4
+      ],
+      "claims": [
+        "Mug seramik 11oz"
+      ],
+      "level": "rasmi",
+      "id": "S041"
+    },
+    {
+      "url": "https://printify.com/app/brand/94/liberty-bags",
+      "domain": "printify.com",
+      "stages": [
+        4
+      ],
+      "claims": [
+        "Tote bag cotton canvas (Liberty Bags)"
+      ],
+      "level": "rasmi",
+      "id": "S042"
+    },
+    {
+      "url": "https://printify.com/make-your-own-stickers",
+      "domain": "printify.com",
+      "stages": [
+        4
+      ],
+      "claims": [
+        "Kiss-cut stickers"
+      ],
+      "level": "rasmi",
+      "id": "S043"
+    },
+    {
+      "url": "https://printify.com/app/products/1927/generic-brand/stainless-steel-tumbler-20oz",
+      "domain": "printify.com",
+      "stages": [
+        4
+      ],
+      "claims": [
+        "Tumbler stainless 20oz"
+      ],
+      "level": "rasmi",
+      "id": "S044"
+    },
+    {
+      "url": "https://printify.com/app/products/49/gildan/unisex-heavy-blendtm-crewneck-sweatshirt",
+      "domain": "printify.com",
+      "stages": [
+        4
+      ],
+      "claims": [
+        "Sweatshirt Gildan 18000"
+      ],
+      "level": "rasmi",
+      "id": "S045"
+    },
+    {
+      "url": "https://printify.com/blog/gildan-sweatshirts/",
+      "domain": "printify.com",
+      "stages": [
+        4
+      ],
+      "claims": [
+        "Sweatshirt Gildan 18000"
+      ],
+      "level": "rasmi",
+      "id": "S046"
+    },
+    {
+      "url": "https://printify.com/custom-embroidered-hoodies/",
+      "domain": "printify.com",
+      "stages": [
+        4
+      ],
+      "claims": [
+        "Sweatshirt Gildan 18000 bersulam"
+      ],
+      "level": "rasmi",
+      "id": "S047"
+    },
+    {
+      "url": "https://printify.com/app/products/bestsellers",
+      "domain": "printify.com",
+      "stages": [
+        4
+      ],
+      "claims": [
+        "Sweatshirt Comfort Colors 1566"
+      ],
+      "level": "rasmi",
+      "id": "S048"
+    },
+    {
+      "url": "https://printify.com/custom-t-shirts-ab/",
+      "domain": "printify.com",
+      "stages": [
+        4
+      ],
+      "claims": [
+        "T-shirt Comfort Colors 1717"
+      ],
+      "level": "rasmi",
+      "id": "S049"
+    },
+    {
+      "url": "https://printify.com/app/products/522/generic-brand/velveteen-plush-blanket",
+      "domain": "printify.com",
+      "stages": [
+        4
+      ],
+      "claims": [
+        "Velveteen plush blanket"
+      ],
+      "level": "rasmi",
+      "id": "S050"
+    },
+    {
+      "url": "https://www.teacherspayteachers.com/Product/First-Day-of-School-Picture-Posters-FREE-Back-to-School-2024-2025-1267471",
+      "domain": "teacherspayteachers.com",
+      "stages": [
+        1
+      ],
+      "claims": [
+        "Saingan printable percuma di Teachers Pay Teachers"
+      ],
+      "level": "rasmi",
+      "id": "S051"
+    },
+    {
+      "url": "https://www.theknot.com/content/popular-day-to-get-engaged",
+      "domain": "theknot.com",
+      "stages": [
+        1
+      ],
+      "claims": [
+        "19% lamaran berlaku pada Disember"
+      ],
+      "level": "rasmi",
+      "id": "S052"
+    },
+    {
+      "url": "https://www.theknot.com/content/is-there-an-off-season-for-weddings",
+      "domain": "theknot.com",
+      "stages": [
+        1
+      ],
+      "claims": [
+        "76% majlis kahwin pada Mei-Oktober"
+      ],
+      "level": "rasmi",
+      "id": "S053"
+    },
+    {
+      "url": "https://www.theknot.com/content/creative-ways-to-ask-bridesmaids",
+      "domain": "theknot.com",
+      "stages": [
+        3
+      ],
+      "claims": [
+        "Reben (bow) ialah butiran 'it' untuk proposal musim ini"
+      ],
+      "level": "rasmi",
+      "id": "S054"
+    },
+    {
+      "url": "https://www.theknot.com/content/inspiring-bridesmaid-gift-ideas",
+      "domain": "theknot.com",
+      "stages": [
+        3
+      ],
+      "claims": [
+        "Hadiah praktikal (tumbler, tote) sedang trend"
+      ],
+      "level": "rasmi",
+      "id": "S055"
+    },
+    {
+      "url": "https://www.walmart.com/ip/Funny-Bathroom-Wall-Art-Seat-Yourself/421497500",
+      "domain": "walmart.com",
+      "stages": [
+        1
+      ],
+      "claims": [
+        "'Seat Yourself' bathroom art berlabel best seller (130 ulasan) di Walmart"
+      ],
+      "level": "rasmi",
+      "id": "S056"
+    },
+    {
+      "url": "https://www.walmart.com/c/kp/affirmations-poster",
+      "domain": "walmart.com",
+      "stages": [
+        1
+      ],
+      "claims": [
+        "Poster afirmasi di Walmart dari $13.25; banyak bekalan"
+      ],
+      "level": "rasmi",
+      "id": "S057"
+    },
+    {
+      "url": "https://www.adobe.com/express/learn/blog/microtrend-modern-retro-serif",
+      "domain": "adobe.com",
+      "stages": [
+        3
+      ],
+      "claims": [
+        "Modern retro serif"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S058"
+    },
+    {
+      "url": "https://www.adoptaclassroom.org/2025/06/09/2025-teacher-survey-spending-stats-classroom-needs/",
+      "domain": "adoptaclassroom.org",
+      "stages": [
+        5
+      ],
+      "claims": [
+        "Purata ~$895 (AdoptAClassroom, tahun survei tidak jelas)"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S059"
+    },
+    {
+      "url": "https://adtargeting.io/industry/wall-decoration-keywords",
+      "domain": "adtargeting.io",
+      "stages": [
+        1,
+        2
+      ],
+      "claims": [
+        "'nursery art' ~8,100 carian/bulan global (anggaran tool)",
+        "nursery art"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S060"
+    },
+    {
+      "url": "https://apparelhub.ai/blog/best-print-on-demand-supplier-for-canvas-prints",
+      "domain": "apparelhub.ai",
+      "stages": [
+        4
+      ],
+      "claims": [
+        "Canvas stretched"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S061"
+    },
+    {
+      "url": "https://www.artomate.app/blog/pinterest-etsy-poster-sellers-free-traffic",
+      "domain": "artomate.app",
+      "stages": [
+        3
+      ],
+      "claims": [
+        "Saiz 1000x1500 (2:3)",
+        "Mockup bilik (lifestyle) menggandakan saves & klik berbanding foto rata (seorang penjual)"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S062"
+    },
+    {
+      "url": "https://blog.hootsuite.com/pinterest-marketing/",
+      "domain": "blog.hootsuite.com",
+      "stages": [
+        3
+      ],
+      "claims": [
+        "Logo di sepertiga atas/tengah; visual khas, bukan imej laman web mentah"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S063"
+    },
+    {
+      "url": "https://blog.timesunion.com/savings/?p=12197",
+      "domain": "blog.timesunion.com",
+      "stages": [
+        5
+      ],
+      "claims": [
+        "Julat paling biasa $10-20 setiap hadiah (52%); 26% lebih $20 (poll, tarikh tidak dinyatakan)"
+      ],
+      "level": "lemah",
+      "id": "S064"
+    },
+    {
+      "url": "https://www.bloomreach.com/en/blog/2023/mothers-day-trends-2023",
+      "domain": "bloomreach.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "Trafik Mother's Day naik 2 minggu sebelum; hari tertinggi Isnin sebelum cuti (2023)"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S065"
+    },
+    {
+      "url": "https://branvas.com/blogs/news/pinterest-shopping-statistics-jewelry",
+      "domain": "branvas.com",
+      "stages": [
+        5
+      ],
+      "claims": [
+        "Pew 2023: 41% isi rumah $100k+ guna Pinterest vs 27% bawah $30k"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S066"
+    },
+    {
+      "url": "https://www.cbsnews.com/news/the-ever-escalating-bill-for-being-a-bridesmaid",
+      "domain": "cbsnews.com",
+      "stages": [
+        5
+      ],
+      "claims": [
+        "Purata kos menjadi bridesmaid $1,324 setiap majlis; shower + bachelorette ~40% (~$500)"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S067"
+    },
+    {
+      "url": "https://www.charleagency.com/articles/pinterest-statistics/",
+      "domain": "charleagency.com",
+      "stages": [
+        5
+      ],
+      "claims": [
+        "~70% pengguna Pinterest wanita"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S068"
+    },
+    {
+      "url": "https://dynamicmockups.com/?p=58253",
+      "domain": "dynamicmockups.com",
+      "stages": [
+        3
+      ],
+      "claims": [
+        "Pen Pals (tulisan tangan, stationery)"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S069"
+    },
+    {
+      "url": "https://dynamicmockups.com/trends/poetcore-mockups-2026-aesthetic/",
+      "domain": "dynamicmockups.com",
+      "stages": [
+        3
+      ],
+      "claims": [
+        "Estetik poetcore 2026"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S070"
+    },
+    {
+      "url": "https://elements.envato.com/learn/font-trends",
+      "domain": "elements.envato.com",
+      "stages": [
+        3
+      ],
+      "claims": [
+        "Serif 70-an yang 'funky', saiz besar, huruf dalam bingkai hiasan"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S071"
+    },
+    {
+      "url": "https://etsyhunt.com/etsy-competitor-research/best-etsy-bathroom-prints",
+      "domain": "etsyhunt.com",
+      "stages": [
+        1
+      ],
+      "claims": [
+        "Ranking jualan bathroom prints Etsy (tarikh kemas kini tidak dinyatakan)"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S072"
+    },
+    {
+      "url": "https://www.featherandblack.com/inspiration/how-often-the-uk-redecorates",
+      "domain": "featherandblack.com",
+      "stages": [
+        5
+      ],
+      "claims": [
+        "UK: 25% refresh rumah setiap tahun, 18% setiap 6 bulan"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S073"
+    },
+    {
+      "url": "https://www.gelato.com/de/blog/wall-decor-by-room-guide",
+      "domain": "gelato.com",
+      "stages": [
+        1
+      ],
+      "claims": [
+        "Home office wall decor: kategori carian wall art paling cepat berkembang sejak 2020"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S074"
+    },
+    {
+      "url": "https://gensumo.com/research/pinterest-marketing-benchmarks-report/",
+      "domain": "gensumo.com",
+      "stages": [
+        3
+      ],
+      "claims": [
+        "Static ~4.8 klik/1,000 impressions vs video ~1.6; video +185% impressions; carousel hampir setara static untuk klik tetapi lebih banyak saves"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S075"
+    },
+    {
+      "url": "https://www.insightagent.app/guides/best-selling-printable-wall-art-etsy",
+      "domain": "insightagent.app",
+      "stages": [
+        4
+      ],
+      "claims": [
+        "Printable digital (bundle 3-12)"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S076"
+    },
+    {
+      "url": "https://keywordseverywhere.com/tools/pinterest-keyword-generator/",
+      "domain": "keywordseverywhere.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "Tiada tool boleh tunjuk volum carian Pinterest sebenar; banyak guna volum Google sebagai ganti"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S077"
+    },
+    {
+      "url": "https://keywordseverywhere.com/ctl/top/wedding-keywords",
+      "domain": "keywordseverywhere.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "Senarai 729 kata kunci perkahwinan, ~34.5 juta carian/bulan gabungan (Okt 2026)"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S078"
+    },
+    {
+      "url": "https://www.kittl.com/blogs/2026-t-shirt-design-ideas-trends-dsi/",
+      "domain": "kittl.com",
+      "stages": [
+        1
+      ],
+      "claims": [
+        "Sports mom tees disenaraikan dalam laporan trend penjual Etsy S/S 2026",
+        "Grandma gift shirts disenaraikan dalam laporan trend Etsy S/S 2026"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S079"
+    },
+    {
+      "url": "https://www.listifyai.net/keyword/nursery-wall-art",
+      "domain": "listifyai.net",
+      "stages": [
+        1
+      ],
+      "claims": [
+        "Permintaan memuncak April"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S080"
+    },
+    {
+      "url": "https://merchize.com/soccer-shirt-design/",
+      "domain": "merchize.com",
+      "stages": [
+        1
+      ],
+      "claims": [
+        "Design 'soccer mom' konsisten tinggi permintaan di Etsy"
+      ],
+      "level": "lemah",
+      "id": "S081"
+    },
+    {
+      "url": "https://merchone.com/blog/sell-teacher-gifts-with-print-on-demand/",
+      "domain": "merchone.com",
+      "stages": [
+        1
+      ],
+      "claims": [
+        "'Teacher gifts' ~453k carian/bulan (Google), >200k walaupun bulan perlahan",
+        "Carian 'teacher appreciation gifts' memuncak minggu pertama Mei (data eRank)"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S082"
+    },
+    {
+      "url": "https://merchone.com/blog/back-to-school-print-on-demand-products/",
+      "domain": "merchone.com",
+      "stages": [
+        1
+      ],
+      "claims": [
+        "Poster antara produk back-to-school paling dicari"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S083"
+    },
+    {
+      "url": "https://merchtitans.com/blog/pinterest-marketing-print-on-demand",
+      "domain": "merchtitans.com",
+      "stages": [
+        3
+      ],
+      "claims": [
+        "Tajuk teks di bahagian atas pin; tajuk kata kunci spesifik ('Funny mugs for nurses' > 'funny mugs')",
+        "Pautkan terus ke halaman produk, bukan homepage/kategori",
+        "Sasaran CTR pin static ~0.5-1.5%; conversion pin-ke-jualan 1-3%"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S084"
+    },
+    {
+      "url": "https://merchtitans.com/blog/print-on-demand-tumblers-guide",
+      "domain": "merchtitans.com",
+      "stages": [
+        4
+      ],
+      "claims": [
+        "Tumbler stainless 20oz"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S085"
+    },
+    {
+      "url": "https://merchtitans.com/blog/how-to-sell-svg-files-online",
+      "domain": "merchtitans.com",
+      "stages": [
+        4
+      ],
+      "claims": [
+        "Fail SVG/PNG (Cricut, sublimation)"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S086"
+    },
+    {
+      "url": "https://mydesigns.io/blog/svg-files-for-cricut/",
+      "domain": "mydesigns.io",
+      "stages": [
+        4
+      ],
+      "claims": [
+        "Fail SVG/PNG (Cricut, sublimation)"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S087"
+    },
+    {
+      "url": "https://www.nestig.com/blogs/get-inspired/the-nursery-and-kids-room-trends-designers-are-backing-in-2026",
+      "domain": "nestig.com",
+      "stages": [
+        3
+      ],
+      "claims": [
+        "Gender-neutral boho: oat, cream, tan, sage"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S088"
+    },
+    {
+      "url": "https://podvector.ai/articles/profit-analytics/benchmarks/what-is-a-good-repeat-customer-rate",
+      "domain": "podvector.ai",
+      "stages": [
+        5
+      ],
+      "claims": [
+        "Kadar pembeli ulangan brand POD yang berjaya ~10%"
+      ],
+      "level": "lemah",
+      "id": "S089"
+    },
+    {
+      "url": "https://www.printful.com/blog/best-fonts-for-t-shirts",
+      "domain": "printful.com",
+      "stages": [
+        3
+      ],
+      "claims": [
+        "Retro/Y2K dominan untuk t-shirt 2026",
+        "Retro/Y2K dominan"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S090"
+    },
+    {
+      "url": "https://printify.com/knowledge-hub/booktok-trope-merch-2026-playbook-high-margin-print-on-demand-profit/",
+      "domain": "printify.com",
+      "stages": [
+        1,
+        3
+      ],
+      "claims": [
+        "Design ikut 'trope' (romantasy, dark romance) lebih laku; design generik sesak",
+        "Design ikut trope lebih laku"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S091"
+    },
+    {
+      "url": "https://queststudio.io/blog/etsy-nursery-art-keywords",
+      "domain": "queststudio.io",
+      "stages": [
+        1
+      ],
+      "claims": [
+        "400+ carian 'nursery art' sehari di Etsy (Etsy Search Insights, blog penjual)"
+      ],
+      "level": "lemah",
+      "id": "S092"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/personalized-grandma-shirt",
+      "domain": "rankhero.com",
+      "stages": [
+        1,
+        2
+      ],
+      "claims": [
+        "'personalized grandma shirt' ~1,300 carian/bulan; 71,260 listing Etsy; saingan tinggi; CPC $1.25",
+        "personalized grandma shirt"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S093"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/bridesmaids",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "bridesmaids"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S094"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/gift-for-bridesmaids",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "gift for bridesmaids"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S095"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/bride-box",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "bride box"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S096"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/proposal-gift",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "proposal gift"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S097"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/proposal-card",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "proposal card"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S098"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/bridesmaid-set",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "bridesmaid set"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S099"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/teacher-gift",
+      "domain": "rankhero.com",
+      "stages": [
+        2,
+        5
+      ],
+      "claims": [
+        "teacher gift",
+        "'teacher gift' ~60,500 carian/bulan, puncak Disember"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S100"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/teacher-gift-ideas",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "teacher gift ideas"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S101"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/teacher-appreciation",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "teacher appreciation"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S102"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/shirt-for-teacher",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "shirt for teacher"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S103"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/classroom-posters",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "classroom posters"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S104"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/teacher-tee",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "teacher tee"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S105"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/teacher-decorations",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "teacher decorations"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S106"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/teacher-xmas",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "teacher xmas"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S107"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/nursery",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "nursery"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S108"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/nursery-wall-sticker",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "nursery wall sticker(s)"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S109"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/nursery-art",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "nursery art"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S110"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/nursery-wall-print",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "nursery wall print"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S111"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/nursery-wall-art-print",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "nursery wall art print"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S112"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/laundry-room",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "laundry room"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S113"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/bathroom-sign",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "bathroom sign"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S114"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/kitchen-art",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "kitchen art"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S115"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/funny-bathroom-sign",
+      "domain": "rankhero.com",
+      "stages": [
+        2,
+        5
+      ],
+      "claims": [
+        "funny bathroom sign",
+        "'funny bathroom sign' ~8,100 carian/bulan; 'bathroom sign' ~22,200"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S116"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/kitchen-sign",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "kitchen sign"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S117"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/laundry-room-sign",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "laundry room sign"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S118"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/kitchen-poster",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "kitchen poster"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S119"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/laundry-wall-art",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "laundry wall art"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S120"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/mama-shirt",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "mama shirt"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S121"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/mother-sweatshirt",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "mother sweatshirt"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S122"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/mama-crewneck",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "mama crewneck"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S123"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/mama-outfit",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "mama outfit"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S124"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/dog-mama-sweatshirt",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "dog mama sweatshirt"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S125"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/christmas-sweatshirt",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "christmas sweatshirt"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S126"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/christmas-gift-ideas-for-mom",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "christmas gift ideas for mom"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S127"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/galentines-gift",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "galentines gift"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S128"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/galentine-gift",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "galentine gift"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S129"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/bookish",
+      "domain": "rankhero.com",
+      "stages": [
+        2,
+        5
+      ],
+      "claims": [
+        "bookish",
+        "'bookish' ~135,000 carian/bulan (istilah luas)"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S130"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/bookish-shirt",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "bookish shirt"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S131"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/book-sweatshirt",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "book sweatshirt"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S132"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/gifts-for-bookworms",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "gifts for bookworms"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S133"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/bookish-crewneck",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "bookish crewneck"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S134"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/teach-shirt",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "teach shirt"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S135"
+    },
+    {
+      "url": "https://www.rankhero.com/keywords/galentines",
+      "domain": "rankhero.com",
+      "stages": [
+        2
+      ],
+      "claims": [
+        "galentines"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S136"
+    },
+    {
+      "url": "https://sellfy.com/blog/trending-t-shirt-designs/",
+      "domain": "sellfy.com",
+      "stages": [
+        3
+      ],
+      "claims": [
+        "Perkataan berulang (repeated words)"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S137"
+    },
+    {
+      "url": "https://www.shopify.com/blog/unique-personalized-gifts",
+      "domain": "shopify.com",
+      "stages": [
+        1
+      ],
+      "claims": [
+        "Anggaran belanja Mother's Day 2026 di US: $38 bilion",
+        "Anggaran belanja Valentine 2026 di US: $29 bilion"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S138"
+    },
+    {
+      "url": "https://www.somethingdifferentwholesale.com/uk/blog/book-gift-trend/",
+      "domain": "somethingdifferentwholesale.com",
+      "stages": [
+        1,
+        5
+      ],
+      "claims": [
+        "Carian 'book totes' +148%, romantasy +77% (data Faire)",
+        "Carian 'book totes' +148% (data Faire)"
+      ],
+      "level": "lemah",
+      "id": "S139"
+    },
+    {
+      "url": "https://www.spreadshirt.com/custom/blog/2026-design-trends/",
+      "domain": "spreadshirt.com",
+      "stages": [
+        3
+      ],
+      "claims": [
+        "Tidak sempurna / tulisan tangan"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S140"
+    },
+    {
+      "url": "https://statista.com/statistics/764304/wall-art-purchase-by-american-households-in-the-last-twelve-months-by-generation",
+      "domain": "statista.com",
+      "stages": [
+        5
+      ],
+      "claims": [
+        "US 2017: 49% Baby Boomer beli wall art dalam 12 bulan lepas"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S141"
+    },
+    {
+      "url": "https://statista.com/statistics/582502/adults-who-have-purchased-art-for-their-home-us",
+      "domain": "statista.com",
+      "stages": [
+        5
+      ],
+      "claims": [
+        "US 2016: 79% tidak membeli seni untuk rumah dalam setahun"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S142"
+    },
+    {
+      "url": "https://www.tailwindapp.com/pinterest-marketing/research/2025-benchmark-study-part-1",
+      "domain": "tailwindapp.com",
+      "stages": [
+        3
+      ],
+      "claims": [
+        "Alt text: +123% klik keluar, +25% impressions"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S143"
+    },
+    {
+      "url": "https://www.tailwindapp.com/pinterest-marketing/research/2025-benchmark-study-part-2",
+      "domain": "tailwindapp.com",
+      "stages": [
+        3
+      ],
+      "claims": [
+        ">60% saves dari pin berumur >1 tahun; 1% pin teratas = >50% impressions & klik"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S144"
+    },
+    {
+      "url": "https://www.theknot.com/content/average-bridesmaid-dress-cost",
+      "domain": "theknot.com",
+      "stages": [
+        5
+      ],
+      "claims": [
+        "Hadiah bridesmaid untuk majlis kahwin ~$170 (data The Knot lama)"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S145"
+    },
+    {
+      "url": "https://www.twinkl.com/blog/back-to-school-2025-classroom-decor-ideas",
+      "domain": "twinkl.com",
+      "stages": [
+        3
+      ],
+      "claims": [
+        "Bilik darjah retro berwarna lawan minimalis"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S146"
+    },
+    {
+      "url": "https://unicornseo.com/best-keywords-niche/Baby%20Nursery",
+      "domain": "unicornseo.com",
+      "stages": [
+        1,
+        2
+      ],
+      "claims": [
+        "'baby nursery wall decor' ~480, 'baby nursery wall art' ~260 carian/bulan",
+        "baby nursery wall decor",
+        "baby nursery wall art"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S147"
+    },
+    {
+      "url": "https://wedding.report/index.cfm/action/wedding_statistics/view/market/",
+      "domain": "wedding.report",
+      "stages": [
+        5
+      ],
+      "claims": [
+        "~2,011,044 perkahwinan di US pada 2025"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S148"
+    },
+    {
+      "url": "https://woodemon.com/blogs/the-q-a-spot/what-are-the-best-gender-neutral-nursery-wall-decor-trends-for-2026",
+      "domain": "woodemon.com",
+      "stages": [
+        3
+      ],
+      "claims": [
+        "Satu poster berbingkai boleh menjadi fokus dinding"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S149"
+    },
+    {
+      "url": "https://www.zikanalytics.com/blog/print-on-demand-statistics/",
+      "domain": "zikanalytics.com",
+      "stages": [
+        1
+      ],
+      "claims": [
+        "~40% jualan POD setahun berlaku pada Q4"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S150"
+    },
+    {
+      "url": "https://www.zola.com/expert-advice/social-media-wedding-inspiration",
+      "domain": "zola.com",
+      "stages": [
+        1,
+        5
+      ],
+      "claims": [
+        "77% pasangan guna Pinterest untuk inspirasi perkahwinan (83% Gen Z)",
+        "77% pasangan guna Pinterest untuk inspirasi (83% Gen Z)"
+      ],
+      "level": "pihak_ketiga",
+      "id": "S151"
+    }
+  ]
+}
