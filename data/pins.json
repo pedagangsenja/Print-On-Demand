@@ -1,0 +1,50 @@
+{
+  "stage": 3,
+  "title": "Top pins & corak visual",
+  "updated": "2026-11-21",
+  "limitation": "Pinterest disekat dari persekitaran ini dan tiada data 'top pins' awam per niche. Dapatan berdasarkan laporan rasmi Pinterest, kajian benchmark, dan panduan penjual. Top pins sebenar akan dikenal pasti dari analytics akaun selepas pelancaran.",
+  "format_rules": [
+    {"rule": "Saiz 1000x1500 (2:3)", "source": "https://www.artomate.app/blog/pinterest-etsy-poster-sellers-free-traffic", "level": "pihak_ketiga"},
+    {"rule": "Mockup bilik (lifestyle) menggandakan saves & klik berbanding foto rata (seorang penjual)", "source": "https://www.artomate.app/blog/pinterest-etsy-poster-sellers-free-traffic", "level": "lemah"},
+    {"rule": "Tajuk teks di bahagian atas pin; tajuk kata kunci spesifik ('Funny mugs for nurses' > 'funny mugs')", "source": "https://merchtitans.com/blog/pinterest-marketing-print-on-demand", "level": "pihak_ketiga"},
+    {"rule": "Pautkan terus ke halaman produk, bukan homepage/kategori", "source": "https://merchtitans.com/blog/pinterest-marketing-print-on-demand", "level": "pihak_ketiga"},
+    {"rule": "Logo di sepertiga atas/tengah; visual khas, bukan imej laman web mentah", "source": "https://blog.hootsuite.com/pinterest-marketing/", "level": "pihak_ketiga"},
+    {"rule": "Alt text: +123% klik keluar, +25% impressions", "source": "https://www.tailwindapp.com/pinterest-marketing/research/2025-benchmark-study-part-1", "level": "pihak_ketiga"},
+    {"rule": "Static ~4.8 klik/1,000 impressions vs video ~1.6; video +185% impressions; carousel hampir setara static untuk klik tetapi lebih banyak saves", "source": "https://gensumo.com/research/pinterest-marketing-benchmarks-report/", "level": "pihak_ketiga"},
+    {"rule": "Sasaran CTR pin static ~0.5-1.5%; conversion pin-ke-jualan 1-3%", "source": "https://merchtitans.com/blog/pinterest-marketing-print-on-demand", "level": "lemah"},
+    {"rule": ">60% saves dari pin berumur >1 tahun; 1% pin teratas = >50% impressions & klik", "source": "https://www.tailwindapp.com/pinterest-marketing/research/2025-benchmark-study-part-2", "level": "pihak_ketiga"}
+  ],
+  "pinterest_2026_trends": [
+    {"trend": "Warna 2026: Cool Blue (+85% minat), Jade, Plum Noir, Wasabi, Persimmon", "source": "https://www.homesandgardens.com/interior-design/pinterest-palette-2026", "level": "rasmi"},
+    {"trend": "Afrohemian: carian 'afrobohemian home decor' +220%", "source": "https://www.aol.com/articles/pinterest-just-announced-top-home-130000967.html", "level": "rasmi"},
+    {"trend": "Funhaus / vintage circus +70%; 'circus nursery' meningkat", "source": "https://www.cubbyathome.com/2026-pinterest-predicts-nursery-tour-80046553", "level": "rasmi"},
+    {"trend": "Bilik anak retro (nostalgia)", "source": "https://www.aol.com/articles/pinterests-2026-report-shows-retro-165500035.html", "level": "rasmi"},
+    {"trend": "Neo Deco (glamor berstruktur)", "source": "https://www.apartmenttherapy.com/pinterest-predicts-2026-37522611", "level": "rasmi"},
+    {"trend": "Pen Pals (tulisan tangan, stationery)", "source": "https://dynamicmockups.com/?p=58253", "level": "pihak_ketiga"},
+    {"trend": "Senarai rasmi 21 trend Pinterest Predicts 2026", "source": "https://newsroom.pinterest.com/en-ca/news/pinterest-predicts-nonconformity-self-preservation-and-escapism-drive-21-trends-for-2026/", "level": "rasmi"}
+  ],
+  "typography_trends": [
+    {"trend": "Modern retro serif", "source": "https://www.adobe.com/express/learn/blog/microtrend-modern-retro-serif", "level": "pihak_ketiga"},
+    {"trend": "Serif 70-an yang 'funky', saiz besar, huruf dalam bingkai hiasan", "source": "https://elements.envato.com/learn/font-trends", "level": "pihak_ketiga"},
+    {"trend": "Retro/Y2K dominan untuk t-shirt 2026", "source": "https://www.printful.com/blog/best-fonts-for-t-shirts", "level": "pihak_ketiga"},
+    {"trend": "Tidak sempurna / tulisan tangan", "source": "https://www.spreadshirt.com/custom/blog/2026-design-trends/", "level": "pihak_ketiga"},
+    {"trend": "Perkataan berulang (repeated words)", "source": "https://sellfy.com/blog/trending-t-shirt-designs/", "level": "pihak_ketiga"}
+  ],
+  "niche_visual_playbook": {
+    "bridal": {"visual": "Flat lay kotak proposal / sweatshirt dilipat, reben (bow), palet lembut", "pin_text": "Will You Be My Bridesmaid? Proposal Gift", "evidence": [{"claim": "Reben (bow) ialah butiran 'it' untuk proposal musim ini", "source": "https://www.theknot.com/content/creative-ways-to-ask-bridesmaids"}, {"claim": "Hadiah praktikal (tumbler, tote) sedang trend", "source": "https://www.theknot.com/content/inspiring-bridesmaid-gift-ideas"}]},
+    "teacher": {"visual": "Kolaj set poster kelas (grid 6-12) / carousel; tema retro atau minimal", "pin_text": "Retro Classroom Decor Set of 12", "evidence": [{"claim": "Bilik darjah retro berwarna lawan minimalis", "source": "https://www.twinkl.com/blog/back-to-school-2025-classroom-decor-ideas"}]},
+    "nursery": {"visual": "Satu poster berbingkai dalam nursery neutral (oat, cream, sage); alternatif circus/Funhaus", "pin_text": "Neutral Nursery Wall Art Print", "evidence": [{"claim": "Gender-neutral boho: oat, cream, tan, sage", "source": "https://www.nestig.com/blogs/get-inspired/the-nursery-and-kids-room-trends-designers-are-backing-in-2026"}, {"claim": "Satu poster berbingkai boleh menjadi fokus dinding", "source": "https://woodemon.com/blogs/the-q-a-spot/what-are-the-best-gender-neutral-nursery-wall-decor-trends-for-2026"}]},
+    "funny_home": {"visual": "Mockup bilik air/dapur; gaya Art Deco atau maximalist; set 3", "pin_text": "Funny Bathroom Wall Art Set of 3", "evidence": [{"claim": "Penjual Etsy gabungkan humor dengan gaya Art Deco/maximalist", "source": "https://www.etsy.com/listing/1161346307"}]},
+    "mama": {"visual": "Typography retro/varsity; mockup hadiah Mother's Day", "pin_text": "Mama Gift for Mother's Day", "evidence": [{"claim": "Retro/Y2K dominan", "source": "https://www.printful.com/blog/best-fonts-for-t-shirts"}]},
+    "christmas": {"visual": "Suasana cozy, hadiah berbalut", "pin_text": "Christmas Gift for Mom", "evidence": []},
+    "friendship": {"visual": "Palet pink/merah, kumpulan kawan", "pin_text": "Galentine's Day Gift for Best Friend", "evidence": []},
+    "bookish": {"visual": "Reading nook cozy; design ikut trope (romantasy dll.); estetik poetcore", "pin_text": "Bookish Sweatshirt for Romantasy Readers", "evidence": [{"claim": "Estetik poetcore 2026", "source": "https://dynamicmockups.com/trends/poetcore-mockups-2026-aesthetic/"}, {"claim": "Design ikut trope lebih laku", "source": "https://printify.com/knowledge-hub/booktok-trope-merch-2026-playbook-high-margin-print-on-demand-profit/"}]}
+  },
+  "pin_templates": [
+    {"id": "T1", "name": "Mockup bilik + tajuk atas", "use": "Wall art (semua niche)", "share": "35%"},
+    {"id": "T2", "name": "Flat lay produk + tajuk", "use": "Apparel, bridal, hadiah", "share": "20%"},
+    {"id": "T3", "name": "Kolaj set (carousel 2-5 imej)", "use": "Set poster, bridal party", "share": "15%"},
+    {"id": "T4", "name": "Close-up typography", "use": "Semua", "share": "10%"},
+    {"id": "T5", "name": "Video slideshow 6-15s", "use": "Capaian & saves", "share": "20%"}
+  ]
+}
