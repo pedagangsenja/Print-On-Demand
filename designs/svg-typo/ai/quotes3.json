@@ -1,0 +1,206 @@
+[
+ {
+  "id": "shh",
+  "layout": "script",
+  "lines": [
+   [
+    "Shh..",
+    "bold heavy brush script"
+   ],
+   [
+    "NO ONE",
+    "small bold capitals"
+   ],
+   [
+    "Cares",
+    "giant slanted brush script, dominant word, with a swash underline"
+   ]
+  ]
+ },
+ {
+  "id": "adultish",
+  "layout": "script",
+  "lines": [
+   [
+    "Adult-",
+    "giant slanted heavy brush script"
+   ],
+   [
+    "-ish",
+    "giant slanted heavy brush script, with a small sparkle"
+   ]
+  ]
+ },
+ {
+  "id": "caution",
+  "layout": "script",
+  "lines": [
+   [
+    "Caution,",
+    "big slanted brush script"
+   ],
+   [
+    "I HAVE NO",
+    "small white capitals inside a black ribbon banner"
+   ],
+   [
+    "Filter",
+    "giant slanted brush script, dominant word, with a swash underline"
+   ]
+  ]
+ },
+ {
+  "id": "fresh",
+  "layout": "frame",
+  "lines": [
+   [
+    "FRESH",
+    "big bold condensed capitals"
+   ],
+   [
+    "Sarcasm",
+    "big brush script"
+   ],
+   [
+    "served",
+    "tiny script connector"
+   ],
+   [
+    "DAILY",
+    "big bold condensed capitals"
+   ]
+  ]
+ },
+ {
+  "id": "oktaste",
+  "layout": "frame",
+  "lines": [
+   [
+    "IT'S OK IF YOU",
+    "bold condensed capitals"
+   ],
+   [
+    "DON'T LIKE ME",
+    "bold condensed capitals"
+   ],
+   [
+    "NOT EVERYONE HAS",
+    "small condensed capitals"
+   ],
+   [
+    "GOOD TASTE",
+    "big bold condensed capitals"
+   ]
+  ]
+ },
+ {
+  "id": "weird",
+  "layout": "frame",
+  "lines": [
+   [
+    "I AM NOT",
+    "small capitals"
+   ],
+   [
+    "WEIRD",
+    "big bold condensed capitals"
+   ],
+   [
+    "I am not",
+    "tiny script connector"
+   ],
+   [
+    "Limited",
+    "big brush script"
+   ],
+   [
+    "EDITION",
+    "bold condensed capitals"
+   ]
+  ]
+ },
+ {
+  "id": "fine",
+  "layout": "dense",
+  "lines": [
+   [
+    "IT'S FINE.",
+    "big bold condensed capitals"
+   ],
+   [
+    "I'M FINE.",
+    "big bold condensed capitals"
+   ],
+   [
+    "Everything's",
+    "big brush script"
+   ],
+   [
+    "FINE",
+    "huge bold condensed capitals"
+   ]
+  ]
+ },
+ {
+  "id": "sleep",
+  "layout": "dense",
+  "lines": [
+   [
+    "IF YOU",
+    "bold condensed capitals"
+   ],
+   [
+    "LOVE ME,",
+    "big bold condensed capitals with a tiny heart"
+   ],
+   [
+    "let me",
+    "tiny script connector"
+   ],
+   [
+    "SLEEP",
+    "huge bold condensed capitals"
+   ]
+  ]
+ },
+ {
+  "id": "cardio",
+  "layout": "dense",
+  "lines": [
+   [
+    "EYE",
+    "big bold capitals with two small cartoon eyes beside it"
+   ],
+   [
+    "ROLLING",
+    "big bold condensed capitals"
+   ],
+   [
+    "is my",
+    "tiny script connector"
+   ],
+   [
+    "CARDIO",
+    "big bold condensed capitals"
+   ]
+  ]
+ },
+ {
+  "id": "fluent",
+  "layout": "dense",
+  "lines": [
+   [
+    "I SPEAK",
+    "bold condensed capitals"
+   ],
+   [
+    "Fluent",
+    "big brush script"
+   ],
+   [
+    "Sarcasm",
+    "huge brush script, dominant word, with a swash underline"
+   ]
+  ]
+ }
+]
