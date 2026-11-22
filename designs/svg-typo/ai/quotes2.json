@@ -332,38 +332,34 @@
   "layout": "circle",
   "lines": [
    [
-    "WORK HARD",
-    "arched along the top of the circle, bold condensed capitals"
+    "WORK LESS",
+    "bold condensed capitals curved along the top"
    ],
    [
     "Nap",
-    "huge heavy brush script, center"
+    "huge heavy brush script, dominant word"
    ],
    [
-    "HARDER",
-    "big bold condensed capitals, curved along the bottom of the circle"
+    "MORE",
+    "bold capitals curved along the bottom"
    ]
   ]
  },
  {
   "id": "disturb",
-  "layout": "box",
+  "layout": "banner",
   "lines": [
    [
-    "DO NOT",
-    "big bold condensed capitals"
+    "PLEASE",
+    "bold condensed capitals, slightly arched"
    ],
    [
-    "Disturb",
+    "LEAVE ME",
+    "small white capitals inside a black ribbon banner"
+   ],
+   [
+    "Alone",
     "huge heavy brush script, dominant word, with a swash underline"
-   ],
-   [
-    "ALREADY",
-    "small capitals"
-   ],
-   [
-    "DISTURBED",
-    "big bold condensed capitals"
    ]
   ]
  },
@@ -376,11 +372,11 @@
     "bold condensed capitals, slightly arched"
    ],
    [
-    "MISSES ME",
+    "MISSES",
     "small white capitals inside a black ribbon banner"
    ],
    [
-    "Already",
+    "Me",
     "huge heavy brush script, dominant word, with a swash underline"
    ]
   ]
