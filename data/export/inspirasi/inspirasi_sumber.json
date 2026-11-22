@@ -1,0 +1,272 @@
+[
+ {
+  "id": "pin-trends",
+  "jenis": "Alat trend",
+  "nama": "Pinterest Trends",
+  "url": "https://trends.pinterest.com/",
+  "kenapa": "Carian teratas Pinterest ikut negara, dengan perubahan mingguan, bulanan dan tahunan serta corak musim. Graf ialah nisbah, bukan jumlah carian.",
+  "guna": "Pilih kata kunci dan tema yang sedang naik sebelum design",
+  "bukti": "rasmi",
+  "bukti_url": "https://help.pinterest.com/en/business/article/pinterest-trends"
+ },
+ {
+  "id": "pin-predicts",
+  "jenis": "Alat trend",
+  "nama": "Pinterest Predicts",
+  "url": "https://business.pinterest.com/pinterest-predicts/",
+  "kenapa": "Laporan tahunan Pinterest tentang trend yang dijangka naik tahun depan (warna, gaya, tema).",
+  "guna": "Rancang koleksi musim dan warna",
+  "bukti": "rasmi",
+  "bukti_url": "https://business.pinterest.com/pinterest-predicts/"
+ },
+ {
+  "id": "typo-posters",
+  "jenis": "Laman kurasi",
+  "nama": "Typographic Posters",
+  "url": "https://www.typographicposters.com/",
+  "kenapa": "Platform kolektif pereka yang membuat poster berfokus typography; ribuan poster ikut pereka.",
+  "guna": "Layout poster, hierarki huruf, poster eksperimental",
+  "bukti": "pihak_ketiga",
+  "bukti_url": "https://www.webdesignerdepot.com/2014/02/typographicposters-com-presents-a-beautiful-overview-of-poster-design/"
+ },
+ {
+  "id": "slanted-posters",
+  "jenis": "Laman kurasi",
+  "nama": "typo/graphic posters (Slanted)",
+  "url": "https://www.typo-graphicposters.com/",
+  "kenapa": "Arkib 6,500+ poster dari 42 negara oleh 287 pereka; boleh cari ikut warna, tag dan kata kunci.",
+  "guna": "Cari ikut warna untuk padan dekor bilik",
+  "bukti": "pihak_ketiga",
+  "bukti_url": "https://slanted.de/?p=631411"
+ },
+ {
+  "id": "fontsinuse",
+  "jenis": "Laman kurasi",
+  "nama": "Fonts In Use",
+  "url": "https://fontsinuse.com/",
+  "kenapa": "Arkib typography dalam projek sebenar (poster, kulit buku, album) dengan nama fon setiap satu; disusun ikut industri, format, zaman dan fon.",
+  "guna": "Tahu fon apa dipakai dalam poster yang anda suka",
+  "bukti": "pihak_ketiga",
+  "bukti_url": "https://designshack.net/articles/inspiration/font-inspiration-websites"
+ },
+ {
+  "id": "typewolf",
+  "jenis": "Laman kurasi",
+  "nama": "Typewolf",
+  "url": "https://www.typewolf.com/",
+  "kenapa": "Contoh pasangan fon dengan nama fon disenaraikan; dilancarkan 2013 oleh Jeremiah Shoaf. Lebih kuat untuk web, berguna untuk pasangan tajuk + teks.",
+  "guna": "Pasangan fon tajuk dan teks kecil",
+  "bukti": "pihak_ketiga",
+  "bukti_url": "https://designshack.net/articles/inspiration/font-inspiration-websites"
+ },
+ {
+  "id": "behance",
+  "jenis": "Laman kurasi",
+  "nama": "Behance: typography poster",
+  "url": "https://www.behance.net/search/projects/typography%20poster",
+  "kenapa": "Portfolio pereka (milik Adobe). Susun ikut 'Most Appreciated' untuk lihat projek yang paling ramai suka.",
+  "guna": "Siri poster lengkap dan mockup",
+  "bukti": "lemah",
+  "bukti_url": "https://www.behance.net/"
+ },
+ {
+  "id": "dribbble",
+  "jenis": "Laman kurasi",
+  "nama": "Dribbble: typography poster",
+  "url": "https://dribbble.com/tags/typography_poster",
+  "kenapa": "Shot pendek dari pereka; tag typography poster. Kiraan 'likes' setiap shot boleh jadi petanda minat (bukti lemah).",
+  "guna": "Idea pantas gaya huruf dan warna",
+  "bukti": "lemah",
+  "bukti_url": "https://dribbble.com/"
+ },
+ {
+  "id": "typespiration",
+  "jenis": "Laman kurasi",
+  "nama": "Typespiration",
+  "url": "https://typespiration.com/",
+  "kenapa": "Contoh pasangan fon dan warna; ada surat berita inspirasi fon.",
+  "guna": "Pasangan fon + palet warna",
+  "bukti": "pihak_ketiga",
+  "bukti_url": "https://designshack.net/articles/inspiration/font-inspiration-websites"
+ },
+ {
+  "id": "tdc",
+  "jenis": "Laman kurasi",
+  "nama": "Type Directors Club (TDC)",
+  "url": "https://www.tdc.org/",
+  "kenapa": "Anugerah typography antarabangsa tahunan; pemenang = rujukan kualiti tinggi.",
+  "guna": "Tanda aras kualiti, bukan untuk ditiru terus",
+  "bukti": "lemah",
+  "bukti_url": "https://www.tdc.org/"
+ },
+ {
+  "id": "letterform",
+  "jenis": "Laman kurasi",
+  "nama": "Letterform Archive",
+  "url": "https://letterformarchive.org/",
+  "kenapa": "Arkib sejarah lettering dan typography (koleksi dalam talian).",
+  "guna": "Gaya vintage dan retro yang asli",
+  "bukti": "lemah",
+  "bukti_url": "https://letterformarchive.org/"
+ },
+ {
+  "id": "hische",
+  "jenis": "Pereka",
+  "nama": "Jessica Hische",
+  "url": "https://www.jessicahische.is/",
+  "kenapa": "Lettering artist dan type designer; projek Daily Drop Cap mencetuskan ramai pereka buat projek lettering harian.",
+  "guna": "Huruf hiasan, drop cap, script elegan",
+  "bukti": "pihak_ketiga",
+  "bukti_url": "https://www.wikipedia.org/wiki/Jessica_Hische"
+ },
+ {
+  "id": "obrien",
+  "jenis": "Pereka",
+  "nama": "Gemma O'Brien",
+  "url": "https://www.gemmaobrien.com/",
+  "kenapa": "Disebut AIGA Eye on Design sebagai antara pereka yang memimpin ledakan hand-lettering.",
+  "guna": "Lettering ekspresif, mural, brush",
+  "bukti": "pihak_ketiga",
+  "bukti_url": "https://eyeondesign.aiga.org/hand-drawn-type-masters-jessica-hische-and-gemma-obrien-on-when-to-say-no/"
+ },
+ {
+  "id": "marinovich",
+  "jenis": "Pereka",
+  "nama": "Erik Marinovich",
+  "url": "https://www.erikmarinovich.com/",
+  "kenapa": "Letterer, pengasas bersama Title Case; gaya dari ringkas hingga grunge.",
+  "guna": "Logo-style lettering, retro, badge",
+  "bukti": "pihak_ketiga",
+  "bukti_url": "https://www.skillshare.com/en/blog/hand-lettering-artists-to-follow-on-instagram/"
+ },
+ {
+  "id": "hom",
+  "jenis": "Pereka",
+  "nama": "Lauren Hom",
+  "url": "https://www.homsweethom.com/",
+  "kenapa": "Pereka dan letterer (studio Hom Sweet Hom); terkenal dengan projek Daily Dishonesty.",
+  "guna": "Quote lucu, warna ceria, gaya playful",
+  "bukti": "pihak_ketiga",
+  "bukti_url": "https://www.skillshare.com/en/blog/hand-lettering-artists-to-follow-on-instagram/"
+ },
+ {
+  "id": "tanamachi",
+  "jenis": "Pereka",
+  "nama": "Dana Tanamachi",
+  "url": "https://www.tanamachistudio.com/",
+  "kenapa": "Perintis chalk lettering moden; klien termasuk Google, TIME dan Target.",
+  "guna": "Gaya papan kapur untuk dapur, kelas, majlis",
+  "bukti": "pihak_ketiga",
+  "bukti_url": "https://www.skillshare.com/en/blog/hand-lettering-artists-to-follow-on-instagram/"
+ },
+ {
+  "id": "pin-bridal",
+  "jenis": "Carian Pinterest",
+  "nama": "Bridal: bridal shower sign typography",
+  "url": "https://www.pinterest.com/search/pins/?q=bridal+shower+sign+typography",
+  "kenapa": "Carian terus di Pinterest. Pin yang berulang muncul di atas dan ada banyak versi tiruan = petanda gaya laku (bukti lemah; Pinterest tidak papar jumlah simpanan secara tetap).",
+  "guna": "Kumpul gaya untuk niche ini, kemudian upload yang anda suka",
+  "bukti": "lemah",
+  "bukti_url": "https://www.pinterest.com/search/pins/?q=bridal+shower+sign+typography"
+ },
+ {
+  "id": "pin-teacher",
+  "jenis": "Carian Pinterest",
+  "nama": "Cikgu: classroom poster typography",
+  "url": "https://www.pinterest.com/search/pins/?q=classroom+poster+typography",
+  "kenapa": "Carian terus di Pinterest. Pin yang berulang muncul di atas dan ada banyak versi tiruan = petanda gaya laku (bukti lemah; Pinterest tidak papar jumlah simpanan secara tetap).",
+  "guna": "Kumpul gaya untuk niche ini, kemudian upload yang anda suka",
+  "bukti": "lemah",
+  "bukti_url": "https://www.pinterest.com/search/pins/?q=classroom+poster+typography"
+ },
+ {
+  "id": "pin-nursery",
+  "jenis": "Carian Pinterest",
+  "nama": "Nursery: nursery quote print typography",
+  "url": "https://www.pinterest.com/search/pins/?q=nursery+quote+print+typography",
+  "kenapa": "Carian terus di Pinterest. Pin yang berulang muncul di atas dan ada banyak versi tiruan = petanda gaya laku (bukti lemah; Pinterest tidak papar jumlah simpanan secara tetap).",
+  "guna": "Kumpul gaya untuk niche ini, kemudian upload yang anda suka",
+  "bukti": "lemah",
+  "bukti_url": "https://www.pinterest.com/search/pins/?q=nursery+quote+print+typography"
+ },
+ {
+  "id": "pin-funny_home",
+  "jenis": "Carian Pinterest",
+  "nama": "Tanda lucu rumah: funny bathroom sign typography print",
+  "url": "https://www.pinterest.com/search/pins/?q=funny+bathroom+sign+typography+print",
+  "kenapa": "Carian terus di Pinterest. Pin yang berulang muncul di atas dan ada banyak versi tiruan = petanda gaya laku (bukti lemah; Pinterest tidak papar jumlah simpanan secara tetap).",
+  "guna": "Kumpul gaya untuk niche ini, kemudian upload yang anda suka",
+  "bukti": "lemah",
+  "bukti_url": "https://www.pinterest.com/search/pins/?q=funny+bathroom+sign+typography+print"
+ },
+ {
+  "id": "pin-mama",
+  "jenis": "Carian Pinterest",
+  "nama": "Mama: mama quote typography print",
+  "url": "https://www.pinterest.com/search/pins/?q=mama+quote+typography+print",
+  "kenapa": "Carian terus di Pinterest. Pin yang berulang muncul di atas dan ada banyak versi tiruan = petanda gaya laku (bukti lemah; Pinterest tidak papar jumlah simpanan secara tetap).",
+  "guna": "Kumpul gaya untuk niche ini, kemudian upload yang anda suka",
+  "bukti": "lemah",
+  "bukti_url": "https://www.pinterest.com/search/pins/?q=mama+quote+typography+print"
+ },
+ {
+  "id": "pin-christmas",
+  "jenis": "Carian Pinterest",
+  "nama": "Krismas: christmas typography print",
+  "url": "https://www.pinterest.com/search/pins/?q=christmas+typography+print",
+  "kenapa": "Carian terus di Pinterest. Pin yang berulang muncul di atas dan ada banyak versi tiruan = petanda gaya laku (bukti lemah; Pinterest tidak papar jumlah simpanan secara tetap).",
+  "guna": "Kumpul gaya untuk niche ini, kemudian upload yang anda suka",
+  "bukti": "lemah",
+  "bukti_url": "https://www.pinterest.com/search/pins/?q=christmas+typography+print"
+ },
+ {
+  "id": "pin-friendship",
+  "jenis": "Carian Pinterest",
+  "nama": "Kawan / Galentine: galentines typography print",
+  "url": "https://www.pinterest.com/search/pins/?q=galentines+typography+print",
+  "kenapa": "Carian terus di Pinterest. Pin yang berulang muncul di atas dan ada banyak versi tiruan = petanda gaya laku (bukti lemah; Pinterest tidak papar jumlah simpanan secara tetap).",
+  "guna": "Kumpul gaya untuk niche ini, kemudian upload yang anda suka",
+  "bukti": "lemah",
+  "bukti_url": "https://www.pinterest.com/search/pins/?q=galentines+typography+print"
+ },
+ {
+  "id": "pin-bookish",
+  "jenis": "Carian Pinterest",
+  "nama": "Bookish: bookish quote typography poster",
+  "url": "https://www.pinterest.com/search/pins/?q=bookish+quote+typography+poster",
+  "kenapa": "Carian terus di Pinterest. Pin yang berulang muncul di atas dan ada banyak versi tiruan = petanda gaya laku (bukti lemah; Pinterest tidak papar jumlah simpanan secara tetap).",
+  "guna": "Kumpul gaya untuk niche ini, kemudian upload yang anda suka",
+  "bukti": "lemah",
+  "bukti_url": "https://www.pinterest.com/search/pins/?q=bookish+quote+typography+poster"
+ },
+ {
+  "id": "pin-gaya-swiss",
+  "jenis": "Carian Pinterest",
+  "nama": "Gaya: Swiss minimal: swiss typography poster",
+  "url": "https://www.pinterest.com/search/pins/?q=swiss+typography+poster",
+  "kenapa": "Carian terus di Pinterest. Pin yang berulang muncul di atas dan ada banyak versi tiruan = petanda gaya laku (bukti lemah; Pinterest tidak papar jumlah simpanan secara tetap).",
+  "guna": "Kumpul gaya untuk niche ini, kemudian upload yang anda suka",
+  "bukti": "lemah",
+  "bukti_url": "https://www.pinterest.com/search/pins/?q=swiss+typography+poster"
+ },
+ {
+  "id": "pin-gaya-retro",
+  "jenis": "Carian Pinterest",
+  "nama": "Gaya: retro / groovy: retro groovy typography poster",
+  "url": "https://www.pinterest.com/search/pins/?q=retro+groovy+typography+poster",
+  "kenapa": "Carian terus di Pinterest. Pin yang berulang muncul di atas dan ada banyak versi tiruan = petanda gaya laku (bukti lemah; Pinterest tidak papar jumlah simpanan secara tetap).",
+  "guna": "Kumpul gaya untuk niche ini, kemudian upload yang anda suka",
+  "bukti": "lemah",
+  "bukti_url": "https://www.pinterest.com/search/pins/?q=retro+groovy+typography+poster"
+ },
+ {
+  "id": "pin-gaya-serif",
+  "jenis": "Carian Pinterest",
+  "nama": "Gaya: serif besar: big serif typography poster wall art",
+  "url": "https://www.pinterest.com/search/pins/?q=big+serif+typography+poster+wall+art",
+  "kenapa": "Carian terus di Pinterest. Pin yang berulang muncul di atas dan ada banyak versi tiruan = petanda gaya laku (bukti lemah; Pinterest tidak papar jumlah simpanan secara tetap).",
+  "guna": "Kumpul gaya untuk niche ini, kemudian upload yang anda suka",
+  "bukti": "lemah",
+  "bukti_url": "https://www.pinterest.com/search/pins/?q=big+serif+typography+poster+wall+art"
+ }
+]
