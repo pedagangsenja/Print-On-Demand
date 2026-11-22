@@ -2,7 +2,7 @@
 
 Dijana oleh `scripts/build_fonts.py` dari `data/export/fonts/`. Jangan ubah dengan tangan. Kaedah dan peraturan lesen: `README.md`.
 
-Senarai induk: 1802 fon (fontsquirrel 50, google 1687, fontshare 65); ditolak kerana lesen berisiko: 98; fon Font Squirrel yang lesennya tidak dapat dibaca (muat turun disekat): 214.
+Senarai induk: 1871 fon (fontsquirrel 119, google 1687, fontshare 65); ditolak kerana lesen berisiko: 234; fon Font Squirrel yang lesennya tidak dapat dibaca (muat turun disekat): 9.
 
 ## Berus / cat air (58 fon)
 
@@ -25,7 +25,7 @@ Strok berus, tulisan dicat; hidup dan artistik. Niche: Bilik tidur, Nursery, Afi
 
 Lebih unik (luar Google Fonts): AnuDaw (semak lesen), Belligerent Madness (semak lesen), Chinese Rocks (semak lesen), Edo (semak lesen), Florante at Laura (semak lesen), Florida Vibes, Gesso (semak lesen), Gong! (semak lesen)
 
-## Romantik / elegan (81 fon)
+## Romantik / elegan (87 fon)
 
 Script formal bersambung; anggun, majlis. Niche: Bilik tidur, Papan tanda perkahwinan, Krismas & musim cuti. Teks pasangan: Cormorant Garamond, Montserrat. Elak: Poster lucu atau gym; teks kecil.
 
@@ -44,13 +44,13 @@ Script formal bersambung; anggun, majlis. Niche: Bilik tidur, Papan tanda perkah
 11. [Cookie](https://fonts.google.com/specimen/Cookie) · google · OFL-1.1 · ketebalan 400 · kualiti 76
 12. [Dynalight](https://fonts.google.com/specimen/Dynalight) · google · OFL-1.1 · ketebalan 400 · kualiti 76
 
-Lebih unik (luar Google Fonts): Black Jack, Britney, Calligraffiti, Florante at Laura (semak lesen), Florida Vibes, Gothic Ultra OT (semak lesen), Nymphette (semak lesen), odstemplik
+Lebih unik (luar Google Fonts): Black Jack, Britney, Calligraffiti, Digory Doodles, Florante at Laura (semak lesen), Florida Vibes, Gothic Ultra OT (semak lesen), konstytucyja
 
 Bukti: Script dinilai feminin, elegan dan menarik (Monotype Corsiva; Shaikh dkk. 2006, 561 responden) ([sumber](https://www.microsoft.com/en-us/research/uploads/prod/2021/06/Hazlett-Larson-Shaikh-Chaparo-2013-two-studies-on-how-a-typeface-congruent-with-content-can-enhance-onscreen-communication.pdf), rasmi)
 
 Bukti: Kumpulan 'Elegance' untuk script (Brumberger 2003) ([sumber](https://understandinggraphics.com/?p=459), lemah)
 
-## Tulisan tangan santai (183 fon)
+## Tulisan tangan santai (192 fon)
 
 Macam ditulis pen/marker; mesra dan peribadi. Niche: Nursery, Dapur & coffee bar, Kelas (classroom), Afirmasi & motivasi. Teks pasangan: Nunito, Lato. Elak: Poster mewah / pejabat formal.
 
@@ -69,7 +69,7 @@ Macam ditulis pen/marker; mesra dan peribadi. Niche: Nursery, Dapur & coffee bar
 11. [Merienda](https://fonts.google.com/specimen/Merienda) · google · OFL-1.1 · ketebalan 300–900 (variable) · kualiti 64
 12. [Pangolin](https://fonts.google.com/specimen/Pangolin) · google · OFL-1.1 · ketebalan 400 · kualiti 78
 
-Lebih unik (luar Google Fonts): Amatic, Black Jack, Brizel, Caroni, Comico, odstemplik, Tinet (semak lesen)
+Lebih unik (luar Google Fonts): Amatic, Black Jack, Brizel, Caroni, Comico, Digory Doodles, konstytucyja, League Script #1
 
 Bukti: Fon bulat, tidak sempurna seperti tulisan tangan dinilai mesra (Mackiewicz 2005) ([sumber](https://editingresearch.byu.edu/2021/05/21/choosing-a-font-can-be-a-daunting-task-but-with-the-proper-instruction-it-doesnt-have-to-be/), lemah)
 
@@ -92,7 +92,7 @@ Bentuk melantun, tidak sekata; humor. Niche: Bilik air (lucu), Dapur & coffee ba
 11. [Gorditas](https://fonts.google.com/specimen/Gorditas) · google · OFL-1.1 · ketebalan 400–700 · kualiti 70
 12. [Raleway Dots](https://fonts.google.com/specimen/Raleway+Dots) · google · OFL-1.1 · ketebalan 400 · kualiti 72
 
-Lebih unik (luar Google Fonts): 3Dumb (semak lesen), AnuDaw (semak lesen), Chubbo, Comic Zine (semak lesen), Comico, Pally, Paquito, Plexifont (semak lesen)
+Lebih unik (luar Google Fonts): 3Dumb (semak lesen), AnuDaw (semak lesen), Chubbo, Comic Zine (semak lesen), Comico, Impact Label (semak lesen), Pally, Paquito
 
 Bukti: Faktor personaliti tersendiri 'Script/Funny' (Shaikh dkk. 2006) ([sumber](https://www.microsoft.com/en-us/research/uploads/prod/2021/06/Hazlett-Larson-Shaikh-Chaparo-2013-two-studies-on-how-a-typeface-congruent-with-content-can-enhance-onscreen-communication.pdf), rasmi)
 
@@ -140,7 +140,7 @@ Ringan, terbuka, jarak lapang; boho, kaunselor. Niche: Bilik kaunselor / calm co
 
 Bukti: Fon lembut beri respons positif lebih tinggi; fon tajam cetus emosi negatif (Monotype × Neurons 2021, kajian vendor) ([sumber](https://www.monotype.com/resources/can-fonts-affect-our-feelings), lemah)
 
-## Kuat / motivasi (28 fon)
+## Kuat / motivasi (29 fon)
 
 Tebal, sempit (condensed), lantang. Niche: Home gym, Home office & cubicle, Asrama / dorm, Bilik remaja. Teks pasangan: Inter, Roboto Condensed. Elak: Script halus; poster tidur/nursery.
 
@@ -159,7 +159,7 @@ Tebal, sempit (condensed), lantang. Niche: Home gym, Home office & cubicle, Asra
 11. [Anybody](https://fonts.google.com/specimen/Anybody) · google · OFL-1.1 · ketebalan 100–900 (variable) · kualiti 74
 12. [Saira](https://fonts.google.com/specimen/Saira) · google · OFL-1.1 · ketebalan 100–900 (variable) · kualiti 78
 
-Lebih unik (luar Google Fonts): Boxing, Capture it (semak lesen), Kihim, New Title, Nippo, Sharpie
+Lebih unik (luar Google Fonts): Boxing, Capture it (semak lesen), Kihim, New Title, Nippo, Post No Bills, Sharpie, Top Secret (semak lesen)
 
 Bukti: Tiada kajian langsung 'condensed tebal = motivasi'; tag Google beri skor Loud tinggi untuk fon condensed tebal ([sumber](https://github.com/google/fonts/blob/main/tags/all/README.md), lemah)
 
@@ -203,7 +203,7 @@ Serif buku tradisional; ilmu, sastera. Niche: Reading nook & bookish, Home offic
 11. [Faustina](https://fonts.google.com/specimen/Faustina) · google · OFL-1.1 · ketebalan 300–800 (variable) · kualiti 76
 12. [Wittgenstein](https://fonts.google.com/specimen/Wittgenstein) · google · OFL-1.1 · ketebalan 400–900 (variable) · kualiti 75
 
-Lebih unik (luar Google Fonts): Bespoke Serif, Erode, Gambetta, Neco, Recia, Rowan, Sears Tower (semak lesen), Sentient
+Lebih unik (luar Google Fonts): Bespoke Serif, Erode, Gambetta, Neco, Recia, Rowan, Sears Tower (semak lesen), Secret Typewriter (semak lesen)
 
 Bukti: Serif (Times New Roman) dinilai stabil, matang, praktikal; Georgia formal (Shaikh dkk. 2006) ([sumber](https://www.microsoft.com/en-us/research/uploads/prod/2021/06/Hazlett-Larson-Shaikh-Chaparo-2013-two-studies-on-how-a-typeface-congruent-with-content-can-enhance-onscreen-communication.pdf), rasmi)
 
@@ -228,7 +228,7 @@ Kontras tinggi (Didone), geometri Deco. Niche: Bilik air (lucu), Home office & c
 
 Lebih unik (luar Google Fonts): Bonny, Boska, Gambarino, Melodrama, Stardom, Zina
 
-## Rustik / farmhouse / western (90 fon)
+## Rustik / farmhouse / western (96 fon)
 
 Slab kayu, tanda kedai lama. Niche: Bilik dobi, Dapur & coffee bar, Pintu masuk & mudroom, Ruang makan. Teks pasangan: Lato, Josefin Sans. Elak: Mewah moden, futuristik.
 
@@ -247,9 +247,9 @@ Slab kayu, tanda kedai lama. Niche: Bilik dobi, Dapur & coffee bar, Pintu masuk 
 11. [Orelega One](https://fonts.google.com/specimen/Orelega+One) · google · OFL-1.1 · ketebalan 400 · kualiti 70
 12. [Bespoke Slab](https://www.fontshare.com/fonts/bespoke-slab) · fontshare · ITF-FFL-2.0 · ketebalan 300–800
 
-Lebih unik (luar Google Fonts): Bodonitown (semak lesen), Gaspar, Gawaa, Hjet, Hoover, Paquito, Trench Slab
+Lebih unik (luar Google Fonts): Bodonitown (semak lesen), Fin Serif Display, Gaspar, Gawaa, Hjet, Hoover, Minipax, Paquito
 
-## Gotik / medieval (29 fon)
+## Gotik / medieval (33 fon)
 
 Blackletter, gaya manuskrip. Niche: Krismas & musim cuti, Halloween, Thanksgiving, Easter, Reading nook & bookish. Teks pasangan: EB Garamond, Cormorant. Elak: Ayat panjang; kanak-kanak.
 
@@ -268,7 +268,7 @@ Blackletter, gaya manuskrip. Niche: Krismas & musim cuti, Halloween, Thanksgivin
 11. [Almendra Display](https://fonts.google.com/specimen/Almendra+Display) · google · OFL-1.1 · ketebalan 400 · kualiti 64
 12. [Germania One](https://fonts.google.com/specimen/Germania+One) · google · OFL-1.1 · ketebalan 400 · kualiti 61
 
-Lebih unik (luar Google Fonts): Aktura, Balgruf, Chomsky
+Lebih unik (luar Google Fonts): Aktura, Balgruf, Chomsky, KJV1611, Quaerite Regnum Dei, Trickster, Unifraktur Maguntia
 
 ## Seram / Halloween (43 fon)
 
@@ -289,7 +289,7 @@ Menitis, retak, menakutkan. Niche: Halloween, Thanksgiving, Easter. Teks pasanga
 11. [Mystery Quest](https://fonts.google.com/specimen/Mystery+Quest) · google · OFL-1.1 · ketebalan 400 · kualiti 60
 12. [Trade Winds](https://fonts.google.com/specimen/Trade+Winds) · google · OFL-1.1 · ketebalan 400 · kualiti 70
 
-## Kasar / grunge (116 fon)
+## Kasar / grunge (117 fon)
 
 Tekstur rosak, stensil, kasar. Niche: Bilik remaja, Asrama / dorm, Man cave, garaj & bar, Home gym. Teks pasangan: Oswald, Inter. Elak: Nursery, perkahwinan.
 

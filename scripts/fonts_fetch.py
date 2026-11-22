@@ -118,7 +118,11 @@ def classify_license(text):
     return "Lesen sendiri (tidak jelas)", "berisiko"
 
 def fontsquirrel():
-    lst = json.loads(get("https://www.fontsquirrel.com/api/fontlist/all"))
+    lp = os.path.join(CACHE, "fontsquirrel_fontlist.json")  # salinan senarai jika API disekat
+    try:
+        lst = json.loads(get("https://www.fontsquirrel.com/api/fontlist/all")); json.dump(lst, open(lp, "w"))
+    except Exception:
+        lst = json.load(open(lp)); print("  guna salinan senarai:", lp)
     gnames = set()
     gp = os.path.join(OUT, "google.json")
     if os.path.exists(gp): gnames = {f["name"].lower() for f in json.load(open(gp))["fonts"]}
