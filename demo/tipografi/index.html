@@ -1,0 +1,277 @@
+<title>Makmal Tipografi Poster</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400;500&family=Shrikhand&family=Fredoka:wght@400;500&family=Quicksand:wght@700&family=Nunito:wght@400&family=Limelight&family=Poiret+One&family=Alfa+Slab+One&family=Montserrat:wght@500;600&family=Cormorant+Garamond:ital,wght@0,600;1,600&family=EB+Garamond&family=Great+Vibes&family=Playfair+Display:wght@500;700&family=Fraunces:opsz,wght@9..144,700&family=Caveat:wght@700&family=Rye&family=Bebas+Neue&family=Oswald:wght@300&family=Dancing+Script:wght@600&family=Poppins:wght@600&display=swap">
+<style>
+/* Layout: helaian pruf cetak — poster dalam tanda potong (crop marks), satu lajur bacaan + grid spesimen */
+:root{
+  --paper:#F3F3F0; --sheet:#FFFFFF; --ink:#17181B; --muted:#5E6068; --rule:#D9D9D4;
+  --mag:#C3166E; --pass:#1F7A4D; --fail:#B3261E;
+  --f-head:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --f-body:"Instrument Sans","Helvetica Neue",Arial,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#131417;--sheet:#1C1D21;--ink:#ECECE8;--muted:#A3A5AD;--rule:#33353B;--mag:#F26AAE;--pass:#5FC48F;--fail:#FF8A80;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#131417;--sheet:#1C1D21;--ink:#ECECE8;--muted:#A3A5AD;--rule:#33353B;--mag:#F26AAE;--pass:#5FC48F;--fail:#FF8A80;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font:16px/1.6 var(--f-body)}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 64px;display:grid;gap:56px}
+h1,h2,h3{font-family:var(--f-head);text-wrap:balance;margin:0;line-height:1.1}
+h1{font-size:clamp(2rem,5vw,3.3rem);font-weight:700;letter-spacing:-.02em}
+h2{font-size:1.75rem;font-weight:700;letter-spacing:-.01em}
+h3{font-size:1.05rem;font-weight:700}
+p{margin:0;max-width:65ch}
+.eyebrow{font:500 .75rem/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mag)}
+.lede{color:var(--muted);font-size:1.05rem}
+section{display:grid;gap:20px}
+.mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+a{color:var(--mag)}
+:focus-visible{outline:2px solid var(--mag);outline-offset:2px}
+
+/* hero / penjana */
+.lab{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:40px;align-items:start}
+@media (max-width:760px){.lab{grid-template-columns:1fr}}
+.controls{display:grid;gap:16px}
+.field{display:grid;gap:6px}
+label,.lbl{font:500 .72rem/1 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+select,input[type=text],textarea{font:inherit;color:var(--ink);background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:9px 10px;width:100%}
+input[type=range]{width:100%;accent-color:var(--mag)}
+.btns{display:flex;flex-wrap:wrap;gap:8px}
+button{font:600 .9rem var(--f-body);border:1px solid var(--ink);background:var(--ink);color:var(--paper);border-radius:6px;padding:9px 14px;cursor:pointer}
+button.ghost{background:transparent;color:var(--ink)}
+button[aria-pressed=true]{background:var(--mag);border-color:var(--mag);color:#fff}
+.facts{display:grid;gap:8px;border-top:1px solid var(--rule);padding-top:14px;font-size:.92rem}
+.facts div{display:flex;justify-content:space-between;gap:12px}
+.facts span:first-child{color:var(--muted)}
+.chip{font:500 .72rem/1 var(--f-mono);padding:4px 7px;border-radius:99px;border:1px solid currentColor;white-space:nowrap}
+.ok{color:var(--pass)} .no{color:var(--fail)}
+
+/* poster + tanda potong */
+.proof{position:relative;padding:18px;justify-self:center;width:100%;max-width:440px}
+.proof::before,.proof::after,.proof>.cm::before,.proof>.cm::after{content:"";position:absolute;width:14px;height:14px;border-color:var(--muted);border-style:solid;border-width:0}
+.proof::before{top:0;left:0;border-right-width:1px;border-bottom-width:1px}
+.proof::after{top:0;right:0;border-left-width:1px;border-bottom-width:1px}
+.proof>.cm::before{bottom:0;left:0;border-right-width:1px;border-top-width:1px}
+.proof>.cm::after{bottom:0;right:0;border-left-width:1px;border-top-width:1px}
+.proof .size{position:absolute;bottom:-2px;left:50%;transform:translateY(100%) translateX(-50%);font:400 .7rem var(--f-mono);color:var(--muted);white-space:nowrap;padding-top:4px}
+.poster{position:relative;aspect-ratio:2/3;width:100%;max-width:100%;container-type:inline-size;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,.12),0 8px 24px rgba(0,0,0,.10)}
+.poster svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.poster .t{position:absolute;left:9%;right:9%;top:42%;transform:translateY(-50%);text-align:center;display:grid;gap:4cqw;justify-items:center}
+.poster .hl{white-space:pre-line;line-height:1.02;font-size:15cqw}
+.poster .sm{font-size:3.3cqw;letter-spacing:.22em;text-transform:uppercase}
+.poster .sm.script{font-size:8cqw;letter-spacing:0;text-transform:none}
+.nokern .hl{font-kerning:none}
+
+/* kerning */
+.kern{display:grid;gap:14px;background:var(--sheet);border:1px solid var(--rule);border-radius:8px;padding:20px;min-width:0}
+.krow{display:grid;grid-template-columns:120px minmax(0,1fr);gap:12px;align-items:center;border-top:1px dashed var(--rule);padding-top:12px}
+.krow .ks{font-size:clamp(2.2rem,7vw,4.6rem);line-height:1.05;overflow-wrap:anywhere}
+@media (max-width:560px){.krow{grid-template-columns:1fr}}
+.kctl{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.rules{display:grid;gap:10px;padding:0;margin:0;list-style:none}
+.rules li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:baseline;border-bottom:1px solid var(--rule);padding-bottom:10px}
+.lvl{font:500 .68rem/1 var(--f-mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+
+/* pairing */
+.pairs{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.pair{background:var(--sheet);border:1px solid var(--rule);border-radius:8px;padding:18px;display:grid;gap:8px;align-content:start;min-width:0}
+.pair .d{font-size:2.1rem;line-height:1.05}
+.pair .b{font-size:1rem;color:var(--muted)}
+.pair .why{font-size:.86rem;border-top:1px solid var(--rule);padding-top:8px}
+.pair .fam{font:400 .72rem var(--f-mono);color:var(--muted)}
+.pair.bad{border-style:dashed}
+.pair.bad .fam{color:var(--fail)}
+
+/* kontras */
+.tbl{overflow-x:auto;border:1px solid var(--rule);border-radius:8px;background:var(--sheet)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:.9rem}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--rule);vertical-align:middle}
+th{font:500 .7rem var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+tr:last-child td{border-bottom:0}
+.sw{display:flex;gap:3px}
+.sw i{width:20px;height:20px;border-radius:3px;border:1px solid rgba(0,0,0,.12)}
+.formula{font:400 .88rem/1.7 var(--f-mono);background:var(--sheet);border:1px solid var(--rule);border-radius:8px;padding:14px 16px;overflow-x:auto}
+
+/* galeri */
+.gallery{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:28px 18px}
+@media (max-width:960px){.gallery{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:640px){.gallery{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:440px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.gallery figure{margin:0;display:grid;gap:8px;cursor:pointer}
+.gallery figcaption{font:400 .75rem var(--f-mono);color:var(--muted);display:flex;justify-content:space-between;gap:6px}
+.steps{display:grid;gap:10px;padding-left:1.3em;margin:0;max-width:70ch}
+.src{display:grid;gap:6px;font-size:.88rem;padding-left:1.2em;margin:0}
+.src li{overflow-wrap:anywhere}
+@media (prefers-reduced-motion:no-preference){.poster svg{transition:opacity .25s}}
+</style>
+
+<div class="wrap">
+  <header style="display:grid;gap:14px">
+    <span class="eyebrow">Riset poster · kerning · pasangan fon · warna · latar</span>
+    <h1>Makmal Tipografi Poster</h1>
+    <p class="lede">Empat perkara yang menentukan poster tipografi nampak profesional atau amatur. Penjana di bawah dibina dari skrip <span class="mono">scripts/poster_bg.py</span>: ia pilih pasangan fon ikut niche, jana latar, dan pastikan warna teks lulus kontras WCAG.</p>
+  </header>
+
+  <section class="lab" aria-label="Penjana poster">
+    <div class="proof" id="heroProof"><span class="cm"></span><div class="poster" id="hero"></div><span class="size">2:3 · 12×18 · 16×24 · 24×36 in</span></div>
+    <div class="controls">
+      <div class="field"><label for="niche">Niche (dari riset P3)</label><select id="niche"></select></div>
+      <div class="field"><label for="txt">Teks utama</label><textarea id="txt" rows="2" style="resize:vertical;font:inherit"></textarea></div>
+      <div class="btns">
+        <button id="regen" type="button">Jana latar lain</button>
+        <button id="kernBtn" class="ghost" type="button" aria-pressed="true">Kerning: hidup</button>
+      </div>
+      <div class="facts" id="facts"></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-kern">
+    <span class="eyebrow">01 · Kerning &amp; tracking</span>
+    <h2 id="h-kern">Jarak antara huruf</h2>
+    <p class="lede">Kerning laras jarak antara dua huruf tertentu (A dan V). Tracking laras jarak seluruh baris. Pada tajuk poster yang besar, jurang kecil jadi jelas.</p>
+    <div class="kern">
+      <div class="kctl">
+        <div class="field"><label for="kText">Teks ujian</label><input type="text" id="kText" value="WAVY Toast"></div>
+        <div class="field"><label for="kFont">Fon</label><select id="kFont"></select></div>
+        <div class="field"><label for="kTrack">Tracking: <span id="kTrackV" class="mono">0</span> /1000 em</label><input type="range" id="kTrack" min="-80" max="300" step="10" value="0"></div>
+      </div>
+      <div class="krow"><span class="lbl">Kerning mati</span><div class="ks" id="kOff" style="font-kerning:none"></div></div>
+      <div class="krow"><span class="lbl">Kerning hidup (pasangan dalam fon)</span><div class="ks" id="kOn" style="font-kerning:normal"></div></div>
+    </div>
+    <ul class="rules">
+      <li><span>Kerning = jarak dua huruf tertentu; tracking = jarak seluruh teks. Fon moden simpan "kerning pairs" yang ditetapkan pereka fon.</span><span class="lvl">rasmi · Google Fonts</span></li>
+      <li><span>Pelayar web moden hidupkan kerning secara lalai. Canva/Photoshop/InDesign juga ikut pasangan fon (Metrics).</span><span class="lvl">rasmi · Google Fonts, Adobe</span></li>
+      <li><span>InDesign ada dua mod automatik: Metrics (ikut pasangan dalam fon) dan Optical (ikut bentuk huruf). Kerning dan tracking diukur dalam 1/1000 em.</span><span class="lvl">rasmi · Adobe</span></li>
+      <li><span>Mula dengan Metrics untuk fon profesional; cuba Optical untuk tajuk besar atau pasangan bermasalah, terutama nombor. Tetap semak dengan mata.</span><span class="lvl">lemah · forum Adobe</span></li>
+      <li><span>Tajuk huruf besar semua: tambah sedikit tracking. Fon script: jangan tambah tracking, sambungan huruf akan putus.</span><span class="lvl">lemah · amalan biasa</span></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="h-pair">
+    <span class="eyebrow">02 · Pasangan fon</span>
+    <h2 id="h-pair">Satu fon menonjol, satu fon menyokong</h2>
+    <p class="lede">Fon kedua mesti cukup berbeza, tetapi tidak terlalu berbeza. Satu fon sahaja pun boleh beri kontras melalui saiz, huruf besar dan tracking. Tiada formula tetap.</p>
+    <div class="pairs" id="pairs"></div>
+    <h3>Contoh pasangan lemah</h3>
+    <div class="pairs" id="bad"></div>
+  </section>
+
+  <section aria-labelledby="h-col">
+    <span class="eyebrow">03 · Warna fon &amp; latar</span>
+    <h2 id="h-col">Kontras dulu, baru estetik</h2>
+    <p class="lede">WCAG tetapkan nisbah kontras minimum 4.5:1 untuk teks biasa dan 3:1 untuk teks besar (18pt ke atas, atau 14pt tebal). Nisbah tidak boleh dibundarkan: 4.499 gagal. Pin dilihat kecil dalam suapan Pinterest, jadi skrip ini guna sasaran 4.5:1 untuk semua teks, termasuk tajuk.</p>
+    <div class="formula">L = 0.2126·R + 0.7152·G + 0.0722·B   (R, G, B dilinearkan)<br>Nisbah = (L terang + 0.05) / (L gelap + 0.05)   → julat 1:1 hingga 21:1</div>
+    <div class="tbl"><table>
+      <thead><tr><th>Niche</th><th>Palet</th><th>Teks utama</th><th>Teks kecil / aksen</th><th>Latar dijana</th></tr></thead>
+      <tbody id="ctab"></tbody>
+    </table></div>
+    <p class="lede" style="font-size:.92rem">Kontras dikira terhadap setiap warna yang berada di belakang teks (latar + gradient + jalur sinar). Jika aksen &lt; 4.5:1, skrip guna warna teks utama untuk baris kecil.</p>
+  </section>
+
+  <section aria-labelledby="h-gal">
+    <span class="eyebrow">04 · Penjana latar</span>
+    <h2 id="h-gal">12 niche, satu skrip</h2>
+    <ol class="steps">
+      <li>Setiap niche ada gaya latar sendiri ikut riset P3: pelangi boho (kelas, nursery), kipas Art Deco (bilik air, pejabat), kanopi bistro (dapur), bingkai tanda vintage (dobi, bacaan), sinar retro, gradient, gumpalan lembut, grain.</li>
+      <li>Bentuk diletak di tepi atau bucu; zon tengah dibiar kosong untuk teks.</li>
+      <li>Grain halus (hingar fraktal 9%) ditambah supaya warna rata tidak nampak digital.</li>
+      <li>Semaian rawak tetap: varian yang sama boleh dijana semula untuk cetakan.</li>
+      <li>Output: SVG vektor 600×900 (nisbah 2:3), boleh dibesarkan tanpa pecah. <span class="mono">--svg-dir</span> simpan fail untuk dibuka di Canva atau Inkscape.</li>
+    </ol>
+    <div class="gallery" id="gallery"></div>
+  </section>
+
+  <section aria-labelledby="h-src">
+    <h2 id="h-src">Sumber</h2>
+    <ol class="src" id="src"></ol>
+    <p class="lede" style="font-size:.88rem">Kod warna hex ialah pilihan sendiri berdasarkan nama palet dalam riset P3, bukan data pasaran. Semua fon ialah Google Fonts berlesen SIL OFL; sahkan lesen sebelum jual.</p>
+  </section>
+</div>
+
+<script>
+(function(){
+  const $=s=>document.querySelector(s), el=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e};
+  const SCRIPTS=["Great Vibes","Dancing Script","Caveat"];
+  const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  const ff=f=>`"${f}",${SCRIPTS.includes(f)?"cursive":/Garamond|Playfair|Fraunces|Cormorant|Limelight|Rye|Alfa|Shrikhand/.test(f)?"Georgia,serif":"Arial,sans-serif"}`;
+  const chip=(r,t)=>`<span class="chip ${r>=t?"ok":"no"}">${r.toFixed(2)}:1 ${r>=t?"lulus":"gagal"}</span>`;
+  let D, cur=0, vi=0, kern=true;
+
+  function poster(n, v, text){
+    const p=el("div","poster"+(kern?"":" nokern"));
+    p.innerHTML=n.variants[v].svg;
+    const t=el("div","t"), sc=SCRIPTS.includes(n.body.family);
+    const hl=el("div","hl"); hl.textContent=text??n.text;
+    hl.style.cssText=`font-family:${ff(n.display.family)};font-weight:${n.display.weight};color:${n.palette.ink}`;
+    if(SCRIPTS.includes(n.display.family)) hl.style.fontSize="20cqw";
+    if(n.display.family==="Bebas Neue") hl.style.fontSize="24cqw";
+    const sm=el("div","sm"+(sc?" script":"")); sm.textContent=n.small;
+    sm.style.cssText=`font-family:${ff(n.body.family)};font-weight:${n.body.weight};color:${n.small_color}`;
+    t.append(hl,sm); p.append(t); return p;
+  }
+  function renderHero(){
+    const n=D.niches[cur], h=$("#hero"), p=poster(n,vi,$("#txt").value);
+    h.replaceWith(p); p.id="hero";
+    $("#facts").innerHTML=`
+      <div><span>Fon paparan</span><span>${esc(n.display.family)} ${n.display.weight}</span></div>
+      <div><span>Fon sokongan</span><span>${esc(n.body.family)} ${n.body.weight}</span></div>
+      <div><span>Gaya latar</span><span class="mono">${n.style} · semaian ${n.variants[vi].seed}</span></div>
+      <div><span>Kontras teks utama</span>${chip(n.ink_min_ratio,4.5)}</div>
+      <div><span>Kontras aksen</span>${chip(n.accent_min_ratio,4.5)}</div>
+      <p style="color:var(--muted);font-size:.88rem">${esc(n.why)}</p>`;
+  }
+  function renderKern(){
+    const f=$("#kFont").value, t=$("#kText").value||"WAVY Toast", tr=+$("#kTrack").value;
+    $("#kTrackV").textContent=(tr>0?"+":"")+tr;
+    for(const id of ["#kOff","#kOn"]){const e=$(id);e.textContent=t;e.style.fontFamily=ff(f);e.style.letterSpacing=(tr/1000)+"em";
+      const n=D.niches.find(x=>x.display.family===f);e.style.fontWeight=n?n.display.weight:400;}
+  }
+  function init(d){
+    D=d;
+    D.niches.forEach((n,i)=>{$("#niche").append(new Option(`${n.name} — ${n.display.family} + ${n.body.family}`,i))});
+    [...new Set(["Playfair Display","Bebas Neue","Fraunces","Alfa Slab One","Limelight",...D.niches.map(n=>n.display.family)])]
+      .forEach(f=>$("#kFont").append(new Option(f,f)));
+    const setNiche=i=>{cur=i;vi=0;$("#txt").value=D.niches[i].text;renderHero()};
+    $("#niche").onchange=e=>setNiche(+e.target.value);
+    $("#txt").oninput=renderHero;
+    $("#regen").onclick=()=>{vi=(vi+1)%D.niches[cur].variants.length;renderHero()};
+    $("#kernBtn").onclick=e=>{kern=!kern;e.target.setAttribute("aria-pressed",kern);e.target.textContent="Kerning: "+(kern?"hidup":"mati");renderHero()};
+    ["#kText","#kFont","#kTrack"].forEach(s=>$(s).addEventListener("input",renderKern));
+    setNiche(7); $("#niche").value=7; renderKern();
+
+    D.niches.forEach(n=>{
+      const c=el("div","pair");
+      c.innerHTML=`<span class="fam">${esc(n.name)}</span><div class="d" style="font-family:${ff(n.display.family)};font-weight:${n.display.weight}">${esc(n.text.split("\n")[0])}</div>
+        <div class="b" style="font-family:${ff(n.body.family)};font-weight:${n.body.weight}">${esc(n.small)}</div>
+        <span class="fam">${esc(n.display.family)} + ${esc(n.body.family)}</span><p class="why">${esc(n.why)}</p>`;
+      $("#pairs").append(c);
+    });
+    D.bad_pairs.forEach(b=>{
+      const c=el("div","pair bad");
+      c.innerHTML=`<div class="d" style="font-family:${ff(b.a)}">Sweet Home</div><div class="b" style="font-family:${ff(b.b)};font-size:1.3rem">Welcome to our home</div>
+        <span class="fam">${esc(b.a)} + ${esc(b.b)}</span><p class="why">${esc(b.why)}</p>`;
+      $("#bad").append(c);
+    });
+    D.niches.forEach(n=>{
+      const P=n.palette, tr=el("tr");
+      tr.innerHTML=`<td>${esc(n.name)}</td><td><div class="sw">${[P.bg,P.bg2,P.shape,P.ink,P.accent].map(c=>`<i title="${c}" style="background:${c}"></i>`).join("")}</div></td>
+        <td>${chip(n.ink_min_ratio,4.5)}${n.ink_fixed?' <span class="lvl">dilaras</span>':""}</td><td>${chip(n.accent_min_ratio,4.5)}${n.accent_min_ratio<4.5?' <span class="lvl">→ guna warna teks</span>':""}</td><td class="mono">${n.style}</td>`;
+      $("#ctab").append(tr);
+    });
+    D.niches.forEach((n,i)=>{
+      const f=el("figure"), pr=el("div","proof"); pr.style.padding="10px"; pr.append(el("span","cm"),poster(n,1));
+      f.append(pr); f.append(el("figcaption",null,`<span>${esc(n.name)}</span><span>${n.style}</span>`));
+      f.tabIndex=0; const go=()=>{$("#niche").value=i;setNiche(i);vi=1;renderHero();$("#heroProof").scrollIntoView({behavior:"smooth",block:"center"})};
+      f.onclick=go; f.onkeydown=e=>{if(e.key==="Enter")go()};
+      $("#gallery").append(f);
+    });
+    const names={wcag:"W3C — Understanding SC 1.4.3 Contrast (Minimum)",lum:"W3C — Technique G18 (kontras & luminans relatif)",kern_gf:"Google Fonts Knowledge — Kerning / kerning pairs",pair_gf:"Google Fonts Knowledge — Pairing typefaces",matrix_gf:"Google Fonts Knowledge — Pairing using the font matrix",kern_adobe:"Adobe InDesign — Kerning and tracking",p3:"Riset dalaman P3 — gaya design ikut niche"};
+    Object.entries(D.sources).forEach(([k,s])=>{
+      const li=el("li"); li.innerHTML=s.url.startsWith("http")?`<a href="${s.url}" target="_blank" rel="noopener">${names[k]}</a> <span class="lvl">${s.level}</span>`:`${names[k]} <span class="mono">${s.url}</span>`;
+      $("#src").append(li);
+    });
+  }
+  fetch("poster_typo.json").then(r=>r.json()).then(init).catch(()=>{$("#facts").textContent="Data poster tidak dapat dimuat. Muat semula halaman."});
+})();
+</script>
