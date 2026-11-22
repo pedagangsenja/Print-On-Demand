@@ -1,0 +1,112 @@
+[
+ {
+  "job": "Jana gambar",
+  "tool": "FLUX.2 klein 4B",
+  "license": "Apache 2.0",
+  "evidence": "rasmi (Hugging Face)",
+  "source": "https://huggingface.co/black-forest-labs/FLUX.2-klein-4B",
+  "free": "Ya",
+  "fits": "Ya (diuji 22 Nov)",
+  "status": "Perlu pasang semula",
+  "note": "~3.5 min/gambar 1024² di 4 teras (diukur). Kadang salah eja: jana 3-4 seed. Muat turun ~15 GB setiap sesi baharu."
+ },
+ {
+  "job": "Jana gambar",
+  "tool": "Z-Image-Turbo (GGUF)",
+  "license": "Apache 2.0",
+  "evidence": "rasmi (Hugging Face)",
+  "source": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo",
+  "free": "Ya",
+  "fits": "Ya, melalui stable-diffusion.cpp",
+  "status": "Belum dipasang",
+  "note": "6.2B parameter. Lebih pandai tulis huruf. Program stable-diffusion.cpp perlu dibina; perlu kebenaran anda. Kelajuan belum diukur."
+ },
+ {
+  "job": "Semak ejaan",
+  "tool": "Tesseract OCR (pytesseract)",
+  "license": "Apache 2.0",
+  "evidence": "rasmi (PyPI)",
+  "source": "https://pypi.org/project/pytesseract/",
+  "free": "Ya",
+  "fits": "Ya, ringan",
+  "status": "Belum dipasang",
+  "note": "Baca tulisan dalam gambar, pilih seed yang ejaannya betul secara automatik."
+ },
+ {
+  "job": "Upscale",
+  "tool": "vtracer",
+  "license": "MIT",
+  "evidence": "rasmi (PyPI)",
+  "source": "https://pypi.org/project/vtracer/",
+  "free": "Ya",
+  "fits": "Ya, ringan",
+  "status": "Belum dipasang",
+  "note": "Tukar ke vektor (SVG): cetak sebesar mana pun tanpa kabur. Terbaik untuk poster huruf."
+ },
+ {
+  "job": "Upscale",
+  "tool": "Real-ESRGAN x4",
+  "license": "BSD-3 (PyPI juga tulis Apache)",
+  "evidence": "rasmi (PyPI)",
+  "source": "https://pypi.org/project/realesrgan/",
+  "free": "Ya",
+  "fits": "Ya, perlahan tanpa GPU",
+  "status": "Belum dipasang",
+  "note": "Untuk poster bertekstur. Kedua-dua lesen benarkan guna komersial. Kelajuan belum diukur."
+ },
+ {
+  "job": "Buang latar",
+  "tool": "rembg + BiRefNet",
+  "license": "MIT",
+  "evidence": "rasmi (PyPI, Hugging Face)",
+  "source": "https://huggingface.co/ZhengPeng7/BiRefNet",
+  "free": "Ya",
+  "fits": "Ya, ringan",
+  "status": "Belum dipasang",
+  "note": "Buang latar belakang gambar."
+ },
+ {
+  "job": "Mockup",
+  "tool": "Skrip Python (Pillow/OpenCV)",
+  "license": "Bebas (sumber terbuka)",
+  "evidence": "rasmi",
+  "source": "https://pypi.org/project/pillow/",
+  "free": "Ya",
+  "fits": "Ya",
+  "status": "Belum dibuat",
+  "note": "Tak perlu AI. Foto bilik mesti milik sendiri atau berlesen komersial."
+ },
+ {
+  "job": "Teks / SEO",
+  "tool": "Claude (sesi ini)",
+  "license": "–",
+  "evidence": "–",
+  "source": "",
+  "free": "Termasuk pelan Claude",
+  "fits": "Tak perlu pasang",
+  "status": "Sedia",
+  "note": "Tajuk, deskripsi dan tag Pinterest. Lebih cepat dan baik daripada model kecil yang dipasang sendiri."
+ },
+ {
+  "job": "Tak muat",
+  "tool": "Qwen-Image-2512",
+  "license": "Apache 2.0",
+  "evidence": "rasmi (Hugging Face)",
+  "source": "https://huggingface.co/Qwen/Qwen-Image-2512",
+  "free": "Ya",
+  "fits": "Tidak",
+  "status": "Tidak sesuai",
+  "note": "20.4B parameter: perlu lebih 15 GB RAM."
+ },
+ {
+  "job": "Ditolak",
+  "tool": "FLUX.2 klein 9B",
+  "license": "FLUX Non-Commercial",
+  "evidence": "rasmi (Hugging Face)",
+  "source": "https://huggingface.co/black-forest-labs/FLUX.2-klein-9B",
+  "free": "Percuma tapi tak boleh jual",
+  "fits": "–",
+  "status": "Ditolak",
+  "note": "Hasil tak boleh dijual."
+ }
+]
