@@ -27,3 +27,10 @@
 | napharder | – | "WORK HAD" ×4 → rephrased "WORK LESS Nap MORE" |
 | disturb | – | "ALREADY"/"Disturb" broken ×4 → rephrased "PLEASE LEAVE ME Alone" |
 | couch2 | – | "Already" ×4, "COCH" ×3 → rephrased "MY COUCH MISSES Me" |
+
+## Repair r1 (rephrased)
+| id | pick | notes |
+|---|---|---|
+| nope | r1/s2 | "Later" OK ×4; s3 "todaay" |
+| tired | r1/s2 | all 4 OK |
+| ideas | r1/s2 | all 4 OK |
