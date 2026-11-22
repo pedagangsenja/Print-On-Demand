@@ -195,7 +195,10 @@ W("fonts_master.json", master)
 W("fonts_moods.json", moods_out)
 W("fonts_picks.json", picks_out)
 W("fonts_rejected.json", rejected)
-for f in ("sites.json", "licenses.json"):
+for f in ("sites.json", "licenses.json"):  # specimen_urls.json = url gambar yang dimuat naik ke dashboard
+    if os.path.exists(D(f)): W("fonts_" + f, L(f))
+if os.path.exists(D("specimen_urls.json")): W("fonts_specimens.json", L("specimen_urls.json"))
+for f in ():
     if os.path.exists(D(f)): W("fonts_" + f, L(f))
 c = Counter(r["src"] for r in master)
 print("  sumber:", dict(c), "| mood:", {m["id"]: m["count"] for m in moods_out})

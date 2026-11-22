@@ -1,6 +1,6 @@
 # Print-On-Demand (poster typography, pembeli Pinterest)
 
-Fail ini dimuat dalam setiap chat; kekalkan ringkas. Butiran: `docs/strategy.md`, `docs/research/` (riset utama), `docs/research/posters/` (riset poster P1–P8), `dashboard/README.md`.
+Fail ini dimuat dalam setiap chat; kekalkan ringkas. Butiran: `docs/strategy.md`, `docs/research/` (riset utama), `docs/research/posters/` (riset poster P1–P8), `docs/research/fonts/` (senarai induk fon + lesen), `dashboard/README.md`.
 
 ## WAJIB DALAM SETIAP CHAT REPO INI (keputusan pengguna — STRICT, disalin dari papertrade-claude 21 Nov 2026)
 1. **Jimat token.** Baca bahagian fail yang perlu sahaja (grep / `sed -n`); jangan ulang fakta; gabung panggilan alat selari; jawapan terus ke inti, tiada pembuka / penutup / ulang soalan. Sejurus SELEPAS jadual jawapan terakhir, tulis satu baris `Jimat token: ...` — nyatakan penjimatan yang BOLEH DIUKUR (cth. "tidak membaca fail X, 40 KB"); jika tidak diukur, tulis "tidak diukur". Jangan reka peratus.
@@ -10,7 +10,8 @@ Fail ini dimuat dalam setiap chat; kekalkan ringkas. Butiran: `docs/strategy.md`
 
 ## Peraturan projek
 - Cawangan kerja: `claude/jolly-hamilton-sdopyz`; tiada PR kecuali diminta.
-- **Dashboard:** artifact sedia ada https://claude.ai/artifact/EeAC4MqQijSGYGTWfZW3Sg (jenis Data); jangan cipta baharu. Baca semula `files/index.html` sebelum ubah; salinan di `dashboard/index.html`. Tab: Poster · Setup · Workflow · Prestasi · Semua produk. Checklist Setup = stor `data/setup/checklist/<id>`; Claude semak dan kemas kini `status`, `checked_at`, `result` dengan ArtifactData (update + if_version).
-- Data dashboard dijana skrip: `scripts/poster_p1.py`…`poster_p7.py` → `data/export/posters/`; `scripts/build_prestasi.py` → `data/export/prestasi/`; `scripts/export_dashboard.py` → `data/export/`. Jangan ubah fail dijana secara manual.
+- **Dashboard:** artifact sedia ada https://claude.ai/artifact/EeAC4MqQijSGYGTWfZW3Sg (jenis Data); jangan cipta baharu. Baca semula `files/index.html` sebelum ubah; salinan di `dashboard/index.html`. Tab: Poster · Setup · Workflow · Prestasi · Font · Semua produk. Checklist Setup = stor `data/setup/checklist/<id>`; Claude semak dan kemas kini `status`, `checked_at`, `result` dengan ArtifactData (update + if_version).
+- Data dashboard dijana skrip: `scripts/poster_p1.py`…`poster_p7.py` → `data/export/posters/`; `scripts/build_prestasi.py` → `data/export/prestasi/`; `scripts/export_dashboard.py` → `data/export/`. Fon: `scripts/fonts_fetch.py` → `data/fonts/`, `scripts/build_fonts.py` → `data/export/fonts/` + `docs/research/fonts/fonts-by-mood.md`, `scripts/fonts_specimens.py` → `docs/research/fonts/specimens/`. Jangan ubah fail dijana secara manual.
 - Angka mesti bersumber; tanda tahap bukti (rasmi / pihak ketiga / lemah); jangan reka data.
+- Fon: hanya lesen yang membenarkan jualan (lihat `docs/research/fonts/README.md` §5); jangan kongsi fail fon.
 - Jangan jana fail muat turun (PDF, Word, Excel dll.) tanpa kebenaran pengguna.

@@ -119,7 +119,15 @@
 .pod-wf { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--cds-gap-xs); }
 .pod-wf li { display: grid; gap: 2px; padding: var(--cds-pad-sm) var(--cds-pad-md); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background: var(--color-panel); }
 .pod-wf-meta { font-size: var(--cds-font-size-caption); }
-@media print { .pod-scroll { max-height: none; overflow: visible; border: 0; } .pod-nav, .pod-tabbar { display: none; } .pod details { border: 0; } #tab-setup, #tab-workflow, #tab-prestasi, #tab-utama { break-before: page; } }
+.pod-font-moods { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: var(--cds-gap-md); }
+.pod-font-card { display: grid; gap: var(--cds-gap-sm); align-content: start; }
+.pod-font-img { width: 100%; height: auto; display: block; border-radius: var(--cds-radius); border: 1px solid var(--color-border-line); }
+.pod-font-dl { display: grid; grid-template-columns: max-content 1fr; gap: 2px var(--cds-gap-sm); margin: 0; font-size: var(--cds-font-size-caption); line-height: 1.45; }
+.pod-font-dl dt { color: var(--color-fg-muted); }
+.pod-font-dl dd { margin: 0; min-width: 0; }
+.pod-font-filters { display: flex; flex-wrap: wrap; gap: var(--cds-gap-sm); align-items: center; }
+.pod-font-search { font: inherit; font-size: var(--cds-font-size-body); padding: 4px 8px; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background-color: var(--color-bg); color: var(--color-fg); min-width: 180px; max-width: 100%; }
+@media print { .pod-scroll { max-height: none; overflow: visible; border: 0; } .pod-nav, .pod-tabbar { display: none; } .pod details { border: 0; } #tab-setup, #tab-workflow, #tab-prestasi, #tab-font, #tab-utama { break-before: page; } }
 </style>
 
 <div class="pod">
@@ -130,6 +138,7 @@
   <div class="pod-tabbar" role="tablist" aria-label="Tab dashboard">
     <button type="button" class="pod-tab-btn" role="tab" id="btn-poster" data-tab="tab-poster" aria-controls="tab-poster" aria-selected="true">Poster</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-setup" data-tab="tab-setup" aria-controls="tab-setup" aria-selected="false" tabindex="-1">Setup</button>
+    <button type="button" class="pod-tab-btn" role="tab" id="btn-font" data-tab="tab-font" aria-controls="tab-font" aria-selected="false" tabindex="-1">Font</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-workflow" data-tab="tab-workflow" aria-controls="tab-workflow" aria-selected="false" tabindex="-1">Workflow</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-prestasi" data-tab="tab-prestasi" aria-controls="tab-prestasi" aria-selected="false" tabindex="-1">Prestasi</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-utama" data-tab="tab-utama" aria-controls="tab-utama" aria-selected="false" tabindex="-1">Semua produk</button>
@@ -710,6 +719,118 @@
         <th data-field="status">Status</th>
       </tr></thead>
       <tbody data-draw="k-tools-body"></tbody>
+    </table>
+  </div>
+</section>
+
+</section>
+
+<section id="tab-font" class="pod-tab" role="tabpanel" aria-labelledby="btn-font" hidden>
+
+<div id="f-intro" class="pod-section pod-first">
+  <p class="pod-lede">Font Generator: upload satu contoh poster typography, AI cadang 10 font Google Fonts yang serupa (lesen OFL / Apache 2.0, boleh guna komersial), jana mockup dari font pilihan, dan simpan yang terbaik sebagai master sheet untuk semua poster.</p>
+  <p><a href="https://claude.ai/artifact/K6uL4Xy8EssqEVpd7FzzS7" target="_blank" rel="noopener noreferrer">Buka Font Generator ↗</a></p>
+  <ol>
+    <li>Upload contoh design dan tekan Decode design.</li>
+    <li>Tandakan font (cadangan 5) dan tekan Jana mockup.</li>
+    <li>Pilih satu mockup dan simpan sebagai master sheet. Tandakan master yang Aktif.</li>
+  </ol>
+</div>
+
+<section id="f-induk" class="pod-section">
+  <h2>Senarai induk fon (bebas untuk jualan)</h2>
+  <p class="pod-lede"><b data-draw="f-total" data-source="fonts_summary" data-field="total" data-row="0">—</b> fon yang lesennya membenarkan poster dan fail digital dijual: <b data-draw="f-n-google" data-source="fonts_summary" data-field="google" data-row="0">—</b> dari Google Fonts, <b data-draw="f-n-fontshare" data-source="fonts_summary" data-field="fontshare" data-row="0">—</b> dari Fontshare dan <b data-draw="f-n-fq" data-source="fonts_summary" data-field="fontsquirrel" data-row="0">—</b> dari Font Squirrel. <b data-draw="f-n-rej" data-source="fonts_summary" data-field="rejected" data-row="0">—</b> fon Font Squirrel ditolak kerana lesennya berisiko, dan <b data-draw="f-n-unchk" data-source="fonts_meta" data-field="fq_unchecked" data-row="0">—</b> lagi tidak dimasukkan kerana lesennya tidak dapat dibaca (muat turun disekat).</p>
+  <p class="pod-muted">Setiap fon dilabel ikut mood poster. Google: dari tag rasmi Google Fonts (skor 0–100). Fontshare dan Font Squirrel: dari kategori laman itu, ditambah semakan rupa oleh Claude (bukti lemah). Kualiti = purata skor lukisan dan jarak huruf dari tag Google.</p>
+</section>
+
+<section id="f-mood" class="pod-section">
+  <h2>Pilih fon ikut mood poster</h2>
+  <p class="pod-muted">Mood dahulu, fon kemudian: fon lucu untuk poster motivasi akan mengelirukan pembeli. Setiap kad ada niche yang sesuai, fon teks pasangan, apa yang perlu dielak dan 12 fon terbaik. Tekan gambar untuk saiz penuh.</p>
+  <div class="pod-font-moods" id="f-mood-cards" data-draw="f-moods" data-source="fonts_moods fonts_specimens"></div>
+</section>
+
+<section id="f-cari" class="pod-section">
+  <h2>Cari dalam senarai induk</h2>
+  <div class="pod-font-filters">
+    <label class="pod-tool-label" for="f-q">Nama</label>
+    <input id="f-q" class="pod-font-search" type="search" placeholder="cth. brush, script, slab" aria-label="Cari nama fon">
+    <select id="f-filter-mood" class="dash-select" data-draw="f-mood-filter" data-source="fonts_moods" aria-label="Tapis mood"></select>
+    <select id="f-filter-src" class="dash-select" aria-label="Tapis sumber">
+      <option value="">Semua sumber</option>
+      <option value="google">Google Fonts</option>
+      <option value="fontshare">Fontshare</option>
+      <option value="fontsquirrel">Font Squirrel</option>
+    </select>
+    <select id="f-filter-w" class="dash-select" aria-label="Tapis ketebalan">
+      <option value="">Semua ketebalan</option>
+      <option value="5">5 ketebalan atau lebih</option>
+      <option value="var">Variable sahaja</option>
+      <option value="it">Ada italic</option>
+    </select>
+  </div>
+  <p class="pod-muted" data-draw="f-master-count">—</p>
+  <div class="pod-table-wrap">
+    <table id="f-table-master" data-source="fonts_master" data-row-key="name">
+      <thead><tr>
+        <th data-field="name">Fon</th>
+        <th data-field="src">Sumber</th>
+        <th data-field="lic">Lesen</th>
+        <th data-field="moods">Mood</th>
+        <th data-field="w">Ketebalan</th>
+        <th data-field="q">Kualiti</th>
+        <th data-field="cat">Kategori</th>
+      </tr></thead>
+      <tbody data-draw="f-master-body"></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="f-laman" class="pod-section">
+  <h2>Laman sumber fon</h2>
+  <p class="pod-muted">Hijau = selamat (setiap fon berlesen terbuka). Kuning = semak lesen setiap fon. Merah = elak untuk barang jualan.</p>
+  <div class="pod-table-wrap">
+    <table id="f-table-sites" data-source="fonts_sites" data-row-key="name">
+      <thead><tr>
+        <th data-field="name">Laman</th>
+        <th data-field="verdict">Status</th>
+        <th data-field="styles">Gaya yang kuat</th>
+        <th data-field="license">Lesen</th>
+        <th data-field="catch">Perhatian</th>
+        <th data-field="evidence">Bukti</th>
+      </tr></thead>
+      <tbody data-draw="f-sites-body"></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="f-lesen" class="pod-section">
+  <h2>Jenis lesen: boleh jual atau tidak?</h2>
+  <div class="pod-table-wrap">
+    <table id="f-table-lic" data-source="fonts_licenses" data-row-key="license">
+      <thead><tr>
+        <th data-field="license">Lesen</th>
+        <th data-field="sell_print">Jual poster cetak</th>
+        <th data-field="sell_digital">Jual fail digital</th>
+        <th data-field="share_font">Kongsi fail fon</th>
+        <th data-field="note">Nota</th>
+      </tr></thead>
+      <tbody data-draw="f-lic-body"></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="f-tolak" class="pod-section">
+  <h2>Fon ditolak (lesen berisiko)</h2>
+  <p class="pod-muted">Fon Font Squirrel yang fail lesennya tiada, tidak jelas atau mengehadkan kegunaan komersial. Jangan guna untuk barang jualan tanpa izin bertulis pembuatnya.</p>
+  <div class="pod-table-wrap">
+    <table id="f-table-rej" data-source="fonts_rejected" data-row-key="name">
+      <thead><tr>
+        <th data-field="name">Fon</th>
+        <th data-field="lic">Sebab</th>
+        <th data-field="cat">Kelas</th>
+        <th data-field="lic_note">Petikan lesen</th>
+      </tr></thead>
+      <tbody data-draw="f-rej-body"></tbody>
     </table>
   </div>
 </section>
@@ -2246,5 +2367,132 @@ POD.wfList = (ul, freq, who) => {
 [['h', 'Harian'], ['m', 'Mingguan'], ['b', 'Bulanan']].forEach(([k, f]) => {
   dash.draw('wf-' + k + '-anda', (ul) => POD.wfList(ul, f, 'Anda'));
   dash.draw('wf-' + k + '-claude', (ul) => POD.wfList(ul, f, 'Claude'));
+});
+</script>
+<script>
+POD.fq = ''; POD.fm = ''; POD.fs = ''; POD.fw = '';
+POD.SRC = { google: 'Google Fonts', fontshare: 'Fontshare', fontsquirrel: 'Font Squirrel' };
+
+dash.calc('fonts_summary', {
+  title: 'Ringkasan senarai induk fon',
+  description: 'Bilangan fon dalam senarai induk ikut sumber, dan bilangan fon Font Squirrel yang ditolak kerana lesen berisiko.',
+  inputs: ['fonts_master', 'fonts_rejected'],
+  fn: (master, rejected) => {
+    const n = (s) => master.filter((r) => r.src === s).length;
+    return [{ total: master.length, google: n('google'), fontshare: n('fontshare'), fontsquirrel: n('fontsquirrel'), rejected: rejected.length }];
+  }
+});
+['total', 'google', 'fontshare', 'fontsquirrel', 'rejected'].forEach((k) => {
+  const name = { total: 'f-total', google: 'f-n-google', fontshare: 'f-n-fontshare', fontsquirrel: 'f-n-fq', rejected: 'f-n-rej' }[k];
+  POD.text(name, 'fonts_summary', (r) => r[0][k], POD.int);
+});
+
+POD.text('f-n-unchk', 'fonts_meta', (r) => r[0].fq_unchecked, POD.int);
+
+dash.draw('f-moods', (el) => {
+  const moods = POD.ok('fonts_moods');
+  el.replaceChildren();
+  if (!moods) { const p = document.createElement('p'); p.className = 'pod-msg'; p.textContent = POD.statusMsg('fonts_moods'); el.appendChild(p); return; }
+  const imgs = {};
+  (POD.ok('fonts_specimens') || []).forEach((r) => { if (typeof r.url === 'string' && r.url.startsWith('/_blob/')) imgs[r.mood] = r.url; });
+  moods.forEach((m) => {
+    const card = document.createElement('article'); card.className = 'pod-card pod-font-card'; card.id = 'f-mood-' + m.id;
+    const h = document.createElement('h3'); h.textContent = m.label; card.appendChild(h);
+    const d = document.createElement('p'); d.className = 'pod-muted'; d.textContent = m.desc + ' · ' + POD.int(m.count) + ' fon'; card.appendChild(d);
+    if (imgs[m.id]) {
+      const a = document.createElement('a'); a.href = imgs[m.id]; a.target = '_blank'; a.rel = 'noopener noreferrer';
+      const im = document.createElement('img'); im.src = imgs[m.id]; im.alt = 'Contoh 12 fon mood ' + m.label; im.loading = 'lazy'; im.className = 'pod-font-img';
+      a.appendChild(im); card.appendChild(a);
+    }
+    const dl = document.createElement('dl'); dl.className = 'pod-font-dl';
+    [['Niche', (m.niche_names || m.niches || []).join(', ')], ['Teks pasangan', m.pair], ['Elak', m.elak], ['Fon terbaik', (m.top || []).join(', ')], ['Lebih unik (luar Google)', (m.other || []).join(', ')]].forEach(([k, v]) => {
+      const dt = document.createElement('dt'); dt.textContent = k; const dd = document.createElement('dd'); dd.textContent = v || '—'; dl.append(dt, dd);
+    });
+    card.appendChild(dl);
+    el.appendChild(card);
+  });
+});
+
+dash.draw('f-mood-filter', (sel) => {
+  const moods = POD.ok('fonts_moods') || [];
+  sel.replaceChildren(new Option('Semua mood', ''), ...moods.map((m) => new Option(m.label, m.id)));
+  sel.value = POD.fm;
+  sel.onchange = () => { POD.fm = sel.value; dash.draw('f-master-body'); dash.draw('f-master-count'); };
+});
+document.querySelectorAll('#f-filter-src').forEach((s) => s.addEventListener('change', () => { POD.fs = s.value; dash.draw('f-master-body'); dash.draw('f-master-count'); }));
+document.querySelectorAll('#f-filter-w').forEach((s) => s.addEventListener('change', () => { POD.fw = s.value; dash.draw('f-master-body'); dash.draw('f-master-count'); }));
+document.querySelectorAll('#f-q').forEach((s) => s.addEventListener('input', () => { POD.fq = s.value.trim().toLowerCase(); dash.draw('f-master-body'); dash.draw('f-master-count'); }));
+
+POD.fontRows = () => {
+  const rows = POD.ok('fonts_master');
+  if (!rows) return null;
+  return rows.filter((r) => (!POD.fm || (r.moods || []).includes(POD.fm)) && (!POD.fs || r.src === POD.fs)
+    && (!POD.fq || String(r.name).toLowerCase().includes(POD.fq) || String(r.cat || '').toLowerCase().includes(POD.fq))
+    && (!POD.fw || (POD.fw === '5' ? Number(r.nw) >= 5 : POD.fw === 'var' ? r.var : r.it)))
+    .sort((a, b) => (POD.fm ? ((b.score || {})[POD.fm] || 70) - ((a.score || {})[POD.fm] || 70) : 0) || (Number(b.q) || 0) - (Number(a.q) || 0) || String(a.name).localeCompare(String(b.name)));
+};
+POD.FMAX = 150;
+dash.draw('f-master-count', (el) => {
+  const rows = POD.fontRows();
+  el.textContent = rows ? (rows.length > POD.FMAX ? POD.int(rows.length) + ' fon sepadan; ' + POD.FMAX + ' teratas ditunjuk (ikut skor mood, kemudian kualiti).' : POD.int(rows.length) + ' fon sepadan.') : '—';
+});
+POD.moodLabel = () => { const m = {}; (POD.ok('fonts_moods') || []).forEach((x) => { m[x.id] = x.label; }); return m; };
+dash.draw('f-master-body', (tb) => {
+  const rows = POD.fontRows(); tb.replaceChildren();
+  if (!rows) { POD.emptyRow(tb, 7, POD.statusMsg('fonts_master')); return; }
+  if (!rows.length) { POD.emptyRow(tb, 7, 'Tiada fon sepadan. Cuba tapis lain.'); return; }
+  const ml = POD.moodLabel();
+  rows.slice(0, POD.FMAX).forEach((r) => {
+    const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.name);
+    POD.linkCell(tr, r.url, r.name);
+    POD.cell(tr, POD.SRC[r.src] || r.src);
+    const lt = document.createElement('td'); const la = POD.link(r.lic_url, r.lic); lt.appendChild(la || document.createTextNode(r.lic || '—'));
+    if (r.risk === 'semak') { lt.appendChild(document.createTextNode(' ')); lt.appendChild(POD.pill('semak', null, 'warn')); }
+    tr.appendChild(lt);
+    POD.cell(tr, (r.moods || []).map((x) => ml[x] || x).join(', '));
+    POD.cell(tr, r.w + (r.it ? ' + italic' : ''));
+    POD.cell(tr, r.q == null ? '—' : POD.int(r.q));
+    POD.cell(tr, r.cat);
+    tb.appendChild(tr);
+  });
+});
+
+POD.vTone = { selamat: 'ok', semak: 'warn', elak: 'bad' };
+dash.draw('f-sites-body', (tb) => {
+  const rows = POD.ok('fonts_sites'); tb.replaceChildren();
+  if (!rows) { POD.emptyRow(tb, 6, POD.statusMsg('fonts_sites')); return; }
+  rows.forEach((r) => {
+    const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.name);
+    POD.linkCell(tr, r.url, r.name);
+    const v = document.createElement('td'); v.appendChild(POD.pill(r.verdict, null, POD.vTone[r.verdict])); tr.appendChild(v);
+    POD.cell(tr, r.styles, 'pod-wide'); POD.cell(tr, r.license); POD.cell(tr, r.catch, 'pod-wide');
+    const e = document.createElement('td'); const a = POD.link(r.evidence_url, POD.levelText[r.evidence] || r.evidence || 'sumber');
+    e.appendChild(a || document.createTextNode(POD.levelText[r.evidence] || r.evidence || '—')); tr.appendChild(e);
+    tb.appendChild(tr);
+  });
+});
+
+POD.yn = { ya: 'ok', tidak: 'bad', semak: 'warn' };
+dash.draw('f-lic-body', (tb) => {
+  const rows = POD.ok('fonts_licenses'); tb.replaceChildren();
+  if (!rows) { POD.emptyRow(tb, 5, POD.statusMsg('fonts_licenses')); return; }
+  rows.forEach((r) => {
+    const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.license);
+    POD.linkCell(tr, r.url, r.license);
+    ['sell_print', 'sell_digital', 'share_font'].forEach((k) => { const td = document.createElement('td'); td.appendChild(POD.pill(r[k], null, POD.yn[r[k]])); tr.appendChild(td); });
+    POD.cell(tr, r.note, 'pod-wide');
+    tb.appendChild(tr);
+  });
+});
+
+dash.draw('f-rej-body', (tb) => {
+  const rows = POD.ok('fonts_rejected'); tb.replaceChildren();
+  if (!rows) { POD.emptyRow(tb, 4, POD.statusMsg('fonts_rejected')); return; }
+  if (!rows.length) { POD.emptyRow(tb, 4, 'Tiada fon ditolak.'); return; }
+  rows.forEach((r) => {
+    const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.name);
+    POD.linkCell(tr, r.lic_url, r.name); POD.cell(tr, r.lic); POD.cell(tr, r.cat); POD.cell(tr, r.lic_note, 'pod-wide');
+    tb.appendChild(tr);
+  });
 });
 </script>
