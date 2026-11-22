@@ -1,0 +1,414 @@
+[
+ {
+  "id": "nope",
+  "layout": "stack",
+  "lines": [
+   [
+    "NOPE",
+    "bold condensed capitals arched upward"
+   ],
+   [
+    "not today",
+    "tiny script connector"
+   ],
+   [
+    "MAYBE",
+    "small capitals"
+   ],
+   [
+    "Tomorrow",
+    "huge heavy brush script, dominant word, with a swash underline"
+   ]
+  ]
+ },
+ {
+  "id": "drama",
+  "layout": "banner",
+  "lines": [
+   [
+    "HERE FOR THE",
+    "bold condensed capitals, slightly arched"
+   ],
+   [
+    "SNACKS",
+    "small white capitals inside a black ribbon banner"
+   ],
+   [
+    "not the",
+    "tiny script connector"
+   ],
+   [
+    "Drama",
+    "huge heavy brush script, dominant word, with a swash underline"
+   ]
+  ]
+ },
+ {
+  "id": "chaos",
+  "layout": "circle",
+  "lines": [
+   [
+    "LIVING MY BEST",
+    "arched along the top of the circle, bold condensed capitals"
+   ],
+   [
+    "Chaos",
+    "huge heavy brush script, center"
+   ],
+   [
+    "LIFE",
+    "big bold condensed capitals, curved along the bottom of the circle"
+   ]
+  ]
+ },
+ {
+  "id": "tired",
+  "layout": "box",
+  "lines": [
+   [
+    "TIRED",
+    "big bold condensed capitals"
+   ],
+   [
+    "is my",
+    "tiny script connector"
+   ],
+   [
+    "DEFAULT",
+    "big bold condensed capitals"
+   ],
+   [
+    "Mode",
+    "huge heavy brush script, dominant word, with a swash underline"
+   ]
+  ]
+ },
+ {
+  "id": "naps",
+  "layout": "circle",
+  "lines": [
+   [
+    "WILL WORK",
+    "arched along the top of the circle, bold condensed capitals"
+   ],
+   [
+    "for",
+    "tiny script connector"
+   ],
+   [
+    "Naps",
+    "huge heavy brush script, center"
+   ],
+   [
+    "AND SNACKS",
+    "curved along the bottom of the circle, bold condensed capitals"
+   ]
+  ]
+ },
+ {
+  "id": "mood",
+  "layout": "banner",
+  "lines": [
+   [
+    "MY MOOD",
+    "bold condensed capitals, slightly arched"
+   ],
+   [
+    "DEPENDS ON",
+    "small white capitals inside a black ribbon banner"
+   ],
+   [
+    "the",
+    "tiny script connector"
+   ],
+   [
+    "Snacks",
+    "huge heavy brush script, dominant word, with a swash underline"
+   ]
+  ]
+ },
+ {
+  "id": "busy",
+  "layout": "stack",
+  "lines": [
+   [
+    "SORRY",
+    "bold condensed capitals arched upward"
+   ],
+   [
+    "I'M BUSY",
+    "medium bold condensed capitals"
+   ],
+   [
+    "doing",
+    "tiny script connector"
+   ],
+   [
+    "Nothing",
+    "huge heavy brush script, dominant word, with a swash underline"
+   ]
+  ]
+ },
+ {
+  "id": "plants",
+  "layout": "circle",
+  "lines": [
+   [
+    "I LIKE MY",
+    "arched along the top of the circle, bold condensed capitals"
+   ],
+   [
+    "Plants",
+    "huge heavy brush script, center"
+   ],
+   [
+    "MORE THAN PEOPLE",
+    "curved along the bottom of the circle, bold condensed capitals"
+   ]
+  ]
+ },
+ {
+  "id": "battery",
+  "layout": "box",
+  "lines": [
+   [
+    "SOCIAL",
+    "big bold condensed capitals"
+   ],
+   [
+    "BATTERY",
+    "big bold condensed capitals"
+   ],
+   [
+    "is",
+    "tiny script connector"
+   ],
+   [
+    "Low",
+    "huge heavy brush script, dominant word, with a swash underline"
+   ]
+  ]
+ },
+ {
+  "id": "ideas",
+  "layout": "stack",
+  "lines": [
+   [
+    "EXPERT",
+    "bold condensed capitals arched upward"
+   ],
+   [
+    "in",
+    "tiny script connector"
+   ],
+   [
+    "BAD",
+    "big bold condensed capitals"
+   ],
+   [
+    "Ideas",
+    "huge heavy brush script, dominant word, with a swash underline"
+   ]
+  ]
+ },
+ {
+  "id": "care",
+  "layout": "circle",
+  "lines": [
+   [
+    "BRB",
+    "arched along the top of the circle, bold condensed capitals"
+   ],
+   [
+    "PRETENDING",
+    "big bold condensed capitals, center"
+   ],
+   [
+    "to",
+    "tiny script connector"
+   ],
+   [
+    "Care",
+    "huge heavy brush script, curved along the bottom"
+   ]
+  ]
+ },
+ {
+  "id": "morning",
+  "layout": "banner",
+  "lines": [
+   [
+    "NOT A",
+    "bold condensed capitals, slightly arched"
+   ],
+   [
+    "MORNING",
+    "small white capitals inside a black ribbon banner"
+   ],
+   [
+    "Person",
+    "huge heavy brush script, dominant word, with a swash underline"
+   ]
+  ]
+ },
+ {
+  "id": "snackshere",
+  "layout": "stack",
+  "lines": [
+   [
+    "I'M ONLY HERE",
+    "bold condensed capitals arched upward"
+   ],
+   [
+    "for the",
+    "tiny script connector"
+   ],
+   [
+    "Snacks",
+    "huge heavy brush script, dominant word, with a swash underline"
+   ]
+  ]
+ },
+ {
+  "id": "chill",
+  "layout": "box",
+  "lines": [
+   [
+    "ZERO",
+    "big bold condensed capitals"
+   ],
+   [
+    "Chill",
+    "huge heavy brush script, dominant word, with a swash underline"
+   ],
+   [
+    "FULL",
+    "big bold condensed capitals"
+   ],
+   [
+    "Sass",
+    "huge heavy brush script, dominant word, with a swash underline"
+   ]
+  ]
+ },
+ {
+  "id": "sassy",
+  "layout": "stack",
+  "lines": [
+   [
+    "SASSY",
+    "bold condensed capitals arched upward"
+   ],
+   [
+    "since",
+    "tiny script connector"
+   ],
+   [
+    "DAY ONE",
+    "big bold condensed capitals"
+   ]
+  ]
+ },
+ {
+  "id": "coffee",
+  "layout": "banner",
+  "lines": [
+   [
+    "I RUN ON",
+    "bold condensed capitals, slightly arched"
+   ],
+   [
+    "COFFEE",
+    "small white capitals inside a black ribbon banner"
+   ],
+   [
+    "and",
+    "tiny script connector"
+   ],
+   [
+    "Sass",
+    "huge heavy brush script, dominant word, with a swash underline"
+   ]
+  ]
+ },
+ {
+  "id": "napharder",
+  "layout": "circle",
+  "lines": [
+   [
+    "WORK HARD",
+    "arched along the top of the circle, bold condensed capitals"
+   ],
+   [
+    "Nap",
+    "huge heavy brush script, center"
+   ],
+   [
+    "HARDER",
+    "big bold condensed capitals, curved along the bottom of the circle"
+   ]
+  ]
+ },
+ {
+  "id": "disturb",
+  "layout": "box",
+  "lines": [
+   [
+    "DO NOT",
+    "big bold condensed capitals"
+   ],
+   [
+    "Disturb",
+    "huge heavy brush script, dominant word, with a swash underline"
+   ],
+   [
+    "ALREADY",
+    "small capitals"
+   ],
+   [
+    "DISTURBED",
+    "big bold condensed capitals"
+   ]
+  ]
+ },
+ {
+  "id": "couch2",
+  "layout": "banner",
+  "lines": [
+   [
+    "MY COUCH",
+    "bold condensed capitals, slightly arched"
+   ],
+   [
+    "MISSES ME",
+    "small white capitals inside a black ribbon banner"
+   ],
+   [
+    "Already",
+    "huge heavy brush script, dominant word, with a swash underline"
+   ]
+  ]
+ },
+ {
+  "id": "lazy",
+  "layout": "stack",
+  "lines": [
+   [
+    "KINDA",
+    "bold condensed capitals arched upward"
+   ],
+   [
+    "Busy",
+    "huge heavy brush script, dominant word, with a swash underline"
+   ],
+   [
+    "BEING",
+    "small capitals"
+   ],
+   [
+    "LAZY",
+    "big bold condensed capitals"
+   ]
+  ]
+ }
+]
