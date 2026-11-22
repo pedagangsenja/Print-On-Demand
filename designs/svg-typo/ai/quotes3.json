@@ -132,12 +132,16 @@
     "big bold condensed capitals"
    ],
    [
-    "Everything's",
-    "big brush script"
+    "EVERYTHING",
+    "bold condensed capitals"
    ],
    [
-    "FINE",
-    "huge bold condensed capitals"
+    "is",
+    "tiny script connector"
+   ],
+   [
+    "Fine",
+    "huge brush script with a swash underline"
    ]
   ]
  },
@@ -198,8 +202,8 @@
     "big brush script"
    ],
    [
-    "Sarcasm",
-    "huge brush script, dominant word, with a swash underline"
+    "SARCASM",
+    "huge bold condensed capitals"
    ]
   ]
  }
