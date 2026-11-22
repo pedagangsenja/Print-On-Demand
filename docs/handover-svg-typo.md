@@ -15,7 +15,7 @@ Bundle design quote sarkastik hitam-putih (SVG + PNG) gaya bundle Etsy, ayat asl
 
 ## Alternatif dikaji
 - **Kaggle:** token disimpan (`api.kaggle.com`), notebook `abdulazim1411/pod-typo-gen` dihantar, tetapi GPU+internet tak dibuka (akaun belum sahkan telefon; pengguna sukar sahkan). Skrip: `ai/gen_kernel.py`, `ai/poll.py`.
-- **Modal** (cadangan seterusnya): $30 kredit/bulan, daftar Google/GitHub; keperluan kad belum pasti; sambungan gRPC melalui proksi belum diuji. Menunggu pengguna daftar.
+- **Modal** (22 Nov, dalam proses): pengguna sudah daftar. Klien `modal` tidak boleh dijalankan dari sesi Claude: proksi sesi hanya HTTP/1.1 bila token disuntik, gRPC perlu HTTP/2 ("Connection lost"). Jalan: GitHub Actions `.github/workflows/modal-gen.yml` + `designs/svg-typo/ai/modal_gen.py` (Qwen-Image-2512, H100, cache volume `qwen-image-cache`). Cara guna: tambah `designs/svg-typo/ai/queue/<nama>.txt` (prompt) dan push ke cawangan `claude/**` → PNG+SVG di-commit ke `designs/svg-typo/out/`. Perlu repo secrets `MODAL_TOKEN_ID`, `MODAL_TOKEN_SECRET`. Kos sebenar per design belum diukur.
 - **Cloudflare Workers AI:** 10k neuron/hari percuma, Leonardo Phoenix pandai huruf tetapi lesen output belum jelas; FLUX schnell selamat lesen tetapi huruf lemah.
 - Recraft: percuma tak boleh dijual; API $0.08/SVG (pengguna tolak berbayar).
 - Tak sesuai: Gemini API (tiada kuota gambar percuma 2026), NVIDIA build (ralat akaun percuma), Lightning AI (perlu telefon).
