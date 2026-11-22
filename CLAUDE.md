@@ -10,7 +10,8 @@ Fail ini dimuat dalam setiap chat; kekalkan ringkas. Butiran: `docs/strategy.md`
 
 ## Peraturan projek
 - Cawangan kerja: `claude/jolly-hamilton-sdopyz`; tiada PR kecuali diminta.
-- **Dashboard:** artifact sedia ada https://claude.ai/artifact/EeAC4MqQijSGYGTWfZW3Sg (jenis Data); jangan cipta baharu. Baca semula `files/index.html` sebelum ubah; salinan di `dashboard/index.html`. Tab: Poster · Setup · Workflow · Prestasi · Semua produk. Checklist Setup = stor `data/setup/checklist/<id>`; Claude semak dan kemas kini `status`, `checked_at`, `result` dengan ArtifactData (update + if_version).
+- **Dashboard:** artifact sedia ada https://claude.ai/artifact/EeAC4MqQijSGYGTWfZW3Sg (jenis Data); jangan cipta baharu. Baca semula `files/index.html` sebelum ubah; salinan di `dashboard/index.html`. Tab: Poster · Setup · Font · Workflow · Prestasi · Semua produk. Checklist Setup = stor `data/setup/checklist/<id>`; Claude semak dan kemas kini `status`, `checked_at`, `result` dengan ArtifactData (update + if_version).
 - Data dashboard dijana skrip: `scripts/poster_p1.py`…`poster_p7.py` → `data/export/posters/`; `scripts/build_prestasi.py` → `data/export/prestasi/`; `scripts/export_dashboard.py` → `data/export/`. Jangan ubah fail dijana secara manual.
+- **Font Generator:** https://claude.ai/artifact/K6uL4Xy8EssqEVpd7FzzS7 (`dashboard/font-generator.html`). Master sheet = stor koleksi `masters`; guna yang `active: true` untuk semua poster.
 - Angka mesti bersumber; tanda tahap bukti (rasmi / pihak ketiga / lemah); jangan reka data.
 - Jangan jana fail muat turun (PDF, Word, Excel dll.) tanpa kebenaran pengguna.

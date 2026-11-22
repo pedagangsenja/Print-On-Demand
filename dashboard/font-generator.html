@@ -1,0 +1,649 @@
+<title>Font Generator</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@600;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one left-aligned working column, steps 1→4 stacked as panels; grids wrap to one column on phones */
+:root{
+  --bg:#F1F2EE; --surface:#FFFFFF; --ink:#15171C; --muted:#5F6570; --line:#D8DAD3;
+  --accent:#2B36D9; --accent-ink:#FFFFFF; --accent-soft:#E4E6FB;
+  --ok:#1E7A4C; --danger:#B3261E; --checker:#E6E7E2;
+  --f-display:"Inter Tight","Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --r:10px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#111317; --surface:#1A1C21; --ink:#ECEDE8; --muted:#9AA0AA; --line:#2E3138;
+  --accent:#8790FF; --accent-ink:#0E1030; --accent-soft:#23264A;
+  --ok:#5BC48C; --danger:#F2867D; --checker:#24272D; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111317; --surface:#1A1C21; --ink:#ECEDE8; --muted:#9AA0AA; --line:#2E3138;
+  --accent:#8790FF; --accent-ink:#0E1030; --accent-soft:#23264A;
+  --ok:#5BC48C; --danger:#F2867D; --checker:#24272D; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.5}
+.fg-wrap{max-width:1180px;margin:0 auto;padding-block:28px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:20px}
+.fg-top{display:flex;flex-wrap:wrap;gap:16px 40px;align-items:flex-end;justify-content:space-between}
+.fg-eyebrow{margin:0;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.fg-top h1{margin:4px 0 6px;font-family:var(--f-display);font-weight:800;font-size:clamp(32px,5vw,52px);line-height:1;letter-spacing:-.035em}
+.fg-lede{margin:0;max-width:62ch;color:var(--muted)}
+.fg-steps{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.fg-steps li{font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:var(--surface)}
+.fg-steps li.done{color:var(--ink)}
+.fg-steps li.now{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.fg-panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px;display:flex;flex-direction:column;gap:16px;min-width:0}
+.fg-panel h2{margin:0;font-family:var(--f-display);font-weight:800;font-size:22px;letter-spacing:-.02em;display:flex;gap:10px;align-items:baseline;text-wrap:balance}
+.fg-n{font-family:var(--f-mono);font-size:13px;font-weight:500;color:var(--accent)}
+.fg-sub{margin:0;color:var(--muted);font-size:14px;max-width:70ch}
+.fg-grid2{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:20px}
+@media (max-width:760px){.fg-grid2{grid-template-columns:minmax(0,1fr)}}
+.fg-drop{position:relative;display:flex;align-items:center;justify-content:center;min-height:260px;border:1.5px dashed var(--line);border-radius:var(--r);background:repeating-conic-gradient(var(--checker) 0 25%,transparent 0 50%) 0 0/18px 18px;cursor:pointer;overflow:hidden;text-align:center;padding:16px}
+.fg-drop.over{border-color:var(--accent);background-color:var(--accent-soft)}
+.fg-drop img{max-height:440px;width:auto;max-width:100%;box-shadow:0 1px 4px rgba(0,0,0,.18)}
+.fg-drop span{color:var(--muted);font-size:14px;max-width:30ch;background:var(--surface);padding:10px 14px;border-radius:8px}
+.fg-stack{display:flex;flex-direction:column;gap:10px;min-width:0}
+label.fg-lab{font-size:13px;font-weight:600}
+textarea,input,select{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:8px 10px;min-width:0}
+textarea{min-height:84px;resize:vertical}
+input[type=color]{padding:2px;width:42px;height:34px}
+input[type=checkbox],input[type=radio]{accent-color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.fg-check{display:flex;gap:8px;align-items:flex-start;font-size:14px}
+button{font:inherit;font-weight:600;border-radius:8px;padding:9px 16px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+button:hover:not(:disabled){border-color:var(--ink)}
+button.fg-primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+button.fg-primary:hover:not(:disabled){filter:brightness(1.08);border-color:var(--accent)}
+button:disabled{opacity:.45;cursor:not-allowed}
+button.fg-danger{color:var(--danger)}
+.fg-msg{margin:0;font-size:14px;min-height:1.5em;color:var(--muted)}
+.fg-msg.err{color:var(--danger)}.fg-msg.ok{color:var(--ok)}
+.fg-summary{margin:0;font-size:16px;max-width:75ch;border-left:3px solid var(--accent);padding-left:12px}
+details.fg-spec{border:1px solid var(--line);border-radius:var(--r);padding:12px 14px}
+details.fg-spec summary{cursor:pointer;font-weight:600;font-size:14px}
+.fg-specrow{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:flex-end;margin-top:12px}
+.fg-field{display:flex;flex-direction:column;gap:3px;font-size:12px;color:var(--muted);min-width:0}
+.fg-field input,.fg-field select{font-size:13px;padding:6px 8px}
+.fg-field input[type=number]{width:84px;font-family:var(--f-mono)}
+.fg-line{display:grid;grid-template-columns:minmax(0,2.2fr) repeat(7,auto);gap:8px;align-items:end;padding:10px 0;border-top:1px solid var(--line)}
+.fg-line textarea{min-height:40px;font-size:13px}
+@media (max-width:900px){.fg-line{grid-template-columns:repeat(4,minmax(0,1fr))}.fg-line .fg-field:first-child{grid-column:1/-1}.fg-field input[type=number]{width:100%}}
+.fg-toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.fg-toolbar input{flex:1 1 200px;max-width:320px}
+.fg-count{font-family:var(--f-mono);font-size:13px;color:var(--muted);margin-right:auto}
+.fg-fontgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.fg-fcard{display:flex;flex-direction:column;gap:8px;border:1px solid var(--line);border-radius:var(--r);padding:14px;cursor:pointer;background:var(--bg);min-width:0}
+.fg-fcard:has(input:checked){border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset;background:var(--accent-soft)}
+.fg-fhead{display:flex;gap:8px;align-items:center;font-size:13px}
+.fg-fhead b{font-size:14px;margin-right:auto;overflow-wrap:anywhere}
+.fg-pill{font-family:var(--f-mono);font-size:11px;padding:2px 7px;border-radius:999px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.fg-pill.fg-match{color:var(--accent);border-color:var(--accent)}
+.fg-pill.fg-active{background:var(--ok);border-color:var(--ok);color:var(--surface)}
+.fg-fsample{font-size:30px;line-height:1.05;overflow-wrap:anywhere;min-height:2.1em;color:var(--ink)}
+.fg-why{margin:0;font-size:13px;color:var(--muted)}
+.fg-fcard a,.fg-link{font-size:12px;color:var(--accent)}
+.fg-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;justify-content:space-between}
+.fg-mockgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.fg-mock{display:flex;flex-direction:column;gap:8px;min-width:0;cursor:pointer;border-radius:var(--r);padding:8px;border:1px solid transparent}
+.fg-mock:has(input:checked){border-color:var(--accent);background:var(--accent-soft)}
+.fg-mock canvas,.fg-mock img{width:100%;height:auto;display:block;border:1px solid var(--line);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.fg-mock .fg-fhead{font-size:13px}
+.fg-mock.fg-orig{cursor:default}
+.fg-masters{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+.fg-master{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:20px;border:1px solid var(--line);border-radius:var(--r);padding:16px;background:var(--bg)}
+.fg-master.is-active{border-color:var(--ok);box-shadow:0 0 0 1px var(--ok) inset}
+@media (max-width:640px){.fg-master{grid-template-columns:minmax(0,1fr)}}
+.fg-master img{width:100%;height:auto;border:1px solid var(--line)}
+.fg-thumbs{display:flex;flex-direction:column;gap:8px}
+.fg-thumbs small{color:var(--muted);font-size:12px}
+.fg-mhead{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.fg-mhead h3{margin:0;font-family:var(--f-display);font-size:20px;font-weight:800;letter-spacing:-.02em;margin-right:auto;overflow-wrap:anywhere}
+.fg-mbody{display:flex;flex-direction:column;gap:10px;min-width:0}
+.fg-kv{margin:0;font-size:14px}
+.fg-kv span{color:var(--muted)}
+.fg-tablewrap{overflow-x:auto}
+table.fg-t{border-collapse:collapse;font-size:13px;min-width:560px;width:100%}
+.fg-t th{text-align:left;font-weight:600;color:var(--muted);font-size:12px;padding:6px 8px;border-bottom:1px solid var(--line)}
+.fg-t td{padding:6px 8px;border-bottom:1px solid var(--line);font-family:var(--f-mono);font-variant-numeric:tabular-nums;vertical-align:top}
+.fg-t td:first-child{font-family:var(--f-body)}
+.fg-sw{display:inline-block;width:14px;height:14px;border-radius:3px;border:1px solid var(--line);vertical-align:-2px;margin-right:6px}
+.fg-empty{border:1.5px dashed var(--line);border-radius:var(--r);padding:20px;color:var(--muted);font-size:14px}
+.fg-fine{font-size:12px;color:var(--muted);max-width:90ch;margin:0}
+.fg-savebar{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.fg-savebar input{flex:1 1 240px;max-width:420px}
+@media (prefers-reduced-motion:no-preference){.fg-fcard,.fg-mock,button{transition:border-color .15s,background-color .15s}}
+</style>
+
+<div class="fg-wrap">
+  <header class="fg-top">
+    <div>
+      <p class="fg-eyebrow">Print-On-Demand · poster typography</p>
+      <h1>Font Generator</h1>
+      <p class="fg-lede">Upload satu contoh poster typography. AI baca gaya hurufnya dan cadang 10 font serupa dari Google Fonts (semua lesen OFL / Apache 2.0, boleh guna komersial). Pilih font, jana mockup, kemudian simpan pilihan terbaik sebagai master sheet.</p>
+    </div>
+    <ol class="fg-steps" id="steps">
+      <li data-step="1">1 Contoh</li><li data-step="2">2 Font</li><li data-step="3">3 Mockup</li><li data-step="4">4 Master sheet</li>
+    </ol>
+  </header>
+
+  <section class="fg-panel" id="s1">
+    <h2><span class="fg-n">01</span>Contoh design</h2>
+    <div class="fg-grid2">
+      <label class="fg-drop" id="drop" for="file">
+        <input type="file" id="file" accept="image/png,image/jpeg,image/webp" hidden>
+        <img id="preview" alt="Contoh design yang dimuat naik" hidden>
+        <span id="dropText">Seret gambar ke sini, tampal (Ctrl+V), atau klik untuk pilih. PNG, JPG atau WebP.</span>
+      </label>
+      <div class="fg-stack">
+        <label class="fg-lab" for="note">Nota untuk AI (pilihan)</label>
+        <textarea id="note" placeholder="cth. fokus pada tajuk besar; saya mahu rasa minimal, align left"></textarea>
+        <label class="fg-check" for="preferInter"><input type="checkbox" id="preferInter" checked> Masukkan Inter / Inter Tight dalam cadangan jika design guna sans-serif</label>
+        <div><button class="fg-primary" id="decodeBtn" disabled>Decode design</button></div>
+        <p class="fg-msg" id="s1msg" role="status"></p>
+        <p class="fg-fine">Gambar dihantar kepada Claude hanya bila anda tekan Decode. Kali pertama, claude.ai akan minta izin.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="fg-panel" id="s2" hidden>
+    <h2><span class="fg-n">02</span>Font cadangan</h2>
+    <p class="fg-summary" id="summary"></p>
+    <details class="fg-spec" id="specBox">
+      <summary>Spesifikasi yang dibaca dari design (boleh ubah sebelum jana mockup)</summary>
+      <div class="fg-specrow" id="specGlobal"></div>
+      <div id="specLines"></div>
+    </details>
+    <div class="fg-toolbar">
+      <span class="fg-count" id="selCount">0 dipilih</span>
+      <input list="fontAll" id="addFont" placeholder="Tambah font lain dari senarai…" aria-label="Tambah font">
+      <datalist id="fontAll"></datalist>
+      <button id="addFontBtn">Tambah</button>
+    </div>
+    <div class="fg-fontgrid" id="fontGrid"></div>
+    <div class="fg-actions">
+      <div class="fg-field"><label for="support">Font untuk teks kecil (body / caption)</label>
+        <select id="support"><option value="">Sama dengan font utama</option></select></div>
+      <button class="fg-primary" id="mockBtn" disabled>Jana mockup</button>
+    </div>
+  </section>
+
+  <section class="fg-panel" id="s3" hidden>
+    <h2><span class="fg-n">03</span>Mockup</h2>
+    <p class="fg-sub">Klik satu mockup untuk dipilih. Ubah spesifikasi di langkah 2 dan mockup akan dikemas kini.</p>
+    <div class="fg-mockgrid" id="mockGrid"></div>
+    <div class="fg-savebar">
+      <input id="masterName" placeholder="Nama master sheet" aria-label="Nama master sheet">
+      <button class="fg-primary" id="saveBtn" disabled>Simpan sebagai master sheet</button>
+    </div>
+    <p class="fg-msg" id="s3msg" role="status"></p>
+  </section>
+
+  <section class="fg-panel" id="s4">
+    <h2><span class="fg-n">04</span>Master sheet</h2>
+    <p class="fg-sub">Rujukan tetap untuk semua poster. Master yang <b>Aktif</b> dipakai untuk seluruh proses; Claude boleh membacanya terus.</p>
+    <div class="fg-masters" id="masters"><div class="fg-empty">Memuatkan master sheet…</div></div>
+  </section>
+
+  <p class="fg-fine" id="sourceNote">Senarai font disahkan dari Google Fonts API (weight) dan repo github.com/google/fonts (lesen). Google Fonts FAQ: semua font boleh digunakan secara komersial.</p>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  const $ = (s) => document.querySelector(s);
+  const ROLES = ["headline","subhead","body","caption"];
+  const ROLE_BM = {headline:"Tajuk",subhead:"Sub-tajuk",body:"Badan",caption:"Kapsyen"};
+  const CAT_BM = {sans:"sans",condensed:"condensed",mono:"mono",serif:"serif",script:"skrip",display:"display"};
+  const LIC_BM = {OFL:"OFL 1.1",APACHE2:"Apache 2.0",UFL:"UFL"};
+  const st = { img:null, imgW:0, imgH:0, spec:null, summary:"", cands:[], sel:new Set(), chosen:null, support:"" };
+  let FONTS = [], FMAP = new Map(), FLOW = new Map(), META = {};
+  const capP = {};
+  function cap(name){
+    if (!capP[name]) capP[name] = (window.claude && typeof window.claude.use === "function")
+      ? Promise.resolve(window.claude.use(name)).catch(() => null) : Promise.resolve(null);
+    return capP[name];
+  }
+  function msg(id, text, kind){ const m = $(id); m.textContent = text || ""; m.className = "fg-msg" + (kind ? " " + kind : ""); }
+  function h(tag, props, ...kids){
+    const e = document.createElement(tag);
+    if (props) for (const [k,v] of Object.entries(props)){
+      if (v == null || v === false) continue;
+      if (k === "text") e.textContent = v; else if (k === "style") Object.assign(e.style, v);
+      else if (k in e && typeof v !== "string") e[k] = v; else e.setAttribute(k, v === true ? "" : v);
+    }
+    for (const k of kids) if (k != null) e.append(k);
+    return e;
+  }
+  function steps(){
+    const now = st.chosen ? 4 : (document.querySelector("#s3").hidden ? (st.spec ? 2 : 1) : 3);
+    document.querySelectorAll("#steps li").forEach(li => {
+      const n = +li.dataset.step; li.className = n === now ? "now" : (n < now ? "done" : "");
+    });
+  }
+
+  /* ---------- font list + loading ---------- */
+  const fontsReady = fetch("font_list.json").then(r => r.json()).then(d => {
+    FONTS = d.fonts || []; META = d;
+    for (const f of FONTS){ FMAP.set(f.family, f); FLOW.set(f.family.toLowerCase(), f); }
+    const dl = $("#fontAll"), sup = $("#support");
+    for (const f of FONTS){
+      dl.append(h("option", {value:f.family}));
+      sup.append(h("option", {value:f.family, text:f.family}));
+    }
+    const lic = {}; FONTS.forEach(f => lic[f.license] = (lic[f.license]||0) + 1);
+    $("#sourceNote").textContent = "Senarai " + FONTS.length + " font disahkan pada " + (d.generated||"-") + " dari Google Fonts API (weight) dan repo github.com/google/fonts (lesen: " +
+      Object.entries(lic).map(([k,v]) => (LIC_BM[k]||k) + " " + v).join(", ") + "). Google Fonts FAQ: semua font boleh digunakan secara komersial. Tahap bukti: rasmi.";
+  }).catch(() => { msg("#s1msg", "Senarai font gagal dimuatkan. Muat semula halaman.", "err"); });
+
+  const linkP = new Map();
+  function cssUrl(f){
+    const w = f.weights, it = f.italics || [];
+    const fam = encodeURIComponent(f.family).replace(/%20/g, "+");
+    if (it.length) return "https://fonts.googleapis.com/css2?family=" + fam + ":ital,wght@" + w.map(x => "0," + x).concat(it.map(x => "1," + x)).join(";") + "&display=swap";
+    return "https://fonts.googleapis.com/css2?family=" + fam + ":wght@" + w.join(";") + "&display=swap";
+  }
+  function ensureFont(family, weight, italic, text){
+    const f = FMAP.get(family); if (!f) return Promise.resolve();
+    if (!linkP.has(family)){
+      linkP.set(family, new Promise(res => {
+        const l = h("link", {rel:"stylesheet", href:cssUrl(f)});
+        l.addEventListener("load", res); l.addEventListener("error", res);
+        document.head.append(l);
+      }));
+    }
+    return linkP.get(family).then(() =>
+      document.fonts.load((italic ? "italic " : "") + weight + ' 48px "' + family + '"', text || "Aa")).catch(() => {});
+  }
+  function nearest(ws, w){ return ws.reduce((a, b) => Math.abs(b - w) < Math.abs(a - w) ? b : a, ws[0] || 400); }
+  function specimen(f){ return "https://fonts.google.com/specimen/" + encodeURIComponent(f).replace(/%20/g, "+"); }
+
+  /* ---------- step 1: image ---------- */
+  const fileIn = $("#file"), drop = $("#drop");
+  async function takeFile(file){
+    if (!file || !/^image\/(png|jpeg|webp)$/.test(file.type)){ msg("#s1msg", "Pilih fail PNG, JPG atau WebP.", "err"); return; }
+    const url = URL.createObjectURL(file);
+    const img = new Image(); img.src = url;
+    try { await img.decode(); } catch { msg("#s1msg", "Gambar tidak dapat dibaca. Cuba fail lain.", "err"); return; }
+    st.img = img; st.imgW = img.naturalWidth; st.imgH = img.naturalHeight;
+    $("#preview").src = url; $("#preview").hidden = false; $("#dropText").hidden = true;
+    $("#decodeBtn").disabled = false;
+    msg("#s1msg", "Sedia. " + st.imgW + " × " + st.imgH + " px. Tekan Decode design.");
+  }
+  fileIn.addEventListener("change", () => takeFile(fileIn.files[0]));
+  drop.addEventListener("dragover", e => { e.preventDefault(); drop.classList.add("over"); });
+  drop.addEventListener("dragleave", () => drop.classList.remove("over"));
+  drop.addEventListener("drop", e => { e.preventDefault(); drop.classList.remove("over"); takeFile(e.dataTransfer.files[0]); });
+  document.addEventListener("paste", e => {
+    const it = [...(e.clipboardData?.items || [])].find(i => i.kind === "file" && i.type.startsWith("image/"));
+    if (it){ e.preventDefault(); takeFile(it.getAsFile()); }
+  });
+  function toJpeg(img, max, q){
+    const s = Math.min(1, max / Math.max(img.naturalWidth, img.naturalHeight));
+    const c = document.createElement("canvas");
+    c.width = Math.max(1, Math.round(img.naturalWidth * s)); c.height = Math.max(1, Math.round(img.naturalHeight * s));
+    const x = c.getContext("2d"); x.fillStyle = "#ffffff"; x.fillRect(0, 0, c.width, c.height); x.drawImage(img, 0, 0, c.width, c.height);
+    return new Promise(r => c.toBlob(r, "image/jpeg", q));
+  }
+
+  /* ---------- decode with Claude ---------- */
+  function prompt(){
+    const groups = {};
+    FONTS.forEach(f => (groups[f.category] = groups[f.category] || []).push(f.family));
+    const allowed = Object.entries(groups).map(([c, l]) => c + ": " + l.join(", ")).join("\n");
+    const note = $("#note").value.trim().slice(0, 600);
+    return [
+      "You are an expert typographer. The attached image is a typographic poster design that the owner wants to reproduce with free commercial fonts.",
+      "Decode it and return ONLY a JSON object with this shape:",
+      '{"summary": string (Bahasa Melayu, 2 short sentences: type classification e.g. neo-grotesque/geometric/didone, weight, width, tracking, mood),',
+      ' "canvas": {"bg": "#rrggbb", "pad": number 0-0.3 (side margin as fraction of image width)},',
+      ' "align": "left"|"center"|"right",',
+      ' "lines": [ up to 8 text blocks in reading order: {"text": string (use \\n for the line breaks exactly as in the design), "role": "headline"|"subhead"|"body"|"caption", "size": number (font size as fraction of image HEIGHT, e.g. 0.09), "weight": 100-900, "italic": boolean, "case": "upper"|"lower"|"none", "tracking": number (letter-spacing in em, e.g. -0.03), "lineHeight": number (e.g. 0.92), "color": "#rrggbb", "y": number (top of the block as fraction of image height), "maxWidth": number (block width as fraction of image width)} ],',
+      ' "fonts": [ exactly 10 objects {"family": string, "match": 0-100, "why": string (Bahasa Melayu, max 18 words, name the letterform features that match), "uses": "headline"|"body"|"both"} ranked by visual similarity to the main typeface ]}',
+      "Judge similarity by letterforms: terminals, apertures, x-height, width, stroke contrast, geometric vs grotesque construction, distinctive glyphs (a, g, R, G, Q, t).",
+      "Each family MUST be copied exactly from the ALLOWED list below; 10 different families.",
+      $("#preferInter").checked ? "The owner likes Inter for left-aligned typography: if the main type is a sans-serif grotesque or neo-grotesque, include Inter or Inter Tight." : "",
+      note ? "Owner's note: " + note : "",
+      "ALLOWED (category: families):", allowed
+    ].filter(Boolean).join("\n");
+  }
+  const hex = v => typeof v === "string" && /^#[0-9a-f]{6}$/i.test(v) ? v.toLowerCase() : null;
+  const num = (v, a, b, d) => { v = Number(v); return Number.isFinite(v) ? Math.min(b, Math.max(a, v)) : d; };
+  function cleanLine(l){
+    return { text:String(l?.text ?? "").slice(0, 300), role:ROLES.includes(l?.role) ? l.role : "body",
+      size:num(l?.size, .01, .5, .05), weight:Math.round(num(l?.weight, 100, 900, 400) / 100) * 100, italic:!!l?.italic,
+      case:["upper","lower","none"].includes(l?.case) ? l.case : "none", tracking:num(l?.tracking, -.2, .6, 0),
+      lineHeight:num(l?.lineHeight, .7, 2.5, 1.1), color:hex(l?.color) || "#111111", y:num(l?.y, 0, .98, .1), maxWidth:num(l?.maxWidth, .1, 1, .84) };
+  }
+  $("#decodeBtn").addEventListener("click", async () => {
+    const btn = $("#decodeBtn"); btn.disabled = true;
+    msg("#s1msg", "Menyambung ke Claude…");
+    await fontsReady;
+    const sample = await cap("sample");
+    if (!sample){ msg("#s1msg", "AI tidak tersedia di paparan ini. Buka artifact ini di claude.ai semasa log masuk.", "err"); btn.disabled = false; return; }
+    const lim = await sample.limits().catch(() => null);
+    if (!lim || !lim.images){ msg("#s1msg", "Paparan ini tidak boleh menghantar gambar kepada AI. Buka artifact ini terus di claude.ai (pelayar atau aplikasi desktop).", "err"); btn.disabled = false; return; }
+    let blob = await toJpeg(st.img, 1568, .9);
+    if (blob.size > lim.images.maxInputBytes) blob = await toJpeg(st.img, 1024, .8);
+    msg("#s1msg", "Claude sedang membaca design (biasanya 20–60 saat)…");
+    try {
+      const out = await sample.json(prompt(), { images:[blob], modelTier:"complex", cache:false });
+      applyDecode(out);
+      msg("#s1msg", "Siap. " + st.cands.length + " font dicadangkan di langkah 2.", "ok");
+    } catch (e) {
+      const c = e && e.code;
+      msg("#s1msg", c === "not_granted" ? "Izin AI ditolak. Benarkan melalui menu Permissions artifact, kemudian cuba lagi."
+        : c === "rate_limited" ? "Had penggunaan AI dicapai. Tunggu sebentar dan cuba lagi."
+        : c === "invalid_json" ? "Jawapan AI tidak lengkap. Tekan Decode design sekali lagi."
+        : c === "image_rejected" ? "Gambar ditolak (saiz atau jenis). Cuba fail PNG/JPG lebih kecil."
+        : "Decode gagal: " + ((e && e.message) || "ralat tidak diketahui"), "err");
+    }
+    btn.disabled = false;
+  });
+  function applyDecode(o){
+    const lines = (Array.isArray(o?.lines) ? o.lines : []).slice(0, 8).map(cleanLine).filter(l => l.text.trim());
+    if (!lines.length) lines.push(cleanLine({text:"Tajuk anda", role:"headline", size:.1, weight:700, y:.1}));
+    st.spec = { bg:hex(o?.canvas?.bg) || "#ffffff", pad:num(o?.canvas?.pad, 0, .3, .08),
+      align:["left","center","right"].includes(o?.align) ? o.align : "left", lines };
+    st.summary = String(o?.summary || "").slice(0, 700);
+    const seen = new Set(); st.cands = [];
+    for (const f of (Array.isArray(o?.fonts) ? o.fonts : [])){
+      const m = FLOW.get(String(f?.family || "").trim().toLowerCase());
+      if (!m || seen.has(m.family)) continue;
+      seen.add(m.family);
+      st.cands.push({ family:m.family, match:Math.round(num(f.match, 0, 100, 0)), why:String(f.why || "").slice(0, 200), uses:f.uses });
+      if (st.cands.length === 10) break;
+    }
+    st.sel = new Set(st.cands.slice(0, 5).map(c => c.family));
+    st.chosen = null;
+    $("#summary").textContent = st.summary || "Ringkasan gaya tidak diberi.";
+    $("#s2").hidden = false; $("#s3").hidden = true;
+    renderSpec(); renderCands(); steps();
+    $("#s2").scrollIntoView({behavior:"smooth", block:"start"});
+  }
+
+  /* ---------- step 2: spec editor + font cards ---------- */
+  function field(label, input){ return h("label", {class:"fg-field"}, label, input); }
+  function numIn(val, step, min, max, on){
+    const i = h("input", {type:"number", value:String(val), step:String(step), min:String(min), max:String(max)});
+    i.addEventListener("input", () => { const v = parseFloat(i.value); if (Number.isFinite(v)){ on(Math.min(max, Math.max(min, v))); changed(); } });
+    return i;
+  }
+  function sel(opts, val, on){
+    const s = h("select"); for (const [v, t] of opts) s.append(h("option", {value:v, text:t, selected:v === val}));
+    s.addEventListener("change", () => { on(s.value); changed(); }); return s;
+  }
+  function colorIn(val, on){ const c = h("input", {type:"color", value:val}); c.addEventListener("input", () => { on(c.value); changed(); }); return c; }
+  function renderSpec(){
+    const sp = st.spec, g = $("#specGlobal"), L = $("#specLines");
+    g.replaceChildren(
+      field("Alignment", sel([["left","Kiri"],["center","Tengah"],["right","Kanan"]], sp.align, v => sp.align = v)),
+      field("Latar", colorIn(sp.bg, v => sp.bg = v)),
+      field("Margin sisi (× lebar)", numIn(sp.pad, .01, 0, .3, v => sp.pad = v)));
+    L.replaceChildren(...sp.lines.map(l => {
+      const ta = h("textarea", {rows:"2"}); ta.value = l.text;
+      ta.addEventListener("input", () => { l.text = ta.value; changed(); });
+      return h("div", {class:"fg-line"},
+        field("Teks", ta),
+        field("Peranan", sel(ROLES.map(r => [r, ROLE_BM[r]]), l.role, v => l.role = v)),
+        field("Saiz (× tinggi)", numIn(l.size, .005, .01, .5, v => l.size = v)),
+        field("Weight", sel([100,200,300,400,500,600,700,800,900].map(w => [String(w), String(w)]), String(l.weight), v => l.weight = +v)),
+        field("Tracking (em)", numIn(l.tracking, .005, -.2, .6, v => l.tracking = v)),
+        field("Line-height", numIn(l.lineHeight, .02, .7, 2.5, v => l.lineHeight = v)),
+        field("Atas (× tinggi)", numIn(l.y, .01, 0, .98, v => l.y = v)),
+        field("Warna", colorIn(l.color, v => l.color = v)));
+    }));
+  }
+  let tmr = 0;
+  function changed(){ clearTimeout(tmr); tmr = setTimeout(() => { refreshSamples(); if (!$("#s3").hidden) renderMocks(); }, 250); }
+  function sampleText(){
+    const l = st.spec.lines.find(x => x.role === "headline") || st.spec.lines[0];
+    const t = applyCase(l.text.replace(/\n/g, " "), l.case);
+    return t.length > 48 ? t.slice(0, 46) + "…" : t;
+  }
+  function headWeight(){ const l = st.spec.lines.find(x => x.role === "headline") || st.spec.lines[0]; return l.weight; }
+  function refreshSamples(){
+    document.querySelectorAll("#fontGrid .fg-fsample").forEach(s => {
+      const f = FMAP.get(s.dataset.family); const w = nearest(f.weights, headWeight());
+      s.textContent = sampleText(); s.style.fontWeight = String(w);
+    });
+  }
+  function renderCands(){
+    const grid = $("#fontGrid"); const txt = sampleText(), hw = headWeight();
+    grid.replaceChildren(...st.cands.map(c => {
+      const f = FMAP.get(c.family); const w = nearest(f.weights, hw);
+      ensureFont(c.family, w, false, txt);
+      const cb = h("input", {type:"checkbox", checked:st.sel.has(c.family), "aria-label":"Pilih " + c.family});
+      cb.addEventListener("change", () => { cb.checked ? st.sel.add(c.family) : st.sel.delete(c.family); updCount(); });
+      const sample = h("div", {class:"fg-fsample", text:txt, style:{fontFamily:'"' + c.family + '", sans-serif', fontWeight:String(w)}});
+      sample.dataset.family = c.family;
+      const a = h("a", {href:specimen(c.family), target:"_blank", rel:"noopener noreferrer", text:"Lihat di Google Fonts ↗"});
+      a.addEventListener("click", e => e.stopPropagation());
+      return h("label", {class:"fg-fcard"},
+        h("div", {class:"fg-fhead"}, cb, h("b", {text:c.family}),
+          c.match ? h("span", {class:"fg-pill fg-match", text:c.match + "%"}) : null,
+          h("span", {class:"fg-pill", text:LIC_BM[f.license] || f.license})),
+        sample,
+        h("p", {class:"fg-why", text:(c.why || "Ditambah secara manual.") + " · " + CAT_BM[f.category] + " · weight " + f.weights.join(", ")}),
+        a);
+    }));
+    updCount();
+  }
+  function updCount(){
+    const n = st.sel.size;
+    $("#selCount").textContent = n + " dipilih (cadangan: 5)";
+    $("#mockBtn").disabled = n === 0;
+    $("#mockBtn").textContent = n ? "Jana mockup (" + n + ")" : "Jana mockup";
+  }
+  $("#addFontBtn").addEventListener("click", () => {
+    const f = FLOW.get($("#addFont").value.trim().toLowerCase());
+    if (!f){ $("#addFont").setCustomValidity("Font tiada dalam senarai disahkan"); $("#addFont").reportValidity(); return; }
+    $("#addFont").setCustomValidity("");
+    if (!st.cands.some(c => c.family === f.family)) st.cands.push({family:f.family, match:0, why:"", uses:"both"});
+    st.sel.add(f.family); $("#addFont").value = ""; renderCands();
+  });
+  $("#addFont").addEventListener("input", () => $("#addFont").setCustomValidity(""));
+  $("#support").addEventListener("change", () => { st.support = $("#support").value; if (!$("#s3").hidden) renderMocks(); });
+  $("#mockBtn").addEventListener("click", () => { $("#s3").hidden = false; renderMocks(); steps(); $("#s3").scrollIntoView({behavior:"smooth", block:"start"}); });
+
+  /* ---------- step 3: canvas mockups ---------- */
+  function applyCase(t, c){ return c === "upper" ? t.toUpperCase() : c === "lower" ? t.toLowerCase() : t; }
+  const hasLS = "letterSpacing" in CanvasRenderingContext2D.prototype;
+  function measure(x, s, tr){ return hasLS ? x.measureText(s).width : x.measureText(s).width + tr * Math.max(0, [...s].length - 1); }
+  function wrap(x, text, maxW, tr){
+    const out = [];
+    for (const para of text.split("\n")){
+      const words = para.split(/ +/); let cur = "";
+      for (const w of words){
+        const t = cur ? cur + " " + w : w;
+        if (cur && measure(x, t, tr) > maxW){ out.push(cur); cur = w; } else cur = t;
+      }
+      out.push(cur);
+    }
+    return out;
+  }
+  function drawText(x, s, px, y, tr, align){
+    if (hasLS || !tr){ x.textAlign = align; x.fillText(s, px, y); return; }
+    const w = measure(x, s, tr); let cx = align === "left" ? px : align === "center" ? px - w / 2 : px - w;
+    x.textAlign = "left";
+    for (const ch of s){ x.fillText(ch, cx, y); cx += x.measureText(ch).width + tr; }
+  }
+  function fontFor(l, fam){ return st.support && (l.role === "body" || l.role === "caption") ? st.support : fam; }
+  function lineFont(l, fam){
+    const family = fontFor(l, fam), f = FMAP.get(family);
+    const weight = nearest(f.weights, l.weight);
+    const italic = l.italic && (f.italics || []).includes(nearest(f.italics, l.weight));
+    return {family, weight, italic};
+  }
+  async function render(cv, fam, scale){
+    const sp = st.spec, W = Math.round(900 * scale), H = Math.round(W * st.imgH / st.imgW);
+    await Promise.all(sp.lines.map(l => { const lf = lineFont(l, fam); return ensureFont(lf.family, lf.weight, lf.italic, l.text); }));
+    cv.width = W; cv.height = H;
+    const x = cv.getContext("2d");
+    x.fillStyle = sp.bg; x.fillRect(0, 0, W, H);
+    x.textBaseline = "top";
+    const padX = sp.pad * W;
+    const ax = sp.align === "left" ? padX : sp.align === "center" ? W / 2 : W - padX;
+    for (const l of sp.lines){
+      const lf = lineFont(l, fam);
+      let px = l.size * H, tr = l.tracking * px;
+      const setFont = () => { x.font = (lf.italic ? "italic " : "") + lf.weight + " " + px + 'px "' + lf.family + '", sans-serif'; if (hasLS) x.letterSpacing = tr + "px"; };
+      setFont();
+      x.fillStyle = l.color;
+      const maxW = Math.min(l.maxWidth * W, W - 2 * padX || W), avail = W - 2 * padX || W;
+      const txt = applyCase(l.text, l.case);
+      let rows = wrap(x, txt, maxW, tr);
+      const widest = Math.max(...rows.map(r => measure(x, r, tr)));
+      if (widest > avail){ px *= avail / widest; tr = l.tracking * px; setFont(); rows = wrap(x, txt, maxW, tr); }
+      let y = l.y * H;
+      for (const row of rows){ drawText(x, row, ax, y, tr, sp.align); y += px * l.lineHeight; }
+      if (hasLS) x.letterSpacing = "0px";
+    }
+    return {W, H};
+  }
+  let mockGen = 0;
+  async function renderMocks(){
+    const gen = ++mockGen, grid = $("#mockGrid");
+    const fams = st.cands.map(c => c.family).filter(f => st.sel.has(f));
+    if (st.chosen && !fams.includes(st.chosen)) st.chosen = null;
+    const orig = h("div", {class:"fg-mock fg-orig"}, h("img", {src:$("#preview").src, alt:"Design asal"}),
+      h("div", {class:"fg-fhead"}, h("b", {text:"Design asal"}), h("span", {class:"fg-pill", text:"rujukan"})));
+    const cards = fams.map(fam => {
+      const cv = h("canvas", {"aria-label":"Mockup dengan font " + fam, role:"img"});
+      const r = h("input", {type:"radio", name:"pick", value:fam, checked:st.chosen === fam, "aria-label":"Pilih mockup " + fam});
+      r.addEventListener("change", () => { st.chosen = fam; $("#saveBtn").disabled = false; $("#masterName").value = $("#masterName").dataset.auto === "0" ? $("#masterName").value : autoName(); steps(); });
+      const sup = st.support && st.support !== fam ? " + " + st.support : "";
+      const card = h("label", {class:"fg-mock"}, cv,
+        h("div", {class:"fg-fhead"}, r, h("b", {text:fam + sup}), h("span", {class:"fg-pill", text:LIC_BM[FMAP.get(fam).license]})));
+      render(cv, fam, 1).then(() => { if (gen !== mockGen) return; });
+      return card;
+    });
+    grid.replaceChildren(orig, ...cards);
+    $("#saveBtn").disabled = !st.chosen;
+  }
+  function autoName(){ return st.chosen + (st.support && st.support !== st.chosen ? " + " + st.support : "") + " · " + new Date().toLocaleDateString("ms-MY"); }
+  $("#masterName").addEventListener("input", () => $("#masterName").dataset.auto = "0");
+
+  /* ---------- save master ---------- */
+  const idOk = v => typeof v === "string" && /^[A-Za-z0-9_-]{6,128}$/.test(v);
+  $("#saveBtn").addEventListener("click", async () => {
+    if (!st.chosen) return;
+    const btn = $("#saveBtn"); btn.disabled = true; msg("#s3msg", "Menyimpan…");
+    const [db, assets] = await Promise.all([cap("db"), cap("assets")]);
+    if (!db || !assets){ msg("#s3msg", "Tidak dapat menyimpan: perlu log masuk sebagai pemilik atau editor artifact ini.", "err"); btn.disabled = false; return; }
+    try {
+      const fam = st.chosen, big = document.createElement("canvas");
+      await render(big, fam, 2);
+      const mockBlob = await new Promise(r => big.toBlob(r, "image/png"));
+      const origBlob = await toJpeg(st.img, 1600, .88);
+      const a1 = await assets.upload(origBlob); const a2 = await assets.upload(mockBlob);
+      const f = FMAP.get(fam);
+      const used = {};
+      st.spec.lines.forEach(l => { const lf = lineFont(l, fam); (used[lf.family] = used[lf.family] || new Set()).add(lf.weight); });
+      const all = (await db.collection("masters").get()).docs;
+      const doc = {
+        name:($("#masterName").value.trim() || autoName()).slice(0, 120),
+        createdAt:new Date().toISOString(),
+        active:!all.some(d => d.data()?.active),
+        font:{ family:fam, category:f.category, license:f.license, weightsUsed:[...(used[fam] || [])].sort(), weightsAvailable:f.weights, url:specimen(fam) },
+        supportFont: st.support && st.support !== fam ? { family:st.support, license:FMAP.get(st.support).license, weightsUsed:[...(used[st.support] || [])].sort(), url:specimen(st.support) } : null,
+        alternatives:st.cands.filter(c => st.sel.has(c.family) && c.family !== fam).map(c => c.family),
+        summary:st.summary,
+        spec:{ aspect:+(st.imgW / st.imgH).toFixed(4), bg:st.spec.bg, pad:st.spec.pad, align:st.spec.align, lines:st.spec.lines.map(l => ({...l})) },
+        original:{ id:a1.id }, mockup:{ id:a2.id },
+        source:"Google Fonts (lesen " + (LIC_BM[f.license] || f.license) + ")"
+      };
+      await db.collection("masters").doc().set(doc);
+      msg("#s3msg", "Disimpan sebagai master sheet" + (doc.active ? " dan dijadikan Aktif." : "."), "ok");
+      $("#s4").scrollIntoView({behavior:"smooth", block:"start"});
+    } catch (e) {
+      msg("#s3msg", "Gagal menyimpan: " + ((e && (e.message || e.code)) || "ralat") + ". Hanya pemilik/editor boleh simpan.", "err");
+    }
+    btn.disabled = false;
+  });
+
+  /* ---------- step 4: master sheet list ---------- */
+  let masters = [];
+  function pt(sizeFrac, aspect){ const hIn = aspect <= 1 ? 24 : 24 / aspect; return Math.round(sizeFrac * hIn * 72); }
+  function blobSrc(o){ return o && idOk(o.id) ? "/_blob/" + o.id : null; }
+  function renderMasters(){
+    const box = $("#masters");
+    if (!masters.length){ box.replaceChildren(h("div", {class:"fg-empty", text:"Belum ada master sheet. Upload contoh di langkah 1, pilih font dan mockup, kemudian tekan Simpan sebagai master sheet."})); return; }
+    const list = [...masters].sort((a, b) => (b.d.active - a.d.active) || String(b.d.createdAt).localeCompare(String(a.d.createdAt)));
+    box.replaceChildren(...list.map(({id, d}) => {
+      const sp = d.spec || {}, lines = Array.isArray(sp.lines) ? sp.lines : [], aspect = Number(sp.aspect) || .75;
+      const fam = FMAP.get(d.font?.family) ? d.font.family : null;
+      const supFam = FMAP.get(d.supportFont?.family) ? d.supportFont.family : null;
+      const ms = blobSrc(d.mockup), os = blobSrc(d.original);
+      const thumbs = h("div", {class:"fg-thumbs"},
+        ms ? h("img", {src:ms, alt:"Mockup master " + (d.name || ""), loading:"lazy"}) : null,
+        os ? h("small", {text:"Design asal:"}) : null,
+        os ? h("img", {src:os, alt:"Design asal", loading:"lazy", style:{maxWidth:"110px"}}) : null);
+      const tbody = h("tbody", null, ...lines.map(l => {
+        const f = FMAP.get(supFam && (l.role === "body" || l.role === "caption") ? supFam : fam);
+        const w = f ? nearest(f.weights, Number(l.weight) || 400) : l.weight;
+        const col = hex(l.color) || "#000000";
+        return h("tr", null,
+          h("td", {text:ROLE_BM[l.role] || "-"}),
+          h("td", {text:f ? f.family : "-"}),
+          h("td", {text:String(w)}),
+          h("td", {text:(Number(l.size) * 100).toFixed(1) + "%"}),
+          h("td", {text:pt(Number(l.size) || 0, aspect) + " pt"}),
+          h("td", {text:(Number(l.tracking) || 0).toFixed(3)}),
+          h("td", {text:(Number(l.lineHeight) || 0).toFixed(2)}),
+          h("td", {text:applyCase(l.case === "upper" ? "AA" : l.case === "lower" ? "aa" : "Aa", "none")}),
+          h("td", null, h("span", {class:"fg-sw", style:{background:col}}), col));
+      }));
+      const table = h("div", {class:"fg-tablewrap"}, h("table", {class:"fg-t"},
+        h("thead", null, h("tr", null, ...["Peranan","Font","Weight","Saiz (% tinggi)","Saiz @ 24 inci","Tracking (em)","Line-height","Huruf","Warna"].map(t => h("th", {text:t})))), tbody));
+      const actBtn = h("button", {text:d.active ? "Aktif" : "Jadikan aktif", disabled:!!d.active});
+      actBtn.addEventListener("click", () => setActive(id));
+      const delBtn = h("button", {class:"fg-danger", text:"Padam"});
+      delBtn.addEventListener("click", () => {
+        if (delBtn.dataset.armed !== "1"){ delBtn.dataset.armed = "1"; delBtn.textContent = "Tekan lagi untuk padam"; setTimeout(() => { delBtn.dataset.armed = ""; delBtn.textContent = "Padam"; }, 4000); return; }
+        remove(id, d);
+      });
+      const bgc = hex(sp.bg) || "#ffffff";
+      return h("article", {class:"fg-master" + (d.active ? " is-active" : ""), id:"master-" + id},
+        thumbs,
+        h("div", {class:"fg-mbody"},
+          h("div", {class:"fg-mhead"}, h("h3", {text:String(d.name || "Tanpa nama")}),
+            d.active ? h("span", {class:"fg-pill fg-active", text:"AKTIF"}) : null, actBtn, delBtn),
+          h("p", {class:"fg-kv"}, h("span", {text:"Font utama: "}), (fam || "-") + " · weight " + (d.font?.weightsUsed || []).join(", ") + " · " + (LIC_BM[d.font?.license] || d.font?.license || "-") + " · ",
+            fam ? h("a", {class:"fg-link", href:specimen(fam), target:"_blank", rel:"noopener noreferrer", text:"Google Fonts ↗"}) : null),
+          supFam ? h("p", {class:"fg-kv"}, h("span", {text:"Font teks kecil: "}), supFam + " · weight " + (d.supportFont.weightsUsed || []).join(", ") + " · " + (LIC_BM[d.supportFont.license] || d.supportFont.license)) : null,
+          h("p", {class:"fg-kv"}, h("span", {text:"Susun atur: "}), "align " + ({left:"kiri",center:"tengah",right:"kanan"}[sp.align] || "-") + " · margin sisi " + Math.round((Number(sp.pad) || 0) * 100) + "% lebar · nisbah " + aspect.toFixed(3) + " · latar ",
+            h("span", {class:"fg-sw", style:{background:bgc}}), bgc),
+          d.summary ? h("p", {class:"fg-kv", text:String(d.summary)}) : null,
+          table,
+          Array.isArray(d.alternatives) && d.alternatives.length ? h("p", {class:"fg-kv"}, h("span", {text:"Alternatif diuji: "}), d.alternatives.filter(a => FMAP.get(a)).join(", ")) : null,
+          h("p", {class:"fg-fine", text:"Disimpan " + (d.createdAt ? new Date(d.createdAt).toLocaleString("ms-MY") : "-")})));
+    }));
+  }
+  async function setActive(id){
+    const db = await cap("db"); if (!db) return;
+    try {
+      for (const m of masters) if (m.d.active && m.id !== id) await db.collection("masters").doc(m.id).update({active:false});
+      await db.collection("masters").doc(id).update({active:true});
+    } catch (e) { alertBox("Gagal menukar master aktif: " + ((e && e.message) || "ralat")); }
+  }
+  async function remove(id, d){
+    const [db, assets] = await Promise.all([cap("db"), cap("assets")]); if (!db) return;
+    try {
+      await db.collection("masters").doc(id).delete();
+      if (assets) for (const o of [d.mockup, d.original]) if (o && idOk(o.id)) await assets.delete(o.id).catch(() => {});
+    } catch (e) { alertBox("Gagal memadam: " + ((e && e.message) || "ralat")); }
+  }
+  function alertBox(t){ $("#masters").prepend(h("p", {class:"fg-msg err", text:t})); }
+  (async () => {
+    await fontsReady;
+    const timer = setTimeout(() => { if (!masters.length) $("#masters").replaceChildren(h("div", {class:"fg-empty", text:"Master sheet belum dapat dimuatkan. Pastikan anda log masuk ke claude.ai."})); }, 10000);
+    const db = await cap("db");
+    if (!db){ clearTimeout(timer); $("#masters").replaceChildren(h("div", {class:"fg-empty", text:"Master sheet hanya boleh dilihat semasa log masuk ke claude.ai."})); return; }
+    db.collection("masters").onSnapshot(snap => {
+      clearTimeout(timer);
+      masters = snap.docs.filter(d => d.exists).map(d => ({id:d.id, d:d.data() || {}}));
+      renderMasters();
+      if (masters.length && !st.spec) steps();
+    }, () => { clearTimeout(timer); $("#masters").replaceChildren(h("div", {class:"fg-empty", text:"Master sheet tidak dapat dibaca dengan akses anda."})); });
+  })();
+  steps();
+})();
+</script>

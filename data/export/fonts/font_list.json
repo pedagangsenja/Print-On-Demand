@@ -1,0 +1,3123 @@
+{
+ "generated": "2026-11-22",
+ "evidence": "rasmi",
+ "sources": [
+  "https://fonts.googleapis.com/css (weight)",
+  "https://github.com/google/fonts (lesen METADATA.pb)",
+  "https://developers.google.com/fonts/faq (guna komersial dibenarkan)"
+ ],
+ "fonts": [
+  {
+   "family": "Inter",
+   "category": "sans",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Inter Tight",
+   "category": "sans",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Manrope",
+   "category": "sans",
+   "weights": [
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "DM Sans",
+   "category": "sans",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Work Sans",
+   "category": "sans",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Public Sans",
+   "category": "sans",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "IBM Plex Sans",
+   "category": "sans",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Archivo",
+   "category": "sans",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Archivo Narrow",
+   "category": "sans",
+   "weights": [
+    400,
+    500,
+    600,
+    700
+   ],
+   "italics": [
+    400,
+    500,
+    600,
+    700
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Barlow",
+   "category": "sans",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Barlow Semi Condensed",
+   "category": "sans",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Space Grotesk",
+   "category": "sans",
+   "weights": [
+    300,
+    400,
+    500,
+    600,
+    700
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Schibsted Grotesk",
+   "category": "sans",
+   "weights": [
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Hanken Grotesk",
+   "category": "sans",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Familjen Grotesk",
+   "category": "sans",
+   "weights": [
+    400,
+    500,
+    600,
+    700
+   ],
+   "italics": [
+    400,
+    500,
+    600,
+    700
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Bricolage Grotesque",
+   "category": "sans",
+   "weights": [
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Instrument Sans",
+   "category": "sans",
+   "weights": [
+    400,
+    500,
+    600,
+    700
+   ],
+   "italics": [
+    400,
+    500,
+    600,
+    700
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Onest",
+   "category": "sans",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Geist",
+   "category": "sans",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Figtree",
+   "category": "sans",
+   "weights": [
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Plus Jakarta Sans",
+   "category": "sans",
+   "weights": [
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800
+   ],
+   "italics": [
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Outfit",
+   "category": "sans",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Sora",
+   "category": "sans",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Urbanist",
+   "category": "sans",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Lexend",
+   "category": "sans",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Albert Sans",
+   "category": "sans",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Red Hat Display",
+   "category": "sans",
+   "weights": [
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Rubik",
+   "category": "sans",
+   "weights": [
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Karla",
+   "category": "sans",
+   "weights": [
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800
+   ],
+   "italics": [
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Mulish",
+   "category": "sans",
+   "weights": [
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Nunito Sans",
+   "category": "sans",
+   "weights": [
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Poppins",
+   "category": "sans",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Montserrat",
+   "category": "sans",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Raleway",
+   "category": "sans",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Josefin Sans",
+   "category": "sans",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Jost",
+   "category": "sans",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Kumbh Sans",
+   "category": "sans",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Epilogue",
+   "category": "sans",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Syne",
+   "category": "sans",
+   "weights": [
+    400,
+    500,
+    600,
+    700,
+    800
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Unbounded",
+   "category": "sans",
+   "weights": [
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Darker Grotesque",
+   "category": "sans",
+   "weights": [
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Chivo",
+   "category": "sans",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Overpass",
+   "category": "sans",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Be Vietnam Pro",
+   "category": "sans",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Libre Franklin",
+   "category": "sans",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Roboto",
+   "category": "sans",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Roboto Flex",
+   "category": "sans",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Sofia Sans",
+   "category": "sans",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Encode Sans",
+   "category": "sans",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Tenor Sans",
+   "category": "sans",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Michroma",
+   "category": "sans",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Questrial",
+   "category": "sans",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Didact Gothic",
+   "category": "sans",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Mona Sans",
+   "category": "sans",
+   "weights": [
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Hubot Sans",
+   "category": "sans",
+   "weights": [
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Funnel Display",
+   "category": "sans",
+   "weights": [
+    300,
+    400,
+    500,
+    600,
+    700,
+    800
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Host Grotesk",
+   "category": "sans",
+   "weights": [
+    300,
+    400,
+    500,
+    600,
+    700,
+    800
+   ],
+   "italics": [
+    300,
+    400,
+    500,
+    600,
+    700,
+    800
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Golos Text",
+   "category": "sans",
+   "weights": [
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Wix Madefor Display",
+   "category": "sans",
+   "weights": [
+    400,
+    500,
+    600,
+    700,
+    800
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Afacad",
+   "category": "sans",
+   "weights": [
+    400,
+    500,
+    600,
+    700
+   ],
+   "italics": [
+    400,
+    500,
+    600,
+    700
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Barlow Condensed",
+   "category": "condensed",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Roboto Condensed",
+   "category": "condensed",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Oswald",
+   "category": "condensed",
+   "weights": [
+    200,
+    300,
+    400,
+    500,
+    600,
+    700
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Anton",
+   "category": "condensed",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Bebas Neue",
+   "category": "condensed",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "League Gothic",
+   "category": "condensed",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Fjalla One",
+   "category": "condensed",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Antonio",
+   "category": "condensed",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Big Shoulders Display",
+   "category": "condensed",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Six Caps",
+   "category": "condensed",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Teko",
+   "category": "condensed",
+   "weights": [
+    300,
+    400,
+    500,
+    600,
+    700
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Saira Condensed",
+   "category": "condensed",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Sofia Sans Condensed",
+   "category": "condensed",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Sofia Sans Extra Condensed",
+   "category": "condensed",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Encode Sans Condensed",
+   "category": "condensed",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Pathway Gothic One",
+   "category": "condensed",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Archivo Black",
+   "category": "condensed",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Staatliches",
+   "category": "condensed",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Kanit",
+   "category": "condensed",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "League Spartan",
+   "category": "condensed",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Space Mono",
+   "category": "mono",
+   "weights": [
+    400,
+    700
+   ],
+   "italics": [
+    400,
+    700
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "JetBrains Mono",
+   "category": "mono",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "IBM Plex Mono",
+   "category": "mono",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "DM Mono",
+   "category": "mono",
+   "weights": [
+    300,
+    400,
+    500
+   ],
+   "italics": [
+    300,
+    400,
+    500
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Courier Prime",
+   "category": "mono",
+   "weights": [
+    400,
+    700
+   ],
+   "italics": [
+    400,
+    700
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Fragment Mono",
+   "category": "mono",
+   "weights": [
+    400
+   ],
+   "italics": [
+    400
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Martian Mono",
+   "category": "mono",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Azeret Mono",
+   "category": "mono",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Geist Mono",
+   "category": "mono",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Major Mono Display",
+   "category": "mono",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Syne Mono",
+   "category": "mono",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Playfair Display",
+   "category": "serif",
+   "weights": [
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Playfair",
+   "category": "serif",
+   "weights": [
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "DM Serif Display",
+   "category": "serif",
+   "weights": [
+    400
+   ],
+   "italics": [
+    400
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "DM Serif Text",
+   "category": "serif",
+   "weights": [
+    400
+   ],
+   "italics": [
+    400
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Fraunces",
+   "category": "serif",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Instrument Serif",
+   "category": "serif",
+   "weights": [
+    400
+   ],
+   "italics": [
+    400
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Cormorant",
+   "category": "serif",
+   "weights": [
+    300,
+    400,
+    500,
+    600,
+    700
+   ],
+   "italics": [
+    300,
+    400,
+    500,
+    600,
+    700
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Cormorant Garamond",
+   "category": "serif",
+   "weights": [
+    300,
+    400,
+    500,
+    600,
+    700
+   ],
+   "italics": [
+    300,
+    400,
+    500,
+    600,
+    700
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "EB Garamond",
+   "category": "serif",
+   "weights": [
+    400,
+    500,
+    600,
+    700,
+    800
+   ],
+   "italics": [
+    400,
+    500,
+    600,
+    700,
+    800
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Libre Baskerville",
+   "category": "serif",
+   "weights": [
+    400,
+    500,
+    600,
+    700
+   ],
+   "italics": [
+    400,
+    500,
+    600,
+    700
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Libre Caslon Display",
+   "category": "serif",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Libre Caslon Text",
+   "category": "serif",
+   "weights": [
+    400,
+    700
+   ],
+   "italics": [
+    400
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Lora",
+   "category": "serif",
+   "weights": [
+    400,
+    500,
+    600,
+    700
+   ],
+   "italics": [
+    400,
+    500,
+    600,
+    700
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Merriweather",
+   "category": "serif",
+   "weights": [
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Newsreader",
+   "category": "serif",
+   "weights": [
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800
+   ],
+   "italics": [
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Noto Serif Display",
+   "category": "serif",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Bodoni Moda",
+   "category": "serif",
+   "weights": [
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Abril Fatface",
+   "category": "serif",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Prata",
+   "category": "serif",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Gloock",
+   "category": "serif",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Young Serif",
+   "category": "serif",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Spectral",
+   "category": "serif",
+   "weights": [
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800
+   ],
+   "italics": [
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Crimson Pro",
+   "category": "serif",
+   "weights": [
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Source Serif 4",
+   "category": "serif",
+   "weights": [
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "IBM Plex Serif",
+   "category": "serif",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Literata",
+   "category": "serif",
+   "weights": [
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Zilla Slab",
+   "category": "serif",
+   "weights": [
+    300,
+    400,
+    500,
+    600,
+    700
+   ],
+   "italics": [
+    300,
+    400,
+    500,
+    600,
+    700
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Roboto Slab",
+   "category": "serif",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [],
+   "license": "APACHE2"
+  },
+  {
+   "family": "Arvo",
+   "category": "serif",
+   "weights": [
+    400,
+    700
+   ],
+   "italics": [
+    400,
+    700
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Rozha One",
+   "category": "serif",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Yeseva One",
+   "category": "serif",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Italiana",
+   "category": "serif",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Marcellus",
+   "category": "serif",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Cinzel",
+   "category": "serif",
+   "weights": [
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Gilda Display",
+   "category": "serif",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Bellefair",
+   "category": "serif",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Libre Bodoni",
+   "category": "serif",
+   "weights": [
+    400,
+    500,
+    600,
+    700
+   ],
+   "italics": [
+    400,
+    500,
+    600,
+    700
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Old Standard TT",
+   "category": "serif",
+   "weights": [
+    400,
+    700
+   ],
+   "italics": [
+    400
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Domine",
+   "category": "serif",
+   "weights": [
+    400,
+    500,
+    600,
+    700
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Alfa Slab One",
+   "category": "serif",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Ultra",
+   "category": "serif",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "APACHE2"
+  },
+  {
+   "family": "Gravitas One",
+   "category": "serif",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Besley",
+   "category": "serif",
+   "weights": [
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Petrona",
+   "category": "serif",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "license": "OFL"
+  },
+  {
+   "family": "Hedvig Letters Serif",
+   "category": "serif",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Imbue",
+   "category": "serif",
+   "weights": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Caveat",
+   "category": "script",
+   "weights": [
+    400,
+    500,
+    600,
+    700
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Dancing Script",
+   "category": "script",
+   "weights": [
+    400,
+    500,
+    600,
+    700
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Great Vibes",
+   "category": "script",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Pinyon Script",
+   "category": "script",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Allura",
+   "category": "script",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Sacramento",
+   "category": "script",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Parisienne",
+   "category": "script",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Homemade Apple",
+   "category": "script",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "APACHE2"
+  },
+  {
+   "family": "Reenie Beanie",
+   "category": "script",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Nothing You Could Do",
+   "category": "script",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "La Belle Aurore",
+   "category": "script",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Mrs Saint Delafield",
+   "category": "script",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Monsieur La Doulaise",
+   "category": "script",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Birthstone",
+   "category": "script",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Ephesis",
+   "category": "script",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "WindSong",
+   "category": "script",
+   "weights": [
+    400,
+    500
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Mea Culpa",
+   "category": "script",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Corinthia",
+   "category": "script",
+   "weights": [
+    400,
+    700
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Kalam",
+   "category": "script",
+   "weights": [
+    300,
+    400,
+    700
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Shadows Into Light",
+   "category": "script",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Permanent Marker",
+   "category": "script",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "APACHE2"
+  },
+  {
+   "family": "Rock Salt",
+   "category": "script",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "APACHE2"
+  },
+  {
+   "family": "Gochi Hand",
+   "category": "script",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Patrick Hand",
+   "category": "script",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Pacifico",
+   "category": "script",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Lobster",
+   "category": "script",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Yellowtail",
+   "category": "script",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "APACHE2"
+  },
+  {
+   "family": "Satisfy",
+   "category": "script",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "APACHE2"
+  },
+  {
+   "family": "Kaushan Script",
+   "category": "script",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Mrs Sheppards",
+   "category": "script",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Herr Von Muellerhoff",
+   "category": "script",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Licorice",
+   "category": "script",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Righteous",
+   "category": "display",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Bungee",
+   "category": "display",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Rubik Mono One",
+   "category": "display",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Monoton",
+   "category": "display",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Shrikhand",
+   "category": "display",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Fredoka",
+   "category": "display",
+   "weights": [
+    300,
+    400,
+    500,
+    600,
+    700
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Baloo 2",
+   "category": "display",
+   "weights": [
+    400,
+    500,
+    600,
+    700,
+    800
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Chango",
+   "category": "display",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Climate Crisis",
+   "category": "display",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Dela Gothic One",
+   "category": "display",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Bowlby One",
+   "category": "display",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Titan One",
+   "category": "display",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Paytone One",
+   "category": "display",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Passion One",
+   "category": "display",
+   "weights": [
+    400,
+    700,
+    900
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Rammetto One",
+   "category": "display",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Syncopate",
+   "category": "display",
+   "weights": [
+    400,
+    700
+   ],
+   "italics": [],
+   "license": "APACHE2"
+  },
+  {
+   "family": "Krona One",
+   "category": "display",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Zen Dots",
+   "category": "display",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Orbitron",
+   "category": "display",
+   "weights": [
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Audiowide",
+   "category": "display",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Bungee Shade",
+   "category": "display",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Rubik Glitch",
+   "category": "display",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Bagel Fat One",
+   "category": "display",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Gasoek One",
+   "category": "display",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Rubik Dirt",
+   "category": "display",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Londrina Solid",
+   "category": "display",
+   "weights": [
+    100,
+    300,
+    400,
+    900
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Lilita One",
+   "category": "display",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Black Ops One",
+   "category": "display",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Bungee Outline",
+   "category": "display",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Tilt Warp",
+   "category": "display",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Silkscreen",
+   "category": "display",
+   "weights": [
+    400,
+    700
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "Press Start 2P",
+   "category": "display",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  },
+  {
+   "family": "VT323",
+   "category": "display",
+   "weights": [
+    400
+   ],
+   "italics": [],
+   "license": "OFL"
+  }
+ ]
+}
