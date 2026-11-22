@@ -167,10 +167,12 @@ table.fg-t{border-collapse:collapse;font-size:13px;min-width:560px;width:100%}
 
   <section class="fg-panel" id="s3" hidden>
     <h2><span class="fg-n">03</span>Mockup</h2>
-    <p class="fg-sub">Klik satu mockup untuk dipilih. Ubah spesifikasi di langkah 2 dan mockup akan dikemas kini.</p>
+    <p class="fg-sub">Susun atur automatik: baris dipecah dulu, saiz dikecil atau dibesarkan bila perlu, jarak atas-bawah disusun ikut saiz huruf, dan tiada teks keluar dari margin. Pilih satu mockup; tekan Kemaskan dengan AI untuk semakan tambahan.</p>
     <div class="fg-mockgrid" id="mockGrid"></div>
     <div class="fg-savebar">
       <input id="masterName" placeholder="Nama master sheet" aria-label="Nama master sheet">
+      <button id="aiBtn" disabled>Kemaskan dengan AI</button>
+      <button id="aiUndo" hidden>Buang kemasan AI</button>
       <button class="fg-primary" id="saveBtn" disabled>Simpan sebagai master sheet</button>
     </div>
     <p class="fg-msg" id="s3msg" role="status"></p>
@@ -193,7 +195,7 @@ table.fg-t{border-collapse:collapse;font-size:13px;min-width:560px;width:100%}
   const ROLE_BM = {headline:"Tajuk",subhead:"Sub-tajuk",body:"Badan",caption:"Kapsyen"};
   const CAT_BM = {sans:"sans",condensed:"condensed",mono:"mono",serif:"serif",script:"skrip",display:"display"};
   const LIC_BM = {OFL:"OFL 1.1",APACHE2:"Apache 2.0",UFL:"UFL"};
-  const st = { img:null, imgW:0, imgH:0, spec:null, summary:"", cands:[], sel:new Set(), chosen:null, support:"" };
+  const st = { img:null, imgW:0, imgH:0, spec:null, summary:"", cands:[], sel:new Set(), chosen:null, support:"", over:{} };
   let FONTS = [], FMAP = new Map(), FLOW = new Map(), META = {};
   const capP = {};
   function cap(name){
@@ -352,7 +354,7 @@ table.fg-t{border-collapse:collapse;font-size:13px;min-width:560px;width:100%}
       if (st.cands.length === 10) break;
     }
     st.sel = new Set(st.cands.slice(0, 5).map(c => c.family));
-    st.chosen = null;
+    st.chosen = null; st.over = {};
     $("#summary").textContent = st.summary || "Ringkasan gaya tidak diberi.";
     $("#s2").hidden = false; $("#s3").hidden = true;
     renderSpec(); renderCands(); steps();
@@ -392,7 +394,7 @@ table.fg-t{border-collapse:collapse;font-size:13px;min-width:560px;width:100%}
     }));
   }
   let tmr = 0;
-  function changed(){ clearTimeout(tmr); tmr = setTimeout(() => { refreshSamples(); if (!$("#s3").hidden) renderMocks(); }, 250); }
+  function changed(){ if (Object.keys(st.over).length){ st.over = {}; msg("#s3msg", "Kemasan AI dibuang kerana spesifikasi diubah."); } clearTimeout(tmr); tmr = setTimeout(() => { refreshSamples(); if (!$("#s3").hidden) renderMocks(); }, 250); }
   function sampleText(){
     const l = st.spec.lines.find(x => x.role === "headline") || st.spec.lines[0];
     const t = applyCase(l.text.replace(/\n/g, " "), l.case);
@@ -446,21 +448,84 @@ table.fg-t{border-collapse:collapse;font-size:13px;min-width:560px;width:100%}
   /* ---------- step 3: canvas mockups ---------- */
   function applyCase(t, c){ return c === "upper" ? t.toUpperCase() : c === "lower" ? t.toLowerCase() : t; }
   const hasLS = "letterSpacing" in CanvasRenderingContext2D.prototype;
-  function measure(x, s, tr){ return hasLS ? x.measureText(s).width : x.measureText(s).width + tr * Math.max(0, [...s].length - 1); }
-  function wrap(x, text, maxW, tr){
+  function measure(x, s, tr){ return hasLS ? x.measureText(s).width - (s ? tr : 0) : x.measureText(s).width + tr * Math.max(0, [...s].length - 1); }
+  /* Layout engine: break lines first (balanced), shrink only if still too wide, keep hierarchy,
+     stack blocks top→bottom with size-aware gaps, keep footer blocks at the bottom, never leave the safe area. */
+  const ROLE_MIN = {headline:.04, subhead:.02, body:.014, caption:.011};
+  const ROLE_MAX = {headline:.34, subhead:.09, body:.05, caption:.03};
+  function setF(x, lf, px, tr){ x.font = (lf.italic ? "italic " : "") + lf.weight + " " + px.toFixed(2) + 'px "' + lf.family + '", sans-serif'; if (hasLS) x.letterSpacing = tr + "px"; }
+  function balance(x, text, maxW, tr){
     const out = [];
     for (const para of text.split("\n")){
-      const words = para.split(/ +/); let cur = "";
-      for (const w of words){
-        const t = cur ? cur + " " + w : w;
-        if (cur && measure(x, t, tr) > maxW){ out.push(cur); cur = w; } else cur = t;
+      const words = para.split(/\s+/).filter(Boolean);
+      if (!words.length) continue;
+      const greedy = lim => { const rows = []; let cur = ""; for (const w of words){ const t = cur ? cur + " " + w : w; if (cur && measure(x, t, tr) > lim){ rows.push(cur); cur = w; } else cur = t; } rows.push(cur); return rows; };
+      let rows = greedy(maxW);
+      if (rows.length > 1){
+        const k = rows.length; let lo = Math.max(...words.map(w => measure(x, w, tr))), hi = maxW;
+        for (let i = 0; i < 16 && hi - lo > .5; i++){ const mid = (lo + hi) / 2; if (greedy(mid).length <= k) hi = mid; else lo = mid; }
+        rows = greedy(hi);
       }
-      out.push(cur);
+      out.push(...rows);
     }
-    return out;
+    return out.length ? out : [""];
+  }
+  function sizeBlock(x, l, fam, W, H, padX, k, useMin, capPx){
+    const lf = lineFont(l, fam), txt = applyCase(l.text, l.case);
+    const avail = Math.max(10, W - 2 * padX), maxW = Math.min(avail, Math.max(l.maxWidth * W, avail * .35));
+    const lo = useMin ? ROLE_MIN[l.role] * H : 4, hi = Math.min(ROLE_MAX[l.role] * H, capPx || Infinity);
+    let px = Math.max(Math.min(lo, hi), Math.min(hi, l.size * H * k));
+    const origRows = Math.max(1, l.text.split("\n").filter(s => s.trim()).length);
+    const maxRows = l.role === "headline" || l.role === "subhead" ? origRows + 2 : 99;
+    const words = txt.split(/\s+/).filter(Boolean);
+    let tr, rows;
+    for (let i = 0; i < 14; i++){
+      tr = l.tracking * px; setF(x, lf, px, tr);
+      const ww = Math.max(1, ...words.map(w => measure(x, w, tr)));
+      if (ww > maxW){ px *= maxW / ww * .985; continue; }
+      rows = balance(x, txt, maxW, tr);
+      if (rows.length > maxRows && px > lo * 1.01){ px = Math.max(lo, px * .92); continue; }
+      break;
+    }
+    tr = l.tracking * px; setF(x, lf, px, tr); rows = balance(x, txt, maxW, tr);
+    let widest = Math.max(1, ...rows.map(r => measure(x, r, tr)));
+    if (l.role === "headline" && l.maxWidth >= .45){
+      const s = Math.min(Math.min(maxW, l.maxWidth * W) * k / widest, 1.3, hi / px);
+      if (s > 1.04){ px *= s; tr = l.tracking * px; setF(x, lf, px, tr); widest *= s; }
+    }
+    const asc = rows.map(r => x.measureText(r || "H").actualBoundingBoxAscent || px * .72);
+    const desc = rows.map(r => Math.max(0, x.measureText(r || "H").actualBoundingBoxDescent || 0));
+    const lhs = rows.slice(1).map((_, j) => Math.max(px * l.lineHeight, desc[j] + asc[j + 1] + px * .06));
+    const hgt = asc[0] + lhs.reduce((s, v) => s + v, 0) + desc[desc.length - 1];
+    return {l, lf, px, tr, rows, asc, lhs, h:hgt, widest};
+  }
+  function layout(x, sp, fam, W, H){
+    const padX = Math.max(sp.pad * W, .05 * W), mY = Math.max(.045 * H, .05 * Math.min(W, H));
+    const order = sp.lines.map((l, i) => i).sort((a, b) => sp.lines[a].y - sp.lines[b].y);
+    const gapOf = (a, b) => Math.max(.018 * H, .3 * a.px, .9 * b.px);
+    let k = 1, useMin = true, B = [];
+    for (let it = 0; it < 30; it++){
+      const heads = {};
+      order.forEach(i => { if (sp.lines[i].role === "headline") heads[i] = sizeBlock(x, sp.lines[i], fam, W, H, padX, k, useMin); });
+      const hs = Object.values(heads).map(b => b.px), cap = hs.length ? Math.min(...hs) / 1.45 : 0;
+      B = order.map(i => heads[i] || sizeBlock(x, sp.lines[i], fam, W, H, padX, k, useMin, cap || undefined));
+      const total = B.reduce((s, b) => s + b.h, 0) + B.slice(1).reduce((s, b, i) => s + gapOf(B[i], b), 0);
+      if (total <= H - 2 * mY) break;
+      if (k < .35) useMin = false;
+      k *= Math.max(.7, Math.min(.97, (H - 2 * mY) / total));
+    }
+    const n = B.length, top = [];
+    const want = B.map(b => {
+      const l = b.l, estBottom = Math.min(1, l.y + l.size * l.lineHeight * Math.max(1, l.text.split("\n").length));
+      return l.y >= .7 && estBottom >= .82 ? H - Math.max(mY, (1 - estBottom) * H) - b.h : l.y * H;
+    });
+    for (let i = 0; i < n; i++) top[i] = Math.max(want[i], i ? top[i - 1] + B[i - 1].h + gapOf(B[i - 1], B[i]) : mY);
+    let lim = H - mY;
+    for (let i = n - 1; i >= 0; i--){ if (top[i] + B[i].h > lim) top[i] = lim - B[i].h; lim = top[i] - (i ? gapOf(B[i - 1], B[i]) : 0); }
+    return {B, top, padX, mY, k};
   }
   function drawText(x, s, px, y, tr, align){
-    if (hasLS || !tr){ x.textAlign = align; x.fillText(s, px, y); return; }
+    if (hasLS || !tr){ x.textAlign = align; x.fillText(s, hasLS ? (align === "center" ? px + tr / 2 : align === "right" ? px + tr : px) : px, y); return; }
     const w = measure(x, s, tr); let cx = align === "left" ? px : align === "center" ? px - w / 2 : px - w;
     x.textAlign = "left";
     for (const ch of s){ x.fillText(ch, cx, y); cx += x.measureText(ch).width + tr; }
@@ -472,31 +537,27 @@ table.fg-t{border-collapse:collapse;font-size:13px;min-width:560px;width:100%}
     const italic = l.italic && (f.italics || []).includes(nearest(f.italics, l.weight));
     return {family, weight, italic};
   }
+  const specFor = fam => (st.over[fam] && st.over[fam].spec) || st.spec;
   async function render(cv, fam, scale){
-    const sp = st.spec, W = Math.round(900 * scale), H = Math.round(W * st.imgH / st.imgW);
+    const sp = specFor(fam), W = Math.round(900 * scale), H = Math.round(W * st.imgH / st.imgW);
     await Promise.all(sp.lines.map(l => { const lf = lineFont(l, fam); return ensureFont(lf.family, lf.weight, lf.italic, l.text); }));
     cv.width = W; cv.height = H;
     const x = cv.getContext("2d");
     x.fillStyle = sp.bg; x.fillRect(0, 0, W, H);
-    x.textBaseline = "top";
-    const padX = sp.pad * W;
-    const ax = sp.align === "left" ? padX : sp.align === "center" ? W / 2 : W - padX;
-    for (const l of sp.lines){
-      const lf = lineFont(l, fam);
-      let px = l.size * H, tr = l.tracking * px;
-      const setFont = () => { x.font = (lf.italic ? "italic " : "") + lf.weight + " " + px + 'px "' + lf.family + '", sans-serif'; if (hasLS) x.letterSpacing = tr + "px"; };
-      setFont();
-      x.fillStyle = l.color;
-      const maxW = Math.min(l.maxWidth * W, W - 2 * padX || W), avail = W - 2 * padX || W;
-      const txt = applyCase(l.text, l.case);
-      let rows = wrap(x, txt, maxW, tr);
-      const widest = Math.max(...rows.map(r => measure(x, r, tr)));
-      if (widest > avail){ px *= avail / widest; tr = l.tracking * px; setFont(); rows = wrap(x, txt, maxW, tr); }
-      let y = l.y * H;
-      for (const row of rows){ drawText(x, row, ax, y, tr, sp.align); y += px * l.lineHeight; }
-      if (hasLS) x.letterSpacing = "0px";
-    }
-    return {W, H};
+    x.textBaseline = "alphabetic";
+    const L = layout(x, sp, fam, W, H);
+    const ax = sp.align === "left" ? L.padX : sp.align === "center" ? W / 2 : W - L.padX;
+    L.B.forEach((b, i) => {
+      setF(x, b.lf, b.px, b.tr); x.fillStyle = b.l.color;
+      let y = L.top[i] + b.asc[0];
+      b.rows.forEach((r, j) => { if (j) y += b.lhs[j - 1]; drawText(x, r, ax, y, b.tr, sp.align); });
+    });
+    if (hasLS) x.letterSpacing = "0px";
+    return {W, H, L};
+  }
+  function layoutRecord(R){
+    return R.L.B.map((b, i) => ({ role:b.l.role, font:b.lf.family, weight:b.lf.weight, size:+(b.px / R.H).toFixed(4), top:+(R.L.top[i] / R.H).toFixed(4),
+      tracking:b.l.tracking, lineHeight:+((b.lhs.length ? b.lhs[0] : b.px * b.l.lineHeight) / b.px).toFixed(3), case:b.l.case, color:b.l.color, rows:b.rows }));
   }
   let mockGen = 0;
   async function renderMocks(){
@@ -508,16 +569,66 @@ table.fg-t{border-collapse:collapse;font-size:13px;min-width:560px;width:100%}
     const cards = fams.map(fam => {
       const cv = h("canvas", {"aria-label":"Mockup dengan font " + fam, role:"img"});
       const r = h("input", {type:"radio", name:"pick", value:fam, checked:st.chosen === fam, "aria-label":"Pilih mockup " + fam});
-      r.addEventListener("change", () => { st.chosen = fam; $("#saveBtn").disabled = false; $("#masterName").value = $("#masterName").dataset.auto === "0" ? $("#masterName").value : autoName(); steps(); });
+      r.addEventListener("change", () => { st.chosen = fam; $("#masterName").value = $("#masterName").dataset.auto === "0" ? $("#masterName").value : autoName(); updPick(); steps(); });
       const sup = st.support && st.support !== fam ? " + " + st.support : "";
       const card = h("label", {class:"fg-mock"}, cv,
-        h("div", {class:"fg-fhead"}, r, h("b", {text:fam + sup}), h("span", {class:"fg-pill", text:LIC_BM[FMAP.get(fam).license]})));
-      render(cv, fam, 1).then(() => { if (gen !== mockGen) return; });
+        h("div", {class:"fg-fhead"}, r, h("b", {text:fam + sup}),
+          st.over[fam] ? h("span", {class:"fg-pill fg-match", text:"AI"}) : null,
+          h("span", {class:"fg-pill", text:LIC_BM[FMAP.get(fam).license]})));
+      render(cv, fam, 1).catch(() => {});
       return card;
     });
+    if (gen !== mockGen) return;
     grid.replaceChildren(orig, ...cards);
-    $("#saveBtn").disabled = !st.chosen;
+    updPick();
   }
+  function updPick(){
+    $("#saveBtn").disabled = !st.chosen; $("#aiBtn").disabled = !st.chosen;
+    $("#aiUndo").hidden = !(st.chosen && st.over[st.chosen]);
+  }
+
+  /* ---------- AI polish of the chosen mockup ---------- */
+  const normWords = t => String(t).replace(/\s+/g, " ").trim().toLowerCase();
+  $("#aiBtn").addEventListener("click", async () => {
+    const fam = st.chosen; if (!fam) return;
+    const btn = $("#aiBtn"); btn.disabled = true;
+    const sample = await cap("sample");
+    const lim = sample ? await sample.limits().catch(() => null) : null;
+    if (!lim || !lim.images){ msg("#s3msg", "AI tidak tersedia di paparan ini. Buka artifact ini di claude.ai semasa log masuk.", "err"); btn.disabled = false; return; }
+    msg("#s3msg", "AI sedang menyemak mockup " + fam + " (biasanya 20–60 saat)…");
+    try {
+      const cv = document.createElement("canvas"); await render(cv, fam, 1);
+      const mock = await new Promise(r => cv.toBlob(r, "image/jpeg", .9));
+      const orig = await toJpeg(st.img, 1200, .88);
+      const cur = specFor(fam), f = FMAP.get(fam);
+      const p = [
+        "Image 1 is the ORIGINAL typographic poster. Image 2 is our MOCKUP of the same text set in the font \"" + fam + "\" (available weights: " + f.weights.join(", ") + (st.support && st.support !== fam ? "; body/caption use \"" + st.support + "\"" : "") + ").",
+        "Improve the mockup so the final poster is as polished and balanced as the original: clear hierarchy, comfortable and consistent spacing, even margins, nothing touching the edges, line breaks that read naturally (no single orphan word), headline filling the width like the original.",
+        "Current spec (size = font size as fraction of image height, y = top of block as fraction of height, maxWidth = fraction of width, tracking in em, pad = side margin as fraction of width):",
+        JSON.stringify({pad:cur.pad, align:cur.align, lines:cur.lines.map(l => ({text:l.text, role:l.role, size:l.size, weight:l.weight, tracking:l.tracking, lineHeight:l.lineHeight, y:l.y, maxWidth:l.maxWidth, case:l.case}))}),
+        'Return ONLY JSON: {"pad": number, "align": "left"|"center"|"right", "lines": [same number and order of blocks, each {"text": same words (you may only change where \\n line breaks go), "size", "weight", "tracking", "lineHeight", "y", "maxWidth", "case"}], "note": "Bahasa Melayu, max 20 words, what you changed"}.',
+        "A layout engine will still prevent overflow and collisions, so focus on proportions, breaks and spacing."
+      ].join("\n");
+      const out = await sample.json(p, {images:[orig, mock], modelTier:"complex", cache:false});
+      const nl = Array.isArray(out?.lines) ? out.lines : [];
+      if (nl.length !== cur.lines.length) throw {message:"AI memulangkan bilangan blok yang berbeza. Cuba lagi."};
+      const lines = cur.lines.map((l, i) => {
+        const c = cleanLine({...l, ...nl[i], role:l.role, color:l.color, italic:l.italic});
+        if (normWords(c.text) !== normWords(l.text)) c.text = l.text;
+        return c;
+      });
+      st.over[fam] = { spec:{...cur, pad:num(out.pad, 0, .3, cur.pad), align:["left","center","right"].includes(out.align) ? out.align : cur.align, lines}, note:String(out.note || "").slice(0, 200) };
+      await renderMocks();
+      msg("#s3msg", "Dikemaskan AI" + (st.over[fam].note ? ": " + st.over[fam].note : "."), "ok");
+    } catch (e) {
+      const c = e && e.code;
+      msg("#s3msg", c === "not_granted" ? "Izin AI ditolak. Benarkan melalui menu Permissions artifact."
+        : c === "rate_limited" ? "Had penggunaan AI dicapai. Tunggu sebentar dan cuba lagi."
+        : "Kemasan AI gagal: " + ((e && e.message) || "ralat") , "err");
+    }
+    btn.disabled = false; updPick();
+  });
+  $("#aiUndo").addEventListener("click", () => { if (st.chosen){ delete st.over[st.chosen]; renderMocks(); msg("#s3msg", "Kemasan AI dibuang."); } });
   function autoName(){ return st.chosen + (st.support && st.support !== st.chosen ? " + " + st.support : "") + " · " + new Date().toLocaleDateString("ms-MY"); }
   $("#masterName").addEventListener("input", () => $("#masterName").dataset.auto = "0");
 
@@ -530,13 +641,13 @@ table.fg-t{border-collapse:collapse;font-size:13px;min-width:560px;width:100%}
     if (!db || !assets){ msg("#s3msg", "Tidak dapat menyimpan: perlu log masuk sebagai pemilik atau editor artifact ini.", "err"); btn.disabled = false; return; }
     try {
       const fam = st.chosen, big = document.createElement("canvas");
-      await render(big, fam, 2);
+      const R = await render(big, fam, 2);
       const mockBlob = await new Promise(r => big.toBlob(r, "image/png"));
       const origBlob = await toJpeg(st.img, 1600, .88);
       const a1 = await assets.upload(origBlob); const a2 = await assets.upload(mockBlob);
       const f = FMAP.get(fam);
       const used = {};
-      st.spec.lines.forEach(l => { const lf = lineFont(l, fam); (used[lf.family] = used[lf.family] || new Set()).add(lf.weight); });
+      specFor(fam).lines.forEach(l => { const lf = lineFont(l, fam); (used[lf.family] = used[lf.family] || new Set()).add(lf.weight); });
       const all = (await db.collection("masters").get()).docs;
       const doc = {
         name:($("#masterName").value.trim() || autoName()).slice(0, 120),
@@ -546,7 +657,9 @@ table.fg-t{border-collapse:collapse;font-size:13px;min-width:560px;width:100%}
         supportFont: st.support && st.support !== fam ? { family:st.support, license:FMAP.get(st.support).license, weightsUsed:[...(used[st.support] || [])].sort(), url:specimen(st.support) } : null,
         alternatives:st.cands.filter(c => st.sel.has(c.family) && c.family !== fam).map(c => c.family),
         summary:st.summary,
-        spec:{ aspect:+(st.imgW / st.imgH).toFixed(4), bg:st.spec.bg, pad:st.spec.pad, align:st.spec.align, lines:st.spec.lines.map(l => ({...l})) },
+        spec:{ aspect:+(st.imgW / st.imgH).toFixed(4), bg:specFor(fam).bg, pad:specFor(fam).pad, align:specFor(fam).align, lines:specFor(fam).lines.map(l => ({...l})) },
+        layout:{ lines:layoutRecord(R), marginX:+(R.L.padX / R.W).toFixed(4), marginY:+(R.L.mY / R.H).toFixed(4) },
+        aiPolished:!!st.over[fam],
         original:{ id:a1.id }, mockup:{ id:a2.id },
         source:"Google Fonts (lesen " + (LIC_BM[f.license] || f.license) + ")"
       };
@@ -576,8 +689,9 @@ table.fg-t{border-collapse:collapse;font-size:13px;min-width:560px;width:100%}
         ms ? h("img", {src:ms, alt:"Mockup master " + (d.name || ""), loading:"lazy"}) : null,
         os ? h("small", {text:"Design asal:"}) : null,
         os ? h("img", {src:os, alt:"Design asal", loading:"lazy", style:{maxWidth:"110px"}}) : null);
-      const tbody = h("tbody", null, ...lines.map(l => {
-        const f = FMAP.get(supFam && (l.role === "body" || l.role === "caption") ? supFam : fam);
+      const lay = Array.isArray(d.layout?.lines) ? d.layout.lines : null;
+      const tbody = h("tbody", null, ...(lay || lines).map(l => {
+        const f = FMAP.get(lay && FMAP.get(l.font) ? l.font : supFam && (l.role === "body" || l.role === "caption") ? supFam : fam);
         const w = f ? nearest(f.weights, Number(l.weight) || 400) : l.weight;
         const col = hex(l.color) || "#000000";
         return h("tr", null,
@@ -586,13 +700,14 @@ table.fg-t{border-collapse:collapse;font-size:13px;min-width:560px;width:100%}
           h("td", {text:String(w)}),
           h("td", {text:(Number(l.size) * 100).toFixed(1) + "%"}),
           h("td", {text:pt(Number(l.size) || 0, aspect) + " pt"}),
+          h("td", {text:Number.isFinite(Number(l.top ?? l.y)) ? (Number(l.top ?? l.y) * 100).toFixed(1) + "%" : "-"}),
           h("td", {text:(Number(l.tracking) || 0).toFixed(3)}),
           h("td", {text:(Number(l.lineHeight) || 0).toFixed(2)}),
           h("td", {text:applyCase(l.case === "upper" ? "AA" : l.case === "lower" ? "aa" : "Aa", "none")}),
           h("td", null, h("span", {class:"fg-sw", style:{background:col}}), col));
       }));
       const table = h("div", {class:"fg-tablewrap"}, h("table", {class:"fg-t"},
-        h("thead", null, h("tr", null, ...["Peranan","Font","Weight","Saiz (% tinggi)","Saiz @ 24 inci","Tracking (em)","Line-height","Huruf","Warna"].map(t => h("th", {text:t})))), tbody));
+        h("thead", null, h("tr", null, ...["Peranan","Font","Weight","Saiz (% tinggi)","Saiz @ 24 inci","Atas (% tinggi)","Tracking (em)","Line-height","Huruf","Warna"].map(t => h("th", {text:t})))), tbody));
       const actBtn = h("button", {text:d.active ? "Aktif" : "Jadikan aktif", disabled:!!d.active});
       actBtn.addEventListener("click", () => setActive(id));
       const delBtn = h("button", {class:"fg-danger", text:"Padam"});
@@ -605,7 +720,8 @@ table.fg-t{border-collapse:collapse;font-size:13px;min-width:560px;width:100%}
         thumbs,
         h("div", {class:"fg-mbody"},
           h("div", {class:"fg-mhead"}, h("h3", {text:String(d.name || "Tanpa nama")}),
-            d.active ? h("span", {class:"fg-pill fg-active", text:"AKTIF"}) : null, actBtn, delBtn),
+            d.active ? h("span", {class:"fg-pill fg-active", text:"AKTIF"}) : null,
+            d.aiPolished ? h("span", {class:"fg-pill fg-match", text:"Dikemaskan AI"}) : null, actBtn, delBtn),
           h("p", {class:"fg-kv"}, h("span", {text:"Font utama: "}), (fam || "-") + " · weight " + (d.font?.weightsUsed || []).join(", ") + " · " + (LIC_BM[d.font?.license] || d.font?.license || "-") + " · ",
             fam ? h("a", {class:"fg-link", href:specimen(fam), target:"_blank", rel:"noopener noreferrer", text:"Google Fonts ↗"}) : null),
           supFam ? h("p", {class:"fg-kv"}, h("span", {text:"Font teks kecil: "}), supFam + " · weight " + (d.supportFont.weightsUsed || []).join(", ") + " · " + (LIC_BM[d.supportFont.license] || d.supportFont.license)) : null,
