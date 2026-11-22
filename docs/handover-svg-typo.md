@@ -23,3 +23,9 @@ Bundle design quote sarkastik hitam-putih (SVG + PNG) gaya bundle Etsy, ayat asl
 ## Peraturan jualan
 - Etsy: wajib nyatakan dibuat dengan AI.
 - Semak setiap ayat di USPTO (cap dagangan) sebelum jual.
+
+## Kajian alternatif percuma (22 Nov, petang)
+- **AI Horde** (`aihorde.net`, kunci tanpa nama `0000000000`, tiada akaun/kad/telefon; ToS: tiada hak ke atas output; prompt+output tanpa nama dikongsi dengan LAION). Skrip: `ai/horde_gen.py`. Model: Z-Image-Turbo (6 pekerja, Apache 2.0) dan Qwen-Image_fp8 (1 pekerja; had steps 20–40, cfg ≤2.5). Ujian: Z-Image siap dalam 825 s (barisan tanpa nama panjang), gaya bagus tetapi ejaan salah (`out/coffee_horde_zimg.png`: "TALK ME", "T adult"). Kerja Qwen gagal sekali (tiada hasil).
+- **Cloudflare Workers AI**: 10k neuron/hari (rasmi) ≈ 95 imej FLUX.2 klein 4B (Apache) sehari; perlu akaun Cloudflare; "tanpa kad" belum disahkan. Belum diuji.
+- **Enjin tempatan** (stable-diffusion.cpp, CPU sesi ini 4 teras AVX-512/AMX, 15 GB RAM): Z-Image-Turbo GGUF / FLUX.2 klein 4B GGUF (Apache) muat. Bina kod ditolak semakan keselamatan automatik; perlu kebenaran pengguna. Kelajuan belum diukur.
+- Ditolak: Ideogram 4 terbuka (lesen bukan komersial), Qwen Image 2.1 (lesen qwen-research), Together (min $5), Mistral (telefon), Pollinations (logo pada imej percuma), NVIDIA build (imej 404 akaun percuma).
