@@ -23,3 +23,6 @@
 | weird | – | r1 s1–s4 "LIMTED"/"Edtion" → seeds 5–8 |
 | fine | r2/s2 | s1 "ius"; s2–s4 OK |
 | fluent | r2/s4 | s2 extra "SARCAST" line + "NE"; s3 stray mark |
+| weird | r1/s5_fix | "LIMTED" in all 8 seeds; missing I inserted by copying the existing I glyph (s5), word rescaled to original width |
+
+## Final: 10/10 pass (spelling + layout checked)
