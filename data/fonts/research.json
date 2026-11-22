@@ -1,0 +1,76 @@
+{
+ "moods": {
+  "romantik": [
+   {
+    "claim": "Script dinilai feminin, elegan dan menarik (Monotype Corsiva; Shaikh dkk. 2006, 561 responden)",
+    "url": "https://www.microsoft.com/en-us/research/uploads/prod/2021/06/Hazlett-Larson-Shaikh-Chaparo-2013-two-studies-on-how-a-typeface-congruent-with-content-can-enhance-onscreen-communication.pdf",
+    "level": "rasmi"
+   },
+   {
+    "claim": "Kumpulan 'Elegance' untuk script (Brumberger 2003)",
+    "url": "https://understandinggraphics.com/?p=459",
+    "level": "lemah"
+   }
+  ],
+  "lucu": [
+   {
+    "claim": "Faktor personaliti tersendiri 'Script/Funny' (Shaikh dkk. 2006)",
+    "url": "https://www.microsoft.com/en-us/research/uploads/prod/2021/06/Hazlett-Larson-Shaikh-Chaparo-2013-two-studies-on-how-a-typeface-congruent-with-content-can-enhance-onscreen-communication.pdf",
+    "level": "rasmi"
+   }
+  ],
+  "klasik": [
+   {
+    "claim": "Serif (Times New Roman) dinilai stabil, matang, praktikal; Georgia formal (Shaikh dkk. 2006)",
+    "url": "https://www.microsoft.com/en-us/research/uploads/prod/2021/06/Hazlett-Larson-Shaikh-Chaparo-2013-two-studies-on-how-a-typeface-congruent-with-content-can-enhance-onscreen-communication.pdf",
+    "level": "rasmi"
+   }
+  ],
+  "tangan": [
+   {
+    "claim": "Fon bulat, tidak sempurna seperti tulisan tangan dinilai mesra (Mackiewicz 2005)",
+    "url": "https://editingresearch.byu.edu/2021/05/21/choosing-a-font-can-be-a-daunting-task-but-with-the-proper-instruction-it-doesnt-have-to-be/",
+    "level": "lemah"
+   }
+  ],
+  "kanak": [
+   {
+    "claim": "Fon bulat dipadankan dengan 'manis' (Velasco dkk. 2015)",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4934647",
+    "level": "lemah"
+   }
+  ],
+  "tenang": [
+   {
+    "claim": "Fon lembut beri respons positif lebih tinggi; fon tajam cetus emosi negatif (Monotype × Neurons 2021, kajian vendor)",
+    "url": "https://www.monotype.com/resources/can-fonts-affect-our-feelings",
+    "level": "lemah"
+   }
+  ],
+  "motivasi": [
+   {
+    "claim": "Tiada kajian langsung 'condensed tebal = motivasi'; tag Google beri skor Loud tinggi untuk fon condensed tebal",
+    "url": "https://github.com/google/fonts/blob/main/tags/all/README.md",
+    "level": "lemah"
+   }
+  ],
+  "_umum": [
+   {
+    "claim": "Fon yang sepadan dengan mesej mengubah nada emosi yang dirasai dalam 700 ms (Hazlett dkk. 2013)",
+    "url": "https://www.microsoft.com/en-us/research/uploads/prod/2021/06/Hazlett-Larson-Shaikh-Chaparo-2013-two-studies-on-how-a-typeface-congruent-with-content-can-enhance-onscreen-communication.pdf",
+    "level": "rasmi"
+   },
+   {
+    "claim": "Jenama dipilih kira-kira 2× lebih kerap dengan fon yang sesuai (Doyle & Bottomley 2004)",
+    "url": "https://ideas.repec.org/a/eee/jbrese/v57y2004i8p873-880.html",
+    "level": "lemah"
+   },
+   {
+    "claim": "Tag Google Fonts (families.csv) dinilai manusia; skor menyusun fon dalam setiap tag",
+    "url": "https://github.com/google/fonts/blob/main/tags/all/README.md",
+    "level": "rasmi"
+   }
+  ]
+ },
+ "note": "Kajian web 22 Nov 2026 (ejen Claude). 'lemah' = hanya ringkasan carian, laman tidak dapat dibuka dari sesi ini."
+}

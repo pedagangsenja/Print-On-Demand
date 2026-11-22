@@ -1,0 +1,2861 @@
+{
+"meta": {
+"source": "https://api.fontshare.com/v2/fonts",
+"fetched": "2026-11-22",
+"count_total": 100,
+"evidence": "rasmi",
+"note": "Lesen ITF FFL v2 disahkan dari fail License/FFL.txt dalam zip (benarkan kegunaan komersial; fail fon tidak boleh diedar)."
+},
+"fonts": [
+{
+"name": "Kihim",
+"source": "fontshare",
+"slug": "kihim",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/kihim",
+"designer": "Rocky Malaviya",
+"category": [
+"Display"
+],
+"font_tags": [
+"Posters",
+"Magazines",
+"Experimental",
+"Banners"
+],
+"date_added": "2021-10-09",
+"weights": [
+400
+],
+"italic": false,
+"variable": false
+},
+{
+"name": "General Sans",
+"source": "fontshare",
+"slug": "general-sans",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/general-sans",
+"designer": "Frode Helland",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Branding",
+"Logos",
+"Poster",
+"Websites"
+],
+"date_added": "2021-03-12",
+"weights": [
+200,
+300,
+400,
+500,
+600,
+700
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Synonym",
+"source": "fontshare",
+"slug": "synonym",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/synonym",
+"designer": "Hugo Dumont",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Posters",
+"Editorial",
+"Books",
+"Branding",
+"Magazines"
+],
+"date_added": "2021-03-12",
+"weights": [
+200,
+300,
+400,
+500,
+600,
+700
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Gambarino",
+"source": "fontshare",
+"slug": "gambarino",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/gambarino",
+"designer": "Théo Guillard",
+"category": [
+"Serif"
+],
+"font_tags": [
+"Magazines",
+"Posters",
+"Books",
+"Editorial"
+],
+"date_added": "2021-03-12",
+"weights": [
+400
+],
+"italic": false,
+"variable": false
+},
+{
+"name": "Technor",
+"source": "fontshare",
+"slug": "technor",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/technor",
+"designer": "Jean-Baptiste Morizot",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Books",
+"Poster",
+"Magazines",
+"Logos"
+],
+"date_added": "2021-03-12",
+"weights": [
+200,
+300,
+400,
+500,
+600,
+700,
+900
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Rowan",
+"source": "fontshare",
+"slug": "rowan",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/rowan",
+"designer": "Inga Plönnigs",
+"category": [
+"Serif"
+],
+"font_tags": [
+"Books",
+"Text",
+"Reading",
+"Editorial"
+],
+"date_added": "2021-03-12",
+"weights": [
+300,
+400,
+500,
+600,
+700
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Comico",
+"source": "fontshare",
+"slug": "comico",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/comico",
+"designer": "Frode Helland",
+"category": [
+"Handwritten"
+],
+"font_tags": [
+"Handwriting",
+"Comic",
+"Editorial",
+"Funny",
+"Books"
+],
+"date_added": "2021-03-12",
+"weights": [
+400
+],
+"italic": false,
+"variable": false
+},
+{
+"name": "Gambetta",
+"source": "fontshare",
+"slug": "gambetta",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/gambetta",
+"designer": "Paul Troppmar",
+"category": [
+"Serif"
+],
+"font_tags": [
+"Newspapers",
+"Text",
+"Books",
+"Magazines"
+],
+"date_added": "2021-03-12",
+"weights": [
+300,
+400,
+500,
+600,
+700
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Sentient",
+"source": "fontshare",
+"slug": "sentient",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/sentient",
+"designer": "Noopur Choksi",
+"category": [
+"Serif"
+],
+"font_tags": [
+"Poster",
+"Newspapers",
+"Books",
+"Magazines"
+],
+"date_added": "2021-03-17",
+"weights": [
+200,
+300,
+400,
+500,
+700
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Boska",
+"source": "fontshare",
+"slug": "boska",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/boska",
+"designer": "Barbara Bigosinska",
+"category": [
+"Serif",
+"Display"
+],
+"font_tags": [
+"Magazines",
+"Poster",
+"Websites",
+"Books",
+"Logo",
+"Screen"
+],
+"date_added": "2021-04-20",
+"weights": [
+200,
+300,
+400,
+500,
+700,
+900
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Switzer",
+"source": "fontshare",
+"slug": "switzer",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/switzer",
+"designer": "Jérémie Hornus",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Websites",
+"Books",
+"Logo",
+"Magazines",
+"Poster",
+"Screen"
+],
+"date_added": "2021-04-20",
+"weights": [
+100,
+200,
+300,
+400,
+500,
+600,
+700,
+800,
+900
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Tabular",
+"source": "fontshare",
+"slug": "tabular",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/tabular",
+"designer": "Jérémie Hornus, Julie Soudanne",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Code",
+"Websites",
+"Posters",
+"Magazines"
+],
+"date_added": "2021-08-22",
+"weights": [
+300,
+400,
+500,
+600,
+700
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Tanker",
+"source": "fontshare",
+"slug": "tanker",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/tanker",
+"designer": "Ruosi Huang",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Books",
+"Banners",
+"Editorial",
+"Logos",
+"Poster"
+],
+"date_added": "2021-08-22",
+"weights": [
+400
+],
+"italic": false,
+"variable": false
+},
+{
+"name": "Expose",
+"source": "fontshare",
+"slug": "expose",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/expose",
+"designer": "Lukas Schneider",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Magazines",
+"Branding",
+"Banners",
+"Apps",
+"Websites"
+],
+"date_added": "2021-10-04",
+"weights": [
+400,
+500,
+700,
+900
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Boxing",
+"source": "fontshare",
+"slug": "boxing",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/boxing",
+"designer": "Ruosi Huang",
+"category": [
+"Display"
+],
+"font_tags": [
+"Editorial",
+"Poster",
+"Books"
+],
+"date_added": "2021-10-09",
+"weights": [
+400
+],
+"italic": false,
+"variable": false
+},
+{
+"name": "Striper",
+"source": "fontshare",
+"slug": "striper",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/striper",
+"designer": "Jitka Janečková",
+"category": [
+"Display"
+],
+"font_tags": [
+"Poster",
+"Fun",
+"Branding",
+"Experimental",
+"Logos"
+],
+"date_added": "2021-10-09",
+"weights": [
+400
+],
+"italic": false,
+"variable": false
+},
+{
+"name": "Pilcrow Rounded",
+"source": "fontshare",
+"slug": "pilcrow-rounded",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/pilcrow-rounded",
+"designer": "Satya Rajpurohit",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Logos",
+"Magazines",
+"Branding",
+"Books"
+],
+"date_added": "2022-02-08",
+"weights": [
+400,
+500,
+600,
+700,
+900
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Melodrama",
+"source": "fontshare",
+"slug": "melodrama",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/melodrama",
+"designer": "Shaily Patel",
+"category": [
+"Sans",
+"Display"
+],
+"font_tags": [
+"Websites",
+"Magazines",
+"Branding",
+"Banners",
+"Posters"
+],
+"date_added": "2022-03-02",
+"weights": [
+300,
+400,
+500,
+600,
+700
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Kohinoor Zerone",
+"source": "fontshare",
+"slug": "kohinoor-zerone",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/kohinoor-zerone",
+"designer": "Satya Rajpurohit",
+"category": [
+"Display"
+],
+"font_tags": [
+"Beauty",
+"Headlines",
+"Posters",
+"Lettering",
+"Cosmetic"
+],
+"date_added": "2022-03-13",
+"weights": [
+100,
+200
+],
+"italic": false,
+"variable": false
+},
+{
+"name": "New Title",
+"source": "fontshare",
+"slug": "new-title",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/new-title",
+"designer": "Julie Soudanne, Jérémie Hornus",
+"category": [
+"Sans",
+"Display"
+],
+"font_tags": [
+"Magazines",
+"Branding",
+"Titles",
+"Films",
+"Credits",
+"Logos"
+],
+"date_added": "2022-04-25",
+"weights": [
+200,
+300,
+400,
+500,
+700
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Aktura",
+"source": "fontshare",
+"slug": "aktura",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/aktura",
+"designer": "Gaetan Baehr",
+"category": [
+"Serif",
+"Blackletter",
+"Display"
+],
+"font_tags": [
+"Websites",
+"Poster",
+"Magazines"
+],
+"date_added": "2021-07-09",
+"weights": [
+400
+],
+"italic": false,
+"variable": false
+},
+{
+"name": "Alpino",
+"source": "fontshare",
+"slug": "alpino",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/alpino",
+"designer": "Alisa Nowak, Jérémie Hornus",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Magazines",
+"Posters",
+"Branding",
+"Books"
+],
+"date_added": "2021-03-12",
+"weights": [
+100,
+300,
+400,
+500,
+700,
+900
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Amulya",
+"source": "fontshare",
+"slug": "amulya",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/amulya",
+"designer": "Joana Correia",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Books",
+"Logos",
+"Posters",
+"Magazines"
+],
+"date_added": "2021-03-12",
+"weights": [
+300,
+400,
+500,
+700
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Array",
+"source": "fontshare",
+"slug": "array",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/array",
+"designer": "Frode Helland",
+"category": [
+"Display"
+],
+"font_tags": [
+"Branding",
+"Magazines",
+"Signage",
+"Posters"
+],
+"date_added": "2021-03-12",
+"weights": [
+400,
+600,
+700
+],
+"italic": false,
+"variable": false
+},
+{
+"name": "Author",
+"source": "fontshare",
+"slug": "author",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/author",
+"designer": "Satya Rajpurohit",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Branding",
+"Books",
+"Logos",
+"Magazines"
+],
+"date_added": "2021-03-12",
+"weights": [
+200,
+300,
+400,
+500,
+600,
+700
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Bespoke Sans",
+"source": "fontshare",
+"slug": "bespoke-sans",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/bespoke-sans",
+"designer": "Jérémie Hornus, Théo Guillard, Morgane Pambrun, Alisa Nowak, Joachim Vu",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Poster",
+"Websites",
+"Logos",
+"Magazines"
+],
+"date_added": "2021-03-12",
+"weights": [
+300,
+400,
+500,
+700,
+800
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Bespoke Serif",
+"source": "fontshare",
+"slug": "bespoke-serif",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/bespoke-serif",
+"designer": "Jeremie Hornus, Theo Guillard, Morgane Pambrun, Alisa Nowak, Joachim Vu",
+"category": [
+"Serif"
+],
+"font_tags": [
+"Magazines",
+"Posters",
+"Books",
+"Branding",
+"Editorial"
+],
+"date_added": "2021-03-12",
+"weights": [
+300,
+400,
+500,
+700,
+800
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Bespoke Slab",
+"source": "fontshare",
+"slug": "bespoke-slab",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/bespoke-slab",
+"designer": "Jérémie Hornus, Théo Guillard, Morgane Pambrun, Alisa Nowak, Joachim Vu",
+"category": [
+"Slab"
+],
+"font_tags": [
+"Poster",
+"Magazines",
+"Websites",
+"Logos"
+],
+"date_added": "2021-03-12",
+"weights": [
+300,
+400,
+500,
+700,
+800
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Bespoke Stencil",
+"source": "fontshare",
+"slug": "bespoke-stencil",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/bespoke-stencil",
+"designer": "Jérémie Hornus, Théo Guillard, Morgane Pambrun, Alisa Nowak, Joachim Vu",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Magazines",
+"Poster",
+"Logos",
+"Websites"
+],
+"date_added": "2021-03-12",
+"weights": [
+300,
+400,
+500,
+700,
+800
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Clash Grotesk",
+"source": "fontshare",
+"slug": "clash-grotesk",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/clash-grotesk",
+"designer": "Indian Type Foundry",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Text",
+"Editorial",
+"Magazines",
+"Reading"
+],
+"date_added": "2021-03-12",
+"weights": [
+200,
+300,
+400,
+500,
+600,
+700
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Clash Display",
+"source": "fontshare",
+"slug": "clash-display",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/clash-display",
+"designer": "Indian Type Foundry",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Banners",
+"Editorial",
+"Magazines"
+],
+"date_added": "2021-03-12",
+"weights": [
+200,
+300,
+400,
+500,
+600,
+700
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Chubbo",
+"source": "fontshare",
+"slug": "chubbo",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/chubbo",
+"designer": "Rafał Buchner",
+"category": [
+"Display"
+],
+"font_tags": [
+"Logos",
+"Magazines",
+"Poster",
+"Banners",
+"Books"
+],
+"date_added": "2021-03-12",
+"weights": [
+200,
+300,
+400,
+500,
+700
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Chillax",
+"source": "fontshare",
+"slug": "chillax",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/chillax",
+"designer": "Manushi Parikh",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Magazines",
+"Logos",
+"Books",
+"Banners",
+"Poster"
+],
+"date_added": "2021-03-12",
+"weights": [
+200,
+300,
+400,
+500,
+600,
+700
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Cabinet Grotesk",
+"source": "fontshare",
+"slug": "cabinet-grotesk",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/cabinet-grotesk",
+"designer": "ITF",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Books",
+"Magazines",
+"Editorial",
+"Posters"
+],
+"date_added": "2021-03-12",
+"weights": [
+100,
+200,
+300,
+400,
+500,
+700,
+800,
+900
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Britney",
+"source": "fontshare",
+"slug": "britney",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/britney",
+"designer": "Diana Ovezea & Sabina Chipară",
+"category": [
+"Script"
+],
+"font_tags": [
+"Packaging",
+"Poster",
+"Screen",
+"Websites",
+"Album Covers",
+"Books",
+"Headlines",
+"Logo",
+"Magazines"
+],
+"date_added": "2021-07-09",
+"weights": [
+300,
+400,
+700,
+1000
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Bonny",
+"source": "fontshare",
+"slug": "bonny",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/bonny",
+"designer": "Barbara Bigosinska",
+"category": [
+"Serif"
+],
+"font_tags": [
+"Banners",
+"Books",
+"Logos",
+"Magazines",
+"Poster"
+],
+"date_added": "2021-03-12",
+"weights": [
+100,
+300,
+400,
+500,
+700
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Bevellier",
+"source": "fontshare",
+"slug": "bevellier",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/bevellier",
+"designer": "Arya Purohit, Barbara Bigosinska",
+"category": [
+"Display"
+],
+"font_tags": [
+"Logos",
+"Poster",
+"Magazines",
+"Websites"
+],
+"date_added": "2021-03-12",
+"weights": [
+100,
+200,
+300,
+400,
+500,
+600,
+700,
+900
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Archivo",
+"source": "fontshare",
+"slug": "archivo",
+"license": "OFL-1.1",
+"license_url": "https://openfontlicense.org",
+"url": "https://www.fontshare.com/fonts/archivo",
+"designer": "Omnibus-Type",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Legible",
+"Banners",
+"Clean",
+"Websites",
+"Screen"
+],
+"date_added": "2022-05-22",
+"weights": [
+100,
+200,
+300,
+400,
+500,
+600,
+700,
+800,
+900
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Dancing Script",
+"source": "fontshare",
+"slug": "dancing-script",
+"license": "OFL-1.1",
+"license_url": "https://openfontlicense.org",
+"url": "https://www.fontshare.com/fonts/dancing-script",
+"designer": "Impallari Type",
+"category": [
+"Script"
+],
+"font_tags": [
+"Packaging",
+"Banners",
+"luxury",
+"Posters",
+"Beauty"
+],
+"date_added": "2022-05-22",
+"weights": [
+400,
+700
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Bebas Neue",
+"source": "fontshare",
+"slug": "bebas-neue",
+"license": "OFL-1.1",
+"license_url": "https://openfontlicense.org",
+"url": "https://www.fontshare.com/fonts/bebas-neue",
+"designer": "Ryoichi Tsunekawa, Dharma Type",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Credits",
+"Websites",
+"Packaging",
+"Menus"
+],
+"date_added": "2022-05-22",
+"weights": [
+400
+],
+"italic": false,
+"variable": false
+},
+{
+"name": "Anton",
+"source": "fontshare",
+"slug": "anton",
+"license": "OFL-1.1",
+"license_url": "https://openfontlicense.org",
+"url": "https://www.fontshare.com/fonts/anton",
+"designer": "Vernon Adams",
+"category": [
+"Sans",
+"Display"
+],
+"font_tags": [
+"Headlines",
+"Banners",
+"Books",
+"Apps",
+"Tight"
+],
+"date_added": "2022-05-21",
+"weights": [
+400
+],
+"italic": false,
+"variable": false
+},
+{
+"name": "Poppins",
+"source": "fontshare",
+"slug": "poppins",
+"license": "OFL-1.1",
+"license_url": "https://openfontlicense.org",
+"url": "https://www.fontshare.com/fonts/poppins",
+"designer": "Jonny Pinhorn, Indian Type Foundry",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Apps",
+"Corporate",
+"Poppins",
+"Broadcast",
+"Banners"
+],
+"date_added": "2022-05-21",
+"weights": [
+100,
+200,
+300,
+400,
+500,
+600,
+700,
+800,
+900
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Be Vietnam Pro",
+"source": "fontshare",
+"slug": "beVietnam-pro",
+"license": "OFL-1.1",
+"license_url": "https://openfontlicense.org",
+"url": "https://www.fontshare.com/fonts/beVietnam-pro",
+"designer": "Lam Bao, Tony Le, Vietanh Nguyen",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Websites",
+"Apps",
+"Banners",
+"Legible"
+],
+"date_added": "2022-05-25",
+"weights": [
+100,
+200,
+300,
+400,
+500,
+600,
+700,
+800,
+900
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Nunito",
+"source": "fontshare",
+"slug": "nunito",
+"license": "OFL-1.1",
+"license_url": "https://openfontlicense.org",
+"url": "https://www.fontshare.com/fonts/nunito",
+"designer": "Vernon Adams, Cyreal, Jacques Le Bailly",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Invitation",
+"Films",
+"friendly",
+"Headline"
+],
+"date_added": "2022-05-23",
+"weights": [
+200,
+300,
+400,
+500,
+600,
+700,
+800,
+900
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Spline Sans",
+"source": "fontshare",
+"slug": "spline-sans",
+"license": "OFL-1.1",
+"license_url": "https://openfontlicense.org",
+"url": "https://www.fontshare.com/fonts/spline-sans",
+"designer": "Eben Sorkin, Mirko Velimirović",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Apps",
+"workhorse",
+"Headlines"
+],
+"date_added": "2022-05-23",
+"weights": [
+300,
+400,
+500,
+600,
+700
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Plus Jakarta Sans",
+"source": "fontshare",
+"slug": "plus-jakarta-sans",
+"license": "OFL-1.1",
+"license_url": "https://openfontlicense.org",
+"url": "https://www.fontshare.com/fonts/plus-jakarta-sans",
+"designer": "Tokotype",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Screen",
+"Banners",
+"Apps",
+"General"
+],
+"date_added": "2022-05-23",
+"weights": [
+200,
+300,
+400,
+500,
+600,
+700,
+800
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Manrope",
+"source": "fontshare",
+"slug": "manrope",
+"license": "OFL-1.1",
+"license_url": "https://openfontlicense.org",
+"url": "https://www.fontshare.com/fonts/manrope",
+"designer": "Mikhail Sharanda",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Logos",
+"Websites",
+"Banners",
+"Apps"
+],
+"date_added": "2022-05-23",
+"weights": [
+200,
+300,
+400,
+500,
+600,
+700,
+800
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Crimson Pro",
+"source": "fontshare",
+"slug": "crimson-pro",
+"license": "OFL-1.1",
+"license_url": "https://openfontlicense.org",
+"url": "https://www.fontshare.com/fonts/crimson-pro",
+"designer": "Jacques Le Bailly",
+"category": [
+"Serif"
+],
+"font_tags": [
+"Magazines",
+"Publishing",
+"Editorial"
+],
+"date_added": "2022-05-22",
+"weights": [
+200,
+300,
+400,
+500,
+600,
+700,
+800,
+900
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Public Sans",
+"source": "fontshare",
+"slug": "public-sans",
+"license": "OFL-1.1",
+"license_url": "https://openfontlicense.org",
+"url": "https://www.fontshare.com/fonts/public-sans",
+"designer": "Pablo Impallari, Rodrigo Fuenzalida, Dan Williams, USWDS",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Headlines",
+"Reading",
+"Clean",
+"Logos"
+],
+"date_added": "2022-05-23",
+"weights": [
+100,
+200,
+300,
+400,
+500,
+600,
+700,
+800,
+900
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Fira Sans",
+"source": "fontshare",
+"slug": "fira-sans",
+"license": "OFL-1.1",
+"license_url": "https://openfontlicense.org",
+"url": "https://www.fontshare.com/fonts/fira-sans",
+"designer": "Carrois Apostrophe",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Apps",
+"Magazines",
+"Screen",
+"Branding"
+],
+"date_added": "2022-05-23",
+"weights": [
+100,
+200,
+300,
+400,
+500,
+600,
+700,
+800,
+900
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Oswald",
+"source": "fontshare",
+"slug": "oswald",
+"license": "OFL-1.1",
+"license_url": "https://openfontlicense.org",
+"url": "https://www.fontshare.com/fonts/oswald",
+"designer": "Vernon Adams, Kalapi Gajjar, Cyreal",
+"category": [
+"Sans",
+"Display"
+],
+"font_tags": [
+"Compact",
+"Magazines",
+"Posters",
+"Headlines"
+],
+"date_added": "2022-05-23",
+"weights": [
+200,
+300,
+400,
+500,
+600,
+700
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Work Sans",
+"source": "fontshare",
+"slug": "work-sans",
+"license": "OFL-1.1",
+"license_url": "https://openfontlicense.org",
+"url": "https://www.fontshare.com/fonts/work-sans",
+"designer": "Wei Huang",
+"category": [
+"Sans"
+],
+"font_tags": [
+"News",
+"Headline",
+"workhorse",
+"Corporate"
+],
+"date_added": "2022-05-23",
+"weights": [
+100,
+200,
+300,
+400,
+500,
+600,
+700,
+800,
+900
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Outfit",
+"source": "fontshare",
+"slug": "outfit",
+"license": "OFL-1.1",
+"license_url": "https://openfontlicense.org",
+"url": "https://www.fontshare.com/fonts/outfit",
+"designer": "On Brand Investments Pty Ltd, Rodrigo Fuenzalida",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Screen",
+"Headline",
+"Magazines",
+"Websites",
+"Packaging"
+],
+"date_added": "2022-05-23",
+"weights": [
+100,
+200,
+300,
+400,
+500,
+600,
+700,
+800,
+900
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Montserrat",
+"source": "fontshare",
+"slug": "montserrat",
+"license": "OFL-1.1",
+"license_url": "https://openfontlicense.org",
+"url": "https://www.fontshare.com/fonts/montserrat",
+"designer": "Julieta Ulanovsky, Sol Matas, Juan Pablo del Peral, Jacques Le Bailly",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Banners",
+"Packaging",
+"General",
+"Posters",
+"Websites"
+],
+"date_added": "2022-05-23",
+"weights": [
+100,
+200,
+300,
+400,
+500,
+600,
+700,
+800,
+900
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "JetBrains Mono",
+"source": "fontshare",
+"slug": "jet-brains-mono",
+"license": "OFL-1.1",
+"license_url": "https://openfontlicense.org",
+"url": "https://www.fontshare.com/fonts/jet-brains-mono",
+"designer": "JetBrains, Philipp Nurullin, Konstantin Bulenkov",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Monospaced",
+"Display",
+"Code",
+"Programming"
+],
+"date_added": "2022-05-23",
+"weights": [
+100,
+200,
+300,
+400,
+500,
+600,
+700,
+800
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Epilogue",
+"source": "fontshare",
+"slug": "epilogue",
+"license": "OFL-1.1",
+"license_url": "https://openfontlicense.org",
+"url": "https://www.fontshare.com/fonts/epilogue",
+"designer": "Tyler Finck, Etcetera Type Co",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Headline",
+"Banners",
+"Logo",
+"Websites",
+"Products"
+],
+"date_added": "2022-05-22",
+"weights": [
+100,
+200,
+300,
+400,
+500,
+600,
+700,
+800,
+900
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Lora",
+"source": "fontshare",
+"slug": "lora",
+"license": "OFL-1.1",
+"license_url": "https://openfontlicense.org",
+"url": "https://www.fontshare.com/fonts/lora",
+"designer": "Cyreal, Olga Karpushina, Alexei Vanyashin",
+"category": [
+"Serif"
+],
+"font_tags": [
+"Publishing",
+"Legible",
+"Websites",
+"Clean"
+],
+"date_added": "2022-05-23",
+"weights": [
+400,
+500,
+600,
+700
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Azeret Mono",
+"source": "fontshare",
+"slug": "azeret-mono",
+"license": "OFL-1.1",
+"license_url": "https://openfontlicense.org",
+"url": "https://www.fontshare.com/fonts/azeret-mono",
+"designer": "Displaay, Martin Vácha, Daniel Quisek",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Programming",
+"coding",
+"Apps"
+],
+"date_added": "2022-05-22",
+"weights": [
+100,
+200,
+300,
+400,
+500,
+600,
+700,
+800,
+900
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Asap",
+"source": "fontshare",
+"slug": "asap",
+"license": "OFL-1.1",
+"license_url": "https://openfontlicense.org",
+"url": "https://www.fontshare.com/fonts/asap",
+"designer": "Omnibus-Type",
+"category": [
+"Sans"
+],
+"font_tags": [
+"friendly",
+"Packaging",
+"Soft",
+"Posters"
+],
+"date_added": "2022-05-22",
+"weights": [
+400,
+500,
+600,
+700
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Familjen Grotesk",
+"source": "fontshare",
+"slug": "familjen-grotesk",
+"license": "OFL-1.1",
+"license_url": "https://openfontlicense.org",
+"url": "https://www.fontshare.com/fonts/familjen-grotesk",
+"designer": "Familjen STHLM AB",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Headline",
+"Websites",
+"Packaging",
+"General",
+"Banners"
+],
+"date_added": "2022-05-25",
+"weights": [
+400,
+500,
+600,
+700
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Erode",
+"source": "fontshare",
+"slug": "erode",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/erode",
+"designer": "Nikhil Ranganathan",
+"category": [
+"Serif"
+],
+"font_tags": [
+"Magazines",
+"Posters",
+"Books",
+"Branding"
+],
+"date_added": "2021-03-12",
+"weights": [
+300,
+400,
+500,
+600,
+700
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Kalam",
+"source": "fontshare",
+"slug": "kalam",
+"license": "OFL-1.1",
+"license_url": "https://openfontlicense.org",
+"url": "https://www.fontshare.com/fonts/kalam",
+"designer": "Indian Type Foundry",
+"category": [
+"Handwritten"
+],
+"font_tags": [
+"handwritten",
+"Comic",
+"Children"
+],
+"date_added": "2022-05-21",
+"weights": [
+300,
+400,
+700
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Excon",
+"source": "fontshare",
+"slug": "excon",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/excon",
+"designer": "Alisa Nowak",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Books",
+"Editorial",
+"Logos"
+],
+"date_added": "2021-03-12",
+"weights": [
+100,
+300,
+400,
+500,
+700,
+900
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Hind",
+"source": "fontshare",
+"slug": "hind",
+"license": "OFL-1.1",
+"license_url": "https://openfontlicense.org",
+"url": "https://www.fontshare.com/fonts/hind",
+"designer": "Manushi Parikh",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Broadcast",
+"Books",
+"Banners",
+"Beauty",
+"Branding"
+],
+"date_added": "2022-05-21",
+"weights": [
+300,
+400,
+500,
+600,
+700
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Neco",
+"source": "fontshare",
+"slug": "neco",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/neco",
+"designer": "Jitka Janečková",
+"category": [
+"Serif"
+],
+"font_tags": [
+"Reading",
+"Menus",
+"Magazines",
+"Books"
+],
+"date_added": "2021-03-12",
+"weights": [
+400,
+500,
+700,
+900
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Pencerio",
+"source": "fontshare",
+"slug": "pencerio",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/pencerio",
+"designer": "Manushi Parikh",
+"category": [
+"Script"
+],
+"font_tags": [
+"Wedding",
+"Titles",
+"Signboards",
+"Packaging",
+"Fashion",
+"Calligraphy"
+],
+"date_added": "2021-03-12",
+"weights": [
+50
+],
+"italic": false,
+"variable": false
+},
+{
+"name": "Panchang",
+"source": "fontshare",
+"slug": "panchang",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/panchang",
+"designer": "Barbara Bigosinska, Hitesh Malaviya",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Editorial",
+"Magazines",
+"Posters",
+"Books"
+],
+"date_added": "2021-03-12",
+"weights": [
+200,
+300,
+400,
+500,
+600,
+700,
+800
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Roundo",
+"source": "fontshare",
+"slug": "roundo",
+"license": "OFL-1.1",
+"license_url": "https://openfontlicense.org",
+"url": "https://www.fontshare.com/fonts/roundo",
+"designer": "Indian Type Foundry",
+"category": [
+"Sans"
+],
+"font_tags": [
+"App",
+"Websites",
+"Headline",
+"Editorial"
+],
+"date_added": "2022-05-21",
+"weights": [
+200,
+300,
+400,
+500,
+600,
+700
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Hoover",
+"source": "fontshare",
+"slug": "hoover",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/hoover",
+"designer": "Gaetan Baehr",
+"category": [
+"Slab"
+],
+"font_tags": [
+"Logo",
+"Magazines",
+"Poster",
+"Banners",
+"Editorial",
+"Logotype"
+],
+"date_added": "2021-03-12",
+"weights": [
+100,
+300,
+400,
+500,
+700
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Nippo",
+"source": "fontshare",
+"slug": "nippo",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/nippo",
+"designer": "Manushi Parikh",
+"category": [
+"Display"
+],
+"font_tags": [
+"Jerseys",
+"Magazines",
+"Sports",
+"Posters",
+"Websites",
+"Banners"
+],
+"date_added": "2021-03-12",
+"weights": [
+200,
+300,
+400,
+500,
+700
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Pally",
+"source": "fontshare",
+"slug": "pally",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/pally",
+"designer": "Indian Type Foundry",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Books",
+"Comics",
+"Editorial",
+"Funny",
+"Informal",
+"Kids",
+"Poster"
+],
+"date_added": "2021-03-12",
+"weights": [
+400,
+500,
+700
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Kola",
+"source": "fontshare",
+"slug": "kola",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/kola",
+"designer": "Jean-Baptiste Morizot",
+"category": [
+"Display"
+],
+"font_tags": [
+"Editorial",
+"Poster",
+"Books"
+],
+"date_added": "2021-03-12",
+"weights": [
+400
+],
+"italic": false,
+"variable": false
+},
+{
+"name": "Space Grotesk",
+"source": "fontshare",
+"slug": "space-grotesk",
+"license": "OFL-1.1",
+"license_url": "https://openfontlicense.org",
+"url": "https://www.fontshare.com/fonts/space-grotesk",
+"designer": "Florian Karsten",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Modern",
+"Corporate",
+"Banners",
+"Apps"
+],
+"date_added": "2022-05-23",
+"weights": [
+300,
+400,
+500,
+600,
+700
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Rosaline",
+"source": "fontshare",
+"slug": "rosaline",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/rosaline",
+"designer": "Jérémie Hornus",
+"category": [
+"Script"
+],
+"font_tags": [
+"Fashion",
+"Editorial"
+],
+"date_added": "2021-03-12",
+"weights": [
+400
+],
+"italic": false,
+"variable": false
+},
+{
+"name": "Telma",
+"source": "fontshare",
+"slug": "telma",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/telma",
+"designer": "Jitka Janečková",
+"category": [
+"Script"
+],
+"font_tags": [
+"Invitation",
+"Logos",
+"Poster",
+"Banners"
+],
+"date_added": "2021-03-12",
+"weights": [
+300,
+400,
+500,
+700,
+900
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Zina",
+"source": "fontshare",
+"slug": "zina",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/zina",
+"designer": "Théo Guillard",
+"category": [
+"Display"
+],
+"font_tags": [
+"Bold",
+"Readable",
+"Display",
+"Grunge",
+"Posters"
+],
+"date_added": "2021-03-12",
+"weights": [
+400
+],
+"italic": false,
+"variable": false
+},
+{
+"name": "Quilon",
+"source": "fontshare",
+"slug": "quilon",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/quilon",
+"designer": "Jonny Pinhorn",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Websites",
+"Banners",
+"Magazines",
+"Posters"
+],
+"date_added": "2021-03-12",
+"weights": [
+400,
+500,
+600,
+700
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Rajdhani",
+"source": "fontshare",
+"slug": "rajdhani",
+"license": "OFL-1.1",
+"license_url": "https://openfontlicense.org",
+"url": "https://www.fontshare.com/fonts/rajdhani",
+"designer": "Shiva Nallaperumal, Indian Type Foundry",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Headlines",
+"Tech",
+"Websites",
+"Branding",
+"Broadcast"
+],
+"date_added": "2022-05-21",
+"weights": [
+300,
+400,
+500,
+600,
+700
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Plein",
+"source": "fontshare",
+"slug": "plein",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/plein",
+"designer": "Inga Plönnigs",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Poster",
+"Books",
+"Magazines",
+"Newspapers"
+],
+"date_added": "2021-03-12",
+"weights": [
+300,
+400,
+500,
+700,
+900
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "RX100",
+"source": "fontshare",
+"slug": "rx-100",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/rx-100",
+"designer": "Anurag Gautam, Indian Type Foundry",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Signage",
+"Monospaced",
+"Editorial",
+"Programming"
+],
+"date_added": "2021-03-12",
+"weights": [
+400
+],
+"italic": false,
+"variable": false
+},
+{
+"name": "Khand",
+"source": "fontshare",
+"slug": "khand",
+"license": "OFL-1.1",
+"license_url": "https://openfontlicense.org",
+"url": "https://www.fontshare.com/fonts/khand",
+"designer": "Satya Rajpurohit",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Banners",
+"Broadcast",
+"Display",
+"Logotype"
+],
+"date_added": "2022-05-21",
+"weights": [
+300,
+400,
+500,
+600,
+700
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Ranade",
+"source": "fontshare",
+"slug": "ranade",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/ranade",
+"designer": "Easha Ranade, Indian Type Foundry",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Magazines",
+"Books",
+"Editorial",
+"Posters"
+],
+"date_added": "2021-03-12",
+"weights": [
+100,
+300,
+400,
+500,
+700
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Sharpie",
+"source": "fontshare",
+"slug": "sharpie",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/sharpie",
+"designer": "Théo Guillard",
+"category": [
+"Display"
+],
+"font_tags": [
+"Posters",
+"Magazines",
+"Lettering",
+"Calligraphy",
+"Pen"
+],
+"date_added": "2021-03-12",
+"weights": [
+300,
+400,
+700,
+800,
+900
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Segment",
+"source": "fontshare",
+"slug": "segment",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/segment",
+"designer": "Frode Helland",
+"category": [
+"Display"
+],
+"font_tags": [
+"Posters",
+"Magazines",
+"Branding",
+"Packaging"
+],
+"date_added": "2021-03-12",
+"weights": [
+400
+],
+"italic": false,
+"variable": false
+},
+{
+"name": "Styro",
+"source": "fontshare",
+"slug": "styro",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/styro",
+"designer": "Aarya Purohit, Indian Type Foundry",
+"category": [
+"Display"
+],
+"font_tags": [
+"Posters",
+"Headlines",
+"Logos"
+],
+"date_added": "2021-03-12",
+"weights": [
+200,
+300,
+400,
+500,
+600,
+700,
+800,
+900
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Stardom",
+"source": "fontshare",
+"slug": "stardom",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/stardom",
+"designer": "Indian Type Foundry",
+"category": [
+"Display"
+],
+"font_tags": [
+"Branding",
+"Fun",
+"Poster",
+"Experimental",
+"Logos"
+],
+"date_added": "2021-03-12",
+"weights": [
+400
+],
+"italic": false,
+"variable": false
+},
+{
+"name": "Trench Slab",
+"source": "fontshare",
+"slug": "trench-slab",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/trench-slab",
+"designer": "Shiva Nallaperumal",
+"category": [
+"Slab"
+],
+"font_tags": [
+"Magazines",
+"Logos",
+"Headlines",
+"Publishing",
+"Books",
+"Posters"
+],
+"date_added": "2021-03-12",
+"weights": [
+300,
+400,
+500,
+600,
+700
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Pramukh Rounded",
+"source": "fontshare",
+"slug": "pramukh-rounded",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/pramukh-rounded",
+"designer": "Aarya Purohit, Indian Type Foundry",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Headlines",
+"Books",
+"Editorial",
+"Text",
+"Posters"
+],
+"date_added": "2021-03-12",
+"weights": [
+200,
+300,
+350,
+400,
+600,
+700,
+800,
+900
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Supreme",
+"source": "fontshare",
+"slug": "supreme",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/supreme",
+"designer": "Jérémie Hornus, Ilya Naumoff",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Poster",
+"Magazines",
+"Books",
+"Logo",
+"Websites",
+"Screen"
+],
+"date_added": "2021-03-12",
+"weights": [
+100,
+200,
+300,
+400,
+500,
+700,
+800
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Recia",
+"source": "fontshare",
+"slug": "recia",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/recia",
+"designer": "Carlos de Toro",
+"category": [
+"Serif"
+],
+"font_tags": [
+"Code",
+"Posters",
+"Websites",
+"Magazines"
+],
+"date_added": "2021-03-12",
+"weights": [
+300,
+400,
+500,
+600,
+700
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Paquito",
+"source": "fontshare",
+"slug": "paquito",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/paquito",
+"designer": "Juanjo Lopez",
+"category": [
+"Serif",
+"Slab"
+],
+"font_tags": [
+"Funny",
+"Books",
+"Comics",
+"Informal",
+"Kids",
+"Poster"
+],
+"date_added": "2021-03-12",
+"weights": [
+400,
+500,
+700
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Zodiak",
+"source": "fontshare",
+"slug": "zodiak",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/zodiak",
+"designer": "Jérémie Hornus, Gaetan Baehr, Jean-Baptiste Morizot, Alisa Nowak, Theo Guillard",
+"category": [
+"Serif"
+],
+"font_tags": [
+"Editorial",
+"Magazines",
+"Books"
+],
+"date_added": "2021-03-12",
+"weights": [
+100,
+300,
+400,
+700,
+800,
+900
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Satoshi",
+"source": "fontshare",
+"slug": "satoshi",
+"license": "ITF-FFL-2.0",
+"license_url": "https://www.fontshare.com/licenses/itf-ffl",
+"url": "https://www.fontshare.com/fonts/satoshi",
+"designer": "Deni Anggara",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Logos",
+"Magazines",
+"Branding"
+],
+"date_added": "2021-03-12",
+"weights": [
+300,
+400,
+500,
+700,
+900
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Red Hat Display",
+"source": "fontshare",
+"slug": "red-hat-display",
+"license": "OFL-1.1",
+"license_url": "https://openfontlicense.org",
+"url": "https://www.fontshare.com/fonts/red-hat-display",
+"designer": "MCKL, Jeremy Mickel",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Magazines",
+"Banners",
+"Corporate",
+"Websites"
+],
+"date_added": "2022-05-23",
+"weights": [
+300,
+400,
+500,
+600,
+700,
+800,
+900
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Sora",
+"source": "fontshare",
+"slug": "sora",
+"license": "OFL-1.1",
+"license_url": "https://openfontlicense.org",
+"url": "https://www.fontshare.com/fonts/sora",
+"designer": "Jonathan Barnbrook, Julián Moncada",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Legible",
+"Logotype",
+"Websites",
+"Products"
+],
+"date_added": "2022-05-23",
+"weights": [
+100,
+200,
+300,
+400,
+500,
+600,
+700,
+800
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Literata",
+"source": "fontshare",
+"slug": "literata",
+"license": "OFL-1.1",
+"license_url": "https://openfontlicense.org",
+"url": "https://www.fontshare.com/fonts/literata",
+"designer": "TypeTogether",
+"category": [
+"Serif"
+],
+"font_tags": [
+"Legible",
+"Clean",
+"Books"
+],
+"date_added": "2022-05-23",
+"weights": [
+200,
+300,
+400,
+500,
+600,
+700,
+800,
+900
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Merriweather Sans",
+"source": "fontshare",
+"slug": "merriweather-sans",
+"license": "OFL-1.1",
+"license_url": "https://openfontlicense.org",
+"url": "https://www.fontshare.com/fonts/merriweather-sans",
+"designer": "Eben Sorkin, Sorkin Type",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Branding",
+"Legible",
+"Readable"
+],
+"date_added": "2022-05-23",
+"weights": [
+300,
+400,
+500,
+600,
+700,
+800
+],
+"italic": true,
+"variable": true
+},
+{
+"name": "Quicksand",
+"source": "fontshare",
+"slug": "quicksand",
+"license": "OFL-1.1",
+"license_url": "https://openfontlicense.org",
+"url": "https://www.fontshare.com/fonts/quicksand",
+"designer": "Andrew Paglinawan",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Headlines",
+"Branding",
+"Fashion",
+"Poster"
+],
+"date_added": "2022-05-23",
+"weights": [
+300,
+400,
+500,
+600,
+700
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Teko",
+"source": "fontshare",
+"slug": "teko",
+"license": "OFL-1.1",
+"license_url": "https://openfontlicense.org",
+"url": "https://www.fontshare.com/fonts/teko",
+"designer": "Manushi Parikh",
+"category": [
+"Sans"
+],
+"font_tags": [
+"Banners",
+"Headlines",
+"Credits"
+],
+"date_added": "2022-05-21",
+"weights": [
+300,
+400,
+500,
+600,
+700
+],
+"italic": false,
+"variable": true
+},
+{
+"name": "Karma",
+"source": "fontshare",
+"slug": "karma",
+"license": "OFL-1.1",
+"license_url": "https://openfontlicense.org",
+"url": "https://www.fontshare.com/fonts/karma",
+"designer": "Joana Correia",
+"category": [
+"Serif"
+],
+"font_tags": [
+"Banners",
+"Editorial"
+],
+"date_added": "2022-05-21",
+"weights": [
+300,
+400,
+500,
+600,
+700
+],
+"italic": false,
+"variable": true
+}
+]
+}

@@ -1,0 +1,312 @@
+[
+ {
+  "name": "Google Fonts",
+  "url": "https://fonts.google.com",
+  "verdict": "selamat",
+  "styles": "Semua gaya: berus, tulisan tangan, script, blackletter, slab kayu, retro",
+  "license": "OFL / Apache / UFL",
+  "catch": "Paling selamat. Fail fon boleh dikongsi bersama lesennya.",
+  "evidence_url": "https://github.com/google/fonts/blob/main/ofl/abeezee/OFL.txt",
+  "evidence": "rasmi"
+ },
+ {
+  "name": "Fontshare (Indian Type Foundry)",
+  "url": "https://www.fontshare.com",
+  "verdict": "selamat",
+  "styles": "Display moden, serif, beberapa script (Telma, Britney)",
+  "license": "ITF FFL v2",
+  "catch": "Jangan beri fail fon kepada orang lain, termasuk kedai cetak.",
+  "evidence_url": "https://www.fontshare.com/licenses/itf-ffl",
+  "evidence": "rasmi"
+ },
+ {
+  "name": "The League of Moveable Type",
+  "url": "https://www.theleagueofmoveabletype.com",
+  "verdict": "selamat",
+  "styles": "Condensed retro (League Gothic, Ostrich), League Script, Blackout",
+  "license": "OFL",
+  "catch": "Semua fon OFL (dinyatakan di laman).",
+  "evidence_url": "https://www.theleagueofmoveabletype.com/faq",
+  "evidence": "rasmi"
+ },
+ {
+  "name": "Velvetyne (GitLab)",
+  "url": "https://gitlab.com/velvetyne",
+  "verdict": "selamat",
+  "styles": "Display eksperimen, brutal, retro",
+  "license": "Kebanyakan OFL",
+  "catch": "Laman utama sedang mogok; ambil dari repo GitLab dan semak LICENSE setiap fon.",
+  "evidence_url": "https://gitlab.com/velvetyne/ouroboros/-/blob/master/LICENSE.txt",
+  "evidence": "rasmi"
+ },
+ {
+  "name": "Indestructible Type",
+  "url": "https://indestructibletype.com",
+  "verdict": "selamat",
+  "styles": "Serif (Besley), mono (Drafting)",
+  "license": "OFL",
+  "catch": "Tiada.",
+  "evidence_url": "https://github.com/indestructible-type/Drafting/blob/main/OFL.txt",
+  "evidence": "rasmi"
+ },
+ {
+  "name": "Departure Mono",
+  "url": "https://departuremono.com",
+  "verdict": "selamat",
+  "styles": "Piksel / retro komputer",
+  "license": "OFL",
+  "catch": "Tiada.",
+  "evidence_url": "https://github.com/rektdeckard/departure-mono",
+  "evidence": "rasmi"
+ },
+ {
+  "name": "Font Squirrel",
+  "url": "https://www.fontsquirrel.com",
+  "verdict": "semak",
+  "styles": "Hampir semua gaya; senarai berus, grunge, tulisan tangan",
+  "license": "Campur, ikut fon",
+  "catch": "Ada fon tanpa lesen ('found on the internet') dan fon untuk kegunaan peribadi sahaja (HVD Peace). Baca lesen setiap fon.",
+  "evidence_url": "https://www.fontsquirrel.com/faq",
+  "evidence": "rasmi"
+ },
+ {
+  "name": "Fontfabric (fon percuma)",
+  "url": "https://www.fontfabric.com",
+  "verdict": "semak",
+  "styles": "Display, script (Nickainley), bertekstur (Intro Rust)",
+  "license": "Fontfabric Free Font EULA 2.0",
+  "catch": "Boleh untuk cetakan dan baju; tidak boleh ubah atau jual fail fon. Ada fon 'trial' yang bukan komersial.",
+  "evidence_url": "https://www.fontsquirrel.com/license/nickainley",
+  "evidence": "pihak_ketiga"
+ },
+ {
+  "name": "Typodermic (Raymond Larabie)",
+  "url": "https://typodermicfonts.com",
+  "verdict": "semak",
+  "styles": "Retro, sci-fi, seram, berus (Chinese Rocks), spray (Octin Spraypaint)",
+  "license": "Desktop EULA (Fontspring 1.7)",
+  "catch": "Desktop sahaja. Dilarang produk huruf tunggal untuk dijual (pelekat abjad); poster ayat dibenarkan.",
+  "evidence_url": "https://www.fontsquirrel.com/license/chinese-rocks",
+  "evidence": "pihak_ketiga"
+ },
+ {
+  "name": "Collletttivo",
+  "url": "https://www.collletttivo.it",
+  "verdict": "semak",
+  "styles": "Display eksperimen Itali",
+  "license": "OFL",
+  "catch": "Pembuat minta kredit (OFL tidak wajibkan).",
+  "evidence_url": "https://www.collletttivo.it/licensing",
+  "evidence": "lemah"
+ },
+ {
+  "name": "Open Foundry",
+  "url": "https://open-foundry.com",
+  "verdict": "semak",
+  "styles": "Galeri fon sumber terbuka",
+  "license": "Direktori; ikut sumber",
+  "catch": "Bukan hos fon; semak lesen di sumber.",
+  "evidence_url": "https://open-foundry.com",
+  "evidence": "lemah"
+ },
+ {
+  "name": "Uncut.wtf",
+  "url": "https://uncut.wtf",
+  "verdict": "semak",
+  "styles": "Display kontemporari, grotesk",
+  "license": "Direktori; kebanyakan libre",
+  "catch": "Sesetengah fon tiada lesen jelas.",
+  "evidence_url": "https://uncut.wtf",
+  "evidence": "lemah"
+ },
+ {
+  "name": "Badass Libre Fonts by Womxn",
+  "url": "https://design-research.be/by-womxn/",
+  "verdict": "semak",
+  "styles": "Display, eksperimen",
+  "license": "Direktori FLOSS",
+  "catch": "Lesen berbeza setiap fon.",
+  "evidence_url": "https://design-research.be/by-womxn/",
+  "evidence": "lemah"
+ },
+ {
+  "name": "Fontesk",
+  "url": "https://fontesk.com",
+  "verdict": "semak",
+  "styles": "Berus, script, retro, display",
+  "license": "Campur",
+  "catch": "Banyak fon 'personal use' bercampur; guna bahagian komersial dan baca lesen fon.",
+  "evidence_url": "https://fontesk.com",
+  "evidence": "lemah"
+ },
+ {
+  "name": "FreeFaces.gallery",
+  "url": "https://www.freefaces.gallery",
+  "verdict": "semak",
+  "styles": "Display editorial",
+  "license": "Direktori campur",
+  "catch": "Ada fon 'Personal Use License'.",
+  "evidence_url": "https://www.freefaces.gallery",
+  "evidence": "lemah"
+ },
+ {
+  "name": "Use & Modify",
+  "url": "https://usemodify.com",
+  "verdict": "semak",
+  "styles": "Display/serif libre eksperimen",
+  "license": "Direktori libre (kebanyakan OFL)",
+  "catch": "Semak lesen setiap fon.",
+  "evidence_url": "https://usemodify.com",
+  "evidence": "lemah"
+ },
+ {
+  "name": "Font Library",
+  "url": "https://fontlibrary.org",
+  "verdict": "semak",
+  "styles": "Tulisan tangan, blackletter, pelbagai",
+  "license": "Libre (OFL, GPL+FE, MIT, domain awam)",
+  "catch": "Dakwaan 'domain awam' kadang-kadang meragukan.",
+  "evidence_url": "https://fontlibrary.org/guidebook/supported_licenses",
+  "evidence": "lemah"
+ },
+ {
+  "name": "Production Type (fon percuma)",
+  "url": "https://www.productiontype.com",
+  "verdict": "semak",
+  "styles": "Serif (Spectral)",
+  "license": "OFL (Spectral)",
+  "catch": "Kebanyakan fon mereka berbayar.",
+  "evidence_url": "https://www.fontsquirrel.com/license/spectral",
+  "evidence": "lemah"
+ },
+ {
+  "name": "Tunera Type Foundry",
+  "url": "https://www.tunera.xyz",
+  "verdict": "semak",
+  "styles": "Display/serif libre",
+  "license": "OFL (pihak ketiga)",
+  "catch": "Sahkan fail OFL dalam setiap muat turun.",
+  "evidence_url": "https://www.tunera.xyz",
+  "evidence": "lemah"
+ },
+ {
+  "name": "1001 Fonts (FFC sahaja)",
+  "url": "https://www.1001fonts.com",
+  "verdict": "semak",
+  "styles": "Katalog besar",
+  "license": "FFC untuk komersial; FFP peribadi",
+  "catch": "Kebanyakan katalog peribadi. Guna tapisan 'free for commercial use'.",
+  "evidence_url": "https://www.1001fonts.com/licenses/ffc.html",
+  "evidence": "lemah"
+ },
+ {
+  "name": "FontSpace (komersial)",
+  "url": "https://www.fontspace.com/commercial-fonts",
+  "verdict": "semak",
+  "styles": "Berus, script, kanak-kanak, seram",
+  "license": "Ikut pereka",
+  "catch": "Laman merujuk kepada pereka; baca lesen setiap fon.",
+  "evidence_url": "https://www.fontspace.com/about/terms",
+  "evidence": "lemah"
+ },
+ {
+  "name": "Creative Market (barang percuma)",
+  "url": "https://creativemarket.com/free-goods",
+  "verdict": "semak",
+  "styles": "Berus, script (percuma setiap minggu)",
+  "license": "Desktop License",
+  "catch": "Simpan resit muat turun; barang percuma tamat setiap minggu.",
+  "evidence_url": "https://support.creativemarket.com/hc/en-us/articles/115006136967",
+  "evidence": "lemah"
+ },
+ {
+  "name": "Lost Type Co-op",
+  "url": "https://losttype.com",
+  "verdict": "elak",
+  "styles": "Retro / vintage display",
+  "license": "Bayar ikut suka = peribadi sahaja",
+  "catch": "Pada $0 hanya untuk kegunaan peribadi; lesen komersial berbayar.",
+  "evidence_url": "https://losttype.com/contact",
+  "evidence": "lemah"
+ },
+ {
+  "name": "DaFont",
+  "url": "https://www.dafont.com",
+  "verdict": "elak",
+  "styles": "Semua gaya novelty",
+  "license": "Kebanyakan 'free for personal use'",
+  "catch": "Kebanyakan bukan untuk jualan. '100% Free' perlu semak readme.",
+  "evidence_url": "https://www.dafont.com/faq.php",
+  "evidence": "lemah"
+ },
+ {
+  "name": "Befonts",
+  "url": "https://befonts.com",
+  "verdict": "elak",
+  "styles": "Berus, script, vintage",
+  "license": "Campur",
+  "catch": "Banyak fon demo peribadi; laman tidak jamin lesen komersial.",
+  "evidence_url": "https://befonts.com/terms-of-use",
+  "evidence": "lemah"
+ },
+ {
+  "name": "Behance (freebies)",
+  "url": "https://www.behance.net",
+  "verdict": "elak",
+  "styles": "Berus, script trendy",
+  "license": "Ikut pereka",
+  "catch": "Kebanyakan demo / peribadi; guna hanya jika zip ada lesen komersial jelas.",
+  "evidence_url": "https://help.behance.net/hc/en-us/articles/7416981176603",
+  "evidence": "lemah"
+ },
+ {
+  "name": "Creative Fabrica (freebies)",
+  "url": "https://www.creativefabrica.com",
+  "verdict": "elak",
+  "styles": "Berus, script, fon POD",
+  "license": "Langganan; syarat freebie tidak jelas",
+  "catch": "Rekaan baharu perlu langganan aktif; syarat fon percuma tidak ditemui.",
+  "evidence_url": "https://www.creativefabrica.com/subscription-license/",
+  "evidence": "lemah"
+ },
+ {
+  "name": "Envato (fail percuma)",
+  "url": "https://elements.envato.com",
+  "verdict": "elak",
+  "styles": "Berus, script",
+  "license": "Free Files Use Policy",
+  "catch": "Hak komersial fail percuma tidak jelas.",
+  "evidence_url": "https://help.elements.envato.com/hc/en-us/articles/31035932718489-Free-Files-Use-Policy",
+  "evidence": "lemah"
+ },
+ {
+  "name": "Atipo Foundry",
+  "url": "https://www.atipofoundry.com",
+  "verdict": "elak",
+  "styles": "Display, geometri",
+  "license": "Bayar ikut suka / tweet",
+  "catch": "Tiada sumber yang nyatakan hak komersial berat percuma.",
+  "evidence_url": "https://www.atipofoundry.com",
+  "evidence": "lemah"
+ },
+ {
+  "name": "Pixel Surplus (freebies)",
+  "url": "https://www.pixelsurplus.com",
+  "verdict": "elak",
+  "styles": "Retro, bertekstur",
+  "license": "Tidak diketahui",
+  "catch": "Lesen tidak ditemui.",
+  "evidence_url": "https://www.pixelsurplus.com",
+  "evidence": "lemah"
+ },
+ {
+  "name": "Fonts Arena / Fontget / Republi.sh",
+  "url": "https://fontsarena.com",
+  "verdict": "elak",
+  "styles": "Campur",
+  "license": "Tidak diketahui",
+  "catch": "Lesen tidak ditemui; jangan guna sehingga disemak.",
+  "evidence_url": "https://fontsarena.com",
+  "evidence": "lemah"
+ }
+]

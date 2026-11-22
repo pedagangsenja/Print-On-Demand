@@ -1,0 +1,6028 @@
+{
+"meta": {
+"source": "https://www.fontsquirrel.com/api/fontlist/all",
+"fetched": "2026-11-22",
+"evidence": "rasmi (fail lesen dalam zip)",
+"note": "Hanya kelas bukan sans/serif biasa dan bukan pendua Google Fonts. Lesen dikelaskan automatik dari teks fail lesen; 'semak' = baca sendiri sebelum guna."
+},
+"fonts": [
+{
+"name": "1942 report",
+"source": "fontsquirrel",
+"slug": "1942-report",
+"url": "https://www.fontsquirrel.com/fonts/1942-report",
+"license_url": "https://www.fontsquirrel.com/license/1942-report",
+"designer": "Johan Holmdahl",
+"category": [
+"Typewriter"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Freeware License.txt",
+"license_snippet": "download from either the original source or from multiple free-font sites then we assume it to be safe to use the font commercially."
+},
+{
+"name": "20db",
+"source": "fontsquirrel",
+"slug": "20-db",
+"url": "https://www.fontsquirrel.com/fonts/20-db",
+"license_url": "https://www.fontsquirrel.com/license/20-db",
+"designer": "Jovanny Lemonad",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Jovanny Lemonad Freeware License.txt",
+"license_snippet": "Their website states: \"The project of freeware fonts is created by designers who have drawn, and after have allowed to extend the fonts free of charge."
+},
+{
+"name": "3Dumb",
+"source": "fontsquirrel",
+"slug": "3dumb",
+"url": "https://www.fontsquirrel.com/fonts/3dumb",
+"license_url": "https://www.fontsquirrel.com/license/3dumb",
+"designer": "Tension Type",
+"category": [
+"Novelty"
+],
+"styles_count": 2,
+"font_files": 2,
+"license": "Lesen sendiri (komersial dibenarkan)",
+"risk": "semak",
+"license_file": "Tension Type Font License.txt",
+"license_snippet": "ype Free Font you agree to this licence: This Tension Type Free Font is free to use in any and all of your personal and commercial work."
+},
+{
+"name": "Acknowledgement",
+"source": "fontsquirrel",
+"slug": "Acknowledgement",
+"url": "https://www.fontsquirrel.com/fonts/Acknowledgement",
+"license_url": "https://www.fontsquirrel.com/license/Acknowledgement",
+"designer": "Reading Type",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "OFL-1.1",
+"risk": "selamat",
+"license_file": "SIL Open Font License.txt",
+"license_snippet": "This Font Software is licensed under the SIL Open Font License, Version 1."
+},
+{
+"name": "Action Man",
+"source": "fontsquirrel",
+"slug": "Action-Man",
+"url": "https://www.fontsquirrel.com/fonts/Action-Man",
+"license_url": "https://www.fontsquirrel.com/license/Action-Man",
+"designer": "Iconian Fonts",
+"category": [
+"Comic"
+],
+"styles_count": 10,
+"font_files": 10,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Iconian Fonts License.txt",
+"license_snippet": "By downloading this font package you agree to the following terms of use: - This FONT PACKAGE is FREEWARE and may be distributed ONLY via the Internet for FREE."
+},
+{
+"name": "After Shok",
+"source": "fontsquirrel",
+"slug": "After-Shok",
+"url": "https://www.fontsquirrel.com/fonts/After-Shok",
+"license_url": "https://www.fontsquirrel.com/license/After-Shok",
+"designer": "eightface",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "eightface License.txt",
+"license_snippet": "If you want to use any of these faces for commercial work, that's cool."
+},
+{
+"name": "Air America",
+"source": "fontsquirrel",
+"slug": "air-america",
+"url": "https://www.fontsquirrel.com/fonts/air-america",
+"license_url": "https://www.fontsquirrel.com/license/air-america",
+"designer": "SAJA TYPEWORKS",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "OFL-1.1",
+"risk": "selamat",
+"license_file": "SIL Open Font License.txt",
+"license_snippet": "org) This Font Software is licensed under the SIL Open Font License, Version 1."
+},
+{
+"name": "Airstream",
+"source": "fontsquirrel",
+"slug": "Airstream",
+"url": "https://www.fontsquirrel.com/fonts/Airstream",
+"license_url": "https://www.fontsquirrel.com/license/Airstream",
+"designer": "Nick's Fonts",
+"category": [
+"Retro"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Nick's Fonts License.txt",
+"license_snippet": "YOU MAY: -Send a copy of any Nick's Fonts font data along with your documents to a commercial printer or other service bureau to enable the editing or printing of your document."
+},
+{
+"name": "Alfa Slab",
+"source": "fontsquirrel",
+"slug": "alfa-slab",
+"url": "https://www.fontsquirrel.com/fonts/alfa-slab",
+"license_url": "https://www.fontsquirrel.com/license/alfa-slab",
+"designer": "JM Solé",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "OFL-1.1",
+"risk": "selamat",
+"license_file": "SIL Open Font License.txt",
+"license_snippet": "cl), with Reserved Font Name \"Alfa Slab One\" This Font Software is licensed under the SIL Open Font License, Version 1."
+},
+{
+"name": "Alpha Echo",
+"source": "fontsquirrel",
+"slug": "Alpha-Echo",
+"url": "https://www.fontsquirrel.com/fonts/Alpha-Echo",
+"license_url": "https://www.fontsquirrel.com/license/Alpha-Echo",
+"designer": "Vic Fieger",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Vic Fieger License.txt",
+"license_snippet": "The Vic Fieger fonts are freeware, to be downloaded and used by anyone who wants them for free."
+},
+{
+"name": "Amadeus",
+"source": "fontsquirrel",
+"slug": "Amadeus",
+"url": "https://www.fontsquirrel.com/fonts/Amadeus",
+"license_url": "https://www.fontsquirrel.com/license/Amadeus",
+"designer": "Bright Ideas",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Freeware License.txt",
+"license_snippet": "download from either the original source or from multiple free-font sites then we assume it to be safe to use the font commercially."
+},
+{
+"name": "Amatic",
+"source": "fontsquirrel",
+"slug": "amatic",
+"url": "https://www.fontsquirrel.com/fonts/amatic",
+"license_url": "https://www.fontsquirrel.com/license/amatic",
+"designer": "Vernon Adams",
+"category": [
+"Handdrawn"
+],
+"styles_count": 2,
+"font_files": 2,
+"license": "OFL-1.1",
+"risk": "selamat",
+"license_file": "SIL Open Font License.txt",
+"license_snippet": "uk), with Reserved Font Names \"Amatic\" \"Amatic Bold\" and \"Amatic Regular\" This Font Software is licensed under the SIL Open Font License, Version 1."
+},
+{
+"name": "Amerika",
+"source": "fontsquirrel",
+"slug": "Amerika",
+"url": "https://www.fontsquirrel.com/fonts/Amerika",
+"license_url": "https://www.fontsquirrel.com/license/Amerika",
+"designer": "Apostrophic Labs",
+"category": [
+"Display"
+],
+"styles_count": 3,
+"font_files": 3,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Apostrophic Labs License.txt",
+"license_snippet": "Here is the \"Read Me\" from the original http://www.apostrophiclab.com website: Archived here: http://web.archive.org/web/20030408055445/www.hardcovermedia.com/lab/Pages/info.html and here: http://apos"
+},
+{
+"name": "Anagram",
+"source": "fontsquirrel",
+"slug": "Anagram",
+"url": "https://www.fontsquirrel.com/fonts/Anagram",
+"license_url": "https://www.fontsquirrel.com/license/Anagram",
+"designer": "Nick's Fonts",
+"category": [
+"Retro"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Nick's Fonts License.txt",
+"license_snippet": "YOU MAY: -Send a copy of any Nick's Fonts font data along with your documents to a commercial printer or other service bureau to enable the editing or printing of your document."
+},
+{
+"name": "AnuDaw",
+"source": "fontsquirrel",
+"slug": "AnuDaw",
+"url": "https://www.fontsquirrel.com/fonts/AnuDaw",
+"license_url": "https://www.fontsquirrel.com/license/AnuDaw",
+"designer": "Nyek! Pinoy Komik Fonts",
+"category": [
+"Display"
+],
+"styles_count": 2,
+"font_files": 2,
+"license": "Lesen sendiri (had komersial)",
+"risk": "berisiko",
+"license_file": "Nyek! License.txt",
+"license_snippet": "These fonts are for free and can be use for commercial and non-commercial purposes."
+},
+{
+"name": "Aquiline Two",
+"source": "fontsquirrel",
+"slug": "Aquiline-two",
+"url": "https://www.fontsquirrel.com/fonts/Aquiline-two",
+"license_url": "https://www.fontsquirrel.com/license/Aquiline-two",
+"designer": "Manfred Klein Fonteria",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (komersial dibenarkan)",
+"risk": "semak",
+"license_file": "Manfred Klein License.txt",
+"license_snippet": "They are even free for commercial use – but if there’s any profit, pls make a donation to organizations like Doctors Without Borders."
+},
+{
+"name": "Arch Rival",
+"source": "fontsquirrel",
+"slug": "SF-Arch-Rival",
+"url": "https://www.fontsquirrel.com/fonts/SF-Arch-Rival",
+"license_url": "https://www.fontsquirrel.com/license/SF-Arch-Rival",
+"designer": "ShyFonts",
+"category": [
+"Comic"
+],
+"styles_count": 8,
+"font_files": 8,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "ShyFonts Font License.txt",
+"license_snippet": "By downloading this font package you agree to the following terms of use: - This FONT PACKAGE is freeware."
+},
+{
+"name": "Archery Black",
+"source": "fontsquirrel",
+"slug": "SF-Archery-Black",
+"url": "https://www.fontsquirrel.com/fonts/SF-Archery-Black",
+"license_url": "https://www.fontsquirrel.com/license/SF-Archery-Black",
+"designer": "ShyFonts",
+"category": [
+"Display"
+],
+"styles_count": 4,
+"font_files": 4,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "ShyFonts Font License.txt",
+"license_snippet": "By downloading this font package you agree to the following terms of use: - This FONT PACKAGE is freeware."
+},
+{
+"name": "Archistico",
+"source": "fontsquirrel",
+"slug": "archistico",
+"url": "https://www.fontsquirrel.com/fonts/archistico",
+"license_url": "https://www.fontsquirrel.com/license/archistico",
+"designer": "Archistico",
+"category": [
+"Display"
+],
+"styles_count": 2,
+"font_files": 2,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Archistico.txt",
+"license_snippet": "You can use the font for commercial purposes, but not sell it! Every once in a comment on the page would be nice."
+},
+{
+"name": "Armalite Rifle",
+"source": "fontsquirrel",
+"slug": "Armalite-Rifle",
+"url": "https://www.fontsquirrel.com/fonts/Armalite-Rifle",
+"license_url": "https://www.fontsquirrel.com/license/Armalite-Rifle",
+"designer": "Vic Fieger",
+"category": [
+"Stencil"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Vic Fieger License.txt",
+"license_snippet": "The Vic Fieger fonts are freeware, to be downloaded and used by anyone who wants them for free."
+},
+{
+"name": "ArmWrestler",
+"source": "fontsquirrel",
+"slug": "ArmWrestler",
+"url": "https://www.fontsquirrel.com/fonts/ArmWrestler",
+"license_url": "https://www.fontsquirrel.com/license/ArmWrestler",
+"designer": "AJ Paglia",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "AJ Paglia Font License.txt",
+"license_snippet": "This font does not come with a formal license. According to the author, AJ Paglia, the fonts are \"free as can be, enjoy, and thanks!\""
+},
+{
+"name": "Azoft Sans",
+"source": "fontsquirrel",
+"slug": "azoft-sans",
+"url": "https://www.fontsquirrel.com/fonts/azoft-sans",
+"license_url": "https://www.fontsquirrel.com/license/azoft-sans",
+"designer": "Azoft",
+"category": [
+"Display"
+],
+"styles_count": 4,
+"font_files": 4,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Azoft Font license.txt",
+"license_snippet": "No explicit license other than statement from author: \"Free (also for commercial use)\""
+},
+{
+"name": "Balgruf",
+"source": "fontsquirrel",
+"slug": "balgruf",
+"url": "https://www.fontsquirrel.com/fonts/balgruf",
+"license_url": "https://www.fontsquirrel.com/license/balgruf",
+"designer": "Paul Miller",
+"category": [
+"Blackletter"
+],
+"styles_count": 2,
+"font_files": 2,
+"license": "OFL-1.1",
+"risk": "selamat",
+"license_file": "SIL Open Font License.txt",
+"license_snippet": "This Font Software is licensed under the SIL Open Font License, Version 1."
+},
+{
+"name": "Baloo",
+"source": "fontsquirrel",
+"slug": "baloo",
+"url": "https://www.fontsquirrel.com/fonts/baloo",
+"license_url": "https://www.fontsquirrel.com/license/baloo",
+"designer": "EK Type",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "OFL-1.1",
+"risk": "selamat",
+"license_file": "SIL Open Font License.txt",
+"license_snippet": "in) This Font Software is licensed under the SIL Open Font License, Version 1."
+},
+{
+"name": "Banksia",
+"source": "fontsquirrel",
+"slug": "Banksia",
+"url": "https://www.fontsquirrel.com/fonts/Banksia",
+"license_url": "https://www.fontsquirrel.com/license/Banksia",
+"designer": "Daniel Midgley",
+"category": [
+"Display"
+],
+"styles_count": 3,
+"font_files": 3,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Daniel Midgley.txt",
+"license_snippet": "Thanks for downloading the Daniel font! It’s free for you to use for any purpose, commercial or not."
+},
+{
+"name": "Bearpaw",
+"source": "fontsquirrel",
+"slug": "Bearpaw",
+"url": "https://www.fontsquirrel.com/fonts/Bearpaw",
+"license_url": "https://www.fontsquirrel.com/license/Bearpaw",
+"designer": "Dennis Anderson",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (had komersial)",
+"risk": "berisiko",
+"license_file": "Bearpaw License.txt",
+"license_snippet": "these fonts were provided free for personal or commercial use, they can be redistributed however they may not be sold."
+},
+{
+"name": "Bebas",
+"source": "fontsquirrel",
+"slug": "bebas",
+"url": "https://www.fontsquirrel.com/fonts/bebas",
+"license_url": "https://www.fontsquirrel.com/license/bebas",
+"designer": "Flat-it",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (had komersial)",
+"risk": "berisiko",
+"license_file": "Flat-it License.txt",
+"license_snippet": "com/) This is a freeware typeface."
+},
+{
+"name": "Belligerent Madness",
+"source": "fontsquirrel",
+"slug": "Belligerent-Madness",
+"url": "https://www.fontsquirrel.com/fonts/Belligerent-Madness",
+"license_url": "https://www.fontsquirrel.com/license/Belligerent-Madness",
+"designer": "Font Monkey",
+"category": [
+"Handdrawn"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (had komersial)",
+"risk": "berisiko",
+"license_file": "Font Monkey License.txt",
+"license_snippet": "Like all the Fontmonkey fonts, it is free for for all commercial or non-commercial use."
+},
+{
+"name": "Bitstream Vera Serif",
+"source": "fontsquirrel",
+"slug": "Bitstream-Vera-Serif",
+"url": "https://www.fontsquirrel.com/fonts/Bitstream-Vera-Serif",
+"license_url": "https://www.fontsquirrel.com/license/Bitstream-Vera-Serif",
+"designer": "Bitstream",
+"category": [
+"Slab Serif"
+],
+"styles_count": 2,
+"font_files": 2,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Bitstream Vera License.txt",
+"license_snippet": "Bitstream Vera Fonts Copyright The fonts have a generous copyright, allowing derivative works (as long as \"Bitstream\" or \"Vera\" are not in the names), and full redistribution (so long as they are not "
+},
+{
+"name": "Black Jack",
+"source": "fontsquirrel",
+"slug": "blackjack",
+"url": "https://www.fontsquirrel.com/fonts/blackjack",
+"license_url": "https://www.fontsquirrel.com/license/blackjack",
+"designer": "Typadelic",
+"category": [
+"Script"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Public-domain",
+"risk": "selamat",
+"license_file": "Typadelic License - Black Jack.txt",
+"license_snippet": "If you use this font for a commercial project or design something really fantastic with it, drop me a line."
+},
+{
+"name": "Black Rose",
+"source": "fontsquirrel",
+"slug": "Black-Rose",
+"url": "https://www.fontsquirrel.com/fonts/Black-Rose",
+"license_url": "https://www.fontsquirrel.com/license/Black-Rose",
+"designer": "Bright Ideas",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Freeware License.txt",
+"license_snippet": "download from either the original source or from multiple free-font sites then we assume it to be safe to use the font commercially."
+},
+{
+"name": "Blackout",
+"source": "fontsquirrel",
+"slug": "Blackout",
+"url": "https://www.fontsquirrel.com/fonts/Blackout",
+"license_url": "https://www.fontsquirrel.com/license/Blackout",
+"designer": "The League of Moveable Type",
+"category": [
+"Display"
+],
+"styles_count": 2,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Blazium",
+"source": "fontsquirrel",
+"slug": "blazium",
+"url": "https://www.fontsquirrel.com/fonts/blazium",
+"license_url": "https://www.fontsquirrel.com/license/blazium",
+"designer": "Disaster Fonts",
+"category": [
+"Novelty"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Creative Commons Attribution-ShareAlike.txt",
+"license_snippet": "Attribution-ShareAlike 4.0 International ======================================================================= Creative Commons Corporation (&quot;Creative Commons&quot;) is not a law firm and does "
+},
+{
+"name": "Blokletters",
+"source": "fontsquirrel",
+"slug": "Blokletters-Potlood",
+"url": "https://www.fontsquirrel.com/fonts/Blokletters-Potlood",
+"license_url": "https://www.fontsquirrel.com/license/Blokletters-Potlood",
+"designer": "LeFly Fonts",
+"category": [
+"Handdrawn"
+],
+"styles_count": 3,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Bloody",
+"source": "fontsquirrel",
+"slug": "Bloody",
+"url": "https://www.fontsquirrel.com/fonts/Bloody",
+"license_url": "https://www.fontsquirrel.com/license/Bloody",
+"designer": "James Fordyce",
+"category": [
+"Novelty"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "James Fordyce Font License.txt",
+"license_snippet": "This font was created using Fontographer for Windows. It is copyright by J. Fordyce but may be freely distributed provided it is not altered, no fee is charged for it, and this text file is included w"
+},
+{
+"name": "Bodonitown",
+"source": "fontsquirrel",
+"slug": "Bodonitown",
+"url": "https://www.fontsquirrel.com/fonts/Bodonitown",
+"license_url": "https://www.fontsquirrel.com/license/Bodonitown",
+"designer": "Manfred Klein Fonteria",
+"category": [
+"Slab Serif"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (komersial dibenarkan)",
+"risk": "semak",
+"license_file": "Manfred Klein License.txt",
+"license_snippet": "They are even free for commercial use – but if there’s any profit, pls make a donation to organizations like Doctors Without Borders."
+},
+{
+"name": "Boisu",
+"source": "fontsquirrel",
+"slug": "boisu",
+"url": "https://www.fontsquirrel.com/fonts/boisu",
+"license_url": "https://www.fontsquirrel.com/license/boisu",
+"designer": " Yann Gall",
+"category": [
+"Display"
+],
+"styles_count": 3,
+"font_files": 3,
+"license": "Lesen sendiri (had komersial)",
+"risk": "berisiko",
+"license_file": "Yann Gall Free Font ΓÇô End-User License Agreement.txt",
+"license_snippet": "→ This font is freeware."
+},
+{
+"name": "Boston Traffic",
+"source": "fontsquirrel",
+"slug": "Boston-Traffic",
+"url": "https://www.fontsquirrel.com/fonts/Boston-Traffic",
+"license_url": "https://www.fontsquirrel.com/license/Boston-Traffic",
+"designer": "Vic Fieger",
+"category": [
+"Stencil"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Vic Fieger License.txt",
+"license_snippet": "The Vic Fieger fonts are freeware, to be downloaded and used by anyone who wants them for free."
+},
+{
+"name": "Boycott",
+"source": "fontsquirrel",
+"slug": "Boycott",
+"url": "https://www.fontsquirrel.com/fonts/Boycott",
+"license_url": "https://www.fontsquirrel.com/license/Boycott",
+"designer": "Flat-it",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (had komersial)",
+"risk": "berisiko",
+"license_file": "Flat-it License.txt",
+"license_snippet": "com/) This is a freeware typeface."
+},
+{
+"name": "BP Diet",
+"source": "fontsquirrel",
+"slug": "BP-Diet",
+"url": "https://www.fontsquirrel.com/fonts/BP-Diet",
+"license_url": "https://www.fontsquirrel.com/license/BP-Diet",
+"designer": "Backpacker",
+"category": [
+"Display"
+],
+"styles_count": 2,
+"font_files": 2,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Creative Commons Attribution-No Derivative Works.txt",
+"license_snippet": "Creative Commons Attribution-No Derivative Works 3.0 Unported (http://creativecommons.org/licenses/by-nd/3.0/) You are free: to Share — to copy, distribute and transmit the work Under the following co"
+},
+{
+"name": "BPdots",
+"source": "fontsquirrel",
+"slug": "BPdots",
+"url": "https://www.fontsquirrel.com/fonts/BPdots",
+"license_url": "https://www.fontsquirrel.com/license/BPdots",
+"designer": "Backpacker",
+"category": [
+"Display"
+],
+"styles_count": 15,
+"font_files": 15,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Creative Commons Attribution-No Derivative Works.txt",
+"license_snippet": "Creative Commons Attribution-No Derivative Works 3.0 Unported (http://creativecommons.org/licenses/by-nd/3.0/) You are free: to Share — to copy, distribute and transmit the work Under the following co"
+},
+{
+"name": "BPdotsCondensed",
+"source": "fontsquirrel",
+"slug": "BPdotsCondensed",
+"url": "https://www.fontsquirrel.com/fonts/BPdotsCondensed",
+"license_url": "https://www.fontsquirrel.com/license/BPdotsCondensed",
+"designer": "Backpacker",
+"category": [
+"Display"
+],
+"styles_count": 3,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "BPdotsUnicase",
+"source": "fontsquirrel",
+"slug": "BPdotsUnicase",
+"url": "https://www.fontsquirrel.com/fonts/BPdotsUnicase",
+"license_url": "https://www.fontsquirrel.com/license/BPdotsUnicase",
+"designer": "Backpacker",
+"category": [
+"Display"
+],
+"styles_count": 15,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "BPscript",
+"source": "fontsquirrel",
+"slug": "BPscript",
+"url": "https://www.fontsquirrel.com/fonts/BPscript",
+"license_url": "https://www.fontsquirrel.com/license/BPscript",
+"designer": "Backpacker",
+"category": [
+"Retro"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Creative Commons Attribution-No Derivative Works.txt",
+"license_snippet": "Creative Commons Attribution-No Derivative Works 3.0 Unported (http://creativecommons.org/licenses/by-nd/3.0/) You are free: to Share — to copy, distribute and transmit the work Under the following co"
+},
+{
+"name": "Brizel",
+"source": "fontsquirrel",
+"slug": "brizel",
+"url": "https://www.fontsquirrel.com/fonts/brizel",
+"license_url": "https://www.fontsquirrel.com/license/brizel",
+"designer": "Alessandro Morelli",
+"category": [
+"Handdrawn"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "OFL-1.1",
+"risk": "selamat",
+"license_file": "SIL Open Font License.txt",
+"license_snippet": "This Font Software is licensed under the SIL Open Font License, Version 1."
+},
+{
+"name": "Brushstroke Plain",
+"source": "fontsquirrel",
+"slug": "Brushstroke-Plain",
+"url": "https://www.fontsquirrel.com/fonts/Brushstroke-Plain",
+"license_url": "https://www.fontsquirrel.com/license/Brushstroke-Plain",
+"designer": "Kevin Willis",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Freeware License.txt",
+"license_snippet": "download from either the original source or from multiple free-font sites then we assume it to be safe to use the font commercially."
+},
+{
+"name": "Burlington Script",
+"source": "fontsquirrel",
+"slug": "SF-Burlington-Script",
+"url": "https://www.fontsquirrel.com/fonts/SF-Burlington-Script",
+"license_url": "https://www.fontsquirrel.com/license/SF-Burlington-Script",
+"designer": "ShyFonts",
+"category": [
+"Script"
+],
+"styles_count": 4,
+"font_files": 4,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "ShyFonts Font License.txt",
+"license_snippet": "By downloading this font package you agree to the following terms of use: - This FONT PACKAGE is freeware."
+},
+{
+"name": "CabinSketch",
+"source": "fontsquirrel",
+"slug": "cabinsketch",
+"url": "https://www.fontsquirrel.com/fonts/cabinsketch",
+"license_url": "https://www.fontsquirrel.com/license/cabinsketch",
+"designer": "Impallari Type",
+"category": [
+"Display"
+],
+"styles_count": 2,
+"font_files": 2,
+"license": "OFL-1.1",
+"risk": "selamat",
+"license_file": "SIL Open Font License.txt",
+"license_snippet": "This Font Software is licensed under the SIL Open Font License, Version 1."
+},
+{
+"name": "Calligraffiti",
+"source": "fontsquirrel",
+"slug": "calligraffiti",
+"url": "https://www.fontsquirrel.com/fonts/calligraffiti",
+"license_url": "https://www.fontsquirrel.com/license/calligraffiti",
+"designer": "Open Window",
+"category": [
+"Calligraphic"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Apache-2.0",
+"risk": "selamat",
+"license_file": "Apache License.txt",
+"license_snippet": "g but not limited to damages for loss of goodwill, work stoppage, computer failure or malfunction, or any and all other commercial damages or losses), even if such Contributor has been advised of the possibility of such damages."
+},
+{
+"name": "Capture it",
+"source": "fontsquirrel",
+"slug": "Capture-it",
+"url": "https://www.fontsquirrel.com/fonts/Capture-it",
+"license_url": "https://www.fontsquirrel.com/license/Capture-it",
+"designer": "Cpr.Sparhelt",
+"category": [
+"Stencil"
+],
+"styles_count": 2,
+"font_files": 2,
+"license": "Lesen sendiri (komersial dibenarkan)",
+"risk": "semak",
+"license_file": "Cpr.Sparhelt font License.txt",
+"license_snippet": "My Fonts Are free to use personal and commercial works to."
+},
+{
+"name": "CarbonType",
+"source": "fontsquirrel",
+"slug": "CarbonType",
+"url": "https://www.fontsquirrel.com/fonts/CarbonType",
+"license_url": "https://www.fontsquirrel.com/license/CarbonType",
+"designer": "Vic Fieger",
+"category": [
+"Typewriter"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Vic Fieger License.txt",
+"license_snippet": "The Vic Fieger fonts are freeware, to be downloaded and used by anyone who wants them for free."
+},
+{
+"name": "Caroni",
+"source": "fontsquirrel",
+"slug": "caroni",
+"url": "https://www.fontsquirrel.com/fonts/caroni",
+"license_url": "https://www.fontsquirrel.com/license/caroni",
+"designer": "Franzi Draws",
+"category": [
+"Handdrawn"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "OFL-1.1",
+"risk": "selamat",
+"license_file": "SIL Open Font License.txt",
+"license_snippet": "This Font Software is licensed under the SIL Open Font License, Version 1."
+},
+{
+"name": "Carousel",
+"source": "fontsquirrel",
+"slug": "Carousel",
+"url": "https://www.fontsquirrel.com/fonts/Carousel",
+"license_url": "https://www.fontsquirrel.com/license/Carousel",
+"designer": "Bright Ideas",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Freeware License.txt",
+"license_snippet": "download from either the original source or from multiple free-font sites then we assume it to be safe to use the font commercially."
+},
+{
+"name": "Carrington",
+"source": "fontsquirrel",
+"slug": "Carrington",
+"url": "https://www.fontsquirrel.com/fonts/Carrington",
+"license_url": "https://www.fontsquirrel.com/license/Carrington",
+"designer": "Bright Ideas",
+"category": [
+"Script"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Freeware License.txt",
+"license_snippet": "download from either the original source or from multiple free-font sites then we assume it to be safe to use the font commercially."
+},
+{
+"name": "Cartoonist Hand",
+"source": "fontsquirrel",
+"slug": "SF-Cartoonist-Hand",
+"url": "https://www.fontsquirrel.com/fonts/SF-Cartoonist-Hand",
+"license_url": "https://www.fontsquirrel.com/license/SF-Cartoonist-Hand",
+"designer": "ShyFonts",
+"category": [
+"Comic"
+],
+"styles_count": 8,
+"font_files": 8,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "ShyFonts Font License.txt",
+"license_snippet": "By downloading this font package you agree to the following terms of use: - This FONT PACKAGE is freeware."
+},
+{
+"name": "Caslon Initials",
+"source": "fontsquirrel",
+"slug": "Caslon-Initials",
+"url": "https://www.fontsquirrel.com/fonts/Caslon-Initials",
+"license_url": "https://www.fontsquirrel.com/license/Caslon-Initials",
+"designer": "Paul Lloyd",
+"category": [
+"Display"
+],
+"styles_count": 2,
+"font_files": 2,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Paul Lloyd License Agreement.txt",
+"license_snippet": "(Legalistic waffle over) This font is the ultimate freeware."
+},
+{
+"name": "Chantelli Antiqua",
+"source": "fontsquirrel",
+"slug": "Chantelli-Antiqua",
+"url": "https://www.fontsquirrel.com/fonts/Chantelli-Antiqua",
+"license_url": "https://www.fontsquirrel.com/license/Chantelli-Antiqua",
+"designer": "Bernd Montag",
+"category": [
+"Calligraphic"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Bernd Montag License.txt",
+"license_snippet": "Sansation - freeware font family Version 1."
+},
+{
+"name": "Chomsky",
+"source": "fontsquirrel",
+"slug": "chomsky",
+"url": "https://www.fontsquirrel.com/fonts/chomsky",
+"license_url": "https://www.fontsquirrel.com/license/chomsky",
+"designer": "Fredrick Brennan",
+"category": [
+"Blackletter"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "OFL-1.1",
+"risk": "selamat",
+"license_file": "SIL Open Font License.txt",
+"license_snippet": "ph>), This Font Software is licensed under the SIL Open Font License, Version 1."
+},
+{
+"name": "ChunkFive",
+"source": "fontsquirrel",
+"slug": "chunkfive",
+"url": "https://www.fontsquirrel.com/fonts/chunkfive",
+"license_url": "https://www.fontsquirrel.com/license/chunkfive",
+"designer": "The League of Moveable Type",
+"category": [
+"Display"
+],
+"styles_count": 2,
+"font_files": 2,
+"license": "OFL-1.1",
+"risk": "selamat",
+"license_file": "SIL Open Font License.txt",
+"license_snippet": "This Font Software is licensed under the SIL Open Font License, Version 1."
+},
+{
+"name": "Clutchee",
+"source": "fontsquirrel",
+"slug": "Clutchee",
+"url": "https://www.fontsquirrel.com/fonts/Clutchee",
+"license_url": "https://www.fontsquirrel.com/license/Clutchee",
+"designer": "Sinisa Komlenic",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Sinisa Komlenic License Agreement.txt",
+"license_snippet": "You can use it for all personal and commercial work."
+},
+{
+"name": "College",
+"source": "fontsquirrel",
+"slug": "College",
+"url": "https://www.fontsquirrel.com/fonts/College",
+"license_url": "https://www.fontsquirrel.com/license/College",
+"designer": "Matthew Welch",
+"category": [
+"Display"
+],
+"styles_count": 4,
+"font_files": 4,
+"license": "Lesen sendiri (komersial dibenarkan)",
+"risk": "semak",
+"license_file": "Matthew Welch License - College.txt",
+"license_snippet": "If you use this font for commercial purposes please credit me in at least some little way."
+},
+{
+"name": "Collegiate",
+"source": "fontsquirrel",
+"slug": "SF-Collegiate",
+"url": "https://www.fontsquirrel.com/fonts/SF-Collegiate",
+"license_url": "https://www.fontsquirrel.com/license/SF-Collegiate",
+"designer": "ShyFonts",
+"category": [
+"Display"
+],
+"styles_count": 2,
+"font_files": 2,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "ShyFonts Font License.txt",
+"license_snippet": "By downloading this font package you agree to the following terms of use: - This FONT PACKAGE is freeware."
+},
+{
+"name": "Comic Zine",
+"source": "fontsquirrel",
+"slug": "Comic-Zine-OT",
+"url": "https://www.fontsquirrel.com/fonts/Comic-Zine-OT",
+"license_url": "https://www.fontsquirrel.com/license/Comic-Zine-OT",
+"designer": "Blue Vinyl Fonts",
+"category": [
+"Novelty"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (komersial dibenarkan)",
+"risk": "semak",
+"license_file": "Blue Vinyl License.txt",
+"license_snippet": "com The Freeware Font(s) included in this pack were created by Jess Latham."
+},
+{
+"name": "Commando",
+"source": "fontsquirrel",
+"slug": "Commando",
+"url": "https://www.fontsquirrel.com/fonts/Commando",
+"license_url": "https://www.fontsquirrel.com/license/Commando",
+"designer": "defaulterror",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Compagnon",
+"source": "fontsquirrel",
+"slug": "compagnon",
+"url": "https://www.fontsquirrel.com/fonts/compagnon",
+"license_url": "https://www.fontsquirrel.com/license/compagnon",
+"designer": "Velvetyne",
+"category": [
+"Display"
+],
+"styles_count": 5,
+"font_files": 5,
+"license": "OFL-1.1",
+"risk": "selamat",
+"license_file": "SIL Open Font License.txt",
+"license_snippet": "This Font Software is licensed under the SIL Open Font License, Version 1."
+},
+{
+"name": "Copystruct",
+"source": "fontsquirrel",
+"slug": "Copystruct",
+"url": "https://www.fontsquirrel.com/fonts/Copystruct",
+"license_url": "https://www.fontsquirrel.com/license/Copystruct",
+"designer": "Typografski",
+"category": [
+"Display"
+],
+"styles_count": 2,
+"font_files": 2,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Freeware License.txt",
+"license_snippet": "download from either the original source or from multiple free-font sites then we assume it to be safe to use the font commercially."
+},
+{
+"name": "Costura",
+"source": "fontsquirrel",
+"slug": "Costura",
+"url": "https://www.fontsquirrel.com/fonts/Costura",
+"license_url": "https://www.fontsquirrel.com/license/Costura",
+"designer": "Simon Wiesmayr",
+"category": [
+"Novelty"
+],
+"styles_count": 3,
+"font_files": 3,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Simon Wiesmayr License.txt",
+"license_snippet": "You are allowed to use this Font Family for private and commercial purposes."
+},
+{
+"name": "Cowboy Hippie Pro",
+"source": "fontsquirrel",
+"slug": "cowboy-hippie-pro",
+"url": "https://www.fontsquirrel.com/fonts/cowboy-hippie-pro",
+"license_url": "https://www.fontsquirrel.com/license/cowboy-hippie-pro",
+"designer": "CheapProFonts",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "CheapProFonts Font License.txt",
+"license_snippet": "CheapProFonts End User License Agreement (EULA) The font is protected by copyright laws and International copyright treaties, as well as other intellectual property laws and treaties. The font is lice"
+},
+{
+"name": "Daela",
+"source": "fontsquirrel",
+"slug": "Daela",
+"url": "https://www.fontsquirrel.com/fonts/Daela",
+"license_url": "https://www.fontsquirrel.com/license/Daela",
+"designer": "MartinPlus",
+"category": [
+"Display"
+],
+"styles_count": 3,
+"font_files": 3,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "MartinPlus License.txt",
+"license_snippet": "MartinPlus Typefaces Font Software License Agreement By installing and or using MartinPlus Typefaces you agree to the following: - - - This font is for personal and commercial use - - - Embedding (in "
+},
+{
+"name": "Daniel",
+"source": "fontsquirrel",
+"slug": "daniel",
+"url": "https://www.fontsquirrel.com/fonts/daniel",
+"license_url": "https://www.fontsquirrel.com/license/daniel",
+"designer": "Daniel Midgley",
+"category": [
+"Handdrawn"
+],
+"styles_count": 3,
+"font_files": 3,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Daniel Midgley.txt",
+"license_snippet": "Thanks for downloading the Daniel font! It’s free for you to use for any purpose, commercial or not."
+},
+{
+"name": "DayPosterBlack",
+"source": "fontsquirrel",
+"slug": "DayPosterBlack",
+"url": "https://www.fontsquirrel.com/fonts/DayPosterBlack",
+"license_url": "https://www.fontsquirrel.com/license/DayPosterBlack",
+"designer": "Nick's Fonts",
+"category": [
+"Retro"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Nick's Fonts License.txt",
+"license_snippet": "YOU MAY: -Send a copy of any Nick's Fonts font data along with your documents to a commercial printer or other service bureau to enable the editing or printing of your document."
+},
+{
+"name": "Days",
+"source": "fontsquirrel",
+"slug": "Days",
+"url": "https://www.fontsquirrel.com/fonts/Days",
+"license_url": "https://www.fontsquirrel.com/license/Days",
+"designer": "Alexander Kalachev",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Creative Commons Attribution License.txt",
+"license_snippet": "Creative Commons Legal Code Attribution 3.0 Unported CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM AND DOES NOT PROVIDE LEGAL SERVICES. DISTRIBUTION OF THIS LICENSE DOES NOT CREATE AN ATTORNEY-CLIENT"
+},
+{
+"name": "Dearest",
+"source": "fontsquirrel",
+"slug": "Dearest",
+"url": "https://www.fontsquirrel.com/fonts/Dearest",
+"license_url": "https://www.fontsquirrel.com/license/Dearest",
+"designer": "West Wind Fonts",
+"category": [
+"Blackletter"
+],
+"styles_count": 3,
+"font_files": 3,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Freeware License.txt",
+"license_snippet": "download from either the original source or from multiple free-font sites then we assume it to be safe to use the font commercially."
+},
+{
+"name": "DeStencil",
+"source": "fontsquirrel",
+"slug": "DeStencilNF",
+"url": "https://www.fontsquirrel.com/fonts/DeStencilNF",
+"license_url": "https://www.fontsquirrel.com/license/DeStencilNF",
+"designer": "Nick's Fonts",
+"category": [
+"Stencil"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Nick's Fonts License.txt",
+"license_snippet": "YOU MAY: -Send a copy of any Nick's Fonts font data along with your documents to a commercial printer or other service bureau to enable the editing or printing of your document."
+},
+{
+"name": "Destroy",
+"source": "fontsquirrel",
+"slug": "Destroy",
+"url": "https://www.fontsquirrel.com/fonts/Destroy",
+"license_url": "https://www.fontsquirrel.com/license/Destroy",
+"designer": "Typografski",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Freeware License.txt",
+"license_snippet": "download from either the original source or from multiple free-font sites then we assume it to be safe to use the font commercially."
+},
+{
+"name": "Desyrel",
+"source": "fontsquirrel",
+"slug": "Desyrel",
+"url": "https://www.fontsquirrel.com/fonts/Desyrel",
+"license_url": "https://www.fontsquirrel.com/license/Desyrel",
+"designer": "Apostrophic Labs",
+"category": [
+"Handdrawn"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Deutsch Gothic",
+"source": "fontsquirrel",
+"slug": "Deutsch-Gothic",
+"url": "https://www.fontsquirrel.com/fonts/Deutsch-Gothic",
+"license_url": "https://www.fontsquirrel.com/license/Deutsch-Gothic",
+"designer": "James Fordyce",
+"category": [
+"Blackletter"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "James Fordyce Font License.txt",
+"license_snippet": "This font was created using Fontographer for Windows. It is copyright by J. Fordyce but may be freely distributed provided it is not altered, no fee is charged for it, and this text file is included w"
+},
+{
+"name": "Digory Doodles",
+"source": "fontsquirrel",
+"slug": "digory-doodles",
+"url": "https://www.fontsquirrel.com/fonts/digory-doodles",
+"license_url": "https://www.fontsquirrel.com/license/digory-doodles",
+"designer": "Holds Worth Design",
+"category": [
+"Script"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Diner",
+"source": "fontsquirrel",
+"slug": "Diner-Skinny",
+"url": "https://www.fontsquirrel.com/fonts/Diner-Skinny",
+"license_url": "https://www.fontsquirrel.com/license/Diner-Skinny",
+"designer": "David Rakowski",
+"category": [
+"Retro"
+],
+"styles_count": 4,
+"font_files": 4,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Freeware License.txt",
+"license_snippet": "download from either the original source or from multiple free-font sites then we assume it to be safe to use the font commercially."
+},
+{
+"name": "Distant Galaxy",
+"source": "fontsquirrel",
+"slug": "Distant-Galaxy",
+"url": "https://www.fontsquirrel.com/fonts/Distant-Galaxy",
+"license_url": "https://www.fontsquirrel.com/license/Distant-Galaxy",
+"designer": "ShyFonts",
+"category": [
+"Novelty"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "ShyFonts Font License.txt",
+"license_snippet": "By downloading this font package you agree to the following terms of use: - This FONT PACKAGE is freeware."
+},
+{
+"name": "District",
+"source": "fontsquirrel",
+"slug": "District",
+"url": "https://www.fontsquirrel.com/fonts/District",
+"license_url": "https://www.fontsquirrel.com/license/District",
+"designer": "Cpr.Sparhelt",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (komersial dibenarkan)",
+"risk": "semak",
+"license_file": "Cpr.Sparhelt font License.txt",
+"license_snippet": "My Fonts Are free to use personal and commercial works to."
+},
+{
+"name": "Dited",
+"source": "fontsquirrel",
+"slug": "Dited",
+"url": "https://www.fontsquirrel.com/fonts/Dited",
+"license_url": "https://www.fontsquirrel.com/license/Dited",
+"designer": "Jovanny Lemonad",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "DJ Gross",
+"source": "fontsquirrel",
+"slug": "DJ-Gross",
+"url": "https://www.fontsquirrel.com/fonts/DJ-Gross",
+"license_url": "https://www.fontsquirrel.com/license/DJ-Gross",
+"designer": "SDFonts",
+"category": [
+"Handdrawn"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Dobkin",
+"source": "fontsquirrel",
+"slug": "Dobkin",
+"url": "https://www.fontsquirrel.com/fonts/Dobkin",
+"license_url": "https://www.fontsquirrel.com/license/Dobkin",
+"designer": "David Rakowski",
+"category": [
+"Script"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Freeware License.txt",
+"license_snippet": "download from either the original source or from multiple free-font sites then we assume it to be safe to use the font commercially."
+},
+{
+"name": "DPSDbeyond",
+"source": "fontsquirrel",
+"slug": "dpsdbeyond",
+"url": "https://www.fontsquirrel.com/fonts/dpsdbeyond",
+"license_url": "https://www.fontsquirrel.com/license/dpsdbeyond",
+"designer": "DPSDbeyond",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "OFL-1.1",
+"risk": "selamat",
+"license_file": "SIL Open Font License.txt",
+"license_snippet": "This Font Software is licensed under the SIL Open Font License, Version 1."
+},
+{
+"name": "DrawveticaMini",
+"source": "fontsquirrel",
+"slug": "drawveticamini",
+"url": "https://www.fontsquirrel.com/fonts/drawveticamini",
+"license_url": "https://www.fontsquirrel.com/license/drawveticamini",
+"designer": "Alexander Kaiser",
+"category": [
+"Handdrawn"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Creative Commons Attribution License.txt",
+"license_snippet": "Creative Commons Legal Code Attribution 3.0 Unported CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM AND DOES NOT PROVIDE LEGAL SERVICES. DISTRIBUTION OF THIS LICENSE DOES NOT CREATE AN ATTORNEY-CLIENT"
+},
+{
+"name": "Dubtronic",
+"source": "fontsquirrel",
+"slug": "Dubtronic",
+"url": "https://www.fontsquirrel.com/fonts/Dubtronic",
+"license_url": "https://www.fontsquirrel.com/license/Dubtronic",
+"designer": "Astro Studios",
+"category": [
+"Display"
+],
+"styles_count": 2,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Dutch Initials",
+"source": "fontsquirrel",
+"slug": "Dutch-Initials",
+"url": "https://www.fontsquirrel.com/fonts/Dutch-Initials",
+"license_url": "https://www.fontsquirrel.com/license/Dutch-Initials",
+"designer": "Paul Lloyd",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Paul Lloyd License Agreement.txt",
+"license_snippet": "(Legalistic waffle over) This font is the ultimate freeware."
+},
+{
+"name": "DymaxionScript",
+"source": "fontsquirrel",
+"slug": "DymaxionScript",
+"url": "https://www.fontsquirrel.com/fonts/DymaxionScript",
+"license_url": "https://www.fontsquirrel.com/license/DymaxionScript",
+"designer": "Nick's Fonts",
+"category": [
+"Retro"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Nick's Fonts License.txt",
+"license_snippet": "YOU MAY: -Send a copy of any Nick's Fonts font data along with your documents to a commercial printer or other service bureau to enable the editing or printing of your document."
+},
+{
+"name": "EastMarket",
+"source": "fontsquirrel",
+"slug": "EastMarket",
+"url": "https://www.fontsquirrel.com/fonts/EastMarket",
+"license_url": "https://www.fontsquirrel.com/license/EastMarket",
+"designer": "Nick's Fonts",
+"category": [
+"Retro"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Nick's Fonts License.txt",
+"license_snippet": "YOU MAY: -Send a copy of any Nick's Fonts font data along with your documents to a commercial printer or other service bureau to enable the editing or printing of your document."
+},
+{
+"name": "Edge Display",
+"source": "fontsquirrel",
+"slug": "edge-display",
+"url": "https://www.fontsquirrel.com/fonts/edge-display",
+"license_url": "https://www.fontsquirrel.com/license/edge-display",
+"designer": "Grzegorz Samson",
+"category": [
+"Display"
+],
+"styles_count": 2,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Edo",
+"source": "fontsquirrel",
+"slug": "Edo",
+"url": "https://www.fontsquirrel.com/fonts/Edo",
+"license_url": "https://www.fontsquirrel.com/license/Edo",
+"designer": "Vic Fieger",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Vic Fieger License.txt",
+"license_snippet": "The Vic Fieger fonts are freeware, to be downloaded and used by anyone who wants them for free."
+},
+{
+"name": "ElliotSix",
+"source": "fontsquirrel",
+"slug": "ElliotSix",
+"url": "https://www.fontsquirrel.com/fonts/ElliotSix",
+"license_url": "https://www.fontsquirrel.com/license/ElliotSix",
+"designer": "Fonthead Design",
+"category": [
+"Handdrawn"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Fonthead Standard EULA.txt",
+"license_snippet": "------------------------------------------------------------------------ Fonthead Design End User License Agreement ------------------------------------------------------------------------ By download"
+},
+{
+"name": "England Hand DB",
+"source": "fontsquirrel",
+"slug": "England-Hand-DB",
+"url": "https://www.fontsquirrel.com/fonts/England-Hand-DB",
+"license_url": "https://www.fontsquirrel.com/license/England-Hand-DB",
+"designer": "DATA BECKER GmbH",
+"category": [
+"Script"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Freeware License.txt",
+"license_snippet": "download from either the original source or from multiple free-font sites then we assume it to be safe to use the font commercially."
+},
+{
+"name": "Eraser",
+"source": "fontsquirrel",
+"slug": "Eraser",
+"url": "https://www.fontsquirrel.com/fonts/Eraser",
+"license_url": "https://www.fontsquirrel.com/license/Eraser",
+"designer": "David Rakowski",
+"category": [
+"Handdrawn"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Freeware License.txt",
+"license_snippet": "download from either the original source or from multiple free-font sites then we assume it to be safe to use the font commercially."
+},
+{
+"name": "exotica",
+"source": "fontsquirrel",
+"slug": "exotica",
+"url": "https://www.fontsquirrel.com/fonts/exotica",
+"license_url": "https://www.fontsquirrel.com/license/exotica",
+"designer": "West Wind Fonts",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Freeware License.txt",
+"license_snippet": "download from either the original source or from multiple free-font sites then we assume it to be safe to use the font commercially."
+},
+{
+"name": "FancyPants",
+"source": "fontsquirrel",
+"slug": "FancyPants",
+"url": "https://www.fontsquirrel.com/fonts/FancyPants",
+"license_url": "https://www.fontsquirrel.com/license/FancyPants",
+"designer": "Nick's Fonts",
+"category": [
+"Retro"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Faster",
+"source": "fontsquirrel",
+"slug": "faster",
+"url": "https://www.fontsquirrel.com/fonts/faster",
+"license_url": "https://www.fontsquirrel.com/license/faster",
+"designer": "Eduardo Tunni",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "FFF Tusj",
+"source": "fontsquirrel",
+"slug": "FFF-Tusj",
+"url": "https://www.fontsquirrel.com/fonts/FFF-Tusj",
+"license_url": "https://www.fontsquirrel.com/license/FFF-Tusj",
+"designer": "Magnus Cederholm",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Fin Serif Display",
+"source": "fontsquirrel",
+"slug": "fin_serif_display",
+"url": "https://www.fontsquirrel.com/fonts/fin_serif_display",
+"license_url": "https://www.fontsquirrel.com/license/fin_serif_display",
+"designer": "J Blake Harris",
+"category": [
+"Slab Serif"
+],
+"styles_count": 2,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Firecat",
+"source": "fontsquirrel",
+"slug": "Firecat",
+"url": "https://www.fontsquirrel.com/fonts/Firecat",
+"license_url": "https://www.fontsquirrel.com/license/Firecat",
+"designer": "David Rakowski",
+"category": [
+"Novelty"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Freeware License.txt",
+"license_snippet": "download from either the original source or from multiple free-font sites then we assume it to be safe to use the font commercially."
+},
+{
+"name": "Fjalla",
+"source": "fontsquirrel",
+"slug": "fjalla",
+"url": "https://www.fontsquirrel.com/fonts/fjalla",
+"license_url": "https://www.fontsquirrel.com/license/fjalla",
+"designer": "Sorkin Type Co",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Florante at Laura",
+"source": "fontsquirrel",
+"slug": "Florante-at-Laura",
+"url": "https://www.fontsquirrel.com/fonts/Florante-at-Laura",
+"license_url": "https://www.fontsquirrel.com/license/Florante-at-Laura",
+"designer": "Nyek! Pinoy Komik Fonts",
+"category": [
+"Calligraphic"
+],
+"styles_count": 2,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Florida Vibes",
+"source": "fontsquirrel",
+"slug": "florida-vibe",
+"url": "https://www.fontsquirrel.com/fonts/florida-vibe",
+"license_url": "https://www.fontsquirrel.com/license/florida-vibe",
+"designer": "Mikhail Khomutetckii",
+"category": [
+"Script"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "OFL-1.1",
+"risk": "selamat",
+"license_file": "SIL Open Font License.txt",
+"license_snippet": "This Font Software is licensed under the SIL Open Font License, Version 1."
+},
+{
+"name": "Flux Architect",
+"source": "fontsquirrel",
+"slug": "Flux",
+"url": "https://www.fontsquirrel.com/fonts/Flux",
+"license_url": "https://www.fontsquirrel.com/license/Flux",
+"designer": "Clayton Cowan",
+"category": [
+"Handdrawn"
+],
+"styles_count": 4,
+"font_files": 4,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Clayton Cowan Font License.txt",
+"license_snippet": "In an email exchange with him, he stated: \"As for the license, its freeware/shareware."
+},
+{
+"name": "Foglihten",
+"source": "fontsquirrel",
+"slug": "foglihten",
+"url": "https://www.fontsquirrel.com/fonts/foglihten",
+"license_url": "https://www.fontsquirrel.com/license/foglihten",
+"designer": "GLUK fonts",
+"category": [
+"Display"
+],
+"styles_count": 4,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "FoglihtenNo07",
+"source": "fontsquirrel",
+"slug": "foglihtenno07",
+"url": "https://www.fontsquirrel.com/fonts/foglihtenno07",
+"license_url": "https://www.fontsquirrel.com/license/foglihtenno07",
+"designer": "GLUK fonts",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "OFL-1.1",
+"risk": "selamat",
+"license_file": "SIL Open Font License.txt",
+"license_snippet": "This Font Software is licensed under the SIL Open Font License, Version 1."
+},
+{
+"name": "FontleroyBrown",
+"source": "fontsquirrel",
+"slug": "FontleroyBrown",
+"url": "https://www.fontsquirrel.com/fonts/FontleroyBrown",
+"license_url": "https://www.fontsquirrel.com/license/FontleroyBrown",
+"designer": "Nick's Fonts",
+"category": [
+"Retro"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Forque",
+"source": "fontsquirrel",
+"slug": "forque",
+"url": "https://www.fontsquirrel.com/fonts/forque",
+"license_url": "https://www.fontsquirrel.com/license/forque",
+"designer": "Tup Wanders",
+"category": [
+"Retro"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Tup Wanders Font License.txt",
+"license_snippet": "Free font by Tup Wanders http://www.tupwanders.nl Licensed with a Creative Commons attribution license. If you add to the font, please send me a copy! If you've made fun stuff with the font that you w"
+},
+{
+"name": "FortySecondStreet",
+"source": "fontsquirrel",
+"slug": "FortySecondStreetHB",
+"url": "https://www.fontsquirrel.com/fonts/FortySecondStreetHB",
+"license_url": "https://www.fontsquirrel.com/license/FortySecondStreetHB",
+"designer": "Nick's Fonts",
+"category": [
+"Retro"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Nick's Fonts License.txt",
+"license_snippet": "YOU MAY: -Send a copy of any Nick's Fonts font data along with your documents to a commercial printer or other service bureau to enable the editing or printing of your document."
+},
+{
+"name": "Freebooter Script",
+"source": "fontsquirrel",
+"slug": "Freebooter-Script",
+"url": "https://www.fontsquirrel.com/fonts/Freebooter-Script",
+"license_url": "https://www.fontsquirrel.com/license/Freebooter-Script",
+"designer": "Apostrophic Labs",
+"category": [
+"Script"
+],
+"styles_count": 2,
+"font_files": 2,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Apostrophic Labs License.txt",
+"license_snippet": "Here is the \"Read Me\" from the original http://www.apostrophiclab.com website: Archived here: http://web.archive.org/web/20030408055445/www.hardcovermedia.com/lab/Pages/info.html and here: http://apos"
+},
+{
+"name": "Frente H1",
+"source": "fontsquirrel",
+"slug": "frente-h1",
+"url": "https://www.fontsquirrel.com/fonts/frente-h1",
+"license_url": "https://www.fontsquirrel.com/license/frente-h1",
+"designer": "Frente",
+"category": [
+"Handdrawn"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Fulbo",
+"source": "fontsquirrel",
+"slug": "fulbo",
+"url": "https://www.fontsquirrel.com/fonts/fulbo",
+"license_url": "https://www.fontsquirrel.com/license/fulbo",
+"designer": "Alejo Bergmann",
+"category": [
+"Display"
+],
+"styles_count": 5,
+"font_files": 5,
+"license": "OFL-1.1",
+"risk": "selamat",
+"license_file": "SIL Open Font License.txt",
+"license_snippet": "This Font Software is licensed under the SIL Open Font License, Version 1."
+},
+{
+"name": "Furore",
+"source": "fontsquirrel",
+"slug": "Furore",
+"url": "https://www.fontsquirrel.com/fonts/Furore",
+"license_url": "https://www.fontsquirrel.com/license/Furore",
+"designer": "Jovanny Lemonad",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Jovanny Lemonad Freeware License.txt",
+"license_snippet": "Their website states: \"The project of freeware fonts is created by designers who have drawn, and after have allowed to extend the fonts free of charge."
+},
+{
+"name": "Gaspar",
+"source": "fontsquirrel",
+"slug": "gaspar",
+"url": "https://www.fontsquirrel.com/fonts/gaspar",
+"license_url": "https://www.fontsquirrel.com/license/gaspar",
+"designer": "Carlos Alonso",
+"category": [
+"Slab Serif"
+],
+"styles_count": 4,
+"font_files": 4,
+"license": "OFL-1.1",
+"risk": "selamat",
+"license_file": "SIL Open Font License.txt",
+"license_snippet": "Gaspar Regular\" \"Gaspar Regular Italic\" \"Gaspar Bold\" \"Gaspar Bold Italic\" This Font Software is licensed under the SIL Open Font License, Version 1."
+},
+{
+"name": "Gawaa",
+"source": "fontsquirrel",
+"slug": "gawaa",
+"url": "https://www.fontsquirrel.com/fonts/gawaa",
+"license_url": "https://www.fontsquirrel.com/license/gawaa",
+"designer": "T. Christopher White",
+"category": [
+"Slab Serif"
+],
+"styles_count": 2,
+"font_files": 2,
+"license": "OFL-1.1",
+"risk": "selamat",
+"license_file": "SIL Open Font License.txt",
+"license_snippet": "com), with Reserved Font Name Gawaa This Font Software is licensed under the SIL Open Font License, Version 1."
+},
+{
+"name": "GEIST RND",
+"source": "fontsquirrel",
+"slug": "GEIST-RND",
+"url": "https://www.fontsquirrel.com/fonts/GEIST-RND",
+"license_url": "https://www.fontsquirrel.com/license/GEIST-RND",
+"designer": "Frederik Frede",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Frederik Frede License - GEIST_RND.txt",
+"license_snippet": "Copyright (c) 2006 by Frederik Frede. All rights reserved. This is the free version. Share it. For more info and the full version of GEIST_RND check http://www.frede.net"
+},
+{
+"name": "Genzsch Et Heyse",
+"source": "fontsquirrel",
+"slug": "Genzsch-Et-Heyse",
+"url": "https://www.fontsquirrel.com/fonts/Genzsch-Et-Heyse",
+"license_url": "https://www.fontsquirrel.com/license/Genzsch-Et-Heyse",
+"designer": "Paul Lloyd",
+"category": [
+"Blackletter"
+],
+"styles_count": 2,
+"font_files": 2,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Paul Lloyd License Agreement.txt",
+"license_snippet": "(Legalistic waffle over) This font is the ultimate freeware."
+},
+{
+"name": "Geometry Soft Pro",
+"source": "fontsquirrel",
+"slug": "geometry-soft-pro",
+"url": "https://www.fontsquirrel.com/fonts/geometry-soft-pro",
+"license_url": "https://www.fontsquirrel.com/license/geometry-soft-pro",
+"designer": "CheapProFonts",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Gesso",
+"source": "fontsquirrel",
+"slug": "Gesso",
+"url": "https://www.fontsquirrel.com/fonts/Gesso",
+"license_url": "https://www.fontsquirrel.com/license/Gesso",
+"designer": "Flat-it",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (had komersial)",
+"risk": "berisiko",
+"license_file": "Flat-it License.txt",
+"license_snippet": "com/) This is a freeware typeface."
+},
+{
+"name": "Giant Head OT",
+"source": "fontsquirrel",
+"slug": "Giant-Head-OT",
+"url": "https://www.fontsquirrel.com/fonts/Giant-Head-OT",
+"license_url": "https://www.fontsquirrel.com/license/Giant-Head-OT",
+"designer": "Blue Vinyl Fonts",
+"category": [
+"Display"
+],
+"styles_count": 2,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Gladifilthefte",
+"source": "fontsquirrel",
+"slug": "Gladifilthefte",
+"url": "https://www.fontsquirrel.com/fonts/Gladifilthefte",
+"license_url": "https://www.fontsquirrel.com/license/Gladifilthefte",
+"designer": "Tup Wanders",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Tup Wanders Font License.txt",
+"license_snippet": "Free font by Tup Wanders http://www.tupwanders.nl Licensed with a Creative Commons attribution license. If you add to the font, please send me a copy! If you've made fun stuff with the font that you w"
+},
+{
+"name": "Goblin",
+"source": "fontsquirrel",
+"slug": "goblin",
+"url": "https://www.fontsquirrel.com/fonts/goblin",
+"license_url": "https://www.fontsquirrel.com/license/goblin",
+"designer": "Sorkin Type Co",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Gondola SD",
+"source": "fontsquirrel",
+"slug": "Gondola-SD",
+"url": "https://www.fontsquirrel.com/fonts/Gondola-SD",
+"license_url": "https://www.fontsquirrel.com/license/Gondola-SD",
+"designer": "Steve Deffeyes",
+"category": [
+"Calligraphic"
+],
+"styles_count": 2,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Gong!",
+"source": "fontsquirrel",
+"slug": "Gong",
+"url": "https://www.fontsquirrel.com/fonts/Gong",
+"license_url": "https://www.fontsquirrel.com/license/Gong",
+"designer": "Nyek! Pinoy Komik Fonts",
+"category": [
+"Handdrawn"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Gothic Ultra OT",
+"source": "fontsquirrel",
+"slug": "Gothic-Ultra-OT",
+"url": "https://www.fontsquirrel.com/fonts/Gothic-Ultra-OT",
+"license_url": "https://www.fontsquirrel.com/license/Gothic-Ultra-OT",
+"designer": "Blue Vinyl Fonts",
+"category": [
+"Calligraphic"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (komersial dibenarkan)",
+"risk": "semak",
+"license_file": "Blue Vinyl License.txt",
+"license_snippet": "com The Freeware Font(s) included in this pack were created by Jess Latham."
+},
+{
+"name": "Gputeks",
+"source": "fontsquirrel",
+"slug": "gputeks",
+"url": "https://www.fontsquirrel.com/fonts/gputeks",
+"license_url": "https://www.fontsquirrel.com/license/gputeks",
+"designer": "GLUK fonts",
+"category": [
+"Display"
+],
+"styles_count": 2,
+"font_files": 2,
+"license": "OFL-1.1",
+"risk": "selamat",
+"license_file": "SIL Open Font License.txt",
+"license_snippet": "pl), with Reserved Font Names Gputeks This Font Software is licensed under the SIL Open Font License, Version 1."
+},
+{
+"name": "GreatLakes",
+"source": "fontsquirrel",
+"slug": "GreatLakesNF",
+"url": "https://www.fontsquirrel.com/fonts/GreatLakesNF",
+"license_url": "https://www.fontsquirrel.com/license/GreatLakesNF",
+"designer": "Nick's Fonts",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Nick's Fonts License.txt",
+"license_snippet": "YOU MAY: -Send a copy of any Nick's Fonts font data along with your documents to a commercial printer or other service bureau to enable the editing or printing of your document."
+},
+{
+"name": "Griffin",
+"source": "fontsquirrel",
+"slug": "Griffin",
+"url": "https://www.fontsquirrel.com/fonts/Griffin",
+"license_url": "https://www.fontsquirrel.com/license/Griffin",
+"designer": "Bright Ideas",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Freeware License.txt",
+"license_snippet": "download from either the original source or from multiple free-font sites then we assume it to be safe to use the font commercially."
+},
+{
+"name": "GrutchShaded",
+"source": "fontsquirrel",
+"slug": "GrutchShaded",
+"url": "https://www.fontsquirrel.com/fonts/GrutchShaded",
+"license_url": "https://www.fontsquirrel.com/license/GrutchShaded",
+"designer": "Steeve Gruson",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "HamburgerHeaven",
+"source": "fontsquirrel",
+"slug": "HamburgerHeaven",
+"url": "https://www.fontsquirrel.com/fonts/HamburgerHeaven",
+"license_url": "https://www.fontsquirrel.com/license/HamburgerHeaven",
+"designer": "Nick's Fonts",
+"category": [
+"Retro"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Harting",
+"source": "fontsquirrel",
+"slug": "Harting",
+"url": "https://www.fontsquirrel.com/fonts/Harting",
+"license_url": "https://www.fontsquirrel.com/license/Harting",
+"designer": "David Rakowski",
+"category": [
+"Typewriter"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Freeware License.txt",
+"license_snippet": "download from either the original source or from multiple free-font sites then we assume it to be safe to use the font commercially."
+},
+{
+"name": "Headhunter",
+"source": "fontsquirrel",
+"slug": "Headhunter",
+"url": "https://www.fontsquirrel.com/fonts/Headhunter",
+"license_url": "https://www.fontsquirrel.com/license/Headhunter",
+"designer": "David Rakowski",
+"category": [
+"Novelty"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Freeware License.txt",
+"license_snippet": "download from either the original source or from multiple free-font sites then we assume it to be safe to use the font commercially."
+},
+{
+"name": "Heavy Data",
+"source": "fontsquirrel",
+"slug": "Heavy-Data",
+"url": "https://www.fontsquirrel.com/fonts/Heavy-Data",
+"license_url": "https://www.fontsquirrel.com/license/Heavy-Data",
+"designer": "Vic Fieger",
+"category": [
+"Novelty"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Vic Fieger License.txt",
+"license_snippet": "The Vic Fieger fonts are freeware, to be downloaded and used by anyone who wants them for free."
+},
+{
+"name": "Helsinki",
+"source": "fontsquirrel",
+"slug": "helsinki",
+"url": "https://www.fontsquirrel.com/fonts/helsinki",
+"license_url": "https://www.fontsquirrel.com/license/helsinki",
+"designer": "Vic Fieger",
+"category": [
+"Comic"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Vic Fieger License.txt",
+"license_snippet": "The Vic Fieger fonts are freeware, to be downloaded and used by anyone who wants them for free."
+},
+{
+"name": "HenryMorganHand",
+"source": "fontsquirrel",
+"slug": "HenryMorganHand",
+"url": "https://www.fontsquirrel.com/fonts/HenryMorganHand",
+"license_url": "https://www.fontsquirrel.com/license/HenryMorganHand",
+"designer": "Paul Lloyd",
+"category": [
+"Script"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Paul Lloyd License Agreement.txt",
+"license_snippet": "(Legalistic waffle over) This font is the ultimate freeware."
+},
+{
+"name": "Hetilica",
+"source": "fontsquirrel",
+"slug": "Hetilica",
+"url": "https://www.fontsquirrel.com/fonts/Hetilica",
+"license_url": "https://www.fontsquirrel.com/license/Hetilica",
+"designer": "Diego Quintana",
+"category": [
+"Handdrawn"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Hjet",
+"source": "fontsquirrel",
+"slug": "hjet",
+"url": "https://www.fontsquirrel.com/fonts/hjet",
+"license_url": "https://www.fontsquirrel.com/license/hjet",
+"designer": "T. Christopher White",
+"category": [
+"Slab Serif"
+],
+"styles_count": 2,
+"font_files": 2,
+"license": "OFL-1.1",
+"risk": "selamat",
+"license_file": "SIL Open Font License.txt",
+"license_snippet": "com), with Reserved Font Name Hjet This Font Software is licensed under the SIL Open Font License, Version 1."
+},
+{
+"name": "Holy-Ravioli",
+"source": "fontsquirrel",
+"slug": "Holy-Ravioli",
+"url": "https://www.fontsquirrel.com/fonts/Holy-Ravioli",
+"license_url": "https://www.fontsquirrel.com/license/Holy-Ravioli",
+"designer": "Nick's Fonts",
+"category": [
+"Retro"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Nick's Fonts License.txt",
+"license_snippet": "YOU MAY: -Send a copy of any Nick's Fonts font data along with your documents to a commercial printer or other service bureau to enable the editing or printing of your document."
+},
+{
+"name": "Hominis",
+"source": "fontsquirrel",
+"slug": "Hominis",
+"url": "https://www.fontsquirrel.com/fonts/Hominis",
+"license_url": "https://www.fontsquirrel.com/license/Hominis",
+"designer": "Paul Lloyd",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Hornswoggled",
+"source": "fontsquirrel",
+"slug": "Hornswoggled",
+"url": "https://www.fontsquirrel.com/fonts/Hornswoggled",
+"license_url": "https://www.fontsquirrel.com/license/Hornswoggled",
+"designer": "Nick's Fonts",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "HVD Bodedo",
+"source": "fontsquirrel",
+"slug": "hvd-bodedo",
+"url": "https://www.fontsquirrel.com/fonts/hvd-bodedo",
+"license_url": "https://www.fontsquirrel.com/license/hvd-bodedo",
+"designer": "HVD Fonts",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "HVD Comic Serif Pro",
+"source": "fontsquirrel",
+"slug": "hvd-comic-serif-pro",
+"url": "https://www.fontsquirrel.com/fonts/hvd-comic-serif-pro",
+"license_url": "https://www.fontsquirrel.com/license/hvd-comic-serif-pro",
+"designer": "HVD Fonts",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "HVD Edding 780",
+"source": "fontsquirrel",
+"slug": "hvd-edding-780",
+"url": "https://www.fontsquirrel.com/fonts/hvd-edding-780",
+"license_url": "https://www.fontsquirrel.com/license/hvd-edding-780",
+"designer": "HVD Fonts",
+"category": [
+"Handdrawn"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (bercanggah)",
+"risk": "berisiko",
+"license_file": "HVD Fonts License - 2.00.txt",
+"license_snippet": "• This typeface is free for personal and commercial use."
+},
+{
+"name": "HVD Peace",
+"source": "fontsquirrel",
+"slug": "hvd-peace",
+"url": "https://www.fontsquirrel.com/fonts/hvd-peace",
+"license_url": "https://www.fontsquirrel.com/license/hvd-peace",
+"designer": "HVD Fonts",
+"category": [
+"Stencil"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "HVD Poster",
+"source": "fontsquirrel",
+"slug": "hvd-poster",
+"url": "https://www.fontsquirrel.com/fonts/hvd-poster",
+"license_url": "https://www.fontsquirrel.com/license/hvd-poster",
+"designer": "HVD Fonts",
+"category": [
+"Display"
+],
+"styles_count": 2,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "HVD Steinzeit",
+"source": "fontsquirrel",
+"slug": "hvd-steinzeit",
+"url": "https://www.fontsquirrel.com/fonts/hvd-steinzeit",
+"license_url": "https://www.fontsquirrel.com/license/hvd-steinzeit",
+"designer": "HVD Fonts",
+"category": [
+"Novelty"
+],
+"styles_count": 2,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "IM FELL English PRO",
+"source": "fontsquirrel",
+"slug": "im-fell-english-pro",
+"url": "https://www.fontsquirrel.com/fonts/im-fell-english-pro",
+"license_url": "https://www.fontsquirrel.com/license/im-fell-english-pro",
+"designer": "Igino Marini",
+"category": [
+"Display"
+],
+"styles_count": 2,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Impact Label",
+"source": "fontsquirrel",
+"slug": "impact-label",
+"url": "https://www.fontsquirrel.com/fonts/impact-label",
+"license_url": "https://www.fontsquirrel.com/license/impact-label",
+"designer": "Tension Type",
+"category": [
+"Novelty"
+],
+"styles_count": 2,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Indigo",
+"source": "fontsquirrel",
+"slug": "indigo",
+"url": "https://www.fontsquirrel.com/fonts/indigo",
+"license_url": "https://www.fontsquirrel.com/license/indigo",
+"designer": "Salt & Pepper Designs",
+"category": [
+"Display"
+],
+"styles_count": 2,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Indubitably",
+"source": "fontsquirrel",
+"slug": "Indubitably",
+"url": "https://www.fontsquirrel.com/fonts/Indubitably",
+"license_url": "https://www.fontsquirrel.com/license/Indubitably",
+"designer": "Nick's Fonts",
+"category": [
+"Retro"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Intruder Alert",
+"source": "fontsquirrel",
+"slug": "Intruder-Alert",
+"url": "https://www.fontsquirrel.com/fonts/Intruder-Alert",
+"license_url": "https://www.fontsquirrel.com/license/Intruder-Alert",
+"designer": "Objets Dart",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "itsadzoke",
+"source": "fontsquirrel",
+"slug": "itsadzoke",
+"url": "https://www.fontsquirrel.com/fonts/itsadzoke",
+"license_url": "https://www.fontsquirrel.com/license/itsadzoke",
+"designer": "GLUK fonts",
+"category": [
+"Display"
+],
+"styles_count": 2,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Jinky",
+"source": "fontsquirrel",
+"slug": "Jinky",
+"url": "https://www.fontsquirrel.com/fonts/Jinky",
+"license_url": "https://www.fontsquirrel.com/license/Jinky",
+"designer": "Rotodesign",
+"category": [
+"Handdrawn"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Rotodesign License.txt",
+"license_snippet": "This font is freeware, and is provided with no warranties as to its quality or its utility."
+},
+{
+"name": "Journal",
+"source": "fontsquirrel",
+"slug": "Journal",
+"url": "https://www.fontsquirrel.com/fonts/Journal",
+"license_url": "https://www.fontsquirrel.com/license/Journal",
+"designer": "Fontourist",
+"category": [
+"Handdrawn"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Freeware License.txt",
+"license_snippet": "download from either the original source or from multiple free-font sites then we assume it to be safe to use the font commercially."
+},
+{
+"name": "Jr Hand",
+"source": "fontsquirrel",
+"slug": "Jr-Hand",
+"url": "https://www.fontsquirrel.com/fonts/Jr-Hand",
+"license_url": "https://www.fontsquirrel.com/license/Jr-Hand",
+"designer": "Tepid Monkey Fonts",
+"category": [
+"Handdrawn"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Juice",
+"source": "fontsquirrel",
+"slug": "Juice",
+"url": "https://www.fontsquirrel.com/fonts/Juice",
+"license_url": "https://www.fontsquirrel.com/license/Juice",
+"designer": "Gadisradio",
+"category": [
+"Display"
+],
+"styles_count": 6,
+"font_files": 6,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Gadisradio User License Agreement.txt",
+"license_snippet": "Gadisradio Inc. END USER LICENSE AGREEMENT This Gadisradio Inc. End User Agreement becomes a binding contract between you and Gadisradio Inc. (a) when you click on the area marked 'ACCEPT LICENSE AGRE"
+},
+{
+"name": "JungleFever",
+"source": "fontsquirrel",
+"slug": "JungleFever",
+"url": "https://www.fontsquirrel.com/fonts/JungleFever",
+"license_url": "https://www.fontsquirrel.com/license/JungleFever",
+"designer": "Nick's Fonts",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Nick's Fonts License.txt",
+"license_snippet": "YOU MAY: -Send a copy of any Nick's Fonts font data along with your documents to a commercial printer or other service bureau to enable the editing or printing of your document."
+},
+{
+"name": "JustOldFashion",
+"source": "fontsquirrel",
+"slug": "JustOldFashion",
+"url": "https://www.fontsquirrel.com/fonts/JustOldFashion",
+"license_url": "https://www.fontsquirrel.com/license/JustOldFashion",
+"designer": "Manfred Klein Fonteria",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (komersial dibenarkan)",
+"risk": "semak",
+"license_file": "Manfred Klein License.txt",
+"license_snippet": "They are even free for commercial use – but if there’s any profit, pls make a donation to organizations like Doctors Without Borders."
+},
+{
+"name": "Karatula",
+"source": "fontsquirrel",
+"slug": "Karatula",
+"url": "https://www.fontsquirrel.com/fonts/Karatula",
+"license_url": "https://www.fontsquirrel.com/license/Karatula",
+"designer": "Nyek! Pinoy Komik Fonts",
+"category": [
+"Comic"
+],
+"styles_count": 4,
+"font_files": 4,
+"license": "Lesen sendiri (had komersial)",
+"risk": "berisiko",
+"license_file": "Nyek! License.txt",
+"license_snippet": "These fonts are for free and can be use for commercial and non-commercial purposes."
+},
+{
+"name": "Karnivore",
+"source": "fontsquirrel",
+"slug": "Karnivore-Lite",
+"url": "https://www.fontsquirrel.com/fonts/Karnivore-Lite",
+"license_url": "https://www.fontsquirrel.com/license/Karnivore-Lite",
+"designer": "Apostrophic Labs",
+"category": [
+"Display"
+],
+"styles_count": 6,
+"font_files": 6,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Apostrophic Labs License.txt",
+"license_snippet": "Here is the \"Read Me\" from the original http://www.apostrophiclab.com website: Archived here: http://web.archive.org/web/20030408055445/www.hardcovermedia.com/lab/Pages/info.html and here: http://apos"
+},
+{
+"name": "Kells SD",
+"source": "fontsquirrel",
+"slug": "Kells-SD",
+"url": "https://www.fontsquirrel.com/fonts/Kells-SD",
+"license_url": "https://www.fontsquirrel.com/license/Kells-SD",
+"designer": "Steve Deffeyes",
+"category": [
+"Calligraphic"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Steve Deffeyes Font License.txt",
+"license_snippet": "It is freeware so re-distribute it as much as you like, just keep the original ."
+},
+{
+"name": "KelmscottRoman",
+"source": "fontsquirrel",
+"slug": "KelmscottRoman",
+"url": "https://www.fontsquirrel.com/fonts/KelmscottRoman",
+"license_url": "https://www.fontsquirrel.com/license/KelmscottRoman",
+"designer": "Nick's Fonts",
+"category": [
+"Retro"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Nick's Fonts License.txt",
+"license_snippet": "YOU MAY: -Send a copy of any Nick's Fonts font data along with your documents to a commercial printer or other service bureau to enable the editing or printing of your document."
+},
+{
+"name": "Kingthings Calligraphica",
+"source": "fontsquirrel",
+"slug": "Kingthings-Calligraphica",
+"url": "https://www.fontsquirrel.com/fonts/Kingthings-Calligraphica",
+"license_url": "https://www.fontsquirrel.com/license/Kingthings-Calligraphica",
+"designer": "Kingthings",
+"category": [
+"Calligraphic"
+],
+"styles_count": 3,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Kingthings Exeter",
+"source": "fontsquirrel",
+"slug": "Kingthings-Exeter",
+"url": "https://www.fontsquirrel.com/fonts/Kingthings-Exeter",
+"license_url": "https://www.fontsquirrel.com/license/Kingthings-Exeter",
+"designer": "Kingthings",
+"category": [
+"Calligraphic"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Kingthings License.txt",
+"license_snippet": "I am constantly working on all my fonts so these may well not be the last versions, please check my web site at: http://www.kingthingsfonts.co.uk/fonts/fonts.htm for updates and new fonts. I hope you "
+},
+{
+"name": "Kingthings Foundation",
+"source": "fontsquirrel",
+"slug": "Kingthings-Foundation",
+"url": "https://www.fontsquirrel.com/fonts/Kingthings-Foundation",
+"license_url": "https://www.fontsquirrel.com/license/Kingthings-Foundation",
+"designer": "Kingthings",
+"category": [
+"Calligraphic"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Kingthings Gothique",
+"source": "fontsquirrel",
+"slug": "Kingthings-Gothique",
+"url": "https://www.fontsquirrel.com/fonts/Kingthings-Gothique",
+"license_url": "https://www.fontsquirrel.com/license/Kingthings-Gothique",
+"designer": "Kingthings",
+"category": [
+"Blackletter"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Kingthings Italique",
+"source": "fontsquirrel",
+"slug": "Kingthings-Italique",
+"url": "https://www.fontsquirrel.com/fonts/Kingthings-Italique",
+"license_url": "https://www.fontsquirrel.com/license/Kingthings-Italique",
+"designer": "Kingthings",
+"category": [
+"Blackletter"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Kingthings Petrock",
+"source": "fontsquirrel",
+"slug": "Kingthings-Petrock",
+"url": "https://www.fontsquirrel.com/fonts/Kingthings-Petrock",
+"license_url": "https://www.fontsquirrel.com/license/Kingthings-Petrock",
+"designer": "Kingthings",
+"category": [
+"Calligraphic"
+],
+"styles_count": 2,
+"font_files": 2,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Kingthings License.txt",
+"license_snippet": "I am constantly working on all my fonts so these may well not be the last versions, please check my web site at: http://www.kingthingsfonts.co.uk/fonts/fonts.htm for updates and new fonts. I hope you "
+},
+{
+"name": "Kingthings Printingkit",
+"source": "fontsquirrel",
+"slug": "Kingthings-Printingkit",
+"url": "https://www.fontsquirrel.com/fonts/Kingthings-Printingkit",
+"license_url": "https://www.fontsquirrel.com/license/Kingthings-Printingkit",
+"designer": "Kingthings",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Kingthings Spikeless",
+"source": "fontsquirrel",
+"slug": "Kingthings-Spikeless",
+"url": "https://www.fontsquirrel.com/fonts/Kingthings-Spikeless",
+"license_url": "https://www.fontsquirrel.com/license/Kingthings-Spikeless",
+"designer": "Kingthings",
+"category": [
+"Blackletter"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Kingthings Trypewriter",
+"source": "fontsquirrel",
+"slug": "Kingthings-Trypewriter",
+"url": "https://www.fontsquirrel.com/fonts/Kingthings-Trypewriter",
+"license_url": "https://www.fontsquirrel.com/license/Kingthings-Trypewriter",
+"designer": "Kingthings",
+"category": [
+"Typewriter"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Kingthings Versalis",
+"source": "fontsquirrel",
+"slug": "Kingthings-Versalis",
+"url": "https://www.fontsquirrel.com/fonts/Kingthings-Versalis",
+"license_url": "https://www.fontsquirrel.com/license/Kingthings-Versalis",
+"designer": "Kingthings",
+"category": [
+"Novelty"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Kingthings Wrote",
+"source": "fontsquirrel",
+"slug": "Kingthings-Wrote",
+"url": "https://www.fontsquirrel.com/fonts/Kingthings-Wrote",
+"license_url": "https://www.fontsquirrel.com/license/Kingthings-Wrote",
+"designer": "Kingthings",
+"category": [
+"Script"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Kingthings Xstitch",
+"source": "fontsquirrel",
+"slug": "Kingthings-Xstitch",
+"url": "https://www.fontsquirrel.com/fonts/Kingthings-Xstitch",
+"license_url": "https://www.fontsquirrel.com/license/Kingthings-Xstitch",
+"designer": "Kingthings",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "KJV1611",
+"source": "fontsquirrel",
+"slug": "kjv1611",
+"url": "https://www.fontsquirrel.com/fonts/kjv1611",
+"license_url": "https://www.fontsquirrel.com/license/kjv1611",
+"designer": "Fredrick Brennan",
+"category": [
+"Blackletter"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Know Your Product",
+"source": "fontsquirrel",
+"slug": "Know-Your-Product",
+"url": "https://www.fontsquirrel.com/fonts/Know-Your-Product",
+"license_url": "https://www.fontsquirrel.com/license/Know-Your-Product",
+"designer": "Vic Fieger",
+"category": [
+"Stencil"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Komika Axis",
+"source": "fontsquirrel",
+"slug": "Komika-Axis",
+"url": "https://www.fontsquirrel.com/fonts/Komika-Axis",
+"license_url": "https://www.fontsquirrel.com/license/Komika-Axis",
+"designer": "Apostrophic Labs",
+"category": [
+"Comic"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Komika Display",
+"source": "fontsquirrel",
+"slug": "Komika-Display",
+"url": "https://www.fontsquirrel.com/fonts/Komika-Display",
+"license_url": "https://www.fontsquirrel.com/license/Komika-Display",
+"designer": "Apostrophic Labs",
+"category": [
+"Comic"
+],
+"styles_count": 4,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Komika Hand",
+"source": "fontsquirrel",
+"slug": "Komika-Hand",
+"url": "https://www.fontsquirrel.com/fonts/Komika-Hand",
+"license_url": "https://www.fontsquirrel.com/license/Komika-Hand",
+"designer": "Apostrophic Labs",
+"category": [
+"Comic"
+],
+"styles_count": 5,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Komika Text",
+"source": "fontsquirrel",
+"slug": "Komika-Text",
+"url": "https://www.fontsquirrel.com/fonts/Komika-Text",
+"license_url": "https://www.fontsquirrel.com/license/Komika-Text",
+"designer": "Apostrophic Labs",
+"category": [
+"Comic"
+],
+"styles_count": 10,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Komika Title",
+"source": "fontsquirrel",
+"slug": "Komika-Title",
+"url": "https://www.fontsquirrel.com/fonts/Komika-Title",
+"license_url": "https://www.fontsquirrel.com/license/Komika-Title",
+"designer": "Apostrophic Labs",
+"category": [
+"Comic"
+],
+"styles_count": 5,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "konstytucyja",
+"source": "fontsquirrel",
+"slug": "konstytucyja",
+"url": "https://www.fontsquirrel.com/fonts/konstytucyja",
+"license_url": "https://www.fontsquirrel.com/license/konstytucyja",
+"designer": "GLUK fonts",
+"category": [
+"Script"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Kontrapunkt",
+"source": "fontsquirrel",
+"slug": "Kontrapunkt",
+"url": "https://www.fontsquirrel.com/fonts/Kontrapunkt",
+"license_url": "https://www.fontsquirrel.com/license/Kontrapunkt",
+"designer": "Kontrapunkt",
+"category": [
+"Slab Serif"
+],
+"styles_count": 3,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "La unica",
+"source": "fontsquirrel",
+"slug": "la-unica",
+"url": "https://www.fontsquirrel.com/fonts/la-unica",
+"license_url": "https://www.fontsquirrel.com/license/la-unica",
+"designer": "Estefania Hormigo",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Laconic",
+"source": "fontsquirrel",
+"slug": "laconic",
+"url": "https://www.fontsquirrel.com/fonts/laconic",
+"license_url": "https://www.fontsquirrel.com/license/laconic",
+"designer": "Robby Woodard",
+"category": [
+"Display"
+],
+"styles_count": 4,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "LakeshoreDrive",
+"source": "fontsquirrel",
+"slug": "LakeshoreDrive",
+"url": "https://www.fontsquirrel.com/fonts/LakeshoreDrive",
+"license_url": "https://www.fontsquirrel.com/license/LakeshoreDrive",
+"designer": "Nick's Fonts",
+"category": [
+"Retro"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Landliebe",
+"source": "fontsquirrel",
+"slug": "Landliebe",
+"url": "https://www.fontsquirrel.com/fonts/Landliebe",
+"license_url": "https://www.fontsquirrel.com/license/Landliebe",
+"designer": "Richard Mitchell",
+"category": [
+"Script"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Lane",
+"source": "fontsquirrel",
+"slug": "Lane",
+"url": "https://www.fontsquirrel.com/fonts/Lane",
+"license_url": "https://www.fontsquirrel.com/license/Lane",
+"designer": "Apostrophic Labs",
+"category": [
+"Display"
+],
+"styles_count": 3,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Langdon",
+"source": "fontsquirrel",
+"slug": "langdon",
+"url": "https://www.fontsquirrel.com/fonts/langdon",
+"license_url": "https://www.fontsquirrel.com/license/langdon",
+"designer": "xlntelecom",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Lapsus Pro",
+"source": "fontsquirrel",
+"slug": "lapsus-pro",
+"url": "https://www.fontsquirrel.com/fonts/lapsus-pro",
+"license_url": "https://www.fontsquirrel.com/license/lapsus-pro",
+"designer": "theguybrush",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Latin Modern Mono",
+"source": "fontsquirrel",
+"slug": "Latin-Modern-Mono",
+"url": "https://www.fontsquirrel.com/fonts/Latin-Modern-Mono",
+"license_url": "https://www.fontsquirrel.com/license/Latin-Modern-Mono",
+"designer": "GUST e-foundry",
+"category": [
+"Typewriter"
+],
+"styles_count": 17,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Leafy glade",
+"source": "fontsquirrel",
+"slug": "Leafy-glade",
+"url": "https://www.fontsquirrel.com/fonts/Leafy-glade",
+"license_url": "https://www.fontsquirrel.com/license/Leafy-glade",
+"designer": "West Wind Fonts",
+"category": [
+"Novelty"
+],
+"styles_count": 2,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "League Script #1",
+"source": "fontsquirrel",
+"slug": "league-script-1",
+"url": "https://www.fontsquirrel.com/fonts/league-script-1",
+"license_url": "https://www.fontsquirrel.com/license/league-script-1",
+"designer": "The League of Moveable Type",
+"category": [
+"Script"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Leander",
+"source": "fontsquirrel",
+"slug": "leander",
+"url": "https://www.fontsquirrel.com/fonts/leander",
+"license_url": "https://www.fontsquirrel.com/license/leander",
+"designer": "Tension Type",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Lemiesz",
+"source": "fontsquirrel",
+"slug": "Lemiesz",
+"url": "https://www.fontsquirrel.com/fonts/Lemiesz",
+"license_url": "https://www.fontsquirrel.com/license/Lemiesz",
+"designer": "David Rakowski",
+"category": [
+"Retro"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "LemonChicken",
+"source": "fontsquirrel",
+"slug": "LemonChicken",
+"url": "https://www.fontsquirrel.com/fonts/LemonChicken",
+"license_url": "https://www.fontsquirrel.com/license/LemonChicken",
+"designer": "Crack-a-Jack Studios",
+"category": [
+"Retro"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "LIBRARY 3 AM",
+"source": "fontsquirrel",
+"slug": "library-3-am",
+"url": "https://www.fontsquirrel.com/fonts/library-3-am",
+"license_url": "https://www.fontsquirrel.com/license/library-3-am",
+"designer": "Igor Kosinsky",
+"category": [
+"Display"
+],
+"styles_count": 2,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Lilac Malaria",
+"source": "fontsquirrel",
+"slug": "Lilac-Malaria",
+"url": "https://www.fontsquirrel.com/fonts/Lilac-Malaria",
+"license_url": "https://www.fontsquirrel.com/license/Lilac-Malaria",
+"designer": "Vic Fieger",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Lilly",
+"source": "fontsquirrel",
+"slug": "Lilly",
+"url": "https://www.fontsquirrel.com/fonts/Lilly",
+"license_url": "https://www.fontsquirrel.com/license/Lilly",
+"designer": "Apostrophic Labs",
+"category": [
+"Handdrawn"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Lintsec",
+"source": "fontsquirrel",
+"slug": "Lintsec",
+"url": "https://www.fontsquirrel.com/fonts/Lintsec",
+"license_url": "https://www.fontsquirrel.com/license/Lintsec",
+"designer": "David Rakowski",
+"category": [
+"Stencil"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Little Trouble Girl",
+"source": "fontsquirrel",
+"slug": "Little-Trouble-Girl",
+"url": "https://www.fontsquirrel.com/fonts/Little-Trouble-Girl",
+"license_url": "https://www.fontsquirrel.com/license/Little-Trouble-Girl",
+"designer": "Blue Vinyl Fonts",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Loaded",
+"source": "fontsquirrel",
+"slug": "loaded",
+"url": "https://www.fontsquirrel.com/fonts/loaded",
+"license_url": "https://www.fontsquirrel.com/license/loaded",
+"designer": "Andrew Wilson",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Londrina",
+"source": "fontsquirrel",
+"slug": "londrina",
+"url": "https://www.fontsquirrel.com/fonts/londrina",
+"license_url": "https://www.fontsquirrel.com/license/londrina",
+"designer": "Marcelo Magalhães",
+"category": [
+"Display"
+],
+"styles_count": 4,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Lucien Schoenschriftv CAT",
+"source": "fontsquirrel",
+"slug": "lucien-schoenschriftv-cat",
+"url": "https://www.fontsquirrel.com/fonts/lucien-schoenschriftv-cat",
+"license_url": "https://www.fontsquirrel.com/license/lucien-schoenschriftv-cat",
+"designer": "Peter Wiegel",
+"category": [
+"Script"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "MadisonSquare",
+"source": "fontsquirrel",
+"slug": "MadisonSquare",
+"url": "https://www.fontsquirrel.com/fonts/MadisonSquare",
+"license_url": "https://www.fontsquirrel.com/license/MadisonSquare",
+"designer": "Nick's Fonts",
+"category": [
+"Retro"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Magenta",
+"source": "fontsquirrel",
+"slug": "magenta",
+"url": "https://www.fontsquirrel.com/fonts/magenta",
+"license_url": "https://www.fontsquirrel.com/license/magenta",
+"designer": "BambooTypes",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Major Snafu",
+"source": "fontsquirrel",
+"slug": "Major-Snafu",
+"url": "https://www.fontsquirrel.com/fonts/Major-Snafu",
+"license_url": "https://www.fontsquirrel.com/license/Major-Snafu",
+"designer": "Vic Fieger",
+"category": [
+"Stencil"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Matchbook",
+"source": "fontsquirrel",
+"slug": "Matchbook",
+"url": "https://www.fontsquirrel.com/fonts/Matchbook",
+"license_url": "https://www.fontsquirrel.com/license/Matchbook",
+"designer": "One by Four",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Mathlete",
+"source": "fontsquirrel",
+"slug": "mathlete",
+"url": "https://www.fontsquirrel.com/fonts/mathlete",
+"license_url": "https://www.fontsquirrel.com/license/mathlete",
+"designer": "Mattox",
+"category": [
+"Handdrawn"
+],
+"styles_count": 4,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Matiz",
+"source": "fontsquirrel",
+"slug": "Matiz",
+"url": "https://www.fontsquirrel.com/fonts/Matiz",
+"license_url": "https://www.fontsquirrel.com/license/Matiz",
+"designer": "Beycan Çetin",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Freeware License.txt",
+"license_snippet": "download from either the original source or from multiple free-font sites then we assume it to be safe to use the font commercially."
+},
+{
+"name": "Membra",
+"source": "fontsquirrel",
+"slug": "membra",
+"url": "https://www.fontsquirrel.com/fonts/membra",
+"license_url": "https://www.fontsquirrel.com/license/membra",
+"designer": "Disaster Fonts",
+"category": [
+"Novelty"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Metro",
+"source": "fontsquirrel",
+"slug": "Metro",
+"url": "https://www.fontsquirrel.com/fonts/Metro",
+"license_url": "https://www.fontsquirrel.com/license/Metro",
+"designer": "Jovanny Lemonad",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Mikodacs",
+"source": "fontsquirrel",
+"slug": "mikodacs",
+"url": "https://www.fontsquirrel.com/fonts/mikodacs",
+"license_url": "https://www.fontsquirrel.com/license/mikodacs",
+"designer": "GLUK fonts",
+"category": [
+"Display"
+],
+"styles_count": 2,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Millennia",
+"source": "fontsquirrel",
+"slug": "Millennia",
+"url": "https://www.fontsquirrel.com/fonts/Millennia",
+"license_url": "https://www.fontsquirrel.com/license/Millennia",
+"designer": "Fonthead Design",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Minipax",
+"source": "fontsquirrel",
+"slug": "minipax",
+"url": "https://www.fontsquirrel.com/fonts/minipax",
+"license_url": "https://www.fontsquirrel.com/license/minipax",
+"designer": "Raphaël Ronot",
+"category": [
+"Slab Serif"
+],
+"styles_count": 5,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Minotaur",
+"source": "fontsquirrel",
+"slug": "Minotaur",
+"url": "https://www.fontsquirrel.com/fonts/Minotaur",
+"license_url": "https://www.fontsquirrel.com/license/Minotaur",
+"designer": "Walter Velez",
+"category": [
+"Retro"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "MinstrelPoster",
+"source": "fontsquirrel",
+"slug": "MinstrelPosterWHG",
+"url": "https://www.fontsquirrel.com/fonts/MinstrelPosterWHG",
+"license_url": "https://www.fontsquirrel.com/license/MinstrelPosterWHG",
+"designer": "Nick's Fonts",
+"category": [
+"Retro"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Moinho",
+"source": "fontsquirrel",
+"slug": "moinho",
+"url": "https://www.fontsquirrel.com/fonts/moinho",
+"license_url": "https://www.fontsquirrel.com/license/moinho",
+"designer": "Rômulo Gobira",
+"category": [
+"Handdrawn"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Moms Typewriter",
+"source": "fontsquirrel",
+"slug": "MomsTypewriter",
+"url": "https://www.fontsquirrel.com/fonts/MomsTypewriter",
+"license_url": "https://www.fontsquirrel.com/license/MomsTypewriter",
+"designer": "Christoph Mueller",
+"category": [
+"Typewriter"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Moonless SC",
+"source": "fontsquirrel",
+"slug": "moonless-sc",
+"url": "https://www.fontsquirrel.com/fonts/moonless-sc",
+"license_url": "https://www.fontsquirrel.com/license/moonless-sc",
+"designer": "Franzi Draws",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "MothproofScript",
+"source": "fontsquirrel",
+"slug": "MothproofScript",
+"url": "https://www.fontsquirrel.com/fonts/MothproofScript",
+"license_url": "https://www.fontsquirrel.com/license/MothproofScript",
+"designer": "frostmoth",
+"category": [
+"Calligraphic"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Mutlu",
+"source": "fontsquirrel",
+"slug": "Mutlu",
+"url": "https://www.fontsquirrel.com/fonts/Mutlu",
+"license_url": "https://www.fontsquirrel.com/license/Mutlu",
+"designer": "Gazoz",
+"category": [
+"Script"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "My Underwood",
+"source": "fontsquirrel",
+"slug": "My-Underwood",
+"url": "https://www.fontsquirrel.com/fonts/My-Underwood",
+"license_url": "https://www.fontsquirrel.com/license/My-Underwood",
+"designer": "Tension Type",
+"category": [
+"Typewriter"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Nautilus Pompilius",
+"source": "fontsquirrel",
+"slug": "nautilus-pompilius",
+"url": "https://www.fontsquirrel.com/fonts/nautilus-pompilius",
+"license_url": "https://www.fontsquirrel.com/license/nautilus-pompilius",
+"designer": "Punk You Brands",
+"category": [
+"Script"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "NeoRetroDraw",
+"source": "fontsquirrel",
+"slug": "NeoRetroDraw",
+"url": "https://www.fontsquirrel.com/fonts/NeoRetroDraw",
+"license_url": "https://www.fontsquirrel.com/license/NeoRetroDraw",
+"designer": "Font Boutique",
+"category": [
+"Display"
+],
+"styles_count": 3,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Nervous Rex",
+"source": "fontsquirrel",
+"slug": "Nervous-Rex",
+"url": "https://www.fontsquirrel.com/fonts/Nervous-Rex",
+"license_url": "https://www.fontsquirrel.com/license/Nervous-Rex",
+"designer": "Vic Fieger",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Norwester",
+"source": "fontsquirrel",
+"slug": "norwester",
+"url": "https://www.fontsquirrel.com/fonts/norwester",
+"license_url": "https://www.fontsquirrel.com/license/norwester",
+"designer": "Jamie Wilson",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Note this",
+"source": "fontsquirrel",
+"slug": "Note-this",
+"url": "https://www.fontsquirrel.com/fonts/Note-this",
+"license_url": "https://www.fontsquirrel.com/license/Note-this",
+"designer": "West Wind Fonts",
+"category": [
+"Handdrawn"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "NotMaryKate",
+"source": "fontsquirrel",
+"slug": "NotMaryKate",
+"url": "https://www.fontsquirrel.com/fonts/NotMaryKate",
+"license_url": "https://www.fontsquirrel.com/license/NotMaryKate",
+"designer": "Nick's Fonts",
+"category": [
+"Retro"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "odstemplik",
+"source": "fontsquirrel",
+"slug": "odstemplik",
+"url": "https://www.fontsquirrel.com/fonts/odstemplik",
+"license_url": "https://www.fontsquirrel.com/license/odstemplik",
+"designer": "GLUK fonts",
+"category": [
+"Script"
+],
+"styles_count": 2,
+"font_files": 2,
+"license": "OFL-1.1",
+"risk": "selamat",
+"license_file": "SIL Open Font License.txt",
+"license_snippet": "This Font Software is licensed under the SIL Open Font License, Version 1."
+},
+{
+"name": "Ohio Kraft",
+"source": "fontsquirrel",
+"slug": "ohio-kraft",
+"url": "https://www.fontsquirrel.com/fonts/ohio-kraft",
+"license_url": "https://www.fontsquirrel.com/license/ohio-kraft",
+"designer": "Jordi Carreras",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Old Stamper",
+"source": "fontsquirrel",
+"slug": "Old-Stamper",
+"url": "https://www.fontsquirrel.com/fonts/Old-Stamper",
+"license_url": "https://www.fontsquirrel.com/license/Old-Stamper",
+"designer": "Cpr.Sparhelt",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Origicide",
+"source": "fontsquirrel",
+"slug": "Origicide",
+"url": "https://www.fontsquirrel.com/fonts/Origicide",
+"license_url": "https://www.fontsquirrel.com/license/Origicide",
+"designer": "Cpr.Sparhelt",
+"category": [
+"Display"
+],
+"styles_count": 2,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Orotund",
+"source": "fontsquirrel",
+"slug": "Orotund",
+"url": "https://www.fontsquirrel.com/fonts/Orotund",
+"license_url": "https://www.fontsquirrel.com/license/Orotund",
+"designer": "Paul Lloyd",
+"category": [
+"Display"
+],
+"styles_count": 2,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "OSP DIN",
+"source": "fontsquirrel",
+"slug": "osp-din",
+"url": "https://www.fontsquirrel.com/fonts/osp-din",
+"license_url": "https://www.fontsquirrel.com/license/osp-din",
+"designer": "OSP-foundry",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Ostrich Sans",
+"source": "fontsquirrel",
+"slug": "ostrich-sans",
+"url": "https://www.fontsquirrel.com/fonts/ostrich-sans",
+"license_url": "https://www.fontsquirrel.com/license/ostrich-sans",
+"designer": "Tyler Finck",
+"category": [
+"Display"
+],
+"styles_count": 8,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Ostrich Sans Inline",
+"source": "fontsquirrel",
+"slug": "ostrich-sans-inline",
+"url": "https://www.fontsquirrel.com/fonts/ostrich-sans-inline",
+"license_url": "https://www.fontsquirrel.com/license/ostrich-sans-inline",
+"designer": "Tyler Finck",
+"category": [
+"Display"
+],
+"styles_count": 2,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Paete Round",
+"source": "fontsquirrel",
+"slug": "Paete-Round",
+"url": "https://www.fontsquirrel.com/fonts/Paete-Round",
+"license_url": "https://www.fontsquirrel.com/license/Paete-Round",
+"designer": "Nyek! Pinoy Komik Fonts",
+"category": [
+"Comic"
+],
+"styles_count": 4,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Paint the Sky",
+"source": "fontsquirrel",
+"slug": "paint-the-sky",
+"url": "https://www.fontsquirrel.com/fonts/paint-the-sky",
+"license_url": "https://www.fontsquirrel.com/license/paint-the-sky",
+"designer": "Koen van der Bliek",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Palitoon",
+"source": "fontsquirrel",
+"slug": "palitoon",
+"url": "https://www.fontsquirrel.com/fonts/palitoon",
+"license_url": "https://www.fontsquirrel.com/license/palitoon",
+"designer": "Daniel Maciel",
+"category": [
+"Handdrawn"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "PaulMaul",
+"source": "fontsquirrel",
+"slug": "PaulMaul",
+"url": "https://www.fontsquirrel.com/fonts/PaulMaul",
+"license_url": "https://www.fontsquirrel.com/license/PaulMaul",
+"designer": "!Exclamachine Type Foundry",
+"category": [
+"Handdrawn"
+],
+"styles_count": 2,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Pecita",
+"source": "fontsquirrel",
+"slug": "pecita",
+"url": "https://www.fontsquirrel.com/fonts/pecita",
+"license_url": "https://www.fontsquirrel.com/license/pecita",
+"designer": "Philippe Cochy",
+"category": [
+"Handdrawn"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Permian Slab",
+"source": "fontsquirrel",
+"slug": "permian-slab",
+"url": "https://www.fontsquirrel.com/fonts/permian-slab",
+"license_url": "https://www.fontsquirrel.com/license/permian-slab",
+"designer": "Permian Typeface",
+"category": [
+"Slab Serif"
+],
+"styles_count": 3,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Pincoyablack",
+"source": "fontsquirrel",
+"slug": "Pincoyablack",
+"url": "https://www.fontsquirrel.com/fonts/Pincoyablack",
+"license_url": "https://www.fontsquirrel.com/license/Pincoyablack",
+"designer": "Daniel Hernández",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "PixieFont",
+"source": "fontsquirrel",
+"slug": "PixieFont",
+"url": "https://www.fontsquirrel.com/fonts/PixieFont",
+"license_url": "https://www.fontsquirrel.com/license/PixieFont",
+"designer": "David Rakowski",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "PlainBlack",
+"source": "fontsquirrel",
+"slug": "PlainBlack",
+"url": "https://www.fontsquirrel.com/fonts/PlainBlack",
+"license_url": "https://www.fontsquirrel.com/license/PlainBlack",
+"designer": "Paul Lloyd",
+"category": [
+"Blackletter"
+],
+"styles_count": 6,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Plasma Drip",
+"source": "fontsquirrel",
+"slug": "Plasma-Drip-BRK",
+"url": "https://www.fontsquirrel.com/fonts/Plasma-Drip-BRK",
+"license_url": "https://www.fontsquirrel.com/license/Plasma-Drip-BRK",
+"designer": "Brian Kent",
+"category": [
+"Novelty"
+],
+"styles_count": 2,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Playtime With Hot Toddies",
+"source": "fontsquirrel",
+"slug": "playtime-with-hot-toddies",
+"url": "https://www.fontsquirrel.com/fonts/playtime-with-hot-toddies",
+"license_url": "https://www.fontsquirrel.com/license/playtime-with-hot-toddies",
+"designer": "GemFonts",
+"category": [
+"Handdrawn"
+],
+"styles_count": 3,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Pleasantly Plump",
+"source": "fontsquirrel",
+"slug": "Pleasantly-Plump",
+"url": "https://www.fontsquirrel.com/fonts/Pleasantly-Plump",
+"license_url": "https://www.fontsquirrel.com/license/Pleasantly-Plump",
+"designer": "James Fordyce",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "James Fordyce Font License.txt",
+"license_snippet": "This font was created using Fontographer for Windows. It is copyright by J. Fordyce but may be freely distributed provided it is not altered, no fee is charged for it, and this text file is included w"
+},
+{
+"name": "Plexifont",
+"source": "fontsquirrel",
+"slug": "Plexifont-BV",
+"url": "https://www.fontsquirrel.com/fonts/Plexifont-BV",
+"license_url": "https://www.fontsquirrel.com/license/Plexifont-BV",
+"designer": "Blue Vinyl Fonts",
+"category": [
+"Novelty"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (komersial dibenarkan)",
+"risk": "semak",
+"license_file": "Blue Vinyl License.txt",
+"license_snippet": "com The Freeware Font(s) included in this pack were created by Jess Latham."
+},
+{
+"name": "Plug-NickelBlack",
+"source": "fontsquirrel",
+"slug": "Plug-NickelBlack",
+"url": "https://www.fontsquirrel.com/fonts/Plug-NickelBlack",
+"license_url": "https://www.fontsquirrel.com/license/Plug-NickelBlack",
+"designer": "Nick's Fonts",
+"category": [
+"Retro"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Poetsen",
+"source": "fontsquirrel",
+"slug": "poetsen",
+"url": "https://www.fontsquirrel.com/fonts/poetsen",
+"license_url": "https://www.fontsquirrel.com/license/poetsen",
+"designer": "Impallari Type",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Polsku",
+"source": "fontsquirrel",
+"slug": "polsku",
+"url": "https://www.fontsquirrel.com/fonts/polsku",
+"license_url": "https://www.fontsquirrel.com/license/polsku",
+"designer": "OSP-foundry",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Portcullion",
+"source": "fontsquirrel",
+"slug": "Portcullion",
+"url": "https://www.fontsquirrel.com/fonts/Portcullion",
+"license_url": "https://www.fontsquirrel.com/license/Portcullion",
+"designer": "Paul Lloyd",
+"category": [
+"Blackletter"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (tidak jelas)",
+"risk": "berisiko",
+"license_file": "Paul Lloyd License Agreement.txt",
+"license_snippet": "(Legalistic waffle over) This font is the ultimate freeware."
+},
+{
+"name": "Porter Sans",
+"source": "fontsquirrel",
+"slug": "porter-sans",
+"url": "https://www.fontsquirrel.com/fonts/porter-sans",
+"license_url": "https://www.fontsquirrel.com/license/porter-sans",
+"designer": "Tyler Finck",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Post No Bills",
+"source": "fontsquirrel",
+"slug": "post-no-bills",
+"url": "https://www.fontsquirrel.com/fonts/post-no-bills",
+"license_url": "https://www.fontsquirrel.com/license/post-no-bills",
+"designer": "Mooniak",
+"category": [
+"Stencil"
+],
+"styles_count": 6,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Proclamate Light",
+"source": "fontsquirrel",
+"slug": "Proclamate",
+"url": "https://www.fontsquirrel.com/fonts/Proclamate",
+"license_url": "https://www.fontsquirrel.com/license/Proclamate",
+"designer": "Paul Lloyd",
+"category": [
+"Blackletter"
+],
+"styles_count": 3,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Promocyja",
+"source": "fontsquirrel",
+"slug": "Promocyja",
+"url": "https://www.fontsquirrel.com/fonts/Promocyja",
+"license_url": "https://www.fontsquirrel.com/license/Promocyja",
+"designer": "GLUK fonts",
+"category": [
+"Script"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Pusab",
+"source": "fontsquirrel",
+"slug": "Pusab",
+"url": "https://www.fontsquirrel.com/fonts/Pusab",
+"license_url": "https://www.fontsquirrel.com/license/Pusab",
+"designer": "Flat-it",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Qarmic Sans",
+"source": "fontsquirrel",
+"slug": "Qikki-Reg",
+"url": "https://www.fontsquirrel.com/fonts/Qikki-Reg",
+"license_url": "https://www.fontsquirrel.com/license/Qikki-Reg",
+"designer": "Joanne Taylor",
+"category": [
+"Comic"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Quaerite Regnum Dei",
+"source": "fontsquirrel",
+"slug": "quaerite-regnum-dei",
+"url": "https://www.fontsquirrel.com/fonts/quaerite-regnum-dei",
+"license_url": "https://www.fontsquirrel.com/license/quaerite-regnum-dei",
+"designer": "Fredrick Brennan",
+"category": [
+"Blackletter"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Quick End Jerk",
+"source": "fontsquirrel",
+"slug": "Quick-End-Jerk",
+"url": "https://www.fontsquirrel.com/fonts/Quick-End-Jerk",
+"license_url": "https://www.fontsquirrel.com/license/Quick-End-Jerk",
+"designer": "Vic Fieger",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "QuigleyWiggly",
+"source": "fontsquirrel",
+"slug": "QuigleyWiggly",
+"url": "https://www.fontsquirrel.com/fonts/QuigleyWiggly",
+"license_url": "https://www.fontsquirrel.com/license/QuigleyWiggly",
+"designer": "Nick's Fonts",
+"category": [
+"Script"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "QumpellkaNo12",
+"source": "fontsquirrel",
+"slug": "qumpellkano12",
+"url": "https://www.fontsquirrel.com/fonts/qumpellkano12",
+"license_url": "https://www.fontsquirrel.com/license/qumpellkano12",
+"designer": "GLUK fonts",
+"category": [
+"Script"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Rapscallion",
+"source": "fontsquirrel",
+"slug": "Rapscallion",
+"url": "https://www.fontsquirrel.com/fonts/Rapscallion",
+"license_url": "https://www.fontsquirrel.com/license/Rapscallion",
+"designer": "Ryan Splint",
+"category": [
+"Blackletter"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Rawengulk",
+"source": "fontsquirrel",
+"slug": "rawengulk",
+"url": "https://www.fontsquirrel.com/fonts/rawengulk",
+"license_url": "https://www.fontsquirrel.com/license/rawengulk",
+"designer": "GLUK fonts",
+"category": [
+"Slab Serif"
+],
+"styles_count": 6,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Rechtman",
+"source": "fontsquirrel",
+"slug": "Rechtman",
+"url": "https://www.fontsquirrel.com/fonts/Rechtman",
+"license_url": "https://www.fontsquirrel.com/license/Rechtman",
+"designer": "David Rakowski",
+"category": [
+"Script"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Reswysokr",
+"source": "fontsquirrel",
+"slug": "reswysokr",
+"url": "https://www.fontsquirrel.com/fonts/reswysokr",
+"license_url": "https://www.fontsquirrel.com/license/reswysokr",
+"designer": "GLUK fonts",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Riesling",
+"source": "fontsquirrel",
+"slug": "riesling",
+"url": "https://www.fontsquirrel.com/fonts/riesling",
+"license_url": "https://www.fontsquirrel.com/license/riesling",
+"designer": "Bright Ideas",
+"category": [
+"Retro"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Ritaglio",
+"source": "fontsquirrel",
+"slug": "ritaglio",
+"url": "https://www.fontsquirrel.com/fonts/ritaglio",
+"license_url": "https://www.fontsquirrel.com/license/ritaglio",
+"designer": "Archistico",
+"category": [
+"Novelty"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Roman Caps",
+"source": "fontsquirrel",
+"slug": "Roman-Caps",
+"url": "https://www.fontsquirrel.com/fonts/Roman-Caps",
+"license_url": "https://www.fontsquirrel.com/license/Roman-Caps",
+"designer": "Steve Deffeyes",
+"category": [
+"Calligraphic"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Rothenburg Decorative",
+"source": "fontsquirrel",
+"slug": "Rothenburg-Decorative",
+"url": "https://www.fontsquirrel.com/fonts/Rothenburg-Decorative",
+"license_url": "https://www.fontsquirrel.com/license/Rothenburg-Decorative",
+"designer": "Alex Winterbottom",
+"category": [
+"Blackletter"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Rothman",
+"source": "fontsquirrel",
+"slug": "Rothman",
+"url": "https://www.fontsquirrel.com/fonts/Rothman",
+"license_url": "https://www.fontsquirrel.com/license/Rothman",
+"designer": "David Rakowski",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Ryujin Attack",
+"source": "fontsquirrel",
+"slug": "ryujin-attack",
+"url": "https://www.fontsquirrel.com/fonts/ryujin-attack",
+"license_url": "https://www.fontsquirrel.com/license/ryujin-attack",
+"designer": "Jetsmas studio",
+"category": [
+"Novelty"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "SAIBA-45",
+"source": "fontsquirrel",
+"slug": "iba-45",
+"url": "https://www.fontsquirrel.com/fonts/iba-45",
+"license_url": "https://www.fontsquirrel.com/license/iba-45",
+"designer": "Yuurin Bee",
+"category": [
+"Display"
+],
+"styles_count": 2,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Salaryman",
+"source": "fontsquirrel",
+"slug": "Salaryman",
+"url": "https://www.fontsquirrel.com/fonts/Salaryman",
+"license_url": "https://www.fontsquirrel.com/license/Salaryman",
+"designer": "Rotodesign",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Santana",
+"source": "fontsquirrel",
+"slug": "Santana",
+"url": "https://www.fontsquirrel.com/fonts/Santana",
+"license_url": "https://www.fontsquirrel.com/license/Santana",
+"designer": "Manfred Klein Fonteria",
+"category": [
+"Display"
+],
+"styles_count": 5,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Scratch",
+"source": "fontsquirrel",
+"slug": "Scratch",
+"url": "https://www.fontsquirrel.com/fonts/Scratch",
+"license_url": "https://www.fontsquirrel.com/license/Scratch",
+"designer": "Sir Speedy of Clovis",
+"category": [
+"Handdrawn"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Scriptina",
+"source": "fontsquirrel",
+"slug": "Scriptina",
+"url": "https://www.fontsquirrel.com/fonts/Scriptina",
+"license_url": "https://www.fontsquirrel.com/license/Scriptina",
+"designer": "Apostrophic Labs",
+"category": [
+"Script"
+],
+"styles_count": 2,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Scriptina Pro",
+"source": "fontsquirrel",
+"slug": "scriptina-pro",
+"url": "https://www.fontsquirrel.com/fonts/scriptina-pro",
+"license_url": "https://www.fontsquirrel.com/license/scriptina-pro",
+"designer": "CheapProFonts",
+"category": [
+"Script"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Sears Tower",
+"source": "fontsquirrel",
+"slug": "sears-tower",
+"url": "https://www.fontsquirrel.com/fonts/sears-tower",
+"license_url": "https://www.fontsquirrel.com/license/sears-tower",
+"designer": "Tension Type",
+"category": [
+"Typewriter"
+],
+"styles_count": 1,
+"font_files": 1,
+"license": "Lesen sendiri (komersial dibenarkan)",
+"risk": "semak",
+"license_file": "Tension Type Font License.txt",
+"license_snippet": "ype Free Font you agree to this licence: This Tension Type Free Font is free to use in any and all of your personal and commercial work."
+},
+{
+"name": "SeasideResort",
+"source": "fontsquirrel",
+"slug": "SeasideResortNF",
+"url": "https://www.fontsquirrel.com/fonts/SeasideResortNF",
+"license_url": "https://www.fontsquirrel.com/license/SeasideResortNF",
+"designer": "Nick's Fonts",
+"category": [
+"Retro"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Secret Typewriter",
+"source": "fontsquirrel",
+"slug": "Secret-Typewriter",
+"url": "https://www.fontsquirrel.com/fonts/Secret-Typewriter",
+"license_url": "https://www.fontsquirrel.com/license/Secret-Typewriter",
+"designer": "Cpr.Sparhelt",
+"category": [
+"Typewriter"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Sedgwick Co",
+"source": "fontsquirrel",
+"slug": "sedgwick-co",
+"url": "https://www.fontsquirrel.com/fonts/sedgwick-co",
+"license_url": "https://www.fontsquirrel.com/license/sedgwick-co",
+"designer": "DJ Sherman",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Selima",
+"source": "fontsquirrel",
+"slug": "selima",
+"url": "https://www.fontsquirrel.com/fonts/selima",
+"license_url": "https://www.fontsquirrel.com/license/selima",
+"designer": "Jroh",
+"category": [
+"Script"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Sesquipedalian",
+"source": "fontsquirrel",
+"slug": "Sesquipedalian",
+"url": "https://www.fontsquirrel.com/fonts/Sesquipedalian",
+"license_url": "https://www.fontsquirrel.com/license/Sesquipedalian",
+"designer": "Nick's Fonts",
+"category": [
+"Retro"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Shai Fontai",
+"source": "fontsquirrel",
+"slug": "SF-Shai-Fontai",
+"url": "https://www.fontsquirrel.com/fonts/SF-Shai-Fontai",
+"license_url": "https://www.fontsquirrel.com/license/SF-Shai-Fontai",
+"designer": "ShyFonts",
+"category": [
+"Novelty"
+],
+"styles_count": 3,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Shangri La",
+"source": "fontsquirrel",
+"slug": "ShangriLaNF",
+"url": "https://www.fontsquirrel.com/fonts/ShangriLaNF",
+"license_url": "https://www.fontsquirrel.com/license/ShangriLaNF",
+"designer": "Nick's Fonts",
+"category": [
+"Display"
+],
+"styles_count": 2,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Sjonarbok Classic",
+"source": "fontsquirrel",
+"slug": "Sjonarbok-Classic",
+"url": "https://www.fontsquirrel.com/fonts/Sjonarbok-Classic",
+"license_url": "https://www.fontsquirrel.com/license/Sjonarbok-Classic",
+"designer": "birgirms",
+"category": [
+"Novelty"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Slabo",
+"source": "fontsquirrel",
+"slug": "slabo",
+"url": "https://www.fontsquirrel.com/fonts/slabo",
+"license_url": "https://www.fontsquirrel.com/license/slabo",
+"designer": "Tiro Typeworks",
+"category": [
+"Slab Serif"
+],
+"styles_count": 2,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Slapstick Comic",
+"source": "fontsquirrel",
+"slug": "SF-Slapstick-Comic",
+"url": "https://www.fontsquirrel.com/fonts/SF-Slapstick-Comic",
+"license_url": "https://www.fontsquirrel.com/license/SF-Slapstick-Comic",
+"designer": "ShyFonts",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Slukoni",
+"source": "fontsquirrel",
+"slug": "Slukoni",
+"url": "https://www.fontsquirrel.com/fonts/Slukoni",
+"license_url": "https://www.fontsquirrel.com/license/Slukoni",
+"designer": "Marko Jovanovac",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Snickles",
+"source": "fontsquirrel",
+"slug": "Snickles",
+"url": "https://www.fontsquirrel.com/fonts/Snickles",
+"license_url": "https://www.fontsquirrel.com/license/Snickles",
+"designer": "Tup Wanders",
+"category": [
+"Handdrawn"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Some Time Later",
+"source": "fontsquirrel",
+"slug": "some-time-later",
+"url": "https://www.fontsquirrel.com/fonts/some-time-later",
+"license_url": "https://www.fontsquirrel.com/license/some-time-later",
+"designer": "Fredrick Brennan",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "SouciSans",
+"source": "fontsquirrel",
+"slug": "SouciSans",
+"url": "https://www.fontsquirrel.com/fonts/SouciSans",
+"license_url": "https://www.fontsquirrel.com/license/SouciSans",
+"designer": "Nick's Fonts",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Speakeasy",
+"source": "fontsquirrel",
+"slug": "SF-Speakeasy",
+"url": "https://www.fontsquirrel.com/fonts/SF-Speakeasy",
+"license_url": "https://www.fontsquirrel.com/license/SF-Speakeasy",
+"designer": "ShyFonts",
+"category": [
+"Retro"
+],
+"styles_count": 2,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Spilt Ink",
+"source": "fontsquirrel",
+"slug": "Spilt-Ink",
+"url": "https://www.fontsquirrel.com/fonts/Spilt-Ink",
+"license_url": "https://www.fontsquirrel.com/license/Spilt-Ink",
+"designer": "Walter Velez",
+"category": [
+"Novelty"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Spin Cycle",
+"source": "fontsquirrel",
+"slug": "Spin-Cycle-OT",
+"url": "https://www.fontsquirrel.com/fonts/Spin-Cycle-OT",
+"license_url": "https://www.fontsquirrel.com/license/Spin-Cycle-OT",
+"designer": "Blue Vinyl Fonts",
+"category": [
+"Display"
+],
+"styles_count": 2,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Sportrop",
+"source": "fontsquirrel",
+"slug": "sportrop",
+"url": "https://www.fontsquirrel.com/fonts/sportrop",
+"license_url": "https://www.fontsquirrel.com/license/sportrop",
+"designer": "GLUK fonts",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "St Marie",
+"source": "fontsquirrel",
+"slug": "st-marie",
+"url": "https://www.fontsquirrel.com/fonts/st-marie",
+"license_url": "https://www.fontsquirrel.com/license/st-marie",
+"designer": "Stereotypes",
+"category": [
+"Slab Serif"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Studebaker",
+"source": "fontsquirrel",
+"slug": "Studebaker",
+"url": "https://www.fontsquirrel.com/fonts/Studebaker",
+"license_url": "https://www.fontsquirrel.com/license/Studebaker",
+"designer": "Nick's Fonts",
+"category": [
+"Retro"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Supermercado",
+"source": "fontsquirrel",
+"slug": "supermercado",
+"url": "https://www.fontsquirrel.com/fonts/supermercado",
+"license_url": "https://www.fontsquirrel.com/license/supermercado",
+"designer": "TYPECO",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Synthetique",
+"source": "fontsquirrel",
+"slug": "Synthetique",
+"url": "https://www.fontsquirrel.com/fonts/Synthetique",
+"license_url": "https://www.fontsquirrel.com/license/Synthetique",
+"designer": "Blue Vinyl Fonts",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Tagapagsalaysay Caps",
+"source": "fontsquirrel",
+"slug": "Tagapagsalaysay-Caps-Narrator",
+"url": "https://www.fontsquirrel.com/fonts/Tagapagsalaysay-Caps-Narrator",
+"license_url": "https://www.fontsquirrel.com/license/Tagapagsalaysay-Caps-Narrator",
+"designer": "Nyek! Pinoy Komik Fonts",
+"category": [
+"Comic"
+],
+"styles_count": 4,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Technique",
+"source": "fontsquirrel",
+"slug": "Technique-BRK",
+"url": "https://www.fontsquirrel.com/fonts/Technique-BRK",
+"license_url": "https://www.fontsquirrel.com/license/Technique-BRK",
+"designer": "Brian Kent",
+"category": [
+"Display"
+],
+"styles_count": 2,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Teutonic No1",
+"source": "fontsquirrel",
+"slug": "Teutonic-No1",
+"url": "https://www.fontsquirrel.com/fonts/Teutonic-No1",
+"license_url": "https://www.fontsquirrel.com/license/Teutonic-No1",
+"designer": "Paul Lloyd",
+"category": [
+"Blackletter"
+],
+"styles_count": 4,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Tinet",
+"source": "fontsquirrel",
+"slug": "tinet",
+"url": "https://www.fontsquirrel.com/fonts/tinet",
+"license_url": "https://www.fontsquirrel.com/license/tinet",
+"designer": "TungusFont",
+"category": [
+"Handdrawn"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Tiza",
+"source": "fontsquirrel",
+"slug": "Tiza",
+"url": "https://www.fontsquirrel.com/fonts/Tiza",
+"license_url": "https://www.fontsquirrel.com/license/Tiza",
+"designer": "Pablo Caro",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Toontime",
+"source": "fontsquirrel",
+"slug": "SF-Toontime",
+"url": "https://www.fontsquirrel.com/fonts/SF-Toontime",
+"license_url": "https://www.fontsquirrel.com/license/SF-Toontime",
+"designer": "ShyFonts",
+"category": [
+"Comic"
+],
+"styles_count": 6,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Top Secret",
+"source": "fontsquirrel",
+"slug": "Top-Secret",
+"url": "https://www.fontsquirrel.com/fonts/Top-Secret",
+"license_url": "https://www.fontsquirrel.com/license/Top-Secret",
+"designer": "Cpr.Sparhelt",
+"category": [
+"Stencil"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "TrashHand",
+"source": "fontsquirrel",
+"slug": "TrashHand",
+"url": "https://www.fontsquirrel.com/fonts/TrashHand",
+"license_url": "https://www.fontsquirrel.com/license/TrashHand",
+"designer": "Luce Avérous",
+"category": [
+"Handdrawn"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Trendy University",
+"source": "fontsquirrel",
+"slug": "Trendy-University",
+"url": "https://www.fontsquirrel.com/fonts/Trendy-University",
+"license_url": "https://www.fontsquirrel.com/license/Trendy-University",
+"designer": "Font-a-licious Fonts",
+"category": [
+"Stencil"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Trickster",
+"source": "fontsquirrel",
+"slug": "trickster",
+"url": "https://www.fontsquirrel.com/fonts/trickster",
+"license_url": "https://www.fontsquirrel.com/license/trickster",
+"designer": "Velvetyne",
+"category": [
+"Blackletter"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "TroglodyteNF",
+"source": "fontsquirrel",
+"slug": "TroglodyteNF",
+"url": "https://www.fontsquirrel.com/fonts/TroglodyteNF",
+"license_url": "https://www.fontsquirrel.com/license/TroglodyteNF",
+"designer": "Nick's Fonts",
+"category": [
+"Retro"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Troika",
+"source": "fontsquirrel",
+"slug": "troika",
+"url": "https://www.fontsquirrel.com/fonts/troika",
+"license_url": "https://www.fontsquirrel.com/license/troika",
+"designer": "Joel Carrouche",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "True Crimes",
+"source": "fontsquirrel",
+"slug": "True-Crimes",
+"url": "https://www.fontsquirrel.com/fonts/True-Crimes",
+"license_url": "https://www.fontsquirrel.com/license/True-Crimes",
+"designer": "Walter Velez",
+"category": [
+"Retro"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Trump Town Pro",
+"source": "fontsquirrel",
+"slug": "trump-town-pro",
+"url": "https://www.fontsquirrel.com/fonts/trump-town-pro",
+"license_url": "https://www.fontsquirrel.com/license/trump-town-pro",
+"designer": "CheapProFonts",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Tulia",
+"source": "fontsquirrel",
+"slug": "tulia",
+"url": "https://www.fontsquirrel.com/fonts/tulia",
+"license_url": "https://www.fontsquirrel.com/license/tulia",
+"designer": "Rebekka Marleaux",
+"category": [
+"Slab Serif"
+],
+"styles_count": 3,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "TypoSlabserif",
+"source": "fontsquirrel",
+"slug": "TypoSlabserif-Light",
+"url": "https://www.fontsquirrel.com/fonts/TypoSlabserif-Light",
+"license_url": "https://www.fontsquirrel.com/license/TypoSlabserif-Light",
+"designer": "Manfred Klein Fonteria",
+"category": [
+"Slab Serif"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Ubuntu Titling",
+"source": "fontsquirrel",
+"slug": "Ubuntu-Titling",
+"url": "https://www.fontsquirrel.com/fonts/Ubuntu-Titling",
+"license_url": "https://www.fontsquirrel.com/license/Ubuntu-Titling",
+"designer": "Betatype",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Ubuntu-Title",
+"source": "fontsquirrel",
+"slug": "Ubuntu-Title",
+"url": "https://www.fontsquirrel.com/fonts/Ubuntu-Title",
+"license_url": "https://www.fontsquirrel.com/license/Ubuntu-Title",
+"designer": "Andrew Fitzsimon",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "UglyQua",
+"source": "fontsquirrel",
+"slug": "UglyQua",
+"url": "https://www.fontsquirrel.com/fonts/UglyQua",
+"license_url": "https://www.fontsquirrel.com/license/UglyQua",
+"designer": "Manfred Klein Fonteria",
+"category": [
+"Display"
+],
+"styles_count": 2,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Umbrage",
+"source": "fontsquirrel",
+"slug": "Umbrage",
+"url": "https://www.fontsquirrel.com/fonts/Umbrage",
+"license_url": "https://www.fontsquirrel.com/license/Umbrage",
+"designer": "Vic Fieger",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Underwood Champion",
+"source": "fontsquirrel",
+"slug": "Underwood-Champion",
+"url": "https://www.fontsquirrel.com/fonts/Underwood-Champion",
+"license_url": "https://www.fontsquirrel.com/license/Underwood-Champion",
+"designer": "Vic Fieger",
+"category": [
+"Typewriter"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Unifraktur Maguntia",
+"source": "fontsquirrel",
+"slug": "unifraktur-maguntia",
+"url": "https://www.fontsquirrel.com/fonts/unifraktur-maguntia",
+"license_url": "https://www.fontsquirrel.com/license/unifraktur-maguntia",
+"designer": "Unifraktur Project",
+"category": [
+"Blackletter"
+],
+"styles_count": 7,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "UpperEastSide",
+"source": "fontsquirrel",
+"slug": "uppereastside",
+"url": "https://www.fontsquirrel.com/fonts/uppereastside",
+"license_url": "https://www.fontsquirrel.com/license/uppereastside",
+"designer": "David Rakowski",
+"category": [
+"Retro"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Utility",
+"source": "fontsquirrel",
+"slug": "Utility",
+"url": "https://www.fontsquirrel.com/fonts/Utility",
+"license_url": "https://www.fontsquirrel.com/license/Utility",
+"designer": "Rotodesign",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "VAG-HandWritten",
+"source": "fontsquirrel",
+"slug": "VAG-HandWritten",
+"url": "https://www.fontsquirrel.com/fonts/VAG-HandWritten",
+"license_url": "https://www.fontsquirrel.com/license/VAG-HandWritten",
+"designer": "VAGDesign",
+"category": [
+"Handdrawn"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Vanilla",
+"source": "fontsquirrel",
+"slug": "Vanilla",
+"url": "https://www.fontsquirrel.com/fonts/Vanilla",
+"license_url": "https://www.fontsquirrel.com/license/Vanilla",
+"designer": "Cutie Explosion",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Veggieburger",
+"source": "fontsquirrel",
+"slug": "Veggieburger",
+"url": "https://www.fontsquirrel.com/fonts/Veggieburger",
+"license_url": "https://www.fontsquirrel.com/license/Veggieburger",
+"designer": "Robby Woodard",
+"category": [
+"Display"
+],
+"styles_count": 3,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Versa",
+"source": "fontsquirrel",
+"slug": "versa",
+"url": "https://www.fontsquirrel.com/fonts/versa",
+"license_url": "https://www.fontsquirrel.com/license/versa",
+"designer": "James Lewis",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Virgo 01",
+"source": "fontsquirrel",
+"slug": "Virgo-01",
+"url": "https://www.fontsquirrel.com/fonts/Virgo-01",
+"license_url": "https://www.fontsquirrel.com/license/Virgo-01",
+"designer": "Vic Fieger",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "VTC Letterer Pro",
+"source": "fontsquirrel",
+"slug": "VTC-Letterer-Pro",
+"url": "https://www.fontsquirrel.com/fonts/VTC-Letterer-Pro",
+"license_url": "https://www.fontsquirrel.com/license/VTC-Letterer-Pro",
+"designer": "Vigilante Typeface Corporation",
+"category": [
+"Comic"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "VTF Victorianna",
+"source": "fontsquirrel",
+"slug": "vtf-victorianna",
+"url": "https://www.fontsquirrel.com/fonts/vtf-victorianna",
+"license_url": "https://www.fontsquirrel.com/license/vtf-victorianna",
+"designer": "Velvetyne",
+"category": [
+"Slab Serif"
+],
+"styles_count": 2,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Wagnasty",
+"source": "fontsquirrel",
+"slug": "Wagnasty",
+"url": "https://www.fontsquirrel.com/fonts/Wagnasty",
+"license_url": "https://www.fontsquirrel.com/license/Wagnasty",
+"designer": "Jeremy Wagner",
+"category": [
+"Handdrawn"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Wasabi",
+"source": "fontsquirrel",
+"slug": "SF-Wasabi",
+"url": "https://www.fontsquirrel.com/fonts/SF-Wasabi",
+"license_url": "https://www.fontsquirrel.com/license/SF-Wasabi",
+"designer": "ShyFonts",
+"category": [
+"Novelty"
+],
+"styles_count": 2,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Water Street",
+"source": "fontsquirrel",
+"slug": "Water-Street",
+"url": "https://www.fontsquirrel.com/fonts/Water-Street",
+"license_url": "https://www.fontsquirrel.com/license/Water-Street",
+"designer": "Objets Dart",
+"category": [
+"Display"
+],
+"styles_count": 2,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "WC Mano Negra",
+"source": "fontsquirrel",
+"slug": "WC-Mano-Negra-Bta",
+"url": "https://www.fontsquirrel.com/fonts/WC-Mano-Negra-Bta",
+"license_url": "https://www.fontsquirrel.com/license/WC-Mano-Negra-Bta",
+"designer": "WC Fonts",
+"category": [
+"Handdrawn"
+],
+"styles_count": 2,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "WC RoughTrad",
+"source": "fontsquirrel",
+"slug": "wc-roughtrad",
+"url": "https://www.fontsquirrel.com/fonts/wc-roughtrad",
+"license_url": "https://www.fontsquirrel.com/license/wc-roughtrad",
+"designer": "WC Fonts",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "WC Wunderbach",
+"source": "fontsquirrel",
+"slug": "wc-wunderbach-bta",
+"url": "https://www.fontsquirrel.com/fonts/wc-wunderbach-bta",
+"license_url": "https://www.fontsquirrel.com/license/wc-wunderbach-bta",
+"designer": "WC Fonts",
+"category": [
+"Stencil"
+],
+"styles_count": 4,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Whitehall",
+"source": "fontsquirrel",
+"slug": "Whitehall",
+"url": "https://www.fontsquirrel.com/fonts/Whitehall",
+"license_url": "https://www.fontsquirrel.com/license/Whitehall",
+"designer": "Vic Fieger",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Wonder Comic",
+"source": "fontsquirrel",
+"slug": "SF-Wonder-Comic",
+"url": "https://www.fontsquirrel.com/fonts/SF-Wonder-Comic",
+"license_url": "https://www.fontsquirrel.com/license/SF-Wonder-Comic",
+"designer": "ShyFonts",
+"category": [
+"Comic"
+],
+"styles_count": 8,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "WoodenNickelBlack",
+"source": "fontsquirrel",
+"slug": "WoodenNickelBlack",
+"url": "https://www.fontsquirrel.com/fonts/WoodenNickelBlack",
+"license_url": "https://www.fontsquirrel.com/license/WoodenNickelBlack",
+"designer": "Nick's Fonts",
+"category": [
+"Retro"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Xenophone",
+"source": "fontsquirrel",
+"slug": "Xenophone",
+"url": "https://www.fontsquirrel.com/fonts/Xenophone",
+"license_url": "https://www.fontsquirrel.com/license/Xenophone",
+"designer": "Vic Fieger",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Yataghan",
+"source": "fontsquirrel",
+"slug": "Yataghan",
+"url": "https://www.fontsquirrel.com/fonts/Yataghan",
+"license_url": "https://www.fontsquirrel.com/license/Yataghan",
+"designer": "Daniel Midgley",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Yellow Magician",
+"source": "fontsquirrel",
+"slug": "Yellow-Magician",
+"url": "https://www.fontsquirrel.com/fonts/Yellow-Magician",
+"license_url": "https://www.fontsquirrel.com/license/Yellow-Magician",
+"designer": "Erico Lebedenco",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Yew Basturd",
+"source": "fontsquirrel",
+"slug": "Yew-Basturd",
+"url": "https://www.fontsquirrel.com/fonts/Yew-Basturd",
+"license_url": "https://www.fontsquirrel.com/license/Yew-Basturd",
+"designer": "Nyek! Pinoy Komik Fonts",
+"category": [
+"Comic"
+],
+"styles_count": 4,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Yukarimobile",
+"source": "fontsquirrel",
+"slug": "Yukarimobile",
+"url": "https://www.fontsquirrel.com/fonts/Yukarimobile",
+"license_url": "https://www.fontsquirrel.com/license/Yukarimobile",
+"designer": "Vic Fieger",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Zambajoun",
+"source": "fontsquirrel",
+"slug": "zambajoun",
+"url": "https://www.fontsquirrel.com/fonts/zambajoun",
+"license_url": "https://www.fontsquirrel.com/license/zambajoun",
+"designer": "Vertigo Design",
+"category": [
+"Novelty"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Zantroke",
+"source": "fontsquirrel",
+"slug": "zantroke",
+"url": "https://www.fontsquirrel.com/fonts/zantroke",
+"license_url": "https://www.fontsquirrel.com/license/zantroke",
+"designer": "GLUK fonts",
+"category": [
+"Slab Serif"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Zenda",
+"source": "fontsquirrel",
+"slug": "Zenda",
+"url": "https://www.fontsquirrel.com/fonts/Zenda",
+"license_url": "https://www.fontsquirrel.com/license/Zenda",
+"designer": "Paul Lloyd",
+"category": [
+"Blackletter"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "Zero & Zero Is",
+"source": "fontsquirrel",
+"slug": "Zero-Zero-Is",
+"url": "https://www.fontsquirrel.com/fonts/Zero-Zero-Is",
+"license_url": "https://www.fontsquirrel.com/license/Zero-Zero-Is",
+"designer": "Vic Fieger",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+},
+{
+"name": "ZnikomitNo24",
+"source": "fontsquirrel",
+"slug": "znikomitno24",
+"url": "https://www.fontsquirrel.com/fonts/znikomitno24",
+"license_url": "https://www.fontsquirrel.com/license/znikomitno24",
+"designer": "GLUK fonts",
+"category": [
+"Display"
+],
+"styles_count": 1,
+"font_files": 0,
+"license": "Muat turun gagal (fon dihos di laman pereka)",
+"risk": "tidak_disemak",
+"license_file": null,
+"license_snippet": ""
+}
+]
+}

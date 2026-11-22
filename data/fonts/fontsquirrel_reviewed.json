@@ -1,0 +1,261 @@
+{
+ "meta": {
+  "source": "Halaman lesen Font Squirrel (https://www.fontsquirrel.com/license/<slug>), dibuka oleh ejen kajian 22 Nov 2026",
+  "evidence": "pihak_ketiga",
+  "note": "Fon berus/grunge luar Google Fonts; mood = kurasi dari tag Font Squirrel."
+ },
+ "fonts": [
+  {
+   "name": "Paint the Sky",
+   "slug": "Paint-the-Sky",
+   "license": "Lesen sendiri: free for personal and commercial use; emel pereka; tiada edar semula",
+   "risk": "semak",
+   "moods": [
+    "berus"
+   ]
+  },
+  {
+   "name": "Gesso",
+   "slug": "Gesso",
+   "license": "Freeware Flat-it: commercial or non-commercial",
+   "risk": "semak",
+   "moods": [
+    "berus",
+    "grunge"
+   ]
+  },
+  {
+   "name": "Dirty Ego",
+   "slug": "dirty-ego",
+   "license": "Freeware Misprinted Type: commercial or non-commercial",
+   "risk": "semak",
+   "moods": [
+    "grunge"
+   ]
+  },
+  {
+   "name": "Nautilus Pompilius",
+   "slug": "nautilus-pompilius",
+   "license": "OFL-1.1",
+   "risk": "selamat",
+   "moods": [
+    "berus"
+   ]
+  },
+  {
+   "name": "Florida Vibes",
+   "slug": "florida-vibe",
+   "license": "OFL-1.1",
+   "risk": "selamat",
+   "moods": [
+    "berus",
+    "romantik"
+   ]
+  },
+  {
+   "name": "Chinese Rocks",
+   "slug": "Chinese-Rocks",
+   "license": "Fontspring Desktop EULA 1.7 (Typodermic)",
+   "risk": "semak",
+   "moods": [
+    "berus",
+    "grunge"
+   ]
+  },
+  {
+   "name": "Octin Spraypaint",
+   "slug": "octin-spraypaint-free",
+   "license": "Fontspring Desktop EULA 1.7 (Typodermic)",
+   "risk": "semak",
+   "moods": [
+    "grunge"
+   ]
+  },
+  {
+   "name": "Intro Rust",
+   "slug": "Intro-Rust",
+   "license": "Fontspring Desktop EULA (Fontfabric)",
+   "risk": "semak",
+   "moods": [
+    "grunge",
+    "retro"
+   ]
+  },
+  {
+   "name": "Edo",
+   "slug": "edo",
+   "license": "Freeware Vic Fieger (teks tidak formal)",
+   "risk": "semak",
+   "moods": [
+    "berus",
+    "grunge"
+   ]
+  },
+  {
+   "name": "Lilac Malaria",
+   "slug": "Lilac-Malaria",
+   "license": "Freeware Vic Fieger (teks tidak formal)",
+   "risk": "semak",
+   "moods": [
+    "grunge"
+   ]
+  },
+  {
+   "name": "Tinet",
+   "slug": "Tinet",
+   "license": "Lesen sendiri: commercial purposes and whatever",
+   "risk": "semak",
+   "moods": [
+    "berus",
+    "tangan"
+   ]
+  },
+  {
+   "name": "Gong!",
+   "slug": "Gong",
+   "license": "Nyek!: commercial and non-commercial (kualiti beta)",
+   "risk": "semak",
+   "moods": [
+    "berus"
+   ]
+  },
+  {
+   "name": "AnuDaw",
+   "slug": "AnuDaw",
+   "license": "Nyek!: commercial and non-commercial (kualiti beta)",
+   "risk": "semak",
+   "moods": [
+    "berus",
+    "lucu"
+   ]
+  },
+  {
+   "name": "Florante at Laura",
+   "slug": "Florante-at-Laura",
+   "license": "Nyek!: commercial and non-commercial (kualiti beta)",
+   "risk": "semak",
+   "moods": [
+    "berus",
+    "romantik"
+   ]
+  },
+  {
+   "name": "Nymphette",
+   "slug": "nymphette",
+   "license": "Lesen sendiri: free for commercial and personal use",
+   "risk": "semak",
+   "moods": [
+    "berus",
+    "romantik"
+   ]
+  },
+  {
+   "name": "Belligerent Madness",
+   "slug": "Belligerent-Madness",
+   "license": "Font Monkey: free for all commercial or non-commercial use",
+   "risk": "semak",
+   "moods": [
+    "berus",
+    "grunge"
+   ]
+  },
+  {
+   "name": "District",
+   "slug": "District",
+   "license": "Lesen sendiri: personal and commercial; tidak boleh jual fon",
+   "risk": "semak",
+   "moods": [
+    "grunge"
+   ]
+  },
+  {
+   "name": "Yozakura JP",
+   "slug": "yozakura-jp",
+   "license": "Kotonoha Works: personal and commercial; tiada edar semula",
+   "risk": "semak",
+   "moods": [
+    "berus"
+   ]
+  },
+  {
+   "name": "Orchidee",
+   "slug": "Orchidee",
+   "license": "Floodfonts: every kind of publication, commercial or not",
+   "risk": "semak",
+   "moods": [
+    "berus",
+    "romantik"
+   ]
+  },
+  {
+   "name": "Hetilica",
+   "slug": "Hetilica",
+   "license": "Asalnya tiada lesen; izin komersial hanya kenyataan e-mel kepada Font Squirrel",
+   "risk": "berisiko",
+   "moods": []
+  },
+  {
+   "name": "Komika Axis",
+   "slug": "Komika-Axis",
+   "license": "Apostrophic Labs: reka bentuk tidak boleh dijual (kabur)",
+   "risk": "berisiko",
+   "moods": []
+  },
+  {
+   "name": "Brushstroke Plain",
+   "slug": "Brushstroke-Plain",
+   "license": "Tiada lesen ('found on the internet')",
+   "risk": "berisiko",
+   "moods": []
+  },
+  {
+   "name": "Scratch",
+   "slug": "Scratch",
+   "license": "Tiada lesen ('found on the internet')",
+   "risk": "berisiko",
+   "moods": []
+  },
+  {
+   "name": "Destroy",
+   "slug": "Destroy",
+   "license": "Tiada lesen ('found on the internet')",
+   "risk": "berisiko",
+   "moods": []
+  },
+  {
+   "name": "Copystruct",
+   "slug": "Copystruct",
+   "license": "Tiada lesen ('found on the internet')",
+   "risk": "berisiko",
+   "moods": []
+  },
+  {
+   "name": "HVD Peace",
+   "slug": "hvd-peace",
+   "license": "Kegunaan peribadi sahaja",
+   "risk": "berisiko",
+   "moods": []
+  },
+  {
+   "name": "HVD Poster",
+   "slug": "hvd-poster",
+   "license": "Kegunaan peribadi sahaja",
+   "risk": "berisiko",
+   "moods": []
+  },
+  {
+   "name": "WC Mano Negra Bta",
+   "slug": "WC-Mano-Negra-Bta",
+   "license": "CC BY-ND: kredit wajib",
+   "risk": "berisiko",
+   "moods": []
+  },
+  {
+   "name": "Aquiline Two",
+   "slug": "Aquiline-Two",
+   "license": "Manfred Klein: minta derma jika untung",
+   "risk": "berisiko",
+   "moods": []
+  }
+ ]
+}
