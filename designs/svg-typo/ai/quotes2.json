@@ -16,7 +16,7 @@
     "small capitals"
    ],
    [
-    "Tomorrow",
+    "Later",
     "huge heavy brush script, dominant word, with a swash underline"
    ]
   ]
@@ -74,11 +74,7 @@
     "tiny script connector"
    ],
    [
-    "DEFAULT",
-    "big bold condensed capitals"
-   ],
-   [
-    "Mode",
+    "Vibe",
     "huge heavy brush script, dominant word, with a swash underline"
    ]
   ]
@@ -202,12 +198,12 @@
     "tiny script connector"
    ],
    [
-    "BAD",
-    "big bold condensed capitals"
+    "Bad",
+    "huge heavy brush script"
    ],
    [
-    "Ideas",
-    "huge heavy brush script, dominant word, with a swash underline"
+    "IDEAS",
+    "big bold condensed capitals, with a swash underline"
    ]
   ]
  },
