@@ -1,0 +1,198 @@
+<title>Poster Ornate Motivasi</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rye&family=Sancreek&family=Berkshire+Swash&family=IM+Fell+English+SC&family=Cinzel+Decorative:wght@700&family=Playfair+Display+SC:wght@900&family=Pinyon+Script&family=Cinzel:wght@600;700&family=Diplomata+SC&family=Holtwood+One+SC&family=Bevan&family=UnifrakturMaguntia&family=Pirata+One&display=swap">
+<style>
+/* Layout: meja studio — editor (poster + kawalan) di atas, rak 8 contoh di bawah, nota ringkas di hujung */
+:root{
+  --paper:#F2F1EE; --sheet:#FFFFFF; --ink:#18171A; --muted:#5F5D66; --rule:#DAD8D2;
+  --brass:#9A6B1F; --pass:#1F7A4D; --fail:#B3261E;
+  --f-head:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --f-body:"Instrument Sans","Helvetica Neue",Arial,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121114;--sheet:#1B1A1E;--ink:#EDEBE6;--muted:#A6A3AC;--rule:#323036;--brass:#E2B65C;--pass:#5FC48F;--fail:#FF8A80;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#121114;--sheet:#1B1A1E;--ink:#EDEBE6;--muted:#A6A3AC;--rule:#323036;--brass:#E2B65C;--pass:#5FC48F;--fail:#FF8A80;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font:16px/1.6 var(--f-body)}
+.wrap{max-width:1160px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:36px 64px;display:grid;gap:52px}
+h1,h2{font-family:var(--f-head);text-wrap:balance;margin:0;line-height:1.1}
+h1{font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-.02em}
+h2{font-size:1.6rem;letter-spacing:-.01em}
+p{margin:0;max-width:65ch}
+.eyebrow{font:500 .75rem/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--brass)}
+.lede{color:var(--muted);font-size:1.05rem}
+section{display:grid;gap:18px}
+a{color:var(--brass)}
+:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
+.mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+
+.lab{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:36px;align-items:start}
+@media (max-width:800px){.lab{grid-template-columns:1fr}}
+.stage{display:grid;gap:10px;justify-items:center}
+#stage{width:100%;display:grid;justify-items:center}
+.poster{width:100%;max-width:460px;aspect-ratio:2/3;box-shadow:0 2px 4px rgba(0,0,0,.18),0 18px 40px rgba(0,0,0,.22)}
+.poster svg{width:100%;height:100%;display:block}
+/* mockup dinding: adegan gambar, warna tetap */
+.wall{width:100%;max-width:560px;aspect-ratio:4/5;background:linear-gradient(#CFC6B6,#C4BAA8 78%,#8E7A62 78%,#7C6A54);display:grid;place-items:center;padding:7% 0 24%;position:relative;overflow:hidden}
+.wall .frm{width:56%;padding:3.2%;background:#F4EEE2;border:solid #1E1913;border-width:clamp(6px,1.6vw,12px);box-shadow:0 14px 28px rgba(0,0,0,.35)}
+.wall .frm .poster{max-width:none;box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)}
+.wall::after{content:"";position:absolute;left:18%;right:18%;bottom:20%;height:5%;background:#5A4634;border-radius:3px;box-shadow:0 6px 10px rgba(0,0,0,.3)}
+.cap{font:400 .72rem var(--f-mono);color:var(--muted)}
+
+.controls{display:grid;gap:14px;min-width:0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:440px){.grid2{grid-template-columns:1fr}}
+.field{display:grid;gap:5px;min-width:0}
+label{font:500 .7rem/1 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+input[type=text],select{font:inherit;color:var(--ink);background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:8px 10px;width:100%}
+.btns{display:flex;flex-wrap:wrap;gap:8px}
+button{font:600 .9rem var(--f-body);border:1px solid var(--ink);background:var(--ink);color:var(--paper);border-radius:6px;padding:9px 14px;cursor:pointer}
+button.ghost{background:transparent;color:var(--ink)}
+button[aria-pressed=true]{background:var(--brass);border-color:var(--brass);color:#fff}
+.facts{display:grid;gap:7px;border-top:1px solid var(--rule);padding-top:12px;font-size:.9rem}
+.facts div{display:flex;justify-content:space-between;gap:10px;align-items:center}
+.facts span:first-child{color:var(--muted)}
+.chip{font:500 .72rem/1 var(--f-mono);padding:4px 7px;border-radius:99px;border:1px solid currentColor;white-space:nowrap}
+.ok{color:var(--pass)} .no{color:var(--fail)}
+
+.shelf{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px 16px}
+@media (max-width:820px){.shelf{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.shelf button{all:unset;cursor:pointer;display:grid;gap:8px}
+.shelf button:focus-visible{outline:2px solid var(--brass);outline-offset:4px}
+.shelf .poster{max-width:none;box-shadow:0 1px 3px rgba(0,0,0,.2),0 8px 18px rgba(0,0,0,.18);transition:transform .2s}
+@media (prefers-reduced-motion:no-preference){.shelf button:hover .poster{transform:translateY(-4px)}}
+.shelf .nm{font:600 .9rem var(--f-body)}
+.shelf .meta{font:400 .72rem var(--f-mono);color:var(--muted)}
+
+.notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.note{background:var(--sheet);border:1px solid var(--rule);border-radius:8px;padding:16px;display:grid;gap:6px;align-content:start}
+.note h3{margin:0;font:700 1rem var(--f-head)}
+.note p{font-size:.92rem}
+.lvl{font:500 .66rem/1 var(--f-mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+pre{font:400 .85rem/1.6 var(--f-mono);background:var(--sheet);border:1px solid var(--rule);border-radius:8px;padding:14px 16px;overflow-x:auto;margin:0}
+.src{display:grid;gap:6px;font-size:.88rem;padding-left:1.2em;margin:0}
+.src li{overflow-wrap:anywhere}
+</style>
+
+<div class="wrap">
+  <header style="display:grid;gap:12px">
+    <span class="eyebrow">Gaya vintage ornate · poster motivasi · 2:3</span>
+    <h1>Poster Ornate Motivasi</h1>
+    <p class="lede">Gaya papan tanda Victorian: tajuk berlapis emas dengan bayang 3D, gulungan hiasan, bingkai berukir dan reben. Semua grafik dijana kod dan semua fon berlesen OFL. Tiada imej AI, jadi setiap reka bentuk boleh diubah dan dijana semula.</p>
+  </header>
+
+  <section class="lab" aria-label="Editor poster">
+    <div class="stage">
+      <div id="stage"><div class="poster" id="poster"></div></div>
+      <span class="cap" id="cap">1000 × 1500 px · nisbah pin Pinterest 2:3</span>
+    </div>
+    <div class="controls">
+      <div class="field"><label for="fArch">Baris melengkung (atas)</label><input type="text" id="fArch"></div>
+      <div class="grid2">
+        <div class="field"><label for="fL1">Tajuk 1</label><input type="text" id="fL1"></div>
+        <div class="field"><label for="fL2">Tajuk 2</label><input type="text" id="fL2"></div>
+      </div>
+      <div class="grid2">
+        <div class="field"><label for="fAmp">Penyambung (&amp;, not, over)</label><input type="text" id="fAmp"></div>
+        <div class="field"><label for="fRib">Reben</label><input type="text" id="fRib"></div>
+      </div>
+      <div class="field"><label for="fFoot">Plak bawah</label><input type="text" id="fFoot"></div>
+      <div class="grid2">
+        <div class="field"><label for="sStyle">Gaya fon</label><select id="sStyle"></select></div>
+        <div class="field"><label for="sPal">Warna</label><select id="sPal"></select></div>
+        <div class="field"><label for="sPat">Corak latar</label><select id="sPat"></select></div>
+        <div class="field"><label for="sMotif">Motif</label><select id="sMotif"></select></div>
+      </div>
+      <div class="btns">
+        <button type="button" id="bSeed">Rawak hiasan</button>
+        <button type="button" id="bMock" class="ghost" aria-pressed="false">Mockup dinding</button>
+      </div>
+      <div class="facts" id="facts"></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-shelf">
+    <span class="eyebrow">8 contoh sedia</span>
+    <h2 id="h-shelf">Klik satu untuk ubah</h2>
+    <div class="shelf" id="shelf"></div>
+  </section>
+
+  <section aria-labelledby="h-why">
+    <span class="eyebrow">Kenapa orang berhenti scroll</span>
+    <h2 id="h-why">Apa yang membuat gaya ini menonjol</h2>
+    <div class="notes">
+      <div class="note"><h3>Saiz pin betul</h3><p>Pinterest syorkan nisbah 2:3 (1000 × 1500 px). Pin yang lebih tinggi boleh terpotong dalam suapan.</p><span class="lvl">rasmi · Pinterest</span></div>
+      <div class="note"><h3>Tunjuk dalam bilik</h3><p>Pin yang menunjukkan gaya bilik keseluruhan lebih berprestasi berbanding close-up. Guna butang Mockup dinding untuk pin W1.</p><span class="lvl">rasmi · Pinterest (riset P3)</span></div>
+      <div class="note"><h3>Lain daripada suapan</h3><p>Suapan typography penuh dengan sans putih, rata kiri. Poster gelap berlapis emas dengan bingkai berukir nampak berbeza pada saiz kecil.</p><span class="lvl">pendapat</span></div>
+      <div class="note"><h3>Hierarki 3 lapis</h3><p>Baris melengkung kecil, tajuk besar, reben. Mata baca dari atas ke bawah dalam 1–2 saat. Tajuk mesti 2 hingga 4 perkataan.</p><span class="lvl">pendapat · amalan biasa</span></div>
+      <div class="note"><h3>Warna ikut mood</h3><p>Hitam/emas = cita-cita dan mewah. Merah hati = semangat dan gym. Biru malam = fokus dan pagi. Hijau = tenang dan tumbuh. Krim = vintage cerah untuk suapan yang terang.</p><span class="lvl">lemah · psikologi warna tiada bukti kukuh</span></div>
+      <div class="note"><h3>Kontras walaupun berhias</h3><p>Garis luar gelap dan bayang 3D memisahkan huruf dari latar. Warna emas utama dikira kontras WCAG terhadap latar.</p><span class="lvl">rasmi · WCAG 1.4.3</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-exp">
+    <span class="eyebrow">Untuk cetak</span>
+    <h2 id="h-exp">Eksport PNG resolusi tinggi</h2>
+    <p class="lede">Halaman ini untuk pratonton sahaja. PNG untuk dimuat naik ke Printful/Gelato dijana di komputer dengan skrip repo:</p>
+    <pre>node scripts/ornate_export.js --size pin     # 1000×1500, untuk pin
+node scripts/ornate_export.js --size print   # 3600×5400 = 24×36 in pada 150 dpi
+node scripts/ornate_export.js --spec saya.json   # poster sendiri (senarai spesifikasi)</pre>
+  </section>
+
+  <section aria-labelledby="h-src">
+    <h2 id="h-src">Sumber &amp; lesen</h2>
+    <ol class="src">
+      <li><a href="https://business.pinterest.com/Pinterest-product-specs" target="_blank" rel="noopener">Pinterest — product specs (2:3, 1000 × 1500)</a> <span class="lvl">rasmi</span></li>
+      <li><a href="https://create.pinterest.com/blog/home-decor-content-ideas-examples/" target="_blank" rel="noopener">Pinterest — kajian kandungan home decor</a> <span class="lvl">rasmi</span></li>
+      <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" target="_blank" rel="noopener">W3C — SC 1.4.3 Contrast (Minimum)</a> <span class="lvl">rasmi</span></li>
+      <li><a href="https://github.com/google/fonts/tree/main/ofl" target="_blank" rel="noopener">google/fonts — folder ofl/</a>: Rye, Sancreek, Berkshire Swash, IM Fell English SC, Cinzel, Cinzel Decorative, Playfair Display SC, Pinyon Script, Diplomata SC, Holtwood One SC, Bevan, UnifrakturMaguntia, Pirata One semua berlesen OFL (disemak 22 Nov 2026). <span class="lvl">rasmi</span></li>
+    </ol>
+    <p class="lede" style="font-size:.88rem">Ayat contoh ialah frasa umum. Sebahagian frasa motivasi didaftar sebagai tanda dagangan untuk barangan; semak USPTO sebelum jual.</p>
+  </section>
+</div>
+
+<script src="ornate.js"></script>
+<script>
+(function(){
+  const O=window.Ornate, $=s=>document.querySelector(s);
+  if(!O){$("#facts").textContent="Enjin poster tidak dapat dimuat. Muat semula halaman.";return;}
+  const F={arch:"#fArch",l1:"#fL1",l2:"#fL2",amp:"#fAmp",ribbon:"#fRib",footer:"#fFoot",style:"#sStyle",palette:"#sPal",pattern:"#sPat",motif:"#sMotif"};
+  const fill=(sel,obj,key)=>Object.entries(obj).forEach(([k,v])=>$(sel).append(new Option(key?v[key]:v,k)));
+  fill("#sStyle",O.STYLES,"name"); fill("#sPal",O.PALETTES,"name"); fill("#sPat",O.PATTERNS); fill("#sMotif",O.MOTIFS);
+  let spec={...O.PRESETS[0]}, mock=false, n=0, tm;
+  const chip=(r,t)=>`<span class="chip ${r>=t?"ok":"no"}">${r.toFixed(2)}:1 ${r>=t?"lulus":"gagal"}</span>`;
+  function load(s){spec={...s};for(const[k,sel]of Object.entries(F))$(sel).value=spec[k]??"";draw();}
+  function read(){for(const[k,sel]of Object.entries(F))spec[k]=$(sel).value;}
+  async function draw(){
+    const my=++n; await O.ready(spec); if(my!==n)return;
+    const svg=O.render(spec,"ed"+my), host=$("#stage");
+    host.innerHTML=mock?`<div class="wall"><div class="frm"><div class="poster">${svg}</div></div></div>`:`<div class="poster">${svg}</div>`;
+    $("#cap").textContent=mock?"Mockup dinding · untuk pin templat W1":"1000 × 1500 px · nisbah pin Pinterest 2:3";
+    const c=O.checks(spec), S=O.STYLES[spec.style];
+    $("#facts").innerHTML=`<div><span>Fon tajuk</span><span>${S.l1[0]}${S.l2[0]!==S.l1[0]?" + "+S.l2[0]:""}</span></div>
+      <div><span>Fon kecil / skrip</span><span>${S.small[0]} · ${S.amp[0]}</span></div>
+      <div><span>Kontras emas utama vs latar</span>${chip(c.main,4.5)}</div>
+      <div><span>Kontras tajuk aksen vs latar</span>${chip(c.accent,3)}</div>
+      <div><span>Kontras teks reben</span>${chip(c.ribbon,4.5)}</div>
+      <div><span>Semaian hiasan</span><span class="mono">${spec.seed}</span></div>`;
+  }
+  Object.values(F).forEach(sel=>$(sel).addEventListener("input",()=>{read();clearTimeout(tm);tm=setTimeout(draw,120)}));
+  $("#bSeed").onclick=()=>{spec.seed=Math.floor(Math.random()*9000)+100;draw()};
+  $("#bMock").onclick=e=>{mock=!mock;e.currentTarget.setAttribute("aria-pressed",mock);draw()};
+  const pal=k=>O.PALETTES[k].name, sty=k=>O.STYLES[k].name.split(" (")[0];
+  (async()=>{
+    for(const [i,p] of O.PRESETS.entries()){
+      const b=document.createElement("button"); b.type="button"; b.setAttribute("aria-label","Buka "+p.name+" dalam editor");
+      b.innerHTML=`<div class="poster"></div><span class="nm">${p.name}</span><span class="meta">${sty(p.style)} · ${pal(p.palette)}</span>`;
+      b.onclick=()=>{load(O.PRESETS[i]);$("#stage").scrollIntoView({behavior:"smooth",block:"start"})};
+      $("#shelf").append(b);
+    }
+    load(O.PRESETS[0]);
+    const btns=[...$("#shelf").children];
+    for(const [i,p] of O.PRESETS.entries()){await O.ready(p);btns[i].querySelector(".poster").innerHTML=O.render(p,"sh"+i);}
+  })();
+})();
+</script>
