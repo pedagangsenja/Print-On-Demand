@@ -21,3 +21,5 @@
 | caution | s7 | s5 "Caution!" OK-ish, s6/s8 wrong punctuation |
 | oktaste | s8 | s5 "GOD", s6/s7 extra lines |
 | weird | – | r1 s1–s4 "LIMTED"/"Edtion" → seeds 5–8 |
+| fine | r2/s2 | s1 "ius"; s2–s4 OK |
+| fluent | r2/s4 | s2 extra "SARCAST" line + "NE"; s3 stray mark |
