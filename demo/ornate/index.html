@@ -67,6 +67,14 @@ button[aria-pressed=true]{background:var(--brass);border-color:var(--brass);colo
 .shelf .nm{font:600 .9rem var(--f-body)}
 .shelf .meta{font:400 .72rem var(--f-mono);color:var(--muted)}
 
+.bgbox{display:grid;gap:10px;border:1px dashed var(--rule);border-radius:8px;padding:12px}
+input[type=range]{width:100%;accent-color:var(--brass)}
+input[type=file]{font:inherit;font-size:.85rem;max-width:100%}
+label.chk{display:flex;gap:8px;align-items:center;text-transform:none;letter-spacing:0;font:400 .88rem var(--f-body);color:var(--ink)}
+.prompts{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.pc{background:var(--sheet);border:1px solid var(--rule);border-radius:8px;padding:14px;display:grid;gap:8px;align-content:start;min-width:0}
+.pc h3{margin:0;font:700 1rem var(--f-head)}
+.pc pre{font-size:.76rem;white-space:pre-wrap;max-height:180px;overflow:auto}
 .notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
 .note{background:var(--sheet);border:1px solid var(--rule);border-radius:8px;padding:16px;display:grid;gap:6px;align-content:start}
 .note h3{margin:0;font:700 1rem var(--f-head)}
@@ -81,7 +89,7 @@ pre{font:400 .85rem/1.6 var(--f-mono);background:var(--sheet);border:1px solid v
   <header style="display:grid;gap:12px">
     <span class="eyebrow">Gaya vintage ornate · poster motivasi · 2:3</span>
     <h1>Poster Ornate Motivasi</h1>
-    <p class="lede">Gaya papan tanda Victorian: tajuk berlapis emas dengan bayang 3D, gulungan hiasan, bingkai berukir dan reben. Semua grafik dijana kod dan semua fon berlesen OFL. Tiada imej AI, jadi setiap reka bentuk boleh diubah dan dijana semula.</p>
+    <p class="lede">Aliran hibrid: jana ilustrasi latar tanpa teks dengan AI (prompt di bawah), muat naik di sini, dan halaman ini letak tipografi ornate di atasnya: emas timbul, bayang 3D, ejaan dan kerning tepat, kontras disemak. Tanpa imej, latar kod digunakan.</p>
   </header>
 
   <section class="lab" aria-label="Editor poster">
@@ -90,6 +98,16 @@ pre{font:400 .85rem/1.6 var(--f-mono);background:var(--sheet);border:1px solid v
       <span class="cap" id="cap">1000 × 1500 px · nisbah pin Pinterest 2:3</span>
     </div>
     <div class="controls">
+      <div class="bgbox">
+        <div class="field"><label for="fBg">1 · Ilustrasi latar AI (PNG/JPG, tanpa teks)</label><input type="file" id="fBg" accept="image/*"></div>
+        <div class="grid2">
+          <div class="field"><label for="rScrim">Gelapkan belakang teks</label><input type="range" id="rScrim" min="0" max="0.9" step="0.05"></div>
+          <div class="field"><label for="rTy">Naik / turun teks</label><input type="range" id="rTy" min="-260" max="260" step="10"></div>
+          <div class="field"><label for="rTs">Saiz teks</label><input type="range" id="rTs" min="0.5" max="1" step="0.05"></div>
+          <div class="field" style="align-content:end"><label class="chk"><input type="checkbox" id="cFrame"> Bingkai kod di atas imej</label></div>
+        </div>
+        <div class="btns"><button type="button" class="ghost" id="bBgOff">Buang imej</button><span class="cap" id="bgInfo">Belum ada imej. Latar kod digunakan.</span></div>
+      </div>
       <div class="field"><label for="fQuote">Ayat panjang (kosongkan untuk tajuk pendek)</label><textarea id="fQuote" rows="5" style="font:inherit;color:var(--ink);background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:8px 10px;width:100%;resize:vertical"></textarea>
         <span class="cap">Satu baris = satu ayat. <span class="mono"># besar · ! besar aksen · ~ skrip</span>; tanpa tanda = huruf kecil.</span></div>
       <div class="field"><label for="fArch">Baris melengkung (atas)</label><input type="text" id="fArch"></div>
@@ -114,6 +132,14 @@ pre{font:400 .85rem/1.6 var(--f-mono);background:var(--sheet);border:1px solid v
       </div>
       <div class="facts" id="facts"></div>
     </div>
+  </section>
+
+  <section aria-labelledby="h-pr">
+    <span class="eyebrow">2 · Prompt ilustrasi latar</span>
+    <h2 id="h-pr">Salin prompt, jana imej, muat naik di atas</h2>
+    <p class="lede">Prompt minta ruang kosong di tengah dan tiada teks, supaya tipografi kita yang ditambah kemudian. Jana sekurang-kurangnya 4 versi dan pilih yang tengahnya paling lapang.</p>
+    <div class="field" style="max-width:320px"><label for="sTool">Alat AI</label><select id="sTool"><option value="gpt">ChatGPT / Ideogram / Firefly</option><option value="mj">Midjourney</option></select></div>
+    <div class="prompts" id="prompts"></div>
   </section>
 
   <section aria-labelledby="h-shelf">
@@ -164,13 +190,14 @@ node scripts/ornate_export.js --spec saya.json   # poster sendiri (senarai spesi
 (function(){
   const O=window.Ornate, $=s=>document.querySelector(s);
   if(!O){$("#facts").textContent="Enjin poster tidak dapat dimuat. Muat semula halaman.";return;}
-  const F={quote:"#fQuote",arch:"#fArch",l1:"#fL1",l2:"#fL2",amp:"#fAmp",ribbon:"#fRib",footer:"#fFoot",style:"#sStyle",palette:"#sPal",pattern:"#sPat",motif:"#sMotif"};
+  const F={scrim:"#rScrim",ty:"#rTy",tscale:"#rTs",quote:"#fQuote",arch:"#fArch",l1:"#fL1",l2:"#fL2",amp:"#fAmp",ribbon:"#fRib",footer:"#fFoot",style:"#sStyle",palette:"#sPal",pattern:"#sPat",motif:"#sMotif"};
   const fill=(sel,obj,key)=>Object.entries(obj).forEach(([k,v])=>$(sel).append(new Option(key?v[key]:v,k)));
   fill("#sStyle",O.STYLES,"name"); fill("#sPal",O.PALETTES,"name"); fill("#sPat",O.PATTERNS); fill("#sMotif",O.MOTIFS);
-  let spec={...O.QUOTES[1]}, mock=false, n=0, tm;
+  const DEF={scrim:0.55,ty:0,tscale:1,frame:false}; let bg="", img=null;
+  let spec={...DEF,...O.QUOTES[1]}, mock=false, n=0, tm;
   const chip=(r,t)=>`<span class="chip ${r>=t?"ok":"no"}">${r.toFixed(2)}:1 ${r>=t?"lulus":"gagal"}</span>`;
-  function load(s){spec={...s};for(const[k,sel]of Object.entries(F))$(sel).value=spec[k]??"";draw();}
-  function read(){for(const[k,sel]of Object.entries(F))spec[k]=$(sel).value;}
+  function load(s){spec={...DEF,...s,bg};$("#cFrame").checked=!!spec.frame;for(const[k,sel]of Object.entries(F))$(sel).value=spec[k]??"";draw();}
+  function read(){for(const[k,sel]of Object.entries(F))spec[k]=$(sel).value;spec.frame=$("#cFrame").checked;spec.bg=bg;}
   async function draw(){
     const my=++n; await O.ready(spec); if(my!==n)return;
     const svg=O.render(spec,"ed"+my), host=$("#stage");
@@ -179,12 +206,39 @@ node scripts/ornate_export.js --spec saya.json   # poster sendiri (senarai spesi
     const c=O.checks(spec), S=O.STYLES[spec.style];
     $("#facts").innerHTML=`<div><span>Fon tajuk</span><span>${S.l1[0]}${S.l2[0]!==S.l1[0]?" + "+S.l2[0]:""}</span></div>
       <div><span>Fon kecil / skrip</span><span>${S.small[0]} · ${S.amp[0]}</span></div>
-      <div><span>Kontras emas utama vs latar</span>${chip(c.main,4.5)}</div>
+      ${img?`<div><span>Anggaran kontras emas vs imej (purata zon teks)</span>${chip(bgContrast(),4.5)}</div>`:`<div><span>Kontras emas utama vs latar</span>${chip(c.main,4.5)}</div>`}
       <div><span>Kontras tajuk aksen vs latar</span>${chip(c.accent,3)}</div>
       <div><span>Kontras teks reben</span>${chip(c.ribbon,4.5)}</div>
       <div><span>Semaian hiasan</span><span class="mono">${spec.seed}</span></div>`;
   }
   Object.values(F).forEach(sel=>$(sel).addEventListener("input",()=>{read();clearTimeout(tm);tm=setTimeout(draw,120)}));
+  $("#cFrame").onchange=()=>{read();draw()};
+  $("#fBg").onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{bg=r.result;img=new Image();img.onload=()=>{read();draw()};img.src=bg;$("#bgInfo").textContent=f.name+" · "+Math.round(f.size/1024)+" KB";};r.readAsDataURL(f)};
+  $("#bBgOff").onclick=()=>{bg="";img=null;$("#fBg").value="";$("#bgInfo").textContent="Belum ada imej. Latar kod digunakan.";read();draw()};
+  // anggaran kontras: purata luminans zon teks (selepas gelap) lawan emas utama
+  function bgContrast(){
+    if(!img)return null;
+    const c=document.createElement("canvas");c.width=100;c.height=150;const x=c.getContext("2d");
+    const sc=Math.max(100/img.width,150/img.height),w=img.width*sc,h=img.height*sc;x.drawImage(img,(100-w)/2,(150-h)/2,w,h);
+    const t=Math.round((190+(+spec.ty||0))/10),b=Math.round((1272+(+spec.ty||0))/10),d=x.getImageData(15,Math.max(0,t),70,Math.min(150,b)-Math.max(0,t)).data;
+    const P=O.PALETTES[spec.palette],hex=h=>[1,3,5].map(i=>parseInt(h.substr(i,2),16)),bgc=hex(P.bg),a=(+spec.scrim||0)*0.85;
+    const L=v=>{v/=255;return v<=0.04045?v/12.92:Math.pow((v+0.055)/1.055,2.4)};let sum=0,n=0;
+    for(let i=0;i<d.length;i+=4){const px=[0,1,2].map(k=>d[i+k]*(1-a)+bgc[k]*a);sum+=0.2126*L(px[0])+0.7152*L(px[1])+0.0722*L(px[2]);n++}
+    const lb=sum/n,lg=[...hex(P.m1[1])].reduce((s,v,k)=>s+L(v)*[0.2126,0.7152,0.0722][k],0);
+    return (Math.max(lb,lg)+0.05)/(Math.min(lb,lg)+0.05);
+  }
+  const tool=()=>$("#sTool").value;
+  function drawPrompts(){
+    $("#prompts").innerHTML="";
+    O.PROMPTS.forEach(p=>{const d=document.createElement("div");d.className="pc";const txt=O.promptFor(p,tool());
+      d.innerHTML=`<h3></h3><pre></pre><div class="btns"><button type="button">Salin prompt</button><button type="button" class="ghost">Guna palet ${O.PALETTES[p.palette].name}</button></div>`;
+      d.querySelector("h3").textContent=p.name;d.querySelector("pre").textContent=txt;
+      const [bc,bp]=d.querySelectorAll("button");
+      bc.onclick=()=>{navigator.clipboard.writeText(txt).then(()=>{bc.textContent="Disalin"},()=>{const r=document.createRange();r.selectNodeContents(d.querySelector("pre"));getSelection().removeAllRanges();getSelection().addRange(r);bc.textContent="Teks dipilih, tekan salin"})};
+      bp.onclick=()=>{$("#sPal").value=p.palette;read();draw();$("#stage").scrollIntoView({behavior:"smooth",block:"start"})};
+      $("#prompts").append(d)});
+  }
+  $("#sTool").onchange=drawPrompts; drawPrompts();
   $("#bSeed").onclick=()=>{spec.seed=Math.floor(Math.random()*9000)+100;draw()};
   $("#bMock").onclick=e=>{mock=!mock;e.currentTarget.setAttribute("aria-pressed",mock);draw()};
   const pal=k=>O.PALETTES[k].name, sty=k=>O.STYLES[k].name.split(" (")[0];

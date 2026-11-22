@@ -46,6 +46,19 @@
     { name: "Something Good", arch: "", quote: "Not every day is good\nbut there is\n~something\n#Good\nin every day", ribbon: "", footer: "The Morning Club", style: "royal", palette: "oxblood", pattern: "lattice", motif: "stars", seed: 191 },
     { name: "Coffee & Chaos", arch: "", quote: "Fueled by\n#Coffee\n~courage\nand a little bit of\n!Chaos", ribbon: "", footer: "The Office · Room 204", style: "circus", palette: "noir_gold", pattern: "rays", motif: "none", seed: 211 },
   ];
+  // Prompt ilustrasi latar AI (tanpa teks). {SCENE} diganti ikut tema; {BG} warna latar.
+  const PROMPT_BASE = "Ornate vintage Victorian poster illustration, vertical 2:3. Intricate gold acanthus scrollwork frame with filigree corners and a glowing star ornament at the top. Rich {BG} background with a soft warm glow behind the center and fine engraved texture. Highly detailed engraved-style illustrations of {SCENE}, arranged along the bottom third and the left and right edges. Gold, coral red and deep teal accents, dramatic lighting, sparkles, sign-painter and antique circus poster aesthetic, print quality, sharp detail. Leave a LARGE EMPTY dark area in the center and upper middle for a title. Absolutely no text, no letters, no words, no numbers, no logos, no watermark.";
+  const PROMPTS = [
+    { name: "Gym & disiplin", bg: "black and deep burgundy", scene: "antique iron barbells and kettlebells, a roaring lion, laurel wreaths and rising sun rays", palette: "oxblood" },
+    { name: "Gunung & ketabahan", bg: "midnight navy", scene: "snowy mountain peaks at sunrise, a soaring eagle, climbing rope, an old brass compass and pine trees", palette: "navy_brass" },
+    { name: "Pejabat & hustle", bg: "near-black", scene: "a vintage typewriter, brass desk lamp, steaming coffee cup, pocket watch and a 1920s city skyline", palette: "noir_gold" },
+    { name: "Belajar & tumbuh", bg: "dark forest green", scene: "stacks of antique books, a quill and inkwell, a wise owl, an oak tree and a staircase rising to the sun", palette: "forest" },
+    { name: "Wang & pelaburan", bg: "black with deep red glow", scene: "rising green and red candlestick charts, a charging bull, a magnifying glass, a classical stock exchange building and a city skyline", palette: "noir_gold" },
+    { name: "Berani", bg: "deep teal", scene: "a lion, a tall ship on stormy waves, a lighthouse beam and constellations of stars", palette: "teal_copper" },
+    { name: "Pagi & langkah kecil", bg: "warm cream parchment", scene: "a winding road through wildflowers toward the rising sun, songbirds and botanical sprigs", palette: "cream_ink" },
+  ];
+  const promptFor = (p, tool) => PROMPT_BASE.replace("{SCENE}", p.scene).replace("{BG}", p.bg) + (tool === "mj" ? " --ar 2:3 --style raw --no text, letters, words, typography, watermark" : "");
+
   const FONT_URL = "https://fonts.googleapis.com/css2?family=Rye&family=Sancreek&family=Berkshire+Swash&family=IM+Fell+English+SC&family=Cinzel+Decorative:wght@700&family=Playfair+Display+SC:wght@900&family=Pinyon+Script&family=Cinzel:wght@600;700&family=Diplomata+SC&family=Holtwood+One+SC&family=Bevan&family=UnifrakturMaguntia&family=Pirata+One&display=swap";
 
   // ---------- utiliti ----------
@@ -72,7 +85,7 @@
     for (let i = 6; i >= 1; i--) o.push(T(`fill="${P.extrude}" stroke="${P.extrude}" stroke-width="${f1(ow)}" stroke-linejoin="round"`, [dx * i, dy * i]));
     o.push(T(`fill="none" stroke="${P.outline}" stroke-width="${f1(ow)}" stroke-linejoin="round"`));
     if (accent) o.push(T(`fill="none" stroke="url(#${id}orn)" stroke-width="${f1(ow * 0.42)}" stroke-linejoin="round"`));
-    o.push(T(`fill="url(#${id}${accent ? "m2" : "m1"})"`));
+    o.push(T(`fill="url(#${id}${accent ? "m2" : "m1"})" filter="url(#${id}bev)"`));
     o.push(T(`fill="none" stroke="#FFFFFF" stroke-opacity="${P.light ? 0.3 : 0.45}" stroke-width="${f1(Math.max(1, size * 0.007))}"`, [-size * 0.004, -size * 0.006]));
     return o.join("");
   }
@@ -81,7 +94,7 @@
   function lite(content, attrs, size, P, id) {
     const ow = Math.max(3, size * 0.14);
     return `<text ${attrs} fill="#000" stroke="#000" stroke-width="${f1(ow)}" stroke-linejoin="round" opacity="${P.light ? 0.2 : 0.55}" filter="url(#${id}bl)" transform="translate(2 4)">${content}</text>` +
-      `<text ${attrs} fill="none" stroke="${P.outline}" stroke-width="${f1(ow)}" stroke-linejoin="round">${content}</text><text ${attrs} fill="url(#${id}m1)">${content}</text>`;
+      `<text ${attrs} fill="none" stroke="${P.outline}" stroke-width="${f1(ow)}" stroke-linejoin="round">${content}</text><text ${attrs} fill="url(#${id}m1)" filter="url(#${id}bevs)">${content}</text>`;
   }
   // ayat panjang: satu baris = satu ayat pendek. Penanda: # tajuk besar, ! tajuk aksen, ~ skrip, tiada = huruf kecil.
   // Tanpa penanda: baris satu perkataan jadi tajuk besar. Baris boleh dipisah dengan Enter atau " / ".
@@ -266,7 +279,9 @@
       blocks.push({ k, t, f, s, h: s * (CAP + desc) });
     }
     if (rib) blocks.push({ k: "rib", h: 92 });
-    const top = 190, bottom = foot ? 1272 : 1330, avail = bottom - top;
+    const ts = Math.max(0.5, Math.min(1, +spec.tscale || 1)), dy = +spec.ty || 0;
+    if (ts !== 1) blocks.forEach(b => { if (b.k !== "rib") { b.s *= ts; b.h *= ts; } });
+    const top = 190 + dy, bottom = (foot ? 1272 : 1330) + dy, avail = bottom - top;
     let total = blocks.reduce((a, b) => a + b.h, 0) + GAP * (blocks.length - 1);
     if (total > avail) { const sc = (avail - GAP * (blocks.length - 1)) / (total - GAP * (blocks.length - 1)); blocks.forEach(b => { if (b.k !== "rib") { b.s *= sc; b.h *= sc; } }); total = avail; }
     const gaps = Math.max(1, blocks.length - 1), extra = Math.max(0, avail - total), g2 = Math.min(extra / (gaps + 2), 64);
@@ -281,6 +296,10 @@
     defs.push(`<radialGradient id="${id}glow" cx="500" cy="640" r="620" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="${P.m1[2]}" stop-opacity="${P.light ? 0.18 : 0.28}"/><stop offset="1" stop-color="${P.m1[2]}" stop-opacity="0"/></radialGradient>`);
     defs.push(`<radialGradient id="${id}glow2"><stop offset="0" stop-color="${P.m1[0]}" stop-opacity=".7"/><stop offset="1" stop-color="${P.m1[0]}" stop-opacity="0"/></radialGradient>`);
     defs.push(`<radialGradient id="${id}vig" cx=".5" cy=".45" r=".78"><stop offset=".55" stop-color="${P.light ? "#4A2E12" : "#000"}" stop-opacity="0"/><stop offset="1" stop-color="${P.light ? "#4A2E12" : "#000"}" stop-opacity="${P.light ? 0.45 : 0.75}"/></radialGradient>`);
+    const bev = (n, sd, sc) => `<filter id="${id}${n}" x="-5%" y="-10%" width="110%" height="120%"><feGaussianBlur in="SourceAlpha" stdDeviation="${sd}" result="b"/><feSpecularLighting in="b" surfaceScale="${sc}" specularConstant="1.1" specularExponent="18" lighting-color="#FFF7DC" result="s"><feDistantLight azimuth="235" elevation="42"/></feSpecularLighting><feComposite in="s" in2="SourceAlpha" operator="in" result="s2"/><feComposite in="SourceGraphic" in2="s2" operator="arithmetic" k1="0" k2="1" k3="${P.light ? 0.45 : 0.8}" k4="0"/></filter>`;
+    defs.push(bev("bev", 3.2, 6), bev("bevs", 1.2, 3));
+    const cyT = (top + bottom) / 2;
+    defs.push(`<radialGradient id="${id}scr" cx="500" cy="${f1(cyT)}" r="560" gradientTransform="translate(500 ${f1(cyT)}) scale(1 1.15) translate(-500 ${f1(-cyT)})" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="${P.bg}" stop-opacity="${+spec.scrim || 0}"/><stop offset=".6" stop-color="${P.bg}" stop-opacity="${f1((+spec.scrim || 0) * 0.75 * 100) / 100}"/><stop offset="1" stop-color="${P.bg}" stop-opacity="0"/></radialGradient>`);
     defs.push(`<filter id="${id}bl" x="-10%" y="-20%" width="120%" height="140%"><feGaussianBlur stdDeviation="7"/></filter>`);
     defs.push(`<filter id="${id}gr"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="${(spec.seed || 1) % 97}"/><feColorMatrix type="saturate" values="0"/></filter>`);
     defs.push(`<clipPath id="${id}cl"><rect x="44" y="44" width="${W - 88}" height="${H - 88}"/></clipPath>`);
@@ -321,8 +340,10 @@
     if (foot) body.push(plaque(1318, foot, S.small, P, id));
 
     return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc([spec.arch, spec.quote ? parseQuote(spec.quote).map(q => q.t).join(" ") : [spec.l1, spec.amp, spec.l2].join(" ")].filter(Boolean).join(" "))}"><defs>${defs.join("")}</defs>` +
-      `<rect width="${W}" height="${H}" fill="${P.bg}"/><g clip-path="url(#${id}cl)">${pattern(spec.pattern, P, id, R)}<rect width="${W}" height="${H}" fill="url(#${id}glow)"/>${motif(spec.motif, P, id, R)}</g>` +
-      `<rect width="${W}" height="${H}" fill="url(#${id}vig)"/>${frame(id, R)}${body.join("")}` +
+      `<rect width="${W}" height="${H}" fill="${P.bg}"/>` +
+      (spec.bg ? `<image href="${esc(spec.bg)}" width="${W}" height="${H}" preserveAspectRatio="xMidYMid slice"/><rect width="${W}" height="${H}" fill="url(#${id}scr)"/>`
+        : `<g clip-path="url(#${id}cl)">${pattern(spec.pattern, P, id, R)}<rect width="${W}" height="${H}" fill="url(#${id}glow)"/>${motif(spec.motif, P, id, R)}</g><rect width="${W}" height="${H}" fill="url(#${id}vig)"/>`) +
+      `${!spec.bg || spec.frame ? frame(id, R) : ""}${body.join("")}` +
       `<rect width="${W}" height="${H}" filter="url(#${id}gr)" opacity="${P.light ? 0.16 : 0.12}" style="mix-blend-mode:overlay"/></svg>`;
   }
 
@@ -336,5 +357,5 @@
     return { main: contrast(P.m1[1], P.bg), accent: contrast(P.m2[1], P.bg), ribbon: contrast(P.ribbonInk, P.ribbon[0]) };
   }
 
-  root.Ornate = { W, H, STYLES, PALETTES, PATTERNS, MOTIFS, PRESETS, QUOTES, FONT_URL, render, ready, checks, contrast };
+  root.Ornate = { W, H, STYLES, PALETTES, PATTERNS, MOTIFS, PRESETS, QUOTES, PROMPTS, promptFor, FONT_URL, render, ready, checks, contrast };
 })(typeof window !== "undefined" ? window : globalThis);

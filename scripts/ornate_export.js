@@ -3,6 +3,8 @@
 //   pin   = 1000x1500 px (pin Pinterest 2:3)
 //   print = 3600x5400 px (24x36 in pada 150 dpi; juga cukup untuk 16x24 dan 12x18 pada 225/300 dpi)
 // --set short|quotes|all: set contoh (lalai all). --spec: fail JSON berisi senarai spesifikasi (medan sama seperti Ornate.PRESETS). Lalai: 8 contoh.
+// Medan pilihan: bg (laluan imej AI, relatif kepada fail spec), scrim 0-0.9, ty, tscale 0.5-1, frame.
+// Imej AI biasanya ~1024x1536: besarkan dulu (cth. Upscayl) ke 3600x5400 untuk cetak 24x36.
 // Perlu internet ke fonts.googleapis.com untuk memuat fon.
 const { chromium } = require("playwright");
 const fs = require("fs"), path = require("path");
@@ -22,6 +24,10 @@ const slug = s => String(s).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^
   await p.evaluate(() => new Promise((ok, no) => { const l = document.createElement("link"); l.rel = "stylesheet"; l.href = Ornate.FONT_URL; l.onload = ok; l.onerror = () => no(new Error("Fon Google tidak dapat dimuat")); document.head.append(l); }));
   const specs = specFile ? JSON.parse(fs.readFileSync(specFile, "utf8")) : await p.evaluate(set => set === "short" ? Ornate.PRESETS : set === "quotes" ? Ornate.QUOTES : Ornate.PRESETS.concat(Ornate.QUOTES), set);
   for (const [i, s] of specs.entries()) {
+    if (s.bg && !s.bg.startsWith("data:")) {  // laluan fail imej latar -> data URL
+      const ext = path.extname(s.bg).slice(1).toLowerCase().replace("jpg", "jpeg");
+      s.bg = `data:image/${ext};base64,` + fs.readFileSync(path.resolve(path.dirname(specFile || "."), s.bg)).toString("base64");
+    }
     const svg = await p.evaluate(async s => { await Ornate.ready(s); await document.fonts.ready; const svg = Ornate.render(s, "x"); const o = document.getElementById("o"); o.innerHTML = svg; o.firstChild.setAttribute("width", "1000"); o.firstChild.setAttribute("height", "1500"); return svg; }, s);
     const name = `${String(i + 1).padStart(2, "0")}-${slug(s.name || [s.l1, s.l2].join(" "))}`;
     await p.locator("#o svg").screenshot({ path: path.join(out, `${name}-${size}.png`) });
