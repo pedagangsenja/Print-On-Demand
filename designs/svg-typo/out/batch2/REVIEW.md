@@ -34,3 +34,12 @@
 | nope | r1/s2 | "Later" OK ×4; s3 "todaay" |
 | tired | r1/s2 | all 4 OK |
 | ideas | r1/s2 | all 4 OK |
+
+## Repair r2 (rephrased)
+| id | pick | notes |
+|---|---|---|
+| napharder | r2/s2 | all 4 OK |
+| disturb | r2/s2 | all 4 OK |
+| couch2 | r2/s1 | s2–s4 "COCH"/"CQUCH" |
+
+## Final: 20/20 pass (spelling + layout checked; no frame, no clipping, black only). SVG renders checked.
