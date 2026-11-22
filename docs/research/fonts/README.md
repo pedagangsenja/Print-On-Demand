@@ -86,5 +86,6 @@ Tiada fon cat air berwarna yang lesen komersialnya jelas ditemui (bukti: kajian 
 
 ## 7. Had kajian
 - Banyak laman sumber dan jurnal disekat dari sesi ini. Baris berlabel *lemah* dalam `sites.json` dan `licenses.json` hanya dari ringkasan carian. Sahkan sebelum bergantung padanya.
+- 22 Nov 2026 (kemudian): OFL FAQ, CC0, CC-BY, CC-BY-ND, 1001 Fonts FFC dan Collletttivo dibaca terus dari laman rasmi dan dinaikkan ke *rasmi*.
 - Label mood Fontshare dan Font Squirrel ialah semakan rupa oleh Claude, bukan tag rasmi.
 - Pengelasan automatik lesen Font Squirrel boleh tersilap. Label *semak* bermaksud baca lesen itu sendiri.

@@ -1,11 +1,11 @@
 [
  {
   "license": "SIL OFL 1.1",
-  "url": "https://openfontlicense.org",
+  "url": "https://openfontlicense.org/ofl-faq/",
   "sell_print": "ya",
   "sell_digital": "ya",
   "share_font": "ya",
-  "note": "Karya grafik tidak tertakluk OFL (FAQ 1.13). Kredit tidak wajib. Fon tidak boleh dijual bersendirian.",
+  "note": "FAQ rasmi: poster, baju, papan tanda dan grafik lain dibenarkan; karya grafik tidak tertakluk OFL dan anda kekal pemilik hak cipta. Kredit tidak wajib. Fon tidak boleh dijual bersendirian.",
   "evidence": "rasmi"
  },
  {
@@ -59,8 +59,8 @@
   "sell_print": "ya",
   "sell_digital": "ya",
   "share_font": "ya",
-  "note": "Sesetengah dakwaan 'domain awam' untuk fon meragukan.",
-  "evidence": "lemah"
+  "note": "Boleh salin, ubah dan edar, termasuk untuk komersial, tanpa minta izin. Sesetengah dakwaan \"domain awam\" untuk fon meragukan.",
+  "evidence": "rasmi"
  },
  {
   "license": "CC-BY",
@@ -68,26 +68,26 @@
   "sell_print": "ya",
   "sell_digital": "ya",
   "share_font": "ya",
-  "note": "Wajib beri kredit (cth. dalam deskripsi listing).",
-  "evidence": "lemah"
+  "note": "Boleh guna untuk apa-apa tujuan, termasuk komersial. Wajib beri kredit, pautan lesen dan nyatakan perubahan (cth. dalam deskripsi listing).",
+  "evidence": "rasmi"
  },
  {
   "license": "CC-BY-ND",
   "url": "https://creativecommons.org/licenses/by-nd/4.0/",
   "sell_print": "ya",
   "sell_digital": "ya",
-  "share_font": "semak",
-  "note": "Wajib kredit; fail fon tidak boleh diubah. Susah untuk produk: elak.",
-  "evidence": "pihak_ketiga"
+  "share_font": "ya",
+  "note": "Komersial dibenarkan; wajib kredit; fail fon yang diubah tidak boleh diedar. Kredit pada produk menyusahkan: elak.",
+  "evidence": "rasmi"
  },
  {
   "license": "1001 Fonts FFC",
   "url": "https://www.1001fonts.com/licenses/ffc.html",
   "sell_print": "ya",
   "sell_digital": "ya",
-  "share_font": "semak",
-  "note": "Peribadi dan komersial, asalkan tidak rasis atau haram.",
-  "evidence": "lemah"
+  "share_font": "tidak",
+  "note": "Peribadi dan komersial, termasuk baju dan poster untuk dijual, asalkan tidak rasis atau haram. Fon tidak boleh diubah, dijual atau diterbitkan tanpa izin pembuatnya.",
+  "evidence": "rasmi"
  },
  {
   "license": "Creative Market Desktop (barang percuma)",

@@ -92,12 +92,12 @@
  {
   "name": "Collletttivo",
   "url": "https://www.collletttivo.it",
-  "verdict": "semak",
+  "verdict": "selamat",
   "styles": "Display eksperimen Itali",
   "license": "OFL",
-  "catch": "Pembuat minta kredit (OFL tidak wajibkan).",
+  "catch": "Semua fon OFL; boleh untuk projek peribadi dan komersial, cetak dan digital. Pembuat minta kredit pereka dan foundry bila diterbitkan. Fail fon tidak boleh dijual.",
   "evidence_url": "https://www.collletttivo.it/licensing",
-  "evidence": "lemah"
+  "evidence": "rasmi"
  },
  {
   "name": "Open Foundry",
@@ -195,9 +195,9 @@
   "verdict": "semak",
   "styles": "Katalog besar",
   "license": "FFC untuk komersial; FFP peribadi",
-  "catch": "Kebanyakan katalog peribadi. Guna tapisan 'free for commercial use'.",
+  "catch": "Lesen FFC (disahkan): komersial dibenarkan, termasuk poster dan baju untuk dijual, asalkan tidak rasis atau haram. Fon tidak boleh diubah atau dijual tanpa izin. Kebanyakan katalog berlesen FFP (peribadi), jadi guna tapisan komersial.",
   "evidence_url": "https://www.1001fonts.com/licenses/ffc.html",
-  "evidence": "lemah"
+  "evidence": "rasmi"
  },
  {
   "name": "FontSpace (komersial)",
