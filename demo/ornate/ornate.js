@@ -36,6 +36,16 @@
     { name: "Discipline", arch: "Discipline", l1: "Beats", amp: "", l2: "Motivation", ribbon: "Do it on the hard days", footer: "Est. 2026 · No Excuses", style: "circus", palette: "noir_gold", pattern: "grid", motif: "steps", seed: 71 },
     { name: "Hustle & Heart", arch: "Lead with", l1: "Hustle", amp: "&", l2: "Heart", ribbon: "Work hard · Stay kind", footer: "The Office · Room 204", style: "saloon", palette: "oxblood", pattern: "rays", motif: "mountains", seed: 89 },
   ];
+  const QUOTES = [
+    { name: "Small Steps", arch: "", quote: "~Small steps every day\nadd up to\n#Big\n!Results", ribbon: "Keep showing up", footer: "Est. 2026 · Daily Progress", style: "royal", palette: "navy_brass", pattern: "lattice", motif: "steps", seed: 103 },
+    { name: "Keep Climbing", arch: "", quote: "The view at the top\nbelongs to those who\n~kept\n#Climbing\nwhen it got hard", ribbon: "", footer: "Summit Club · No. 7", style: "saloon", palette: "noir_gold", pattern: "rays", motif: "mountains", seed: 117 },
+    { name: "Strong & Brave", arch: "", quote: "Be the kind of\n!Strong\nthat makes\neveryone around you\n#Brave", ribbon: "", footer: "Home Gym · Est. 2026", style: "circus", palette: "oxblood", pattern: "rays", motif: "none", seed: 131 },
+    { name: "Yesterday", arch: "", quote: "Your only\ncompetition is\nthe person you were\n#Yesterday", ribbon: "Beat your best", footer: "Anno 2026", style: "gothic", palette: "forest", pattern: "lattice", motif: "laurel", seed: 149 },
+    { name: "Rise Eight", arch: "", quote: "Fall\n!Seven\ntimes\n~and\n#Rise Eight", ribbon: "Old Japanese proverb", footer: "Brave Things Co.", style: "saloon", palette: "teal_copper", pattern: "rays", motif: "stars", seed: 163 },
+    { name: "Beginner", arch: "", quote: "Every expert\nyou admire today\nwas once a\n!Beginner\n~so keep going", ribbon: "", footer: "Studio Rules No. 2", style: "royal", palette: "cream_ink", pattern: "grid", motif: "laurel", seed: 179 },
+    { name: "Something Good", arch: "", quote: "Not every day is good\nbut there is\n~something\n#Good\nin every day", ribbon: "", footer: "The Morning Club", style: "royal", palette: "oxblood", pattern: "lattice", motif: "stars", seed: 191 },
+    { name: "Coffee & Chaos", arch: "", quote: "Fueled by\n#Coffee\n~courage\nand a little bit of\n!Chaos", ribbon: "", footer: "The Office · Room 204", style: "circus", palette: "noir_gold", pattern: "rays", motif: "none", seed: 211 },
+  ];
   const FONT_URL = "https://fonts.googleapis.com/css2?family=Rye&family=Sancreek&family=Berkshire+Swash&family=IM+Fell+English+SC&family=Cinzel+Decorative:wght@700&family=Playfair+Display+SC:wght@900&family=Pinyon+Script&family=Cinzel:wght@600;700&family=Diplomata+SC&family=Holtwood+One+SC&family=Bevan&family=UnifrakturMaguntia&family=Pirata+One&display=swap";
 
   // ---------- utiliti ----------
@@ -65,6 +75,23 @@
     o.push(T(`fill="url(#${id}${accent ? "m2" : "m1"})"`));
     o.push(T(`fill="none" stroke="#FFFFFF" stroke-opacity="${P.light ? 0.3 : 0.45}" stroke-width="${f1(Math.max(1, size * 0.007))}"`, [-size * 0.004, -size * 0.006]));
     return o.join("");
+  }
+
+  // teks kecil: bayang + garis luar + isi logam (tanpa extrude)
+  function lite(content, attrs, size, P, id) {
+    const ow = Math.max(3, size * 0.14);
+    return `<text ${attrs} fill="#000" stroke="#000" stroke-width="${f1(ow)}" stroke-linejoin="round" opacity="${P.light ? 0.2 : 0.55}" filter="url(#${id}bl)" transform="translate(2 4)">${content}</text>` +
+      `<text ${attrs} fill="none" stroke="${P.outline}" stroke-width="${f1(ow)}" stroke-linejoin="round">${content}</text><text ${attrs} fill="url(#${id}m1)">${content}</text>`;
+  }
+  // ayat panjang: satu baris = satu ayat pendek. Penanda: # tajuk besar, ! tajuk aksen, ~ skrip, tiada = huruf kecil.
+  // Tanpa penanda: baris satu perkataan jadi tajuk besar. Baris boleh dipisah dengan Enter atau " / ".
+  function parseQuote(q) {
+    const L = String(q || "").split(/\n|\s+\/\s+/).map(x => x.trim()).filter(Boolean);
+    const marked = L.some(x => /^[#!~]/.test(x));
+    return L.map(x => {
+      const m = x[0], k = m === "#" ? "big" : m === "!" ? "acc" : m === "~" ? "script" : (!marked && !/\s/.test(x) ? "big" : "small");
+      return { k, t: /^[#!~]/.test(x) ? x.slice(1).trim() : x };
+    }).filter(q => q.t);
   }
 
   // ---------- ornamen ----------
@@ -220,12 +247,19 @@
     const R = rng(spec.seed || 1), id = "o" + (uid || Math.random().toString(36).slice(2, 8));
     const up = t => (S.upper ? String(t || "").toUpperCase() : String(t || "")).trim();
     const arch = up(spec.arch), l1 = up(spec.l1), l2 = up(spec.l2), amp = String(spec.amp || "").trim(), rib = String(spec.ribbon || "").trim(), foot = String(spec.footer || "").trim();
-    const CAP = 0.73, GAP = 26;
+    const CAP = 0.73, GAP = parseQuote(spec.quote).length ? 14 : 26;
 
     // ukur blok
     const blocks = [];
     if (arch) { const s = fit(arch, S.arch, 600, 104, 0.06); blocks.push({ k: "arch", s, h: s * CAP + 40 }); }
-    for (const [k, t] of [["l1", l1], ["amp", amp], ["l2", l2]]) {
+    const Q = parseQuote(spec.quote);
+    for (const q of Q) {  // mod ayat panjang: setiap baris dimuatkan ke lebar penuh
+      if (q.k === "small") { const s = fit(q.t, S.small, 700, 64, 0.08); blocks.push({ k: "q", m: "small", t: q.t, f: S.small, s, h: s * 0.78 }); continue; }
+      if (q.k === "script") { const s = fit(q.t, S.amp, 640, 128, 0); blocks.push({ k: "q", m: "script", t: q.t, f: S.amp, s, h: s * 0.82 }); continue; }
+      const t = up(q.t), f = q.k === "acc" ? S.l1 : S.l2, s = fit(t, f, 780, 230, 0.01), desc = !S.upper && /[gjpqy]/.test(t) ? 0.2 : 0;
+      blocks.push({ k: "q", m: "head", acc: q.k === "acc", t, f, s, h: s * (CAP + desc) });
+    }
+    for (const [k, t] of (Q.length ? [] : [["l1", l1], ["amp", amp], ["l2", l2]])) {
       if (!t) continue;
       if (k === "amp") { const f = S.amp, s = t.length <= 2 ? 170 : fit(t, f, 420, 120, 0.02); blocks.push({ k, t, f, s, h: s * (t.length <= 2 ? 0.72 : 0.6) }); continue; }
       const f = S[k], s = fit(t, f, 780, 290, 0.01), desc = !S.upper && /[gjpqy]/.test(t) ? 0.2 : 0;
@@ -261,8 +295,12 @@
         y += b.h + GAP + g2; continue;
       }
       if (b.k === "rib") { body.push(ribbon(y + 14, rib, S.small, P, id)); y += b.h + GAP + g2; continue; }
-      const base = y + (b.k === "amp" ? b.h * 0.95 : b.s * CAP);
-      if (b.k === "amp") {
+      const base = y + (b.k === "amp" ? b.h * 0.95 : b.m === "small" ? b.s * 0.72 : b.m === "script" ? b.s * 0.66 : b.s * CAP);
+      if (b.m === "small") {
+        body.push(lite(esc(b.t), `x="500" y="${f1(base)}" ${fa(b.f, b.s, 0.08)} text-anchor="middle"`, b.s, P, id));
+      } else if (b.m === "script") {
+        body.push(layered(esc(b.t), `x="500" y="${f1(base)}" ${fa(b.f, b.s, 0)} text-anchor="middle"`, b.s, P, id, false));
+      } else if (b.k === "amp") {
         const aw = measure(b.t, b.f, b.s, 0.02), cy = base - b.s * 0.3;
         body.push(`<line x1="${f1(500 - aw / 2 - 30)}" y1="${f1(cy)}" x2="190" y2="${f1(cy)}" ${stroke(id, 2.5)}/><line x1="${f1(500 + aw / 2 + 30)}" y1="${f1(cy)}" x2="810" y2="${f1(cy)}" ${stroke(id, 2.5)}/>`);
         body.push(`<path d="${diamond(180, cy, 11)}" fill="url(#${id}orn)"/><path d="${diamond(820, cy, 11)}" fill="url(#${id}orn)"/>`);
@@ -275,14 +313,14 @@
           body.push(scrollSVG(scroll(xl, cy, len, -1, rr, -1, true), id, 3) + scrollSVG(scroll(xl, cy, len * 0.75, -1, rr * 0.8, 1, false), id, 2.5));
           body.push(scrollSVG(scroll(xr, cy, len, 1, rr, -1, true), id, 3) + scrollSVG(scroll(xr, cy, len * 0.75, 1, rr * 0.8, 1, false), id, 2.5));
         }
-        const accent = b.k === "l1" && !!l2;
+        const accent = b.k === "q" ? b.acc : b.k === "l1" && !!l2;
         body.push(layered(esc(b.t), `x="500" y="${f1(base)}" ${fa(b.f, b.s, 0.01)} text-anchor="middle"`, b.s, P, id, accent));
       }
       y += b.h + GAP + g2;
     }
     if (foot) body.push(plaque(1318, foot, S.small, P, id));
 
-    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc([spec.arch, spec.l1, spec.amp, spec.l2].filter(Boolean).join(" "))}"><defs>${defs.join("")}</defs>` +
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc([spec.arch, spec.quote ? parseQuote(spec.quote).map(q => q.t).join(" ") : [spec.l1, spec.amp, spec.l2].join(" ")].filter(Boolean).join(" "))}"><defs>${defs.join("")}</defs>` +
       `<rect width="${W}" height="${H}" fill="${P.bg}"/><g clip-path="url(#${id}cl)">${pattern(spec.pattern, P, id, R)}<rect width="${W}" height="${H}" fill="url(#${id}glow)"/>${motif(spec.motif, P, id, R)}</g>` +
       `<rect width="${W}" height="${H}" fill="url(#${id}vig)"/>${frame(id, R)}${body.join("")}` +
       `<rect width="${W}" height="${H}" filter="url(#${id}gr)" opacity="${P.light ? 0.16 : 0.12}" style="mix-blend-mode:overlay"/></svg>`;
@@ -298,5 +336,5 @@
     return { main: contrast(P.m1[1], P.bg), accent: contrast(P.m2[1], P.bg), ribbon: contrast(P.ribbonInk, P.ribbon[0]) };
   }
 
-  root.Ornate = { W, H, STYLES, PALETTES, PATTERNS, MOTIFS, PRESETS, FONT_URL, render, ready, checks, contrast };
+  root.Ornate = { W, H, STYLES, PALETTES, PATTERNS, MOTIFS, PRESETS, QUOTES, FONT_URL, render, ready, checks, contrast };
 })(typeof window !== "undefined" ? window : globalThis);

@@ -90,6 +90,8 @@ pre{font:400 .85rem/1.6 var(--f-mono);background:var(--sheet);border:1px solid v
       <span class="cap" id="cap">1000 × 1500 px · nisbah pin Pinterest 2:3</span>
     </div>
     <div class="controls">
+      <div class="field"><label for="fQuote">Ayat panjang (kosongkan untuk tajuk pendek)</label><textarea id="fQuote" rows="5" style="font:inherit;color:var(--ink);background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:8px 10px;width:100%;resize:vertical"></textarea>
+        <span class="cap">Satu baris = satu ayat. <span class="mono"># besar · ! besar aksen · ~ skrip</span>; tanpa tanda = huruf kecil.</span></div>
       <div class="field"><label for="fArch">Baris melengkung (atas)</label><input type="text" id="fArch"></div>
       <div class="grid2">
         <div class="field"><label for="fL1">Tajuk 1</label><input type="text" id="fL1"></div>
@@ -115,8 +117,10 @@ pre{font:400 .85rem/1.6 var(--f-mono);background:var(--sheet);border:1px solid v
   </section>
 
   <section aria-labelledby="h-shelf">
-    <span class="eyebrow">8 contoh sedia</span>
-    <h2 id="h-shelf">Klik satu untuk ubah</h2>
+    <span class="eyebrow">16 contoh sedia</span>
+    <h2 id="h-shelf">Ayat panjang</h2>
+    <div class="shelf" id="shelfQ"></div>
+    <h2>Tajuk pendek</h2>
     <div class="shelf" id="shelf"></div>
   </section>
 
@@ -139,6 +143,7 @@ pre{font:400 .85rem/1.6 var(--f-mono);background:var(--sheet);border:1px solid v
     <p class="lede">Halaman ini untuk pratonton sahaja. PNG untuk dimuat naik ke Printful/Gelato dijana di komputer dengan skrip repo:</p>
     <pre>node scripts/ornate_export.js --size pin     # 1000×1500, untuk pin
 node scripts/ornate_export.js --size print   # 3600×5400 = 24×36 in pada 150 dpi
+node scripts/ornate_export.js --set quotes  # 8 poster ayat panjang sahaja
 node scripts/ornate_export.js --spec saya.json   # poster sendiri (senarai spesifikasi)</pre>
   </section>
 
@@ -159,10 +164,10 @@ node scripts/ornate_export.js --spec saya.json   # poster sendiri (senarai spesi
 (function(){
   const O=window.Ornate, $=s=>document.querySelector(s);
   if(!O){$("#facts").textContent="Enjin poster tidak dapat dimuat. Muat semula halaman.";return;}
-  const F={arch:"#fArch",l1:"#fL1",l2:"#fL2",amp:"#fAmp",ribbon:"#fRib",footer:"#fFoot",style:"#sStyle",palette:"#sPal",pattern:"#sPat",motif:"#sMotif"};
+  const F={quote:"#fQuote",arch:"#fArch",l1:"#fL1",l2:"#fL2",amp:"#fAmp",ribbon:"#fRib",footer:"#fFoot",style:"#sStyle",palette:"#sPal",pattern:"#sPat",motif:"#sMotif"};
   const fill=(sel,obj,key)=>Object.entries(obj).forEach(([k,v])=>$(sel).append(new Option(key?v[key]:v,k)));
   fill("#sStyle",O.STYLES,"name"); fill("#sPal",O.PALETTES,"name"); fill("#sPat",O.PATTERNS); fill("#sMotif",O.MOTIFS);
-  let spec={...O.PRESETS[0]}, mock=false, n=0, tm;
+  let spec={...O.QUOTES[1]}, mock=false, n=0, tm;
   const chip=(r,t)=>`<span class="chip ${r>=t?"ok":"no"}">${r.toFixed(2)}:1 ${r>=t?"lulus":"gagal"}</span>`;
   function load(s){spec={...s};for(const[k,sel]of Object.entries(F))$(sel).value=spec[k]??"";draw();}
   function read(){for(const[k,sel]of Object.entries(F))spec[k]=$(sel).value;}
@@ -184,15 +189,16 @@ node scripts/ornate_export.js --spec saya.json   # poster sendiri (senarai spesi
   $("#bMock").onclick=e=>{mock=!mock;e.currentTarget.setAttribute("aria-pressed",mock);draw()};
   const pal=k=>O.PALETTES[k].name, sty=k=>O.STYLES[k].name.split(" (")[0];
   (async()=>{
-    for(const [i,p] of O.PRESETS.entries()){
+    const all=[...O.QUOTES.map(p=>[p,"#shelfQ"]),...O.PRESETS.map(p=>[p,"#shelf"])];
+    for(const [p,shelf] of all){
       const b=document.createElement("button"); b.type="button"; b.setAttribute("aria-label","Buka "+p.name+" dalam editor");
       b.innerHTML=`<div class="poster"></div><span class="nm">${p.name}</span><span class="meta">${sty(p.style)} · ${pal(p.palette)}</span>`;
-      b.onclick=()=>{load(O.PRESETS[i]);$("#stage").scrollIntoView({behavior:"smooth",block:"start"})};
-      $("#shelf").append(b);
+      b.onclick=()=>{load({quote:"",...p});$("#stage").scrollIntoView({behavior:"smooth",block:"start"})};
+      $(shelf).append(b);
     }
-    load(O.PRESETS[0]);
-    const btns=[...$("#shelf").children];
-    for(const [i,p] of O.PRESETS.entries()){await O.ready(p);btns[i].querySelector(".poster").innerHTML=O.render(p,"sh"+i);}
+    load({quote:"",...O.QUOTES[1]});
+    const btns=[...$("#shelfQ").children,...$("#shelf").children];
+    for(const [i,[p]] of all.entries()){await O.ready(p);btns[i].querySelector(".poster").innerHTML=O.render(p,"sh"+i);}
   })();
 })();
 </script>
