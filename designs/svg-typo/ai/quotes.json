@@ -1,0 +1,7 @@
+[
+ {"id": "snacks", "layout": "circle", "lines": [["POWERED BY", "arched along the top of the circle, bold condensed capitals"], ["Snacks", "huge heavy brush script, center"], ["&", "tiny"], ["SARCASM", "big bold condensed capitals, curved along the bottom of the circle"]]},
+ {"id": "patience", "layout": "banner", "lines": [["MY PATIENCE", "bold condensed capitals, slightly arched"], ["HAS LEFT", "small white capitals inside a black ribbon banner"], ["the", "tiny script connector"], ["Chat", "huge heavy brush script, dominant word, with a swash tail"]]},
+ {"id": "eyeroller", "layout": "stack", "lines": [["PROFESSIONAL", "bold condensed capitals arched upward"], ["Eye Roller", "huge heavy brush script, dominant words"], ["SINCE", "tiny capitals between two short lines"], ["BIRTH", "big bold condensed capitals"]]},
+ {"id": "office", "layout": "box", "lines": [["OUT OF", "small capitals"], ["OFFICE", "big bold condensed capitals"], ["and", "tiny script connector"], ["OUT OF", "small capitals"], ["Patience", "huge heavy brush script, dominant word, with a swash underline"]]},
+ {"id": "couch", "layout": "banner", "lines": [["SORRY I CAN'T", "bold condensed capitals, slightly arched"], ["I HAVE PLANS", "small white capitals inside a black ribbon banner"], ["with my", "tiny script connector"], ["Couch", "huge heavy brush script, dominant word, with a swash underline"]]}
+]
