@@ -22,14 +22,16 @@ cache = modal.Volume.from_name("qwen-image-cache", create_if_missing=True)
 app = modal.App("pod-typo-gen", image=image)
 
 
-@app.cls(gpu="H100", volumes={"/cache": cache}, timeout=3600, scaledown_window=60)
+# H100 needs a payment method on Modal; L40S (48 GB) + CPU offload of the text encoder
+@app.cls(gpu="L40S", memory=65536, volumes={"/cache": cache}, timeout=3600, scaledown_window=60)
 class Gen:
     @modal.enter()
     def load(self):
         import torch
         from diffusers import DiffusionPipeline
         self.torch = torch
-        self.pipe = DiffusionPipeline.from_pretrained(MODEL, torch_dtype=torch.bfloat16).to("cuda")
+        self.pipe = DiffusionPipeline.from_pretrained(MODEL, torch_dtype=torch.bfloat16)
+        self.pipe.enable_model_cpu_offload()
         cache.commit()
 
     @modal.method()
