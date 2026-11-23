@@ -1,0 +1,23 @@
+{
+ "_encode_all_s": 19.1,
+ "gold_scroll_a": {
+  "seconds": 142.7,
+  "seed": 42,
+  "size": "1536x640"
+ },
+ "gold_scroll_b": {
+  "seconds": 125.0,
+  "seed": 7,
+  "size": "1536x640"
+ },
+ "gold_curl": {
+  "seconds": 138.1,
+  "seed": 42,
+  "size": "1024x1024"
+ },
+ "slate_board": {
+  "seconds": 268.4,
+  "seed": 42,
+  "size": "1152x1536"
+ }
+}

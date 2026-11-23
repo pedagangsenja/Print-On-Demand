@@ -84,7 +84,7 @@ def chalk(fg):
     a = np.asarray(fg.getchannel("A"), np.float32) / 255
     h, w = a.shape
     s = w / 5400
-    fine = noise(h, w, sigma=1.0 * s)
+    fine = noise(h, w, sigma=1.6 * s)
     streak = noise(h, w, scale=1)
     st = Image.fromarray(np.clip(streak * 40 + 128, 0, 255).astype(np.uint8))
     st = st.resize((max(1, w // 10), h)).resize((w, h), Image.BICUBIC).rotate(-20, resample=Image.BICUBIC)
@@ -92,8 +92,8 @@ def chalk(fg):
     coarse = noise(h, w, scale=max(1, int(90 * s)))
     ab = np.asarray(Image.fromarray((a * 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(1.6 * s)), np.float32) / 255
     edge = np.clip((ab - 0.5) * 2.4 + 0.5 + 0.22 * fine, 0, 1)
-    grain = np.clip(0.80 + 0.17 * fine + 0.12 * streak + 0.08 * coarse, 0, 1)
-    grain[(fine + 0.6 * streak) < -1.9] *= 0.15
+    grain = np.clip(0.82 + 0.13 * fine + 0.18 * streak + 0.08 * coarse, 0, 1)
+    grain[(fine + 0.8 * streak) < -2.1] *= 0.25
     out = np.asarray(fg, np.float32).copy()
     out[..., 3] = edge * grain * 255
     return Image.fromarray(out.round().astype(np.uint8), "RGBA")
@@ -121,6 +121,8 @@ def r5a(dpr):
     w, h = fg.size
     bg = Image.open(AI / "slate_board.png").convert("RGB").resize((w, h), Image.LANCZOS)
     b = np.asarray(bg, np.float32)
+    lum = b @ np.array([0.299, 0.587, 0.114], np.float32)
+    b = (lum[..., None] * 0.7 + b * 0.3) * np.array([0.80, 0.84, 0.84], np.float32)  # kurangkan biru, gelapkan
     b += noise(h, w, sigma=0.8 * dpr / 4)[..., None] * 5 + noise(h, w, scale=max(1, 6 * dpr))[..., None] * 3
     fg = chalk(fg)
     f = np.asarray(fg, np.float32)
