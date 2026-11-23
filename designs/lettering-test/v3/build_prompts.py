@@ -91,11 +91,11 @@ DESIGNS = [
  ("R4a", "B4", "a", "tall spurred Victorian Tuscan capitals, looping brush script with big swash capitals, and small spaced capitals separated by dots", [
    ("Jangan Risau Kalau", "small", "small spaced capitals", "arched first line"),
    ("LANGKAHMU", "hero", "huge spurred Tuscan capitals", ""),
-   ("masih kecil,", "small", "small capitals with a dot on each side", ""),
+   ("MASIH KECIL,", "small", "small capitals with a dot on each side", ""),
    ("Pokok Besar", "hero", "large looping brush script", ""),
    ("PUN", "small", "small capitals inside a gold circle", "gold circle"),
    ("BERMULA", "hero", "huge condensed Tuscan capitals", ""),
-   ("dari sebiji", "small", "small cream capitals inside a gold ribbon tag", "gold ribbon tag"),
+   ("DARI SEBIJI", "small", "small cream capitals inside a gold ribbon tag", "gold ribbon tag"),
    ("BENIH.", "hero", "huge spurred Tuscan capitals", "")], ""),
  ("R4b", "B4", "b", "elegant Spencerian copperplate script, high-contrast Didone capitals and small italic capitals", [
    ("Orang Cuma", "small", "small italic capitals", "arched first line"),

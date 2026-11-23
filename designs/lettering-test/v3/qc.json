@@ -88,5 +88,28 @@
    "P": "tangan warna kulit dan pelita tembaga, bukan krim sahaja"
   },
   "action": "Redo: seed 7 + prompt rev 2 (krim sahaja, tangan dan pelita gaya ukiran)"
+ },
+ "R4a_s7": {
+  "rev": 2,
+  "wrong": [
+   "kenil (kecil)",
+   "sebuji (sebiji)"
+  ],
+  "el_fail": {},
+  "action": "Redo: seed 123 + prompt rev 3 (baris kecil ditulis HURUF BESAR: MASIH KECIL, DARI SEBIJI; huruf kecil kerap salah eja)"
+ },
+ "R4b_s7": {
+  "rev": 2,
+  "wrong": [],
+  "el_fail": {},
+  "action": "Final"
+ },
+ "R3a_s7": {
+  "rev": 1,
+  "wrong": [
+   "+susunan bercampur: 'senyum saja,' di antara PANDANG dan RENDAH (maksud berubah)"
+  ],
+  "el_fail": {},
+  "action": "Redo: seed 123 + prompt rev 2 (tetapkan susunan bacaan)"
  }
 }

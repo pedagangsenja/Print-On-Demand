@@ -2,7 +2,8 @@
  "R4a": [
   "IMPORTANT: the first line is set on a curved arc that bends upward like a rainbow.",
   "The lines are stacked with zero gaps: letters of one line nest into the gaps of the lines above and below, and antique-gold acanthus scrolls sit behind the cream letters as a second layer, never as separate divider rows.",
-  "Capital letters end in long swash tails that curl into the gold scrolls."
+  "Capital letters end in long swash tails that curl into the gold scrolls.",
+  "The two small lines are written in capital letters exactly as quoted."
  ],
  "R4b": [
   "IMPORTANT: the first line is set on a curved arc that bends upward like a rainbow.",
@@ -23,5 +24,8 @@
  "R1b": [
   "IMPORTANT: monochrome cream on black only; the hand and the oil lamp are cream engraved line drawings with cross-hatching, no skin colour, no brass or gold colour.",
   "Reading order, top to bottom: 'Jadilah', then PELITA on the lamp, then the ribbon 'walau kecil', then 'IA TETAP', then 'MENERANGI', then 'Jalan Orang.'"
+ ],
+ "R3a": [
+  "IMPORTANT reading order, top to bottom: 'Kalau Orang', 'PANDANG', 'RENDAH,', then the yellow label 'senyum saja,', then 'BIAR', 'KEJAYAAN', the teal label 'yang bercakap', and 'NANTI.' last."
  ]
 }

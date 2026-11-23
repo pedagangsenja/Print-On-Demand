@@ -58,5 +58,23 @@
   "encode_all_s": 34.1,
   "seed": 42,
   "sha": "d4756c10"
+ },
+ "R4a_s7": {
+  "seconds": 575.0,
+  "encode_all_s": 23.4,
+  "seed": 7,
+  "sha": "7eff8845"
+ },
+ "R4b_s7": {
+  "seconds": 555.7,
+  "encode_all_s": 23.4,
+  "seed": 7,
+  "sha": "e65e57e3"
+ },
+ "R3a_s7": {
+  "seconds": 614.6,
+  "encode_all_s": 23.4,
+  "seed": 7,
+  "sha": "7df8ac8f"
  }
 }
