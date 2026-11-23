@@ -1,0 +1,32 @@
+Motivational typography posters - 30 final (black on white, 864x1152 = 3:4, prints 18x24 in)
+PNG + SVG in final/<id>.png / final/<id>.svg
+1 dream - Dream big, work hard, stay humble and never give up
+2 steps - Small steps every day lead to big results
+3 limit - Your only limit is the one you set in your mind
+4 tired - Don't stop when you're tired. Stop when you're done
+5 push - Push yourself because no one else is going to do it for you
+6 comfort - Great things never come from comfort zones
+7 try - Success starts with the decision to try
+8 silence - Work hard in silence, let your success be your noise
+9 doubt - Doubt kills more dreams than failure ever will
+10 pain - The pain you feel today is the strength you feel tomorrow
+11 excuse - Be stronger than your strongest excuse
+12 purpose - Wake up with purpose, go to bed with pride
+13 fall - Fall seven times, stand up eight
+14 wish - Don't wish for it, work for it
+15 climb - The best view comes after the hardest climb
+16 dayone - One day or day one, you decide
+17 future - Your future is created by what you do today, not tomorrow
+18 energy - Be the energy you want to attract
+19 futureself - Do something today that your future self will thank you for
+20 progress - Strive for progress, not perfection
+21 keepgoing - Keep going, everything you need will come at the right time
+22 doubting - Stop doubting yourself, work hard and make it happen
+23 harder - The harder you work, the luckier you get   (replaced: "the greater you feel when you win" always misspelled)
+24 goal - Focus on the goal, not the obstacles
+25 champion - Every champion was once a beginner who refused to give up
+26 comeback - Your comeback will always be stronger than your setback
+27 success - Success doesn't come to you, you go to it
+28 chase - Chase your dreams until they become your reality
+29 idols - Work until your idols become your rivals
+30 winners - Winners never quit and quitters never win   (replaced: "are not people who never fail..." always misspelled)
