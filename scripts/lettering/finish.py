@@ -45,21 +45,44 @@ def to_lab(rgb):
 
 
 def segment(img, n_ink):
-    """Pulang (label map pada saiz besar, pusat warna RGB, indeks latar)."""
+    """Dua peringkat: (1) topeng dakwat = jauh dari warna latar (ambang Otsu pada jarak Lab);
+    (2) warna dakwat = k-means pada piksel teras (tepi anti-alias dibuang), kluster hampir digabung.
+    Pulang (labels: -1 latar / 0..k-1 dakwat, pusat RGB dakwat, RGB latar) pada saiz besar."""
     big = cv2.resize(img, None, fx=UP, fy=UP, interpolation=cv2.INTER_CUBIC)
     big = cv2.bilateralFilter(big, 9, 40, 9)
     lab = cv2.cvtColor(big.astype(np.float32) / 255.0, cv2.COLOR_RGB2LAB)
-    flat = lab.reshape(-1, 3)
-    sample = flat[:: max(1, flat.shape[0] // 200000)].copy()
-    crit = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 60, 0.2)
-    _, _, centers = cv2.kmeans(sample, n_ink + 1, None, crit, 5, cv2.KMEANS_PP_CENTERS)
-    d = ((flat[:, None, :] - centers[None, :, :]) ** 2).sum(-1)
-    labels = d.argmin(1).reshape(lab.shape[:2])
-    b = max(4, labels.shape[0] // 40)
-    border = np.concatenate([labels[:b].ravel(), labels[-b:].ravel(), labels[:, :b].ravel(), labels[:, -b:].ravel()])
-    bg = int(np.bincount(border, minlength=n_ink + 1).argmax())
-    rgb_centers = cv2.cvtColor(centers.reshape(-1, 1, 3).astype(np.float32), cv2.COLOR_LAB2RGB).reshape(-1, 3) * 255
-    return labels, rgb_centers, bg
+    b = max(4, lab.shape[0] // 40)
+    border = np.concatenate([lab[:b].reshape(-1, 3), lab[-b:].reshape(-1, 3),
+                             lab[:, :b].reshape(-1, 3), lab[:, -b:].reshape(-1, 3)])
+    bg = np.median(border, 0)
+    dist = np.sqrt(((lab - bg) ** 2).sum(-1))
+    d8 = np.clip(dist * 255 / max(float(dist.max()), 1.0), 0, 255).astype(np.uint8)
+    t, _ = cv2.threshold(d8, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+    ink = d8 > t
+    labels = np.full(ink.shape, -1, np.int32)
+    if n_ink == 1:
+        labels[ink] = 0
+        centers = np.median(lab[ink], 0)[None]
+    else:
+        core = cv2.erode(ink.astype(np.uint8), np.ones((2 * UP + 1, 2 * UP + 1), np.uint8)).astype(bool)
+        pts = lab[core]
+        sample = pts[:: max(1, len(pts) // 200000)].astype(np.float32)
+        crit = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 60, 0.2)
+        _, _, centers = cv2.kmeans(sample, n_ink, None, crit, 5, cv2.KMEANS_PP_CENTERS)
+        centers = list(centers)
+        while len(centers) > 1:   # gabung kluster yang hampir sama (beza warna < 12)
+            dd = [(np.linalg.norm(centers[i] - centers[j]), i, j)
+                  for i in range(len(centers)) for j in range(i + 1, len(centers))]
+            dmin, i, j = min(dd)
+            if dmin >= 12:
+                break
+            centers[i] = (centers[i] + centers[j]) / 2
+            centers.pop(j)
+        centers = np.array(centers, np.float32)
+        pix = lab[ink]
+        labels[ink] = ((pix[:, None, :] - centers[None]) ** 2).sum(-1).argmin(1)
+    conv = lambda c: cv2.cvtColor(np.asarray(c, np.float32).reshape(-1, 1, 3), cv2.COLOR_LAB2RGB).reshape(-1, 3) * 255
+    return labels, conv(centers), conv(bg)[0]
 
 
 def clean(mask, area_min):
@@ -86,17 +109,17 @@ def potrace_paths(mask, tmp):
 
 
 def vectorize(img, n_ink):
-    labels, centers, bg = segment(img, n_ink)
+    labels, centers, bg_rgb = segment(img, n_ink)
     H, W = labels.shape
-    inks = [i for i in range(len(centers)) if i != bg]
-    masks = {i: clean(labels == i, area_min=int(30 * UP * UP)) for i in inks}
-    union = np.zeros_like(labels, bool)
+    masks = {i: clean(labels == i, area_min=int(30 * UP * UP)) for i in range(len(centers))}
+    masks = {i: m for i, m in masks.items() if m.any()}
+    union = np.zeros(labels.shape, bool)
     for m in masks.values():
         union |= m
     ys, xs = np.nonzero(union)
     bbox = (xs.min(), ys.min(), xs.max() + 1, ys.max() + 1)
-    # lapisan besar di bawah; kembangkan bawah lapisan atas supaya tiada celah antara warna
-    order = sorted(inks, key=lambda i: -masks[i].sum())
+    # lapisan besar di bawah; lapisan bawah dikembangkan di bawah lapisan atas supaya tiada celah warna
+    order = sorted(masks, key=lambda i: -masks[i].sum())
     layers = []
     with tempfile.TemporaryDirectory() as tmp:
         for n, i in enumerate(order):
@@ -104,11 +127,13 @@ def vectorize(img, n_ink):
             above = np.zeros_like(m)
             for j in order[n + 1:]:
                 above |= masks[j]
-            if above.any():
-                m |= cv2.dilate(above.astype(np.uint8), np.ones((3, 3), np.uint8)).astype(bool)
+            if above.any():   # isi bawah lapisan atas hanya di sempadan bersama (elak halo di tepi latar)
+                near = cv2.dilate(m.astype(np.uint8), cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (7, 7))).astype(bool)
+                m |= above & near
             tr, paths = potrace_paths(m, tmp)
-            layers.append({"cluster": i, "rgb": centers[i], "transform": tr, "paths": paths, "area": int(masks[i].sum())})
-    return {"W": W, "H": H, "bbox": [int(v) for v in bbox], "bg_rgb": centers[bg], "layers": layers}
+            layers.append({"cluster": int(i), "rgb": centers[i], "transform": tr, "paths": paths,
+                           "area": int(masks[i].sum())})
+    return {"W": W, "H": H, "bbox": [int(v) for v in bbox], "bg_rgb": bg_rgb, "layers": layers}
 
 
 def map_palette(vec, style, keep_color):
@@ -201,7 +226,7 @@ def main():
     vec = vectorize(img, len(style["inks"]))
     bg_hex, fills = map_palette(vec, style, keep)
     info = {"raw": raw.name, "style": sid, "bg": bg_hex, "fills": fills, "layers": len(vec["layers"]),
-            "paths": sum(len(l["paths"]) for l in vec["layers"]), "sizes": {}}
+            "ink_px": [l["area"] for l in vec["layers"]], "sizes": {}}
     master = compose_svg(vec, bg_hex, fills, 1800, 2400)
     (out / "master.svg").write_text(master)
     for sz in sizes:
