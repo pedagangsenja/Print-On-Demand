@@ -1,5 +1,5 @@
 [
-{"id": "w01", "frequency": "Harian", "freq_no": 1, "who": "Claude", "task": "Jana 8–10 design poster baru dari senarai frasa", "user_min": 0, "tool": "Skrip design"},
+{"id": "w01", "frequency": "Harian", "freq_no": 1, "who": "Claude", "task": "Jana 8–10 design lettering baru (gaya S1–S6, 4 seed setiap quote; SOP P9)", "user_min": 0, "tool": "Kaggle GPU / MOSS CPU (scripts/lettering)"},
 {"id": "w02", "frequency": "Harian", "freq_no": 1, "who": "Claude", "task": "Semak trademark frasa baru", "user_min": 0, "tool": "USPTO"},
 {"id": "w03", "frequency": "Harian", "freq_no": 1, "who": "Claude", "task": "Jana mockup bilik dan pin untuk produk baru", "user_min": 0, "tool": "Skrip mockup"},
 {"id": "w04", "frequency": "Harian", "freq_no": 1, "who": "Claude", "task": "Upload produk baru ke Printify / WooCommerce sebagai draf", "user_min": 0, "tool": "Printify API"},
@@ -19,5 +19,8 @@
 {"id": "w18", "frequency": "Bulanan", "freq_no": 3, "who": "Claude", "task": "Semak kemas kini plugin, backup dan kos", "user_min": 0, "tool": "WordPress"},
 {"id": "w19", "frequency": "Bulanan", "freq_no": 3, "who": "Anda", "task": "Order 1–2 sampel produk baru untuk semak kualiti", "user_min": 15, "tool": "Printify"},
 {"id": "w20", "frequency": "Bulanan", "freq_no": 3, "who": "Anda", "task": "Semak bayaran Stripe/PayPal dan kos (hosting, sampel)", "user_min": 15, "tool": "Stripe, PayPal"},
-{"id": "w21", "frequency": "Bulanan", "freq_no": 3, "who": "Anda", "task": "Luluskan tema musim seterusnya", "user_min": 10, "tool": "Chat"}
+{"id": "w21", "frequency": "Bulanan", "freq_no": 3, "who": "Anda", "task": "Luluskan tema musim seterusnya", "user_min": 10, "tool": "Chat"},
+{"id": "w22", "frequency": "Harian", "freq_no": 1, "who": "Claude", "task": "QC lettering: ejaan 100% + 9 ciri gaya pada helaian semakan; gagal = seed baharu (maks 4)", "user_min": 0, "tool": "sheet.py"},
+{"id": "w23", "frequency": "Harian", "freq_no": 1, "who": "Claude", "task": "Siapkan design lulus: vektor SVG, palet tepat, tekstur, PNG 300 DPI 8×10 hingga 24×36", "user_min": 0, "tool": "finish.py (potrace)"},
+{"id": "w24", "frequency": "Mingguan", "freq_no": 2, "who": "Claude", "task": "Tulis 50 quote Inggeris 3–7 perkataan untuk minggu depan + semak trademark", "user_min": 0, "tool": "Claude, USPTO"}
 ]

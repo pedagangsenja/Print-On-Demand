@@ -1,0 +1,50 @@
+[
+ {
+  "id": "steps_S1",
+  "style": "S1",
+  "text": "Small steps every day",
+  "prompt": "Flat vector hand-lettering quote poster, portrait. Solid dark navy blue background. In the center, a compact rectangular block of playful hand-drawn uppercase letters with a bouncy baseline: every letter has a slightly different size and tilt, letters touch and interlock tightly, thick rounded strokes, like a modern hand-lettering illustration. The text reads exactly, three lines: line 1 \"SMALL\" in off-white, line 2 \"STEPS\" in warm orange, line 3 \"EVERY\" in light gray and \"DAY\" in off-white. Small round confetti dots in off-white and orange scattered around the block. Generous empty navy margins. No outline, no shadow, no gradient, no texture. No other text, no letters except the quoted words, no signature, no watermark, no frame, no border, no mockup, flat 2D artwork.",
+  "w": 768,
+  "h": 1024
+ },
+ {
+  "id": "steps_S2",
+  "style": "S2",
+  "text": "Small steps every day",
+  "prompt": "Vintage sign-painter hand lettering quote, portrait. Solid matte black background. Centered stacked lettering in warm cream ink. The text reads exactly, four lines: \"SMALL\" in small widely spaced uppercase letters; \"Steps\" in a large bold flowing brush script with a curling entry swash; \"EVERY\" in small widely spaced uppercase letters; \"Day\" in a large bold flowing brush script whose last letter ends in a long swash tail that sweeps under the word. The script words are much larger than the small uppercase words. Tight vertical spacing, the swashes tie the lines into one lockup. Wide empty black margins. Cream on black only. No other text, no letters except the quoted words, no signature, no watermark, no frame, no border, no mockup, flat 2D artwork.",
+  "w": 768,
+  "h": 1024
+ },
+ {
+  "id": "steps_S3",
+  "style": "S3",
+  "text": "Small steps every day",
+  "prompt": "Expressive brush calligraphy quote, portrait. Pure black background, pure white ink. The text reads exactly, four lines: \"Small\" / \"steps\" / \"every\" / \"day\", written in tall, slanted, energetic dry-brush script with strong thick-and-thin contrast, lines slightly overlapping. Long sweeping hairline swash strokes loop around and between the words, and fine ink splatter dots surround the lettering. Centered with empty margins. White on black only. No other text, no letters except the quoted words, no signature, no watermark, no frame, no border, no mockup, flat 2D artwork.",
+  "w": 768,
+  "h": 1024
+ },
+ {
+  "id": "steps_S4",
+  "style": "S4",
+  "text": "Small steps every day",
+  "prompt": "Casual hand-lettered quote in chalk, portrait. Dark charcoal slate background. Off-white chalk-textured brush lettering with slightly rough dry edges, a playful mix of upright and slanted letters. The text reads exactly, three lines: \"Small steps\" in medium casual brush letters, \"EVERY\" in large bold brush capitals, \"day\" in a large bouncy brush script. A few tiny chalk dots and small stars around. Centered and compact with generous margins. No other text, no letters except the quoted words, no signature, no watermark, no frame, no border, no mockup, flat 2D artwork.",
+  "w": 768,
+  "h": 1024
+ },
+ {
+  "id": "steps_S5",
+  "style": "S5",
+  "text": "Small steps every day",
+  "prompt": "Hand-drawn typographic quote, portrait. Solid black background. White lettering with a distressed worn letterpress texture, small speckles and scratches. The text reads exactly, three lines forming a tight justified block: \"SMALL STEPS\" in chunky hand-drawn condensed capitals with slightly uneven edges, \"every\" in a bouncy lowercase hand-drawn script, \"DAY.\" in very large chunky hand-drawn capitals followed by a period. All lines have the same width and are tightly stacked. Centered with wide black margins. White on black only. No other text, no letters except the quoted words, no signature, no watermark, no frame, no border, no mockup, flat 2D artwork.",
+  "w": 768,
+  "h": 1024
+ },
+ {
+  "id": "steps_S6",
+  "style": "S6",
+  "text": "Small steps every day",
+  "prompt": "Decorative hand-lettering quote, portrait. Solid deep navy blue background. An oval-shaped lettering composition in the center. The text reads exactly, four lines: \"Small\" in a bold white monoline script with loops; \"STEPS\" in bold white hand-drawn capitals with curly swirl terminals; \"EVERY\" in small bright yellow uppercase sans-serif letters; \"Day\" in a large bold white loopy script with a big swirl. Each white letter has a thin inline highlight line inside the stroke. Bright yellow teardrop splashes radiate outward around the oval, plus tiny white dots and short dashes. Clean flat vector illustration. No other text, no letters except the quoted words, no signature, no watermark, no frame, no border, no mockup, flat 2D artwork.",
+  "w": 768,
+  "h": 1024
+ }
+]

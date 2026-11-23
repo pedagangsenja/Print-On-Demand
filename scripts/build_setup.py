@@ -49,7 +49,7 @@ for row in checklist: row["ready"] = row["no"] in READY or row["status"] == "Sia
 
 # (kekerapan, siapa, tugas, minit anda, alat)
 WF = [
- ("Harian", "Claude", "Jana 8–10 design poster baru dari senarai frasa", 0, "Skrip design"),
+ ("Harian", "Claude", "Jana 8–10 design lettering baru (gaya S1–S6, 4 seed setiap quote; SOP P9)", 0, "Kaggle GPU / MOSS CPU (scripts/lettering)"),
  ("Harian", "Claude", "Semak trademark frasa baru", 0, "USPTO"),
  ("Harian", "Claude", "Jana mockup bilik dan pin untuk produk baru", 0, "Skrip mockup"),
  ("Harian", "Claude", "Upload produk baru ke Printify / WooCommerce sebagai draf", 0, "Printify API"),
@@ -70,6 +70,9 @@ WF = [
  ("Bulanan", "Anda", "Order 1–2 sampel produk baru untuk semak kualiti", 15, "Printify"),
  ("Bulanan", "Anda", "Semak bayaran Stripe/PayPal dan kos (hosting, sampel)", 15, "Stripe, PayPal"),
  ("Bulanan", "Anda", "Luluskan tema musim seterusnya", 10, "Chat"),
+ ("Harian", "Claude", "QC lettering: ejaan 100% + 9 ciri gaya pada helaian semakan; gagal = seed baharu (maks 4)", 0, "sheet.py"),
+ ("Harian", "Claude", "Siapkan design lulus: vektor SVG, palet tepat, tekstur, PNG 300 DPI 8×10 hingga 24×36", 0, "finish.py (potrace)"),
+ ("Mingguan", "Claude", "Tulis 50 quote Inggeris 3–7 perkataan untuk minggu depan + semak trademark", 0, "Claude, USPTO"),
 ]
 workflow = [{"id": f"w{i:02d}", "frequency": f, "freq_no": {"Harian": 1, "Mingguan": 2, "Bulanan": 3}[f], "who": w, "task": t,
              "user_min": m, "tool": tool} for i, (f, w, t, m, tool) in enumerate(WF, 1)]
