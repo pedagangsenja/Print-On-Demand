@@ -1,0 +1,52 @@
+[
+ {
+  "id": "L1_ornate",
+  "ref": "B4",
+  "type": "Hiasan krim + emas atas hitam",
+  "w": 768,
+  "h": 1024,
+  "text": "Jangan Bandingkan / PERJALANAN / Hidupmu Dengan / ORANG LAIN / Setiap Bunga / MEKAR / Pada Waktunya",
+  "words": 12,
+  "prompt": "Vintage hand-lettering typography poster on a solid black background, lettering in cream with antique gold accents, ornate scrolls and corner ornaments. The poster text reads exactly, line by line: \"Jangan Bandingkan\" / \"PERJALANAN\" / \"Hidupmu Dengan\" / \"ORANG LAIN\" / \"Setiap Bunga\" / \"MEKAR\" / \"Pada Waktunya\". Dense composition that fills the whole canvas edge to edge, words interlocking with no empty gaps. Mix at least five lettering styles: tall Victorian serif capitals with spurs, flowing brush script, condensed sans-serif capitals, small capitals inside curled ribbon banners, and bold inline capitals with a 3D drop shadow. Letter tails and swashes extend into flourishes that fill the space between words. Hand-drawn, slightly imperfect. Flat poster artwork only, no mockup, no frame, no extra words."
+ },
+ {
+  "id": "L2_chalk",
+  "ref": "B5",
+  "type": "Papan kapur + reben",
+  "w": 768,
+  "h": 1024,
+  "text": "Rezeki Itu / BUKAN SELALU / Wang Ringgit / Kadang Ia Datang / DALAM BENTUK / Sahabat / YANG IKHLAS",
+  "words": 14,
+  "prompt": "Chalkboard hand-lettering poster on a dark slate chalkboard with real chalk dust texture and smudges, white and cream chalk lettering, chalk ribbon banners and small stars. The poster text reads exactly, line by line: \"Rezeki Itu\" / \"BUKAN SELALU\" / \"Wang Ringgit\" / \"Kadang Ia Datang\" / \"DALAM BENTUK\" / \"Sahabat\" / \"YANG IKHLAS\". Dense composition that fills the whole canvas edge to edge, words interlocking with no empty gaps. Mix at least five lettering styles: tall Victorian serif capitals with spurs, flowing brush script, condensed sans-serif capitals, small capitals inside curled ribbon banners, and bold inline capitals with a 3D drop shadow. Letter tails and swashes extend into flourishes that fill the space between words. Hand-drawn, slightly imperfect. Flat poster artwork only, no mockup, no frame, no extra words."
+ },
+ {
+  "id": "L3_color",
+  "ref": "B3",
+  "type": "Berus berwarna, grunge",
+  "w": 768,
+  "h": 1024,
+  "text": "Kalau Penat / REHAT / Jangan BERHENTI / Sebab Mimpi Kita / TAK AKAN / Jadi Nyata / DENGAN SENDIRI",
+  "words": 14,
+  "prompt": "Colorful grunge hand-lettering poster on a dark charcoal textured background, lettering in orange, teal, cream, yellow and red, torn ribbon banners, hand-drawn arrows, stars, paint splatters and halftone grunge texture. The poster text reads exactly, line by line: \"Kalau Penat\" / \"REHAT\" / \"Jangan BERHENTI\" / \"Sebab Mimpi Kita\" / \"TAK AKAN\" / \"Jadi Nyata\" / \"DENGAN SENDIRI\". Dense composition that fills the whole canvas edge to edge, words interlocking with no empty gaps. Mix at least five lettering styles: tall Victorian serif capitals with spurs, flowing brush script, condensed sans-serif capitals, small capitals inside curled ribbon banners, and bold inline capitals with a 3D drop shadow. Letter tails and swashes extend into flourishes that fill the space between words. Hand-drawn, slightly imperfect. Flat poster artwork only, no mockup, no frame, no extra words."
+ },
+ {
+  "id": "L4_badge",
+  "ref": "B2",
+  "type": "Emblem hitam-putih",
+  "w": 768,
+  "h": 1024,
+  "text": "Syukur Itu / KUNCI / Kepada Hati Yang / TENANG / Dan Rezeki / YANG BERKAT",
+  "words": 11,
+  "prompt": "Black and white vintage emblem on a plain white background: a tall symmetrical ornate black badge with a scalloped decorative border and a small sunburst at the bottom, white hand-lettering inside the badge. The poster text reads exactly, line by line: \"Syukur Itu\" / \"KUNCI\" / \"Kepada Hati Yang\" / \"TENANG\" / \"Dan Rezeki\" / \"YANG BERKAT\". Dense composition that fills the whole canvas edge to edge, words interlocking with no empty gaps. Mix at least five lettering styles: tall Victorian serif capitals with spurs, flowing brush script, condensed sans-serif capitals, small capitals inside curled ribbon banners, and bold inline capitals with a 3D drop shadow. Letter tails and swashes extend into flourishes that fill the space between words. Hand-drawn, slightly imperfect. Flat poster artwork only, no mockup, no frame, no extra words."
+ },
+ {
+  "id": "L5_illus",
+  "ref": "B1",
+  "type": "Huruf + ilustrasi tangan & cawan",
+  "w": 768,
+  "h": 1024,
+  "text": "Secawan KOPI / Tak Mampu / UBAH DUNIA / Tapi Cukup Untuk / Ubah HARI / YANG MENDUNG",
+  "words": 13,
+  "prompt": "Vintage hand-lettering poster on a black background in cream ink, with an engraved line illustration of a hand holding a steaming coffee cup woven between the words. The poster text reads exactly, line by line: \"Secawan KOPI\" / \"Tak Mampu\" / \"UBAH DUNIA\" / \"Tapi Cukup Untuk\" / \"Ubah HARI\" / \"YANG MENDUNG\". Dense composition that fills the whole canvas edge to edge, words interlocking with no empty gaps. Mix at least five lettering styles: tall Victorian serif capitals with spurs, flowing brush script, condensed sans-serif capitals, small capitals inside curled ribbon banners, and bold inline capitals with a 3D drop shadow. Letter tails and swashes extend into flourishes that fill the space between words. Hand-drawn, slightly imperfect. Flat poster artwork only, no mockup, no frame, no extra words."
+ }
+]
