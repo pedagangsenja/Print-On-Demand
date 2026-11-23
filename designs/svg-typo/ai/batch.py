@@ -14,7 +14,17 @@ LAYOUT = {
  "script": "one giant slanted brush script word dominates the whole design, the other short words small and tucked above and below it",
 }
 FRAMED = {"frame"}
+def poster_prompt(q):
+    lines = "\n".join(f'"{t}" ({s})' for t, s in q["lines"])
+    return ("Motivational typography poster, portrait format, black ink lettering printed on plain pure white paper. "
+            "The text reads exactly, top to bottom:\n" + lines +
+            "\nLayout: a bold editorial typographic composition that fills the poster with generous even white margins, "
+            "strong size contrast, key words huge in heavy condensed capitals, connector words small, accent words in a "
+            "confident brush script, a few thin horizontal rules and tiny accents for balance, perfectly centered and aligned. "
+            "Solid black only, crisp clean edges, no gray, no shading, no texture, no frame, no mockup, no picture, "
+            "no extra words, correct spelling.")
 def prompt(q):
+    if q.get("kind") == "poster": return poster_prompt(q)
     lines = "\n".join(f'"{t}" ({s})' for t, s in q["lines"])
     return ("Black ink vector typography quote design for a t-shirt SVG cut file, on a plain pure white background. "
             + ("" if q["layout"] in FRAMED else "No frame, no border, no outline box around the design.") + "\nThe text reads exactly, top to bottom:\n" + lines +
@@ -36,6 +46,7 @@ pipe.set_progress_bar_config(disable=True)
 for q in qs:
     (out / f"{q['id']}.prompt.txt").write_text(prompt(q))
     for s in range(lo, hi + 1):
-        img = pipe(prompt_embeds=embs[q["id"]], height=1024, width=1024, num_inference_steps=4, guidance_scale=1.0,
+        W, H = q.get("size", [1024, 1024])
+        img = pipe(prompt_embeds=embs[q["id"]], height=H, width=W, num_inference_steps=4, guidance_scale=1.0,
                    generator=torch.Generator("cpu").manual_seed(s)).images[0]
         img.save(out / f"{q['id']}_s{s}.png"); print("ok", q["id"], s, round(time.time() - t), flush=True)
