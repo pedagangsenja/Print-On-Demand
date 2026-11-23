@@ -190,18 +190,16 @@ def texture(png_rgb, bg_hex, kind, seed=7):
     elif kind == "worn":
         n = noise(shape, 1.5, rng) * 0.5 + noise(shape, 5, rng) * 0.35 + noise(shape, 18, rng) * 0.35
         hole = np.clip((n - 1.35) / 0.25, 0, 1)
-        scratch = np.clip((noise((shape[0], shape[1]), 0, rng) > 3.6).astype(np.float32), 0, 1)
-        scratch = cv2.GaussianBlur(cv2.dilate(scratch, np.ones((1, 9), np.uint8)), (0, 0), 0.8)
-        a = ink * (1 - np.clip(hole + scratch * 0.7, 0, 1))
+        a = ink * (1 - hole)
         out = bg + (img - bg) * a[..., None]
     elif kind == "chalk":
         streak = cv2.GaussianBlur(rng.standard_normal(shape).astype(np.float32), (0, 0), sigmaX=6, sigmaY=0.8)
         streak /= streak.std() + 1e-6
         fine = noise(shape, 0.9, rng)
-        dens = np.clip(0.78 + 0.16 * streak + 0.12 * fine, 0, 1)
-        holes = (fine * 0.7 + streak * 0.5) < -1.25
+        dens = np.clip(0.93 + 0.07 * streak + 0.05 * fine, 0, 1)
+        holes = (fine * 0.7 + streak * 0.5) < -1.6
         a = ink * dens * (1 - holes)
-        cloud = noise(shape, 60, rng) * 4 + noise(shape, 2, rng) * 3
+        cloud = noise(shape, 120, rng) * 2.0 + noise(shape, 1.5, rng) * 1.5
         base = bg + cloud[..., None]
         out = base + (img - bg) * a[..., None]
     else:

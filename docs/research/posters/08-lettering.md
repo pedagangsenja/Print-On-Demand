@@ -80,9 +80,22 @@ GPU (Kaggle) tidak perlu dipasang dalam container: Claude hantar job melalui `ka
 6. Anda: lulus / tolak (~5 min).
 7. Claude: mockup, pin, upload (langkah Workflow sedia ada).
 
-## 6. Hasil ujian 6 gaya (23 Nov)
+## 6. Hasil ujian 6 gaya (23 Nov, MOSS-Image di CPU)
 
-(diisi selepas ujian)
+Quote baharu "Small steps every day", 6 gaya × 2 seed (42, 7) = 12 imej 768×1024. Masa: purata 438 s/imej (363–529 s), jumlah ~88 min, tanpa GPU. Space Qwen ditolak (kuota). Helaian: `designs/lettering/test-6gaya/sheet.jpg` (atas = AI mentah, bawah = siap cetak).
+
+| Gaya | Ejaan betul | Pilihan | Catatan (semakan mata Claude, bukti lemah) |
+|---|---|---|---|
+| S1 | 2/2 | s42 | Huruf bulat macam font, kurang "melantun" berbanding rujukan; s7 "EVERY DAY" terlalu rapat (dibaca EVERYDAY jika satu warna) |
+| S2 | 2/2 | s42 | Paling hampir rujukan: skrip berswash + huruf kecil berselang |
+| S3 | 2/2 | s42 | Swash panjang + percikan baik; hierarki saiz kurang (semua baris hampir sama besar) |
+| S4 | 2/2 | s42 | Tekstur kapur asal dibuang semasa vektor, dibina semula oleh finish.py |
+| S5 | 2/2 | s42 | Blok rata kiri-kanan + noktah; tekstur lusuh prosedur |
+| S6 | 2/2 | s7 | Inline kekal pada s7; pada s42 warna inline tercantum dengan putih |
+
+Siap cetak (finish.py): 7–10 s setiap saiz untuk gaya rata; S2 (grain) 5 saiz dalam 82 s. Saiz fail PNG S2: 8×10 4.8 MB, 18×24 25 MB, 24×36 50 MB (diukur). Tepi huruf licin pada 300 DPI (semakan potongan 1:1).
+
+Kesimpulan: ayat Inggeris pendek = 12/12 ejaan betul walaupun model CPU (ujian Melayu panjang: 92–96% perkataan betul). Langkah siap cetak menyelesaikan saiz cetak. Had sekarang = kelajuan CPU (~8 imej/jam); GPU Kaggle diperlukan untuk Qwen-Image, Qwen-Image-Edit dan batch besar.
 
 ## 7. Had dan risiko
 - Semakan ejaan dan gaya dibuat dengan mata Claude: tahap bukti lemah.

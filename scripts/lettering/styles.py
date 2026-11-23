@@ -73,7 +73,7 @@ STYLES = {
     "S6": {
         "name": "Skrip monoline + inline + percikan kuning",
         "ref": "IMG_5738",
-        "bg": "#151b3d", "inks": ["#ffffff", "#f6c12a"], "texture": "none",
+        "bg": "#151b3d", "inks": ["#ffffff", "#f6c12a", "#c9cde6"], "texture": "none",
         "tpl": ("Decorative hand-lettering quote, portrait. Solid deep navy blue background. An oval-shaped "
                 "lettering composition in the center. The text reads exactly, four lines: \"{w1c}\" in a bold white "
                 "monoline script with loops; \"{w2u}\" in bold white hand-drawn capitals with curly swirl terminals; "

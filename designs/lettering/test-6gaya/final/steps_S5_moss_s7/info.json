@@ -1,0 +1,18 @@
+{
+ "raw": "steps_S5_moss_s7.png",
+ "style": "S5",
+ "bg": "#0a0a0a",
+ "fills": [
+  "#f5f5f2"
+ ],
+ "layers": 1,
+ "ink_px": [
+  4265275
+ ],
+ "sizes": {
+  "18x24": [
+   5400,
+   7200
+  ]
+ }
+}
