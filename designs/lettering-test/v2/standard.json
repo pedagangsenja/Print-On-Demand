@@ -1,0 +1,101 @@
+[
+ {
+  "no": 1,
+  "criterion": "Hierarki saiz",
+  "ref": "2-4 perkataan utama sangat besar; perkataan penghubung kecil (B4: HIDUP, PADAHAL, MENGELUH besar; 'orang lain' kecil)",
+  "v1": "Hampir semua baris sama besar",
+  "v1_pass": "tidak",
+  "v2": "Belum diuji",
+  "v2_pass": "",
+  "level": "lemah",
+  "by": "Semakan mata Claude, 5 poster rujukan vs imej ERNIE v1"
+ },
+ {
+  "no": 2,
+  "criterion": "Baris melengkung / ikut bentuk",
+  "ref": "Baris kecil melengkung atas perkataan besar (B4); teks ikut bentuk lencana (B2) atau keliling cawan (B1)",
+  "v1": "Baris lurus mendatar; hanya lencana ikut bentuk",
+  "v1_pass": "sebahagian",
+  "v2": "Belum diuji",
+  "v2_pass": "",
+  "level": "lemah",
+  "by": "Semakan mata Claude, 5 poster rujukan vs imej ERNIE v1"
+ },
+ {
+  "no": 3,
+  "criterion": "Ruang tepi / bentuk blok",
+  "ref": "4 daripada 5 rujukan: satu tiang teks di tengah dengan ruang gelap di tepi; hanya B3 penuh tepi ke tepi",
+  "v1": "Prompt v1 minta penuh tepi ke tepi, jadi kebanyakan imej penuh",
+  "v1_pass": "tidak",
+  "v2": "Belum diuji",
+  "v2_pass": "",
+  "level": "lemah",
+  "by": "Semakan mata Claude, 5 poster rujukan vs imej ERNIE v1"
+ },
+ {
+  "no": 4,
+  "criterion": "Hiasan menyatu dengan huruf",
+  "ref": "Ekor huruf jadi hiasan; lapisan hiasan emas di belakang huruf (B4)",
+  "v1": "Hiasan kebanyakannya garis berasingan antara baris",
+  "v1_pass": "sebahagian",
+  "v2": "Belum diuji",
+  "v2_pass": "",
+  "level": "lemah",
+  "by": "Semakan mata Claude, 5 poster rujukan vs imej ERNIE v1"
+ },
+ {
+  "no": 5,
+  "criterion": "Tekstur buatan tangan",
+  "ref": "Debu kapur (B5), cetakan kayu bercalar (B1), berus kering (B2, B3)",
+  "v1": "Kebanyakan kemas seperti digital; kapur (L2) ada sedikit tekstur",
+  "v1_pass": "sebahagian",
+  "v2": "Belum diuji",
+  "v2_pass": "",
+  "level": "lemah",
+  "by": "Semakan mata Claude, 5 poster rujukan vs imej ERNIE v1"
+ },
+ {
+  "no": 6,
+  "criterion": "Perkataan dalam reben / label",
+  "ref": "Perkataan kecil diletak dalam reben atau label kertas koyak (B5, B3, B1)",
+  "v1": "Ada reben, tetapi kadang berisi huruf rawak",
+  "v1_pass": "sebahagian",
+  "v2": "Belum diuji",
+  "v2_pass": "",
+  "level": "lemah",
+  "by": "Semakan mata Claude, 5 poster rujukan vs imej ERNIE v1"
+ },
+ {
+  "no": 7,
+  "criterion": "Tanda baca, gaya cakap",
+  "ref": "Ada koma, tanda soal dan noktah (B5 'Mau Tanya,' 'Ya?'; B3 'DIPERCAYA.')",
+  "v1": "Tiada tanda baca (prompt v1 tidak minta)",
+  "v1_pass": "tidak",
+  "v2": "Belum diuji",
+  "v2_pass": "",
+  "level": "lemah",
+  "by": "Semakan mata Claude, 5 poster rujukan vs imej ERNIE v1"
+ },
+ {
+  "no": 8,
+  "criterion": "Ilustrasi menyatu dengan teks",
+  "ref": "Perkataan ditulis atas cawan; reben berpusing di belakang tangan (B1)",
+  "v1": "Cawan + tangan di celah baris; tiada perkataan atas cawan",
+  "v1_pass": "sebahagian",
+  "v2": "Belum diuji",
+  "v2_pass": "",
+  "level": "lemah",
+  "by": "Semakan mata Claude, 5 poster rujukan vs imej ERNIE v1"
+ },
+ {
+  "no": 9,
+  "criterion": "Ejaan",
+  "ref": "Semua perkataan betul",
+  "v1": "ERNIE + penambah: 2/5 design betul semua, 92% perkataan betul",
+  "v1_pass": "tidak",
+  "v2": "Belum diuji",
+  "v2_pass": "",
+  "level": "lemah",
+  "by": "Semakan mata Claude, 5 poster rujukan vs imej ERNIE v1"
+ }
+]

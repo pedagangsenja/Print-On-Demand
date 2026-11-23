@@ -1,4 +1,7 @@
-"""Ujian lettering (prompt panjang 11-14 perkataan) di CPU. Guna: python3 gen.py <ernie|ernie_pe|moss> [id...]
+"""Ujian lettering (prompt panjang 11-14 perkataan) di CPU.
+Guna: python3 gen.py <ernie|ernie_pe|moss> [--set v2] [--seeds 42,7] [id...]
+  --set   : folder lain dengan prompts.json sendiri (hasil ke <set>/out/<model>/)
+  --seeds : lebih dari satu seed; nama fail jadi <id>_s<seed>.png
 
 ernie    : ERNIE-Image-Turbo GGUF Q8, 8 langkah, tanpa penambah prompt (sama seperti ujian 23 Nov).
 ernie_pe : prompt ditulis semula dahulu oleh penambah prompt (PE) ERNIE, kemudian dijana seperti ernie.
@@ -38,7 +41,7 @@ def enhance(prompts, out):
     from diffusers import ErnieImagePipeline
     f = out / "enhanced.json"
     done = json.loads(f.read_text()) if f.exists() else {}
-    todo = [p for p in prompts if p["id"] not in done]
+    todo = list({p["id"]: p for p in prompts if p["id"] not in done}.values())
     if todo:
         pipe = ErnieImagePipeline.from_pretrained(ERNIE, transformer=None, vae=None, text_encoder=None, tokenizer=None, torch_dtype=DT)
         for p in todo:
@@ -59,7 +62,7 @@ def run_ernie(prompts, out):
     t0 = time.time()
     pipe = ErnieImagePipeline.from_pretrained(ERNIE, transformer=None, vae=None, pe=None, torch_dtype=DT)
     with torch.inference_mode():
-        embs = {p["id"]: pipe.encode_prompt(p["prompt"], device="cpu") for p in prompts}
+        embs = {p["id"]: pipe.encode_prompt(p["prompt"], device="cpu") for p in {q["id"]: q for q in prompts}.values()}
     enc = time.time() - t0
     del pipe; gc.collect()
     sd = load_state_dict(str(S / "models/ernie-turbo-Q8_0.gguf"))
@@ -75,9 +78,9 @@ def run_ernie(prompts, out):
         t0 = time.time()
         with torch.inference_mode():
             img = pipe(prompt_embeds=embs[p["id"]], height=p["h"], width=p["w"], num_inference_steps=8, guidance_scale=1.0,
-                       generator=torch.Generator("cpu").manual_seed(SEED), use_pe=False).images[0]
-        img.save(out / f"{p['id']}.png")
-        log_time(out, p["id"], time.time() - t0, {"encode_all_s": round(enc, 1)})
+                       generator=torch.Generator("cpu").manual_seed(p["seed"]), use_pe=False).images[0]
+        img.save(out / f"{p['key']}.png")
+        log_time(out, p["key"], time.time() - t0, {"encode_all_s": round(enc, 1), "seed": p["seed"]})
 
 
 def run_moss(prompts, out):
@@ -144,7 +147,7 @@ def run_moss(prompts, out):
     for p in prompts:
         t0 = time.time()
         pe, pm = embs[p["id"]]
-        lat = torch.randn(1, 128, p["h"] // 16, p["w"] // 16, generator=torch.Generator("cpu").manual_seed(SEED))
+        lat = torch.randn(1, 128, p["h"] // 16, p["w"] // 16, generator=torch.Generator("cpu").manual_seed(p["seed"]))
         sch = MOSSImageScheduler(**sargs); sch.set_timesteps(8, device="cpu")
         with torch.inference_mode():
             for ts in sch.timesteps:
@@ -156,16 +159,24 @@ def run_moss(prompts, out):
             b, c, h, w = z.shape
             z = z.reshape(b, c // 4, 2, 2, h, w).permute(0, 1, 4, 2, 5, 3).reshape(b, c // 4, 2 * h, 2 * w)
             px = vae.decode(z, return_dict=False)[0].clamp(-1, 1)
-        proc.postprocess(px, output_type="pil")[0].save(out / f"{p['id']}.png")
-        log_time(out, p["id"], time.time() - t0, {"encode_all_s": round(enc, 1)})
+        proc.postprocess(px, output_type="pil")[0].save(out / f"{p['key']}.png")
+        log_time(out, p["key"], time.time() - t0, {"encode_all_s": round(enc, 1), "seed": p["seed"]})
 
 
 def main():
-    name, only = sys.argv[1], set(sys.argv[2:])
+    args = sys.argv[1:]; name = args.pop(0); base = HERE; seeds = None
+    while args and args[0].startswith("--"):
+        flag, val = args.pop(0), args.pop(0)
+        if flag == "--set":
+            base = HERE / val
+        elif flag == "--seeds":
+            seeds = [int(x) for x in val.split(",")]
+    only = set(args)
     torch.set_num_threads(4)
-    out = HERE / "out" / name; out.mkdir(parents=True, exist_ok=True)
-    prompts = [p for p in json.loads((HERE / "prompts.json").read_text()) if not only or p["id"] in only]
-    prompts = [p for p in prompts if not (out / f"{p['id']}.png").exists()]
+    out = base / "out" / name; out.mkdir(parents=True, exist_ok=True)
+    prompts = [p for p in json.loads((base / "prompts.json").read_text()) if not only or p["id"] in only]
+    prompts = [{**p, "seed": sd, "key": f"{p['id']}_s{sd}" if seeds else p["id"]} for p in prompts for sd in (seeds or [SEED])]
+    prompts = [p for p in prompts if not (out / f"{p['key']}.png").exists()]
     if not prompts:
         return
     if name == "ernie_pe":

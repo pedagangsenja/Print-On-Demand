@@ -1,0 +1,52 @@
+[
+ {
+  "id": "V1_ornate",
+  "ref": "B4",
+  "type": "Hiasan krim + emas atas hitam",
+  "w": 768,
+  "h": 1024,
+  "text": "Jangan / BERHENTI / cuma kerana / Jalannya / SUKAR, / yang indah / Selalu Datang / LEWAT.",
+  "words": 11,
+  "prompt": "Vintage hand-lettering typography poster: cream lettering with a darker antique-gold flourish layer behind the words, on a solid black background. The words form one tall centered column with a black margin around it. Text, top to bottom: small arched line in Victorian small capitals curving over the next word \"Jangan\"; huge spurred Victorian serif capitals \"BERHENTI\"; small italic script \"cuma kerana\"; large flowing brush script with a long tail \"Jalannya\"; huge condensed serif capitals \"SUKAR,\"; small capitals inside a gold ribbon banner \"yang indah\"; medium script \"Selalu Datang\"; huge Victorian serif capitals \"LEWAT.\". Every word spelled exactly as written, letter by letter. Strong size hierarchy: hero words are huge and span the full column width, connector words are small. Hand-lettered by a sign painter, slightly imperfect strokes; letter tails and swashes turn into flourishes. Flat poster artwork only, no mockup, no signature, no watermark, no extra words or stray letters anywhere; ribbon banners and labels hold only the listed words."
+ },
+ {
+  "id": "V2_chalk",
+  "ref": "B5",
+  "type": "Papan kapur + reben",
+  "w": 768,
+  "h": 1024,
+  "text": "Rezeki / TAK PERNAH / Salah Alamat, / YANG PENTING / USAHA / dan / Doa.",
+  "words": 10,
+  "prompt": "Chalkboard hand-lettering poster drawn with white chalk on a dark slate blackboard: real chalk dust, smudges and faint erased marks, letters with inline highlights, small chalk flourishes, dots and stars between lines. One centered column with dark margins around it. Text, top to bottom: large elegant script \"Rezeki\"; small capitals inside a chalk ribbon banner \"TAK PERNAH\"; large script with a long swash \"Salah Alamat,\"; tiny spaced capitals \"YANG PENTING\"; huge bold serif capitals with soft 3D chalk shading \"USAHA\"; small script \"dan\"; large swashed script \"Doa.\". Every word spelled exactly as written, letter by letter. Strong size hierarchy: hero words are huge and span the full column width, connector words are small. Hand-lettered by a sign painter, slightly imperfect strokes; letter tails and swashes turn into flourishes. Flat poster artwork only, no mockup, no signature, no watermark, no extra words or stray letters anywhere; ribbon banners and labels hold only the listed words."
+ },
+ {
+  "id": "V3_color",
+  "ref": "B3",
+  "type": "Berus berwarna, grunge",
+  "w": 768,
+  "h": 1024,
+  "text": "Biar / LAMBAT / asalkan / SELAMAT, / Biar / SEDIKIT / asalkan / BERKAT, / yang penting / Terus / MELANGKAH.",
+  "words": 12,
+  "prompt": "Bold street-style brush lettering poster on a dark charcoal grunge background with paint splatter, dry-brush texture, small stars and hand-drawn arrows. Every line has a different colour and style, some short lines sit in torn paper labels, lines are slightly tilted. The text block fills the canvas. Text, top to bottom: script \"Biar\"; huge orange brush capitals \"LAMBAT\"; small capitals in a torn teal paper label \"asalkan\"; huge cream dry-brush capitals \"SELAMAT,\"; script \"Biar\"; huge yellow brush capitals \"SEDIKIT\"; small capitals in a torn cream paper label \"asalkan\"; huge teal brush capitals \"BERKAT,\"; small script \"yang penting\"; medium cream capitals \"Terus\"; huge orange brush capitals \"MELANGKAH.\". Every word spelled exactly as written, letter by letter. Strong size hierarchy: hero words are huge and span the full column width, connector words are small. Hand-lettered by a sign painter, slightly imperfect strokes; letter tails and swashes turn into flourishes. Flat poster artwork only, no mockup, no signature, no watermark, no extra words or stray letters anywhere; ribbon banners and labels hold only the listed words."
+ },
+ {
+  "id": "V4_badge",
+  "ref": "B2",
+  "type": "Lencana hitam-putih",
+  "w": 768,
+  "h": 1024,
+  "text": "SABAR / ITU / SEPARUH / IMAN",
+  "words": 4,
+  "prompt": "Black-and-white sticker design: one tall black badge with an arched top, a spiky decorative crown ornament on top and a small sunburst ornament at the bottom, on a plain white background with white space around the badge. Inside the badge only four words in white rough hand-brushed lettering with bouncing baselines, each word very large and filling the badge width, ink brush texture with rough edges. Text, top to bottom: bold brush script capitals \"SABAR\"; small condensed capitals \"ITU\"; tall brush capitals \"SEPARUH\"; huge bold capitals with a swash underline \"IMAN\". Every word spelled exactly as written, letter by letter. Strong size hierarchy: hero words are huge and span the full column width, connector words are small. Hand-lettered by a sign painter, slightly imperfect strokes; letter tails and swashes turn into flourishes. Flat poster artwork only, no mockup, no signature, no watermark, no extra words or stray letters anywhere; ribbon banners and labels hold only the listed words."
+ },
+ {
+  "id": "V5_illus",
+  "ref": "B1",
+  "type": "Ilustrasi + lettering",
+  "w": 768,
+  "h": 1024,
+  "text": "HIDUP / macam secawan / TEH, / Manis / atau / PAHIT, / kita yang / Kacau.",
+  "words": 10,
+  "prompt": "Vintage woodcut scratchboard lettering poster, cream ink on black, engraved line texture inside the letters and a slightly distressed print. An engraved hand holding a teacup sits in the middle; the words wrap around the cup, a ribbon banner curls behind the hand and one word is written on the cup itself. Text, top to bottom: huge spurred serif capitals \"HIDUP\"; small capitals in a curling ribbon banner \"macam secawan\"; bold capitals written on the side of the teacup \"TEH,\"; large script \"Manis\"; small capitals \"atau\"; huge condensed serif capitals \"PAHIT,\"; small script \"kita yang\"; huge swashed script \"Kacau.\". Every word spelled exactly as written, letter by letter. Strong size hierarchy: hero words are huge and span the full column width, connector words are small. Hand-lettered by a sign painter, slightly imperfect strokes; letter tails and swashes turn into flourishes. Flat poster artwork only, no mockup, no signature, no watermark, no extra words or stray letters anywhere; ribbon banners and labels hold only the listed words."
+ }
+]
