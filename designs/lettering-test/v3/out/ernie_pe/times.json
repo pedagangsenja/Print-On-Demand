@@ -76,5 +76,35 @@
   "encode_all_s": 23.4,
   "seed": 7,
   "sha": "7df8ac8f"
+ },
+ "R3b_s7": {
+  "seconds": 563.3,
+  "encode_all_s": 24.7,
+  "seed": 7,
+  "sha": "3aaee3f8"
+ },
+ "R2a_s7": {
+  "seconds": 617.5,
+  "encode_all_s": 24.7,
+  "seed": 7,
+  "sha": "1e40c608"
+ },
+ "R2b_s7": {
+  "seconds": 554.5,
+  "encode_all_s": 24.7,
+  "seed": 7,
+  "sha": "5ee141ce"
+ },
+ "R1a_s7": {
+  "seconds": 567.9,
+  "encode_all_s": 24.7,
+  "seed": 7,
+  "sha": "16fcd822"
+ },
+ "R1b_s7": {
+  "seconds": 555.0,
+  "encode_all_s": 24.7,
+  "seed": 7,
+  "sha": "428f4f62"
  }
 }

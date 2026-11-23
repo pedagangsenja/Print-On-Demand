@@ -111,5 +111,47 @@
   ],
   "el_fail": {},
   "action": "Redo: seed 123 + prompt rev 2 (tetapkan susunan bacaan)"
+ },
+ "R3b_s7": {
+  "rev": 1,
+  "wrong": [],
+  "el_fail": {},
+  "action": "Final"
+ },
+ "R2a_s7": {
+  "rev": 2,
+  "wrong": [],
+  "el_fail": {
+   "B": "lencana bulat, sisi tidak berukir"
+  },
+  "action": "Final (gaya 7/8)"
+ },
+ "R2b_s7": {
+  "rev": 2,
+  "wrong": [],
+  "el_fail": {
+   "D": "lencana putih dengan huruf bergaris hitam, bukan lencana hitam penuh",
+   "S": "garis dasar lurus"
+  },
+  "action": "Redo: seed 123 + prompt rev 3 (lencana hitam penuh, huruf putih, garis dasar melantun)"
+ },
+ "R1a_s7": {
+  "rev": 2,
+  "wrong": [
+   "Selanyna (Selamanya)",
+   "+DIINGAT berulang 3 kali",
+   "+tapi berulang"
+  ],
+  "el_fail": {},
+  "action": "Redo: seed 123 + prompt rev 3 (susun atur dipermudah: 5 blok teks, huruf besar)"
+ },
+ "R1b_s7": {
+  "rev": 2,
+  "wrong": [
+   "keiil (kecil)",
+   "+PELITA berulang 2 kali"
+  ],
+  "el_fail": {},
+  "action": "Redo: seed 123 + prompt rev 3 (WALAU KECIL huruf besar; PELITA sekali sahaja atas pelita)"
  }
 }

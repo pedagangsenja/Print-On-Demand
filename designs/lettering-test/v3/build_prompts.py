@@ -151,19 +151,16 @@ DESIGNS = [
    ("HIDUP", "hero", "small slab-serif capitals", ""),
    ("SENANG", "hero", "huge rounded retro script", "")], ""),
  ("R1a", "B1", "a", "condensed Victorian serif capitals with engraved lines and drop shadow, swash script and small capitals", [
-   ("HUJAN", "hero", "huge condensed Victorian serif capitals", ""),
-   ("tak", "small", "small capitals inside the curling ribbon behind the hand", "ribbon"),
-   ("Selamanya,", "hero", "large swash script", ""),
-   ("tapi", "small", "small capitals", ""),
+   ("HUJAN TAK", "hero", "huge condensed Victorian serif capitals", ""),
+   ("SELAMANYA, TAPI", "hero", "large swash script capitals", ""),
    ("PAYUNG", "hero", "bold capitals written on the canopy of the umbrella", "object"),
-   ("yang kau kongsi", "small", "small capitals inside a second ribbon", "ribbon"),
-   ("Tetap", "small", "medium swash script", ""),
-   ("DIINGAT.", "hero", "huge condensed Victorian serif capitals", "")],
+   ("YANG KAU KONGSI", "small", "small capitals inside the curling ribbon behind the hand", "ribbon"),
+   ("TETAP DIINGAT.", "hero", "huge condensed Victorian serif capitals", "")],
   "In the middle an engraved hand holds an open umbrella; the ribbon curls behind the hand; the word PAYUNG is written on the umbrella canopy."),
  ("R1b", "B1", "b", "rounded engraved serif capitals, upright brush script and small spaced capitals", [
    ("Jadilah", "hero", "large upright brush script", ""),
    ("PELITA,", "hero", "bold capitals written on the glass of the oil lamp", "object"),
-   ("walau kecil", "small", "small spaced capitals inside the curling ribbon behind the hand", "ribbon"),
+   ("WALAU KECIL", "small", "small spaced capitals inside the curling ribbon behind the hand", "ribbon"),
    ("IA TETAP", "small", "small spaced capitals", ""),
    ("MENERANGI", "hero", "huge rounded engraved serif capitals", ""),
    ("Jalan Orang.", "hero", "large upright brush script", "")],
@@ -184,13 +181,13 @@ def build():
             parts.append(extra)
         order = "; ".join(f'{style}: "{t}"' for t, _, style, _ in lines)
         parts.append(f"Text, top to bottom: {order}.")
-        for extra_rev in REVS.get(pid, []):  # pembaikan selepas QC (unsur yang gagal ditekankan)
+        for extra_rev in REVS.get(pid, []) if isinstance(REVS.get(pid), list) else []:  # pembaikan selepas QC (unsur yang gagal ditekankan)
             parts.append(extra_rev)
         prompt = " ".join(parts) + RULES
         text = " / ".join(t for t, *_ in lines)
         out.append({"id": pid, "ref": ref, "variant": var, "type": f"{st['name']} ({'gaya huruf rujukan' if var == 'a' else 'font lain'})",
                     "w": W, "h": H, "text": text, "words": len(text.replace("/", " ").split()), "fonts": fonts,
-                    "rev": 1 + len(REVS.get(pid, [])), "sha": hashlib.sha1(prompt.encode()).hexdigest()[:8], "prompt": prompt})
+                    "rev": REVS.get("_rev", {}).get(pid, 1 + len(REVS.get(pid, []))), "sha": hashlib.sha1(prompt.encode()).hexdigest()[:8], "prompt": prompt})
     (HERE / "prompts.json").write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n")
     (HERE / "rubric.json").write_text(json.dumps(rubric, ensure_ascii=False, indent=1) + "\n")
     for o in out:

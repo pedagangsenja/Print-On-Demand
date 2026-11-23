@@ -15,17 +15,28 @@
   "IBU is a tall flowing script with a long swash; the baselines bounce, letters jump slightly up and down."
  ],
  "R2b": [
+  "IMPORTANT: the badge is filled solid black and all lettering is white; never black outlines on a white badge.",
   "Each white letter has a thin black inline stripe and a 3D extruded shadow.",
   "The baselines bounce, letters jump slightly up and down, and the last letters end in swash tails."
  ],
  "R1a": [
-  "IMPORTANT reading order, top to bottom: HUJAN, then the ribbon 'tak' directly under it, then 'Selamanya,' then 'tapi', then PAYUNG on the umbrella, then the second ribbon 'yang kau kongsi', then 'Tetap', then 'DIINGAT.' at the bottom."
+  "Only five text blocks, each word appears exactly once: 'HUJAN TAK' at the top, 'SELAMANYA, TAPI' under it, PAYUNG on the umbrella canopy, the ribbon 'YANG KAU KONGSI' behind the hand, and 'TETAP DIINGAT.' at the bottom."
  ],
  "R1b": [
   "IMPORTANT: monochrome cream on black only; the hand and the oil lamp are cream engraved line drawings with cross-hatching, no skin colour, no brass or gold colour.",
-  "Reading order, top to bottom: 'Jadilah', then PELITA on the lamp, then the ribbon 'walau kecil', then 'IA TETAP', then 'MENERANGI', then 'Jalan Orang.'"
+  "Reading order, top to bottom: 'Jadilah', then PELITA on the lamp, then the ribbon 'walau kecil', then 'IA TETAP', then 'MENERANGI', then 'Jalan Orang.'",
+  "The word PELITA appears only once, written on the lamp glass; it is not repeated anywhere else."
  ],
  "R3a": [
   "IMPORTANT reading order, top to bottom: 'Kalau Orang', 'PANDANG', 'RENDAH,', then the yellow label 'senyum saja,', then 'BIAR', 'KEJAYAAN', the teal label 'yang bercakap', and 'NANTI.' last."
- ]
+ ],
+ "_rev": {
+  "R4a": 3,
+  "R4b": 2,
+  "R3a": 2,
+  "R2a": 2,
+  "R2b": 3,
+  "R1a": 3,
+  "R1b": 3
+ }
 }
