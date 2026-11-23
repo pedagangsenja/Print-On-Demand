@@ -6,5 +6,17 @@
  "L2_chalk": {
   "seconds": 405.2,
   "encode_all_s": 270.4
+ },
+ "L3_color": {
+  "seconds": 359.2,
+  "encode_all_s": 13.8
+ },
+ "L4_badge": {
+  "seconds": 359.1,
+  "encode_all_s": 13.8
+ },
+ "L5_illus": {
+  "seconds": 441.5,
+  "encode_all_s": 13.8
  }
 }

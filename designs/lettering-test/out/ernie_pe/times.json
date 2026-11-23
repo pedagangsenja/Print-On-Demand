@@ -1,0 +1,22 @@
+{
+ "L1_ornate": {
+  "seconds": 438.3,
+  "encode_all_s": 38.2
+ },
+ "L2_chalk": {
+  "seconds": 486.6,
+  "encode_all_s": 38.2
+ },
+ "L3_color": {
+  "seconds": 434.3,
+  "encode_all_s": 38.2
+ },
+ "L4_badge": {
+  "seconds": 391.7,
+  "encode_all_s": 38.2
+ },
+ "L5_illus": {
+  "seconds": 456.6,
+  "encode_all_s": 38.2
+ }
+}
