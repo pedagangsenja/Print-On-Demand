@@ -7,5 +7,21 @@
  "R4b": [
   "IMPORTANT: the first line is set on a curved arc that bends upward like a rainbow.",
   "The lines are stacked with zero gaps: letters of one line nest into the gaps of the lines above and below, and antique-gold acanthus scrolls sit behind the cream letters as a second layer, never as separate divider rows."
+ ],
+ "R2a": [
+  "IMPORTANT: the badge is filled solid black and all lettering is white; never black letters on white.",
+  "Each white letter has a thin black inline stripe and a 3D extruded shadow.",
+  "IBU is a tall flowing script with a long swash; the baselines bounce, letters jump slightly up and down."
+ ],
+ "R2b": [
+  "Each white letter has a thin black inline stripe and a 3D extruded shadow.",
+  "The baselines bounce, letters jump slightly up and down, and the last letters end in swash tails."
+ ],
+ "R1a": [
+  "IMPORTANT reading order, top to bottom: HUJAN, then the ribbon 'tak' directly under it, then 'Selamanya,' then 'tapi', then PAYUNG on the umbrella, then the second ribbon 'yang kau kongsi', then 'Tetap', then 'DIINGAT.' at the bottom."
+ ],
+ "R1b": [
+  "IMPORTANT: monochrome cream on black only; the hand and the oil lamp are cream engraved line drawings with cross-hatching, no skin colour, no brass or gold colour.",
+  "Reading order, top to bottom: 'Jadilah', then PELITA on the lamp, then the ribbon 'walau kecil', then 'IA TETAP', then 'MENERANGI', then 'Jalan Orang.'"
  ]
 }

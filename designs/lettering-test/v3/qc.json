@@ -41,5 +41,52 @@
   ],
   "el_fail": {},
   "action": "Redo: seed 7, prompt sama (gagal pintu G2 sahaja)"
+ },
+ "R3b_s42": {
+  "rev": 1,
+  "wrong": [
+   "+coretan macam tandatangan (bawah kanan)"
+  ],
+  "el_fail": {},
+  "action": "Redo: seed 7, prompt sama (gagal pintu G2 sahaja)"
+ },
+ "R2a_s42": {
+  "rev": 1,
+  "wrong": [],
+  "el_fail": {
+   "D": "huruf hitam atas lencana putih (terbalik), tiada garis inline",
+   "L": "hampir semua satu gaya huruf",
+   "S": "garis dasar lurus, tiada swash"
+  },
+  "action": "Redo: seed 7 + prompt rev 2 (lencana hitam penuh, huruf putih inline, IBU skrip, garis dasar melantun)"
+ },
+ "R2b_s42": {
+  "rev": 1,
+  "wrong": [],
+  "el_fail": {
+   "D": "ada bayang 3D tetapi tiada garis inline",
+   "S": "garis dasar lurus, swash sedikit"
+  },
+  "action": "Redo: seed 7 + prompt rev 2 (garis inline, garis dasar melantun, swash)"
+ },
+ "R1a_s42": {
+  "rev": 1,
+  "wrong": [
+   "Selamyna (Selamanya)",
+   "+susunan perkataan bercampur (maksud berubah)"
+  ],
+  "el_fail": {},
+  "action": "Redo: seed 7 + prompt rev 2 (tetapkan susunan bacaan)"
+ },
+ "R1b_s42": {
+  "rev": 1,
+  "wrong": [
+   "keisil (kecil)",
+   "MIENERANGI (MENERANGI)"
+  ],
+  "el_fail": {
+   "P": "tangan warna kulit dan pelita tembaga, bukan krim sahaja"
+  },
+  "action": "Redo: seed 7 + prompt rev 2 (krim sahaja, tangan dan pelita gaya ukiran)"
  }
 }

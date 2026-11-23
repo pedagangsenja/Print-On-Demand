@@ -28,5 +28,35 @@
   "encode_all_s": 306.6,
   "seed": 42,
   "sha": "7df8ac8f"
+ },
+ "R3b_s42": {
+  "seconds": 591.5,
+  "encode_all_s": 34.1,
+  "seed": 42,
+  "sha": "3aaee3f8"
+ },
+ "R2a_s42": {
+  "seconds": 577.2,
+  "encode_all_s": 34.1,
+  "seed": 42,
+  "sha": "74c33596"
+ },
+ "R2b_s42": {
+  "seconds": 531.0,
+  "encode_all_s": 34.1,
+  "seed": 42,
+  "sha": "79e89ad8"
+ },
+ "R1a_s42": {
+  "seconds": 584.6,
+  "encode_all_s": 34.1,
+  "seed": 42,
+  "sha": "bb5512b4"
+ },
+ "R1b_s42": {
+  "seconds": 578.4,
+  "encode_all_s": 34.1,
+  "seed": 42,
+  "sha": "d4756c10"
  }
 }
