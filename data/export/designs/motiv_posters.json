@@ -1,0 +1,316 @@
+{
+ "rows": [
+  {
+   "no": 1,
+   "id": "dream",
+   "quote": "Dream big, work hard, stay humble and never give up",
+   "img": "/_blob/c42dc456df8805f491ca0db39d4d5dcf",
+   "repaired": true,
+   "model": "FLUX.2 klein 4B",
+   "format": "864x1152 (3:4), hitam atas putih",
+   "file": "designs/svg-typo/out/motiv/final/dream.png"
+  },
+  {
+   "no": 2,
+   "id": "steps",
+   "quote": "Small steps every day lead to big results",
+   "img": "/_blob/0119e33667a94053932956420dbfc17f",
+   "repaired": true,
+   "model": "FLUX.2 klein 4B",
+   "format": "864x1152 (3:4), hitam atas putih",
+   "file": "designs/svg-typo/out/motiv/final/steps.png"
+  },
+  {
+   "no": 3,
+   "id": "limit",
+   "quote": "Your only limit is the one you set in your mind",
+   "img": "/_blob/981f14f0d1872b6ffc25af2ce619b9ae",
+   "repaired": false,
+   "model": "FLUX.2 klein 4B",
+   "format": "864x1152 (3:4), hitam atas putih",
+   "file": "designs/svg-typo/out/motiv/final/limit.png"
+  },
+  {
+   "no": 4,
+   "id": "tired",
+   "quote": "Don't stop when you're tired. Stop when you're done",
+   "img": "/_blob/06b5623bb43562e395790c15a56ed952",
+   "repaired": false,
+   "model": "FLUX.2 klein 4B",
+   "format": "864x1152 (3:4), hitam atas putih",
+   "file": "designs/svg-typo/out/motiv/final/tired.png"
+  },
+  {
+   "no": 5,
+   "id": "push",
+   "quote": "Push yourself because no one else is going to do it for you",
+   "img": "/_blob/a935c6fa4ba0fb8800498c56869390b9",
+   "repaired": true,
+   "model": "FLUX.2 klein 4B",
+   "format": "864x1152 (3:4), hitam atas putih",
+   "file": "designs/svg-typo/out/motiv/final/push.png"
+  },
+  {
+   "no": 6,
+   "id": "comfort",
+   "quote": "Great things never come from comfort zones",
+   "img": "/_blob/d3a217d02fc3ce2634e0c5a7703f9ce9",
+   "repaired": true,
+   "model": "FLUX.2 klein 4B",
+   "format": "864x1152 (3:4), hitam atas putih",
+   "file": "designs/svg-typo/out/motiv/final/comfort.png"
+  },
+  {
+   "no": 7,
+   "id": "try",
+   "quote": "Success starts with the decision to try",
+   "img": "/_blob/150608425f2ddadacff4ebdb9db4e395",
+   "repaired": false,
+   "model": "FLUX.2 klein 4B",
+   "format": "864x1152 (3:4), hitam atas putih",
+   "file": "designs/svg-typo/out/motiv/final/try.png"
+  },
+  {
+   "no": 8,
+   "id": "silence",
+   "quote": "Work hard in silence, let your success be your noise",
+   "img": "/_blob/136e83e55628222bd7579abc013c523c",
+   "repaired": true,
+   "model": "FLUX.2 klein 4B",
+   "format": "864x1152 (3:4), hitam atas putih",
+   "file": "designs/svg-typo/out/motiv/final/silence.png"
+  },
+  {
+   "no": 9,
+   "id": "doubt",
+   "quote": "Doubt kills more dreams than failure ever will",
+   "img": "/_blob/7e84d944db2a8eacb4d3c2925bc972f3",
+   "repaired": true,
+   "model": "FLUX.2 klein 4B",
+   "format": "864x1152 (3:4), hitam atas putih",
+   "file": "designs/svg-typo/out/motiv/final/doubt.png"
+  },
+  {
+   "no": 10,
+   "id": "pain",
+   "quote": "The pain you feel today is the strength you feel tomorrow",
+   "img": "/_blob/3f70a5f5664eb01dde69c1611750c0a6",
+   "repaired": true,
+   "model": "FLUX.2 klein 4B",
+   "format": "864x1152 (3:4), hitam atas putih",
+   "file": "designs/svg-typo/out/motiv/final/pain.png"
+  },
+  {
+   "no": 11,
+   "id": "excuse",
+   "quote": "Be stronger than your strongest excuse",
+   "img": "/_blob/96a4f7d864f981fe708c6796866dc4c7",
+   "repaired": false,
+   "model": "FLUX.2 klein 4B",
+   "format": "864x1152 (3:4), hitam atas putih",
+   "file": "designs/svg-typo/out/motiv/final/excuse.png"
+  },
+  {
+   "no": 12,
+   "id": "purpose",
+   "quote": "Wake up with purpose, go to bed with pride",
+   "img": "/_blob/a3341ed31a3e5e415289e9ed2cbc5d5c",
+   "repaired": true,
+   "model": "FLUX.2 klein 4B",
+   "format": "864x1152 (3:4), hitam atas putih",
+   "file": "designs/svg-typo/out/motiv/final/purpose.png"
+  },
+  {
+   "no": 13,
+   "id": "fall",
+   "quote": "Fall seven times, stand up eight",
+   "img": "/_blob/1e2f5f7c6403f882da43cc3bd2cafb32",
+   "repaired": false,
+   "model": "FLUX.2 klein 4B",
+   "format": "864x1152 (3:4), hitam atas putih",
+   "file": "designs/svg-typo/out/motiv/final/fall.png"
+  },
+  {
+   "no": 14,
+   "id": "wish",
+   "quote": "Don't wish for it, work for it",
+   "img": "/_blob/fa43c519103b41ec61a5604584c2cc6c",
+   "repaired": false,
+   "model": "FLUX.2 klein 4B",
+   "format": "864x1152 (3:4), hitam atas putih",
+   "file": "designs/svg-typo/out/motiv/final/wish.png"
+  },
+  {
+   "no": 15,
+   "id": "climb",
+   "quote": "The best view comes after the hardest climb",
+   "img": "/_blob/e029a6fcfb54ea4592d6e28dc145d95a",
+   "repaired": false,
+   "model": "FLUX.2 klein 4B",
+   "format": "864x1152 (3:4), hitam atas putih",
+   "file": "designs/svg-typo/out/motiv/final/climb.png"
+  },
+  {
+   "no": 16,
+   "id": "dayone",
+   "quote": "One day or day one, you decide",
+   "img": "/_blob/babcd74b0d09a85a442f7b0469c198dd",
+   "repaired": false,
+   "model": "FLUX.2 klein 4B",
+   "format": "864x1152 (3:4), hitam atas putih",
+   "file": "designs/svg-typo/out/motiv/final/dayone.png"
+  },
+  {
+   "no": 17,
+   "id": "future",
+   "quote": "Your future is created by what you do today, not tomorrow",
+   "img": "/_blob/721b36bf64065e2392ca81a98f408499",
+   "repaired": true,
+   "model": "FLUX.2 klein 4B",
+   "format": "864x1152 (3:4), hitam atas putih",
+   "file": "designs/svg-typo/out/motiv/final/future.png"
+  },
+  {
+   "no": 18,
+   "id": "energy",
+   "quote": "Be the energy you want to attract",
+   "img": "/_blob/aa29967262d8a743320c8cdd4795457b",
+   "repaired": false,
+   "model": "FLUX.2 klein 4B",
+   "format": "864x1152 (3:4), hitam atas putih",
+   "file": "designs/svg-typo/out/motiv/final/energy.png"
+  },
+  {
+   "no": 19,
+   "id": "futureself",
+   "quote": "Do something today that your future self will thank you for",
+   "img": "/_blob/b1c4416f74fbd9cdfcb60ed6b27584da",
+   "repaired": true,
+   "model": "FLUX.2 klein 4B",
+   "format": "864x1152 (3:4), hitam atas putih",
+   "file": "designs/svg-typo/out/motiv/final/futureself.png"
+  },
+  {
+   "no": 20,
+   "id": "progress",
+   "quote": "Strive for progress, not perfection",
+   "img": "/_blob/adb1b549fcaba5940de87000ad98b084",
+   "repaired": true,
+   "model": "FLUX.2 klein 4B",
+   "format": "864x1152 (3:4), hitam atas putih",
+   "file": "designs/svg-typo/out/motiv/final/progress.png"
+  },
+  {
+   "no": 21,
+   "id": "keepgoing",
+   "quote": "Keep going, everything you need will come at the right time",
+   "img": "/_blob/fbd00b5cdd38be55892e65ec2094cfcc",
+   "repaired": false,
+   "model": "FLUX.2 klein 4B",
+   "format": "864x1152 (3:4), hitam atas putih",
+   "file": "designs/svg-typo/out/motiv/final/keepgoing.png"
+  },
+  {
+   "no": 22,
+   "id": "doubting",
+   "quote": "Stop doubting yourself, work hard and make it happen",
+   "img": "/_blob/712827539ddf18ee9aa98440d57f94d5",
+   "repaired": true,
+   "model": "FLUX.2 klein 4B",
+   "format": "864x1152 (3:4), hitam atas putih",
+   "file": "designs/svg-typo/out/motiv/final/doubting.png"
+  },
+  {
+   "no": 23,
+   "id": "harder",
+   "quote": "The harder you work, the luckier you get",
+   "img": "/_blob/48744636fc845133296438b3dccbeb48",
+   "repaired": true,
+   "model": "FLUX.2 klein 4B",
+   "format": "864x1152 (3:4), hitam atas putih",
+   "file": "designs/svg-typo/out/motiv/final/harder.png"
+  },
+  {
+   "no": 24,
+   "id": "goal",
+   "quote": "Focus on the goal, not the obstacles",
+   "img": "/_blob/a1b3095598071861cbd60b7061cb3d45",
+   "repaired": true,
+   "model": "FLUX.2 klein 4B",
+   "format": "864x1152 (3:4), hitam atas putih",
+   "file": "designs/svg-typo/out/motiv/final/goal.png"
+  },
+  {
+   "no": 25,
+   "id": "champion",
+   "quote": "Every champion was once a beginner who refused to give up",
+   "img": "/_blob/a07177233501d81ae541b6914e4792aa",
+   "repaired": false,
+   "model": "FLUX.2 klein 4B",
+   "format": "864x1152 (3:4), hitam atas putih",
+   "file": "designs/svg-typo/out/motiv/final/champion.png"
+  },
+  {
+   "no": 26,
+   "id": "comeback",
+   "quote": "Your comeback will always be stronger than your setback",
+   "img": "/_blob/2d27ad411a69be2ea8aff17682194ee7",
+   "repaired": false,
+   "model": "FLUX.2 klein 4B",
+   "format": "864x1152 (3:4), hitam atas putih",
+   "file": "designs/svg-typo/out/motiv/final/comeback.png"
+  },
+  {
+   "no": 27,
+   "id": "success",
+   "quote": "Success doesn't come to you, you go to it",
+   "img": "/_blob/117b2a0b002f3d98f4a4dbf140ccb591",
+   "repaired": true,
+   "model": "FLUX.2 klein 4B",
+   "format": "864x1152 (3:4), hitam atas putih",
+   "file": "designs/svg-typo/out/motiv/final/success.png"
+  },
+  {
+   "no": 28,
+   "id": "chase",
+   "quote": "Chase your dreams until they become your reality",
+   "img": "/_blob/a553ded8a2557841c05c35bd897997a1",
+   "repaired": false,
+   "model": "FLUX.2 klein 4B",
+   "format": "864x1152 (3:4), hitam atas putih",
+   "file": "designs/svg-typo/out/motiv/final/chase.png"
+  },
+  {
+   "no": 29,
+   "id": "idols",
+   "quote": "Work until your idols become your rivals",
+   "img": "/_blob/7b333ff0a0513a628212bf6dafaaff0a",
+   "repaired": false,
+   "model": "FLUX.2 klein 4B",
+   "format": "864x1152 (3:4), hitam atas putih",
+   "file": "designs/svg-typo/out/motiv/final/idols.png"
+  },
+  {
+   "no": 30,
+   "id": "winners",
+   "quote": "Winners never quit and quitters never win",
+   "img": "/_blob/bab16a0f2d897c9d6659a3d52581382a",
+   "repaired": true,
+   "model": "FLUX.2 klein 4B",
+   "format": "864x1152 (3:4), hitam atas putih",
+   "file": "designs/svg-typo/out/motiv/final/winners.png"
+  }
+ ],
+ "meta": [
+  {
+   "label": "build_designs.py",
+   "value": "\"\"\"Build dashboard data for the Design tab.\nInput : designs/svg-typo/out/motiv/picks.json, FINAL_30.txt, data/export/designs/motiv_assets.json (blob urls after upload)\nOutput: data/export/designs/motiv_posters.json  {rows, meta}\n\"\"\"\nimport json, re, pathlib\nR = pathlib.Path(__file__).resolve().parents[1]\nM = R / \"designs/svg-typo/out/motiv\"\npicks = json.load(open(M / \"picks.json\"))\nassets = json.load(open(R / \"data/export/designs/motiv_assets.json\"))\nquotes = {}\nfor line in open(M / \"FINAL_30.txt\"):\n    m = re.match(r\"(\\d+) (\\w+) - (.+?)(\\s{2,}\\(.*)?$\", line.rstrip())\n    if m: quotes[m.group(2)] = (int(m.group(1)), m.group(3).strip())\nrows = []\nfor k, src in picks.items():\n    no, q = quotes[k]\n    rows.append({\"no\": no, \"id\": k, \"quote\": q, \"img\": assets[k],\n                 \"repaired\": \"fix/\" in src, \"model\": \"FLUX.2 klein 4B\",\n                 \"format\": \"864x1152 (3:4), hitam atas putih\", \"file\": f\"designs/svg-typo/out/motiv/final/{k}.png\"})\nrows.sort(key=lambda r: r[\"no\"])\ncode = pathlib.Path(__file__).read_text()\nout = {\"rows\": rows, \"meta\": [{\"label\": \"build_designs.py\", \"value\": code, \"type\": \"code\", \"lang\": \"python\"},\n                              {\"label\": \"Input\", \"value\": \"designs/svg-typo/out/motiv/picks.json, FINAL_30.txt\"}]}\np = R / \"data/export/designs/motiv_posters.json\"\np.write_text(json.dumps(out, ensure_ascii=False, indent=1))\nprint(len(rows), \"rows ->\", p.relative_to(R))\n",
+   "type": "code",
+   "lang": "python"
+  },
+  {
+   "label": "Input",
+   "value": "designs/svg-typo/out/motiv/picks.json, FINAL_30.txt"
+  }
+ ]
+}
