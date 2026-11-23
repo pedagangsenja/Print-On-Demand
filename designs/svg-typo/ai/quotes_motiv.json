@@ -858,19 +858,19 @@
   "lines": [
    [
     "DREAM BIG",
-    "C"
+    "huge heavy condensed capitals"
    ],
    [
     "work hard",
-    "s"
+    "big brush script"
    ],
    [
     "STAY HUMBLE",
-    "C"
+    "huge heavy condensed capitals"
    ],
    [
     "never give up",
-    "s"
+    "big brush script"
    ]
   ],
   "kind": "poster",
@@ -885,27 +885,27 @@
   "lines": [
    [
     "WORK HARD",
-    "C"
+    "huge heavy condensed capitals"
    ],
    [
     "IN SILENCE",
-    "c"
+    "bold condensed capitals"
    ],
    [
     "let your",
-    "x"
+    "tiny script connector"
    ],
    [
     "SUCCESS",
-    "C"
+    "huge heavy condensed capitals"
    ],
    [
     "be your",
-    "x"
+    "tiny script connector"
    ],
    [
     "Noise",
-    "s"
+    "big brush script"
    ]
   ],
   "kind": "poster",
@@ -920,23 +920,23 @@
   "lines": [
    [
     "DOUBT KILLS",
-    "C"
+    "huge heavy condensed capitals"
    ],
    [
     "MORE DREAMS",
-    "c"
+    "bold condensed capitals"
    ],
    [
     "than",
-    "x"
+    "tiny script connector"
    ],
    [
     "Failure",
-    "s"
+    "big brush script"
    ],
    [
     "EVER WILL",
-    "C"
+    "huge heavy condensed capitals"
    ]
   ],
   "kind": "poster",
@@ -951,19 +951,19 @@
   "lines": [
    [
     "THE BEST VIEW",
-    "C"
+    "huge heavy condensed capitals"
    ],
    [
     "COMES AFTER THE",
-    "t"
+    "small capitals"
    ],
    [
     "HARDEST",
-    "C"
+    "huge heavy condensed capitals"
    ],
    [
     "Climb",
-    "s"
+    "big brush script"
    ]
   ],
   "kind": "poster",
@@ -978,23 +978,185 @@
   "lines": [
    [
     "DO SOMETHING",
-    "C"
+    "huge heavy condensed capitals"
    ],
    [
     "TODAY",
-    "c"
+    "bold condensed capitals"
    ],
    [
     "THAT YOUR",
-    "t"
+    "small capitals"
    ],
    [
     "FUTURE SELF",
-    "C"
+    "huge heavy condensed capitals"
    ],
    [
     "will thank you for",
-    "s"
+    "big brush script"
+   ]
+  ],
+  "kind": "poster",
+  "size": [
+   864,
+   1152
+  ],
+  "layout": "poster"
+ },
+ {
+  "id": "harder2",
+  "lines": [
+   [
+    "THE HARDER",
+    "huge heavy condensed capitals"
+   ],
+   [
+    "you work",
+    "big brush script"
+   ],
+   [
+    "THE LUCKIER",
+    "huge heavy condensed capitals"
+   ],
+   [
+    "you get",
+    "big brush script"
+   ]
+  ],
+  "kind": "poster",
+  "size": [
+   864,
+   1152
+  ],
+  "layout": "poster"
+ },
+ {
+  "id": "goal2",
+  "lines": [
+   [
+    "FOCUS ON",
+    "bold condensed capitals"
+   ],
+   [
+    "THE GOAL",
+    "huge heavy condensed capitals"
+   ],
+   [
+    "not the",
+    "tiny script connector"
+   ],
+   [
+    "OBSTACLES",
+    "bold condensed capitals"
+   ]
+  ],
+  "kind": "poster",
+  "size": [
+   864,
+   1152
+  ],
+  "layout": "poster"
+ },
+ {
+  "id": "success2",
+  "lines": [
+   [
+    "SUCCESS",
+    "huge heavy condensed capitals"
+   ],
+   [
+    "DOESN'T COME",
+    "bold condensed capitals"
+   ],
+   [
+    "to you",
+    "big brush script"
+   ],
+   [
+    "YOU GO TO IT",
+    "huge heavy condensed capitals"
+   ]
+  ],
+  "kind": "poster",
+  "size": [
+   864,
+   1152
+  ],
+  "layout": "poster"
+ },
+ {
+  "id": "idols2",
+  "lines": [
+   [
+    "WORK UNTIL",
+    "huge heavy condensed capitals"
+   ],
+   [
+    "YOUR IDOLS",
+    "bold condensed capitals"
+   ],
+   [
+    "become your",
+    "tiny script connector"
+   ],
+   [
+    "RIVALS",
+    "huge heavy condensed capitals"
+   ]
+  ],
+  "kind": "poster",
+  "size": [
+   864,
+   1152
+  ],
+  "layout": "poster"
+ },
+ {
+  "id": "winners2",
+  "lines": [
+   [
+    "WINNERS",
+    "huge heavy condensed capitals"
+   ],
+   [
+    "NEVER QUIT",
+    "huge heavy condensed capitals"
+   ],
+   [
+    "and quitters",
+    "big brush script"
+   ],
+   [
+    "NEVER WIN",
+    "huge heavy condensed capitals"
+   ]
+  ],
+  "kind": "poster",
+  "size": [
+   864,
+   1152
+  ],
+  "layout": "poster"
+ },
+ {
+  "id": "keepgoing2",
+  "lines": [
+   [
+    "KEEP GOING",
+    "huge heavy condensed capitals"
+   ],
+   [
+    "EVERYTHING YOU NEED",
+    "bold condensed capitals"
+   ],
+   [
+    "will come",
+    "big brush script"
+   ],
+   [
+    "AT THE RIGHT TIME",
+    "small capitals"
    ]
   ],
   "kind": "poster",
