@@ -22,10 +22,10 @@
  },
  {
   "gap": "Kepadatan susun atur",
-  "ref": "Penuh tepi ke tepi, hampir tiada ruang kosong",
-  "ai": "ERNIE, MOSS dan Qwen penuh. ERNIE + penambah ada ruang kosong di sebelah cawan (design 5).",
-  "closest": "MOSS dan Qwen-Image-2512",
-  "fix": "Kekalkan ayat 'fills the canvas edge to edge' dalam prompt."
+  "ref": "Blok teks padat; 4 daripada 5 rujukan ada ruang gelap di tepi, hanya 1 penuh tepi ke tepi",
+  "ai": "Prompt v1 minta penuh tepi ke tepi, jadi ERNIE, MOSS dan Qwen penuh; ini kurang ikut rujukan.",
+  "closest": "ERNIE v2 (prompt baharu: satu tiang teks di tengah)",
+  "fix": "Minta satu tiang teks di tengah dengan ruang tepi (sudah dibuat dalam ujian v2)."
  },
  {
   "gap": "Tekstur lukisan tangan",

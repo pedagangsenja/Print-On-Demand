@@ -94,7 +94,7 @@ def build():
     print(len(rows), len(models), len(refs), len(gaps))
 
 
-V2 = T / "v2"  # 24 Nov: ayat baharu + prompt ikut ciri rujukan, ERNIE + penambah, 2 seed
+V2 = T / "v2"  # 23 Nov (petang): ayat baharu + prompt ikut ciri rujukan, ERNIE + penambah, 2 seed
 V2_SEEDS = [42, 7]
 
 

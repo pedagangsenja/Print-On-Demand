@@ -5,8 +5,8 @@
   "ref": "2-4 perkataan utama sangat besar; perkataan penghubung kecil (B4: HIDUP, PADAHAL, MENGELUH besar; 'orang lain' kecil)",
   "v1": "Hampir semua baris sama besar",
   "v1_pass": "tidak",
-  "v2": "Belum diuji",
-  "v2_pass": "",
+  "v2": "Jelas: perkataan utama sangat besar (BERHENTI, USAHA, LAMBAT, HIDUP), perkataan penghubung kecil",
+  "v2_pass": "ya",
   "level": "lemah",
   "by": "Semakan mata Claude, 5 poster rujukan vs imej ERNIE v1"
  },
@@ -16,8 +16,8 @@
   "ref": "Baris kecil melengkung atas perkataan besar (B4); teks ikut bentuk lencana (B2) atau keliling cawan (B1)",
   "v1": "Baris lurus mendatar; hanya lencana ikut bentuk",
   "v1_pass": "sebahagian",
-  "v2": "Belum diuji",
-  "v2_pass": "",
+  "v2": "Teks ikut bentuk lencana (V4) dan keliling cawan (V5); baris kecil masih lurus, tiada yang melengkung",
+  "v2_pass": "sebahagian",
   "level": "lemah",
   "by": "Semakan mata Claude, 5 poster rujukan vs imej ERNIE v1"
  },
@@ -27,8 +27,8 @@
   "ref": "4 daripada 5 rujukan: satu tiang teks di tengah dengan ruang gelap di tepi; hanya B3 penuh tepi ke tepi",
   "v1": "Prompt v1 minta penuh tepi ke tepi, jadi kebanyakan imej penuh",
   "v1_pass": "tidak",
-  "v2": "Belum diuji",
-  "v2_pass": "",
+  "v2": "Satu tiang di tengah dengan ruang tepi (V1, V2, V5); lencana dengan ruang putih (V4); V3 penuh seperti rujukannya",
+  "v2_pass": "ya",
   "level": "lemah",
   "by": "Semakan mata Claude, 5 poster rujukan vs imej ERNIE v1"
  },
@@ -38,8 +38,8 @@
   "ref": "Ekor huruf jadi hiasan; lapisan hiasan emas di belakang huruf (B4)",
   "v1": "Hiasan kebanyakannya garis berasingan antara baris",
   "v1_pass": "sebahagian",
-  "v2": "Belum diuji",
-  "v2_pass": "",
+  "v2": "Ada ekor huruf dan reben emas, tetapi lapisan hiasan di belakang huruf masih nipis",
+  "v2_pass": "sebahagian",
   "level": "lemah",
   "by": "Semakan mata Claude, 5 poster rujukan vs imej ERNIE v1"
  },
@@ -49,8 +49,8 @@
   "ref": "Debu kapur (B5), cetakan kayu bercalar (B1), berus kering (B2, B3)",
   "v1": "Kebanyakan kemas seperti digital; kapur (L2) ada sedikit tekstur",
   "v1_pass": "sebahagian",
-  "v2": "Belum diuji",
-  "v2_pass": "",
+  "v2": "Kapur (V2), berus kering + percikan (V3), berus kasar (V4), cetakan kayu (V5 seed 7); V1 masih kemas",
+  "v2_pass": "sebahagian",
   "level": "lemah",
   "by": "Semakan mata Claude, 5 poster rujukan vs imej ERNIE v1"
  },
@@ -60,8 +60,8 @@
   "ref": "Perkataan kecil diletak dalam reben atau label kertas koyak (B5, B3, B1)",
   "v1": "Ada reben, tetapi kadang berisi huruf rawak",
   "v1_pass": "sebahagian",
-  "v2": "Belum diuji",
-  "v2_pass": "",
+  "v2": "Reben dan label koyak berisi perkataan yang betul; tiada huruf rawak dalam reben",
+  "v2_pass": "ya",
   "level": "lemah",
   "by": "Semakan mata Claude, 5 poster rujukan vs imej ERNIE v1"
  },
@@ -71,8 +71,8 @@
   "ref": "Ada koma, tanda soal dan noktah (B5 'Mau Tanya,' 'Ya?'; B3 'DIPERCAYA.')",
   "v1": "Tiada tanda baca (prompt v1 tidak minta)",
   "v1_pass": "tidak",
-  "v2": "Belum diuji",
-  "v2_pass": "",
+  "v2": "Koma dan noktah ada dalam kebanyakan imej; ada yang tertinggal, dan 'Doa?' tersalah pada V2 seed 7",
+  "v2_pass": "sebahagian",
   "level": "lemah",
   "by": "Semakan mata Claude, 5 poster rujukan vs imej ERNIE v1"
  },
@@ -82,8 +82,8 @@
   "ref": "Perkataan ditulis atas cawan; reben berpusing di belakang tangan (B1)",
   "v1": "Cawan + tangan di celah baris; tiada perkataan atas cawan",
   "v1_pass": "sebahagian",
-  "v2": "Belum diuji",
-  "v2_pass": "",
+  "v2": "Perkataan TEH ditulis atas cawan; reben di atas tangan (V5, kedua-dua seed)",
+  "v2_pass": "ya",
   "level": "lemah",
   "by": "Semakan mata Claude, 5 poster rujukan vs imej ERNIE v1"
  },
@@ -93,8 +93,8 @@
   "ref": "Semua perkataan betul",
   "v1": "ERNIE + penambah: 2/5 design betul semua, 92% perkataan betul",
   "v1_pass": "tidak",
-  "v2": "Belum diuji",
-  "v2_pass": "",
+  "v2": "6/10 imej betul semua, 96% perkataan betul; salah pada 'kerana' dan 'Jalannya' (V1). Ayat v2 lebih pendek, jadi tidak sama 100% dengan v1",
+  "v2_pass": "sebahagian",
   "level": "lemah",
   "by": "Semakan mata Claude, 5 poster rujukan vs imej ERNIE v1"
  }

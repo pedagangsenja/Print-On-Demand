@@ -1,0 +1,52 @@
+{
+ "V1_ornate_s42": {
+  "seconds": 552.8,
+  "encode_all_s": 20.3,
+  "seed": 42
+ },
+ "V1_ornate_s7": {
+  "seconds": 530.0,
+  "encode_all_s": 20.3,
+  "seed": 7
+ },
+ "V2_chalk_s42": {
+  "seconds": 562.9,
+  "encode_all_s": 20.3,
+  "seed": 42
+ },
+ "V2_chalk_s7": {
+  "seconds": 538.5,
+  "encode_all_s": 20.3,
+  "seed": 7
+ },
+ "V3_color_s42": {
+  "seconds": 582.4,
+  "encode_all_s": 20.3,
+  "seed": 42
+ },
+ "V3_color_s7": {
+  "seconds": 571.8,
+  "encode_all_s": 20.3,
+  "seed": 7
+ },
+ "V4_badge_s42": {
+  "seconds": 630.3,
+  "encode_all_s": 20.3,
+  "seed": 42
+ },
+ "V4_badge_s7": {
+  "seconds": 604.5,
+  "encode_all_s": 20.3,
+  "seed": 7
+ },
+ "V5_illus_s42": {
+  "seconds": 586.0,
+  "encode_all_s": 20.3,
+  "seed": 42
+ },
+ "V5_illus_s7": {
+  "seconds": 555.5,
+  "encode_all_s": 20.3,
+  "seed": 7
+ }
+}
