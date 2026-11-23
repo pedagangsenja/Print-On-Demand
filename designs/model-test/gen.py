@@ -46,7 +46,15 @@ def main():
     del pipe; gc.collect()
     # fasa 2
     if c["gguf"]:
-        tr = getattr(diffusers, c["tr"]).from_single_file(str(c["gguf"]), quantization_config=GGUFQuantizationConfig(compute_dtype=DT),
+        from diffusers.models.model_loading_utils import load_state_dict
+        from diffusers.quantizers.gguf.utils import GGUFParameter, dequantize_gguf_tensor
+        sd = load_state_dict(str(c["gguf"]))
+        for k, v in list(sd.items()):
+            if k.endswith("pad_token") and v.dim() == 1:  # GGUF sd.cpp simpan (3840,), diffusers mahu (1, 3840)
+                sd[k] = v.reshape(1, -1)
+            elif isinstance(v, GGUFParameter) and v.dim() == 4:  # conv tidak disokong GGUF: nyahmampat ke bf16
+                sd[k] = dequantize_gguf_tensor(v).to(DT)
+        tr = getattr(diffusers, c["tr"]).from_single_file(sd, quantization_config=GGUFQuantizationConfig(compute_dtype=DT),
                                                           config=c["repo"], subfolder="transformer", torch_dtype=DT)
     else:
         tr = getattr(diffusers, c["tr"]).from_pretrained(c["repo"], subfolder="transformer", torch_dtype=DT)
