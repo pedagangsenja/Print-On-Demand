@@ -852,5 +852,98 @@
     "huge heavy condensed capitals"
    ]
   ]
+ },
+ {
+  "id": "dream2",
+  "lines": [
+   [
+    "DREAM BIG",
+    "C"
+   ],
+   [
+    "work hard",
+    "s"
+   ],
+   [
+    "STAY HUMBLE",
+    "C"
+   ],
+   [
+    "never give up",
+    "s"
+   ]
+  ],
+  "kind": "poster",
+  "size": [
+   864,
+   1152
+  ],
+  "layout": "poster"
+ },
+ {
+  "id": "silence2",
+  "lines": [
+   [
+    "WORK HARD",
+    "C"
+   ],
+   [
+    "IN SILENCE",
+    "c"
+   ],
+   [
+    "let your",
+    "x"
+   ],
+   [
+    "SUCCESS",
+    "C"
+   ],
+   [
+    "be your",
+    "x"
+   ],
+   [
+    "Noise",
+    "s"
+   ]
+  ],
+  "kind": "poster",
+  "size": [
+   864,
+   1152
+  ],
+  "layout": "poster"
+ },
+ {
+  "id": "doubt2",
+  "lines": [
+   [
+    "DOUBT KILLS",
+    "C"
+   ],
+   [
+    "MORE DREAMS",
+    "c"
+   ],
+   [
+    "than",
+    "x"
+   ],
+   [
+    "Failure",
+    "s"
+   ],
+   [
+    "EVER WILL",
+    "C"
+   ]
+  ],
+  "kind": "poster",
+  "size": [
+   864,
+   1152
+  ],
+  "layout": "poster"
  }
 ]
