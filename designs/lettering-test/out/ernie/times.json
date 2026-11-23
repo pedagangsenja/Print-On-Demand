@@ -2,5 +2,9 @@
  "L1_ornate": {
   "seconds": 473.1,
   "encode_all_s": 270.4
+ },
+ "L2_chalk": {
+  "seconds": 405.2,
+  "encode_all_s": 270.4
  }
 }
