@@ -165,5 +165,30 @@
   "wrong": [],
   "el_fail": {},
   "action": "Final"
+ },
+ "R2b_s123": {
+  "rev": 3,
+  "wrong": [],
+  "el_fail": {
+   "S": "garis dasar masih lurus"
+  },
+  "action": "Final (gaya 7/8)"
+ },
+ "R1a_s123": {
+  "rev": 3,
+  "wrong": [],
+  "defects": [
+   "perkataan KAU tertutup jari tangan"
+  ],
+  "el_fail": {},
+  "action": "Redo: seed 2024 + prompt rev 4 (tangan di bawah reben, tidak menutup huruf)"
+ },
+ "R1b_s123": {
+  "rev": 3,
+  "wrong": [
+   "+susunan: WALAU KECIL di atas PELITA, IA dan TETAP terpisah (maksud kabur)"
+  ],
+  "el_fail": {},
+  "action": "Redo: seed 2024 + prompt rev 4 (reben di bawah pelita; IA TETAP satu baris)"
  }
 }

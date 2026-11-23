@@ -118,5 +118,23 @@
   "encode_all_s": 16.5,
   "seed": 123,
   "sha": "eafc577a"
+ },
+ "R2b_s123": {
+  "seconds": 533.8,
+  "encode_all_s": 16.7,
+  "seed": 123,
+  "sha": "527a7d76"
+ },
+ "R1a_s123": {
+  "seconds": 549.6,
+  "encode_all_s": 16.7,
+  "seed": 123,
+  "sha": "696c1824"
+ },
+ "R1b_s123": {
+  "seconds": 594.4,
+  "encode_all_s": 16.7,
+  "seed": 123,
+  "sha": "9813ba93"
  }
 }

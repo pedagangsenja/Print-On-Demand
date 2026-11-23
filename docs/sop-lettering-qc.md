@@ -13,9 +13,9 @@ Jana poster lettering yang ikut kualiti 5 poster rujukan pengguna (B1-B5, upload
 ## Langkah
 1. **Pilih gaya rujukan** (B1-B5) dan baca unsurnya (jadual "Kajian 5 rujukan").
 2. **Tulis frasa baharu**: frasa Melayu asli, jangan salin ayat rujukan. Panjang: lencana 3-5 perkataan, poster 9-16. Letak tanda baca.
-3. **Bahagi baris**: 2-5 perkataan utama sangat besar, lain kecil. Tentukan bekas: reben, label koyak, bulatan, atau ditulis atas objek.
+3. **Bahagi baris**: 2-5 perkataan utama sangat besar, lain kecil. Tentukan bekas: reben, label koyak, bulatan, atau ditulis atas objek. Gaya ilustrasi: maksimum 5-6 blok teks dan tetapkan susunan bacaan.
 4. **Pilih gaya huruf**: 3 atau lebih. Varian a = macam rujukan; varian b = font lain, unsur lain kekal.
-5. **Bina prompt** dengan `build_prompts.py`.
+5. **Bina prompt** dengan `build_prompts.py`. Baris kecil ditulis dalam HURUF BESAR.
 6. **Jana** cubaan 1 (seed 42).
 7. **QC pintu wajib** (semua mesti lulus):
    - G1 ejaan 100% (semak huruf demi huruf);
@@ -32,6 +32,14 @@ Jana poster lettering yang ikut kualiti 5 poster rujukan pengguna (B1-B5, upload
 - **B3 berus berwarna**: latar grunge gelap + percikan; 4 warna, setiap baris lain; penuh kanvas, baris condong; berus kering + bayang; 3+ gaya huruf; label kertas koyak; anak panah/bintang/coretan; hierarki besar/kecil.
 - **B2 lencana**: hitam-putih, latar luar putih; bentuk lencana + sinar matahari; 3-5 perkataan sangat besar; inline + bayang 3D; 3+ gaya huruf; garis dasar melantun + swash; daun/titik mengisi; tepi berus kasar + percikan.
 - **B1 ilustrasi**: krim atas hitam gaya scratchboard; tangan memegang objek; satu perkataan atas objek; reben di belakang tangan; hierarki; 3+ gaya huruf; skrol/titik/sinar; cetakan lusuh.
+
+## Pengajaran pusingan QC v3 (23 Nov, 10 design, 25 imej)
+- Baris kecil dalam huruf kecil kerap salah eja (kelsil, kenil, sebiiji, keisil). Ditulis dalam HURUF BESAR → betul (R4a, R1b).
+- Gaya ilustrasi dengan 8 blok teks: perkataan berulang (DIINGAT 3 kali) atau bercampur. Dipermudah ke 5 blok + susunan bacaan → betul.
+- Gaya berus grunge kadang menambah coretan macam tandatangan → gagal G2; seed baharu menyelesaikannya.
+- Lencana: model kadang buat lencana putih dengan huruf hitam; sebut "lencana hitam penuh, huruf putih" dengan jelas.
+- Tangan dalam ilustrasi boleh menutup huruf; sebut "tangan tidak menutup huruf".
+- Unsur "baris pertama melengkung" dan "skrol emas di belakang huruf" perlu ditekankan dengan ayat IMPORTANT.
 
 ## Had dan nota
 - QC dibuat dengan mata oleh Claude (tahap bukti lemah). OCR biasa tidak boleh baca huruf hiasan dengan tepat (ujian 23 Nov).

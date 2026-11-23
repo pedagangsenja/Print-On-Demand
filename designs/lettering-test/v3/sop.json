@@ -10,14 +10,14 @@
   "no": 2,
   "step": "Tulis frasa baharu",
   "who": "Claude",
-  "detail": "Frasa Melayu asli (jangan salin ayat rujukan), panjang ikut gaya: lencana 3-5 perkataan, poster 9-16. Letak tanda baca (koma, noktah, tanda soal).",
+  "detail": "Frasa Melayu asli (jangan salin ayat rujukan), panjang ikut gaya: lencana 3-5 perkataan, poster 9-16. Letak tanda baca (koma, noktah, tanda soal). Perkataan berisiko (kerap salah dalam ujian): kecil, kerana, sebiji, selamanya, perkataan -nnya.",
   "check": "Frasa asli, perkataan biasa"
  },
  {
   "no": 3,
   "step": "Bahagi baris dan peranan",
   "who": "Claude",
-  "detail": "2-5 perkataan utama (sangat besar), lain kecil. Tentukan bekas: reben, label koyak, bulatan, atau ditulis atas objek.",
+  "detail": "2-5 perkataan utama (sangat besar), lain kecil. Tentukan bekas: reben, label koyak, bulatan, atau ditulis atas objek. Gaya ilustrasi: maksimum 5-6 blok teks dan tulis susunan bacaan dengan jelas (blok yang banyak menyebabkan perkataan berulang atau bercampur).",
   "check": "Ada hierarki saiz"
  },
  {
@@ -31,7 +31,7 @@
   "no": 5,
   "step": "Bina prompt dengan templat",
   "who": "Claude (skrip)",
-  "detail": "designs/lettering-test/v3/build_prompts.py: ayat kepala + unsur rujukan + gaya huruf + objek + teks baris demi baris + peraturan (ejaan tepat, tiada teks lain, tiada tandatangan).",
+  "detail": "designs/lettering-test/v3/build_prompts.py: ayat kepala + unsur rujukan + gaya huruf + objek + teks baris demi baris + peraturan (ejaan tepat, tiada teks lain, tiada tandatangan). Baris kecil ditulis dalam HURUF BESAR (huruf kecil kerap salah eja). Lencana: sebut 'lencana hitam penuh, huruf putih'. Ilustrasi: sebut 'tangan tidak menutup huruf'.",
   "check": "Semua unsur rujukan ada dalam prompt"
  },
  {
