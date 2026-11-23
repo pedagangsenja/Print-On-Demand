@@ -1,0 +1,103 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>R4a hibrid</title>
+<style>
+@font-face{font-family:"Rye";src:url(../fonts/Rye-Regular.ttf)}
+@font-face{font-family:"Sancreek";src:url(../fonts/Sancreek-Regular.ttf)}
+@font-face{font-family:"Yesteryear";src:url(../fonts/Yesteryear-Regular.ttf)}
+@font-face{font-family:"Cinzel";src:url(../fonts/Cinzel-VF.ttf);font-weight:400 900}
+html,body{margin:0;background:#070707}
+svg{display:block}
+.orn{mix-blend-mode:screen}
+</style></head>
+<body><svg id="svg" xmlns="http://www.w3.org/2000/svg"></svg>
+<script src="common.js"></script>
+<script>
+// B4 "Hiasan krim + emas atas hitam" — teks: Jangan Risau Kalau / LANGKAHMU / masih kecil, / Pokok Besar / PUN / BERMULA / dari sebiji / BENIH.
+const CREAM = '#F3E7C9', INK = '#070707', CX = W / 2, CW = 1000, TOP = 120, BOT = H - 120;
+const F = { rye: { fam: 'Rye' }, san: { fam: 'Sancreek' }, yes: { fam: 'Yesteryear' },
+            cin: { fam: 'Cinzel', wt: 700, ls: 0.22 }, cin2: { fam: 'Cinzel', wt: 700, ls: 0.12 } };
+(async () => {
+  await loadFonts(Object.values(F));
+  initSvg();
+  const g = el('linearGradient', { id: 'gold', x1: 0, y1: 0, x2: 0, y2: 1 }, DEFS);
+  [['0', '#6E5220'], ['.32', '#C9A44E'], ['.5', '#F2DA90'], ['.68', '#B88E3A'], ['1', '#6E5220']]
+    .forEach(([o, c]) => el('stop', { offset: o, 'stop-color': c }, g));
+  const gh = el('linearGradient', { id: 'goldh', x1: 0, y1: 0, x2: 1, y2: 0 }, DEFS);
+  [['0', '#5A4219'], ['.5', '#94712E'], ['1', '#5A4219']].forEach(([o, c]) => el('stop', { offset: o, 'stop-color': c }, gh));
+  el('rect', { width: W, height: H, fill: INK });
+
+  const arc = arcBlock('Jangan Risau Kalau', F.cin, 50, 1000);
+  const b1 = block('LANGKAHMU', F.rye, { w: CW, sy: 1.75 });
+  const b2 = block('masih kecil,', F.cin, { size: 56 });
+  const b3 = block('Pokok Besar', F.yes, { w: 900 });
+  const pun = { kind: 'circle', h: 150, r: 75, gap: 20 };
+  const b5 = block('BERMULA', F.san, { w: CW, sy: 1.2 });
+  const rb = { kind: 'ribbon', h: 96, gap: 24 };
+  const rbt = block('dari sebiji', F.cin, { size: 48 });
+  const b7 = block('BENIH.', F.rye, { w: CW * 0.97, sy: 1.15 });
+  arc.gap = 26; b1.gap = 24; b2.gap = 10; b3.gap = -4; pun.gap = 22; b5.gap = 30; rb.gap = 30;
+  const items = [arc, b1, b2, b3, pun, b5, rb, b7];
+  // Ruang menegak berlebihan diagih sama rata ke jarak antara baris (had +36 setiap satu).
+  const used = items.reduce((a, b, i) => a + b.h + (i < items.length - 1 ? b.gap : 0), 0);
+  const add = Math.max(0, Math.min(36, (BOT - TOP - used) / (items.length - 1)));
+  items.slice(0, -1).forEach(b => b.gap += add);
+  stack(items, TOP, BOT);
+  const rbW = rbt.m.w + 110, rbD = ribbonD(CX, rb.top + rb.h / 2 - 6, rbW, rb.h - 12, { tail: 80, drop: 24, fold: 26, notch: 26 });
+
+  // Lapisan 1: skrol emas AI (screen atas hitam) di belakang huruf.
+  const orn = el('g', {});
+  const img = (id, cx, cy, w, h, flip) => el('image', { href: `../ai_up/${id}.png`, x: -w / 2, y: -h / 2, width: w, height: h,
+    class: 'orn', preserveAspectRatio: 'none', transform: `translate(${cx} ${cy}) scale(${flip ? -1 : 1} 1)` }, orn);
+  const pc = pun.top + pun.h / 2, rc = rb.top + rb.h / 2;
+  img('gold_scroll_a', CX, pc, 1130, 1130 * 640 / 1536);
+  img('gold_scroll_b', CX, rc + 6, 1150, 1150 * 640 / 1536);
+  const mid2 = b2.top + b2.h / 2, cw = 190;
+  img('gold_curl', CX - b2.m.w / 2 - 50 - cw / 2, mid2 - 8, cw, cw, true);
+  img('gold_curl', CX + b2.m.w / 2 + 50 + cw / 2, mid2 - 8, cw, cw, false);
+  const arcEndY = arc.top + arc.h - 4, aw = 175;
+  img('gold_curl', CX - arc.m.w / 2 - 10, arcEndY - 30, aw, aw, true);
+  img('gold_curl', CX + arc.m.w / 2 + 10, arcEndY - 30, aw, aw, false);
+
+  // Lapisan 2: potongan hitam (knockout) supaya emas tidak menyentuh huruf.
+  const ko = el('g', { fill: INK, stroke: INK, 'stroke-linejoin': 'round' });
+  const kos = { 'stroke-width': 14 };
+  arcEl(arc, CX, arc.top, kos, ko);
+  [b1, b5, b7].forEach(b => { textEl(b, CX, b.top, kos, ko); textEl(b, CX, b.top, kos, ko, 5, 6); });
+  textEl(b2, CX, b2.top, kos, ko);
+  textEl(b3, CX, b3.top, { 'stroke-width': 16 }, ko);
+
+  // Swash panjang dari "Pokok Besar" melengkung ke kanan.
+  const sw = textEl(b3, CX, b3.top, { fill: 'none' }, el('g', {}));
+  const s3 = b3.s, bx0 = sw.x0, bx1 = sw.x1, bb = sw.base;
+  const swD = taperD([bx0 + 0.22 * (bx1 - bx0), bb + 0.16 * s3], [bx0 + 0.45 * (bx1 - bx0), bb + 0.36 * s3],
+                     [bx1 - 0.05 * (bx1 - bx0), bb + 0.30 * s3], [bx1 + 70, bb - 0.06 * s3], 10);
+  el('path', { d: swD, 'stroke-width': 14 }, ko);
+
+  // Lapisan 3: bayang emas hero + teks krim.
+  [b1, b5, b7].forEach(b => textEl(b, CX, b.top, { fill: 'url(#gold)' }, null, 5, 6));
+  const cream = { fill: CREAM, stroke: INK, 'stroke-width': 1.6, 'paint-order': 'stroke' };
+  arcEl(arc, CX, arc.top, { fill: CREAM }, null);
+  [b1, b5, b7].forEach(b => textEl(b, CX, b.top, cream));
+  textEl(b2, CX, b2.top, { fill: CREAM });
+  [[-1], [1]].forEach(([s]) => el('circle', { cx: CX + s * (b2.m.w / 2 + 26), cy: b2.top + b2.h * 0.55, r: 7, fill: 'url(#gold)' }));
+  textEl(b3, CX, b3.top, { fill: CREAM });
+  el('path', { d: swD, fill: CREAM });
+
+  // PUN dalam bulatan emas.
+  el('circle', { cx: CX, cy: pc, r: pun.r + 10, fill: INK });
+  el('circle', { cx: CX, cy: pc, r: pun.r, fill: INK, stroke: 'url(#gold)', 'stroke-width': 6 });
+  el('circle', { cx: CX, cy: pc, r: pun.r - 11, fill: 'none', stroke: '#B88E3A', 'stroke-width': 1.6 });
+  const pt = block('PUN', F.cin2, { size: 46 });
+  textEl(pt, CX, pc - pt.h / 2, { fill: CREAM });
+  [[-1], [1]].forEach(([s]) => el('circle', { cx: CX + s * (pun.r + 24), cy: pc, r: 6, fill: 'url(#gold)' }));
+
+  // "dari sebiji" dalam reben emas.
+  rbD.tails.forEach(d => el('path', { d, fill: 'url(#goldh)', stroke: '#E0C27A', 'stroke-width': 2.5, 'stroke-linejoin': 'round' }));
+  rbD.folds.forEach(d => el('path', { d, fill: '#3E2D10' }));
+  el('path', { d: rbD.band, fill: 'url(#goldh)', stroke: '#E0C27A', 'stroke-width': 3, 'stroke-linejoin': 'round' });
+  textEl(rbt, CX, rb.top + (rb.h - 12) / 2 - rbt.h / 2 + 4, { fill: CREAM, stroke: '#2A1E08', 'stroke-width': 2, 'paint-order': 'stroke' });
+
+  window.LAYOUT = items.map(i => ({ kind: i.kind, t: i.t, top: Math.round(i.top), h: Math.round(i.h), s: i.s && Math.round(i.s), sy: i.sy }));
+  window.READY = true;
+})();
+</script></body></html>

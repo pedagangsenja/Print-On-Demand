@@ -1,0 +1,101 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>R5a hibrid</title>
+<style>
+@font-face{font-family:"Great Vibes";src:url(../fonts/GreatVibes-Regular.ttf)}
+@font-face{font-family:"Abril Fatface";src:url(../fonts/AbrilFatface-Regular.ttf)}
+@font-face{font-family:"Cinzel";src:url(../fonts/Cinzel-VF.ttf);font-weight:400 900}
+html,body{margin:0;background:transparent}
+svg{display:block}
+</style></head>
+<body><svg id="svg" xmlns="http://www.w3.org/2000/svg"></svg>
+<script src="common.js"></script>
+<script>
+// B5 "Papan kapur + reben" — lapisan kapur sahaja (latar papan batu tulis ditambah oleh render.py).
+// Teks: Dah Makan, / BELUM? / Jangan Lupa / JAGA / Diri Sendiri / BAIK-BAIK / Ya.
+const WH = '#F4F4EF', SH = '#8E979B', DK = '#262C2F', CX = W / 2, CW = 1000, TOP = 120, BOT = H - 120;
+const F = { gv: { fam: 'Great Vibes' }, abr: { fam: 'Abril Fatface' }, cin: { fam: 'Cinzel', wt: 700, ls: 0.3 },
+            cinw: { fam: 'Cinzel', wt: 700, ls: 0.55 } };
+(async () => {
+  await loadFonts(Object.values(F));
+  initSvg();
+  const b1 = block('Dah Makan,', F.gv, { w: 760 });
+  const rb = { kind: 'ribbon', h: 100, gap: 20 };
+  const rbt = block('BELUM?', F.cin, { size: 50 });
+  const b3 = block('Jangan Lupa', F.gv, { w: CW });
+  const b4 = block('JAGA', F.cinw, { size: 50 });
+  const b5 = block('Diri Sendiri', F.gv, { w: 720 });
+  const dv = { kind: 'divider', h: 44, gap: 20 };
+  const b7 = block('BAIK-BAIK', F.abr, { w: CW, sy: 1.3 });
+  const b8 = block('Ya.', F.gv, { w: 330 });
+  b1.gap = 14; rb.gap = 6; b3.gap = 26; b4.gap = 16; b5.gap = 18; dv.gap = 30; b7.gap = 6;
+  const items = [b1, rb, b3, b4, b5, dv, b7, b8];
+  const used = items.reduce((a, b, i) => a + b.h + (i < items.length - 1 ? b.gap : 0), 0);
+  const add = Math.max(0, Math.min(40, (BOT - TOP - used) / (items.length - 1)));
+  items.slice(0, -1).forEach(b => b.gap += add);
+  stack(items, TOP, BOT);
+  const chalk = el('g', { 'stroke-linejoin': 'round', 'stroke-linecap': 'round' });
+
+  // Skrip copperplate: bayang 3D (tolakan berperingkat) + isi putih ditebalkan.
+  const script3d = (b, n = 7) => {
+    for (let i = n; i >= 1; i--) textEl(b, CX, b.top, { fill: SH, stroke: SH, 'stroke-width': 2.4, opacity: 0.85 }, chalk, i * 0.9, i * 1.3);
+    return textEl(b, CX, b.top, { fill: WH, stroke: WH, 'stroke-width': 2.6 }, chalk);
+  };
+  const t1 = script3d(b1), t3 = script3d(b3, 9), t5 = script3d(b5), t8 = script3d(b8);
+
+  // Ekor swash pada "Ya." dan bawah "Jangan Lupa".
+  const s8 = b8.s;
+  el('path', { d: taperD([t8.x1 - 0.05 * s8, t8.base + 0.05 * s8], [t8.x1 + 0.6 * s8, t8.base + 0.25 * s8],
+    [t8.x1 + 1.1 * s8, t8.base - 0.05 * s8], [t8.x1 + 1.05 * s8, t8.base - 0.38 * s8], 6), fill: WH }, chalk);
+  el('path', { d: taperD([t8.x0 + 0.1 * s8, t8.base + 0.12 * s8], [t8.x0 - 0.5 * s8, t8.base + 0.3 * s8],
+    [t8.x0 - 1.0 * s8, t8.base + 0.05 * s8], [t8.x0 - 0.95 * s8, t8.base - 0.25 * s8], 5), fill: WH }, chalk);
+
+  // Reben kapur berlipat dengan "BELUM?".
+  const rbW = rbt.m.w + 150, rbc = rb.top + (rb.h - 26) / 2, r = ribbonD(CX, rbc, rbW, rb.h - 26, { tail: 95, drop: 26, fold: 28, notch: 28, bend: 8 });
+  r.folds.forEach(d => el('path', { d, fill: WH, opacity: 0.45 }, chalk));
+  r.tails.forEach(d => el('path', { d, fill: 'none', stroke: WH, 'stroke-width': 3.2 }, chalk));
+  el('path', { d: r.band, fill: 'none', stroke: WH, 'stroke-width': 3.6 }, chalk);
+  // garis dalam reben (jahitan)
+  const L = CX - rbW / 2 + 12, R = CX + rbW / 2 - 12, y1 = rbc - (rb.h - 26) / 2 + 9, y2 = rbc + (rb.h - 26) / 2 - 9;
+  el('path', { d: `M${L},${y1} Q${CX},${y1 + 16} ${R},${y1} M${L},${y2} Q${CX},${y2 + 16} ${R},${y2}`, fill: 'none', stroke: WH,
+    'stroke-width': 1.6, 'stroke-dasharray': '7 7', opacity: 0.8 }, chalk);
+  textEl(rbt, CX, rbc - rbt.h / 2 + 7, { fill: WH }, chalk);
+
+  // JAGA dengan garis + titik di kiri kanan.
+  const t4 = textEl(b4, CX, b4.top, { fill: WH }, chalk), my = b4.top + b4.h / 2;
+  [[-1, t4.x0 - 36], [1, t4.x1 + 36]].forEach(([s, x]) => {
+    el('path', { d: `M${x},${my} q${s * 90},-10 ${s * 190},0`, fill: 'none', stroke: WH, 'stroke-width': 3 }, chalk);
+    el('circle', { cx: x + s * 212, cy: my, r: 5.5, fill: WH }, chalk);
+    el('circle', { cx: x - s * 2, cy: my, r: 3.5, fill: WH }, chalk);
+  });
+
+  // Pembahagi daun di tengah, gelung di hujung.
+  const dy = dv.top + dv.h / 2;
+  el('path', { d: `M${CX - 34},${dy} Q${CX},${dy - 30} ${CX + 34},${dy} Q${CX},${dy + 30} ${CX - 34},${dy} Z`, fill: WH }, chalk);
+  el('path', { d: `M${CX - 30},${dy} L${CX + 30},${dy}`, stroke: DK, 'stroke-width': 2.4 }, chalk);
+  [[-1], [1]].forEach(([s]) => {
+    el('path', { d: `M${CX + s * 50},${dy} C${CX + s * 150},${dy - 14} ${CX + s * 240},${dy + 14} ${CX + s * 300},${dy}
+      c${s * 22},-6 ${s * 26},-26 ${s * 8},-30 c${-s * 16},-3 ${-s * 22},12 ${-s * 10},20`, fill: 'none', stroke: WH, 'stroke-width': 3 }, chalk);
+    el('circle', { cx: CX + s * 342, cy: dy, r: 5, fill: WH }, chalk);
+  });
+
+  // BAIK-BAIK: blok 3D + garis luar (inline) gaya kapur.
+  for (let i = 12; i >= 1; i--) textEl(b7, CX, b7.top, { fill: SH, stroke: SH, 'stroke-width': 9, opacity: 0.9 }, chalk, i * 1.0, i * 1.35);
+  textEl(b7, CX, b7.top, { fill: WH, stroke: WH, 'stroke-width': 11 }, chalk);
+  textEl(b7, CX, b7.top, { fill: 'none', stroke: DK, 'stroke-width': 4.5 }, chalk);
+  textEl(b7, CX, b7.top, { fill: WH }, chalk);
+
+  // Bintang kecil dan titik bertabur di ruang kosong sisi.
+  const st = (x, y, rr, n) => el('path', { d: star(x, y, rr, n || 5), fill: WH }, chalk);
+  const dot = (x, y, rr) => el('circle', { cx: x, cy: y, r: rr, fill: WH }, chalk);
+  const m1 = b1.top + b1.h * 0.45;
+  st(t1.x0 - 70, m1 - 30, 15); dot(t1.x0 - 110, m1 + 25, 5); st(t1.x0 - 40, m1 + 50, 9, 4);
+  st(t1.x1 + 70, m1 - 20, 15); dot(t1.x1 + 105, m1 + 30, 5); st(t1.x1 + 40, m1 + 55, 9, 4);
+  const m5 = b5.top + b5.h * 0.45;
+  st(t5.x0 - 60, m5 - 10, 12); dot(t5.x0 - 100, m5 + 30, 4.5); st(t5.x1 + 60, m5 - 10, 12); dot(t5.x1 + 100, m5 + 30, 4.5);
+  const m8 = b8.top + b8.h * 0.5;
+  st(CX - 360, m8, 13); st(CX + 360, m8 - 10, 13); dot(CX - 410, m8 + 30, 4.5); dot(CX + 410, m8 + 20, 4.5);
+
+  window.LAYOUT = items.map(i => ({ kind: i.kind, t: i.t, top: Math.round(i.top), h: Math.round(i.h), s: i.s && Math.round(i.s), sy: i.sy }));
+  window.READY = true;
+})();
+</script></body></html>

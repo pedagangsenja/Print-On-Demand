@@ -1,0 +1,10 @@
+[
+ {"id": "gold_scroll_a", "poster": "R4a", "w": 1536, "h": 640, "seed": 42,
+  "prompt": "Ornate antique gold acanthus scrollwork flourish: a wide, horizontal, mirror-symmetrical arrangement of curling acanthus leaves and fine filigree swirls, with an empty space in the middle. Engraved gilded metal with warm highlights and crisp fine detail, Victorian engraving style. Isolated on a pure flat black background. No text, no letters, no numbers, no frame, nothing else."},
+ {"id": "gold_scroll_b", "poster": "R4a", "w": 1536, "h": 640, "seed": 7,
+  "prompt": "Ornate antique gold baroque scroll ornament: long curling acanthus leaves and filigree swirls that sweep out to the far left and far right ends, thin and airy in the middle. Engraved gilded metal with warm highlights and crisp fine detail, Victorian engraving style. Isolated on a pure flat black background. No text, no letters, no numbers, no frame, nothing else."},
+ {"id": "gold_curl", "poster": "R4a", "w": 1024, "h": 1024, "seed": 42,
+  "prompt": "A single ornate antique gold filigree swirl spray: one curling acanthus scroll with small leaves and spiral tendrils sweeping from the lower left to the upper right. Engraved gilded metal with warm highlights and crisp fine detail, Victorian engraving style. Isolated on a pure flat black background. No text, no letters, no numbers, no frame, nothing else."},
+ {"id": "slate_board", "poster": "R5a", "w": 1152, "h": 1536, "seed": 42,
+  "prompt": "Flat front-view photograph of an empty dark slate chalkboard surface filling the entire frame. Deep charcoal grey slate with subtle natural texture, soft hazy white chalk dust smudges and faint wide swirls left by an eraser, slightly lighter towards the centre, evenly lit. No writing, no drawings, no text, no letters, no frame, no border, no objects."}
+]

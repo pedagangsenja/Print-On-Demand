@@ -1,0 +1,21 @@
+{
+ "title": "Ujian hibrid: teks fon sebenar + latar/hiasan AI (R4a, R5a)",
+ "date": "2026-11-23",
+ "why": "Hasil v3 ERNIE: 3/5 imej gagal QC (ejaan salah: kelsil, sebiiji; coretan rawak), resolusi 768x1024, 507-604 s setiap imej di CPU.",
+ "method": [
+  "Teks disusun dalam SVG dengan fon Google (OFL-1.1) dan dilukis oleh Chromium pada 5400x7200 px (18x24 in @300 DPI).",
+  "AI hanya jana aset tanpa teks: skrol emas (R4a) dan papan batu tulis (R5a) dengan FLUX.2-klein-4B (Apache-2.0) di CPU.",
+  "Skrol emas dibesarkan x4 dengan Real-ESRGAN (ai-forever, BSD-3) lalu digabung secara 'screen' di belakang huruf, dengan potongan hitam di sekeliling huruf.",
+  "Tekstur kapur (tepi kasar, butir, calit) dan butir halus ditambah dengan numpy."
+ ],
+ "fonts": {
+  "R4a": {"Rye": "LANGKAHMU, BENIH.", "Sancreek": "BERMULA", "Yesteryear": "Pokok Besar", "Cinzel 700": "Jangan Risau Kalau, masih kecil, PUN, dari sebiji"},
+  "R5a": {"Great Vibes": "Dah Makan, Jangan Lupa, Diri Sendiri, Ya.", "Abril Fatface": "BAIK-BAIK", "Cinzel 700": "BELUM?, JAGA"},
+  "licence": "Semua OFL-1.1 (fonts/OFL-*.txt); boleh guna untuk produk jualan."
+ },
+ "licences_source": {
+  "FLUX.2-klein-4B": "https://huggingface.co/black-forest-labs/FLUX.2-klein-4B (apache-2.0, rasmi)",
+  "fonts": "https://github.com/google/fonts (METADATA.pb license: OFL, rasmi)"
+ },
+ "gpu_note": "Modal tidak boleh dari container (SDK guna gRPC, proksi tidak sokong). Kaggle: run GPU terdahulu keluar 'NVSMI: none' dan tiada internet (akaun perlu pengesahan telefon). Kuota HF Space Qwen: 1 imej sehari."
+}
