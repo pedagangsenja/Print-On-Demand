@@ -31,5 +31,13 @@
  "08_color": {
   "seconds": 304.5,
   "ok": true
+ },
+ "09_badge": {
+  "seconds": 340.5,
+  "ok": true
+ },
+ "10_illus": {
+  "seconds": 334.6,
+  "ok": true
  }
 }

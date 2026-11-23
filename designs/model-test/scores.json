@@ -1,0 +1,332 @@
+{
+ "klein4b": {
+  "01_stack": {
+   "ocr_hit": 3,
+   "ocr_total": 6,
+   "missing": [
+    "I",
+    "PATIENCE",
+    "UPDATES"
+   ],
+   "seconds": 114.3
+  },
+  "02_icon": {
+   "ocr_hit": 1,
+   "ocr_total": 7,
+   "missing": [
+    "YOUR",
+    "MUG",
+    "IT",
+    "WON'T",
+    "CLEAN",
+    "ITSELF"
+   ],
+   "seconds": 99.4
+  },
+  "03_circle": {
+   "ocr_hit": 2,
+   "ocr_total": 6,
+   "missing": [
+    "POWERED",
+    "COFFEE",
+    "AND",
+    "DAYS"
+   ],
+   "seconds": 90.5
+  },
+  "04_ribbon": {
+   "ocr_hit": 0,
+   "ocr_total": 4,
+   "missing": [
+    "NIGHT",
+    "SHIFT",
+    "STILL",
+    "ALIVE"
+   ],
+   "seconds": 92.7
+  },
+  "05_frame": {
+   "ocr_hit": 1,
+   "ocr_total": 5,
+   "missing": [
+    "I",
+    "SPEAK",
+    "FLUENT",
+    "SIGHS"
+   ],
+   "seconds": 89.5
+  },
+  "06_ornate": {
+   "ocr_hit": 5,
+   "ocr_total": 6,
+   "missing": [
+    "SINGKAT"
+   ],
+   "seconds": 65.6
+  },
+  "07_chalk": {
+   "ocr_hit": 1,
+   "ocr_total": 5,
+   "missing": [
+    "REZEKI",
+    "PERNAH",
+    "SALAH",
+    "ALAMAT"
+   ],
+   "seconds": 69.5
+  },
+  "08_color": {
+   "ocr_hit": 0,
+   "ocr_total": 5,
+   "missing": [
+    "JANGAN",
+    "BERHENTI",
+    "BERMIMPI",
+    "WALAU",
+    "PERLAHAN"
+   ],
+   "seconds": 63.6
+  },
+  "09_badge": {
+   "ocr_hit": 1,
+   "ocr_total": 4,
+   "missing": [
+    "KASIH",
+    "TIADA",
+    "PENGGANTI"
+   ],
+   "seconds": 65.2
+  },
+  "10_illus": {
+   "ocr_hit": 0,
+   "ocr_total": 5,
+   "missing": [
+    "KOPI",
+    "BOLEH",
+    "PAHIT",
+    "HIDUP",
+    "JANGAN"
+   ],
+   "seconds": 63.8
+  }
+ },
+ "zimage": {
+  "01_stack": {
+   "ocr_hit": 3,
+   "ocr_total": 6,
+   "missing": [
+    "I",
+    "PATIENCE",
+    "UPDATES"
+   ],
+   "seconds": 293.9
+  },
+  "02_icon": {
+   "ocr_hit": 3,
+   "ocr_total": 7,
+   "missing": [
+    "IT",
+    "WON'T",
+    "CLEAN",
+    "ITSELF"
+   ],
+   "seconds": 315.6
+  },
+  "03_circle": {
+   "ocr_hit": 2,
+   "ocr_total": 6,
+   "missing": [
+    "POWERED",
+    "COFFEE",
+    "AND",
+    "DAYS"
+   ],
+   "seconds": 322.5
+  },
+  "04_ribbon": {
+   "ocr_hit": 0,
+   "ocr_total": 4,
+   "missing": [
+    "NIGHT",
+    "SHIFT",
+    "STILL",
+    "ALIVE"
+   ],
+   "seconds": 310.3
+  },
+  "05_frame": {
+   "ocr_hit": 4,
+   "ocr_total": 5,
+   "missing": [
+    "I"
+   ],
+   "seconds": 311.4
+  },
+  "06_ornate": {
+   "ocr_hit": 1,
+   "ocr_total": 6,
+   "missing": [
+    "HIDUP",
+    "SINGKAT",
+    "JANGAN",
+    "SIMPAN",
+    "DENDAM"
+   ],
+   "seconds": 247.7
+  },
+  "07_chalk": {
+   "ocr_hit": 1,
+   "ocr_total": 5,
+   "missing": [
+    "REZEKI",
+    "PERNAH",
+    "SALAH",
+    "ALAMAT"
+   ],
+   "seconds": 247.7
+  },
+  "08_color": {
+   "ocr_hit": 0,
+   "ocr_total": 5,
+   "missing": [
+    "JANGAN",
+    "BERHENTI",
+    "BERMIMPI",
+    "WALAU",
+    "PERLAHAN"
+   ],
+   "seconds": 257.5
+  },
+  "09_badge": {
+   "ocr_hit": 1,
+   "ocr_total": 4,
+   "missing": [
+    "IBU",
+    "TIADA",
+    "PENGGANTI"
+   ],
+   "seconds": 237.4
+  },
+  "10_illus": {
+   "ocr_hit": 1,
+   "ocr_total": 5,
+   "missing": [
+    "KOPI",
+    "BOLEH",
+    "HIDUP",
+    "JANGAN"
+   ],
+   "seconds": 255.5
+  }
+ },
+ "ernie": {
+  "01_stack": {
+   "ocr_hit": 1,
+   "ocr_total": 6,
+   "missing": [
+    "I",
+    "PAUSED",
+    "PATIENCE",
+    "FOR",
+    "UPDATES"
+   ],
+   "seconds": 523.3
+  },
+  "02_icon": {
+   "ocr_hit": 3,
+   "ocr_total": 7,
+   "missing": [
+    "WASH",
+    "IT",
+    "WON'T",
+    "CLEAN"
+   ],
+   "seconds": 501.7
+  },
+  "03_circle": {
+   "ocr_hit": 1,
+   "ocr_total": 6,
+   "missing": [
+    "POWERED",
+    "COFFEE",
+    "AND",
+    "QUIET",
+    "DAYS"
+   ],
+   "seconds": 491.3
+  },
+  "04_ribbon": {
+   "ocr_hit": 0,
+   "ocr_total": 4,
+   "missing": [
+    "NIGHT",
+    "SHIFT",
+    "STILL",
+    "ALIVE"
+   ],
+   "seconds": 477.1
+  },
+  "05_frame": {
+   "ocr_hit": 2,
+   "ocr_total": 5,
+   "missing": [
+    "I",
+    "FLUENT",
+    "SIGHS"
+   ],
+   "seconds": 506.7
+  },
+  "06_ornate": {
+   "ocr_hit": 1,
+   "ocr_total": 6,
+   "missing": [
+    "HIDUP",
+    "INI",
+    "SINGKAT",
+    "JANGAN",
+    "SIMPAN"
+   ],
+   "seconds": 287.4
+  },
+  "07_chalk": {
+   "ocr_hit": 3,
+   "ocr_total": 5,
+   "missing": [
+    "REZEKI",
+    "SALAH"
+   ],
+   "seconds": 327.0
+  },
+  "08_color": {
+   "ocr_hit": 0,
+   "ocr_total": 5,
+   "missing": [
+    "JANGAN",
+    "BERHENTI",
+    "BERMIMPI",
+    "WALAU",
+    "PERLAHAN"
+   ],
+   "seconds": 304.5
+  },
+  "09_badge": {
+   "ocr_hit": 2,
+   "ocr_total": 4,
+   "missing": [
+    "IBU",
+    "TIADA"
+   ],
+   "seconds": 340.5
+  },
+  "10_illus": {
+   "ocr_hit": 2,
+   "ocr_total": 5,
+   "missing": [
+    "KOPI",
+    "HIDUP",
+    "JANGAN"
+   ],
+   "seconds": 334.6
+  }
+ }
+}

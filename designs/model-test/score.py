@@ -37,6 +37,7 @@ def main():
             res.setdefault(m, {})[p["id"]] = {"ocr_hit": len(hit), "ocr_total": len(want), "missing": [w for w in want if w not in got],
                                                 "seconds": times.get(p["id"], {}).get("seconds")}
     (HERE / "scores.json").write_text(json.dumps(res, indent=1))
+    rv = json.loads((HERE / "review.json").read_text())  # semakan mata (OCR lemah untuk huruf hiasan)
     # lembaran: baris = prompt, lajur = model
     tw, pad, lab = 300, 10, 34
     font = ImageFont.load_default(size=16)
@@ -46,7 +47,8 @@ def main():
         sheet = Image.new("RGB", (220 + cols * (tw + pad) + pad, lab + rows * (th + pad + 20) + pad), "white")
         d = ImageDraw.Draw(sheet)
         for j, m in enumerate(MODELS):
-            d.text((220 + pad + j * (tw + pad), 8), m, fill="black", font=font)
+            ok = sum(1 for v in rv.get(m, {}).values() if not v); sec = [r["seconds"] for r in res[m].values() if r["seconds"]]
+            d.text((220 + pad + j * (tw + pad), 8), f"{m}: {ok}/10 betul, purata {round(sum(sec) / len(sec))} s", fill="black", font=font)
         for i, p in enumerate(ids):
             y = lab + i * (th + pad + 20)
             d.multiline_text((8, y + 4), p["id"] + "\n" + "\n".join(p["text"].split(" / ")), fill="black", font=ImageFont.load_default(size=13))
@@ -56,7 +58,9 @@ def main():
                 if png.exists():
                     im = Image.open(png).convert("RGB"); im.thumbnail((tw, th)); sheet.paste(im, (x, y))
                     r = res[m][p["id"]]
-                    d.text((x, y + th + 2), f"OCR {r['ocr_hit']}/{r['ocr_total']}  {r['seconds']} s", fill="black", font=ImageFont.load_default(size=13))
+                    bad = rv.get(m, {}).get(p["id"])
+                    lbl, col = ("BETUL", (0, 120, 0)) if bad == [] else (("SALAH: " + ", ".join(bad)) if bad else "belum disemak", (190, 0, 0))
+                    d.text((x, y + th + 2), f"{lbl}  ·  {r['seconds']} s", fill=col, font=ImageFont.load_default(size=13))
         sheet.save(HERE / f"sheet_{half}.png")
     print(json.dumps({m: sum(v['ocr_hit'] for v in r.values()) for m, r in res.items()}))
 

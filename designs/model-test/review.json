@@ -1,0 +1,9 @@
+{
+ "_nota": "Semakan mata oleh Claude, 23 Nov 2026, seed 42, satu cubaan setiap prompt. Senarai = perkataan salah eja; kosong = betul semua.",
+ "klein4b": {"01_stack": ["UPDLATES"], "02_icon": ["YOURG", "CLEIAN", "ITSEEFF"], "03_circle": [], "04_ribbon": ["NIIGHT"], "05_frame": [],
+             "06_ornate": [], "07_chalk": ["Almnat"], "08_color": ["Janna", "Bermimpo"], "09_badge": ["PENGGANT"], "10_illus": ["Bokel", "Aidup"]},
+ "zimage": {"01_stack": ["Patiance", "UPATES"], "02_icon": [], "03_circle": [], "04_ribbon": [], "05_frame": [],
+            "06_ornate": ["Janban"], "07_chalk": ["Alimat"], "08_color": [], "09_badge": ["PENKGATI"], "10_illus": []},
+ "ernie": {"01_stack": [], "02_icon": [], "03_circle": [], "04_ribbon": [], "05_frame": [],
+           "06_ornate": [], "07_chalk": [], "08_color": [], "09_badge": [], "10_illus": []}
+}
