@@ -9,13 +9,79 @@
   "Tekstur kapur (tepi kasar, butir, calit) dan butir halus ditambah dengan numpy."
  ],
  "fonts": {
-  "R4a": {"Rye": "LANGKAHMU, BENIH.", "Sancreek": "BERMULA", "Yesteryear": "Pokok Besar", "Cinzel 700": "Jangan Risau Kalau, masih kecil, PUN, dari sebiji"},
-  "R5a": {"Great Vibes": "Dah Makan, Jangan Lupa, Diri Sendiri, Ya.", "Abril Fatface": "BAIK-BAIK", "Cinzel 700": "BELUM?, JAGA"},
+  "R4a": {
+   "Rye": "LANGKAHMU, BENIH.",
+   "Sancreek": "BERMULA",
+   "Yesteryear": "Pokok Besar",
+   "Cinzel 700": "Jangan Risau Kalau, masih kecil, PUN, dari sebiji"
+  },
+  "R5a": {
+   "Great Vibes": "Dah Makan, Jangan Lupa, Diri Sendiri, Ya.",
+   "Abril Fatface": "BAIK-BAIK",
+   "Cinzel 700": "BELUM?, JAGA"
+  },
   "licence": "Semua OFL-1.1 (fonts/OFL-*.txt); boleh guna untuk produk jualan."
  },
  "licences_source": {
   "FLUX.2-klein-4B": "https://huggingface.co/black-forest-labs/FLUX.2-klein-4B (apache-2.0, rasmi)",
   "fonts": "https://github.com/google/fonts (METADATA.pb license: OFL, rasmi)"
  },
- "gpu_note": "Modal tidak boleh dari container (SDK guna gRPC, proksi tidak sokong). Kaggle: run GPU terdahulu keluar 'NVSMI: none' dan tiada internet (akaun perlu pengesahan telefon). Kuota HF Space Qwen: 1 imej sehari."
+ "gpu_note": "Modal tidak boleh dari container (SDK guna gRPC, proksi tidak sokong). Kaggle: run GPU terdahulu keluar 'NVSMI: none' dan tiada internet (akaun perlu pengesahan telefon). Kuota HF Space Qwen: 1 imej sehari.",
+ "timing": {
+  "ai_assets_s": {
+   "gold_scroll_a": 142.7,
+   "gold_scroll_b": 125.0,
+   "gold_curl": 138.1,
+   "slate_board": 268.4,
+   "encode_all": 19.1
+  },
+  "esrgan_x4_3_ornaments_s": 679,
+  "render_per_poster_s": "~16 (5400x7200)",
+  "note": "Aset AI dijana sekali dan boleh diguna semula untuk banyak poster."
+ },
+ "qc": {
+  "rubric": "lettering-test/v3/rubric.json (cawangan claude/sharp-franklin-29eamk)",
+  "R4a": {
+   "gates": {
+    "G1": "lulus",
+    "G2": "lulus",
+    "G3": "lulus"
+   },
+   "elements": {
+    "P": 1,
+    "K": 1,
+    "H": 1,
+    "R": 1,
+    "L": 1,
+    "A": 1,
+    "T": 1,
+    "S": 1
+   },
+   "fix": "Lingkaran emas di hujung lengkung dialih ke luar (bertindih dengan J dan U)."
+  },
+  "R5a": {
+   "gates": {
+    "G1": "lulus",
+    "G2": "lulus",
+    "G3": "lulus"
+   },
+   "elements": {
+    "P": 1,
+    "K": 1,
+    "H": 1,
+    "D": 1,
+    "L": 1,
+    "T": 1,
+    "O": 1,
+    "X": 1
+   },
+   "fix": "Latar papan dikurangkan biru dan digelapkan; butir kapur dibuat lebih bergumpal."
+  },
+  "note": "Huruf kecil Cinzel dipapar sebagai huruf besar kecil (small caps) — ejaan sama, ikut spesifikasi 'small capitals'."
+ },
+ "output": {
+  "R4a": "out/R4a_hybrid_5400x7200.jpg",
+  "R5a": "out/R5a_hybrid_5400x7200.jpg",
+  "size": "5400x7200 px = 18x24 in @300 DPI (nisbah 3:4)"
+ }
 }
