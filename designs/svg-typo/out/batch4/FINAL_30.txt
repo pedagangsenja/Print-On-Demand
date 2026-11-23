@@ -1,6 +1,32 @@
 Batch 4 - 30 sarcastic SVG designs (bundle style, new phrases), black on white 1024x1024
 PNG + SVG in final/<id>.png / final/<id>.svg ; picks in picks.json
-Umum: lazy, disturbed, vacation, nobody, adult, funsize, sideeye, judging, bed, cats
-Kerja: email, friday, hardly, patience, schedule, meeting, monday
-Kopi/introvert: coffeefirst, decaf, bloodtype, stayin, peopling, books, wenthome
-Ibu/keluarga: momvoice, askdad, saidso, tiredmom, tinyhumans, momhair
+1 lazy - I'm not lazy, I'm just on energy saving mode
+2 disturbed - Do not disturb, already disturbed
+3 vacation - I need a six month vacation twice a year
+4 nobody - Cool story bro, nobody asked
+5 adult - I can't adult today
+6 funsize - I'm not short, I'm fun size
+7 sideeye - Queen of the side eye
+8 judging - I'm silently judging you
+9 bed - My bed is calling and I must go
+10 cats - Easily distracted by cats
+11 email - Per my last email
+12 friday - Is it Friday yet?
+13 hardly - Working hard or hardly working
+14 patience - Out of office and out of patience
+15 schedule - Let me check my schedule... nope
+16 meeting - This meeting could have been an email
+17 monday - Monday again? Really?
+18 coffeefirst - Coffee first, talk later
+19 decaf - Decaf? Never heard of her
+20 bloodtype - My blood type is coffee
+21 stayin - Staying in is the new going out   (replaced: "Cancelled plans are my favorite plans" misspelled in every seed)
+22 peopling - Peopling is hard
+23 books - Introvert but willing to talk about books
+24 wenthome - I came, I saw, I went home
+25 momvoice - I'm not yelling, this is my mom voice
+26 askdad - Ask your dad
+27 saidso - Because I said so
+28 tiredmom - Tired as a mother
+29 tinyhumans - Raising tiny humans, send coffee
+30 momhair - Mom hair don't care
