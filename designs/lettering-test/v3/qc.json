@@ -153,5 +153,17 @@
   ],
   "el_fail": {},
   "action": "Redo: seed 123 + prompt rev 3 (WALAU KECIL huruf besar; PELITA sekali sahaja atas pelita)"
+ },
+ "R4a_s123": {
+  "rev": 3,
+  "wrong": [],
+  "el_fail": {},
+  "action": "Final (huruf besar untuk baris kecil berjaya betulkan ejaan)"
+ },
+ "R3a_s123": {
+  "rev": 2,
+  "wrong": [],
+  "el_fail": {},
+  "action": "Final"
  }
 }
