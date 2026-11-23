@@ -3,7 +3,7 @@
   "model": "final",
   "model_name": "Final",
   "model_order": 0,
-  "missing_note": "Belum lulus QC",
+  "missing_note": "Tidak lulus QC selepas 4 cubaan (lihat rekod QC)",
   "level": "lemah"
  }
 ]

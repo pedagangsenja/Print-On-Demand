@@ -203,7 +203,7 @@ def build_v3():
     refs = [{"id": p["id"], "ref_img": ref_assets[REF_ASSET[p["ref"]]], "ref_full": ref_assets[REF_ASSET[p["ref"]]],
              "ref_from": "Poster lettering (contoh kedua anda)", "cropped": False} for p in ps]
     final_models = [{"model": "final", "model_name": "Final", "model_order": 0,
-                     "missing_note": "Belum lulus QC", "level": "lemah"}]
+                     "missing_note": "Tidak lulus QC selepas 4 cubaan (lihat rekod QC)", "level": "lemah"}]
     rub = [{"ref": "Semua", "ref_name": "Semua gaya", "kind": "Wajib", "code": g["code"], "check": g["check"]}
            for g in rubric["gates"]]
     rub += [{"ref": r, "ref_name": st["name"], "kind": "Gaya", "code": e["code"], "check": e["check"]}

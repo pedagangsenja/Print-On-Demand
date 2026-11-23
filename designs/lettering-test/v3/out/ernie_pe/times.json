@@ -136,5 +136,17 @@
   "encode_all_s": 16.7,
   "seed": 123,
   "sha": "9813ba93"
+ },
+ "R1a_s2024": {
+  "seconds": 544.5,
+  "encode_all_s": 44.5,
+  "seed": 2024,
+  "sha": "18361e17"
+ },
+ "R1b_s2024": {
+  "seconds": 458.1,
+  "encode_all_s": 44.5,
+  "seed": 2024,
+  "sha": "06107a96"
  }
 }

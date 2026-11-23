@@ -190,5 +190,19 @@
   ],
   "el_fail": {},
   "action": "Redo: seed 2024 + prompt rev 4 (reben di bawah pelita; IA TETAP satu baris)"
+ },
+ "R1a_s2024": {
+  "rev": 4,
+  "wrong": [],
+  "el_fail": {},
+  "action": "Final (susun atur 5 blok + tangan tidak menutup huruf)"
+ },
+ "R1b_s2024": {
+  "rev": 4,
+  "wrong": [
+   "+susunan: MENERANGI di bawah Jadilah, bukan selepas IA TETAP (maksud berubah)"
+  ],
+  "el_fail": {},
+  "action": "Berhenti: gagal 4 cubaan. Cadangan: kurangkan blok teks (JADILAH PELITA / WALAU KECIL / TETAP MENERANGI)"
  }
 }
