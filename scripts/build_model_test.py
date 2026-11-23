@@ -2,10 +2,13 @@
 
 Guna:
   python3 scripts/build_model_test.py thumbs   # gambar kecil JPEG untuk dashboard -> designs/model-test/thumb/
+  python3 scripts/build_model_test.py refs     # gambar rujukan pengguna -> designs/model-test/refs/up/ (potong ikut REFS)
   python3 scripts/build_model_test.py          # bina dataset (perlu designs/model-test/assets.json: nama thumb -> /_blob/<id>)
 
 Sumber: designs/model-test/prompts.json (prompt), out/<model>/times.json (masa diukur),
 review.json (semakan ejaan dengan mata oleh Claude). Satu seed (42) setiap prompt: tahap bukti lemah.
+Gambar rujukan = muat naik pengguna dalam chat 23 Nov (design orang lain, rujukan gaya sahaja); asal di
+designs/model-test/refs/orig/ dan TIDAK di-commit.
 """
 import json
 import sys
@@ -30,6 +33,17 @@ MODELS = [
 ]
 SET_NAME = {"A": "Gaya SVG Inggeris", "B": "Lettering vintage Melayu"}
 THUMB = 720  # sisi panjang, piksel
+# design -> (fail asal rujukan, kotak potong x0,y0,x1,y1 atau None = seluruh gambar)
+REFS = {
+    "01_stack": ("A3", (128, 0, 268, 142)), "02_icon": ("A2", (328, 182, 498, 359)),
+    "03_circle": ("A1", (0, 355, 180, 532)), "04_ribbon": ("A1", (178, 4, 356, 180)),
+    "05_frame": ("A4", (778, 322, 908, 416)),
+    "06_ornate": ("B4", None), "07_chalk": ("B5", None), "08_color": ("B3", None),
+    "09_badge": ("B2", None), "10_illus": ("B1", None),
+}
+REF_FROM = {"A1": "Bundle SVG jururawat", "A2": "Bundle SVG kebersihan", "A3": "Bundle SVG bunco",
+            "A4": "Bundle SVG sarcasm", "B1": "Poster lettering", "B2": "Poster lettering", "B3": "Poster lettering",
+            "B4": "Poster lettering", "B5": "Poster lettering"}
 
 
 def prompts():
@@ -45,6 +59,19 @@ def thumbs():
             im.thumbnail((THUMB, THUMB))
             im.save(d / f"{m}_{p['id']}.jpg", quality=85, optimize=True)
     print(d, len(list(d.glob("*.jpg"))))
+
+
+def refs():
+    from PIL import Image
+    orig, up = T / "refs/orig", T / "refs/up"; up.mkdir(parents=True, exist_ok=True)
+    for f in orig.iterdir():  # gambar penuh (untuk dibesarkan)
+        im = Image.open(f).convert("RGB"); im.thumbnail((1400, 1400)); im.save(up / f"full_{f.stem}.jpg", quality=88)
+    for pid, (src, box) in REFS.items():
+        im = Image.open(next(orig.glob(src + ".*"))).convert("RGB")
+        if box:
+            im = im.crop(box); im = im.resize((im.width * 3, im.height * 3), Image.LANCZOS)
+        im.thumbnail((THUMB, THUMB)); im.save(up / f"ref_{pid}.jpg", quality=88)
+    print(up, len(list(up.glob("*.jpg"))))
 
 
 def build():
@@ -65,11 +92,15 @@ def build():
     models = [{"model": m, "model_name": n, "model_order": i, "license": lic, "source": src, "strength": s, "weakness": w,
                "level": "lemah", "tested": "23 Nov 2026, CPU 4 teras, seed 42, 1 cubaan setiap design"}
               for i, (m, n, lic, src, s, w) in enumerate(MODELS)]
+    ref_rows = [{"id": pid, "ref_img": assets[f"ref_{pid}"], "ref_full": assets[f"full_{src}"],
+                 "ref_from": REF_FROM[src], "cropped": box is not None, "note": "Muat naik anda 23 Nov; design orang lain, rujukan gaya sahaja"}
+                for pid, (src, box) in REFS.items()]
     OUT.mkdir(parents=True, exist_ok=True)
+    (OUT / "model_test_refs.json").write_text(json.dumps(ref_rows, ensure_ascii=False, indent=1) + "\n")
     (OUT / "model_test.json").write_text(json.dumps(rows, ensure_ascii=False, indent=1) + "\n")
     (OUT / "model_test_models.json").write_text(json.dumps(models, ensure_ascii=False, indent=1) + "\n")
     print(len(rows), len(models))
 
 
 if __name__ == "__main__":
-    thumbs() if sys.argv[1:] == ["thumbs"] else build()
+    {"thumbs": thumbs, "refs": refs}.get((sys.argv[1:] or [""])[0], build)()

@@ -155,11 +155,13 @@
 .mt-gallery { display: grid; gap: var(--cds-gap-md); margin-top: var(--cds-gap-md); }
 .mt-design { border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-md); background: var(--color-panel); display: grid; gap: var(--cds-gap-sm); min-width: 0; }
 .mt-head { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; }
-.mt-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--cds-gap-sm); }
+.mt-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--cds-gap-sm); }
+@media (max-width: 640px) { .mt-row { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .mt-cell { display: grid; gap: 4px; align-content: start; min-width: 0; margin: 0; }
 .mt-cell button { padding: 0; border: 3px solid var(--color-border-line); border-radius: 6px; background: var(--color-bg); cursor: zoom-in; overflow: hidden; display: block; width: 100%; }
 .mt-cell[data-ok="1"] button { border-color: var(--color-ok); }
 .mt-cell[data-ok="0"] button { border-color: var(--color-bad); }
+.mt-cell[data-ok="ref"] button { border-style: dashed; border-color: var(--color-fg-muted); }
 .mt-cell img { display: block; width: 100%; height: auto; }
 .mt-cap { font-size: var(--cds-font-size-caption); line-height: 1.4; overflow-wrap: anywhere; }
 .mt-cap b { display: block; }
@@ -805,7 +807,7 @@
     </table>
   </div>
   <h3>Hasil gambar</h3>
-  <p class="pod-muted">Bingkai hijau = ejaan betul, merah = ada salah eja. Tekan gambar untuk besarkan.</p>
+  <p class="pod-muted">Kiri sekali = <b>rujukan anda</b> (bingkai putus-putus), diikuti 3 model. Bingkai hijau = ejaan betul, merah = ada salah eja. Tekan gambar untuk besarkan; tekan rujukan untuk lihat gambar penuh yang anda upload. Rujukan ialah design orang lain: untuk banding gaya sahaja, jangan tiru atau jual.</p>
   <div class="pod-select-row">
     <label for="mt-set" class="pod-muted">Tunjuk</label>
     <select id="mt-set" class="dash-select" aria-label="Tapis jenis design">
@@ -815,7 +817,7 @@
     </select>
     <label class="pod-muted"><input type="checkbox" id="mt-bad-only"> Hanya design yang ada salah eja</label>
   </div>
-  <div class="mt-gallery" data-draw="mt-gallery" data-source="model_test"></div>
+  <div class="mt-gallery" data-draw="mt-gallery" data-source="model_test model_test_refs"></div>
   <div class="mt-zoom" id="mt-zoom" hidden role="dialog" aria-modal="true" aria-label="Gambar besar">
     <figure><img id="mt-zoom-img" alt=""><figcaption id="mt-zoom-cap"></figcaption></figure>
     <button type="button" class="mt-zoom-close" id="mt-zoom-close">Tutup ✕</button>
@@ -2675,6 +2677,11 @@ dash.draw('mt-models', (el) => {
     el.appendChild(card);
   });
 });
+POD.mRows = (name, id, cols, fill) => dash.draw(name, (tb) => {
+  const rows = POD.ok(id); tb.replaceChildren();
+  if (!rows) { POD.emptyRow(tb, cols, POD.statusMsg(id)); return; }
+  rows.forEach((r) => { const tr = document.createElement('tr'); fill(tr, r); tb.appendChild(tr); });
+});
 POD.mRows('mt-body', 'model_test_summary', 9, (tr, r) => {
   tr.dataset.key = POD.enc(r.model);
   const m = POD.cell(tr, r.model_name); m.style.fontWeight = '600';
@@ -2704,6 +2711,8 @@ POD.mtUnzoom = () => { const z = document.getElementById('mt-zoom'); if (z && !z
 dash.draw('mt-gallery', (el) => {
   const rows = POD.ok('model_test'); el.replaceChildren();
   if (!rows) { const p = document.createElement('p'); p.className = 'pod-msg'; p.textContent = POD.statusMsg('model_test'); el.appendChild(p); return; }
+  const refs = new Map((POD.ok('model_test_refs') || []).map((x) => [x.id, x]));
+  const blob = (u) => (typeof u === 'string' && /^\/_blob\/[0-9a-f]+$/.test(u) ? u : null);
   const designs = new Map();
   rows.forEach((r, i) => { if (!designs.has(r.id)) designs.set(r.id, []); designs.get(r.id).push({ r, i }); });
   let shown = 0;
@@ -2718,6 +2727,20 @@ dash.draw('mt-gallery', (el) => {
     const txt = document.createElement('span'); txt.className = 'pod-muted'; txt.textContent = `Teks: ${d.text}`;
     head.append(title, txt, POD.pill(d.set_name));
     const row = document.createElement('div'); row.className = 'mt-row';
+    const ref = refs.get(d.id);
+    if (ref && blob(ref.ref_img)) {
+      const fig = document.createElement('figure'); fig.className = 'mt-cell'; fig.dataset.ok = 'ref';
+      const btn = document.createElement('button'); btn.type = 'button';
+      btn.setAttribute('aria-label', `Lihat rujukan penuh: design ${d.no}`);
+      const img = document.createElement('img'); img.src = ref.ref_img; img.loading = 'lazy'; img.alt = `Rujukan: ${ref.ref_from}`;
+      btn.appendChild(img);
+      const full = blob(ref.ref_full) || ref.ref_img;
+      btn.addEventListener('click', () => POD.mtZoom(full, `Rujukan anda · ${ref.ref_from}${ref.cropped ? ' (gambar penuh; design ini dipotong daripadanya)' : ''} · design orang lain, rujukan gaya sahaja`));
+      const cap = document.createElement('figcaption'); cap.className = 'mt-cap';
+      const name = document.createElement('b'); name.textContent = 'Rujukan anda';
+      const from = document.createElement('span'); from.className = 'pod-muted'; from.textContent = ref.ref_from;
+      cap.append(name, from); fig.append(btn, cap); row.appendChild(fig);
+    }
     list.sort((a, b) => a.r.model_order - b.r.model_order).forEach(({ r, i }) => {
       const fig = document.createElement('figure'); fig.className = 'mt-cell'; fig.dataset.ok = r.ok ? '1' : '0';
       const cap = document.createElement('figcaption'); cap.className = 'mt-cap';
@@ -2726,7 +2749,7 @@ dash.draw('mt-gallery', (el) => {
       verdict.textContent = r.ok ? '✓ Betul' : `✗ Salah: ${r.wrong}`;
       const sec = document.createElement('span'); sec.className = 'pod-muted'; sec.textContent = ` · ${r.seconds} s`;
       cap.append(name, verdict, sec);
-      const src = typeof r.img === 'string' && /^\/_blob\/[0-9a-f]+$/.test(r.img) ? r.img : null;
+      const src = blob(r.img);
       if (src) {
         const btn = document.createElement('button'); btn.type = 'button';
         btn.setAttribute('aria-label', `Besarkan: ${r.model_name}, design ${r.no}`);
@@ -2743,12 +2766,6 @@ dash.draw('mt-gallery', (el) => {
   if (!shown) { const p = document.createElement('p'); p.className = 'pod-msg'; p.textContent = 'Tiada design untuk pilihan ini.'; el.appendChild(p); }
 });
 POD.text('m-rej', 'model_counts', (r) => r[0].rejected, POD.int);
-
-POD.mRows = (name, id, cols, fill) => dash.draw(name, (tb) => {
-  const rows = POD.ok(id); tb.replaceChildren();
-  if (!rows) { POD.emptyRow(tb, cols, POD.statusMsg(id)); return; }
-  rows.forEach((r) => { const tr = document.createElement('tr'); fill(tr, r); tb.appendChild(tr); });
-});
 POD.mRows('m-use-body', 'model_usecase', 5, (tr, r) => {
   tr.dataset.key = POD.enc(r.kind);
   const k = POD.cell(tr, r.kind); k.style.fontWeight = '600';
