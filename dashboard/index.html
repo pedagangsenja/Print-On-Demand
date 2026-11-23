@@ -143,6 +143,12 @@
 .pod-ig-card p { font-size: var(--cds-font-size-caption); line-height: 1.45; }
 .pod-ig-tags { display: flex; flex-wrap: wrap; gap: 4px; }
 .pod-ig-filters { display: flex; flex-wrap: wrap; gap: var(--cds-gap-sm); align-items: center; }
+.d-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 170px), 1fr)); gap: var(--cds-gap-md); min-height: 6em; }
+.d-card { display: grid; gap: var(--cds-gap-xs); align-content: start; margin: 0; min-width: 0; }
+.d-card button { padding: 0; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background: #fff; cursor: zoom-in; overflow: hidden; display: block; width: 100%; aspect-ratio: 3 / 4; }
+.d-card img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.d-card figcaption { font-size: var(--cds-font-size-caption); line-height: 1.45; }
+.d-card figcaption b { font-variant-numeric: tabular-nums; margin-right: 4px; }
 .mt-models { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--cds-gap-md); margin-bottom: var(--cds-gap-md); }
 .mt-models .pod-kpi { gap: 6px; }
 .mt-score { font-family: var(--font-anthropic-serif); font-size: 2.4rem; line-height: 1.1; font-variant-numeric: tabular-nums; }
@@ -174,7 +180,7 @@
 .mt-zoom figcaption { color: #fff; font-size: 0.95rem; text-align: center; max-width: 720px; }
 .mt-zoom-close { position: absolute; top: 12px; right: 12px; padding: 6px 12px; border-radius: 999px; border: 1px solid #fff; background: transparent; color: #fff; cursor: pointer; }
 @media print { .mt-zoom { display: none; } }
-@media print { .pod-scroll { max-height: none; overflow: visible; border: 0; } .pod-nav, .pod-tabbar { display: none; } .pod details { border: 0; } #tab-inspirasi, #tab-setup, #tab-workflow, #tab-prestasi, #tab-font, #tab-model, #tab-utama { break-before: page; } }
+@media print { .pod-scroll { max-height: none; overflow: visible; border: 0; } .pod-nav, .pod-tabbar { display: none; } .pod details { border: 0; } #tab-design, #tab-inspirasi, #tab-setup, #tab-workflow, #tab-prestasi, #tab-font, #tab-model, #tab-utama { break-before: page; } }
 </style>
 
 <div class="pod">
@@ -184,6 +190,7 @@
   <h1>Riset POD Typography</h1>
   <div class="pod-tabbar" role="tablist" aria-label="Tab dashboard">
     <button type="button" class="pod-tab-btn" role="tab" id="btn-poster" data-tab="tab-poster" aria-controls="tab-poster" aria-selected="true">Poster</button>
+    <button type="button" class="pod-tab-btn" role="tab" id="btn-design" data-tab="tab-design" aria-controls="tab-design" aria-selected="false" tabindex="-1">Design</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-inspirasi" data-tab="tab-inspirasi" aria-controls="tab-inspirasi" aria-selected="false" tabindex="-1">Inspirasi</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-setup" data-tab="tab-setup" aria-controls="tab-setup" aria-selected="false" tabindex="-1">Setup</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-font" data-tab="tab-font" aria-controls="tab-font" aria-selected="false" tabindex="-1">Font</button>
@@ -564,6 +571,24 @@
       </table>
     </div>
   </details>
+</section>
+
+</section>
+
+<section id="tab-design" class="pod-tab" role="tabpanel" aria-labelledby="btn-design" hidden>
+
+<div id="d-intro" class="pod-section pod-first">
+  <p class="pod-lede">Design yang sudah siap untuk dijual. Poster motivasi: typography hitam atas putih, nisbah 3:4 (cetak 18×24 in). Dijana dengan FLUX.2 klein 4B; ejaan disemak dan dibaiki.</p>
+</div>
+
+<section id="d-motiv" class="pod-section">
+  <h2>Poster motivasi</h2>
+  <p class="pod-muted">Tekan gambar untuk besarkan. Fail asal PNG dan SVG dalam repo: designs/svg-typo/out/motiv/final/.</p>
+  <div class="d-grid" data-draw="d-gallery" data-source="design_motiv"></div>
+  <div class="mt-zoom" id="d-zoom" hidden role="dialog" aria-modal="true" aria-label="Gambar besar">
+    <figure><img id="d-zoom-img" alt=""><figcaption id="d-zoom-cap"></figcaption></figure>
+    <button type="button" class="mt-zoom-close" id="d-zoom-close">Tutup ✕</button>
+  </div>
 </section>
 
 </section>
@@ -2034,6 +2059,43 @@ dash.draw('sources-body', (tb) => {
 </script>
 
 <script>
+POD.dZoom = (src, cap) => {
+  const z = document.getElementById('d-zoom'); if (!z) return;
+  document.getElementById('d-zoom-img').src = src; document.getElementById('d-zoom-cap').textContent = cap; z.hidden = false;
+  document.getElementById('d-zoom-close').focus();
+};
+POD.dUnzoom = () => { const z = document.getElementById('d-zoom'); if (z && !z.hidden) { z.hidden = true; document.getElementById('d-zoom-img').removeAttribute('src'); } };
+(() => {
+  const z = document.getElementById('d-zoom');
+  if (z) {
+    z.addEventListener('click', (e) => { if (e.target === z || e.target.id === 'd-zoom-close') POD.dUnzoom(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') POD.dUnzoom(); });
+  }
+})();
+dash.draw('d-gallery', (el) => {
+  const rows = POD.ok('design_motiv'); el.replaceChildren();
+  if (!rows) { const p = document.createElement('p'); p.className = 'pod-msg'; p.textContent = POD.statusMsg('design_motiv'); el.appendChild(p); return; }
+  const blob = (u) => (typeof u === 'string' && /^\/_blob\/[0-9a-f]+$/.test(u) ? u : null);
+  [...rows].sort((a, b) => a.no - b.no).forEach((r) => {
+    const fig = document.createElement('figure'); fig.className = 'd-card';
+    const src = blob(r.img);
+    if (src) {
+      const btn = document.createElement('button'); btn.type = 'button';
+      btn.setAttribute('aria-label', `Besarkan poster ${r.no}: ${r.quote}`);
+      const img = document.createElement('img'); img.src = src; img.loading = 'lazy'; img.alt = String(r.quote); img.width = 864; img.height = 1152;
+      btn.appendChild(img);
+      btn.addEventListener('click', () => POD.dZoom(src, `${r.no}. ${r.quote}`));
+      fig.appendChild(btn);
+    }
+    const cap = document.createElement('figcaption');
+    const n = document.createElement('b'); n.textContent = `${r.no}.`;
+    cap.append(n, document.createTextNode(String(r.quote)));
+    fig.appendChild(cap); el.appendChild(fig);
+  });
+});
+</script>
+
+<script>
 (() => {
   const tabs = () => [...document.querySelectorAll('.pod-tab')];
   const btns = () => [...document.querySelectorAll('.pod-tab-btn')];
@@ -2801,7 +2863,7 @@ POD.mtGallery = (testId, refsId, modelsId, opts) => (el) => {
       name.textContent = r.model_name;
       const verdict = document.createElement('span'); verdict.className = r.ok ? 'mt-ok' : 'mt-bad';
       const wc = r.words ? ` (${r.words - (r.wrong_n || 0)}/${r.words} perkataan betul)` : '';
-      verdict.textContent = r.ok ? `✓ Betul${wc}` : `✗ Salah${wc}: ${r.wrong}`;
+      verdict.textContent = r.ok ? `✓ Betul${wc}` : `✗ ${r.words ? 'Ada silap' : 'Salah'}${wc}: ${r.wrong}`;
       const sec = document.createElement('span'); sec.className = 'pod-muted'; sec.textContent = ` · ${r.seconds} s`;
       cap.append(name, verdict, sec);
       const src = blob(r.img);

@@ -9,7 +9,7 @@
  {
   "kind": "Quote hitam-putih panjang / banyak baris",
   "main": "ERNIE-Image-Turbo",
-  "backup": "MOSS-Image (Space, kotak susun atur)",
+  "backup": "MOSS-Image SFT (CPU, 8 langkah)",
   "process": "4 seed → Tesseract → SVG; ayat gagal 4× = pecah baris atau tukar ayat",
   "why": "LongText-EN ERNIE-Turbo 0.960 vs klein 9B 0.864; batch 3 klein hanya 3/10 lulus terus"
  },

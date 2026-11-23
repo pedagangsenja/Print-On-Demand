@@ -1,0 +1,51 @@
+[
+ {
+  "gap": "Ejaan ayat panjang",
+  "ref": "Semua perkataan betul",
+  "ai": "Kebanyakan design ada 1-3 perkataan salah. Perkataan panjang (Hidupmu, Setiap, Waktunya) paling kerap salah.",
+  "closest": "ERNIE + penambah (2/5 design betul, 92% perkataan betul)",
+  "fix": "Jana 3-4 seed setiap design dan pilih yang betul; atau betulkan perkataan salah dengan taip semula dalam Inkscape."
+ },
+ {
+  "gap": "Huruf rawak dalam reben",
+  "ref": "Reben kosong atau berisi perkataan yang bermakna",
+  "ai": "Model isi reben dengan huruf rawak (DIRTS, AREDAY, LAVE) atau ulang perkataan (DAN REZEKI).",
+  "closest": "Qwen-Image-2512 (tiada dalam 1 imej); ERNIE dan ERNIE + penambah (2/5 design)",
+  "fix": "Jangan minta reben dalam prompt, atau padam huruf rawak secara manual selepas jana."
+ },
+ {
+  "gap": "Campuran gaya huruf",
+  "ref": "4-5 gaya dalam satu poster (serif Victorian, skrip, sans padat, reben, 3D)",
+  "ai": "Semua cara kini guna 3-5 gaya; jauh lebih baik daripada ujian ayat pendek.",
+  "closest": "Qwen-Image-2512 dan MOSS",
+  "fix": "Kekalkan senarai gaya dalam prompt (sudah berkesan)."
+ },
+ {
+  "gap": "Kepadatan susun atur",
+  "ref": "Penuh tepi ke tepi, hampir tiada ruang kosong",
+  "ai": "ERNIE, MOSS dan Qwen penuh. ERNIE + penambah ada ruang kosong di sebelah cawan (design 5).",
+  "closest": "MOSS dan Qwen-Image-2512",
+  "fix": "Kekalkan ayat 'fills the canvas edge to edge' dalam prompt."
+ },
+ {
+  "gap": "Tekstur lukisan tangan",
+  "ref": "Tekstur kapur atau cetakan lama, garis tidak sempurna",
+  "ai": "ERNIE dan MOSS masih kemas seperti digital. Qwen paling bertekstur.",
+  "closest": "Qwen-Image-2512",
+  "fix": "Tambah lapisan tekstur (grain) selepas jana."
+ },
+ {
+  "gap": "Ilustrasi menyatu dengan teks",
+  "ref": "Objek (cawan) diletak di celah ayat",
+  "ai": "Ketiga-tiga model CPU letak tangan + cawan di celah 'UBAH DUNIA'. Lebih baik daripada ujian lepas.",
+  "closest": "MOSS (cawan kecil, teks tidak terputus)",
+  "fix": "Sebut tempat ilustrasi dengan jelas dalam prompt."
+ },
+ {
+  "gap": "Saiz untuk cetak",
+  "ref": "A3 pada 300 dpi perlu 3508x4961 piksel",
+  "ai": "768x1024 (CPU) dan 1104x1472 (Qwen): terlalu kecil untuk cetak besar.",
+  "closest": "Qwen-Image-2512",
+  "fix": "Besarkan imej dengan upscaler sebelum dijual."
+ }
+]

@@ -86,5 +86,13 @@
   "designs": 0,
   "result": "Disediakan, belum dijana",
   "lesson": "Sedia untuk ujian model baharu"
+ },
+ {
+  "date": "23 Nov",
+  "what": "Ujian lettering ayat panjang: 4 cara × 5 design",
+  "images": 16,
+  "designs": 2,
+  "result": "ERNIE + penambah prompt 2/5 design betul; MOSS 91% perkataan betul; Qwen 1 imej sahaja (kuota)",
+  "lesson": "Ayat 11–14 perkataan: jana beberapa seed atau betulkan perkataan salah secara manual"
  }
 ]

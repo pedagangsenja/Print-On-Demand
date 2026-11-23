@@ -1,0 +1,19 @@
+{
+ "ernie": {
+  "strength": "Susun atur padat dan warna ceria. Ilustrasi tangan + cawan menyatu dengan teks (design 5).",
+  "weakness": "Salah eja kecil pada 4 daripada 5 design (Hidupum, Ringjit, AKAK, Cukuk). Reben berisi huruf rawak (design 4)."
+ },
+ "ernie_pe": {
+  "strength": "Paling banyak design betul (2/5: kapur dan lencana). Penambah tulis semula prompt dalam bahasa Cina tetapi kekalkan ayat Melayu.",
+  "weakness": "Perkataan panjang masih salah (Hidapum, Setteip, Waktuya). Tambah 73-101 s setiap prompt untuk tulis semula."
+ },
+ "moss": {
+  "strength": "Paling laju di CPU. Huruf paling halus; hiasan, kapur dan ilustrasi cawan paling hampir rujukan. Hidupmu dan Cukup dieja betul.",
+  "weakness": "Setiap design ada 1-2 silap (Setaip, Sahambat, Sebah, Sykur, Mumpu). Reben berisi huruf rawak atau perkataan berulang (design 1, 3, 4)."
+ },
+ "qwen2512": {
+  "strength": "Rupa paling kaya: lapisan warna, tekstur, reben dan hiasan paling hampir poster rujukan. Saiz imej paling besar (1104x1472).",
+  "weakness": "3 perkataan salah dalam 1 imej (Janjan, Senab, Nyarta). Kuota percuma cukup untuk 1 imej sehari sahaja.",
+  "missing_note": "Tidak dijana: kuota GPU percuma Space cukup untuk 1 imej sehari (boleh cuba lagi esok)"
+ }
+}

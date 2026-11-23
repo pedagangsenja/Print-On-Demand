@@ -10,5 +10,13 @@
  "L3_color": {
   "seconds": 336.1,
   "encode_all_s": 71.8
+ },
+ "L4_badge": {
+  "seconds": 317.6,
+  "encode_all_s": 71.8
+ },
+ "L5_illus": {
+  "seconds": 361.4,
+  "encode_all_s": 71.8
  }
 }

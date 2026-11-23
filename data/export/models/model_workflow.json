@@ -58,8 +58,8 @@
  {
   "no": 9,
   "who": "Claude",
-  "step": "(Pilihan) Uji MOSS & Qwen di Space percuma",
-  "detail": "3 ayat paling sukar sahaja (kuota terhad)",
-  "status": "Belum"
+  "step": "(Pilihan) Uji MOSS & Qwen",
+  "detail": "MOSS di CPU 5 design; Qwen 1 imej (kuota Space)",
+  "status": "Selesai 23 Nov"
  }
 ]
