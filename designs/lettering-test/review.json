@@ -1,17 +1,68 @@
 {
  "_nota": "Semakan dengan mata oleh Claude, 23 Nov 2026. Senarai = perkataan salah eja (ditulis 'salah (betul)'); item bermula '+' = teks rawak tambahan yang tiada dalam ayat.",
  "ernie": {
-  "L1_ornate": ["Hidupum (Hidupmu)", "Poda (Pada)", "Waktuya (Waktunya)"],
-  "L2_chalk": ["Ringjit (Ringgit)"],
-  "L3_color": ["AKAK (AKAN)"],
-  "L4_badge": ["+DIRTS", "+DRCUAN", "+DATES", "+DANES"],
-  "L5_illus": ["Secawan (huruf a rosak)", "Cukuk (Cukup)", "+UBRH"]
+  "L1_ornate": [
+   "Hidupum (Hidupmu)",
+   "Poda (Pada)",
+   "Waktuya (Waktunya)"
+  ],
+  "L2_chalk": [
+   "Ringjit (Ringgit)"
+  ],
+  "L3_color": [
+   "AKAK (AKAN)"
+  ],
+  "L4_badge": [
+   "+DIRTS",
+   "+DRCUAN",
+   "+DATES",
+   "+DANES"
+  ],
+  "L5_illus": [
+   "Secawan (huruf a rosak)",
+   "Cukuk (Cukup)",
+   "+UBRH"
+  ]
  },
  "ernie_pe": {
-  "L1_ornate": ["Hidapum (Hidupmu)", "Setteip (Setiap)", "Waktuya (Waktunya)"],
+  "L1_ornate": [
+   "Hidapum (Hidupmu)",
+   "Setteip (Setiap)",
+   "Waktuya (Waktunya)"
+  ],
   "L2_chalk": [],
-  "L3_color": ["+a", "+u"],
+  "L3_color": [
+   "+a",
+   "+u"
+  ],
   "L4_badge": [],
-  "L5_illus": ["Secwan (Secawan)", "Cukuk (Cukup)", "+UBAH"]
+  "L5_illus": [
+   "Secwan (Secawan)",
+   "Cukuk (Cukup)",
+   "+UBAH"
+  ]
+ },
+ "moss": {
+  "L1_ornate": [
+   "Setaip (Setiap)",
+   "Waktanya (Waktunya)",
+   "+AREDAY",
+   "+HUIBAE"
+  ],
+  "L2_chalk": [
+   "Sahambat (Sahabat)"
+  ],
+  "L3_color": [
+   "Sebah (Sebab)",
+   "+LAVE",
+   "+RIE"
+  ]
+ },
+ "qwen2512": {
+  "L3_color": [
+   "Janjan (Jangan)",
+   "Senab (Sebab)",
+   "Nyarta (Nyata)"
+  ]
  }
 }

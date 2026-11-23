@@ -1,0 +1,14 @@
+{
+ "L1_ornate": {
+  "seconds": 366.3,
+  "encode_all_s": 71.8
+ },
+ "L2_chalk": {
+  "seconds": 351.0,
+  "encode_all_s": 71.8
+ },
+ "L3_color": {
+  "seconds": 336.1,
+  "encode_all_s": 71.8
+ }
+}
