@@ -1,0 +1,135 @@
+[
+ {
+  "source": "Hugging Face API: lesen, saiz, tarikh",
+  "kind": "Rasmi",
+  "used_for": "Semua model",
+  "level": "rasmi",
+  "url": "https://huggingface.co/models"
+ },
+ {
+  "source": "Kad model ERNIE-Image: jadual OneIG & LongText",
+  "kind": "Rasmi (dilapor Baidu)",
+  "used_for": "Skor tulisan",
+  "level": "rasmi",
+  "url": "https://huggingface.co/baidu/ERNIE-Image"
+ },
+ {
+  "source": "stable-diffusion.cpp README & docs",
+  "kind": "Rasmi",
+  "used_for": "Sokongan CPU, komponen",
+  "level": "rasmi",
+  "url": "https://github.com/leejet/stable-diffusion.cpp"
+ },
+ {
+  "source": "Forum HF MOSS #16: 131 imej, 8 adegan",
+  "kind": "Forum",
+  "used_for": "MOSS tulisan & susun atur",
+  "level": "pihak_ketiga",
+  "url": "https://huggingface.co/OpenMOSS-Team/MOSS-Image-SFT/discussions/16"
+ },
+ {
+  "source": "Forum HF MOSS #20: 6 kotak",
+  "kind": "Forum",
+  "used_for": "MOSS kotak susun atur",
+  "level": "pihak_ketiga",
+  "url": "https://huggingface.co/OpenMOSS-Team/MOSS-Image-SFT/discussions/20"
+ },
+ {
+  "source": "Forum HF GLM-Image #6, #14",
+  "kind": "Forum",
+  "used_for": "GLM-Image ditolak",
+  "level": "pihak_ketiga",
+  "url": "https://huggingface.co/zai-org/GLM-Image/discussions/6"
+ },
+ {
+  "source": "Forum HF klein 4B #13: jalan di laptop CPU",
+  "kind": "Forum",
+  "used_for": "klein CPU",
+  "level": "pihak_ketiga",
+  "url": "https://huggingface.co/black-forest-labs/FLUX.2-klein-4B/discussions/13"
+ },
+ {
+  "source": "minimalcorp: klein vs Z-Image Turbo, 112 imej",
+  "kind": "Blog",
+  "used_for": "Teks Latin 0/4 vs 4/4",
+  "level": "lemah",
+  "url": "https://tech.minimalcorp.com/en/posts/flux2-klein-vs-z-image-turbo"
+ },
+ {
+  "source": "runaihome: Z-Image-Turbo vs klein",
+  "kind": "Blog",
+  "used_for": "Kelajuan & teks",
+  "level": "lemah",
+  "url": "https://runaihome.com/blog/z-image-turbo-16gb-vram-home-lab-image-gen-2026/"
+ },
+ {
+  "source": "Cybernews: ulasan Z-Image",
+  "kind": "Blog",
+  "used_for": "Poster padat kadang salah",
+  "level": "lemah",
+  "url": "https://cybernews.com/ai-tools/z-image-ai-image-generator-review/"
+ },
+ {
+  "source": "note.com JSCDISK: ERNIE-Image Turbo",
+  "kind": "Blog",
+  "used_for": "Teks ERNIE",
+  "level": "lemah",
+  "url": "https://note.com/jscdisk/n/n2c1150cfd857?hl=en"
+ },
+ {
+  "source": "sonusahani: ERNIE Turbo vs FLUX",
+  "kind": "Blog",
+  "used_for": "'Barkkins' salah",
+  "level": "lemah",
+  "url": "https://sonusahani.com/blogs/ernie-image"
+ },
+ {
+  "source": "Silicium Rose: MOSS vs Z-Image, FLUX",
+  "kind": "Blog",
+  "used_for": "Ujian 30 poster",
+  "level": "lemah",
+  "url": "https://siliciumrose.com/articles/moss-image-vs-z-image-flux-sdxl-krea-2.html"
+ },
+ {
+  "source": "inferencekey: MOSS-Image 80 s",
+  "kind": "Blog",
+  "used_for": "Kelajuan MOSS",
+  "level": "lemah",
+  "url": "https://inferencekey.com/news/moss-image-open-text-rendering"
+ },
+ {
+  "source": "VentureBeat: FLUX.3 Klein lesen < $5M",
+  "kind": "Berita",
+  "used_for": "Lesen FLUX.3",
+  "level": "pihak_ketiga",
+  "url": "https://venturebeat.com/technology/black-forest-labs-opens-flux-3-image-klein-weights-with-free-commercial-use-limited-to-smaller-businesses"
+ },
+ {
+  "source": "WaveSpeed: Qwen-Image-2512 teks",
+  "kind": "Blog",
+  "used_for": "Kadar lulus Qwen",
+  "level": "lemah",
+  "url": "https://wavespeed.ai/blog/posts/qwen-image-2512-text-rendering/"
+ },
+ {
+  "source": "Overnight Prints: AI untuk poster",
+  "kind": "Blog",
+  "used_for": "Cara hibrid",
+  "level": "lemah",
+  "url": "https://blog.overnightprints.com/?p=17565"
+ },
+ {
+  "source": "Recraft: design poster dengan AI",
+  "kind": "Blog",
+  "used_for": "Cara hibrid",
+  "level": "lemah",
+  "url": "https://www.recraft.ai/blog/how-to-design-a-poster-with-ai"
+ },
+ {
+  "source": "Ujian sendiri batch 1–3 (cawangan eager-brahmagupta)",
+  "kind": "Diukur sendiri",
+  "used_for": "Hasil klein 4B",
+  "level": "rasmi",
+  "url": ""
+ }
+]

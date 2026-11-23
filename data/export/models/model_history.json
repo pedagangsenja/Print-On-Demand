@@ -1,0 +1,90 @@
+[
+ {
+  "date": "22 Nov",
+  "what": "Susun font dengan kod (~10 pusingan)",
+  "images": 0,
+  "designs": 0,
+  "result": "Anda nilai tidak profesional",
+  "lesson": "Jangan jadikan cara utama"
+ },
+ {
+  "date": "22 Nov",
+  "what": "Qwen-Image-2512 di Space HF percuma",
+  "images": 1,
+  "designs": 1,
+  "result": "'antisocial' ejaan betul",
+  "lesson": "Bagus tetapi kuota ~1 imej/hari"
+ },
+ {
+  "date": "22 Nov",
+  "what": "Modal & Kaggle (GPU)",
+  "images": 0,
+  "designs": 0,
+  "result": "Modal perlu kad; Kaggle perlu sahkan telefon",
+  "lesson": "Tidak digunakan"
+ },
+ {
+  "date": "22 Nov",
+  "what": "AI Horde: Z-Image-Turbo",
+  "images": 1,
+  "designs": 0,
+  "result": "825 s; ejaan salah ('TALK ME')",
+  "lesson": "Barisan percuma terlalu lambat"
+ },
+ {
+  "date": "22 Nov",
+  "what": "FLUX.2 klein 4B di CPU: ujian awal",
+  "images": 2,
+  "designs": 1,
+  "result": "coffee betul; antisocial salah",
+  "lesson": "Jana 3–4 seed setiap ayat"
+ },
+ {
+  "date": "22 Nov",
+  "what": "Batch 1: 5 quote × 3 seed",
+  "images": 15,
+  "designs": 3,
+  "result": "5/15 imej lulus ejaan",
+  "lesson": "Perkataan panjang/skrip mudah salah"
+ },
+ {
+  "date": "22 Nov",
+  "what": "Mod edit klein untuk betulkan ejaan",
+  "images": 1,
+  "designs": 0,
+  "result": "Gagal: ejaan tidak berubah",
+  "lesson": "Betulkan = seed baharu / tukar ayat"
+ },
+ {
+  "date": "22 Nov",
+  "what": "Batch 2: 20 quote × 4 seed + 2 pusingan baiki",
+  "images": 104,
+  "designs": 20,
+  "result": "14/20 lulus terus; 6 tukar ayat → 20/20",
+  "lesson": "Tukar perkataan sukar (Tomorrow → Later)"
+ },
+ {
+  "date": "22 Nov",
+  "what": "Batch 3: 10 quote gaya skrip/bingkai/padat",
+  "images": 72,
+  "designs": 10,
+  "result": "3/10 lulus terus; 10/10 selepas baiki (1 dibaiki tangan)",
+  "lesson": "Gaya skrip & padat paling sukar untuk klein"
+ },
+ {
+  "date": "22 Nov",
+  "what": "Enjin poster ornate hibrid (cawangan lain)",
+  "images": 0,
+  "designs": 0,
+  "result": "Latar AI + tipografi font + emas timbul",
+  "lesson": "Asas untuk poster berlatar"
+ },
+ {
+  "date": "23 Nov",
+  "what": "Mod poster motivasi 864×1152 + 30 quote",
+  "images": 0,
+  "designs": 0,
+  "result": "Disediakan, belum dijana",
+  "lesson": "Sedia untuk ujian model baharu"
+ }
+]

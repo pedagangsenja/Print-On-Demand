@@ -1,0 +1,37 @@
+[
+ {
+  "kind": "Quote hitam-putih pendek (1–6 perkataan)",
+  "main": "Z-Image-Turbo (selepas ujian)",
+  "backup": "FLUX.2 klein 4B (terbukti 33 design)",
+  "process": "4 seed → Tesseract semak ejaan → potrace/vtracer SVG",
+  "why": "Skor huruf pendek Z-Image tertinggi (OneIG 0.994); klein sudah terbukti tetapi gagal pada perkataan panjang/skrip"
+ },
+ {
+  "kind": "Quote hitam-putih panjang / banyak baris",
+  "main": "ERNIE-Image-Turbo",
+  "backup": "MOSS-Image (Space, kotak susun atur)",
+  "process": "4 seed → Tesseract → SVG; ayat gagal 4× = pecah baris atau tukar ayat",
+  "why": "LongText-EN ERNIE-Turbo 0.960 vs klein 9B 0.864; batch 3 klein hanya 3/10 lulus terus"
+ },
+ {
+  "kind": "Typography berwarna (retro, pastel, art deco)",
+  "main": "ERNIE-Image-Turbo",
+  "backup": "Z-Image-Turbo; Qwen-Image-2512 (Space) untuk design penting",
+  "process": "Jana PNG → Real-ESRGAN 4× untuk cetak",
+  "why": "Blog: ERNIE tajuk & poster berwarna bersih; warna tak boleh jadi SVG bersih seperti hitam-putih"
+ },
+ {
+  "kind": "Poster dengan latar gambar + tulisan",
+  "main": "Hibrid: AI jana latar TANPA teks + tulisan guna font berlesen",
+  "backup": "Latar: FLUX.2 klein 4B atau Z-Image-Turbo",
+  "process": "AI latar → enjin poster ornate (cawangan intelligent-bell) letak teks, gelapkan zon teks → eksport",
+  "why": "Ejaan 100% tepat; font komersial disemak di tab Font; blog cetak (Overnight Prints, Recraft) syor cara ini"
+ },
+ {
+  "kind": "Teks mesti tepat 100% (nama, wordmark, harga)",
+  "main": "Susun font sebenar (hibrid)",
+  "backup": "–",
+  "process": "AI untuk hiasan sahaja",
+  "why": "Forum HF MOSS: 'menamakan typeface tidak memuatkan font' — huruf AI cuma tiru gaya"
+ }
+]

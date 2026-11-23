@@ -1,0 +1,65 @@
+[
+ {
+  "no": 1,
+  "who": "Anda",
+  "step": "Luluskan bina stable-diffusion.cpp",
+  "detail": "Perlu untuk Z-Image-Turbo & ERNIE-Image-Turbo di container",
+  "status": "Perlu keputusan"
+ },
+ {
+  "no": 2,
+  "who": "Claude",
+  "step": "Pasang & muat turun model",
+  "detail": "GGUF Z-Image-Turbo + ERNIE-Image-Turbo, simpan klein 4B",
+  "status": "Belum"
+ },
+ {
+  "no": 3,
+  "who": "Anda",
+  "step": "Pilih 10 ayat ujian",
+  "detail": "5 hitam-putih pendek, 3 panjang, 2 berwarna (boleh guna 30 quote motivasi)",
+  "status": "Belum"
+ },
+ {
+  "no": 4,
+  "who": "Container",
+  "step": "Jana 4 seed × 10 ayat × 3 model",
+  "detail": "120 imej, saiz & langkah sama; masa setiap imej diukur",
+  "status": "Belum"
+ },
+ {
+  "no": 5,
+  "who": "Container",
+  "step": "Tesseract semak ejaan",
+  "detail": "Imej salah eja dibuang automatik",
+  "status": "Belum"
+ },
+ {
+  "no": 6,
+  "who": "Claude",
+  "step": "Skor & kemas kini tab ini",
+  "detail": "Ejaan, boleh baca, gaya, sedia cetak (0–8) + masa",
+  "status": "Belum"
+ },
+ {
+  "no": 7,
+  "who": "Anda",
+  "step": "Pilih gaya terbaik",
+  "detail": "Lihat contact sheet setiap model",
+  "status": "Belum"
+ },
+ {
+  "no": 8,
+  "who": "Claude",
+  "step": "Tetapkan model ikut jenis poster",
+  "detail": "Kemas kini jadual cadangan + setup script",
+  "status": "Belum"
+ },
+ {
+  "no": 9,
+  "who": "Claude",
+  "step": "(Pilihan) Uji MOSS & Qwen di Space percuma",
+  "detail": "3 ayat paling sukar sahaja (kuota terhad)",
+  "status": "Belum"
+ }
+]
