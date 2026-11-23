@@ -2800,7 +2800,7 @@ POD.mtGallery = (testId, refsId, modelsId, opts) => (el) => {
       const r = x.r; fig.dataset.ok = r.ok ? '1' : '0';
       name.textContent = r.model_name;
       const verdict = document.createElement('span'); verdict.className = r.ok ? 'mt-ok' : 'mt-bad';
-      const wc = r.words ? ` (${r.words - (r.wrong_n || 0)}/${r.words} perkataan)` : '';
+      const wc = r.words ? ` (${r.words - (r.wrong_n || 0)}/${r.words} perkataan betul)` : '';
       verdict.textContent = r.ok ? `✓ Betul${wc}` : `✗ Salah${wc}: ${r.wrong}`;
       const sec = document.createElement('span'); sec.className = 'pod-muted'; sec.textContent = ` · ${r.seconds} s`;
       cap.append(name, verdict, sec);

@@ -5,7 +5,7 @@ Guna:
   python3 scripts/build_lettering_test.py          # bina dataset (perlu designs/lettering-test/assets.json)
 
 Sumber: designs/lettering-test/prompts.json, out/<model>/times.json (masa diukur), review.json (semakan
-ejaan dengan mata oleh Claude: senarai perkataan salah/tertinggal). Satu seed (42): tahap bukti lemah.
+ejaan dengan mata oleh Claude: perkataan salah eja; '+X' = teks rawak tambahan). Satu seed (42): tahap bukti lemah.
 Rujukan = poster lettering yang pengguna upload 23 Nov (sudah ada sebagai aset dashboard, lihat
 designs/model-test/assets.json kunci full_B1..B5); design orang lain, rujukan gaya sahaja.
 """
@@ -69,10 +69,13 @@ def build():
             key = f"{m}_{p['id']}"
             if key not in assets or p["id"] not in review.get(m, {}):
                 continue
-            wrong = review[m][p["id"]]
+            items = review[m][p["id"]]  # '+X' = teks rawak tambahan, lain = perkataan salah eja
+            wrong = [w for w in items if not w.startswith("+")]
+            extra = [w[1:] for w in items if w.startswith("+")]
+            note = ", ".join(wrong) + ("; " if wrong and extra else "") + ("teks rawak tambahan: " + ", ".join(extra) if extra else "")
             rows.append({"model": m, "model_name": name, "model_order": order, "no": i, "id": p["id"], "type": p["type"],
-                         "text": p["text"], "words": p["words"], "ok": not wrong, "wrong": ", ".join(wrong),
-                         "wrong_n": len(wrong), "seconds": times[p["id"]]["seconds"], "img": assets[key],
+                         "text": p["text"], "words": p["words"], "ok": not items, "wrong": note,
+                         "wrong_n": len(wrong), "extra_n": len(extra), "seconds": times[p["id"]]["seconds"], "img": assets[key],
                          "w": p["w"], "h": p["h"], "seed": 42, "level": "lemah"})
     refs = [{"id": p["id"], "ref_img": ref_assets[REF_ASSET[p["ref"]]], "ref_full": ref_assets[REF_ASSET[p["ref"]]],
              "ref_from": "Poster lettering (contoh kedua anda)", "cropped": False} for p in prompts()]

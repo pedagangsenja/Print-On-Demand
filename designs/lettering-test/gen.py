@@ -90,13 +90,13 @@ def run_moss(prompts, out):
     from diffusers.image_processor import VaeImageProcessor
 
     base = Path(snapshot_download(MOSS, allow_patterns=["pipeline_moss_image.py"]))
-    sys.path.insert(0, str(base))
+    sys.path.insert(0, str(base)); M = str(base)  # laluan tempatan (tokenizer tiada config.json)
     from pipeline_moss_image import MOSSImageScheduler, MOSSImageTransformer
 
     # fasa 1: pengekod teks Qwen3.5-9B (~17 GB) > RAM, jadi sebahagian lapisan di cakera
     t0 = time.time()
-    tok = AutoTokenizer.from_pretrained(MOSS, subfolder="tokenizer")
-    te = AutoModel.from_pretrained(MOSS, subfolder="text_encoder", dtype=DT, device_map="auto",
+    tok = AutoTokenizer.from_pretrained(M, subfolder="tokenizer")
+    te = AutoModel.from_pretrained(M, subfolder="text_encoder", dtype=DT, device_map="auto",
                                    max_memory={"cpu": "9GiB"}, offload_folder=str(S / "offload")).eval()
     embs = {}
     with torch.inference_mode():
@@ -126,7 +126,7 @@ def run_moss(prompts, out):
         def forward(self, x):
             return self.base(x) + F.linear(F.linear(x, self.down), self.up) * self.scale
 
-    tr = MOSSImageTransformer.from_pretrained(MOSS, subfolder="transformer", torch_dtype=DT).eval()
+    tr = MOSSImageTransformer.from_pretrained(M, subfolder="transformer", torch_dtype=DT).eval()
     repo, fname, strength = MOSS_LORA
     lora = load_file(hf_hub_download(repo, fname)); pre = "diffusion_model."
     mods = sorted({k[len(pre):-len(".lora_down.weight")] for k in lora if k.endswith(".lora_down.weight")})
@@ -137,9 +137,9 @@ def run_moss(prompts, out):
                                        lora[f"{pre}{name}.lora_up.weight"], float(lora[f"{pre}{name}.alpha"]), strength))
     del lora; gc.collect()
     print("lora on", len(mods), "linears", flush=True)
-    cfg = MOSSImageScheduler.load_config(MOSS, subfolder="scheduler")
+    cfg = MOSSImageScheduler.load_config(M, subfolder="scheduler")
     sargs = {k: cfg[k] for k in ("num_train_timesteps", "shift", "training_shift")}
-    vae = AutoencoderKLFlux2.from_pretrained(MOSS, subfolder="vae", torch_dtype=torch.float32).eval()
+    vae = AutoencoderKLFlux2.from_pretrained(M, subfolder="vae", torch_dtype=torch.float32).eval()
     proc = VaeImageProcessor(vae_scale_factor=16)
     for p in prompts:
         t0 = time.time()
