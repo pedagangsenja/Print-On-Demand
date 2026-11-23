@@ -912,6 +912,50 @@
   <div class="mt-gallery" data-draw="lt2-gallery" data-source="lettering_v2 lettering_v2_refs lettering_v2_models"></div>
 </section>
 
+<section id="m-lettering-v3" class="pod-section">
+  <h2>Pusingan QC v3: redo sehingga ikut standard rujukan</h2>
+  <p class="pod-muted">10 design baharu (2 setiap rujukan: satu gaya huruf macam rujukan, satu font lain). Setiap imej disemak: 3 pintu wajib (ejaan 100%, tiada teks rawak, tiada cacat) + 8 unsur gaya rujukan (lulus jika 7/8). Gagal = jana semula (seed baharu; prompt dibaiki jika unsur gaya gagal), maksimum 4 cubaan. Hanya imej lulus jadi final. SOP penuh: tab Workflow. Semakan mata oleh Claude; bukti <span class="pod-pill" data-level="lemah">Lemah</span>.</p>
+  <p><b data-draw="lt3-sum" data-source="lettering_v3_summary" data-field="passed"></b></p>
+  <h3>Kajian 5 rujukan anda: unsur yang digunakan</h3>
+  <div class="pod-table-wrap">
+    <table id="lt-deep" data-source="lettering_ref_elements" data-row-key="ref">
+      <thead><tr>
+        <th data-field="name">Rujukan</th>
+        <th data-field="words_lines">Perkataan / baris</th>
+        <th data-field="layout">Susun atur</th>
+        <th data-field="hierarchy">Hierarki saiz</th>
+        <th data-field="fonts">Gaya huruf</th>
+        <th data-field="ornaments">Hiasan</th>
+        <th data-field="texture">Tekstur / kedalaman</th>
+        <th data-field="palette">Warna</th>
+        <th data-field="extra">Lain-lain</th>
+      </tr></thead>
+      <tbody data-draw="lt-deep-body"></tbody>
+    </table>
+  </div>
+  <h3>Gambar final (lulus QC sahaja)</h3>
+  <p class="pod-muted">Kiri = rujukan anda, tengah = final. Kotak kosong = belum lulus selepas cubaan setakat ini.</p>
+  <div class="mt-gallery" data-draw="lt3-final" data-source="lettering_v3_final lettering_v3_refs lettering_v3_final_models"></div>
+  <h3>Rekod QC setiap cubaan</h3>
+  <div class="pod-table-wrap">
+    <table id="lt3-qc" data-source="lettering_v3" data-row-key="id">
+      <thead><tr>
+        <th data-field="id">Design</th>
+        <th data-field="attempt">Cubaan</th>
+        <th data-field="seed">Seed</th>
+        <th data-field="wrong_n">Ejaan</th>
+        <th data-field="style_score">Gaya</th>
+        <th data-field="verdict_text">Keputusan QC</th>
+        <th data-field="action">Tindakan</th>
+      </tr></thead>
+      <tbody data-draw="lt3-qc-body"></tbody>
+    </table>
+  </div>
+  <h3>Semua cubaan</h3>
+  <p class="pod-muted">Kiri = rujukan anda, diikuti cubaan 1-4. Bingkai hijau = lulus QC, merah = gagal.</p>
+  <div class="mt-gallery" data-draw="lt3-gallery" data-source="lettering_v3 lettering_v3_refs lettering_v3_models"></div>
+</section>
+
 <section id="m-cadangan" class="pod-section">
   <h2>Model ikut jenis poster</h2>
   <p class="pod-muted">Cadangan sementara sehingga ujian sebenar (langkah di bawah) siap.</p>
@@ -1033,6 +1077,7 @@
     <a href="#wf-harian">Harian</a>
     <a href="#wf-mingguan">Mingguan</a>
     <a href="#wf-bulanan">Bulanan</a>
+    <a href="#wf-sop">SOP lettering + QC</a>
   </nav>
 </div>
 
@@ -1057,6 +1102,26 @@
   <div class="pod-two">
     <div><h3 id="wf-b-tajuk-anda">Anda</h3><ul class="pod-wf" data-draw="wf-b-anda" data-source="workflow"></ul></div>
     <div><h3 id="wf-b-tajuk-claude">Claude (automatik)</h3><ul class="pod-wf" data-draw="wf-b-claude" data-source="workflow"></ul></div>
+  </div>
+</section>
+
+<section id="wf-sop" class="pod-section">
+  <h2>SOP: poster lettering + quality check</h2>
+  <p class="pod-muted">Cara standard untuk jana poster lettering yang ikut kualiti rujukan anda. Final hanya imej yang lulus semua pintu wajib dan 7/8 unsur gaya. Hasil pusingan terkini: tab Model AI, bahagian "Pusingan QC v3". Salinan teks: docs/sop-lettering-qc.md.</p>
+  <h3>Langkah</h3>
+  <div class="pod-table-wrap">
+    <table id="wf-sop-t" data-source="lettering_sop" data-row-key="no">
+      <thead><tr><th data-field="no">No</th><th data-field="step">Langkah</th><th data-field="who">Siapa</th><th data-field="detail">Cara</th><th data-field="check">Syarat siap</th></tr></thead>
+      <tbody data-draw="wf-sop-body"></tbody>
+    </table>
+  </div>
+  <h3>Senarai semak QC</h3>
+  <p class="pod-muted">Wajib = semua mesti lulus. Gaya = 8 unsur bagi setiap rujukan; lulus jika 7 atau lebih.</p>
+  <div class="pod-table-wrap pod-scroll">
+    <table id="wf-qc-t" data-source="lettering_qc_rubric" data-row-key="code">
+      <thead><tr><th data-field="ref">Gaya</th><th data-field="kind">Jenis</th><th data-field="code">Kod</th><th data-field="check">Semak</th></tr></thead>
+      <tbody data-draw="wf-qc-body"></tbody>
+    </table>
   </div>
 </section>
 
@@ -2887,7 +2952,7 @@ POD.mtGallery = (testId, refsId, modelsId, opts) => (el) => {
       name.textContent = r.model_name;
       const verdict = document.createElement('span'); verdict.className = r.ok ? 'mt-ok' : 'mt-bad';
       const wc = r.words ? ` (${r.words - (r.wrong_n || 0)}/${r.words} perkataan betul)` : '';
-      verdict.textContent = r.ok ? `✓ Betul${wc}` : `✗ ${r.words ? 'Ada silap' : 'Salah'}${wc}: ${r.wrong}`;
+      verdict.textContent = r.verdict_text || (r.ok ? `✓ Betul${wc}` : `✗ ${r.words ? 'Ada silap' : 'Salah'}${wc}: ${r.wrong}`);
       const sec = document.createElement('span'); sec.className = 'pod-muted'; sec.textContent = ` · ${r.seconds} s`;
       cap.append(name, verdict, sec);
       const src = blob(r.img);
@@ -2897,7 +2962,7 @@ POD.mtGallery = (testId, refsId, modelsId, opts) => (el) => {
         const img = document.createElement('img'); img.src = src; img.loading = 'lazy'; img.alt = `${r.model_name}: ${r.text}`;
         img.width = r.w; img.height = r.h;
         btn.appendChild(img);
-        btn.addEventListener('click', () => POD.mtZoom(src, `${r.model_name} · ${d.no}. ${d.type} · ${r.ok ? 'Ejaan betul' : 'Salah: ' + r.wrong} · ${r.seconds} s`));
+        btn.addEventListener('click', () => POD.mtZoom(src, `${r.model_name} · ${d.no}. ${d.type} · ${r.verdict_text || (r.ok ? 'Ejaan betul' : 'Salah: ' + r.wrong)} · ${r.seconds} s`));
         fig.appendChild(btn);
       }
       fig.appendChild(cap); row.appendChild(fig);
@@ -2985,6 +3050,46 @@ POD.mRows('lt-std-body', 'lettering_standard', 6, (tr, r) => {
   POD.cell(tr, r.v2, 'pod-wide'); POD.stdPill(tr, r.v2_pass);
 });
 dash.draw('lt2-gallery', POD.mtGallery('lettering_v2', 'lettering_v2_refs', 'lettering_v2_models', { cols: 3 }));
+dash.calc('lettering_v3_summary', {
+  title: 'Ringkasan pusingan QC v3',
+  description: 'Bilangan design yang lulus QC (ejaan 100%, tiada teks rawak, tiada cacat, gaya 7/8 atau lebih), jumlah cubaan dan purata cubaan sehingga lulus.',
+  inputs: ['lettering_v3', 'lettering_v3_refs'],
+  fn: (rows, refs) => {
+    const passed = new Map();
+    rows.forEach((r) => { if (r.ok && (!passed.has(r.id) || r.attempt < passed.get(r.id))) passed.set(r.id, r.attempt); });
+    const tries = [...passed.values()];
+    return [{ designs: refs.length, passed: passed.size, attempts: rows.length,
+      avg_tries: tries.length ? Math.round((10 * tries.reduce((a, b) => a + b, 0)) / tries.length) / 10 : null }];
+  },
+});
+POD.text('lt3-sum', 'lettering_v3_summary', (rows) => rows[0],
+  (r) => `Lulus QC: ${r.passed}/${r.designs} design · ${r.attempts} imej dijana · purata ${r.avg_tries == null ? '—' : r.avg_tries} cubaan sehingga lulus`);
+POD.mRows('lt-deep-body', 'lettering_ref_elements', 9, (tr, r) => {
+  tr.dataset.key = POD.enc(r.ref);
+  const c = POD.cell(tr, `${r.ref} · ${r.name}`); c.style.fontWeight = '600';
+  ['words_lines', 'layout', 'hierarchy', 'fonts', 'ornaments', 'texture', 'palette', 'extra'].forEach((k) => POD.cell(tr, r[k], 'pod-wide'));
+});
+POD.mRows('lt3-qc-body', 'lettering_v3', 7, (tr, r) => {
+  tr.dataset.key = POD.enc(r.id);
+  const c = POD.cell(tr, `${r.id} · ${r.type}`); c.style.fontWeight = '600';
+  POD.cell(tr, r.attempt, 'pod-num'); POD.cell(tr, r.seed, 'pod-num');
+  POD.cell(tr, `${r.words - r.wrong_n}/${r.words}`, 'pod-num'); POD.cell(tr, `${r.style_score}/${r.style_max}`, 'pod-num');
+  const v = POD.cell(tr, r.verdict_text, 'pod-wide'); v.className += r.ok ? ' mt-ok' : ' mt-bad';
+  POD.cell(tr, r.action, 'pod-wide');
+});
+dash.draw('lt3-final', POD.mtGallery('lettering_v3_final', 'lettering_v3_refs', 'lettering_v3_final_models', { cols: 3 }));
+dash.draw('lt3-gallery', POD.mtGallery('lettering_v3', 'lettering_v3_refs', 'lettering_v3_models', { cols: 5 }));
+POD.mRows('wf-sop-body', 'lettering_sop', 5, (tr, r) => {
+  tr.dataset.key = POD.enc(r.no);
+  POD.cell(tr, r.no, 'pod-num'); const s = POD.cell(tr, r.step); s.style.fontWeight = '600';
+  POD.cell(tr, r.who); POD.cell(tr, r.detail, 'pod-wide'); POD.cell(tr, r.check, 'pod-wide');
+});
+POD.mRows('wf-qc-body', 'lettering_qc_rubric', 4, (tr, r) => {
+  tr.dataset.key = POD.enc(`${r.ref}-${r.code}`);
+  POD.cell(tr, r.ref === 'Semua' ? 'Semua gaya' : `${r.ref} · ${r.ref_name}`);
+  const k = document.createElement('td'); k.appendChild(POD.pill(r.kind, null, r.kind === 'Wajib' ? 'bad' : null)); tr.appendChild(k);
+  POD.cell(tr, r.code); POD.cell(tr, r.check, 'pod-wide');
+});
 POD.text('m-rej', 'model_counts', (r) => r[0].rejected, POD.int);
 POD.mRows('m-use-body', 'model_usecase', 5, (tr, r) => {
   tr.dataset.key = POD.enc(r.kind);

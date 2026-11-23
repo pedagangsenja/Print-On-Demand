@@ -1,0 +1,79 @@
+[
+ {
+  "no": 1,
+  "step": "Pilih gaya rujukan",
+  "who": "Claude",
+  "detail": "Pilih satu daripada 5 gaya (B1-B5). Baca unsurnya dalam jadual 'Kajian 5 rujukan'.",
+  "check": "Gaya dan unsur jelas"
+ },
+ {
+  "no": 2,
+  "step": "Tulis frasa baharu",
+  "who": "Claude",
+  "detail": "Frasa Melayu asli (jangan salin ayat rujukan), panjang ikut gaya: lencana 3-5 perkataan, poster 9-16. Letak tanda baca (koma, noktah, tanda soal).",
+  "check": "Frasa asli, perkataan biasa"
+ },
+ {
+  "no": 3,
+  "step": "Bahagi baris dan peranan",
+  "who": "Claude",
+  "detail": "2-5 perkataan utama (sangat besar), lain kecil. Tentukan bekas: reben, label koyak, bulatan, atau ditulis atas objek.",
+  "check": "Ada hierarki saiz"
+ },
+ {
+  "no": 4,
+  "step": "Pilih gaya huruf (font)",
+  "who": "Claude",
+  "detail": "Sekurang-kurangnya 3 gaya huruf. Varian a = macam rujukan; varian b = font lain, unsur lain kekal.",
+  "check": "3+ gaya huruf"
+ },
+ {
+  "no": 5,
+  "step": "Bina prompt dengan templat",
+  "who": "Claude (skrip)",
+  "detail": "designs/lettering-test/v3/build_prompts.py: ayat kepala + unsur rujukan + gaya huruf + objek + teks baris demi baris + peraturan (ejaan tepat, tiada teks lain, tiada tandatangan).",
+  "check": "Semua unsur rujukan ada dalam prompt"
+ },
+ {
+  "no": 6,
+  "step": "Jana imej",
+  "who": "Claude (CPU)",
+  "detail": "ERNIE-Image-Turbo + penambah prompt, 768x1024, 8 langkah. Cubaan 1 = seed 42. ~10 minit setiap imej.",
+  "check": "Fail PNG + masa direkod"
+ },
+ {
+  "no": 7,
+  "step": "QC pintu wajib",
+  "who": "Claude",
+  "detail": "G1 ejaan 100% (semak huruf demi huruf), G2 tiada teks rawak atau tanda baca salah maksud, G3 tiada kecacatan. Satu gagal = imej gagal.",
+  "check": "G1-G3 semua lulus"
+ },
+ {
+  "no": 8,
+  "step": "QC gaya ikut rujukan",
+  "who": "Claude",
+  "detail": "Banding sebelah-menyebelah dengan rujukan; semak 8 unsur gaya itu. Lulus jika 7/8 atau lebih.",
+  "check": "Skor gaya >= 7/8"
+ },
+ {
+  "no": 9,
+  "step": "Redo (auto edit)",
+  "who": "Claude",
+  "detail": "Ejaan salah: jana semula dengan seed baharu (7, 123, 2024), prompt sama. Unsur gaya gagal: tambah ayat penegasan untuk unsur itu (revisions.json) dan seed baharu. Maksimum 4 cubaan.",
+  "check": "Setiap cubaan direkod dalam qc.json"
+ },
+ {
+  "no": 10,
+  "step": "Final",
+  "who": "Claude",
+  "detail": "Hanya imej yang lulus QC jadi final. Gagal 4 kali: laporkan sebab dan cadang tukar perkataan atau frasa.",
+  "check": "Final = 100% ejaan betul + gaya >= 7/8"
+ },
+ {
+  "no": 11,
+  "step": "Luluskan dan sediakan jualan",
+  "who": "Anda",
+  "detail": "Lihat galeri final dalam dashboard; pilih yang mahu dijual. Sebelum cetak: besarkan imej (upscale) ke saiz cetak.",
+  "check": "Anda setuju"
+ }
+]

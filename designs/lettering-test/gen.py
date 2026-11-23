@@ -39,19 +39,21 @@ def log_time(out, pid, sec, extra=None):
 def enhance(prompts, out):
     """Tulis semula prompt dengan PE ERNIE; simpan supaya boleh disemak."""
     from diffusers import ErnieImagePipeline
+    # kunci = id, atau id#sha (8 aksara) bila prompt disemak semula, supaya prompt baharu ditulis semula juga
     f = out / "enhanced.json"
     done = json.loads(f.read_text()) if f.exists() else {}
-    todo = list({p["id"]: p for p in prompts if p["id"] not in done}.values())
+    key = lambda p: p["id"] + ("#" + p["sha"] if p.get("sha") else "")
+    todo = list({key(p): p for p in prompts if key(p) not in done}.values())
     if todo:
         pipe = ErnieImagePipeline.from_pretrained(ERNIE, transformer=None, vae=None, text_encoder=None, tokenizer=None, torch_dtype=DT)
         for p in todo:
             t0 = time.time(); torch.manual_seed(SEED)
             with torch.inference_mode():
-                done[p["id"]] = pipe._enhance_prompt_with_pe(p["prompt"], "cpu", width=p["w"], height=p["h"])
+                done[key(p)] = pipe._enhance_prompt_with_pe(p["prompt"], "cpu", width=p["w"], height=p["h"])
             f.write_text(json.dumps(done, indent=1, ensure_ascii=False))
-            print("pe", p["id"], round(time.time() - t0, 1), "s", flush=True)
+            print("pe", key(p), round(time.time() - t0, 1), "s", flush=True)
         del pipe; gc.collect()
-    return [{**p, "prompt": done[p["id"]]} for p in prompts]
+    return [{**p, "prompt": done[key(p)], "id": key(p)} for p in prompts]
 
 
 def run_ernie(prompts, out):
@@ -80,7 +82,7 @@ def run_ernie(prompts, out):
             img = pipe(prompt_embeds=embs[p["id"]], height=p["h"], width=p["w"], num_inference_steps=8, guidance_scale=1.0,
                        generator=torch.Generator("cpu").manual_seed(p["seed"]), use_pe=False).images[0]
         img.save(out / f"{p['key']}.png")
-        log_time(out, p["key"], time.time() - t0, {"encode_all_s": round(enc, 1), "seed": p["seed"]})
+        log_time(out, p["key"], time.time() - t0, {"encode_all_s": round(enc, 1), "seed": p["seed"], "sha": p.get("sha", "")})
 
 
 def run_moss(prompts, out):

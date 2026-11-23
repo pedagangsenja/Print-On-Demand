@@ -1,0 +1,203 @@
+{
+ "gates": [
+  {
+   "code": "G1",
+   "check": "Ejaan semua perkataan betul (100%)"
+  },
+  {
+   "code": "G2",
+   "check": "Tiada huruf/perkataan rawak; tiada tanda baca yang mengubah maksud"
+  },
+  {
+   "code": "G3",
+   "check": "Tiada kecacatan: huruf bertindih tak terbaca, teks terpotong di tepi, tangan/objek cacat"
+  }
+ ],
+ "styles": {
+  "B4": {
+   "name": "Hiasan krim + emas atas hitam",
+   "elements": [
+    {
+     "code": "P",
+     "check": "Palet krim + emas antik atas hitam pekat"
+    },
+    {
+     "code": "K",
+     "check": "Satu tiang teks tinggi di tengah, ruang hitam di tepi"
+    },
+    {
+     "code": "H",
+     "check": "Hierarki: 3-4 perkataan utama sangat besar, baris lain kecil"
+    },
+    {
+     "code": "R",
+     "check": "Baris bertaut rapat; ruang kosong diisi skrol emas di belakang huruf"
+    },
+    {
+     "code": "L",
+     "check": "Campuran 3+ gaya huruf seperti dalam prompt"
+    },
+    {
+     "code": "A",
+     "check": "Baris pertama melengkung (arch)"
+    },
+    {
+     "code": "T",
+     "check": "Perkataan kecil dalam tag reben emas atau bulatan"
+    },
+    {
+     "code": "S",
+     "check": "Ekor huruf/swash memanjang jadi hiasan"
+    }
+   ]
+  },
+  "B5": {
+   "name": "Papan kapur + reben",
+   "elements": [
+    {
+     "code": "P",
+     "check": "Kapur putih atas papan batu tulis gelap dengan kesan sapuan"
+    },
+    {
+     "code": "K",
+     "check": "Satu tiang teks di tengah, ruang tepi"
+    },
+    {
+     "code": "H",
+     "check": "Hierarki: 2-3 perkataan utama sangat besar"
+    },
+    {
+     "code": "D",
+     "check": "Huruf ada kedalaman: garis inline/3D dan bayang"
+    },
+    {
+     "code": "L",
+     "check": "Campuran 3+ gaya huruf seperti dalam prompt"
+    },
+    {
+     "code": "T",
+     "check": "Perkataan kecil dalam reben kapur berlipat"
+    },
+    {
+     "code": "O",
+     "check": "Pembahagi hiasan (fleuron, daun, bintang kecil, titik) antara baris"
+    },
+    {
+     "code": "X",
+     "check": "Tekstur butir kapur dalam garisan huruf; ada tanda baca"
+    }
+   ]
+  },
+  "B3": {
+   "name": "Berus berwarna, grunge",
+   "elements": [
+    {
+     "code": "P",
+     "check": "Latar arang/coklat gelap dengan grunge dan percikan cat"
+    },
+    {
+     "code": "C",
+     "check": "4 warna (oren, teal, krim, kuning); setiap baris warna lain"
+    },
+    {
+     "code": "K",
+     "check": "Tiang tinggi penuh kanvas; baris condong sedikit"
+    },
+    {
+     "code": "D",
+     "check": "Huruf besar berus kering, tepi kasar, bayang gelap"
+    },
+    {
+     "code": "L",
+     "check": "Campuran 3+ gaya huruf seperti dalam prompt"
+    },
+    {
+     "code": "T",
+     "check": "Perkataan kecil dalam reben/label kertas koyak berwarna"
+    },
+    {
+     "code": "O",
+     "check": "Anak panah, bintang, pusaran dan coretan"
+    },
+    {
+     "code": "H",
+     "check": "Hierarki: perkataan utama sangat besar"
+    }
+   ]
+  },
+  "B2": {
+   "name": "Lencana hitam-putih",
+   "elements": [
+    {
+     "code": "P",
+     "check": "Hitam-putih sahaja; latar luar putih"
+    },
+    {
+     "code": "B",
+     "check": "Bentuk lencana: atas melengkung, sisi berukir, sinar matahari di bawah"
+    },
+    {
+     "code": "H",
+     "check": "3-5 perkataan sahaja, setiap satu sangat besar"
+    },
+    {
+     "code": "D",
+     "check": "Huruf putih dengan garis inline dan bayang 3D"
+    },
+    {
+     "code": "L",
+     "check": "Campuran 3+ gaya huruf seperti dalam prompt"
+    },
+    {
+     "code": "S",
+     "check": "Garis dasar melantun; ekor swash"
+    },
+    {
+     "code": "O",
+     "check": "Daun, titik dan pusaran mengisi ruang dalam lencana"
+    },
+    {
+     "code": "X",
+     "check": "Tepi berus kasar dan percikan dakwat kecil di sekeliling"
+    }
+   ]
+  },
+  "B1": {
+   "name": "Ilustrasi + lettering",
+   "elements": [
+    {
+     "code": "P",
+     "check": "Krim atas hitam, gaya ukiran scratchboard (garis silang)"
+    },
+    {
+     "code": "I",
+     "check": "Ilustrasi tangan memegang objek di tengah, berukir"
+    },
+    {
+     "code": "W",
+     "check": "Satu perkataan ditulis atas objek"
+    },
+    {
+     "code": "T",
+     "check": "Reben berpusing di belakang tangan berisi perkataan"
+    },
+    {
+     "code": "H",
+     "check": "Hierarki: 3-4 perkataan utama besar, perkataan kecil"
+    },
+    {
+     "code": "L",
+     "check": "Campuran 3+ gaya huruf seperti dalam prompt"
+    },
+    {
+     "code": "O",
+     "check": "Hiasan skrol, titik dan sinar di belakang objek"
+    },
+    {
+     "code": "X",
+     "check": "Tekstur cetakan lusuh"
+    }
+   ]
+  }
+ }
+}

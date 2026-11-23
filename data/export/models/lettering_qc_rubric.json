@@ -1,0 +1,303 @@
+[
+ {
+  "ref": "Semua",
+  "ref_name": "Semua gaya",
+  "kind": "Wajib",
+  "code": "G1",
+  "check": "Ejaan semua perkataan betul (100%)"
+ },
+ {
+  "ref": "Semua",
+  "ref_name": "Semua gaya",
+  "kind": "Wajib",
+  "code": "G2",
+  "check": "Tiada huruf/perkataan rawak; tiada tanda baca yang mengubah maksud"
+ },
+ {
+  "ref": "Semua",
+  "ref_name": "Semua gaya",
+  "kind": "Wajib",
+  "code": "G3",
+  "check": "Tiada kecacatan: huruf bertindih tak terbaca, teks terpotong di tepi, tangan/objek cacat"
+ },
+ {
+  "ref": "B4",
+  "ref_name": "Hiasan krim + emas atas hitam",
+  "kind": "Gaya",
+  "code": "P",
+  "check": "Palet krim + emas antik atas hitam pekat"
+ },
+ {
+  "ref": "B4",
+  "ref_name": "Hiasan krim + emas atas hitam",
+  "kind": "Gaya",
+  "code": "K",
+  "check": "Satu tiang teks tinggi di tengah, ruang hitam di tepi"
+ },
+ {
+  "ref": "B4",
+  "ref_name": "Hiasan krim + emas atas hitam",
+  "kind": "Gaya",
+  "code": "H",
+  "check": "Hierarki: 3-4 perkataan utama sangat besar, baris lain kecil"
+ },
+ {
+  "ref": "B4",
+  "ref_name": "Hiasan krim + emas atas hitam",
+  "kind": "Gaya",
+  "code": "R",
+  "check": "Baris bertaut rapat; ruang kosong diisi skrol emas di belakang huruf"
+ },
+ {
+  "ref": "B4",
+  "ref_name": "Hiasan krim + emas atas hitam",
+  "kind": "Gaya",
+  "code": "L",
+  "check": "Campuran 3+ gaya huruf seperti dalam prompt"
+ },
+ {
+  "ref": "B4",
+  "ref_name": "Hiasan krim + emas atas hitam",
+  "kind": "Gaya",
+  "code": "A",
+  "check": "Baris pertama melengkung (arch)"
+ },
+ {
+  "ref": "B4",
+  "ref_name": "Hiasan krim + emas atas hitam",
+  "kind": "Gaya",
+  "code": "T",
+  "check": "Perkataan kecil dalam tag reben emas atau bulatan"
+ },
+ {
+  "ref": "B4",
+  "ref_name": "Hiasan krim + emas atas hitam",
+  "kind": "Gaya",
+  "code": "S",
+  "check": "Ekor huruf/swash memanjang jadi hiasan"
+ },
+ {
+  "ref": "B5",
+  "ref_name": "Papan kapur + reben",
+  "kind": "Gaya",
+  "code": "P",
+  "check": "Kapur putih atas papan batu tulis gelap dengan kesan sapuan"
+ },
+ {
+  "ref": "B5",
+  "ref_name": "Papan kapur + reben",
+  "kind": "Gaya",
+  "code": "K",
+  "check": "Satu tiang teks di tengah, ruang tepi"
+ },
+ {
+  "ref": "B5",
+  "ref_name": "Papan kapur + reben",
+  "kind": "Gaya",
+  "code": "H",
+  "check": "Hierarki: 2-3 perkataan utama sangat besar"
+ },
+ {
+  "ref": "B5",
+  "ref_name": "Papan kapur + reben",
+  "kind": "Gaya",
+  "code": "D",
+  "check": "Huruf ada kedalaman: garis inline/3D dan bayang"
+ },
+ {
+  "ref": "B5",
+  "ref_name": "Papan kapur + reben",
+  "kind": "Gaya",
+  "code": "L",
+  "check": "Campuran 3+ gaya huruf seperti dalam prompt"
+ },
+ {
+  "ref": "B5",
+  "ref_name": "Papan kapur + reben",
+  "kind": "Gaya",
+  "code": "T",
+  "check": "Perkataan kecil dalam reben kapur berlipat"
+ },
+ {
+  "ref": "B5",
+  "ref_name": "Papan kapur + reben",
+  "kind": "Gaya",
+  "code": "O",
+  "check": "Pembahagi hiasan (fleuron, daun, bintang kecil, titik) antara baris"
+ },
+ {
+  "ref": "B5",
+  "ref_name": "Papan kapur + reben",
+  "kind": "Gaya",
+  "code": "X",
+  "check": "Tekstur butir kapur dalam garisan huruf; ada tanda baca"
+ },
+ {
+  "ref": "B3",
+  "ref_name": "Berus berwarna, grunge",
+  "kind": "Gaya",
+  "code": "P",
+  "check": "Latar arang/coklat gelap dengan grunge dan percikan cat"
+ },
+ {
+  "ref": "B3",
+  "ref_name": "Berus berwarna, grunge",
+  "kind": "Gaya",
+  "code": "C",
+  "check": "4 warna (oren, teal, krim, kuning); setiap baris warna lain"
+ },
+ {
+  "ref": "B3",
+  "ref_name": "Berus berwarna, grunge",
+  "kind": "Gaya",
+  "code": "K",
+  "check": "Tiang tinggi penuh kanvas; baris condong sedikit"
+ },
+ {
+  "ref": "B3",
+  "ref_name": "Berus berwarna, grunge",
+  "kind": "Gaya",
+  "code": "D",
+  "check": "Huruf besar berus kering, tepi kasar, bayang gelap"
+ },
+ {
+  "ref": "B3",
+  "ref_name": "Berus berwarna, grunge",
+  "kind": "Gaya",
+  "code": "L",
+  "check": "Campuran 3+ gaya huruf seperti dalam prompt"
+ },
+ {
+  "ref": "B3",
+  "ref_name": "Berus berwarna, grunge",
+  "kind": "Gaya",
+  "code": "T",
+  "check": "Perkataan kecil dalam reben/label kertas koyak berwarna"
+ },
+ {
+  "ref": "B3",
+  "ref_name": "Berus berwarna, grunge",
+  "kind": "Gaya",
+  "code": "O",
+  "check": "Anak panah, bintang, pusaran dan coretan"
+ },
+ {
+  "ref": "B3",
+  "ref_name": "Berus berwarna, grunge",
+  "kind": "Gaya",
+  "code": "H",
+  "check": "Hierarki: perkataan utama sangat besar"
+ },
+ {
+  "ref": "B2",
+  "ref_name": "Lencana hitam-putih",
+  "kind": "Gaya",
+  "code": "P",
+  "check": "Hitam-putih sahaja; latar luar putih"
+ },
+ {
+  "ref": "B2",
+  "ref_name": "Lencana hitam-putih",
+  "kind": "Gaya",
+  "code": "B",
+  "check": "Bentuk lencana: atas melengkung, sisi berukir, sinar matahari di bawah"
+ },
+ {
+  "ref": "B2",
+  "ref_name": "Lencana hitam-putih",
+  "kind": "Gaya",
+  "code": "H",
+  "check": "3-5 perkataan sahaja, setiap satu sangat besar"
+ },
+ {
+  "ref": "B2",
+  "ref_name": "Lencana hitam-putih",
+  "kind": "Gaya",
+  "code": "D",
+  "check": "Huruf putih dengan garis inline dan bayang 3D"
+ },
+ {
+  "ref": "B2",
+  "ref_name": "Lencana hitam-putih",
+  "kind": "Gaya",
+  "code": "L",
+  "check": "Campuran 3+ gaya huruf seperti dalam prompt"
+ },
+ {
+  "ref": "B2",
+  "ref_name": "Lencana hitam-putih",
+  "kind": "Gaya",
+  "code": "S",
+  "check": "Garis dasar melantun; ekor swash"
+ },
+ {
+  "ref": "B2",
+  "ref_name": "Lencana hitam-putih",
+  "kind": "Gaya",
+  "code": "O",
+  "check": "Daun, titik dan pusaran mengisi ruang dalam lencana"
+ },
+ {
+  "ref": "B2",
+  "ref_name": "Lencana hitam-putih",
+  "kind": "Gaya",
+  "code": "X",
+  "check": "Tepi berus kasar dan percikan dakwat kecil di sekeliling"
+ },
+ {
+  "ref": "B1",
+  "ref_name": "Ilustrasi + lettering",
+  "kind": "Gaya",
+  "code": "P",
+  "check": "Krim atas hitam, gaya ukiran scratchboard (garis silang)"
+ },
+ {
+  "ref": "B1",
+  "ref_name": "Ilustrasi + lettering",
+  "kind": "Gaya",
+  "code": "I",
+  "check": "Ilustrasi tangan memegang objek di tengah, berukir"
+ },
+ {
+  "ref": "B1",
+  "ref_name": "Ilustrasi + lettering",
+  "kind": "Gaya",
+  "code": "W",
+  "check": "Satu perkataan ditulis atas objek"
+ },
+ {
+  "ref": "B1",
+  "ref_name": "Ilustrasi + lettering",
+  "kind": "Gaya",
+  "code": "T",
+  "check": "Reben berpusing di belakang tangan berisi perkataan"
+ },
+ {
+  "ref": "B1",
+  "ref_name": "Ilustrasi + lettering",
+  "kind": "Gaya",
+  "code": "H",
+  "check": "Hierarki: 3-4 perkataan utama besar, perkataan kecil"
+ },
+ {
+  "ref": "B1",
+  "ref_name": "Ilustrasi + lettering",
+  "kind": "Gaya",
+  "code": "L",
+  "check": "Campuran 3+ gaya huruf seperti dalam prompt"
+ },
+ {
+  "ref": "B1",
+  "ref_name": "Ilustrasi + lettering",
+  "kind": "Gaya",
+  "code": "O",
+  "check": "Hiasan skrol, titik dan sinar di belakang objek"
+ },
+ {
+  "ref": "B1",
+  "ref_name": "Ilustrasi + lettering",
+  "kind": "Gaya",
+  "code": "X",
+  "check": "Tekstur cetakan lusuh"
+ }
+]
