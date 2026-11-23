@@ -574,5 +574,45 @@
     "bold condensed capitals"
    ]
   ]
+ },
+ {
+  "id": "vacation2",
+  "layout": "stack",
+  "lines": [
+   [
+    "I NEED A",
+    "small bold capitals"
+   ],
+   [
+    "SIX MONTH",
+    "huge heavy condensed capitals"
+   ],
+   [
+    "Vacation",
+    "giant slanted brush script, dominant word, with a swash underline"
+   ],
+   [
+    "TWICE A YEAR",
+    "small bold capitals"
+   ]
+  ]
+ },
+ {
+  "id": "funsize2",
+  "layout": "banner",
+  "lines": [
+   [
+    "I'M NOT SHORT",
+    "bold condensed capitals"
+   ],
+   [
+    "I'm",
+    "tiny script connector"
+   ],
+   [
+    "FUN SIZE",
+    "huge heavy condensed capitals"
+   ]
+  ]
  }
 ]
