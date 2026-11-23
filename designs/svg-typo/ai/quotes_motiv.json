@@ -945,5 +945,63 @@
    1152
   ],
   "layout": "poster"
+ },
+ {
+  "id": "climb2",
+  "lines": [
+   [
+    "THE BEST VIEW",
+    "C"
+   ],
+   [
+    "COMES AFTER THE",
+    "t"
+   ],
+   [
+    "HARDEST",
+    "C"
+   ],
+   [
+    "Climb",
+    "s"
+   ]
+  ],
+  "kind": "poster",
+  "size": [
+   864,
+   1152
+  ],
+  "layout": "poster"
+ },
+ {
+  "id": "futureself2",
+  "lines": [
+   [
+    "DO SOMETHING",
+    "C"
+   ],
+   [
+    "TODAY",
+    "c"
+   ],
+   [
+    "THAT YOUR",
+    "t"
+   ],
+   [
+    "FUTURE SELF",
+    "C"
+   ],
+   [
+    "will thank you for",
+    "s"
+   ]
+  ],
+  "kind": "poster",
+  "size": [
+   864,
+   1152
+  ],
+  "layout": "poster"
  }
 ]
