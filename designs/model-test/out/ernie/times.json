@@ -1,0 +1,35 @@
+{
+ "_encode_all_s": 12.6,
+ "01_stack": {
+  "seconds": 523.3,
+  "ok": true
+ },
+ "02_icon": {
+  "seconds": 501.7,
+  "ok": true
+ },
+ "03_circle": {
+  "seconds": 491.3,
+  "ok": true
+ },
+ "04_ribbon": {
+  "seconds": 477.1,
+  "ok": true
+ },
+ "05_frame": {
+  "seconds": 506.7,
+  "ok": true
+ },
+ "06_ornate": {
+  "seconds": 287.4,
+  "ok": true
+ },
+ "07_chalk": {
+  "seconds": 327.0,
+  "ok": true
+ },
+ "08_color": {
+  "seconds": 304.5,
+  "ok": true
+ }
+}
