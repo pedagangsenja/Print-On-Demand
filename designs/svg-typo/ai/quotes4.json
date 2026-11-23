@@ -632,5 +632,27 @@
     "huge heavy condensed capitals"
    ]
   ]
+ },
+ {
+  "id": "stayin",
+  "layout": "dense",
+  "lines": [
+   [
+    "STAYING IN",
+    "huge heavy condensed capitals"
+   ],
+   [
+    "is the new",
+    "tiny script connector"
+   ],
+   [
+    "Going",
+    "big bold brush script"
+   ],
+   [
+    "OUT",
+    "huge heavy condensed capitals"
+   ]
+  ]
  }
 ]
