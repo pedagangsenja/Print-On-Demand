@@ -1,0 +1,578 @@
+[
+ {
+  "id": "lazy",
+  "layout": "dense",
+  "lines": [
+   [
+    "I'M NOT LAZY",
+    "bold condensed capitals"
+   ],
+   [
+    "I'm just",
+    "tiny script connector"
+   ],
+   [
+    "ON ENERGY",
+    "huge heavy condensed capitals"
+   ],
+   [
+    "Saving Mode",
+    "big bold brush script"
+   ]
+  ]
+ },
+ {
+  "id": "disturbed",
+  "layout": "frame",
+  "lines": [
+   [
+    "DO NOT",
+    "small bold capitals"
+   ],
+   [
+    "Disturb",
+    "big bold brush script"
+   ],
+   [
+    "ALREADY",
+    "bold condensed capitals"
+   ],
+   [
+    "DISTURBED",
+    "huge heavy condensed capitals"
+   ]
+  ]
+ },
+ {
+  "id": "vacation",
+  "layout": "stack",
+  "lines": [
+   [
+    "I NEED A",
+    "small bold capitals"
+   ],
+   [
+    "Six Month",
+    "big bold brush script"
+   ],
+   [
+    "VACATION",
+    "huge heavy condensed capitals"
+   ],
+   [
+    "twice a year",
+    "tiny script connector"
+   ]
+  ]
+ },
+ {
+  "id": "nobody",
+  "layout": "banner",
+  "lines": [
+   [
+    "COOL STORY",
+    "huge heavy condensed capitals"
+   ],
+   [
+    "Bro",
+    "big bold brush script"
+   ],
+   [
+    "NOBODY ASKED",
+    "bold condensed capitals"
+   ]
+  ]
+ },
+ {
+  "id": "adult",
+  "layout": "script",
+  "lines": [
+   [
+    "I CAN'T",
+    "bold condensed capitals"
+   ],
+   [
+    "Adult",
+    "giant slanted brush script, dominant word, with a swash underline"
+   ],
+   [
+    "TODAY",
+    "bold condensed capitals"
+   ]
+  ]
+ },
+ {
+  "id": "funsize",
+  "layout": "circle",
+  "lines": [
+   [
+    "I'M NOT SHORT",
+    "bold condensed capitals"
+   ],
+   [
+    "I'm",
+    "tiny script connector"
+   ],
+   [
+    "FUN SIZE",
+    "huge heavy condensed capitals"
+   ]
+  ]
+ },
+ {
+  "id": "sideeye",
+  "layout": "script",
+  "lines": [
+   [
+    "QUEEN OF",
+    "bold condensed capitals"
+   ],
+   [
+    "the",
+    "tiny script connector"
+   ],
+   [
+    "Side Eye",
+    "giant slanted brush script, dominant word, with a swash underline"
+   ]
+  ]
+ },
+ {
+  "id": "judging",
+  "layout": "box",
+  "lines": [
+   [
+    "I'M SILENTLY",
+    "bold condensed capitals"
+   ],
+   [
+    "Judging",
+    "big bold brush script"
+   ],
+   [
+    "YOU",
+    "huge heavy condensed capitals"
+   ]
+  ]
+ },
+ {
+  "id": "bed",
+  "layout": "dense",
+  "lines": [
+   [
+    "MY BED",
+    "huge heavy condensed capitals"
+   ],
+   [
+    "is",
+    "tiny script connector"
+   ],
+   [
+    "Calling",
+    "big bold brush script"
+   ],
+   [
+    "AND I MUST GO",
+    "bold condensed capitals"
+   ]
+  ]
+ },
+ {
+  "id": "cats",
+  "layout": "circle",
+  "lines": [
+   [
+    "EASILY",
+    "bold condensed capitals"
+   ],
+   [
+    "DISTRACTED",
+    "huge heavy condensed capitals"
+   ],
+   [
+    "by",
+    "tiny script connector"
+   ],
+   [
+    "Cats",
+    "big bold brush script"
+   ]
+  ]
+ },
+ {
+  "id": "email",
+  "layout": "script",
+  "lines": [
+   [
+    "PER MY",
+    "bold condensed capitals"
+   ],
+   [
+    "Last Email",
+    "giant slanted brush script, dominant word, with a swash underline"
+   ]
+  ]
+ },
+ {
+  "id": "friday",
+  "layout": "stack",
+  "lines": [
+   [
+    "IS IT",
+    "bold condensed capitals"
+   ],
+   [
+    "Friday",
+    "giant slanted brush script, dominant word, with a swash underline"
+   ],
+   [
+    "YET?",
+    "huge heavy condensed capitals"
+   ]
+  ]
+ },
+ {
+  "id": "hardly",
+  "layout": "banner",
+  "lines": [
+   [
+    "WORKING HARD",
+    "bold condensed capitals"
+   ],
+   [
+    "or",
+    "tiny script connector"
+   ],
+   [
+    "Hardly",
+    "big bold brush script"
+   ],
+   [
+    "WORKING",
+    "huge heavy condensed capitals"
+   ]
+  ]
+ },
+ {
+  "id": "patience",
+  "layout": "frame",
+  "lines": [
+   [
+    "OUT OF OFFICE",
+    "bold condensed capitals"
+   ],
+   [
+    "and",
+    "tiny script connector"
+   ],
+   [
+    "Out of",
+    "big bold brush script"
+   ],
+   [
+    "PATIENCE",
+    "huge heavy condensed capitals"
+   ]
+  ]
+ },
+ {
+  "id": "schedule",
+  "layout": "box",
+  "lines": [
+   [
+    "LET ME",
+    "small bold capitals"
+   ],
+   [
+    "Check",
+    "big bold brush script"
+   ],
+   [
+    "MY SCHEDULE",
+    "bold condensed capitals"
+   ],
+   [
+    "Nope",
+    "giant slanted brush script, dominant word, with a swash underline"
+   ]
+  ]
+ },
+ {
+  "id": "meeting",
+  "layout": "dense",
+  "lines": [
+   [
+    "THIS MEETING",
+    "huge heavy condensed capitals"
+   ],
+   [
+    "could have been",
+    "tiny script connector"
+   ],
+   [
+    "AN EMAIL",
+    "bold condensed capitals"
+   ]
+  ]
+ },
+ {
+  "id": "monday",
+  "layout": "circle",
+  "lines": [
+   [
+    "MONDAY",
+    "huge heavy condensed capitals"
+   ],
+   [
+    "Again?",
+    "big bold brush script"
+   ],
+   [
+    "REALLY?",
+    "bold condensed capitals"
+   ]
+  ]
+ },
+ {
+  "id": "coffeefirst",
+  "layout": "banner",
+  "lines": [
+   [
+    "COFFEE FIRST",
+    "huge heavy condensed capitals"
+   ],
+   [
+    "Talk",
+    "big bold brush script"
+   ],
+   [
+    "LATER",
+    "bold condensed capitals"
+   ]
+  ]
+ },
+ {
+  "id": "decaf",
+  "layout": "stack",
+  "lines": [
+   [
+    "DECAF?",
+    "huge heavy condensed capitals"
+   ],
+   [
+    "Never",
+    "big bold brush script"
+   ],
+   [
+    "HEARD OF HER",
+    "bold condensed capitals"
+   ]
+  ]
+ },
+ {
+  "id": "bloodtype",
+  "layout": "script",
+  "lines": [
+   [
+    "MY BLOOD TYPE",
+    "bold condensed capitals"
+   ],
+   [
+    "is",
+    "tiny script connector"
+   ],
+   [
+    "Coffee",
+    "giant slanted brush script, dominant word, with a swash underline"
+   ]
+  ]
+ },
+ {
+  "id": "cancelled",
+  "layout": "dense",
+  "lines": [
+   [
+    "CANCELLED PLANS",
+    "bold condensed capitals"
+   ],
+   [
+    "are my",
+    "tiny script connector"
+   ],
+   [
+    "Favorite",
+    "big bold brush script"
+   ],
+   [
+    "PLANS",
+    "huge heavy condensed capitals"
+   ]
+  ]
+ },
+ {
+  "id": "peopling",
+  "layout": "box",
+  "lines": [
+   [
+    "PEOPLING",
+    "huge heavy condensed capitals"
+   ],
+   [
+    "is",
+    "tiny script connector"
+   ],
+   [
+    "Hard",
+    "giant slanted brush script, dominant word, with a swash underline"
+   ]
+  ]
+ },
+ {
+  "id": "books",
+  "layout": "frame",
+  "lines": [
+   [
+    "INTROVERT",
+    "huge heavy condensed capitals"
+   ],
+   [
+    "but willing to",
+    "tiny script connector"
+   ],
+   [
+    "TALK ABOUT",
+    "bold condensed capitals"
+   ],
+   [
+    "Books",
+    "big bold brush script"
+   ]
+  ]
+ },
+ {
+  "id": "wenthome",
+  "layout": "circle",
+  "lines": [
+   [
+    "I CAME",
+    "bold condensed capitals"
+   ],
+   [
+    "I SAW",
+    "bold condensed capitals"
+   ],
+   [
+    "I Went Home",
+    "big bold brush script"
+   ]
+  ]
+ },
+ {
+  "id": "momvoice",
+  "layout": "banner",
+  "lines": [
+   [
+    "I'M NOT YELLING",
+    "bold condensed capitals"
+   ],
+   [
+    "this is my",
+    "tiny script connector"
+   ],
+   [
+    "MOM VOICE",
+    "huge heavy condensed capitals"
+   ]
+  ]
+ },
+ {
+  "id": "askdad",
+  "layout": "script",
+  "lines": [
+   [
+    "ASK",
+    "huge heavy condensed capitals"
+   ],
+   [
+    "Your",
+    "tiny script connector"
+   ],
+   [
+    "Dad",
+    "giant slanted brush script, dominant word, with a swash underline"
+   ]
+  ]
+ },
+ {
+  "id": "saidso",
+  "layout": "stack",
+  "lines": [
+   [
+    "BECAUSE",
+    "bold condensed capitals"
+   ],
+   [
+    "I SAID",
+    "huge heavy condensed capitals"
+   ],
+   [
+    "So",
+    "giant slanted brush script, dominant word, with a swash underline"
+   ]
+  ]
+ },
+ {
+  "id": "tiredmom",
+  "layout": "script",
+  "lines": [
+   [
+    "TIRED AS A",
+    "bold condensed capitals"
+   ],
+   [
+    "Mother",
+    "giant slanted brush script, dominant word, with a swash underline"
+   ]
+  ]
+ },
+ {
+  "id": "tinyhumans",
+  "layout": "dense",
+  "lines": [
+   [
+    "RAISING",
+    "bold condensed capitals"
+   ],
+   [
+    "Tiny Humans",
+    "big bold brush script"
+   ],
+   [
+    "SEND",
+    "small bold capitals"
+   ],
+   [
+    "COFFEE",
+    "huge heavy condensed capitals"
+   ]
+  ]
+ },
+ {
+  "id": "momhair",
+  "layout": "box",
+  "lines": [
+   [
+    "MOM",
+    "huge heavy condensed capitals"
+   ],
+   [
+    "Hair",
+    "big bold brush script"
+   ],
+   [
+    "DON'T CARE",
+    "bold condensed capitals"
+   ]
+  ]
+ }
+]
