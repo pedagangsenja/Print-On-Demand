@@ -1,0 +1,32 @@
+{
+ "R4a_s42": {
+  "seconds": 580.2,
+  "encode_all_s": 306.6,
+  "seed": 42,
+  "sha": "ec5c6ff0"
+ },
+ "R4b_s42": {
+  "seconds": 604.3,
+  "encode_all_s": 306.6,
+  "seed": 42,
+  "sha": "dd3dbeae"
+ },
+ "R5a_s42": {
+  "seconds": 534.3,
+  "encode_all_s": 306.6,
+  "seed": 42,
+  "sha": "db2d6e62"
+ },
+ "R5b_s42": {
+  "seconds": 507.6,
+  "encode_all_s": 306.6,
+  "seed": 42,
+  "sha": "14f3d13b"
+ },
+ "R3a_s42": {
+  "seconds": 605.7,
+  "encode_all_s": 306.6,
+  "seed": 42,
+  "sha": "7df8ac8f"
+ }
+}

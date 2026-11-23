@@ -1,0 +1,45 @@
+{
+ "R4a_s42": {
+  "rev": 1,
+  "wrong": [
+   "kelsil (kecil)",
+   "sebiiji (sebiji)"
+  ],
+  "el_fail": {
+   "R": "baris tidak bertaut, skrol emas jadi baris pembahagi",
+   "A": "baris pertama tidak melengkung",
+   "S": "swash tidak jadi hiasan"
+  },
+  "action": "Redo: seed 7 + prompt rev 2 (tekankan baris melengkung, baris bertaut, skrol di belakang huruf, swash)"
+ },
+ "R4b_s42": {
+  "rev": 1,
+  "wrong": [],
+  "el_fail": {
+   "R": "skrol emas di sisi, bukan di belakang huruf; baris tidak bertaut",
+   "A": "baris pertama tidak melengkung"
+  },
+  "action": "Redo: seed 7 + prompt rev 2 (tekankan baris melengkung dan baris bertaut)"
+ },
+ "R5a_s42": {
+  "rev": 1,
+  "wrong": [],
+  "el_fail": {},
+  "action": "Final"
+ },
+ "R5b_s42": {
+  "rev": 1,
+  "wrong": [],
+  "el_fail": {},
+  "note": "Ada bingkai papan nipis di tepi (kecil)",
+  "action": "Final"
+ },
+ "R3a_s42": {
+  "rev": 1,
+  "wrong": [
+   "+coretan macam tandatangan di bawah kanan"
+  ],
+  "el_fail": {},
+  "action": "Redo: seed 7, prompt sama (gagal pintu G2 sahaja)"
+ }
+}
