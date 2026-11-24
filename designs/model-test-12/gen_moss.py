@@ -44,6 +44,9 @@ def main():
     seeds = [42]
     if args and args[0] == "--seeds":
         args.pop(0); seeds = [int(x) for x in args.pop(0).split(",")]
+    init, strength = None, 0.6
+    if args and args[0] == "--init":  # cara panduan susun atur: img2img dari guides/<id>.png
+        args.pop(0); init = Path(args.pop(0))
     only = set(args)
     torch.set_num_threads(os.cpu_count() or 4)
     out.mkdir(parents=True, exist_ok=True)
@@ -101,8 +104,26 @@ def main():
         pe, pm = embs[p["id"]]
         lat = torch.randn(1, 128, p["h"] // 16, p["w"] // 16, generator=torch.Generator("cpu").manual_seed(seed))
         sch = MOSSImageScheduler(**sargs); sch.set_timesteps(8, device="cpu")
+        steps = sch.timesteps
+        sig = getattr(sch, "sigmas", None)
+        if init is not None and sig is not None:
+            from PIL import Image
+            k = int((sig[:len(steps)] > strength).sum()); s0 = float(sig[k])
+            with torch.inference_mode():
+                px = proc.preprocess(Image.open(init / f"{p['id']}.png").convert("RGB"), height=p["h"], width=p["w"]).float()
+                x = vae.encode(px).latent_dist.mode()
+                b, c, hh, ww = x.shape
+                x = x.view(b, c, hh // 2, 2, ww // 2, 2).permute(0, 1, 3, 5, 2, 4).reshape(b, c * 4, hh // 2, ww // 2)
+                bn = vae.bn; x0 = (x - bn.running_mean.view(1, -1, 1, 1)) / (bn.running_var + vae.config.batch_norm_eps).sqrt().view(1, -1, 1, 1)
+            lat = s0 * lat + (1 - s0) * x0
+            steps = steps[k:]
+            if hasattr(sch, "set_begin_index"):
+                sch.set_begin_index(k)
+            print("img2img mula sigma", round(s0, 3), "langkah", len(steps), flush=True)
+        elif init is not None:
+            print("AMARAN: penjadual MOSS tiada sigmas; jana tanpa panduan", flush=True)
         with torch.inference_mode():
-            for ts in sch.timesteps:
+            for ts in steps:
                 with torch.autocast("cpu", dtype=DT):
                     v = tr(lat, ts, pe, pm).sample.float()
                 lat = sch.step(v, ts, lat, return_dict=False)[0]

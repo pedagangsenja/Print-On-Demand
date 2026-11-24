@@ -10,7 +10,9 @@ os.environ.setdefault("HF_HOME", str(S / "hf"))
 os.environ.setdefault("MOSS_OFFLOAD", str(S / "moss-offload"))
 os.environ.setdefault("HF_HUB_DISABLE_XET", "1")
 H = "https://huggingface.co"
-ORDER = ["klein4b", "klein4b_ref", "zturbo", "ernie", "schnell", "chroma_flash", "kandinsky", "moss"]
+GUIDE = os.environ.get("MODE") == "guide"  # cara panduan susun atur (gen_guide.py)
+ORDER = ["klein4b", "zturbo", "ernie", "schnell", "chroma_flash", "kandinsky", "moss"] if GUIDE else \
+    ["klein4b", "klein4b_ref", "zturbo", "ernie", "schnell", "chroma_flash", "kandinsky", "moss"]
 GGUF = {"zturbo": ("zimage-turbo-Q8_0.gguf", "leejet/Z-Image-Turbo-GGUF/resolve/main/z_image_turbo-Q8_0.gguf"),
         "ernie": ("ernie-turbo-Q8_0.gguf", "unsloth/ERNIE-Image-Turbo-GGUF/resolve/main/ernie-image-turbo-Q8_0.gguf"),
         "schnell": ("flux1-schnell-city96-Q8_0.gguf", "city96/FLUX.1-schnell-gguf/resolve/main/flux1-schnell-Q8_0.gguf"),
@@ -23,7 +25,8 @@ REPOS = {  # (repo, allow_patterns): pengekod teks, tokenizer, VAE dan config sa
     "kandinsky": [("kandinsky-community/kandinsky-2-2-decoder", None), ("kandinsky-community/kandinsky-2-2-prior", None)],
     "moss": [("OpenMOSS-Team/MOSS-Image-SFT", None), ("lodestones/MOSS-Image-SFT-8-steps-dmd", None)],
 }
-FREE_AFTER = {"klein4b_ref": ["klein4b-Q8_0.gguf", ("black-forest-labs/FLUX.2-klein-4B",)],
+FREE_AFTER = {"klein4b": ["klein4b-Q8_0.gguf", ("black-forest-labs/FLUX.2-klein-4B",)] if GUIDE else [],
+              "klein4b_ref": ["klein4b-Q8_0.gguf", ("black-forest-labs/FLUX.2-klein-4B",)],
               "zturbo": ["zimage-turbo-Q8_0.gguf", ("Tongyi-MAI/Z-Image-Turbo",)],
               "ernie": ["ernie-turbo-Q8_0.gguf", ("baidu/ERNIE-Image-Turbo",)],
               "schnell": ["flux1-schnell-city96-Q8_0.gguf"],
@@ -54,7 +57,12 @@ def prefetch(name):
 
 
 def gen(name):
-    if name == "kandinsky":
+    if GUIDE and name == "moss":
+        cmd = [sys.executable, str(HERE / "gen_moss.py"), str(HERE / "prompts.json"), str(S / "out" / "guide_moss"), "--seeds", "42",
+               "--init", str(HERE / "guides")]
+    elif GUIDE:
+        cmd = [sys.executable, str(HERE / "gen_guide.py"), name]
+    elif name == "kandinsky":
         cmd = [sys.executable, str(HERE / "gen_kandinsky.py")]
     elif name == "moss":
         cmd = [sys.executable, str(HERE / "gen_moss.py"), str(HERE / "prompts.json"), str(S / "out" / "moss"), "--seeds", "42"]
