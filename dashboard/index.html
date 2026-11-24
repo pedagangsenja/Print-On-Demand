@@ -178,7 +178,7 @@
 .mt-zoom figcaption { color: #fff; font-size: 0.95rem; text-align: center; max-width: 720px; }
 .mt-zoom-close { position: absolute; top: 12px; right: 12px; padding: 6px 12px; border-radius: 999px; border: 1px solid #fff; background: transparent; color: #fff; cursor: pointer; }
 @media print { .mt-zoom { display: none; } }
-@media print { .pod-scroll { max-height: none; overflow: visible; border: 0; } .pod-nav, .pod-tabbar { display: none; } .pod details { border: 0; } #tab-design, #tab-model, #tab-workflow, #tab-aliran, #tab-prestasi { break-before: page; } }
+@media print { .pod-scroll { max-height: none; overflow: visible; border: 0; } .pod-nav, .pod-tabbar { display: none; } .pod details { border: 0; } #tab-design, #tab-font, #tab-model, #tab-lesen, #tab-sejarah, #tab-setup, #tab-workflow, #tab-aliran, #tab-prestasi { break-before: page; } }
 </style>
 <link rel="stylesheet" href="aliran.css">
 
@@ -190,7 +190,11 @@
   <div class="pod-tabbar" role="tablist" aria-label="Tab dashboard">
     <button type="button" class="pod-tab-btn" role="tab" id="btn-poster" data-tab="tab-poster" aria-controls="tab-poster" aria-selected="true">Poster</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-design" data-tab="tab-design" aria-controls="tab-design" aria-selected="false" tabindex="-1">Design</button>
+    <button type="button" class="pod-tab-btn" role="tab" id="btn-font" data-tab="tab-font" aria-controls="tab-font" aria-selected="false" tabindex="-1">Font</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-model" data-tab="tab-model" aria-controls="tab-model" aria-selected="false" tabindex="-1">Model AI</button>
+    <button type="button" class="pod-tab-btn" role="tab" id="btn-lesen" data-tab="tab-lesen" aria-controls="tab-lesen" aria-selected="false" tabindex="-1">Lesen & banding</button>
+    <button type="button" class="pod-tab-btn" role="tab" id="btn-sejarah" data-tab="tab-sejarah" aria-controls="tab-sejarah" aria-selected="false" tabindex="-1">Chat lepas</button>
+    <button type="button" class="pod-tab-btn" role="tab" id="btn-setup" data-tab="tab-setup" aria-controls="tab-setup" aria-selected="false" tabindex="-1">Setup</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-workflow" data-tab="tab-workflow" aria-controls="tab-workflow" aria-selected="false" tabindex="-1">Workflow</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-aliran" data-tab="tab-aliran" aria-controls="tab-aliran" aria-selected="false" tabindex="-1">Daftar S & C</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-prestasi" data-tab="tab-prestasi" aria-controls="tab-prestasi" aria-selected="false" tabindex="-1">Prestasi</button>
@@ -581,12 +585,6 @@
     <a href="#d-motiv">Poster motivasi</a>
     <a href="#d-sarkas">Sarkastik SVG</a>
     <a href="#d-sarkas-warna">Sarkastik warna</a>
-    <a href="#f-induk">Senarai fon</a>
-    <a href="#f-mood">Fon ikut mood</a>
-    <a href="#f-cari">Cari fon</a>
-    <a href="#f-laman">Laman fon</a>
-    <a href="#f-lesen">Lesen fon</a>
-    <a href="#f-tolak">Fon ditolak</a>
   </nav>
 
 <section id="d-motiv" class="pod-section">
@@ -611,7 +609,11 @@
   <div class="d-grid" data-draw="d-gallery-w" data-source="design_sarkas_warna"></div>
 </section>
 
-<div id="f-intro" class="pod-section">
+</section>
+
+<section id="tab-font" class="pod-tab" role="tabpanel" aria-labelledby="btn-font" hidden>
+
+<div id="f-intro" class="pod-section pod-first">
   <p class="pod-lede">Font Generator: upload satu contoh poster typography, AI cadang 10 font Google Fonts yang serupa (lesen OFL / Apache 2.0, boleh guna komersial), jana mockup dari font pilihan, dan simpan yang terbaik sebagai master sheet untuk semua poster.</p>
   <p><a href="https://claude.ai/artifact/K6uL4Xy8EssqEVpd7FzzS7" target="_blank" rel="noopener noreferrer">Buka Font Generator ↗</a></p>
   <ol>
@@ -620,6 +622,15 @@
     <li>Pilih satu mockup dan simpan sebagai master sheet. Tandakan master yang Aktif.</li>
   </ol>
 </div>
+
+<nav class="pod-nav" aria-label="Bahagian fon">
+    <a href="#f-induk">Senarai induk</a>
+    <a href="#f-mood">Ikut mood</a>
+    <a href="#f-cari">Cari fon</a>
+    <a href="#f-laman">Laman sumber</a>
+    <a href="#f-lesen">Jenis lesen</a>
+    <a href="#f-tolak">Fon ditolak</a>
+  </nav>
 
 <section id="f-induk" class="pod-section">
   <h2>Senarai induk fon (bebas untuk jualan)</h2>
@@ -756,10 +767,6 @@
     <a href="#m-lettering-v2">ERNIE v2</a>
     <a href="#m-lettering-v3">QC v3</a>
     <a href="#m-cadangan">Model ikut poster</a>
-    <a href="#m-banding">Banding model</a>
-    <a href="#m-lesen">Lesen & kuota</a>
-    <a href="#st-ai">Alat AI awan</a>
-    <a href="#m-sejarah">Chat lepas</a>
     <a href="#m-langkah">Pilih model</a>
     <a href="#m-sumber">Sumber</a>
   </nav>
@@ -953,58 +960,6 @@
   </div>
 </section>
 
-<section id="m-banding" class="pod-section">
-  <h2>Banding model</h2>
-  <p class="pod-muted">Skor OneIG/LongText dari kad model ERNIE-Image (lebih tinggi lebih baik, maks 1.0). "Container" = komputer awan sesi Claude: 4 CPU, 15 GB RAM, tiada GPU. "Space percuma" = Hugging Face ZeroGPU, kuota beberapa minit sehari.</p>
-  <div class="pod-fit">
-    <table id="m-table-compare" data-source="model_compare" data-row-key="model">
-      <colgroup>
-        <col style="width:8%"><col style="width:6%"><col style="width:5%"><col style="width:8%">
-        <col style="width:6%"><col style="width:4%"><col style="width:5%"><col style="width:5%">
-        <col style="width:4%"><col style="width:4%"><col style="width:5%"><col style="width:6%">
-        <col style="width:10%"><col style="width:15%"><col style="width:4%"><col style="width:5%">
-      </colgroup>
-      <thead><tr>
-        <th data-field="model">Model</th>
-        <th data-field="license">Lesen</th>
-        <th data-field="commercial">Boleh jual?</th>
-        <th data-field="run">Jalan di mana</th>
-        <th data-field="ram">RAM / saiz</th>
-        <th data-field="steps">Langkah</th>
-        <th data-field="text_short">Tulisan pendek</th>
-        <th data-field="text_long">Tulisan panjang</th>
-        <th data-field="bw">Hitam-putih</th>
-        <th data-field="color">Berwarna</th>
-        <th data-field="bg">Latar gambar</th>
-        <th data-field="speed">Kelajuan</th>
-        <th data-field="community">Forum / blog</th>
-        <th data-field="verdict">Keputusan</th>
-        <th data-field="level">Bukti</th>
-        <th data-field="source">Sumber</th>
-      </tr></thead>
-      <tbody data-draw="m-compare-body"></tbody>
-    </table>
-  </div>
-</section>
-
-<section id="m-sejarah" class="pod-section">
-  <h2>Hasil chat lepas</h2>
-  <p class="pod-muted">Dikumpul semula dari sesi 22–23 Nov (cawangan eager-brahmagupta dan intelligent-bell).</p>
-  <div class="pod-table-wrap">
-    <table id="m-table-history" data-source="model_history" data-row-key="what">
-      <thead><tr>
-        <th data-field="date">Tarikh</th>
-        <th data-field="what">Apa dibuat</th>
-        <th class="pod-num" data-field="images">Imej</th>
-        <th class="pod-num" data-field="designs">Design lulus</th>
-        <th data-field="result">Hasil</th>
-        <th data-field="lesson">Pelajaran</th>
-      </tr></thead>
-      <tbody data-draw="m-history-body"></tbody>
-    </table>
-  </div>
-</section>
-
 <section id="m-langkah" class="pod-section">
   <h2>Workflow pilih model</h2>
   <p class="pod-muted">Ujian yang sama untuk semua model supaya boleh dibanding adil.</p>
@@ -1039,10 +994,20 @@
   </div>
 </section>
 
-<div id="l-intro" class="pod-section">
+</section>
+
+<section id="tab-lesen" class="pod-tab" role="tabpanel" aria-labelledby="btn-lesen" hidden>
+
+<div id="l-intro" class="pod-section pod-first">
   <p class="pod-lede">Model jana imej di Hugging Face yang disemak: boleh dijual atau tidak, syarat lesen, kos kuota GPU percuma dan VRAM untuk jalan sendiri.</p>
   <p class="pod-muted">Lajur Komersial?: hijau = bebas komersial, kuning = boleh dengan syarat, merah = bukan komersial.</p>
 </div>
+
+<nav class="pod-nav" aria-label="Bahagian lesen dan banding">
+    <a href="#m-lesen">Lesen & kuota GPU</a>
+    <a href="#m-banding">Banding model</a>
+    <a href="#st-ai">Alat AI di komputer awan</a>
+  </nav>
 
 <section id="m-lesen" class="pod-section">
   <h2>Lesen komersial, kuota GPU dan VRAM: model imej Hugging Face</h2>
@@ -1076,6 +1041,40 @@
   </div>
 </section>
 
+<section id="m-banding" class="pod-section">
+  <h2>Banding model</h2>
+  <p class="pod-muted">Skor OneIG/LongText dari kad model ERNIE-Image (lebih tinggi lebih baik, maks 1.0). "Container" = komputer awan sesi Claude: 4 CPU, 15 GB RAM, tiada GPU. "Space percuma" = Hugging Face ZeroGPU, kuota beberapa minit sehari.</p>
+  <div class="pod-fit">
+    <table id="m-table-compare" data-source="model_compare" data-row-key="model">
+      <colgroup>
+        <col style="width:8%"><col style="width:6%"><col style="width:5%"><col style="width:8%">
+        <col style="width:6%"><col style="width:4%"><col style="width:5%"><col style="width:5%">
+        <col style="width:4%"><col style="width:4%"><col style="width:5%"><col style="width:6%">
+        <col style="width:10%"><col style="width:15%"><col style="width:4%"><col style="width:5%">
+      </colgroup>
+      <thead><tr>
+        <th data-field="model">Model</th>
+        <th data-field="license">Lesen</th>
+        <th data-field="commercial">Boleh jual?</th>
+        <th data-field="run">Jalan di mana</th>
+        <th data-field="ram">RAM / saiz</th>
+        <th data-field="steps">Langkah</th>
+        <th data-field="text_short">Tulisan pendek</th>
+        <th data-field="text_long">Tulisan panjang</th>
+        <th data-field="bw">Hitam-putih</th>
+        <th data-field="color">Berwarna</th>
+        <th data-field="bg">Latar gambar</th>
+        <th data-field="speed">Kelajuan</th>
+        <th data-field="community">Forum / blog</th>
+        <th data-field="verdict">Keputusan</th>
+        <th data-field="level">Bukti</th>
+        <th data-field="source">Sumber</th>
+      </tr></thead>
+      <tbody data-draw="m-compare-body"></tbody>
+    </table>
+  </div>
+</section>
+
 <section id="st-ai" class="pod-section">
   <h2>Alat AI di komputer awan</h2>
   <p class="pod-muted">Komputer awan = container sesi Claude Code: 4 teras CPU, 15 GB RAM, tiada GPU. Container dipadam bila sesi tamat, jadi alat perlu dipasang semula setiap sesi baharu. Semua alat di bawah percuma; lesen disemak 22 Nov 2026.</p>
@@ -1098,7 +1097,33 @@
 
 </section>
 
-<section id="tab-workflow" class="pod-tab" role="tabpanel" aria-labelledby="btn-workflow" hidden>
+<section id="tab-sejarah" class="pod-tab" role="tabpanel" aria-labelledby="btn-sejarah" hidden>
+
+<div id="sj-intro" class="pod-section pod-first">
+  <p class="pod-lede">Rekod hasil setiap sesi chat lepas: apa dibuat, berapa imej dijana, berapa design lulus, dan pelajaran untuk sesi seterusnya.</p>
+</div>
+
+<section id="m-sejarah" class="pod-section">
+  <h2>Hasil chat lepas</h2>
+  <p class="pod-muted">Dikumpul semula dari sesi 22–23 Nov (cawangan eager-brahmagupta dan intelligent-bell).</p>
+  <div class="pod-table-wrap">
+    <table id="m-table-history" data-source="model_history" data-row-key="what">
+      <thead><tr>
+        <th data-field="date">Tarikh</th>
+        <th data-field="what">Apa dibuat</th>
+        <th class="pod-num" data-field="images">Imej</th>
+        <th class="pod-num" data-field="designs">Design lulus</th>
+        <th data-field="result">Hasil</th>
+        <th data-field="lesson">Pelajaran</th>
+      </tr></thead>
+      <tbody data-draw="m-history-body"></tbody>
+    </table>
+  </div>
+</section>
+
+</section>
+
+<section id="tab-setup" class="pod-tab" role="tabpanel" aria-labelledby="btn-setup" hidden>
 
 <div id="st-intro" class="pod-section pod-first">
   <p class="pod-lede"><b data-draw="st-done" data-source="setup_progress" data-field="done" data-row="0">—</b> daripada <b data-draw="st-total" data-source="setup_progress" data-field="total" data-row="0">—</b> langkah setup siap. Claude menyemak dan menanda setiap langkah; semakan terakhir <b data-draw="st-last" data-source="setup_progress" data-field="last_checked" data-row="0">—</b>.</p>
@@ -1155,16 +1180,11 @@
   </details>
 </section>
 
-<nav class="pod-nav" aria-label="Bahagian workflow">
-    <a href="#st-senarai">Checklist setup</a>
-    <a href="#wf-harian">Harian</a>
-    <a href="#wf-mingguan">Mingguan</a>
-    <a href="#wf-bulanan">Bulanan</a>
-    <a href="#wf-sop">SOP lettering + QC</a>
-    <a href="#al-langkah">Aliran 12 langkah</a>
-  </nav>
+</section>
 
-<div id="wf-intro" class="pod-section">
+<section id="tab-workflow" class="pod-tab" role="tabpanel" aria-labelledby="btn-workflow" hidden>
+
+<div id="wf-intro" class="pod-section pod-first">
   <p class="pod-lede">Claude buat kerja berulang secara automatik; anda hanya luluskan dan semak. Automasi bermula selepas laman web, Printify dan Pinterest disambung (tab Setup).</p>
   <div class="pod-kpis" id="wf-masa">
     <div class="pod-kpi" id="wf-masa-harian">
@@ -1181,6 +1201,14 @@
     </div>
   </div>
 </div>
+
+<nav class="pod-nav" aria-label="Bahagian workflow">
+    <a href="#wf-harian">Harian</a>
+    <a href="#wf-mingguan">Mingguan</a>
+    <a href="#wf-bulanan">Bulanan</a>
+    <a href="#wf-sop">SOP lettering + QC</a>
+    <a href="#al-langkah">Aliran 12 langkah</a>
+  </nav>
 
 <section id="wf-harian" class="pod-section">
   <h2>Harian</h2>
@@ -1439,6 +1467,8 @@
 </section>
 
 </section>
+
+
 
 
 </div>
