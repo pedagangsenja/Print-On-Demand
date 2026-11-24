@@ -178,7 +178,7 @@
 .mt-zoom figcaption { color: #fff; font-size: 0.95rem; text-align: center; max-width: 720px; }
 .mt-zoom-close { position: absolute; top: 12px; right: 12px; padding: 6px 12px; border-radius: 999px; border: 1px solid #fff; background: transparent; color: #fff; cursor: pointer; }
 @media print { .mt-zoom { display: none; } }
-@media print { .pod-scroll { max-height: none; overflow: visible; border: 0; } .pod-nav, .pod-tabbar { display: none; } .pod details { border: 0; } #tab-design, #tab-model, #tab-workflow, #tab-prestasi { break-before: page; } }
+@media print { .pod-scroll { max-height: none; overflow: visible; border: 0; } .pod-nav, .pod-tabbar { display: none; } .pod details { border: 0; } #tab-design, #tab-model, #tab-workflow, #tab-aliran, #tab-prestasi { break-before: page; } }
 </style>
 <link rel="stylesheet" href="aliran.css">
 
@@ -191,7 +191,8 @@
     <button type="button" class="pod-tab-btn" role="tab" id="btn-poster" data-tab="tab-poster" aria-controls="tab-poster" aria-selected="true">Poster</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-design" data-tab="tab-design" aria-controls="tab-design" aria-selected="false" tabindex="-1">Design</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-model" data-tab="tab-model" aria-controls="tab-model" aria-selected="false" tabindex="-1">Model AI</button>
-    <button type="button" class="pod-tab-btn" role="tab" id="btn-workflow" data-tab="tab-workflow" aria-controls="tab-workflow" aria-selected="false" tabindex="-1">Kerja</button>
+    <button type="button" class="pod-tab-btn" role="tab" id="btn-workflow" data-tab="tab-workflow" aria-controls="tab-workflow" aria-selected="false" tabindex="-1">Workflow</button>
+    <button type="button" class="pod-tab-btn" role="tab" id="btn-aliran" data-tab="tab-aliran" aria-controls="tab-aliran" aria-selected="false" tabindex="-1">Daftar S & C</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-prestasi" data-tab="tab-prestasi" aria-controls="tab-prestasi" aria-selected="false" tabindex="-1">Prestasi</button>
   </div>
 </header>
@@ -1154,16 +1155,13 @@
   </details>
 </section>
 
-<nav class="pod-nav" aria-label="Bahagian kerja">
+<nav class="pod-nav" aria-label="Bahagian workflow">
     <a href="#st-senarai">Checklist setup</a>
     <a href="#wf-harian">Harian</a>
     <a href="#wf-mingguan">Mingguan</a>
     <a href="#wf-bulanan">Bulanan</a>
     <a href="#wf-sop">SOP lettering + QC</a>
-    <a href="#al-langkah">12 langkah</a>
-    <a href="#al-gaya">Daftar gaya</a>
-    <a href="#al-warna">Daftar warna</a>
-    <a href="#al-kod">Kod design</a>
+    <a href="#al-langkah">Aliran 12 langkah</a>
   </nav>
 
 <div id="wf-intro" class="pod-section">
@@ -1270,6 +1268,20 @@
     </div>
   </div>
 </section>
+
+</section>
+
+<section id="tab-aliran" class="pod-tab" role="tabpanel" aria-labelledby="btn-aliran" hidden>
+
+<div id="dsc-intro" class="pod-section pod-first">
+  <p class="pod-lede">Daftar rujukan setiap design: gaya tipografi bertanda S (contoh S001), gabungan warna bertanda C (contoh C001), dan kod design menggabungkan kedua-duanya supaya setiap poster boleh dijejak dan diulang.</p>
+</div>
+
+<nav class="pod-nav" aria-label="Bahagian daftar S dan C">
+    <a href="#al-gaya">Daftar gaya (S)</a>
+    <a href="#al-warna">Daftar warna (C)</a>
+    <a href="#al-kod">Kod design</a>
+  </nav>
 
 <section id="al-gaya" class="pod-section">
   <h2>Daftar gaya (S)</h2>
@@ -1427,6 +1439,7 @@
 </section>
 
 </section>
+
 
 </div>
 
