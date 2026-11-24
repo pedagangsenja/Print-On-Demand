@@ -1,0 +1,105 @@
+{
+ "date": "2026-11-24",
+ "machine": "container CPU 4 teras (AMX bf16), 15 GB RAM, tiada GPU",
+ "size": "768x1024",
+ "seed": 42,
+ "evidence": "lemah: 1 seed, 9 imej setiap model; ejaan disemak dengan mata (OCR hanya saringan); gaya = penilaian Claude",
+ "texts": {
+  "T1": "PROGRESS OVER PERFECTION",
+  "T2": "SMALL STEPS EVERY DAY LEAD TO BIG RESULTS",
+  "T3": "YOUR ONLY LIMIT IS THE ONE YOU SET GET UP SHOW UP NEVER GIVE UP THE BEST VIEW COMES AFTER THE HARDEST CLIMB"
+ },
+ "results": [
+  {
+   "model": "FLUX.2 klein 4B",
+   "method": "panduan + imej rujukan",
+   "images": 9,
+   "spelling_ok": 8,
+   "extra_text": 0,
+   "avg_s": 230,
+   "style": "paling hampir rujukan (tekstur grunge kuat); S2 tukar warna putih ke emas",
+   "errors": [
+    "T3_S1: YOU SEET"
+   ]
+  },
+  {
+   "model": "Z-Image-Turbo",
+   "method": "panduan img2img 0.6",
+   "images": 9,
+   "spelling_ok": 9,
+   "extra_text": 0,
+   "avg_s": 180,
+   "style": "hampir sama panduan, lebih bersih (grunge hilang)",
+   "errors": []
+  },
+  {
+   "model": "ERNIE-Image-Turbo",
+   "method": "panduan img2img manual 0.6",
+   "images": 9,
+   "spelling_ok": 9,
+   "extra_text": 0,
+   "avg_s": 99,
+   "style": "hampir sama panduan, grunge ringan",
+   "errors": []
+  },
+  {
+   "model": "FLUX.1-schnell (Q6_K)",
+   "method": "panduan img2img 0.6",
+   "images": 9,
+   "spelling_ok": 9,
+   "extra_text": 3,
+   "avg_s": 260,
+   "style": "hampir sama panduan; tambah teks liar '2/17' pada semua S1",
+   "errors": [
+    "S1 x3: teks liar 2/17"
+   ]
+  },
+  {
+   "model": "Chroma1-Flash",
+   "method": "panduan img2img 0.6",
+   "images": 9,
+   "spelling_ok": 9,
+   "extra_text": 0,
+   "avg_s": 266,
+   "style": "hampir sama panduan, grunge ringan",
+   "errors": []
+  },
+  {
+   "model": "MOSS-Image SFT + LoRA 8 langkah",
+   "method": "panduan img2img manual 0.6",
+   "images": 9,
+   "spelling_ok": 9,
+   "extra_text": 0,
+   "avg_s": 112,
+   "style": "hampir sama panduan",
+   "errors": []
+  },
+  {
+   "model": "Kandinsky 2.2",
+   "method": "panduan img2img 0.5",
+   "images": 9,
+   "spelling_ok": 0,
+   "extra_text": 0,
+   "avg_s": 391,
+   "style": "huruf rosak sepenuhnya",
+   "errors": [
+    "9/9 teks rosak"
+   ]
+  },
+  {
+   "model": "FLUX.2 klein 4B (teks sahaja, banding)",
+   "method": "huraian gaya sahaja",
+   "images": 9,
+   "spelling_ok": 5,
+   "extra_text": 0,
+   "avg_s": 71,
+   "style": "lettering lebih hidup tetapi susun atur bebas",
+   "errors": [
+    "T3_S1 HARIGST",
+    "T2_S2 Smal",
+    "T2_S3 LEAD TO berulang",
+    "T3_S3 NEVER GIVE P / HARIST"
+   ]
+  }
+ ]
+}
