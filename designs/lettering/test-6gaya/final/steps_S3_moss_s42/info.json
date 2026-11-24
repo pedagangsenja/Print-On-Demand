@@ -1,0 +1,18 @@
+{
+ "raw": "steps_S3_moss_s42.png",
+ "style": "S3",
+ "bg": "#0b0b0b",
+ "fills": [
+  "#ffffff"
+ ],
+ "layers": 1,
+ "ink_px": [
+  2763716
+ ],
+ "sizes": {
+  "18x24": [
+   5400,
+   7200
+  ]
+ }
+}

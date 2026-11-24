@@ -1,0 +1,18 @@
+{
+ "raw": "steps_S4_moss_s42.png",
+ "style": "S4",
+ "bg": "#1c1c1c",
+ "fills": [
+  "#f1efe9"
+ ],
+ "layers": 1,
+ "ink_px": [
+  2680948
+ ],
+ "sizes": {
+  "18x24": [
+   5400,
+   7200
+  ]
+ }
+}
