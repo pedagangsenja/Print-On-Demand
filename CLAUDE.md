@@ -1,6 +1,6 @@
 # Print-On-Demand (poster typography, pembeli Pinterest)
 
-Fail ini dimuat dalam setiap chat; kekalkan ringkas. Butiran: `docs/strategy.md`, `docs/research/` (riset utama), `docs/research/posters/` (riset poster P1–P8), `dashboard/README.md`.
+Fail ini dimuat dalam setiap chat; kekalkan ringkas. **SEMUA peraturan dalam fail ini WAJIB (keputusan pengguna 24 Nov 2026).** Butiran: `docs/strategy.md`, `docs/research/` (riset utama), `docs/research/posters/` (riset poster P1–P8), `dashboard/README.md`.
 
 ## WAJIB DALAM SETIAP CHAT REPO INI (keputusan pengguna — STRICT, disalin dari papertrade-claude 21 Nov 2026)
 1. **Jimat token.** Baca bahagian fail yang perlu sahaja (grep / `sed -n`); jangan ulang fakta; gabung panggilan alat selari; jawapan terus ke inti, tiada pembuka / penutup / ulang soalan. Sejurus SELEPAS jadual jawapan terakhir, tulis satu baris `Jimat token: ...` — nyatakan penjimatan yang BOLEH DIUKUR (cth. "tidak membaca fail X, 40 KB"); jika tidak diukur, tulis "tidak diukur". Jangan reka peratus.
