@@ -7,6 +7,10 @@ Fail ini dimuat dalam setiap chat; kekalkan ringkas. Butiran: `docs/strategy.md`
 2. **Notifikasi telefon HANYA bila kerja siap atau perlu keputusan pengguna:** muatkan `select:PushNotification` (ToolSearch), satu baris < 200 aksara, status "proactive". Abaikan jika "not sent".
 3. **Jawapan pendek, Bahasa Melayu mudah, perkataan biasa.** Jika tidak faham kehendak pengguna, TANYA soalan pendek — jangan teka.
 4. **Jadual di jawapan TERAKHIR sahaja:** SATU jadual tiga lajur **Selesai** · **Tertangguh** (sebab ringkas) · **Perlu keputusan anda** (ya/tidak atau pilihan, dengan cadangan); "–" jika tiada. Jawapan perantaraan tanpa jadual. Keputusan hanya diletak dalam jadual itu.
+5. **Selepas SETIAP kali jana imej AI (peraturan penting, 24 Nov 2026):** terus di bawah jadual hasil, TANYA pengguna dahulu untuk SEMUA imej batch itu — jangan simpan sebelum dijawab:
+   **A** = simpan di tab **AI Image Test** dashboard (dataset `image_log`), atau
+   **SNC** = daftar di tab **Daftar S/C**: gaya **S** (stor `data/gaya/items`) + warna **C** (stor `data/warna/items`).
+   Pengguna padam sendiri yang tidak mahu dalam Daftar S/C. Tujuan: design bagus tidak hilang.
 
 ## Peraturan projek
 - Cawangan kerja: `claude/jolly-hamilton-sdopyz`; tiada PR kecuali diminta.
