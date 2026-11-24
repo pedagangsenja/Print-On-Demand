@@ -1,0 +1,161 @@
+[
+ {
+  "id": "T1_S1",
+  "text_id": "T1",
+  "style_id": "S1",
+  "kind": "pendek",
+  "lines": [
+   "PROGRESS",
+   "OVER",
+   "PERFECTION"
+  ],
+  "prompt": "Typography poster on a solid black background. Bold condensed distressed sans-serif capital letters in white and mustard yellow, stacked tightly in a vertical block, each line stretched to fill the width, big words large and short words smaller, grunge worn print texture with scratches, small yellow hazard stripe accents and a white speech-bubble bracket at the bottom. Flat vector print design, high contrast, no photo, no people. The poster text has 3 lines, spelled exactly, in this order: \"PROGRESS\" \"OVER\" \"PERFECTION\". No other text.",
+  "prompt_ref": "Create a new typography poster in the same style as the reference image: same colors, letter shapes, texture, ornaments and layout feel. Replace all of its words with new text. The poster text has 3 lines, spelled exactly, in this order: \"PROGRESS\" \"OVER\" \"PERFECTION\". No other text.",
+  "ref": "refs/S1.jpg",
+  "w": 768,
+  "h": 1024
+ },
+ {
+  "id": "T2_S1",
+  "text_id": "T2",
+  "style_id": "S1",
+  "kind": "sederhana",
+  "lines": [
+   "SMALL STEPS",
+   "EVERY DAY",
+   "LEAD TO",
+   "BIG RESULTS"
+  ],
+  "prompt": "Typography poster on a solid black background. Bold condensed distressed sans-serif capital letters in white and mustard yellow, stacked tightly in a vertical block, each line stretched to fill the width, big words large and short words smaller, grunge worn print texture with scratches, small yellow hazard stripe accents and a white speech-bubble bracket at the bottom. Flat vector print design, high contrast, no photo, no people. The poster text has 4 lines, spelled exactly, in this order: \"SMALL STEPS\" \"EVERY DAY\" \"LEAD TO\" \"BIG RESULTS\". No other text.",
+  "prompt_ref": "Create a new typography poster in the same style as the reference image: same colors, letter shapes, texture, ornaments and layout feel. Replace all of its words with new text. The poster text has 4 lines, spelled exactly, in this order: \"SMALL STEPS\" \"EVERY DAY\" \"LEAD TO\" \"BIG RESULTS\". No other text.",
+  "ref": "refs/S1.jpg",
+  "w": 768,
+  "h": 1024
+ },
+ {
+  "id": "T3_S1",
+  "text_id": "T3",
+  "style_id": "S1",
+  "kind": "panjang",
+  "lines": [
+   "YOUR ONLY LIMIT",
+   "IS THE ONE YOU SET",
+   "GET UP",
+   "SHOW UP",
+   "NEVER GIVE UP",
+   "THE BEST VIEW COMES",
+   "AFTER THE HARDEST CLIMB"
+  ],
+  "prompt": "Typography poster on a solid black background. Bold condensed distressed sans-serif capital letters in white and mustard yellow, stacked tightly in a vertical block, each line stretched to fill the width, big words large and short words smaller, grunge worn print texture with scratches, small yellow hazard stripe accents and a white speech-bubble bracket at the bottom. Flat vector print design, high contrast, no photo, no people. The poster text has 7 lines, spelled exactly, in this order: \"YOUR ONLY LIMIT\" \"IS THE ONE YOU SET\" \"GET UP\" \"SHOW UP\" \"NEVER GIVE UP\" \"THE BEST VIEW COMES\" \"AFTER THE HARDEST CLIMB\". No other text.",
+  "prompt_ref": "Create a new typography poster in the same style as the reference image: same colors, letter shapes, texture, ornaments and layout feel. Replace all of its words with new text. The poster text has 7 lines, spelled exactly, in this order: \"YOUR ONLY LIMIT\" \"IS THE ONE YOU SET\" \"GET UP\" \"SHOW UP\" \"NEVER GIVE UP\" \"THE BEST VIEW COMES\" \"AFTER THE HARDEST CLIMB\". No other text.",
+  "ref": "refs/S1.jpg",
+  "w": 768,
+  "h": 1024
+ },
+ {
+  "id": "T1_S2",
+  "text_id": "T1",
+  "style_id": "S2",
+  "kind": "pendek",
+  "lines": [
+   "Progress",
+   "Over",
+   "Perfection"
+  ],
+  "prompt": "Typography poster on a solid black background. White hand-drawn brush script calligraphy lettering with energetic slanted strokes, long flowing swashes and loops connecting the words, thin curved accent lines and small white ink splatter dots, words stacked and slightly overlapping in a centered composition. Flat vector print design, high contrast, no photo, no people. The poster text has 3 lines, spelled exactly, in this order: \"Progress\" \"Over\" \"Perfection\". No other text.",
+  "prompt_ref": "Create a new typography poster in the same style as the reference image: same colors, letter shapes, texture, ornaments and layout feel. Replace all of its words with new text. The poster text has 3 lines, spelled exactly, in this order: \"Progress\" \"Over\" \"Perfection\". No other text.",
+  "ref": "refs/S2.jpg",
+  "w": 768,
+  "h": 1024
+ },
+ {
+  "id": "T2_S2",
+  "text_id": "T2",
+  "style_id": "S2",
+  "kind": "sederhana",
+  "lines": [
+   "Small Steps",
+   "Every Day",
+   "Lead To",
+   "Big Results"
+  ],
+  "prompt": "Typography poster on a solid black background. White hand-drawn brush script calligraphy lettering with energetic slanted strokes, long flowing swashes and loops connecting the words, thin curved accent lines and small white ink splatter dots, words stacked and slightly overlapping in a centered composition. Flat vector print design, high contrast, no photo, no people. The poster text has 4 lines, spelled exactly, in this order: \"Small Steps\" \"Every Day\" \"Lead To\" \"Big Results\". No other text.",
+  "prompt_ref": "Create a new typography poster in the same style as the reference image: same colors, letter shapes, texture, ornaments and layout feel. Replace all of its words with new text. The poster text has 4 lines, spelled exactly, in this order: \"Small Steps\" \"Every Day\" \"Lead To\" \"Big Results\". No other text.",
+  "ref": "refs/S2.jpg",
+  "w": 768,
+  "h": 1024
+ },
+ {
+  "id": "T3_S2",
+  "text_id": "T3",
+  "style_id": "S2",
+  "kind": "panjang",
+  "lines": [
+   "Your Only Limit",
+   "Is The One You Set",
+   "Get Up",
+   "Show Up",
+   "Never Give Up",
+   "The Best View Comes",
+   "After The Hardest Climb"
+  ],
+  "prompt": "Typography poster on a solid black background. White hand-drawn brush script calligraphy lettering with energetic slanted strokes, long flowing swashes and loops connecting the words, thin curved accent lines and small white ink splatter dots, words stacked and slightly overlapping in a centered composition. Flat vector print design, high contrast, no photo, no people. The poster text has 7 lines, spelled exactly, in this order: \"Your Only Limit\" \"Is The One You Set\" \"Get Up\" \"Show Up\" \"Never Give Up\" \"The Best View Comes\" \"After The Hardest Climb\". No other text.",
+  "prompt_ref": "Create a new typography poster in the same style as the reference image: same colors, letter shapes, texture, ornaments and layout feel. Replace all of its words with new text. The poster text has 7 lines, spelled exactly, in this order: \"Your Only Limit\" \"Is The One You Set\" \"Get Up\" \"Show Up\" \"Never Give Up\" \"The Best View Comes\" \"After The Hardest Climb\". No other text.",
+  "ref": "refs/S2.jpg",
+  "w": 768,
+  "h": 1024
+ },
+ {
+  "id": "T1_S3",
+  "text_id": "T1",
+  "style_id": "S3",
+  "kind": "pendek",
+  "lines": [
+   "PROGRESS",
+   "OVER",
+   "PERFECTION"
+  ],
+  "prompt": "Vintage hand lettering poster on dark black textured paper. Warm beige cream letters with worn letterpress texture, ornate mix of bold serif capitals and decorative display letters with swashes, centered badge-like composition with curved banner lines, thin flourishes and small leaf ornaments between the lines. Flat print design, no photo, no people. The poster text has 3 lines, spelled exactly, in this order: \"PROGRESS\" \"OVER\" \"PERFECTION\". No other text.",
+  "prompt_ref": "Create a new typography poster in the same style as the reference image: same colors, letter shapes, texture, ornaments and layout feel. Replace all of its words with new text. The poster text has 3 lines, spelled exactly, in this order: \"PROGRESS\" \"OVER\" \"PERFECTION\". No other text.",
+  "ref": "refs/S3.jpg",
+  "w": 768,
+  "h": 1024
+ },
+ {
+  "id": "T2_S3",
+  "text_id": "T2",
+  "style_id": "S3",
+  "kind": "sederhana",
+  "lines": [
+   "SMALL STEPS",
+   "EVERY DAY",
+   "LEAD TO",
+   "BIG RESULTS"
+  ],
+  "prompt": "Vintage hand lettering poster on dark black textured paper. Warm beige cream letters with worn letterpress texture, ornate mix of bold serif capitals and decorative display letters with swashes, centered badge-like composition with curved banner lines, thin flourishes and small leaf ornaments between the lines. Flat print design, no photo, no people. The poster text has 4 lines, spelled exactly, in this order: \"SMALL STEPS\" \"EVERY DAY\" \"LEAD TO\" \"BIG RESULTS\". No other text.",
+  "prompt_ref": "Create a new typography poster in the same style as the reference image: same colors, letter shapes, texture, ornaments and layout feel. Replace all of its words with new text. The poster text has 4 lines, spelled exactly, in this order: \"SMALL STEPS\" \"EVERY DAY\" \"LEAD TO\" \"BIG RESULTS\". No other text.",
+  "ref": "refs/S3.jpg",
+  "w": 768,
+  "h": 1024
+ },
+ {
+  "id": "T3_S3",
+  "text_id": "T3",
+  "style_id": "S3",
+  "kind": "panjang",
+  "lines": [
+   "YOUR ONLY LIMIT",
+   "IS THE ONE YOU SET",
+   "GET UP",
+   "SHOW UP",
+   "NEVER GIVE UP",
+   "THE BEST VIEW COMES",
+   "AFTER THE HARDEST CLIMB"
+  ],
+  "prompt": "Vintage hand lettering poster on dark black textured paper. Warm beige cream letters with worn letterpress texture, ornate mix of bold serif capitals and decorative display letters with swashes, centered badge-like composition with curved banner lines, thin flourishes and small leaf ornaments between the lines. Flat print design, no photo, no people. The poster text has 7 lines, spelled exactly, in this order: \"YOUR ONLY LIMIT\" \"IS THE ONE YOU SET\" \"GET UP\" \"SHOW UP\" \"NEVER GIVE UP\" \"THE BEST VIEW COMES\" \"AFTER THE HARDEST CLIMB\". No other text.",
+  "prompt_ref": "Create a new typography poster in the same style as the reference image: same colors, letter shapes, texture, ornaments and layout feel. Replace all of its words with new text. The poster text has 7 lines, spelled exactly, in this order: \"YOUR ONLY LIMIT\" \"IS THE ONE YOU SET\" \"GET UP\" \"SHOW UP\" \"NEVER GIVE UP\" \"THE BEST VIEW COMES\" \"AFTER THE HARDEST CLIMB\". No other text.",
+  "ref": "refs/S3.jpg",
+  "w": 768,
+  "h": 1024
+ }
+]
