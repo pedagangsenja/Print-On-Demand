@@ -5,15 +5,17 @@
 .pod h2 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-heading); margin: 0; text-wrap: balance; }
 .pod h3 { font-size: var(--cds-font-size-body); font-weight: var(--cds-font-weight-medium); margin: 0; }
 .pod p { margin: 0; max-width: 70ch; line-height: 1.55; }
-.pod-section { display: grid; gap: var(--cds-gap-md); min-width: 0; padding-top: var(--cds-pad-lg); border-top: 1px solid var(--color-border-line); }
+.pod-section { scroll-margin-top: calc(var(--pod-top-nav, 0px) + 16px); display: grid; gap: var(--cds-gap-md); min-width: 0; padding-top: var(--cds-pad-lg); border-top: 1px solid var(--color-border-line); }
 .pod-section.pod-first { border-top: 0; padding-top: 0; }
 .pod-kicker { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); letter-spacing: 0.04em; text-transform: uppercase; }
 .pod-muted { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); line-height: 1.5; }
 .pod-lede { font-size: var(--cds-font-size-body); }
 .pod-lede b { font-variant-numeric: tabular-nums; }
 .pod-how { margin: 0; padding-left: 1.2em; display: grid; gap: 4px; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); max-width: 70ch; }
-.pod-nav { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs) var(--cds-gap-sm); position: sticky; top: var(--pod-top-tabs, 0px); z-index: 20; background: var(--color-bg); padding: var(--cds-pad-sm) 0; margin-top: calc(var(--cds-pad-sm) * -1); border-bottom: 1px solid var(--color-border-line); }
-.pod-nav a { color: var(--color-fg); text-decoration: none; border: 1px solid var(--color-border-line); border-radius: 999px; padding: 3px 12px; font-size: var(--cds-font-size-caption); }
+.pod-nav { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs) var(--cds-gap-sm); align-items: center; position: sticky; top: var(--pod-top-tabs, 0px); z-index: 20; background: var(--color-bg); padding: var(--cds-pad-sm) 0; margin-top: calc(var(--cds-pad-sm) * -1); border-bottom: 1px solid var(--color-border-line); }
+.pod-nav::before { content: "Seksyen"; color: var(--color-fg-muted); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; }
+.pod-nav a[aria-current="true"] { background: var(--color-fg); border-color: var(--color-fg); color: var(--color-bg); }
+.pod-nav a { color: var(--color-fg-muted); text-decoration: none; border: 1px solid var(--color-border-line); border-radius: 999px; padding: 3px 12px; font-size: var(--cds-font-size-caption); }
 .pod-nav a:hover, .pod-nav a:focus-visible { background: var(--color-panel); }
 .pod-answers { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--cds-gap-md); }
 .pod-card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); min-width: 0; display: grid; gap: var(--cds-gap-xs); align-content: start; }
@@ -88,7 +90,7 @@
 .pod details[open] > :not(summary) { margin-top: var(--cds-gap-sm); }
 .pod-tabbar { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs); border-bottom: 1px solid var(--color-border-line); position: sticky; top: 0; z-index: 30; background: var(--color-bg); }
 .pod-tab-btn { appearance: none; background: none; border: 0; border-bottom: 2px solid transparent; margin-bottom: -1px; padding: var(--cds-pad-sm) var(--cds-pad-md); font: inherit; font-size: var(--cds-font-size-body); color: var(--color-fg-muted); cursor: pointer; }
-.pod-tab-btn[aria-selected="true"] { color: var(--color-fg); border-bottom-color: var(--color-fg); font-weight: var(--cds-font-weight-medium); }
+.pod-tab-btn[aria-selected="true"] { background: var(--color-panel); border-radius: var(--cds-radius) var(--cds-radius) 0 0; color: var(--color-fg); border-bottom-color: var(--color-fg); font-weight: var(--cds-font-weight-medium); }
 .pod-tab-btn:hover { color: var(--color-fg); }
 .pod-tab-btn:focus-visible { outline: 2px solid var(--color-fg); outline-offset: 2px; border-radius: var(--cds-radius); }
 .pod-tab { display: grid; gap: calc(var(--cds-gap-xl) * 1.5); min-width: 0; }
@@ -187,7 +189,7 @@
 .mt-zoom figcaption { color: #fff; font-size: 0.95rem; text-align: center; max-width: 720px; }
 .mt-zoom-close { position: absolute; top: 12px; right: 12px; padding: 6px 12px; border-radius: 999px; border: 1px solid #fff; background: transparent; color: #fff; cursor: pointer; }
 @media print { .mt-zoom { display: none; } }
-@media print { .pod-tabbar, .pod-nav, .pod th { position: static; } .pod-scroll { max-height: none; overflow: visible; border: 0; } .pod-nav, .pod-tabbar { display: none; } .pod details { border: 0; } #tab-design, #tab-font, #tab-model, #tab-lesen, #tab-sejarah, #tab-setup, #tab-workflow, #tab-aliran, #tab-prestasi { break-before: page; } }
+@media print { .pod-tabbar, .pod-nav, .pod th { position: static; } .pod-scroll { max-height: none; overflow: visible; border: 0; } .pod-nav, .pod-tabbar { display: none; } .pod details { border: 0; } #tab-design, #tab-font, #tab-model, #tab-lesen, #tab-sejarah, #tab-setup, #tab-workflow, #tab-aliran { break-before: page; } }
 </style>
 <link rel="stylesheet" href="aliran.css">
 
@@ -208,7 +210,6 @@
     <button type="button" class="pod-tab-btn" role="tab" id="btn-setup" data-tab="tab-setup" aria-controls="tab-setup" aria-selected="false" tabindex="-1">Setup</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-workflow" data-tab="tab-workflow" aria-controls="tab-workflow" aria-selected="false" tabindex="-1">Workflow</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-aliran" data-tab="tab-aliran" aria-controls="tab-aliran" aria-selected="false" tabindex="-1">Aliran &amp; daftar S/C</button>
-    <button type="button" class="pod-tab-btn" role="tab" id="btn-prestasi" data-tab="tab-prestasi" aria-controls="tab-prestasi" aria-selected="false" tabindex="-1">Prestasi</button>
   </div>
 
 
@@ -265,6 +266,8 @@
   </details>
   <nav class="pod-nav" aria-label="Bahagian poster">
     <a href="#p-untung">Untung</a>
+    <a href="#k-corong">Corong jualan</a>
+    <a href="#k-milestone">Milestone</a>
     <a href="#p-pelan">Pelan niche</a>
     <a href="#p-format">Produk</a>
     <a href="#p-katakunci">Kata kunci</a>
@@ -312,6 +315,46 @@
     <p class="pod-muted">Senario asas diskala ikut bilangan pelawat (model asas: 3,000 sebulan).</p>
   </div>
   <p class="pod-muted">Musim dan kadar pembelian ialah anggaran; kemas kini dengan jualan sebenar selepas 3 bulan.</p>
+</section>
+
+<div id="k-intro" class="pod-section">
+  <p class="pod-lede">Sasaran bulan ke-24: <b data-draw="k-sales" data-source="prestasi_funnel" data-field="sales_day" data-row="0">—</b> jualan sehari × <b data-draw="k-ppo" data-source="prestasi_funnel" data-field="ppo" data-row="0">—</b> = <b data-draw="k-profit" data-source="prestasi_funnel" data-field="profit_month" data-row="0">—</b> sebulan. Angka sebenar akan muncul bila Google Analytics, Pinterest dan WooCommerce disambung.</p>
+</div>
+
+<section id="k-corong" class="pod-section">
+  <h2>Corong jualan: sasaran sebulan</h2>
+  <p class="pod-muted">Setiap peringkat bergantung pada peringkat sebelumnya. Betulkan peringkat yang paling lemah dahulu.</p>
+  <div class="pod-funnel">
+    <div class="pod-kpi pod-step" id="k-step-tayangan">
+      <div class="pod-q">Tayangan Pinterest</div>
+      <div class="pod-mid" data-draw="k-f-impr" data-source="prestasi_funnel" data-field="impressions" data-row="0">—</div>
+      <div class="pod-muted">Sebenar: belum disambung</div>
+    </div>
+    <div class="pod-arrow"><span><span data-draw="k-f-ctr" data-source="prestasi_funnel" data-field="ctr" data-row="0">—</span>% klik →</span></div>
+    <div class="pod-kpi pod-step" id="k-step-pelawat">
+      <div class="pod-q">Pelawat</div>
+      <div class="pod-mid" data-draw="k-f-vis" data-source="prestasi_funnel" data-field="visitors" data-row="0">—</div>
+      <div class="pod-muted">Sebenar: belum disambung</div>
+    </div>
+    <div class="pod-arrow"><span><span data-draw="k-f-conv" data-source="prestasi_funnel" data-field="conv" data-row="0">—</span>% membeli →</span></div>
+    <div class="pod-kpi pod-step" id="k-step-pesanan">
+      <div class="pod-q">Pesanan</div>
+      <div class="pod-mid" data-draw="k-f-orders" data-source="prestasi_funnel" data-field="orders_month" data-row="0">—</div>
+      <div class="pod-muted">Sebenar: belum disambung</div>
+    </div>
+    <div class="pod-arrow"><span>× <span data-draw="k-f-ppo" data-source="prestasi_funnel" data-field="ppo" data-row="0">—</span> →</span></div>
+    <div class="pod-kpi pod-step pod-hl" id="k-step-untung">
+      <div class="pod-q">Untung</div>
+      <div class="pod-mid" data-draw="k-f-profit" data-source="prestasi_funnel" data-field="profit_month" data-row="0">—</div>
+      <div class="pod-muted">Sebenar: belum disambung</div>
+    </div>
+  </div>
+</section>
+
+<section id="k-milestone" class="pod-section">
+  <h2>Milestone ke 10 jualan sehari</h2>
+  <p class="pod-muted">Semak setiap bulan. Kalau di bawah sasaran, baiki peringkat corong yang paling lemah sebelum menambah pin.</p>
+  <div class="pod-kpis" id="k-ms" data-draw="k-milestones" data-source="prestasi_milestones"></div>
 </section>
 
 <section id="p-pelan" class="pod-section">
@@ -1120,6 +1163,12 @@
   </div>
 </div>
 
+<nav class="pod-nav" aria-label="Bahagian setup">
+    <a href="#st-senarai">Checklist setup</a>
+    <a href="#k-analisa">5 analisa</a>
+    <a href="#k-alat">Alat data</a>
+  </nav>
+
 <section id="st-senarai" class="pod-section">
   <h2>Checklist ikut fasa</h2>
   <p class="pod-muted">Status ditanda oleh Claude selepas menyemak. "Bersama" bermaksud Claude sediakan, anda klik atau tampal.</p>
@@ -1158,6 +1207,52 @@
       </table>
     </div>
   </details>
+</section>
+
+<section id="k-analisa" class="pod-section">
+  <h2>Lima analisa</h2>
+  <p class="pod-muted">Sasaran setiap metrik. Kolum "Sebenar" akan diisi bila data disambung.</p>
+  <div class="pod-analyses" id="k-analyses" data-draw="k-analyses" data-source="prestasi_kpi"></div>
+  <template id="tpl-k-analysis">
+    <article class="pod-card pod-analysis">
+      <div class="pod-guide-head">
+        <h3 class="k-a-title"></h3>
+        <span class="pod-pill" data-tone="warn">Belum disambung</span>
+      </div>
+      <div class="pod-muted k-a-q"></div>
+      <div class="pod-table-wrap">
+        <table class="pod-mini" data-source="prestasi_kpi" data-row-key="id">
+          <thead><tr>
+            <th data-field="metric">Metrik</th>
+            <th data-field="target">Sasaran</th>
+            <th data-field="actual_status">Sebenar</th>
+          </tr></thead>
+          <tbody class="k-a-body"></tbody>
+        </table>
+      </div>
+      <details class="pod-more">
+        <summary>Kalau rendah, buat apa?</summary>
+        <ul class="pod-rules k-a-actions"></ul>
+      </details>
+    </article>
+  </template>
+</section>
+
+<section id="k-alat" class="pod-section">
+  <h2>Alat data yang perlu disambung</h2>
+  <p class="pod-muted">Semuanya percuma. Setiap satu diperlukan untuk mengisi kolum "Sebenar".</p>
+  <div class="pod-table-wrap">
+    <table id="k-table-tools" data-source="prestasi_tools" data-row-key="tool">
+      <thead><tr>
+        <th data-field="tool">Alat</th>
+        <th data-field="analysis">Untuk analisa</th>
+        <th data-field="gives">Data yang diberi</th>
+        <th data-field="how">Cara sambung</th>
+        <th data-field="status">Status</th>
+      </tr></thead>
+      <tbody data-draw="k-tools-body"></tbody>
+    </table>
+  </div>
 </section>
 
 </section>
@@ -1355,101 +1450,7 @@
 
 </section>
 
-<section id="tab-prestasi" class="pod-tab" role="tabpanel" aria-labelledby="btn-prestasi" hidden>
 
-<div id="k-intro" class="pod-section pod-first">
-  <p class="pod-lede">Sasaran bulan ke-24: <b data-draw="k-sales" data-source="prestasi_funnel" data-field="sales_day" data-row="0">—</b> jualan sehari × <b data-draw="k-ppo" data-source="prestasi_funnel" data-field="ppo" data-row="0">—</b> = <b data-draw="k-profit" data-source="prestasi_funnel" data-field="profit_month" data-row="0">—</b> sebulan. Angka sebenar akan muncul bila Google Analytics, Pinterest dan WooCommerce disambung.</p>
-  <nav class="pod-nav" aria-label="Bahagian prestasi">
-    <a href="#k-corong">Corong jualan</a>
-    <a href="#k-milestone">Milestone</a>
-    <a href="#k-analisa">5 analisa</a>
-    <a href="#k-alat">Alat data</a>
-  </nav>
-</div>
-
-<section id="k-corong" class="pod-section">
-  <h2>Corong jualan: sasaran sebulan</h2>
-  <p class="pod-muted">Setiap peringkat bergantung pada peringkat sebelumnya. Betulkan peringkat yang paling lemah dahulu.</p>
-  <div class="pod-funnel">
-    <div class="pod-kpi pod-step" id="k-step-tayangan">
-      <div class="pod-q">Tayangan Pinterest</div>
-      <div class="pod-mid" data-draw="k-f-impr" data-source="prestasi_funnel" data-field="impressions" data-row="0">—</div>
-      <div class="pod-muted">Sebenar: belum disambung</div>
-    </div>
-    <div class="pod-arrow"><span><span data-draw="k-f-ctr" data-source="prestasi_funnel" data-field="ctr" data-row="0">—</span>% klik →</span></div>
-    <div class="pod-kpi pod-step" id="k-step-pelawat">
-      <div class="pod-q">Pelawat</div>
-      <div class="pod-mid" data-draw="k-f-vis" data-source="prestasi_funnel" data-field="visitors" data-row="0">—</div>
-      <div class="pod-muted">Sebenar: belum disambung</div>
-    </div>
-    <div class="pod-arrow"><span><span data-draw="k-f-conv" data-source="prestasi_funnel" data-field="conv" data-row="0">—</span>% membeli →</span></div>
-    <div class="pod-kpi pod-step" id="k-step-pesanan">
-      <div class="pod-q">Pesanan</div>
-      <div class="pod-mid" data-draw="k-f-orders" data-source="prestasi_funnel" data-field="orders_month" data-row="0">—</div>
-      <div class="pod-muted">Sebenar: belum disambung</div>
-    </div>
-    <div class="pod-arrow"><span>× <span data-draw="k-f-ppo" data-source="prestasi_funnel" data-field="ppo" data-row="0">—</span> →</span></div>
-    <div class="pod-kpi pod-step pod-hl" id="k-step-untung">
-      <div class="pod-q">Untung</div>
-      <div class="pod-mid" data-draw="k-f-profit" data-source="prestasi_funnel" data-field="profit_month" data-row="0">—</div>
-      <div class="pod-muted">Sebenar: belum disambung</div>
-    </div>
-  </div>
-</section>
-
-<section id="k-milestone" class="pod-section">
-  <h2>Milestone ke 10 jualan sehari</h2>
-  <p class="pod-muted">Semak setiap bulan. Kalau di bawah sasaran, baiki peringkat corong yang paling lemah sebelum menambah pin.</p>
-  <div class="pod-kpis" id="k-ms" data-draw="k-milestones" data-source="prestasi_milestones"></div>
-</section>
-
-<section id="k-analisa" class="pod-section">
-  <h2>Lima analisa</h2>
-  <p class="pod-muted">Sasaran setiap metrik. Kolum "Sebenar" akan diisi bila data disambung.</p>
-  <div class="pod-analyses" id="k-analyses" data-draw="k-analyses" data-source="prestasi_kpi"></div>
-  <template id="tpl-k-analysis">
-    <article class="pod-card pod-analysis">
-      <div class="pod-guide-head">
-        <h3 class="k-a-title"></h3>
-        <span class="pod-pill" data-tone="warn">Belum disambung</span>
-      </div>
-      <div class="pod-muted k-a-q"></div>
-      <div class="pod-table-wrap">
-        <table class="pod-mini" data-source="prestasi_kpi" data-row-key="id">
-          <thead><tr>
-            <th data-field="metric">Metrik</th>
-            <th data-field="target">Sasaran</th>
-            <th data-field="actual_status">Sebenar</th>
-          </tr></thead>
-          <tbody class="k-a-body"></tbody>
-        </table>
-      </div>
-      <details class="pod-more">
-        <summary>Kalau rendah, buat apa?</summary>
-        <ul class="pod-rules k-a-actions"></ul>
-      </details>
-    </article>
-  </template>
-</section>
-
-<section id="k-alat" class="pod-section">
-  <h2>Alat data yang perlu disambung</h2>
-  <p class="pod-muted">Semuanya percuma. Setiap satu diperlukan untuk mengisi kolum "Sebenar".</p>
-  <div class="pod-table-wrap">
-    <table id="k-table-tools" data-source="prestasi_tools" data-row-key="tool">
-      <thead><tr>
-        <th data-field="tool">Alat</th>
-        <th data-field="analysis">Untuk analisa</th>
-        <th data-field="gives">Data yang diberi</th>
-        <th data-field="how">Cara sambung</th>
-        <th data-field="status">Status</th>
-      </tr></thead>
-      <tbody data-draw="k-tools-body"></tbody>
-    </table>
-  </div>
-</section>
-
-</section>
 
 
 
@@ -1993,7 +1994,7 @@ dash.draw('d-gallery-w', POD.sGallery);
     all.forEach((t) => { t.hidden = t.id !== id; });
     btns().forEach((b) => { const on = b.dataset.tab === id; b.setAttribute('aria-selected', on ? 'true' : 'false'); b.tabIndex = on ? 0 : -1; });
     if (link) dash.setLink(id);
-    if (POD.stickyTops) requestAnimationFrame(POD.stickyTops);
+    if (POD.stickyTops) requestAnimationFrame(() => { POD.stickyTops(); if (POD.spy) POD.spy(); });
     return true;
   };
   btns().forEach((b, i, list) => {
@@ -2018,6 +2019,27 @@ dash.draw('d-gallery-w', POD.sGallery);
   POD.stickyTops();
   if (window.ResizeObserver && bar) new ResizeObserver(() => POD.stickyTops()).observe(bar);
   window.addEventListener('resize', POD.stickyTops);
+
+
+  POD.spy = () => {
+    const nav = document.querySelector('.pod-tab:not([hidden]) .pod-nav');
+    if (!nav) return;
+    const top = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--pod-top-nav')) || 0;
+    const links = [...nav.querySelectorAll('a')];
+    let cur = null;
+    links.forEach((a) => {
+      const el = document.getElementById(decodeURIComponent(a.getAttribute('href').slice(1)));
+      if (el && el.getBoundingClientRect().top <= top + 28) cur = a;
+    });
+    links.forEach((a) => a.setAttribute('aria-current', a === cur ? 'true' : 'false'));
+  };
+  let spying = false;
+  window.addEventListener('scroll', () => {
+    if (spying) return;
+    spying = true;
+    requestAnimationFrame(() => { spying = false; POD.spy(); });
+  }, { passive: true });
+  POD.spy();
 
   const fromHash = () => {
     let h = '';
