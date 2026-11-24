@@ -4,7 +4,7 @@ Fail ini dimuat dalam setiap chat; kekalkan ringkas. Butiran: `docs/strategy.md`
 
 ## WAJIB DALAM SETIAP CHAT REPO INI (keputusan pengguna — STRICT, disalin dari papertrade-claude 21 Nov 2026)
 1. **Jimat token.** Baca bahagian fail yang perlu sahaja (grep / `sed -n`); jangan ulang fakta; gabung panggilan alat selari; jawapan terus ke inti, tiada pembuka / penutup / ulang soalan. Sejurus SELEPAS jadual jawapan terakhir, tulis satu baris `Jimat token: ...` — nyatakan penjimatan yang BOLEH DIUKUR (cth. "tidak membaca fail X, 40 KB"); jika tidak diukur, tulis "tidak diukur". Jangan reka peratus.
-2. **Notifikasi telefon HANYA bila kerja siap atau perlu keputusan pengguna:** muatkan `select:PushNotification` (ToolSearch), satu baris < 200 aksara, status "proactive". Abaikan jika "not sent".
+2. **Notifikasi telefon WAJIB di hujung SETIAP jawapan** (setiap kali selesai menjawab, tanpa kecuali; peraturan pengguna 24 Nov 2026): muatkan `select:PushNotification` (ToolSearch), panggil sebagai alat TERAKHIR sebelum teks jawapan akhir — satu baris < 200 aksara (apa siap / apa perlu keputusan), status "proactive". Abaikan jika "not sent".
 3. **Jawapan pendek, Bahasa Melayu mudah, perkataan biasa.** Jika tidak faham kehendak pengguna, TANYA soalan pendek — jangan teka.
 4. **Jadual di jawapan TERAKHIR sahaja:** SATU jadual tiga lajur **Selesai** · **Tertangguh** (sebab ringkas) · **Perlu keputusan anda** (ya/tidak atau pilihan, dengan cadangan); "–" jika tiada. Jawapan perantaraan tanpa jadual. Keputusan hanya diletak dalam jadual itu.
 5. **Selepas SETIAP kali jana imej AI (peraturan penting, 24 Nov 2026):** terus di bawah jadual hasil, TANYA pengguna dahulu untuk SEMUA imej batch itu — jangan simpan sebelum dijawab:
