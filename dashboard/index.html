@@ -196,7 +196,7 @@
   <div class="pod-kicker">Riset untuk kedai typography di Pinterest</div>
   <h1>Riset POD Typography</h1>
   <div class="pod-tabbar" role="tablist" aria-label="Tab dashboard">
-    <button type="button" class="pod-tab-btn" role="tab" id="btn-poster" data-tab="tab-poster" aria-controls="tab-poster" aria-selected="true">Poster</button>
+    <button type="button" class="pod-tab-btn" role="tab" id="btn-poster" data-tab="tab-poster" aria-controls="tab-poster" aria-selected="true">Ujikaji</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-design" data-tab="tab-design" aria-controls="tab-design" aria-selected="false" tabindex="-1">Design</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-font" data-tab="tab-font" aria-controls="tab-font" aria-selected="false" tabindex="-1">Font</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-model" data-tab="tab-model" aria-controls="tab-model" aria-selected="false" tabindex="-1">Model AI</button>
@@ -622,18 +622,11 @@
 <section id="tab-font" class="pod-tab" role="tabpanel" aria-labelledby="btn-font" hidden>
 
 <div id="f-intro" class="pod-section pod-first">
-  <p class="pod-lede">Font Generator: upload satu contoh poster typography, AI cadang 10 font Google Fonts yang serupa (lesen OFL / Apache 2.0, boleh guna komersial), jana mockup dari font pilihan, dan simpan yang terbaik sebagai master sheet untuk semua poster.</p>
-  <p><a href="https://claude.ai/artifact/K6uL4Xy8EssqEVpd7FzzS7" target="_blank" rel="noopener noreferrer">Buka Font Generator ↗</a></p>
-  <ol>
-    <li>Upload contoh design dan tekan Decode design.</li>
-    <li>Tandakan font (cadangan 5) dan tekan Jana mockup.</li>
-    <li>Pilih satu mockup dan simpan sebagai master sheet. Tandakan master yang Aktif.</li>
-  </ol>
+  <p class="pod-lede">Senarai induk fon yang lesennya membenarkan poster dan fail digital dijual, laman sumber fon, jenis lesen yang selamat, dan fon yang ditolak kerana lesennya berisiko.</p>
 </div>
 
 <nav class="pod-nav" aria-label="Bahagian fon">
     <a href="#f-induk">Senarai induk</a>
-    <a href="#f-mood">Ikut mood</a>
     <a href="#f-cari">Cari fon</a>
     <a href="#f-laman">Laman sumber</a>
     <a href="#f-lesen">Jenis lesen</a>
@@ -644,12 +637,6 @@
   <h2>Senarai induk fon (bebas untuk jualan)</h2>
   <p class="pod-lede"><b data-draw="f-total" data-source="fonts_summary" data-field="total" data-row="0">—</b> fon yang lesennya membenarkan poster dan fail digital dijual: <b data-draw="f-n-google" data-source="fonts_summary" data-field="google" data-row="0">—</b> dari Google Fonts, <b data-draw="f-n-fontshare" data-source="fonts_summary" data-field="fontshare" data-row="0">—</b> dari Fontshare dan <b data-draw="f-n-fq" data-source="fonts_summary" data-field="fontsquirrel" data-row="0">—</b> dari Font Squirrel. <b data-draw="f-n-rej" data-source="fonts_summary" data-field="rejected" data-row="0">—</b> fon Font Squirrel ditolak kerana lesennya berisiko, dan <b data-draw="f-n-unchk" data-source="fonts_meta" data-field="fq_unchecked" data-row="0">—</b> lagi tidak dimasukkan kerana lesennya tidak dapat dibaca (muat turun disekat).</p>
   <p class="pod-muted">Setiap fon dilabel ikut mood poster. Google: dari tag rasmi Google Fonts (skor 0–100). Fontshare dan Font Squirrel: dari kategori laman itu, ditambah semakan rupa oleh Claude (bukti lemah). Kualiti = purata skor lukisan dan jarak huruf dari tag Google.</p>
-</section>
-
-<section id="f-mood" class="pod-section">
-  <h2>Pilih fon ikut mood poster</h2>
-  <p class="pod-muted">Mood dahulu, fon kemudian: fon lucu untuk poster motivasi akan mengelirukan pembeli. Setiap kad ada niche yang sesuai, fon teks pasangan, apa yang perlu dielak dan 12 fon terbaik. Tekan gambar untuk saiz penuh.</p>
-  <div class="pod-font-moods" id="f-mood-cards" data-draw="f-moods" data-source="fonts_moods fonts_specimens"></div>
 </section>
 
 <section id="f-cari" class="pod-section">
@@ -3142,29 +3129,6 @@ dash.calc('fonts_summary', {
 
 POD.text('f-n-unchk', 'fonts_meta', (r) => r[0].fq_unchecked, POD.int);
 
-dash.draw('f-moods', (el) => {
-  const moods = POD.ok('fonts_moods');
-  el.replaceChildren();
-  if (!moods) { const p = document.createElement('p'); p.className = 'pod-msg'; p.textContent = POD.statusMsg('fonts_moods'); el.appendChild(p); return; }
-  const imgs = {};
-  (POD.ok('fonts_specimens') || []).forEach((r) => { if (typeof r.url === 'string' && r.url.startsWith('/_blob/')) imgs[r.mood] = r.url; });
-  moods.forEach((m) => {
-    const card = document.createElement('article'); card.className = 'pod-card pod-font-card'; card.id = 'f-mood-' + m.id;
-    const h = document.createElement('h3'); h.textContent = m.label; card.appendChild(h);
-    const d = document.createElement('p'); d.className = 'pod-muted'; d.textContent = m.desc + ' · ' + POD.int(m.count) + ' fon'; card.appendChild(d);
-    if (imgs[m.id]) {
-      const a = document.createElement('a'); a.href = imgs[m.id]; a.target = '_blank'; a.rel = 'noopener noreferrer';
-      const im = document.createElement('img'); im.src = imgs[m.id]; im.alt = 'Contoh 12 fon mood ' + m.label; im.loading = 'lazy'; im.className = 'pod-font-img';
-      a.appendChild(im); card.appendChild(a);
-    }
-    const dl = document.createElement('dl'); dl.className = 'pod-font-dl';
-    [['Niche', (m.niche_names || m.niches || []).join(', ')], ['Teks pasangan', m.pair], ['Elak', m.elak], ['Fon terbaik', (m.top || []).join(', ')], ['Lebih unik (luar Google)', (m.other || []).join(', ')]].forEach(([k, v]) => {
-      const dt = document.createElement('dt'); dt.textContent = k; const dd = document.createElement('dd'); dd.textContent = v || '—'; dl.append(dt, dd);
-    });
-    card.appendChild(dl);
-    el.appendChild(card);
-  });
-});
 
 dash.draw('f-mood-filter', (sel) => {
   const moods = POD.ok('fonts_moods') || [];
