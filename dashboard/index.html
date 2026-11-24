@@ -12,7 +12,7 @@
 .pod-lede { font-size: var(--cds-font-size-body); }
 .pod-lede b { font-variant-numeric: tabular-nums; }
 .pod-how { margin: 0; padding-left: 1.2em; display: grid; gap: 4px; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); max-width: 70ch; }
-.pod-nav { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs) var(--cds-gap-sm); }
+.pod-nav { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs) var(--cds-gap-sm); position: sticky; top: var(--pod-top-tabs, 0px); z-index: 20; background: var(--color-bg); padding: var(--cds-pad-sm) 0; margin-top: calc(var(--cds-pad-sm) * -1); border-bottom: 1px solid var(--color-border-line); }
 .pod-nav a { color: var(--color-fg); text-decoration: none; border: 1px solid var(--color-border-line); border-radius: 999px; padding: 3px 12px; font-size: var(--cds-font-size-caption); }
 .pod-nav a:hover, .pod-nav a:focus-visible { background: var(--color-panel); }
 .pod-answers { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--cds-gap-md); }
@@ -50,6 +50,7 @@
 .pod-np-profit { font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
 .pod-np-meta { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs) var(--cds-gap-sm); align-items: center; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
 .pod-table-wrap { overflow-x: auto; min-width: 0; }
+.pod-scroll th { top: 0; }
 .pod-scroll { max-height: 460px; overflow: auto; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); }
 .ms-toggle { appearance: none; background: none; border: 0; padding: 0; font: inherit; font-weight: 600; color: var(--color-fg); cursor: pointer; text-align: left; display: inline-flex; gap: 5px; align-items: baseline; }
 .ms-toggle::before { content: '\25b8'; font-size: 9px; color: var(--color-fg-muted); }
@@ -67,7 +68,7 @@
 .pod-fit .pod-pill { white-space: normal; padding: 0 6px; }
 @media (max-width: 820px) { .pod-fit table { table-layout: auto; min-width: 820px; } }
 .pod table { border-collapse: collapse; width: 100%; font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; }
-.pod th { position: sticky; top: 0; background: var(--color-bg); font-weight: var(--cds-font-weight-medium); color: var(--color-fg-muted); white-space: nowrap; z-index: 1; }
+.pod th { position: sticky; top: var(--pod-top-nav, 0px); background: var(--color-bg); font-weight: var(--cds-font-weight-medium); color: var(--color-fg-muted); white-space: nowrap; z-index: 1; }
 .pod th, .pod td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--color-border-line); vertical-align: top; }
 .pod td.pod-num, .pod th.pod-num { text-align: right; white-space: nowrap; }
 .pod td.pod-wide { min-width: 220px; }
@@ -85,7 +86,7 @@
 .pod details { border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-sm) var(--cds-pad-md); }
 .pod details summary { cursor: pointer; font-weight: var(--cds-font-weight-medium); font-size: var(--cds-font-size-caption); }
 .pod details[open] > :not(summary) { margin-top: var(--cds-gap-sm); }
-.pod-tabbar { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs); border-bottom: 1px solid var(--color-border-line); }
+.pod-tabbar { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs); border-bottom: 1px solid var(--color-border-line); position: sticky; top: 0; z-index: 30; background: var(--color-bg); }
 .pod-tab-btn { appearance: none; background: none; border: 0; border-bottom: 2px solid transparent; margin-bottom: -1px; padding: var(--cds-pad-sm) var(--cds-pad-md); font: inherit; font-size: var(--cds-font-size-body); color: var(--color-fg-muted); cursor: pointer; }
 .pod-tab-btn[aria-selected="true"] { color: var(--color-fg); border-bottom-color: var(--color-fg); font-weight: var(--cds-font-weight-medium); }
 .pod-tab-btn:hover { color: var(--color-fg); }
@@ -186,7 +187,7 @@
 .mt-zoom figcaption { color: #fff; font-size: 0.95rem; text-align: center; max-width: 720px; }
 .mt-zoom-close { position: absolute; top: 12px; right: 12px; padding: 6px 12px; border-radius: 999px; border: 1px solid #fff; background: transparent; color: #fff; cursor: pointer; }
 @media print { .mt-zoom { display: none; } }
-@media print { .pod-scroll { max-height: none; overflow: visible; border: 0; } .pod-nav, .pod-tabbar { display: none; } .pod details { border: 0; } #tab-design, #tab-font, #tab-model, #tab-lesen, #tab-sejarah, #tab-setup, #tab-workflow, #tab-aliran, #tab-prestasi { break-before: page; } }
+@media print { .pod-tabbar, .pod-nav, .pod th { position: static; } .pod-scroll { max-height: none; overflow: visible; border: 0; } .pod-nav, .pod-tabbar { display: none; } .pod details { border: 0; } #tab-design, #tab-font, #tab-model, #tab-lesen, #tab-sejarah, #tab-setup, #tab-workflow, #tab-aliran, #tab-prestasi { break-before: page; } }
 </style>
 <link rel="stylesheet" href="aliran.css">
 
@@ -195,7 +196,9 @@
 <header id="ringkasan" class="pod-section pod-first">
   <div class="pod-kicker">Riset untuk kedai typography di Pinterest</div>
   <h1>Riset POD Typography</h1>
-  <div class="pod-tabbar" role="tablist" aria-label="Tab dashboard">
+</header>
+
+<div class="pod-tabbar" role="tablist" aria-label="Tab dashboard">
     <button type="button" class="pod-tab-btn" role="tab" id="btn-poster" data-tab="tab-poster" aria-controls="tab-poster" aria-selected="true">Ujikaji</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-design" data-tab="tab-design" aria-controls="tab-design" aria-selected="false" tabindex="-1">Design</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-font" data-tab="tab-font" aria-controls="tab-font" aria-selected="false" tabindex="-1">Font</button>
@@ -204,10 +207,10 @@
     <button type="button" class="pod-tab-btn" role="tab" id="btn-sejarah" data-tab="tab-sejarah" aria-controls="tab-sejarah" aria-selected="false" tabindex="-1">Chat lepas</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-setup" data-tab="tab-setup" aria-controls="tab-setup" aria-selected="false" tabindex="-1">Setup</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-workflow" data-tab="tab-workflow" aria-controls="tab-workflow" aria-selected="false" tabindex="-1">Workflow</button>
-    <button type="button" class="pod-tab-btn" role="tab" id="btn-aliran" data-tab="tab-aliran" aria-controls="tab-aliran" aria-selected="false" tabindex="-1">Daftar S & C</button>
+    <button type="button" class="pod-tab-btn" role="tab" id="btn-aliran" data-tab="tab-aliran" aria-controls="tab-aliran" aria-selected="false" tabindex="-1">Aliran &amp; daftar S/C</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-prestasi" data-tab="tab-prestasi" aria-controls="tab-prestasi" aria-selected="false" tabindex="-1">Prestasi</button>
   </div>
-</header>
+
 
 <section id="tab-poster" class="pod-tab" role="tabpanel" aria-labelledby="btn-poster">
 
@@ -1184,7 +1187,6 @@
     <a href="#wf-mingguan">Mingguan</a>
     <a href="#wf-bulanan">Bulanan</a>
     <a href="#wf-sop">SOP lettering + QC</a>
-    <a href="#al-langkah">Aliran 12 langkah</a>
   </nav>
 
 <section id="wf-harian" class="pod-section">
@@ -1231,6 +1233,24 @@
   </div>
 </section>
 
+
+
+
+</section>
+
+<section id="tab-aliran" class="pod-tab" role="tabpanel" aria-labelledby="btn-aliran" hidden>
+
+<div id="dsc-intro" class="pod-section pod-first">
+  <p class="pod-lede">Daftar rujukan setiap design: gaya tipografi bertanda S (contoh S001), gabungan warna bertanda C (contoh C001), dan kod design menggabungkan kedua-duanya supaya setiap poster boleh dijejak dan diulang.</p>
+</div>
+
+<nav class="pod-nav" aria-label="Bahagian daftar S dan C">
+    <a href="#al-langkah">Aliran 12 langkah</a>
+    <a href="#al-gaya">Daftar gaya (S)</a>
+    <a href="#al-warna">Daftar warna (C)</a>
+    <a href="#al-kod">Kod design</a>
+  </nav>
+
 <div id="al-intro" class="pod-section">
   <p class="pod-lede">Aliran 12 langkah daripada senarai ayat hingga fail siap cetak. Setiap gaya tipografi didaftar sebagai S (contoh S001) dan setiap gabungan warna sebagai C (contoh C001), supaya setiap poster boleh dijejak.</p>
 </div>
@@ -1273,20 +1293,6 @@
     </div>
   </div>
 </section>
-
-</section>
-
-<section id="tab-aliran" class="pod-tab" role="tabpanel" aria-labelledby="btn-aliran" hidden>
-
-<div id="dsc-intro" class="pod-section pod-first">
-  <p class="pod-lede">Daftar rujukan setiap design: gaya tipografi bertanda S (contoh S001), gabungan warna bertanda C (contoh C001), dan kod design menggabungkan kedua-duanya supaya setiap poster boleh dijejak dan diulang.</p>
-</div>
-
-<nav class="pod-nav" aria-label="Bahagian daftar S dan C">
-    <a href="#al-gaya">Daftar gaya (S)</a>
-    <a href="#al-warna">Daftar warna (C)</a>
-    <a href="#al-kod">Kod design</a>
-  </nav>
 
 <section id="al-gaya" class="pod-section">
   <h2>Daftar gaya (S)</h2>
@@ -1987,6 +1993,7 @@ dash.draw('d-gallery-w', POD.sGallery);
     all.forEach((t) => { t.hidden = t.id !== id; });
     btns().forEach((b) => { const on = b.dataset.tab === id; b.setAttribute('aria-selected', on ? 'true' : 'false'); b.tabIndex = on ? 0 : -1; });
     if (link) dash.setLink(id);
+    if (POD.stickyTops) requestAnimationFrame(POD.stickyTops);
     return true;
   };
   btns().forEach((b, i, list) => {
@@ -1997,6 +2004,21 @@ dash.draw('d-gallery-w', POD.sGallery);
       if (next) { POD.openTab(next.dataset.tab, true); next.focus(); }
     });
   });
+
+  const bar = document.querySelector('.pod-tabbar');
+  POD.stickyTops = () => {
+    if (!bar) return;
+    const root = document.documentElement;
+    const barH = Math.round(bar.getBoundingClientRect().height);
+    root.style.setProperty('--pod-top-tabs', barH + 'px');
+    const open = document.querySelector('.pod-tab:not([hidden]) .pod-nav');
+    const navH = open ? Math.round(open.getBoundingClientRect().height) : 0;
+    root.style.setProperty('--pod-top-nav', (barH + navH) + 'px');
+  };
+  POD.stickyTops();
+  if (window.ResizeObserver && bar) new ResizeObserver(() => POD.stickyTops()).observe(bar);
+  window.addEventListener('resize', POD.stickyTops);
+
   const fromHash = () => {
     let h = '';
     try { h = decodeURIComponent((location.hash || '').slice(1)); } catch (e) { h = ''; }
