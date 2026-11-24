@@ -1,0 +1,18 @@
+{
+ "raw": "steps_S2_klein4b_s42.png",
+ "style": "S2",
+ "bg": "#0d0d0d",
+ "fills": [
+  "#efe6d2"
+ ],
+ "layers": 1,
+ "ink_px": [
+  1844703
+ ],
+ "sizes": {
+  "18x24": [
+   5400,
+   7200
+  ]
+ }
+}

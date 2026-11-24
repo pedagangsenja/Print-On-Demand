@@ -97,6 +97,17 @@ Siap cetak (finish.py): 7–10 s setiap saiz untuk gaya rata; S2 (grain) 5 saiz 
 
 Kesimpulan: ayat Inggeris pendek = 12/12 ejaan betul walaupun model CPU (ujian Melayu panjang: 92–96% perkataan betul). Langkah siap cetak menyelesaikan saiz cetak. Had sekarang = kelajuan CPU (~8 imej/jam); GPU Kaggle diperlukan untuk Qwen-Image, Qwen-Image-Edit dan batch besar.
 
+## 6b. Banding 3 enjin, quote dan seed sama (24 Nov, CPU 4 teras)
+
+Prompt `styles.py` S1–S6, seed 42 dan 7, 768×1024. Semakan mata Claude; tahap bukti lemah (2 seed, 1 quote).
+
+- MOSS-Image SFT 8 langkah: 12/12 betul, 6/6 gaya, ~7.3 min/imej.
+- ERNIE-Image-Turbo GGUF Q8 8 langkah (`unsloth/ERNIE-Image-Turbo-GGUF`): 12/12 betul, 6/6 gaya, ~7.3 min/imej. Susun atur dan hiasan paling ikut prompt; dua seed hampir serupa. `finish.py` lulus 6/6.
+- FLUX.2 klein 4B 4 langkah: 6/12 betul, 4/6 gaya, ~1.6 min/imej. Kerap jadi "Smal"/"Smail" dalam skrip; tanda seru rawak (S5 s42).
+
+Kesimpulan: untuk quote pendek, ERNIE dan MOSS sama kuat dari segi ejaan; ERNIE lebih ikut prompt, MOSS lebih pelbagai antara seed. klein sesuai hanya untuk draf pantas.
+Skrip: `designs/lettering-p9b/gen.py`; QC: `designs/lettering/test-6gaya/raw/qc_p9b.txt`.
+
 ## 7. Had dan risiko
 - Semakan ejaan dan gaya dibuat dengan mata Claude: tahap bukti lemah.
 - Kuota GPU Kaggle mingguan tidak dinyatakan dalam dokumen rasmi (sumber pihak ketiga ~30 jam).

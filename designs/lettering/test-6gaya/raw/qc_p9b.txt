@@ -1,0 +1,24 @@
+steps_S1_ernie_s42|0|0|Ejaan betul; 4 baris (DAY baris sendiri), huruf bulat melantun, confetti seimbang
+steps_S2_ernie_s42|0|0|Ejaan betul; skrip + huruf kecil berselang, swash Day panjang, sangat hampir rujukan
+steps_S3_ernie_s42|0|0|Ejaan betul; skrip berus + swash + percikan, saiz baris hampir sama
+steps_S4_ernie_s42|0|0|Ejaan betul; campuran berus santai + bintang, tekstur kapur halus
+steps_S5_ernie_s42|0|0|Ejaan betul; blok lusuh + skrip + noktah, lebar baris sama
+steps_S6_ernie_s42|0|0|Ejaan betul; inline putih + EVERY kuning + sinar kuning, bentuk bujur
+steps_S1_ernie_s7|0|0|Ejaan betul; titik confetti terselit antara P dan S (perlu dibuang)
+steps_S2_ernie_s7|0|0|Ejaan betul; hampir sama dengan s42 (seed kurang beza)
+steps_S3_ernie_s7|0|0|Ejaan betul; percikan lebih banyak, swash panjang
+steps_S4_ernie_s7|0|0|Ejaan betul; latar kapur bertekstur, hampir sama s42
+steps_S5_ernie_s7|0|0|Ejaan betul; tekstur lusuh lebih kuat
+steps_S6_ernie_s7|0|0|Ejaan betul; hampir sama s42
+steps_S1_klein4b_s42|1|0|SMAL (Small): satu L hilang
+steps_S2_klein4b_s42|0|0|Ejaan betul; skrip + huruf kecil, swash Day panjang
+steps_S3_klein4b_s42|1|0|Smal (Small): satu L hilang; percikan baik
+steps_S4_klein4b_s42|0|0|Ejaan betul; berus santai + bintang
+steps_S5_klein4b_s42|0|1|ST!EPS: tanda seru rawak dalam STEPS
+steps_S6_klein4b_s42|1|0|Smal (Small): satu L hilang; tiada inline jelas
+steps_S1_klein4b_s7|0|0|Ejaan betul; blok padat, confetti kecil
+steps_S2_klein4b_s7|0|0|Ejaan betul; hampir sama s42
+steps_S3_klein4b_s7|1|0|Smal (Small): satu L hilang
+steps_S4_klein4b_s7|0|0|Ejaan betul; kapur kasar, kurang bintang
+steps_S5_klein4b_s7|0|0|Ejaan betul; blok lusuh + noktah
+steps_S6_klein4b_s7|1|0|Smail (Small): huruf salah
