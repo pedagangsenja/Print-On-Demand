@@ -1,0 +1,10 @@
+[
+{"job": "Jana utama", "tool": "Qwen-Image-2512 + LoRA Lightning 8 langkah", "license": "Apache 2.0", "where": "GPU T4 Kaggle (percuma)", "status": "Tunggu anda sahkan telefon Kaggle"},
+{"job": "Jana sandaran", "tool": "MOSS-Image-SFT 5B + LoRA 8 langkah lodestones", "license": "Apache 2.0", "where": "CPU container, ~7 min/imej", "status": "Dipasang, diuji 23 Nov"},
+{"job": "Imej hero", "tool": "Space rasmi Qwen-Image-2512", "license": "Apache 2.0", "where": "ZeroGPU percuma", "status": "1 imej/hari (Space minta 240 s, kuota 300 s)"},
+{"job": "Betulkan 1 perkataan salah", "tool": "Qwen-Image-Edit-2511", "license": "Apache 2.0", "where": "GPU Kaggle", "status": "Tunggu telefon Kaggle"},
+{"job": "QC ejaan + gaya", "tool": "sheet.py + semakan mata Claude", "license": "-", "where": "container", "status": "Siap"},
+{"job": "Vektor (ganti upscale)", "tool": "potrace 1.16 dalam finish.py", "license": "GPL-2.0 (alat sahaja)", "where": "container", "status": "Siap"},
+{"job": "Palet, susun, tekstur, PNG 300 DPI 5 saiz", "tool": "finish.py (OpenCV, scipy, cairosvg)", "license": "Apache 2.0 / BSD / LGPL-3.0", "where": "container", "status": "Siap"},
+{"job": "Mockup + pin", "tool": "Skrip Pillow/OpenCV", "license": "-", "where": "container", "status": "Belum"}
+]

@@ -1,0 +1,12 @@
+[
+{"no": 1, "phase": "Sekali", "who": "Anda", "step": "Sahkan nombor telefon Kaggle (Settings → Phone verification), ~2 min", "status": "Belum"},
+{"no": 2, "phase": "Sekali", "who": "Claude", "step": "Uji job GPU Kaggle: Qwen-Image-2512 4-bit + Lightning; sandaran MOSS di T4", "status": "Tunggu langkah 1"},
+{"no": 3, "phase": "Sekali", "who": "Claude", "step": "Skrip setup container (potrace + pip) disimpan dalam environment", "status": "Siap"},
+{"no": 4, "phase": "Setiap batch", "who": "Claude", "step": "Tulis 10 quote Inggeris 3–7 perkataan, semak trademark, tetapkan baris + perkataan utama", "status": "Sedia"},
+{"no": 5, "phase": "Setiap batch", "who": "Claude", "step": "Bina prompt ikut gaya S1–S6 (styles.py)", "status": "Sedia"},
+{"no": 6, "phase": "Setiap batch", "who": "Claude", "step": "Jana 4 seed setiap quote (GPU Kaggle; sandaran CPU 2 seed)", "status": "Sedia (CPU)"},
+{"no": 7, "phase": "Setiap batch", "who": "Claude", "step": "QC: ejaan 100%, tiada teks rawak, tiada cacat + 9 ciri gaya; gagal = seed baharu (maks 4)", "status": "Sedia"},
+{"no": 8, "phase": "Setiap batch", "who": "Claude", "step": "finish.py: SVG induk + PNG 300 DPI 8×10 hingga 24×36 + pratonton", "status": "Sedia"},
+{"no": 9, "phase": "Setiap batch", "who": "Anda", "step": "Lulus / tolak design (~5 min)", "status": "Sedia"},
+{"no": 10, "phase": "Setiap batch", "who": "Claude", "step": "Mockup, pin, upload (Workflow sedia ada)", "status": "Belum"}
+]
