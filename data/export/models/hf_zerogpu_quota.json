@@ -1,0 +1,39 @@
+{
+ "rows": [
+  {
+   "tier": "Tanpa log masuk",
+   "minutes": 2,
+   "note": "Keutamaan barisan rendah"
+  },
+  {
+   "tier": "Free",
+   "minutes": 5,
+   "note": "Akaun anda. Diset semula 24 jam selepas kali pertama guna"
+  },
+  {
+   "tier": "PRO",
+   "minutes": 40,
+   "note": "$9/bulan. Boleh lebih guna kredit: $1 setiap 10 minit"
+  },
+  {
+   "tier": "Team",
+   "minutes": 40,
+   "note": "Ahli organisasi Team"
+  },
+  {
+   "tier": "Enterprise",
+   "minutes": 60,
+   "note": "Ahli organisasi Enterprise"
+  }
+ ],
+ "meta": [
+  {
+   "label": "Sumber",
+   "value": "https://huggingface.co/docs/hub/spaces-zerogpu"
+  },
+  {
+   "label": "Disemak",
+   "value": "2026-11-24"
+  }
+ ]
+}

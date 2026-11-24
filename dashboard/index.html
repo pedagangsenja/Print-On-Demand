@@ -51,6 +51,14 @@
 .pod-np-meta { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs) var(--cds-gap-sm); align-items: center; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
 .pod-table-wrap { overflow-x: auto; min-width: 0; }
 .pod-scroll { max-height: 460px; overflow: auto; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); }
+.ms-toggle { appearance: none; background: none; border: 0; padding: 0; font: inherit; font-weight: 600; color: var(--color-fg); cursor: pointer; text-align: left; display: inline-flex; gap: 5px; align-items: baseline; }
+.ms-toggle::before { content: '\25b8'; font-size: 9px; color: var(--color-fg-muted); }
+.ms-toggle[aria-expanded="true"]::before { content: '\25be'; }
+.ms-toggle:hover { text-decoration: underline; }
+.ms-detail > td { background: var(--color-panel); }
+.ms-dl { display: grid; grid-template-columns: max-content 1fr; gap: 3px 14px; margin: 0; }
+.ms-dl dt { color: var(--color-fg-muted); }
+.ms-dl dd { margin: 0; overflow-wrap: anywhere; }
 .pod-fit { min-width: 0; overflow-x: auto; }
 .pod-fit table { table-layout: fixed; width: 100%; font-size: 11px; line-height: 1.35; }
 .pod-fit th, .pod-fit td { padding: 5px 6px; white-space: normal; overflow-wrap: anywhere; }
@@ -999,78 +1007,60 @@
 <section id="tab-lesen" class="pod-tab" role="tabpanel" aria-labelledby="btn-lesen" hidden>
 
 <div id="l-intro" class="pod-section pod-first">
-  <p class="pod-lede">Model jana imej di Hugging Face yang disemak: boleh dijual atau tidak, syarat lesen, kos kuota GPU percuma dan VRAM untuk jalan sendiri.</p>
-  <p class="pod-muted">Lajur Komersial?: hijau = bebas komersial, kuning = boleh dengan syarat, merah = bukan komersial.</p>
+  <p class="pod-lede">Satu jadual induk untuk semua model jana imej: lesen komersial, kuota GPU percuma, VRAM, dan hasil ujian tulisan kita. Klik nama model untuk buka semua butiran.</p>
+  <p class="pod-muted">Semakan 24 Nov 2026 daripada fail lesen, model card dan kod Space di Hugging Face, digabung dengan ujian sendiri 22&ndash;23 Nov. Kuota GPU percuma (ZeroGPU): akaun Free <b data-draw="ml-free" data-source="hf_zerogpu_quota" data-field="minutes" data-where="tier=Free">&mdash;</b> minit sehari, PRO <b data-draw="ml-pro" data-source="hf_zerogpu_quota" data-field="minutes" data-where="tier=PRO">&mdash;</b> minit. Lajur Komersial?: hijau = bebas komersial, kuning = boleh dengan syarat, merah = bukan komersial. Darjah tulisan: Kuat / Sederhana / Lemah ikut skor dalam kad model atau ujian kita; "Skor sahaja" bermaksud ada nombor tetapi tiada darjah &mdash; buka butiran.</p>
 </div>
 
-<nav class="pod-nav" aria-label="Bahagian lesen dan banding">
-    <a href="#m-lesen">Lesen & kuota GPU</a>
-    <a href="#m-banding">Banding model</a>
+<nav class="pod-nav" aria-label="Bahagian lesen dan ujian">
+    <a href="#m-master">Jadual induk model</a>
+    <a href="#m-nota">Ditolak &amp; tambahan</a>
     <a href="#st-ai">Alat AI di komputer awan</a>
   </nav>
 
-<section id="m-lesen" class="pod-section">
-  <h2>Lesen komersial, kuota GPU dan VRAM: model imej Hugging Face</h2>
-  <p class="pod-muted">Semakan 24 Nov 2026 daripada fail lesen, model card dan kod Space di Hugging Face. Kuota GPU percuma (ZeroGPU): akaun Free <b data-draw="ml-free" data-source="hf_zerogpu_quota" data-field="minutes" data-where="tier=Free">—</b> minit sehari, PRO <b data-draw="ml-pro" data-source="hf_zerogpu_quota" data-field="minutes" data-where="tier=PRO">—</b> minit. Saiz GPU xlarge kira 2× kuota. "Gambar/hari" ialah bilangan paling kurang gambar 1024² untuk akaun Free, dikira daripada masa GPU maksimum yang Space minta; kuota ditolak ikut masa sebenar, jadi biasanya lebih. VRAM bertanda "agg." ialah anggaran 2 GB setiap 1B parameter.</p>
+<section id="m-master" class="pod-section">
+  <h2>Jadual induk: lesen, kuota GPU, VRAM dan ujian tulisan</h2>
+  <p class="pod-muted">40 model &mdash; 34 daripada semakan lesen Hugging Face, 6 lagi hanya ada hasil ujian (lesen belum disemak). Klik nama model untuk butiran penuh: syarat lesen, Space, langkah, hitam-putih, warna, latar, kelajuan dan forum.</p>
   <div class="pod-fit">
-    <table id="ml-table" data-source="ai_licenses" data-row-key="model">
+    <table id="ms-table" data-source="master_models" data-row-key="model">
       <colgroup>
-        <col style="width:9%"><col style="width:6%"><col style="width:4%"><col style="width:6%">
-        <col style="width:7%"><col style="width:9%"><col style="width:13%"><col style="width:12%">
-        <col style="width:7%"><col style="width:5%"><col style="width:7%"><col style="width:8%">
-        <col style="width:4%"><col style="width:3%">
+        <col style="width:16%"><col style="width:9%"><col style="width:7%"><col style="width:9%">
+        <col style="width:5%"><col style="width:7%"><col style="width:6%"><col style="width:8%">
+        <col style="width:8%"><col style="width:13%"><col style="width:6%"><col style="width:6%">
       </colgroup>
       <thead><tr>
         <th data-field="model">Model</th>
         <th data-field="group">Kumpulan</th>
-        <th data-field="size">Saiz</th>
         <th data-field="commercial">Komersial?</th>
         <th data-field="license">Lesen</th>
-        <th data-field="terms">Had / syarat lesen</th>
-        <th data-field="use">Kegunaan</th>
-        <th data-field="space">Space</th>
-        <th data-field="gpu">GPU / gambar</th>
-        <th data-field="img_free">Gambar/hari (Free)</th>
-        <th data-field="vram">VRAM jalan sendiri</th>
+        <th data-field="size">Saiz</th>
+        <th data-field="vram">VRAM</th>
+        <th class="pod-num" data-field="img_free">Gambar/hari</th>
+        <th data-field="short">Tulisan pendek</th>
+        <th data-field="long">Tulisan panjang</th>
         <th data-field="verdict">Cadangan</th>
         <th data-field="level">Bukti</th>
         <th data-field="source">Sumber</th>
       </tr></thead>
-      <tbody data-draw="ml-body"></tbody>
+      <tbody data-draw="ms-body"></tbody>
     </table>
   </div>
 </section>
 
-<section id="m-banding" class="pod-section">
-  <h2>Banding model</h2>
-  <p class="pod-muted">Skor OneIG/LongText dari kad model ERNIE-Image (lebih tinggi lebih baik, maks 1.0). "Container" = komputer awan sesi Claude: 4 CPU, 15 GB RAM, tiada GPU. "Space percuma" = Hugging Face ZeroGPU, kuota beberapa minit sehari.</p>
+<section id="m-nota" class="pod-section">
+  <h2>Model ditolak dan tambahan</h2>
+  <p class="pod-muted">Baris riset yang bukan satu model tunggal: kumpulan model yang ditolak awal, dan tambahan gaya (LoRA).</p>
   <div class="pod-fit">
-    <table id="m-table-compare" data-source="model_compare" data-row-key="model">
-      <colgroup>
-        <col style="width:8%"><col style="width:6%"><col style="width:5%"><col style="width:8%">
-        <col style="width:6%"><col style="width:4%"><col style="width:5%"><col style="width:5%">
-        <col style="width:4%"><col style="width:4%"><col style="width:5%"><col style="width:6%">
-        <col style="width:10%"><col style="width:15%"><col style="width:4%"><col style="width:5%">
-      </colgroup>
+    <table id="mn-table" data-source="model_notes" data-row-key="item">
+      <colgroup><col style="width:10%"><col style="width:30%"><col style="width:10%"><col style="width:34%"><col style="width:8%"><col style="width:8%"></colgroup>
       <thead><tr>
-        <th data-field="model">Model</th>
-        <th data-field="license">Lesen</th>
-        <th data-field="commercial">Boleh jual?</th>
-        <th data-field="run">Jalan di mana</th>
-        <th data-field="ram">RAM / saiz</th>
-        <th data-field="steps">Langkah</th>
-        <th data-field="text_short">Tulisan pendek</th>
-        <th data-field="text_long">Tulisan panjang</th>
-        <th data-field="bw">Hitam-putih</th>
-        <th data-field="color">Berwarna</th>
-        <th data-field="bg">Latar gambar</th>
-        <th data-field="speed">Kelajuan</th>
-        <th data-field="community">Forum / blog</th>
-        <th data-field="verdict">Keputusan</th>
+        <th data-field="kind">Jenis</th>
+        <th data-field="item">Model</th>
+        <th data-field="stage">Peringkat</th>
+        <th data-field="why">Sebab</th>
         <th data-field="level">Bukti</th>
         <th data-field="source">Sumber</th>
       </tr></thead>
-      <tbody data-draw="m-compare-body"></tbody>
+      <tbody data-draw="mn-body"></tbody>
     </table>
   </div>
 </section>
@@ -2947,15 +2937,6 @@ POD.mRows('m-use-body', 'model_usecase', 5, (tr, r) => {
   const k = POD.cell(tr, r.kind); k.style.fontWeight = '600';
   POD.cell(tr, r.main); POD.cell(tr, r.backup); POD.cell(tr, r.process, 'pod-wide'); POD.cell(tr, r.why, 'pod-wide');
 });
-POD.mRows('m-compare-body', 'model_compare', 16, (tr, r) => {
-  tr.dataset.key = POD.enc(r.model);
-  const m = POD.cell(tr, r.model); m.style.fontWeight = '600';
-  POD.cell(tr, r.license); POD.cell(tr, r.commercial); POD.cell(tr, r.run); POD.cell(tr, r.ram); POD.cell(tr, r.steps);
-  POD.cell(tr, r.text_short, 'pod-wide'); POD.cell(tr, r.text_long, 'pod-wide'); POD.cell(tr, r.bw); POD.cell(tr, r.color); POD.cell(tr, r.bg);
-  POD.cell(tr, r.speed, 'pod-wide'); POD.cell(tr, r.community, 'pod-wide');
-  const v = document.createElement('td'); v.appendChild(POD.pill(r.verdict, null, r.tone || 'warn')); tr.appendChild(v);
-  POD.pillCell(tr, r.level); POD.linkCell(tr, r.source, 'sumber');
-});
 POD.mRows('m-history-body', 'model_history', 6, (tr, r) => {
   tr.dataset.key = POD.enc(r.what);
   POD.cell(tr, r.date); POD.cell(tr, r.what); POD.cell(tr, POD.int(r.images), 'pod-num'); POD.cell(tr, POD.int(r.designs), 'pod-num');
@@ -2971,14 +2952,60 @@ POD.mRows('m-sources-body', 'model_sources', 5, (tr, r) => {
   tr.dataset.key = POD.enc(r.source);
   POD.cell(tr, r.source, 'pod-wide'); POD.cell(tr, r.kind); POD.cell(tr, r.used_for); POD.pillCell(tr, r.level); POD.linkCell(tr, r.url, 'buka');
 });
-POD.mRows('ml-body', 'ai_licenses', 14, (tr, r) => {
-  tr.dataset.key = POD.enc(r.model);
-  const m = POD.cell(tr, r.model); m.style.fontWeight = '600';
-  POD.cell(tr, r.group); POD.cell(tr, r.size);
-  const c = document.createElement('td'); c.appendChild(POD.pill(r.commercial, null, r.commercial_tone)); tr.appendChild(c);
-  POD.cell(tr, r.license); POD.cell(tr, r.terms, 'pod-wide'); POD.cell(tr, r.use, 'pod-wide'); POD.cell(tr, r.space, 'pod-wide');
-  POD.cell(tr, r.gpu); POD.cell(tr, POD.int(r.img_free), 'pod-num'); POD.cell(tr, r.vram, 'pod-wide');
-  const v = document.createElement('td'); v.appendChild(POD.pill(r.verdict, null, r.tone || null)); tr.appendChild(v);
+POD.msLabels = [
+  ['terms', 'Had / syarat lesen'], ['use', 'Kegunaan'], ['space', 'Space'], ['gpu', 'GPU / gambar'],
+  ['checked', 'Lesen disemak'], ['t_run', 'Jalan di mana'], ['t_ram', 'RAM / saiz fail'], ['t_steps', 'Langkah'],
+  ['t_short', 'Tulisan pendek (penuh)'], ['t_long', 'Tulisan panjang (penuh)'], ['t_bw', 'Hitam-putih'],
+  ['t_color', 'Berwarna'], ['t_bg', 'Latar gambar'], ['t_speed', 'Kelajuan'], ['t_community', 'Forum / blog'],
+  ['t_verdict', 'Keputusan ujian'], ['t_source', 'Sumber ujian'],
+];
+POD.msDetail = (r) => {
+  const dl = document.createElement('dl'); dl.className = 'ms-dl';
+  POD.msLabels.forEach(([k, label]) => {
+    const v = r[k];
+    if (v == null || v === '' || v === '-' || v === '\u2013') return;
+    const dt = document.createElement('dt'); dt.textContent = label;
+    const dd = document.createElement('dd');
+    if (String(v).startsWith('http')) { const a = POD.link(v, 'buka'); if (a) dd.appendChild(a); else dd.textContent = v; }
+    else dd.textContent = String(v);
+    dl.appendChild(dt); dl.appendChild(dd);
+  });
+  if (!dl.children.length) { const dd = document.createElement('dd'); dd.textContent = 'Tiada butiran lain.'; dl.appendChild(dd); }
+  return dl;
+};
+dash.draw('ms-body', (tb) => {
+  const rows = POD.ok('master_models'); tb.replaceChildren();
+  if (!rows) { POD.emptyRow(tb, 12, POD.statusMsg('master_models')); return; }
+  rows.forEach((r) => {
+    const tr = document.createElement('tr');
+    tr.dataset.key = POD.enc(r.model);
+    const td = document.createElement('td');
+    const btn = document.createElement('button');
+    btn.type = 'button'; btn.className = 'ms-toggle'; btn.textContent = r.model;
+    btn.setAttribute('aria-expanded', 'false');
+    td.appendChild(btn); tr.appendChild(td);
+    POD.cell(tr, r.group);
+    const c = document.createElement('td'); c.appendChild(POD.pill(r.commercial, null, r.commercial_tone)); tr.appendChild(c);
+    POD.cell(tr, r.license); POD.cell(tr, r.size); POD.cell(tr, r.vram);
+    POD.cell(tr, r.img_free == null ? '\u2014' : POD.int(r.img_free), 'pod-num');
+    const s = document.createElement('td'); s.appendChild(POD.pill(r.short, null, r.short_tone)); tr.appendChild(s);
+    const l = document.createElement('td'); l.appendChild(POD.pill(r.long, null, r.long_tone)); tr.appendChild(l);
+    const v = document.createElement('td'); v.appendChild(POD.pill(r.verdict, null, r.tone || null)); tr.appendChild(v);
+    POD.pillCell(tr, r.level); POD.linkCell(tr, r.source, 'buka');
+    const det = document.createElement('tr'); det.className = 'ms-detail'; det.hidden = true;
+    const dtd = document.createElement('td'); dtd.colSpan = 12; dtd.appendChild(POD.msDetail(r)); det.appendChild(dtd);
+    btn.addEventListener('click', () => {
+      det.hidden = !det.hidden;
+      btn.setAttribute('aria-expanded', det.hidden ? 'false' : 'true');
+    });
+    tb.appendChild(tr); tb.appendChild(det);
+  });
+});
+POD.mRows('mn-body', 'model_notes', 6, (tr, r) => {
+  tr.dataset.key = POD.enc(r.item);
+  const k = document.createElement('td'); k.appendChild(POD.pill(r.kind, null, r.kind === 'Ditolak' ? 'bad' : 'warn')); tr.appendChild(k);
+  const m = POD.cell(tr, r.item); m.style.fontWeight = '600';
+  POD.cell(tr, r.stage); POD.cell(tr, r.why);
   POD.pillCell(tr, r.level); POD.linkCell(tr, r.source, 'buka');
 });
 POD.mlQuota = (tier) => (el) => {

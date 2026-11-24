@@ -1,0 +1,74 @@
+{
+  "rows": [
+    {
+      "kind": "Tambahan",
+      "item": "LoRA gaya (TSHIRTDESIGN / POSTER / LOGO-REDMOND; FontBox)",
+      "stage": "Langkah 2",
+      "why": "UJI DAHULU: tambahan gaya (riset Langkah 2)",
+      "level": "lemah",
+      "source": "https://huggingface.co/artificialguybr/TSHIRTDESIGN-REDMOND-ZIMAGETURBO"
+    },
+    {
+      "kind": "Ditolak",
+      "item": "FLUX.2 klein 9B / FLUX.2 dev",
+      "stage": "Langkah 1",
+      "why": "Hasil tak boleh dijual",
+      "level": "rasmi",
+      "source": "https://huggingface.co/black-forest-labs/FLUX.2-klein-9B"
+    },
+    {
+      "kind": "Ditolak",
+      "item": "Qwen-Image-2.1",
+      "stage": "Langkah 1",
+      "why": "Lesen penyelidikan sahaja",
+      "level": "rasmi",
+      "source": "https://huggingface.co/Qwen/Qwen-Image-2.1"
+    },
+    {
+      "kind": "Ditolak",
+      "item": "Ideogram 4.0 (terbuka)",
+      "stage": "Langkah 1",
+      "why": "Sumber bercanggah tentang lesen; nota lama: bukan komersial",
+      "level": "pihak_ketiga",
+      "source": "https://www.3daistudio.com/blog/ideogram-4-open-image-model-explained"
+    },
+    {
+      "kind": "Ditolak",
+      "item": "MiniMax-H3 / Cosmos3 / P-Image / Krea-2",
+      "stage": "Langkah 1",
+      "why": "Terlalu besar untuk container (12.8B–64.6B)",
+      "level": "rasmi",
+      "source": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image"
+    },
+    {
+      "kind": "Ditolak",
+      "item": "tessera-small",
+      "stage": "Langkah 1",
+      "why": "Bukan komersial",
+      "level": "rasmi",
+      "source": "https://huggingface.co/thejagstudio/tessera-small"
+    },
+    {
+      "kind": "Ditolak",
+      "item": "P-JiT 21K / Supra2-IMG / Iris-3B",
+      "stage": "Langkah 2",
+      "why": "P-JiT: kad model kata tidak boleh tulis teks atau poster. Supra2: hanya 100 juta parameter. Iris-3B: kad model kata teks tidak sentiasa boleh dipercayai",
+      "level": "rasmi",
+      "source": "https://huggingface.co/Linum-AI/pjit-21k"
+    },
+    {
+      "kind": "Ditolak",
+      "item": "Fibo 2.0 dev / Kroma / LongCat-Next",
+      "stage": "Langkah 2",
+      "why": "Fibo: kad model kata bukan komersial sahaja. Kroma: lesen komuniti Krea-2 (Krea-2 sudah ditolak). LongCat-Next: terlalu besar",
+      "level": "rasmi",
+      "source": "https://huggingface.co/briaai/Fibo-2.0-dev"
+    }
+  ],
+  "meta": [
+    {
+      "label": "Gabungan",
+      "value": "ai_licenses.json (lesen, kuota GPU, VRAM) + model_compare.json (ujian tulisan, kelajuan)"
+    }
+  ]
+}
