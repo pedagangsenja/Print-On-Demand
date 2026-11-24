@@ -127,22 +127,6 @@
 .pod-font-dl dd { margin: 0; min-width: 0; }
 .pod-font-filters { display: flex; flex-wrap: wrap; gap: var(--cds-gap-sm); align-items: center; }
 .pod-font-search { font: inherit; font-size: var(--cds-font-size-body); padding: 4px 8px; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background-color: var(--color-bg); color: var(--color-fg); min-width: 180px; max-width: 100%; }
-.pod-ig-form { display: grid; gap: var(--cds-gap-sm); grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); align-items: end; }
-.pod-ig-form label { display: grid; gap: 2px; min-width: 0; }
-.pod-ig-form .pod-ig-wide { grid-column: 1 / -1; }
-.pod-ig-form input[type="text"], .pod-ig-form input[type="url"], .pod-ig-form textarea { font: inherit; font-size: var(--cds-font-size-body); padding: 4px 8px; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background-color: var(--color-bg); color: var(--color-fg); min-width: 0; width: 100%; box-sizing: border-box; }
-.pod-ig-form textarea { min-height: 3.2em; resize: vertical; }
-.pod-ig-form .dash-select { width: 100%; }
-.pod-ig-btn { font: inherit; font-size: var(--cds-font-size-body); padding: 6px 14px; border-radius: var(--cds-radius); border: 1px solid var(--color-fg); background-color: var(--color-fg); color: var(--color-bg); cursor: pointer; justify-self: start; }
-.pod-ig-btn[disabled] { opacity: 0.5; cursor: default; }
-.pod-ig-del { font: inherit; font-size: var(--cds-font-size-caption); padding: 2px 10px; border-radius: var(--cds-radius); border: 1px solid var(--color-border-line); background: none; color: var(--color-fg-muted); cursor: pointer; justify-self: start; }
-.pod-ig-del[data-armed="1"] { color: var(--color-bad); border-color: currentColor; }
-.pod-ig-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: var(--cds-gap-md); min-height: 4em; }
-.pod-ig-card { display: grid; gap: var(--cds-gap-xs); align-content: start; padding: var(--cds-pad-md); }
-.pod-ig-card img { width: 100%; height: auto; display: block; border-radius: var(--cds-radius); border: 1px solid var(--color-border-line); background: var(--color-bg); }
-.pod-ig-card p { font-size: var(--cds-font-size-caption); line-height: 1.45; }
-.pod-ig-tags { display: flex; flex-wrap: wrap; gap: 4px; }
-.pod-ig-filters { display: flex; flex-wrap: wrap; gap: var(--cds-gap-sm); align-items: center; }
 .d-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 170px), 1fr)); gap: var(--cds-gap-md); min-height: 6em; }
 .d-card { display: grid; gap: var(--cds-gap-xs); align-content: start; margin: 0; min-width: 0; }
 .d-card button { padding: 0; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background: #fff; cursor: zoom-in; overflow: hidden; display: block; width: 100%; aspect-ratio: 3 / 4; }
@@ -187,7 +171,7 @@
 .mt-zoom figcaption { color: #fff; font-size: 0.95rem; text-align: center; max-width: 720px; }
 .mt-zoom-close { position: absolute; top: 12px; right: 12px; padding: 6px 12px; border-radius: 999px; border: 1px solid #fff; background: transparent; color: #fff; cursor: pointer; }
 @media print { .mt-zoom { display: none; } }
-@media print { .pod-scroll { max-height: none; overflow: visible; border: 0; } .pod-nav, .pod-tabbar { display: none; } .pod details { border: 0; } #tab-design, #tab-inspirasi, #tab-setup, #tab-workflow, #tab-prestasi, #tab-font, #tab-model, #tab-utama { break-before: page; } }
+@media print { .pod-scroll { max-height: none; overflow: visible; border: 0; } .pod-nav, .pod-tabbar { display: none; } .pod details { border: 0; } #tab-design, #tab-setup, #tab-workflow, #tab-prestasi, #tab-font, #tab-model, #tab-lesen, #tab-utama { break-before: page; } }
 </style>
 
 <div class="pod">
@@ -198,10 +182,10 @@
   <div class="pod-tabbar" role="tablist" aria-label="Tab dashboard">
     <button type="button" class="pod-tab-btn" role="tab" id="btn-poster" data-tab="tab-poster" aria-controls="tab-poster" aria-selected="true">Poster</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-design" data-tab="tab-design" aria-controls="tab-design" aria-selected="false" tabindex="-1">Design</button>
-    <button type="button" class="pod-tab-btn" role="tab" id="btn-inspirasi" data-tab="tab-inspirasi" aria-controls="tab-inspirasi" aria-selected="false" tabindex="-1">Inspirasi</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-setup" data-tab="tab-setup" aria-controls="tab-setup" aria-selected="false" tabindex="-1">Setup</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-font" data-tab="tab-font" aria-controls="tab-font" aria-selected="false" tabindex="-1">Font</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-model" data-tab="tab-model" aria-controls="tab-model" aria-selected="false" tabindex="-1">Model AI</button>
+    <button type="button" class="pod-tab-btn" role="tab" id="btn-lesen" data-tab="tab-lesen" aria-controls="tab-lesen" aria-selected="false" tabindex="-1">Lesen AI</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-workflow" data-tab="tab-workflow" aria-controls="tab-workflow" aria-selected="false" tabindex="-1">Workflow</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-prestasi" data-tab="tab-prestasi" aria-controls="tab-prestasi" aria-selected="false" tabindex="-1">Prestasi</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-utama" data-tab="tab-utama" aria-controls="tab-utama" aria-selected="false" tabindex="-1">Semua produk</button>
@@ -604,117 +588,10 @@
   <div class="d-grid" data-draw="d-gallery-s" data-source="design_sarkas"></div>
 </section>
 
-</section>
-
-<section id="tab-inspirasi" class="pod-tab" role="tabpanel" aria-labelledby="btn-inspirasi" hidden>
-
-<div id="i-intro" class="pod-section pod-first">
-  <p class="pod-lede">Simpan gaya typography yang anda suka (screenshot dari Pinterest, Behance atau mana-mana), tanda gaya dan niche, kemudian rujuk semula masa design. Di bawah ada sumber inspirasi cadangan Claude.</p>
-  <p class="pod-muted">Gambar orang lain untuk rujukan gaya sahaja: jangan salin terus design, quote atau ilustrasi mereka ke poster jualan.</p>
-</div>
-
-<section id="i-upload" class="pod-section">
-  <h2>Upload gaya yang anda suka</h2>
-  <p id="i-noedit" class="pod-muted" hidden>Hanya editor dashboard boleh upload. Buka dashboard ini dengan akaun pemilik.</p>
-  <form id="i-form" class="pod-ig-form" hidden>
-    <label class="pod-ig-wide"><span class="pod-tool-label">Gambar (boleh pilih beberapa, maks 20 MB setiap satu)</span>
-      <input id="i-file" type="file" accept="image/*" multiple required></label>
-    <label><span class="pod-tool-label">Tajuk (pilihan)</span>
-      <input id="i-title" type="text" maxlength="120" placeholder="cth. Serif besar, warna krim"></label>
-    <label><span class="pod-tool-label">Gaya typography</span>
-      <select id="i-gaya" class="dash-select" aria-label="Gaya typography">
-        <option value="serif">Serif klasik / besar</option>
-        <option value="sans">Sans tebal</option>
-        <option value="script">Script / kursif</option>
-        <option value="hand">Hand-lettering / brush</option>
-        <option value="retro">Retro / groovy</option>
-        <option value="vintage">Vintage / papan tanda lama</option>
-        <option value="swiss">Minimal / Swiss grid</option>
-        <option value="playful">Ceria / playful</option>
-        <option value="eksperimen">Eksperimental / kolaj</option>
-        <option value="lain">Lain-lain</option>
-      </select></label>
-    <label><span class="pod-tool-label">Niche</span>
-      <select id="i-niche" class="dash-select" aria-label="Niche">
-        <option value="">Umum</option>
-        <option value="bridal">Bridal</option>
-        <option value="teacher">Cikgu</option>
-        <option value="nursery">Nursery</option>
-        <option value="funny_home">Tanda lucu rumah</option>
-        <option value="mama">Mama</option>
-        <option value="christmas">Krismas</option>
-        <option value="friendship">Kawan / Galentine</option>
-        <option value="bookish">Bookish</option>
-      </select></label>
-    <label><span class="pod-tool-label">Link sumber (pilihan)</span>
-      <input id="i-src" type="url" placeholder="https://pinterest.com/pin/…"></label>
-    <label class="pod-ig-wide"><span class="pod-tool-label">Nota: apa yang anda suka (pilihan)</span>
-      <textarea id="i-note" maxlength="500" placeholder="cth. jarak huruf luas, satu perkataan besar, warna terracotta"></textarea></label>
-    <button id="i-save" class="pod-ig-btn" type="submit">Upload dan simpan</button>
-  </form>
-  <p id="i-st-busy" class="pod-muted" hidden>Sedang upload…</p>
-  <p id="i-st-ok" class="pod-muted" hidden>Disimpan.</p>
-  <p id="i-st-err" class="pod-muted" hidden>Tidak berjaya disimpan. Cuba lagi.</p>
-  <p id="i-st-type" class="pod-muted" hidden>Hanya fail gambar bawah 20 MB diterima.</p>
-</section>
-
-<section id="i-galeri" class="pod-section">
-  <h2>Galeri gaya saya</h2>
-  <div class="pod-ig-filters">
-    <select id="i-f-gaya" class="dash-select" aria-label="Tapis gaya">
-      <option value="">Semua gaya</option>
-      <option value="serif">Serif klasik / besar</option>
-      <option value="sans">Sans tebal</option>
-      <option value="script">Script / kursif</option>
-      <option value="hand">Hand-lettering / brush</option>
-      <option value="retro">Retro / groovy</option>
-      <option value="vintage">Vintage / papan tanda lama</option>
-      <option value="swiss">Minimal / Swiss grid</option>
-      <option value="playful">Ceria / playful</option>
-      <option value="eksperimen">Eksperimental / kolaj</option>
-      <option value="lain">Lain-lain</option>
-    </select>
-    <select id="i-f-niche" class="dash-select" aria-label="Tapis niche">
-      <option value="">Semua niche</option>
-      <option value="umum">Umum</option>
-      <option value="bridal">Bridal</option>
-      <option value="teacher">Cikgu</option>
-      <option value="nursery">Nursery</option>
-      <option value="funny_home">Tanda lucu rumah</option>
-      <option value="mama">Mama</option>
-      <option value="christmas">Krismas</option>
-      <option value="friendship">Kawan / Galentine</option>
-      <option value="bookish">Bookish</option>
-    </select>
-  </div>
-  <div class="pod-ig-grid" data-draw="i-gallery" data-source="inspirasi_saya"></div>
-</section>
-
-<section id="i-sumber" class="pod-section">
-  <h2>Sumber inspirasi cadangan</h2>
-  <p class="pod-muted">Pinterest tidak papar jumlah carian atau simpanan secara tetap, jadi "high pins" diganti dengan Pinterest Trends (rasmi) dan carian terus ikut niche. Bukti: Rasmi = laman itu sendiri, Pihak ketiga = artikel bebas, Lemah = pautan sahaja.</p>
-  <div class="pod-ig-filters">
-    <select id="i-f-jenis" class="dash-select" aria-label="Tapis jenis sumber">
-      <option value="">Semua jenis</option>
-      <option value="Alat trend">Alat trend</option>
-      <option value="Laman kurasi">Laman kurasi</option>
-      <option value="Pereka">Pereka</option>
-      <option value="Carian Pinterest">Carian Pinterest</option>
-    </select>
-  </div>
-  <div class="pod-table-wrap">
-    <table id="i-table-sumber" data-source="inspirasi_sumber" data-row-key="id">
-      <thead><tr>
-        <th data-field="nama">Sumber</th>
-        <th data-field="jenis">Jenis</th>
-        <th data-field="kenapa">Kenapa</th>
-        <th data-field="guna">Guna untuk</th>
-        <th data-field="bukti">Bukti</th>
-        <th data-field="bukti_url">Rujukan</th>
-      </tr></thead>
-      <tbody data-draw="i-sumber-body"></tbody>
-    </table>
-  </div>
+<section id="d-sarkas-warna" class="pod-section">
+  <h2>Design sarkastik berwarna</h2>
+  <p class="pod-muted">30 design yang sama, latar gelap dan warna ikut 5 palet contoh Pinterest (oren, kuning, hijau, merah, biru; 6 design setiap palet). Palet hijau dan merah bertekstur kasar. Tekan gambar untuk besarkan. Fail PNG 2048 px dalam repo: designs/svg-typo/out/batch4/color/.</p>
+  <div class="d-grid" data-draw="d-gallery-w" data-source="design_sarkas_warna"></div>
 </section>
 
 </section>
@@ -1015,32 +892,6 @@
   </div>
 </section>
 
-<section id="m-lesen" class="pod-section">
-  <h2>Lesen komersial, kuota GPU dan VRAM: model imej Hugging Face</h2>
-  <p class="pod-muted">Semakan 24 Nov 2026 daripada fail lesen, model card dan kod Space di Hugging Face. Kuota GPU percuma (ZeroGPU): akaun Free <b data-draw="ml-free" data-source="hf_zerogpu_quota" data-field="minutes" data-where="tier=Free">—</b> minit sehari, PRO <b data-draw="ml-pro" data-source="hf_zerogpu_quota" data-field="minutes" data-where="tier=PRO">—</b> minit. Saiz GPU xlarge kira 2× kuota. "Gambar/hari" ialah bilangan paling kurang gambar 1024² untuk akaun Free, dikira daripada masa GPU maksimum yang Space minta; kuota ditolak ikut masa sebenar, jadi biasanya lebih. VRAM bertanda "agg." ialah anggaran 2 GB setiap 1B parameter.</p>
-  <div class="pod-table-wrap pod-scroll">
-    <table id="ml-table" data-source="ai_licenses" data-row-key="model">
-      <thead><tr>
-        <th data-field="model">Model</th>
-        <th data-field="group">Kumpulan</th>
-        <th data-field="size">Saiz</th>
-        <th data-field="commercial">Komersial?</th>
-        <th data-field="license">Lesen</th>
-        <th data-field="terms">Had / syarat lesen</th>
-        <th data-field="use">Kegunaan</th>
-        <th data-field="space">Space</th>
-        <th data-field="gpu">GPU / gambar</th>
-        <th data-field="img_free">Gambar/hari (Free)</th>
-        <th data-field="vram">VRAM jalan sendiri</th>
-        <th data-field="verdict">Cadangan</th>
-        <th data-field="level">Bukti</th>
-        <th data-field="source">Sumber</th>
-      </tr></thead>
-      <tbody data-draw="ml-body"></tbody>
-    </table>
-  </div>
-</section>
-
 <section id="m-banding" class="pod-section">
   <h2>Banding model</h2>
   <p class="pod-muted">Skor OneIG/LongText dari kad model ERNIE-Image (lebih tinggi lebih baik, maks 1.0). "Container" = komputer awan sesi Claude: 4 CPU, 15 GB RAM, tiada GPU. "Space percuma" = Hugging Face ZeroGPU, kuota beberapa minit sehari.</p>
@@ -1117,6 +968,41 @@
         <th data-field="url">Pautan</th>
       </tr></thead>
       <tbody data-draw="m-sources-body"></tbody>
+    </table>
+  </div>
+</section>
+
+</section>
+
+<section id="tab-lesen" class="pod-tab" role="tabpanel" aria-labelledby="btn-lesen" hidden>
+
+<div id="l-intro" class="pod-section pod-first">
+  <p class="pod-lede">Model jana imej di Hugging Face yang disemak: boleh dijual atau tidak, syarat lesen, kos kuota GPU percuma dan VRAM untuk jalan sendiri.</p>
+  <p class="pod-muted">Lajur Komersial?: hijau = bebas komersial, kuning = boleh dengan syarat, merah = bukan komersial.</p>
+</div>
+
+<section id="m-lesen" class="pod-section">
+  <h2>Lesen komersial, kuota GPU dan VRAM: model imej Hugging Face</h2>
+  <p class="pod-muted">Semakan 24 Nov 2026 daripada fail lesen, model card dan kod Space di Hugging Face. Kuota GPU percuma (ZeroGPU): akaun Free <b data-draw="ml-free" data-source="hf_zerogpu_quota" data-field="minutes" data-where="tier=Free">—</b> minit sehari, PRO <b data-draw="ml-pro" data-source="hf_zerogpu_quota" data-field="minutes" data-where="tier=PRO">—</b> minit. Saiz GPU xlarge kira 2× kuota. "Gambar/hari" ialah bilangan paling kurang gambar 1024² untuk akaun Free, dikira daripada masa GPU maksimum yang Space minta; kuota ditolak ikut masa sebenar, jadi biasanya lebih. VRAM bertanda "agg." ialah anggaran 2 GB setiap 1B parameter.</p>
+  <div class="pod-table-wrap pod-scroll">
+    <table id="ml-table" data-source="ai_licenses" data-row-key="model">
+      <thead><tr>
+        <th data-field="model">Model</th>
+        <th data-field="group">Kumpulan</th>
+        <th data-field="size">Saiz</th>
+        <th data-field="commercial">Komersial?</th>
+        <th data-field="license">Lesen</th>
+        <th data-field="terms">Had / syarat lesen</th>
+        <th data-field="use">Kegunaan</th>
+        <th data-field="space">Space</th>
+        <th data-field="gpu">GPU / gambar</th>
+        <th data-field="img_free">Gambar/hari (Free)</th>
+        <th data-field="vram">VRAM jalan sendiri</th>
+        <th data-field="verdict">Cadangan</th>
+        <th data-field="level">Bukti</th>
+        <th data-field="source">Sumber</th>
+      </tr></thead>
+      <tbody data-draw="ml-body"></tbody>
     </table>
   </div>
 </section>
@@ -2250,9 +2136,10 @@ dash.draw('d-gallery', (el) => {
     fig.appendChild(cap); el.appendChild(fig);
   });
 });
-dash.draw('d-gallery-s', (el) => {
-  const rows = POD.ok('design_sarkas'); el.replaceChildren();
-  if (!rows) { const p = document.createElement('p'); p.className = 'pod-msg'; p.textContent = POD.statusMsg('design_sarkas'); el.appendChild(p); return; }
+POD.sGallery = (el) => {
+  const ds = el.dataset.source || 'design_sarkas';
+  const rows = POD.ok(ds); el.replaceChildren();
+  if (!rows) { const p = document.createElement('p'); p.className = 'pod-msg'; p.textContent = POD.statusMsg(ds); el.appendChild(p); return; }
   const blob = (u) => (typeof u === 'string' && /^\/_blob\/[0-9a-f]+$/.test(u) ? u : null);
   [...rows].sort((a, b) => a.no - b.no).forEach((r) => {
     const fig = document.createElement('figure'); fig.className = 'd-card d-sq';
@@ -2271,7 +2158,9 @@ dash.draw('d-gallery-s', (el) => {
     if (r.theme) { const th = document.createElement('span'); th.className = 'd-theme'; th.textContent = String(r.theme); cap.appendChild(th); }
     fig.appendChild(cap); el.appendChild(fig);
   });
-});
+};
+dash.draw('d-gallery-s', POD.sGallery);
+dash.draw('d-gallery-w', POD.sGallery);
 </script>
 
 <script>
@@ -3495,102 +3384,4 @@ dash.draw('f-rej-body', (tb) => {
     tb.appendChild(tr);
   });
 });
-</script>
-
-<script>
-POD.ig = { gaya: '', niche: '', jenis: '', assets: null, db: null, armed: '' };
-POD.IG_GAYA = { serif: 'Serif klasik / besar', sans: 'Sans tebal', script: 'Script / kursif', hand: 'Hand-lettering / brush', retro: 'Retro / groovy', vintage: 'Vintage / papan tanda lama', swiss: 'Minimal / Swiss grid', playful: 'Ceria / playful', eksperimen: 'Eksperimental / kolaj', lain: 'Lain-lain' };
-POD.IG_NICHE = { bridal: 'Bridal', teacher: 'Cikgu', nursery: 'Nursery', funny_home: 'Tanda lucu rumah', mama: 'Mama', christmas: 'Krismas', friendship: 'Kawan / Galentine', bookish: 'Bookish' };
-POD.igStatus = (k) => { ['busy', 'ok', 'err', 'type'].forEach((s) => document.querySelectorAll('#i-st-' + s).forEach((p) => { p.hidden = s !== k; })); };
-
-dash.draw('i-gallery', (el) => {
-  const d = dash.data('inspirasi_saya');
-  el.replaceChildren();
-  const msg = (t) => { const p = document.createElement('p'); p.className = 'pod-msg'; p.textContent = t; el.appendChild(p); };
-  if (d.status !== 'ok') { msg(POD.statusMsg('inspirasi_saya')); return; }
-  const all = (Array.isArray(d.data) ? d.data : []).filter((r) => typeof r.url === 'string' && r.url.startsWith('/_blob/'));
-  const rows = all
-    .filter((r) => !POD.ig.gaya || r.gaya === POD.ig.gaya)
-    .filter((r) => !POD.ig.niche || (POD.ig.niche === 'umum' ? !r.niche : r.niche === POD.ig.niche))
-    .sort((a, b) => String(b.added_at || '').localeCompare(String(a.added_at || '')));
-  if (!rows.length) { msg(all.length ? 'Tiada gambar untuk tapisan ini.' : 'Belum ada gambar. Upload gaya typography pertama anda di atas.'); return; }
-  rows.forEach((r) => {
-    const card = document.createElement('article'); card.className = 'pod-card pod-ig-card'; card.id = 'i-item-' + r.id;
-    const a = document.createElement('a'); a.href = r.url; a.target = '_blank'; a.rel = 'noopener noreferrer';
-    const img = document.createElement('img'); img.src = r.url; img.loading = 'lazy'; img.alt = r.title || 'Gaya typography';
-    a.appendChild(img); card.appendChild(a);
-    if (r.title) { const h = document.createElement('h3'); h.textContent = r.title; card.appendChild(h); }
-    const tags = document.createElement('div'); tags.className = 'pod-ig-tags';
-    tags.appendChild(POD.pill(POD.IG_GAYA[r.gaya] || 'Lain-lain'));
-    tags.appendChild(POD.pill(POD.IG_NICHE[r.niche] || 'Umum'));
-    card.appendChild(tags);
-    if (r.note) { const p = document.createElement('p'); p.textContent = r.note; card.appendChild(p); }
-    const src = POD.link(r.source_url, 'Sumber ↗'); if (src) card.appendChild(src);
-    if (POD.ig.db) {
-      const del = document.createElement('button'); del.type = 'button'; del.className = 'pod-ig-del';
-      const armed = POD.ig.armed === r.id; del.dataset.armed = armed ? '1' : '0';
-      del.textContent = armed ? 'Tekan lagi untuk padam' : 'Padam';
-      del.addEventListener('click', async () => {
-        if (POD.ig.armed !== r.id) { POD.ig.armed = r.id; dash.draw('i-gallery'); return; }
-        POD.ig.armed = ''; del.disabled = true;
-        try {
-          await POD.ig.db.doc('data/inspirasi/items/' + r.id).delete();
-          if (POD.ig.assets && r.asset_id) { try { await POD.ig.assets.delete(r.asset_id); } catch (e) { /* fail kekal; rekod sudah dipadam */ } }
-        } catch (e) { del.disabled = false; del.textContent = 'Gagal padam'; }
-      });
-      card.appendChild(del);
-    }
-    el.appendChild(card);
-  });
-});
-
-dash.draw('i-sumber-body', (tb) => {
-  const rows = POD.ok('inspirasi_sumber'); tb.replaceChildren();
-  if (!rows) { POD.emptyRow(tb, 6, POD.statusMsg('inspirasi_sumber')); return; }
-  const list = rows.filter((r) => !POD.ig.jenis || r.jenis === POD.ig.jenis);
-  if (!list.length) { POD.emptyRow(tb, 6, 'Tiada sumber untuk tapisan ini.'); return; }
-  list.forEach((r) => {
-    const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.id);
-    POD.linkCell(tr, r.url, r.nama); POD.cell(tr, r.jenis); POD.cell(tr, r.kenapa, 'pod-wide'); POD.cell(tr, r.guna);
-    POD.pillCell(tr, r.bukti); POD.linkCell(tr, r.bukti_url, 'buka');
-    tb.appendChild(tr);
-  });
-});
-
-[['#i-f-gaya', 'gaya', 'i-gallery'], ['#i-f-niche', 'niche', 'i-gallery'], ['#i-f-jenis', 'jenis', 'i-sumber-body']].forEach(([sel, key, draw]) => {
-  document.querySelectorAll(sel).forEach((s) => s.addEventListener('change', () => { POD.ig[key] = s.value; dash.draw(draw); }));
-});
-
-(async () => {
-  let assets = null, db = null;
-  try { [assets, db] = await Promise.all([claude.use('assets'), claude.use('db')]); } catch (e) { assets = null; }
-  const can = !!(assets && db);
-  document.querySelectorAll('#i-form').forEach((f) => { f.hidden = !can; });
-  document.querySelectorAll('#i-noedit').forEach((p) => { p.hidden = can; });
-  if (!can) return;
-  POD.ig.assets = assets; POD.ig.db = db;
-  dash.draw('i-gallery');
-  document.querySelectorAll('#i-form').forEach((form) => form.addEventListener('submit', async (ev) => {
-    ev.preventDefault();
-    const val = (id) => { const e = form.querySelector('#' + id); return e ? String(e.value || '').trim() : ''; };
-    const fileEl = form.querySelector('#i-file');
-    const files = fileEl && fileEl.files ? [...fileEl.files] : [];
-    if (!files.length || files.some((f) => !/^image\//.test(f.type) || f.size > 20 * 1024 * 1024)) { POD.igStatus('type'); return; }
-    const btn = form.querySelector('#i-save'); if (btn) btn.disabled = true;
-    POD.igStatus('busy');
-    const title = val('i-title'), gaya = val('i-gaya') || 'lain', niche = val('i-niche'), note = val('i-note');
-    const src = POD.safeUrl(val('i-src')) || '';
-    try {
-      for (const f of files) {
-        const up = await assets.upload(f);
-        await db.collection('data/inspirasi/items').add({
-          asset_id: up.id, url: up.url, title: title || f.name.replace(/\.[^.]+$/, '').slice(0, 120),
-          gaya, niche, source_url: src, note, added_at: new Date().toISOString()
-        });
-      }
-      form.reset(); POD.igStatus('ok');
-    } catch (e) { POD.igStatus('err'); }
-    if (btn) btn.disabled = false;
-  }));
-})();
 </script>
