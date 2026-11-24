@@ -123,6 +123,7 @@
     [line('Jenis ayat', r.jenis), line('Panjang ayat', r.panjang), line('Ikon / hiasan', r.ikon)].forEach((x) => { if (x) li.appendChild(x); });
   }));
   dash.draw('al-warna-list', list('warna_daftar', 'data/warna/items', (li, r, code) => {
+    engine(li, r);
     const cols = [r.latar].concat(Array.isArray(r.huruf) ? r.huruf : []).filter((c) => HEX.test(txt(c)));
     if (cols.length) {
       const sw = document.createElement('div'); sw.className = 'al-sw'; sw.setAttribute('role', 'img');
@@ -155,7 +156,7 @@
         const nama = clean(f, 'nama', 80); const latar = clean(f, 'latar', 7);
         const huruf = clean(f, 'huruf', 60).split(/[\s,;]+/).filter(Boolean).map((c) => (c[0] === '#' ? c : '#' + c));
         if (!nama || !HEX.test(latar) || !huruf.length || huruf.length > 4 || !huruf.every((c) => HEX.test(c))) return null;
-        return { nama, latar: latar.toLowerCase(), huruf: huruf.map((c) => c.toLowerCase()), jenis: clean(f, 'jenis', 40), gaya: clean(f, 'gaya', 120), sumber: url(f), nota: clean(f, 'nota', 400) };
+        return { nama, latar: latar.toLowerCase(), huruf: huruf.map((c) => c.toLowerCase()), jenis: clean(f, 'jenis', 40), gaya: clean(f, 'gaya', 120), enjin: clean(f, 'enjin', 60), sumber: url(f), nota: clean(f, 'nota', 400) };
       } });
     });
     // Baca warna utama daripada gambar yang dipilih, dan isi medan warna.
