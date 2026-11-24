@@ -23,6 +23,8 @@ PAL = {
     'biru':   dict(bg='#0D1F45', seq=['#BFE6F7', '#29A9E1'], accent='#29A9E1', deco='#BFE6F7', grunge=False),
 }
 PNAMES = list(PAL)
+# design yang huruf dua barisnya bersambung (cth. 'Going' + 'OUT'): warna dipecah ikut baris per piksel
+SPLIT = {'stayin'}
 
 
 def line_colors(n, seq):
@@ -32,7 +34,7 @@ def line_colors(n, seq):
     return [seq[i % len(seq)] for i in range(n)]
 
 
-def recolor(img, pal, seed):
+def recolor(img, pal, seed, split=False):
     g = np.asarray(img.convert('L'), float) / 255.0
     h, w = g.shape
     alpha = np.clip((0.92 - g) / 0.84, 0, 1)
@@ -45,13 +47,16 @@ def recolor(img, pal, seed):
     min_a = 0.0012 * h * w
     kind = {}  # id -> 'deco' | 'accent' | line index
     texts = []
+    tall = []
     for i, sl in enumerate(objs, 1):
         hh = sl[0].stop - sl[0].start
         ww = sl[1].stop - sl[1].start
         if area[i - 1] < min_a:
             kind[i] = 'deco'
-        elif hh > 0.32 * h or (ww > 0.55 * w and area[i - 1] / (hh * ww) < 0.18):
+        elif (hh > 0.32 * h and (not split or area[i - 1] / (hh * ww) < 0.25)) or (ww > 0.55 * w and area[i - 1] / (hh * ww) < 0.18):
             kind[i] = 'accent'  # bingkai / swash panjang
+        elif hh > 0.32 * h and split:
+            tall.append(i)  # huruf dari dua baris yang bersambung; warna ikut baris terdekat per piksel
         else:
             texts.append((i, sl[0].start, sl[0].stop))
     # himpun komponen teks kepada baris ikut pertindihan menegak
@@ -66,6 +71,21 @@ def recolor(img, pal, seed):
         else:
             lines.append(dict(a=a, b=b, ids=[i]))
     lines.sort(key=lambda L: L['a'])
+    # gabung baris yang hampir terkandung dalam baris lain (huruf skrip tidak bersambung, cth. "Going")
+    merged = True
+    while merged:
+        merged = False
+        for x in range(len(lines)):
+            for y in range(x + 1, len(lines)):
+                A, B = lines[x], lines[y]
+                ov = min(A['b'], B['b']) - max(A['a'], B['a'])
+                if ov > 0.8 * min(A['b'] - A['a'], B['b'] - B['a']):
+                    A['ids'] += B['ids']; A['a'] = min(A['a'], B['a']); A['b'] = max(A['b'], B['b'])
+                    del lines[y]; merged = True
+                    break
+            if merged:
+                break
+    lines.sort(key=lambda L: L['a'])
     cols = line_colors(len(lines), pal['seq'])
     cmap = np.zeros((n + 1, 3))
     for i, k in kind.items():
@@ -75,7 +95,13 @@ def recolor(img, pal, seed):
             cmap[i] = H(c)
     # sebar label ke piksel tepi (anti-alias)
     _, (iy, ix) = ndi.distance_transform_edt(lab == 0, return_indices=True)
-    color = cmap[lab[iy, ix]]
+    near = lab[iy, ix]
+    color = cmap[near]
+    if tall and lines:
+        cy = np.array([(L['a'] + L['b']) / 2 for L in lines])
+        rowcol = np.array([H(cols[int(np.argmin(np.abs(cy - y)))]) for y in range(h)])
+        m = np.isin(near, tall)
+        color[m] = rowcol[np.nonzero(m)[0]]
     if pal['grunge']:
         rng = np.random.default_rng(seed)
         big = ndi.gaussian_filter(rng.random((h, w)), 3.0)
@@ -92,7 +118,7 @@ def main(src, dst):
     os.makedirs(dst, exist_ok=True)
     for k, did in enumerate(ORDER):
         pn = PNAMES[k % 5]
-        im, nl = recolor(Image.open(os.path.join(src, did + '.png')), PAL[pn], seed=k)
+        im, nl = recolor(Image.open(os.path.join(src, did + '.png')), PAL[pn], seed=k, split=did in SPLIT)
         im.save(os.path.join(dst, f'{did}.png'))
         print(f'{k + 1:2d} {did:12s} palet={pn:7s} baris={nl}')
 
