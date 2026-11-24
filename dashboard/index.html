@@ -178,7 +178,7 @@
 .mt-zoom figcaption { color: #fff; font-size: 0.95rem; text-align: center; max-width: 720px; }
 .mt-zoom-close { position: absolute; top: 12px; right: 12px; padding: 6px 12px; border-radius: 999px; border: 1px solid #fff; background: transparent; color: #fff; cursor: pointer; }
 @media print { .mt-zoom { display: none; } }
-@media print { .pod-scroll { max-height: none; overflow: visible; border: 0; } .pod-nav, .pod-tabbar { display: none; } .pod details { border: 0; } #tab-design, #tab-setup, #tab-workflow, #tab-prestasi, #tab-font, #tab-model, #tab-lesen, #tab-utama { break-before: page; } }
+@media print { .pod-scroll { max-height: none; overflow: visible; border: 0; } .pod-nav, .pod-tabbar { display: none; } .pod details { border: 0; } #tab-design, #tab-model, #tab-workflow, #tab-prestasi { break-before: page; } }
 </style>
 <link rel="stylesheet" href="aliran.css">
 
@@ -190,14 +190,9 @@
   <div class="pod-tabbar" role="tablist" aria-label="Tab dashboard">
     <button type="button" class="pod-tab-btn" role="tab" id="btn-poster" data-tab="tab-poster" aria-controls="tab-poster" aria-selected="true">Poster</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-design" data-tab="tab-design" aria-controls="tab-design" aria-selected="false" tabindex="-1">Design</button>
-    <button type="button" class="pod-tab-btn" role="tab" id="btn-setup" data-tab="tab-setup" aria-controls="tab-setup" aria-selected="false" tabindex="-1">Setup</button>
-    <button type="button" class="pod-tab-btn" role="tab" id="btn-font" data-tab="tab-font" aria-controls="tab-font" aria-selected="false" tabindex="-1">Font</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-model" data-tab="tab-model" aria-controls="tab-model" aria-selected="false" tabindex="-1">Model AI</button>
-    <button type="button" class="pod-tab-btn" role="tab" id="btn-lesen" data-tab="tab-lesen" aria-controls="tab-lesen" aria-selected="false" tabindex="-1">Lesen AI</button>
-    <button type="button" class="pod-tab-btn" role="tab" id="btn-workflow" data-tab="tab-workflow" aria-controls="tab-workflow" aria-selected="false" tabindex="-1">Workflow</button>
-    <button type="button" class="pod-tab-btn" role="tab" id="btn-aliran" data-tab="tab-aliran" aria-controls="tab-aliran" aria-selected="false" tabindex="-1">Aliran design</button>
+    <button type="button" class="pod-tab-btn" role="tab" id="btn-workflow" data-tab="tab-workflow" aria-controls="tab-workflow" aria-selected="false" tabindex="-1">Kerja</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-prestasi" data-tab="tab-prestasi" aria-controls="tab-prestasi" aria-selected="false" tabindex="-1">Prestasi</button>
-    <button type="button" class="pod-tab-btn" role="tab" id="btn-utama" data-tab="tab-utama" aria-controls="tab-utama" aria-selected="false" tabindex="-1">Semua produk</button>
   </div>
 </header>
 
@@ -581,6 +576,18 @@
   <p class="pod-lede">Design yang sudah siap untuk dijual: poster motivasi (3:4, cetak 18×24 in) dan design sarkastik SVG (persegi, untuk baju, mug dan pelekat). Semua hitam atas putih, dijana dengan FLUX.2 klein 4B; ejaan disemak dan dibaiki.</p>
 </div>
 
+<nav class="pod-nav" aria-label="Bahagian design">
+    <a href="#d-motiv">Poster motivasi</a>
+    <a href="#d-sarkas">Sarkastik SVG</a>
+    <a href="#d-sarkas-warna">Sarkastik warna</a>
+    <a href="#f-induk">Senarai fon</a>
+    <a href="#f-mood">Fon ikut mood</a>
+    <a href="#f-cari">Cari fon</a>
+    <a href="#f-laman">Laman fon</a>
+    <a href="#f-lesen">Lesen fon</a>
+    <a href="#f-tolak">Fon ditolak</a>
+  </nav>
+
 <section id="d-motiv" class="pod-section">
   <h2>Poster motivasi</h2>
   <p class="pod-muted">Tekan gambar untuk besarkan. Fail asal PNG dan SVG dalam repo: designs/svg-typo/out/motiv/final/.</p>
@@ -603,81 +610,110 @@
   <div class="d-grid" data-draw="d-gallery-w" data-source="design_sarkas_warna"></div>
 </section>
 
-</section>
-
-<section id="tab-setup" class="pod-tab" role="tabpanel" aria-labelledby="btn-setup" hidden>
-
-<div id="st-intro" class="pod-section pod-first">
-  <p class="pod-lede"><b data-draw="st-done" data-source="setup_progress" data-field="done" data-row="0">—</b> daripada <b data-draw="st-total" data-source="setup_progress" data-field="total" data-row="0">—</b> langkah setup siap. Claude menyemak dan menanda setiap langkah; semakan terakhir <b data-draw="st-last" data-source="setup_progress" data-field="last_checked" data-row="0">—</b>.</p>
-  <div class="pod-progress" id="st-progress" aria-hidden="true"><div class="pod-progress-bar" data-draw="st-bar" data-source="setup_progress"></div></div>
-  <div class="pod-two">
-    <div>
-      <h3 id="st-tajuk-anda">Langkah seterusnya untuk anda</h3>
-      <ol class="pod-rules" id="st-next-user" data-draw="st-next-user" data-source="setup_checklist"></ol>
-    </div>
-    <div>
-      <h3 id="st-tajuk-claude">Claude akan buat seterusnya</h3>
-      <ol class="pod-rules" id="st-next-claude" data-draw="st-next-claude" data-source="setup_checklist"></ol>
-    </div>
-  </div>
+<div id="f-intro" class="pod-section">
+  <p class="pod-lede">Font Generator: upload satu contoh poster typography, AI cadang 10 font Google Fonts yang serupa (lesen OFL / Apache 2.0, boleh guna komersial), jana mockup dari font pilihan, dan simpan yang terbaik sebagai master sheet untuk semua poster.</p>
+  <p><a href="https://claude.ai/artifact/K6uL4Xy8EssqEVpd7FzzS7" target="_blank" rel="noopener noreferrer">Buka Font Generator ↗</a></p>
+  <ol>
+    <li>Upload contoh design dan tekan Decode design.</li>
+    <li>Tandakan font (cadangan 5) dan tekan Jana mockup.</li>
+    <li>Pilih satu mockup dan simpan sebagai master sheet. Tandakan master yang Aktif.</li>
+  </ol>
 </div>
 
-<section id="st-senarai" class="pod-section">
-  <h2>Checklist ikut fasa</h2>
-  <p class="pod-muted">Status ditanda oleh Claude selepas menyemak. "Bersama" bermaksud Claude sediakan, anda klik atau tampal.</p>
-  <div class="pod-phases" id="st-phases" data-draw="st-phases" data-source="setup_checklist"></div>
-  <template id="tpl-st-phase">
-    <article class="pod-card pod-analysis">
-      <div class="pod-guide-head">
-        <h3 class="st-p-title"></h3>
-        <span class="pod-pill st-p-count"></span>
-      </div>
-      <div class="pod-table-wrap">
-        <table data-source="setup_checklist" data-row-key="id">
-          <thead><tr>
-            <th data-field="status">Status</th>
-            <th data-field="step">Langkah</th>
-            <th data-field="who">Siapa</th>
-            <th data-field="connect">Sambung</th>
-            <th data-field="result">Hasil semakan</th>
-          </tr></thead>
-          <tbody class="st-p-body"></tbody>
-        </table>
-      </div>
-    </article>
-  </template>
-  <details id="st-cara">
-    <summary>Cara Claude menyemak setiap langkah</summary>
-    <div class="pod-table-wrap pod-scroll">
-      <table id="st-table-cara" data-source="setup_checklist" data-row-key="id">
-        <thead><tr>
-          <th class="pod-num" data-field="no">#</th>
-          <th data-field="step">Langkah</th>
-          <th data-field="how_check">Cara semak</th>
-          <th data-field="checked_at">Disemak</th>
-        </tr></thead>
-        <tbody data-draw="st-cara-body"></tbody>
-      </table>
-    </div>
-  </details>
+<section id="f-induk" class="pod-section">
+  <h2>Senarai induk fon (bebas untuk jualan)</h2>
+  <p class="pod-lede"><b data-draw="f-total" data-source="fonts_summary" data-field="total" data-row="0">—</b> fon yang lesennya membenarkan poster dan fail digital dijual: <b data-draw="f-n-google" data-source="fonts_summary" data-field="google" data-row="0">—</b> dari Google Fonts, <b data-draw="f-n-fontshare" data-source="fonts_summary" data-field="fontshare" data-row="0">—</b> dari Fontshare dan <b data-draw="f-n-fq" data-source="fonts_summary" data-field="fontsquirrel" data-row="0">—</b> dari Font Squirrel. <b data-draw="f-n-rej" data-source="fonts_summary" data-field="rejected" data-row="0">—</b> fon Font Squirrel ditolak kerana lesennya berisiko, dan <b data-draw="f-n-unchk" data-source="fonts_meta" data-field="fq_unchecked" data-row="0">—</b> lagi tidak dimasukkan kerana lesennya tidak dapat dibaca (muat turun disekat).</p>
+  <p class="pod-muted">Setiap fon dilabel ikut mood poster. Google: dari tag rasmi Google Fonts (skor 0–100). Fontshare dan Font Squirrel: dari kategori laman itu, ditambah semakan rupa oleh Claude (bukti lemah). Kualiti = purata skor lukisan dan jarak huruf dari tag Google.</p>
 </section>
 
-<section id="st-ai" class="pod-section">
-  <h2>Alat AI di komputer awan</h2>
-  <p class="pod-muted">Komputer awan = container sesi Claude Code: 4 teras CPU, 15 GB RAM, tiada GPU. Container dipadam bila sesi tamat, jadi alat perlu dipasang semula setiap sesi baharu. Semua alat di bawah percuma; lesen disemak 22 Nov 2026.</p>
-  <div class="pod-table-wrap pod-scroll">
-    <table id="st-table-ai" data-source="setup_ai_tools" data-row-key="tool">
+<section id="f-mood" class="pod-section">
+  <h2>Pilih fon ikut mood poster</h2>
+  <p class="pod-muted">Mood dahulu, fon kemudian: fon lucu untuk poster motivasi akan mengelirukan pembeli. Setiap kad ada niche yang sesuai, fon teks pasangan, apa yang perlu dielak dan 12 fon terbaik. Tekan gambar untuk saiz penuh.</p>
+  <div class="pod-font-moods" id="f-mood-cards" data-draw="f-moods" data-source="fonts_moods fonts_specimens"></div>
+</section>
+
+<section id="f-cari" class="pod-section">
+  <h2>Cari dalam senarai induk</h2>
+  <div class="pod-font-filters">
+    <label class="pod-tool-label" for="f-q">Nama</label>
+    <input id="f-q" class="pod-font-search" type="search" placeholder="cth. brush, script, slab" aria-label="Cari nama fon">
+    <select id="f-filter-mood" class="dash-select" data-draw="f-mood-filter" data-source="fonts_moods" aria-label="Tapis mood"></select>
+    <select id="f-filter-src" class="dash-select" aria-label="Tapis sumber">
+      <option value="">Semua sumber</option>
+      <option value="google">Google Fonts</option>
+      <option value="fontshare">Fontshare</option>
+      <option value="fontsquirrel">Font Squirrel</option>
+    </select>
+    <select id="f-filter-w" class="dash-select" aria-label="Tapis ketebalan">
+      <option value="">Semua ketebalan</option>
+      <option value="5">5 ketebalan atau lebih</option>
+      <option value="var">Variable sahaja</option>
+      <option value="it">Ada italic</option>
+    </select>
+  </div>
+  <p class="pod-muted" data-draw="f-master-count">—</p>
+  <div class="pod-table-wrap">
+    <table id="f-table-master" data-source="fonts_master" data-row-key="name">
       <thead><tr>
-        <th data-field="job">Kerja</th>
-        <th data-field="tool">Alat</th>
-        <th data-field="license">Lesen</th>
-        <th data-field="free">Percuma</th>
-        <th data-field="fits">Muat dalam container</th>
-        <th data-field="status">Status</th>
-        <th data-field="note">Nota</th>
-        <th data-field="source">Sumber</th>
+        <th data-field="name">Fon</th>
+        <th data-field="src">Sumber</th>
+        <th data-field="lic">Lesen</th>
+        <th data-field="moods">Mood</th>
+        <th data-field="w">Ketebalan</th>
+        <th data-field="q">Kualiti</th>
+        <th data-field="cat">Kategori</th>
       </tr></thead>
-      <tbody data-draw="st-ai-body"></tbody>
+      <tbody data-draw="f-master-body"></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="f-laman" class="pod-section">
+  <h2>Laman sumber fon</h2>
+  <p class="pod-muted">Hijau = selamat (setiap fon berlesen terbuka). Kuning = semak lesen setiap fon. Merah = elak untuk barang jualan.</p>
+  <div class="pod-table-wrap">
+    <table id="f-table-sites" data-source="fonts_sites" data-row-key="name">
+      <thead><tr>
+        <th data-field="name">Laman</th>
+        <th data-field="verdict">Status</th>
+        <th data-field="styles">Gaya yang kuat</th>
+        <th data-field="license">Lesen</th>
+        <th data-field="catch">Perhatian</th>
+        <th data-field="evidence">Bukti</th>
+      </tr></thead>
+      <tbody data-draw="f-sites-body"></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="f-lesen" class="pod-section">
+  <h2>Jenis lesen: boleh jual atau tidak?</h2>
+  <div class="pod-table-wrap">
+    <table id="f-table-lic" data-source="fonts_licenses" data-row-key="license">
+      <thead><tr>
+        <th data-field="license">Lesen</th>
+        <th data-field="sell_print">Jual poster cetak</th>
+        <th data-field="sell_digital">Jual fail digital</th>
+        <th data-field="share_font">Kongsi fail fon</th>
+        <th data-field="note">Nota</th>
+      </tr></thead>
+      <tbody data-draw="f-lic-body"></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="f-tolak" class="pod-section">
+  <h2>Fon ditolak (lesen berisiko)</h2>
+  <p class="pod-muted">Fon Font Squirrel yang fail lesennya tiada, tidak jelas atau mengehadkan kegunaan komersial. Jangan guna untuk barang jualan tanpa izin bertulis pembuatnya.</p>
+  <div class="pod-table-wrap">
+    <table id="f-table-rej" data-source="fonts_rejected" data-row-key="name">
+      <thead><tr>
+        <th data-field="name">Fon</th>
+        <th data-field="lic">Sebab</th>
+        <th data-field="cat">Kelas</th>
+        <th data-field="lic_note">Petikan lesen</th>
+      </tr></thead>
+      <tbody data-draw="f-rej-body"></tbody>
     </table>
   </div>
 </section>
@@ -711,6 +747,21 @@
     </div>
   </div>
 </div>
+
+<nav class="pod-nav" aria-label="Bahagian model AI">
+    <a href="#m-lettering-p9">Lettering P9</a>
+    <a href="#m-ujian">Ujian 3 model</a>
+    <a href="#m-lettering">Ujian lettering</a>
+    <a href="#m-lettering-v2">ERNIE v2</a>
+    <a href="#m-lettering-v3">QC v3</a>
+    <a href="#m-cadangan">Model ikut poster</a>
+    <a href="#m-banding">Banding model</a>
+    <a href="#m-lesen">Lesen & kuota</a>
+    <a href="#st-ai">Alat AI awan</a>
+    <a href="#m-sejarah">Chat lepas</a>
+    <a href="#m-langkah">Pilih model</a>
+    <a href="#m-sumber">Sumber</a>
+  </nav>
 
 <section id="m-lettering-p9" class="pod-section">
   <h2>Lettering P9 (23 Nov): pelan percuma + ujian 6 gaya</h2>
@@ -987,11 +1038,7 @@
   </div>
 </section>
 
-</section>
-
-<section id="tab-lesen" class="pod-tab" role="tabpanel" aria-labelledby="btn-lesen" hidden>
-
-<div id="l-intro" class="pod-section pod-first">
+<div id="l-intro" class="pod-section">
   <p class="pod-lede">Model jana imej di Hugging Face yang disemak: boleh dijual atau tidak, syarat lesen, kos kuota GPU percuma dan VRAM untuk jalan sendiri.</p>
   <p class="pod-muted">Lajur Komersial?: hijau = bebas komersial, kuning = boleh dengan syarat, merah = bukan komersial.</p>
 </div>
@@ -1028,11 +1075,98 @@
   </div>
 </section>
 
+<section id="st-ai" class="pod-section">
+  <h2>Alat AI di komputer awan</h2>
+  <p class="pod-muted">Komputer awan = container sesi Claude Code: 4 teras CPU, 15 GB RAM, tiada GPU. Container dipadam bila sesi tamat, jadi alat perlu dipasang semula setiap sesi baharu. Semua alat di bawah percuma; lesen disemak 22 Nov 2026.</p>
+  <div class="pod-table-wrap pod-scroll">
+    <table id="st-table-ai" data-source="setup_ai_tools" data-row-key="tool">
+      <thead><tr>
+        <th data-field="job">Kerja</th>
+        <th data-field="tool">Alat</th>
+        <th data-field="license">Lesen</th>
+        <th data-field="free">Percuma</th>
+        <th data-field="fits">Muat dalam container</th>
+        <th data-field="status">Status</th>
+        <th data-field="note">Nota</th>
+        <th data-field="source">Sumber</th>
+      </tr></thead>
+      <tbody data-draw="st-ai-body"></tbody>
+    </table>
+  </div>
+</section>
+
 </section>
 
 <section id="tab-workflow" class="pod-tab" role="tabpanel" aria-labelledby="btn-workflow" hidden>
 
-<div id="wf-intro" class="pod-section pod-first">
+<div id="st-intro" class="pod-section pod-first">
+  <p class="pod-lede"><b data-draw="st-done" data-source="setup_progress" data-field="done" data-row="0">—</b> daripada <b data-draw="st-total" data-source="setup_progress" data-field="total" data-row="0">—</b> langkah setup siap. Claude menyemak dan menanda setiap langkah; semakan terakhir <b data-draw="st-last" data-source="setup_progress" data-field="last_checked" data-row="0">—</b>.</p>
+  <div class="pod-progress" id="st-progress" aria-hidden="true"><div class="pod-progress-bar" data-draw="st-bar" data-source="setup_progress"></div></div>
+  <div class="pod-two">
+    <div>
+      <h3 id="st-tajuk-anda">Langkah seterusnya untuk anda</h3>
+      <ol class="pod-rules" id="st-next-user" data-draw="st-next-user" data-source="setup_checklist"></ol>
+    </div>
+    <div>
+      <h3 id="st-tajuk-claude">Claude akan buat seterusnya</h3>
+      <ol class="pod-rules" id="st-next-claude" data-draw="st-next-claude" data-source="setup_checklist"></ol>
+    </div>
+  </div>
+</div>
+
+<section id="st-senarai" class="pod-section">
+  <h2>Checklist ikut fasa</h2>
+  <p class="pod-muted">Status ditanda oleh Claude selepas menyemak. "Bersama" bermaksud Claude sediakan, anda klik atau tampal.</p>
+  <div class="pod-phases" id="st-phases" data-draw="st-phases" data-source="setup_checklist"></div>
+  <template id="tpl-st-phase">
+    <article class="pod-card pod-analysis">
+      <div class="pod-guide-head">
+        <h3 class="st-p-title"></h3>
+        <span class="pod-pill st-p-count"></span>
+      </div>
+      <div class="pod-table-wrap">
+        <table data-source="setup_checklist" data-row-key="id">
+          <thead><tr>
+            <th data-field="status">Status</th>
+            <th data-field="step">Langkah</th>
+            <th data-field="who">Siapa</th>
+            <th data-field="connect">Sambung</th>
+            <th data-field="result">Hasil semakan</th>
+          </tr></thead>
+          <tbody class="st-p-body"></tbody>
+        </table>
+      </div>
+    </article>
+  </template>
+  <details id="st-cara">
+    <summary>Cara Claude menyemak setiap langkah</summary>
+    <div class="pod-table-wrap pod-scroll">
+      <table id="st-table-cara" data-source="setup_checklist" data-row-key="id">
+        <thead><tr>
+          <th class="pod-num" data-field="no">#</th>
+          <th data-field="step">Langkah</th>
+          <th data-field="how_check">Cara semak</th>
+          <th data-field="checked_at">Disemak</th>
+        </tr></thead>
+        <tbody data-draw="st-cara-body"></tbody>
+      </table>
+    </div>
+  </details>
+</section>
+
+<nav class="pod-nav" aria-label="Bahagian kerja">
+    <a href="#st-senarai">Checklist setup</a>
+    <a href="#wf-harian">Harian</a>
+    <a href="#wf-mingguan">Mingguan</a>
+    <a href="#wf-bulanan">Bulanan</a>
+    <a href="#wf-sop">SOP lettering + QC</a>
+    <a href="#al-langkah">12 langkah</a>
+    <a href="#al-gaya">Daftar gaya</a>
+    <a href="#al-warna">Daftar warna</a>
+    <a href="#al-kod">Kod design</a>
+  </nav>
+
+<div id="wf-intro" class="pod-section">
   <p class="pod-lede">Claude buat kerja berulang secara automatik; anda hanya luluskan dan semak. Automasi bermula selepas laman web, Printify dan Pinterest disambung (tab Setup).</p>
   <div class="pod-kpis" id="wf-masa">
     <div class="pod-kpi" id="wf-masa-harian">
@@ -1048,12 +1182,6 @@
       <div class="pod-big"><span data-draw="wf-t-b" data-source="workflow_time" data-field="user_min" data-where="frequency=Bulanan">—</span> min</div>
     </div>
   </div>
-  <nav class="pod-nav" aria-label="Bahagian workflow">
-    <a href="#wf-harian">Harian</a>
-    <a href="#wf-mingguan">Mingguan</a>
-    <a href="#wf-bulanan">Bulanan</a>
-    <a href="#wf-sop">SOP lettering + QC</a>
-  </nav>
 </div>
 
 <section id="wf-harian" class="pod-section">
@@ -1100,18 +1228,8 @@
   </div>
 </section>
 
-</section>
-
-<section id="tab-aliran" class="pod-tab" role="tabpanel" aria-labelledby="btn-aliran" hidden>
-
-<div id="al-intro" class="pod-section pod-first">
+<div id="al-intro" class="pod-section">
   <p class="pod-lede">Aliran 12 langkah daripada senarai ayat hingga fail siap cetak. Setiap gaya tipografi didaftar sebagai S (contoh S001) dan setiap gabungan warna sebagai C (contoh C001), supaya setiap poster boleh dijejak.</p>
-  <nav class="pod-nav" aria-label="Bahagian aliran design">
-    <a href="#al-langkah">12 langkah</a>
-    <a href="#al-gaya">Daftar gaya (S)</a>
-    <a href="#al-warna">Daftar warna (C)</a>
-    <a href="#al-kod">Kod design</a>
-  </nav>
 </div>
 
 <section id="al-langkah" class="pod-section">
@@ -1212,11 +1330,6 @@
   <p class="pod-muted">Setiap poster mendapat satu kod: nombor ayat (A), gaya (S) dan warna (C). Versi hitam putih ditulis tanpa C, contoh A001-S003. Kod ini dipakai pada nama fail dan dalam tab Prestasi, supaya jelas gaya dan warna mana yang laku.</p>
 </section>
 
-<div class="mt-zoom" id="al-zoom" hidden role="dialog" aria-modal="true" aria-label="Gambar besar">
-  <figure data-draw="al-zoom-fig"></figure>
-  <button type="button" class="mt-zoom-close" id="al-zoom-close">Tutup ✕</button>
-</div>
-
 </section>
 
 <section id="tab-prestasi" class="pod-tab" role="tabpanel" aria-labelledby="btn-prestasi" hidden>
@@ -1315,463 +1428,6 @@
 
 </section>
 
-<section id="tab-font" class="pod-tab" role="tabpanel" aria-labelledby="btn-font" hidden>
-
-<div id="f-intro" class="pod-section pod-first">
-  <p class="pod-lede">Font Generator: upload satu contoh poster typography, AI cadang 10 font Google Fonts yang serupa (lesen OFL / Apache 2.0, boleh guna komersial), jana mockup dari font pilihan, dan simpan yang terbaik sebagai master sheet untuk semua poster.</p>
-  <p><a href="https://claude.ai/artifact/K6uL4Xy8EssqEVpd7FzzS7" target="_blank" rel="noopener noreferrer">Buka Font Generator ↗</a></p>
-  <ol>
-    <li>Upload contoh design dan tekan Decode design.</li>
-    <li>Tandakan font (cadangan 5) dan tekan Jana mockup.</li>
-    <li>Pilih satu mockup dan simpan sebagai master sheet. Tandakan master yang Aktif.</li>
-  </ol>
-</div>
-
-<section id="f-induk" class="pod-section">
-  <h2>Senarai induk fon (bebas untuk jualan)</h2>
-  <p class="pod-lede"><b data-draw="f-total" data-source="fonts_summary" data-field="total" data-row="0">—</b> fon yang lesennya membenarkan poster dan fail digital dijual: <b data-draw="f-n-google" data-source="fonts_summary" data-field="google" data-row="0">—</b> dari Google Fonts, <b data-draw="f-n-fontshare" data-source="fonts_summary" data-field="fontshare" data-row="0">—</b> dari Fontshare dan <b data-draw="f-n-fq" data-source="fonts_summary" data-field="fontsquirrel" data-row="0">—</b> dari Font Squirrel. <b data-draw="f-n-rej" data-source="fonts_summary" data-field="rejected" data-row="0">—</b> fon Font Squirrel ditolak kerana lesennya berisiko, dan <b data-draw="f-n-unchk" data-source="fonts_meta" data-field="fq_unchecked" data-row="0">—</b> lagi tidak dimasukkan kerana lesennya tidak dapat dibaca (muat turun disekat).</p>
-  <p class="pod-muted">Setiap fon dilabel ikut mood poster. Google: dari tag rasmi Google Fonts (skor 0–100). Fontshare dan Font Squirrel: dari kategori laman itu, ditambah semakan rupa oleh Claude (bukti lemah). Kualiti = purata skor lukisan dan jarak huruf dari tag Google.</p>
-</section>
-
-<section id="f-mood" class="pod-section">
-  <h2>Pilih fon ikut mood poster</h2>
-  <p class="pod-muted">Mood dahulu, fon kemudian: fon lucu untuk poster motivasi akan mengelirukan pembeli. Setiap kad ada niche yang sesuai, fon teks pasangan, apa yang perlu dielak dan 12 fon terbaik. Tekan gambar untuk saiz penuh.</p>
-  <div class="pod-font-moods" id="f-mood-cards" data-draw="f-moods" data-source="fonts_moods fonts_specimens"></div>
-</section>
-
-<section id="f-cari" class="pod-section">
-  <h2>Cari dalam senarai induk</h2>
-  <div class="pod-font-filters">
-    <label class="pod-tool-label" for="f-q">Nama</label>
-    <input id="f-q" class="pod-font-search" type="search" placeholder="cth. brush, script, slab" aria-label="Cari nama fon">
-    <select id="f-filter-mood" class="dash-select" data-draw="f-mood-filter" data-source="fonts_moods" aria-label="Tapis mood"></select>
-    <select id="f-filter-src" class="dash-select" aria-label="Tapis sumber">
-      <option value="">Semua sumber</option>
-      <option value="google">Google Fonts</option>
-      <option value="fontshare">Fontshare</option>
-      <option value="fontsquirrel">Font Squirrel</option>
-    </select>
-    <select id="f-filter-w" class="dash-select" aria-label="Tapis ketebalan">
-      <option value="">Semua ketebalan</option>
-      <option value="5">5 ketebalan atau lebih</option>
-      <option value="var">Variable sahaja</option>
-      <option value="it">Ada italic</option>
-    </select>
-  </div>
-  <p class="pod-muted" data-draw="f-master-count">—</p>
-  <div class="pod-table-wrap">
-    <table id="f-table-master" data-source="fonts_master" data-row-key="name">
-      <thead><tr>
-        <th data-field="name">Fon</th>
-        <th data-field="src">Sumber</th>
-        <th data-field="lic">Lesen</th>
-        <th data-field="moods">Mood</th>
-        <th data-field="w">Ketebalan</th>
-        <th data-field="q">Kualiti</th>
-        <th data-field="cat">Kategori</th>
-      </tr></thead>
-      <tbody data-draw="f-master-body"></tbody>
-    </table>
-  </div>
-</section>
-
-<section id="f-laman" class="pod-section">
-  <h2>Laman sumber fon</h2>
-  <p class="pod-muted">Hijau = selamat (setiap fon berlesen terbuka). Kuning = semak lesen setiap fon. Merah = elak untuk barang jualan.</p>
-  <div class="pod-table-wrap">
-    <table id="f-table-sites" data-source="fonts_sites" data-row-key="name">
-      <thead><tr>
-        <th data-field="name">Laman</th>
-        <th data-field="verdict">Status</th>
-        <th data-field="styles">Gaya yang kuat</th>
-        <th data-field="license">Lesen</th>
-        <th data-field="catch">Perhatian</th>
-        <th data-field="evidence">Bukti</th>
-      </tr></thead>
-      <tbody data-draw="f-sites-body"></tbody>
-    </table>
-  </div>
-</section>
-
-<section id="f-lesen" class="pod-section">
-  <h2>Jenis lesen: boleh jual atau tidak?</h2>
-  <div class="pod-table-wrap">
-    <table id="f-table-lic" data-source="fonts_licenses" data-row-key="license">
-      <thead><tr>
-        <th data-field="license">Lesen</th>
-        <th data-field="sell_print">Jual poster cetak</th>
-        <th data-field="sell_digital">Jual fail digital</th>
-        <th data-field="share_font">Kongsi fail fon</th>
-        <th data-field="note">Nota</th>
-      </tr></thead>
-      <tbody data-draw="f-lic-body"></tbody>
-    </table>
-  </div>
-</section>
-
-<section id="f-tolak" class="pod-section">
-  <h2>Fon ditolak (lesen berisiko)</h2>
-  <p class="pod-muted">Fon Font Squirrel yang fail lesennya tiada, tidak jelas atau mengehadkan kegunaan komersial. Jangan guna untuk barang jualan tanpa izin bertulis pembuatnya.</p>
-  <div class="pod-table-wrap">
-    <table id="f-table-rej" data-source="fonts_rejected" data-row-key="name">
-      <thead><tr>
-        <th data-field="name">Fon</th>
-        <th data-field="lic">Sebab</th>
-        <th data-field="cat">Kelas</th>
-        <th data-field="lic_note">Petikan lesen</th>
-      </tr></thead>
-      <tbody data-draw="f-rej-body"></tbody>
-    </table>
-  </div>
-</section>
-
-</section>
-
-<section id="tab-utama" class="pod-tab" role="tabpanel" aria-labelledby="btn-utama" hidden>
-
-<div id="utama-intro" class="pod-section pod-first">
-  <p class="pod-lede">Semua produk (baju, mug, poster dan lain-lain): untung dijangka <b data-draw="lede-steady" data-source="scenarios" data-field="steady_profit" data-where="scenario=Asas">—</b> setahun bila matang. Niche <b data-draw="lede-top" data-source="niche_profit" data-field="niche" data-row="0">—</b> paling banyak menyumbang (<b data-draw="lede-share" data-source="niche_profit" data-field="share" data-row="0">—</b>%).</p>
-  <div class="pod-kpis" id="u-kpis">
-    <div class="pod-kpi" id="ans-untung">
-      <div class="pod-q">Untung setahun</div>
-      <div class="pod-big" data-draw="kpi-steady" data-source="scenarios" data-field="steady_profit" data-where="scenario=Asas">—</div>
-      <div class="pod-muted">bila matang</div>
-    </div>
-    <div class="pod-kpi" id="u-kpi-tahun1">
-      <div class="pod-q">Tahun pertama</div>
-      <div class="pod-big" data-draw="kpi-y1" data-source="scenarios" data-field="year1_profit" data-where="scenario=Asas">—</div>
-      <div class="pod-muted">2027, trafik masih naik</div>
-    </div>
-    <div class="pod-kpi" id="u-kpi-bulan">
-      <div class="pod-q">Purata sebulan</div>
-      <div class="pod-big" data-draw="kpi-avg" data-source="monthly_stats" data-field="avg" data-row="0">—</div>
-      <div class="pod-muted">bila matang</div>
-    </div>
-    <div class="pod-kpi" id="u-kpi-pesanan">
-      <div class="pod-q">Pesanan setahun</div>
-      <div class="pod-big" data-draw="u-kpi-orders" data-source="scenarios" data-field="steady_orders" data-where="scenario=Asas">—</div>
-      <div class="pod-muted">bila matang</div>
-    </div>
-  </div>
-  <div class="pod-bests" id="u-terbaik">
-    <div class="pod-best" id="ans-niche">
-      <div class="pod-q">Niche paling untung</div>
-      <div class="pod-best-v" data-draw="ans-niche" data-source="niche_profit" data-field="niche" data-row="0">—</div>
-      <div class="pod-muted"><span data-draw="ans-niche-profit" data-source="niche_profit" data-field="profit" data-row="0">—</span> setahun</div>
-    </div>
-    <div class="pod-best" id="ans-produk">
-      <div class="pod-q">Produk paling untung seunit</div>
-      <div class="pod-best-v" data-draw="ans-product" data-source="top_product" data-field="product" data-row="0">—</div>
-      <div class="pod-muted"><span data-draw="ans-product-profit" data-source="top_product" data-field="profit_usd" data-row="0">—</span> seunit</div>
-    </div>
-    <div class="pod-best" id="ans-katakunci">
-      <div class="pod-q">Kata kunci paling berpeluang</div>
-      <div class="pod-best-v" data-draw="ans-keyword" data-source="top_keyword" data-field="keyword" data-row="0">—</div>
-      <div class="pod-muted">peluang <span data-draw="ans-keyword-opp" data-source="top_keyword" data-field="opportunity" data-row="0">—</span></div>
-    </div>
-  </div>
-  <details id="istilah">
-    <summary>Maksud istilah dalam dashboard ini</summary>
-    <dl class="pod-gloss">
-      <div><dt>Matang</dt><dd>Selepas akaun Pinterest stabil dan membawa ~3,000 pelawat sebulan ke kedai.</dd></div>
-      <div><dt>Tahun pertama</dt><dd>2027. Trafik bermula perlahan (5% pada Januari) dan penuh pada Ogos.</dd></div>
-      <div><dt>Senario</dt><dd>Pesimis, asas dan optimis: tiga andaian trafik dan kadar pembelian.</dd></div>
-      <div><dt>Untung seunit</dt><dd>Harga jual tolak kos Printify dan fee bayaran. Pembeli bayar shipping.</dd></div>
-      <div><dt>Peluang</dt><dd>Carian sebulan bagi setiap 1,000 produk pesaing di Etsy. Lebih tinggi = lebih mudah menonjol.</dd></div>
-      <div><dt>Produk utama / tambahan</dt><dd>Utama: jual dahulu. Tambahan: produk sampingan untuk menaikkan nilai pesanan.</dd></div>
-      <div><dt>Tahap bukti</dt><dd>Rasmi (platform asal), pihak ketiga (tool atau blog), lemah (satu sumber atau anekdot).</dd></div>
-    </dl>
-  </details>
-  <nav class="pod-nav" aria-label="Bahagian semua produk">
-    <a href="#untung">Untung</a>
-    <a href="#niche">Pelan niche</a>
-    <a href="#produk">Produk</a>
-    <a href="#katakunci">Kata kunci</a>
-    <a href="#kalendar">Bila jual</a>
-    <a href="#persona">Pembeli</a>
-    <a href="#pin">Pin</a>
-    <a href="#sumber">Sumber</a>
-  </nav>
-</div>
-
-<section id="untung" class="pod-section">
-  <h2>Untung setiap bulan</h2>
-  <p class="pod-muted">Bulan paling lemah (<b data-draw="kpi-min-month" data-source="monthly_stats" data-field="min_month" data-row="0">—</b>) masih <b data-draw="u-low-high" data-source="monthly_stats" data-field="low_vs_high" data-row="0">—</b>% daripada bulan terbaik (<b data-draw="kpi-max-month" data-source="monthly_stats" data-field="max_month" data-row="0">—</b>).</p>
-  <ul class="pod-legend" id="legend-monthly">
-    <li><span class="pod-sw" id="sw-matang"></span>Bila matang</li>
-    <li><span class="pod-sw pod-line"></span>Tahun pertama (2027)</li>
-  </ul>
-  <div class="pod-chart" id="chart-monthly" data-draw="monthly" data-source="model_monthly"></div>
-  <h3 id="tajuk-senario">Tiga senario setahun</h3>
-  <div class="pod-scen" id="u-senario">
-    <div class="pod-kpi" id="u-scen-pesimis">
-      <div class="pod-q">Pesimis</div>
-      <div class="pod-mid" data-draw="u-scen-lo" data-source="scenarios" data-field="steady_profit" data-where="scenario=Pesimis">—</div>
-      <div class="pod-muted">Tahun 1: <span data-draw="u-scen-lo-y1" data-source="scenarios" data-field="year1_profit" data-where="scenario=Pesimis">—</span></div>
-      <div class="pod-muted" data-draw="u-scen-lo-a" data-source="scenarios" data-field="assumption" data-where="scenario=Pesimis">—</div>
-    </div>
-    <div class="pod-kpi pod-hl" id="u-scen-asas">
-      <div class="pod-q">Asas</div>
-      <div class="pod-mid" data-draw="u-scen-mid" data-source="scenarios" data-field="steady_profit" data-where="scenario=Asas">—</div>
-      <div class="pod-muted">Tahun 1: <span data-draw="u-scen-mid-y1" data-source="scenarios" data-field="year1_profit" data-where="scenario=Asas">—</span></div>
-      <div class="pod-muted" data-draw="u-scen-mid-a" data-source="scenarios" data-field="assumption" data-where="scenario=Asas">—</div>
-    </div>
-    <div class="pod-kpi" id="u-scen-optimis">
-      <div class="pod-q">Optimis</div>
-      <div class="pod-mid" data-draw="u-scen-hi" data-source="scenarios" data-field="steady_profit" data-where="scenario=Optimis">—</div>
-      <div class="pod-muted">Tahun 1: <span data-draw="u-scen-hi-y1" data-source="scenarios" data-field="year1_profit" data-where="scenario=Optimis">—</span></div>
-      <div class="pod-muted" data-draw="u-scen-hi-a" data-source="scenarios" data-field="assumption" data-where="scenario=Optimis">—</div>
-    </div>
-  </div>
-  <p class="pod-muted">Musim dan kadar pembelian ialah anggaran; kemas kini dengan jualan sebenar selepas 3 bulan.</p>
-</section>
-
-<section id="niche" class="pod-section">
-  <h2>Pelan niche: mana nak buat dahulu</h2>
-  <p class="pod-muted">Niche Gelombang 1, disusun ikut untung setahun. Klik satu baris untuk melihat produk yang sesuai di bawah.</p>
-  <div class="pod-table-wrap">
-    <table id="table-plan" data-source="niche_plan" data-row-key="id">
-      <thead><tr>
-        <th data-field="niche">Niche</th>
-        <th data-field="profit">Untung setahun</th>
-        <th data-field="peak_months">Puncak jualan</th>
-        <th data-field="pin_window">Mula pin</th>
-      </tr></thead>
-      <tbody data-draw="u-plan-body"></tbody>
-    </table>
-  </div>
-  <details id="pecahan-skor">
-    <summary>Lihat semua 16 niche yang dikaji dan skornya</summary>
-    <div class="pod-table-wrap pod-scroll">
-      <table id="table-scores" data-source="niches" data-row-key="id">
-        <thead><tr>
-          <th class="pod-num" data-field="rank">#</th>
-          <th data-field="niche">Niche</th>
-          <th class="pod-num" data-field="total">Skor /30</th>
-          <th data-field="wave">Keputusan</th>
-          <th class="pod-num" data-field="demand">Permintaan</th>
-          <th class="pod-num" data-field="competition">Saingan rendah</th>
-          <th class="pod-num" data-field="typography_fit">Typography</th>
-          <th class="pod-num" data-field="pinterest_fit">Pinterest</th>
-          <th class="pod-num" data-field="order_value">Nilai pesanan</th>
-          <th class="pod-num" data-field="automation">Automasi</th>
-        </tr></thead>
-        <tbody data-draw="scores-body"></tbody>
-      </table>
-    </div>
-    <p class="pod-muted">Skor 1–5 setiap kriteria ialah penilaian Claude berdasarkan bukti, bukan data rasmi.</p>
-  </details>
-  <details id="bukti-niche">
-    <summary>Lihat bukti utama setiap niche</summary>
-    <div class="pod-table-wrap pod-scroll">
-      <table id="table-niches" data-source="niches" data-row-key="id">
-        <thead><tr>
-          <th class="pod-num" data-field="rank">#</th>
-          <th data-field="niche">Niche</th>
-          <th class="pod-num" data-field="total">Skor /30</th>
-          <th data-field="season">Musim</th>
-          <th data-field="wave">Keputusan</th>
-          <th data-field="key_evidence">Bukti utama</th>
-          <th data-field="evidence_level">Tahap bukti</th>
-        </tr></thead>
-        <tbody data-draw="niches-body"></tbody>
-      </table>
-    </div>
-  </details>
-</section>
-
-<section id="produk" class="pod-section">
-  <h2>Produk untuk setiap niche</h2>
-  <p class="pod-muted">Untung anggaran seunit atau setiap set (pelan Printify Free, pembeli bayar shipping).</p>
-  <div class="pod-select-row" id="produk-niche">
-    <label class="pod-muted" for="np-niche">Niche</label>
-    <select id="np-niche" class="dash-select" data-draw="np-filter" data-source="niche_products" aria-label="Pilih niche"></select>
-  </div>
-  <div class="pod-two">
-    <div>
-      <h3 id="tajuk-utama">Utama: jual dahulu</h3>
-      <ul class="pod-np" id="np-main" data-draw="np-main" data-source="niche_products"></ul>
-    </div>
-    <div>
-      <h3 id="tajuk-tambahan">Tambahan: naikkan nilai pesanan</h3>
-      <ul class="pod-np" id="np-addon" data-draw="np-addon" data-source="niche_products"></ul>
-    </div>
-  </div>
-  <template id="tpl-np">
-    <li class="pod-np-item">
-      <span class="pod-np-name"></span>
-      <span class="pod-np-profit">Untung ~<b class="pod-np-profit-v"></b></span>
-      <span class="pod-np-meta"><span class="pod-pill pod-np-cat"></span><span>Harga jual <span class="pod-np-price"></span></span><span class="pod-np-note"></span><span class="pod-np-link"></span></span>
-    </li>
-  </template>
-  <details id="katalog">
-    <summary>Lihat semua 36 produk Printify yang dikaji</summary>
-    <div class="pod-select-row">
-      <label class="pod-muted" for="cat-filter">Kategori</label>
-      <select id="cat-filter" class="dash-select" data-draw="cat-filter" data-source="products" aria-label="Tapis kategori"></select>
-    </div>
-    <div class="pod-table-wrap pod-scroll">
-      <table id="table-catalog" data-source="products" data-row-key="id">
-        <thead><tr>
-          <th data-field="product">Produk</th>
-          <th data-field="category">Kategori</th>
-          <th class="pod-num" data-field="base_usd">Kos Printify</th>
-          <th class="pod-num" data-field="price_usd">Harga jual</th>
-          <th class="pod-num" data-field="profit_usd">Untung</th>
-          <th data-field="status">Cadangan</th>
-          <th data-field="cost_note">Nota kos</th>
-          <th data-field="level">Tahap bukti</th>
-          <th data-field="source">Printify</th>
-        </tr></thead>
-        <tbody data-draw="catalog-body"></tbody>
-      </table>
-    </div>
-    <p class="pod-muted">"—" pada untung bermaksud kos USD belum dijumpai. Sahkan kos dalam editor Printify sebelum menetapkan harga.</p>
-  </details>
-</section>
-
-<section id="katakunci" class="pod-section">
-  <h2>Kata kunci paling berpeluang</h2>
-  <p class="pod-muted">10 teratas: carian sebulan bagi setiap 1,000 produk pesaing di Etsy.</p>
-  <div class="pod-select-row">
-    <label class="pod-muted" for="kw-niche">Niche</label>
-    <select id="kw-niche" class="dash-select" data-draw="kw-filter" data-source="keywords" aria-label="Tapis niche kata kunci"></select>
-  </div>
-  <div class="pod-chart pod-short" id="chart-opportunity" data-draw="opportunity" data-source="keywords"></div>
-  <details id="jadual-katakunci">
-    <summary>Lihat semua kata kunci dan jumlah carian</summary>
-    <div class="pod-table-wrap pod-scroll">
-      <table id="table-keywords" data-source="keywords" data-row-key="keyword">
-        <thead><tr>
-          <th data-field="niche">Niche</th>
-          <th data-field="keyword">Kata kunci</th>
-          <th class="pod-num" data-field="google_monthly">Carian / bulan</th>
-          <th data-field="volume_type">Jenis</th>
-          <th class="pod-num" data-field="etsy_listings">Produk pesaing Etsy</th>
-          <th class="pod-num" data-field="opportunity">Peluang</th>
-          <th data-field="note">Nota</th>
-          <th data-field="source">Sumber</th>
-        </tr></thead>
-        <tbody data-draw="kw-body"></tbody>
-      </table>
-    </div>
-  </details>
-</section>
-
-<section id="kalendar" class="pod-section">
-  <h2>Bila jualan tinggi</h2>
-  <p class="pod-muted">Warna pekat = bulan jualan tinggi (100 = bulan biasa). Mula pin 45–90 hari sebelum puncak.</p>
-  <div class="pod-table-wrap">
-    <div class="pod-chart" id="chart-heatmap" data-draw="heatmap" data-source="seasonality"></div>
-  </div>
-</section>
-
-<section id="persona" class="pod-section">
-  <h2>Siapa pembeli</h2>
-  <p class="pod-muted">"Bulk" = satu pesanan untuk ramai orang; "satu-satu" = satu item setiap pesanan.</p>
-  <div class="pod-personas" id="persona-cards" data-draw="personas" data-source="personas"></div>
-  <template id="tpl-persona">
-    <article class="pod-card">
-      <h3 class="pod-p-name"></h3>
-      <div><span class="pod-pill pod-p-niche"></span></div>
-      <dl class="pod-dl">
-        <dt>Bila</dt><dd data-f="when"></dd>
-        <dt>Cara beli</dt><dd data-f="how"></dd>
-      </dl>
-      <details class="pod-more">
-        <summary>Butiran</summary>
-        <dl class="pod-dl">
-          <dt>Siapa</dt><dd data-f="who"></dd>
-          <dt>Produk</dt><dd data-f="products"></dd>
-          <dt>Kekerapan</dt><dd data-f="frequency"></dd>
-          <dt>Belanja</dt><dd data-f="spend"></dd>
-          <dt>Saiz pasaran</dt><dd data-f="market_size"></dd>
-          <dt>Emosi</dt><dd data-f="emotion"></dd>
-          <dt>Sumber</dt><dd data-f="source"></dd>
-        </dl>
-      </details>
-    </article>
-  </template>
-</section>
-
-<section id="pin" class="pod-section">
-  <h2>Cara buat pin</h2>
-  <p class="pod-muted">Setiap design dijadikan 3–5 pin berbeza ikut campuran templat ini.</p>
-  <div class="pod-two">
-    <div>
-      <h3 id="tajuk-templat">Campuran templat (% pin)</h3>
-      <div class="pod-chart pod-short" id="chart-templates" data-draw="templates" data-source="pin_playbook"></div>
-    </div>
-    <div>
-      <h3 id="tajuk-format">Peraturan format pin</h3>
-      <ul class="pod-rules" id="u-rules" data-draw="u-rules" data-source="pin_playbook"></ul>
-    </div>
-  </div>
-  <details id="jadual-pin">
-    <summary>Lihat trend visual dan typography 2026</summary>
-    <div class="pod-table-wrap">
-      <table id="table-pins" data-source="pin_playbook" data-row-key="item">
-        <thead><tr>
-          <th data-field="kind">Jenis</th>
-          <th data-field="item">Dapatan</th>
-          <th data-field="level">Tahap bukti</th>
-          <th data-field="source">Sumber</th>
-        </tr></thead>
-        <tbody data-draw="pins-body"></tbody>
-      </table>
-    </div>
-  </details>
-</section>
-
-<section id="sumber" class="pod-section">
-  <h2>Sumber</h2>
-  <p class="pod-muted">Dikumpul 21 November 2026 melalui indeks carian; halaman asal belum dibuka terus.</p>
-  <div class="pod-kpis">
-    <div class="pod-kpi" id="src-rasmi">
-      <div class="pod-q">Sumber rasmi</div>
-      <div class="pod-mid" data-draw="src-rasmi" data-source="source_counts" data-field="count" data-where="level=rasmi">—</div>
-    </div>
-    <div class="pod-kpi" id="src-pihak">
-      <div class="pod-q">Pihak ketiga</div>
-      <div class="pod-mid" data-draw="src-pihak" data-source="source_counts" data-field="count" data-where="level=pihak_ketiga">—</div>
-    </div>
-    <div class="pod-kpi" id="src-lemah">
-      <div class="pod-q">Bukti lemah</div>
-      <div class="pod-mid" data-draw="src-lemah" data-source="source_counts" data-field="count" data-where="level=lemah">—</div>
-    </div>
-  </div>
-  <details id="percanggahan">
-    <summary>Angka yang bercanggah dan pilihan dibuat</summary>
-    <div class="pod-table-wrap">
-      <table id="table-conflicts" data-source="conflicts" data-row-key="topic">
-        <thead><tr>
-          <th data-field="topic">Topik</th>
-          <th data-field="values">Nilai bercanggah</th>
-          <th data-field="resolution">Keputusan</th>
-        </tr></thead>
-        <tbody data-draw="conflicts-body"></tbody>
-      </table>
-    </div>
-  </details>
-  <details id="daftar-sumber">
-    <summary>Daftar semua sumber</summary>
-    <div class="pod-table-wrap pod-scroll">
-      <table id="table-sources" data-source="sources" data-row-key="id">
-        <thead><tr>
-          <th data-field="id">ID</th>
-          <th data-field="domain">Domain</th>
-          <th data-field="level">Tahap</th>
-          <th data-field="stages">Peringkat</th>
-          <th data-field="claim">Dakwaan</th>
-          <th data-field="url">Pautan</th>
-        </tr></thead>
-        <tbody data-draw="sources-body"></tbody>
-      </table>
-    </div>
-  </details>
-</section>
-
-</section>
 </div>
 
 <script>
