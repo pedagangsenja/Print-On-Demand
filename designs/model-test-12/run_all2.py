@@ -15,7 +15,7 @@ ORDER = ["klein4b", "zturbo", "ernie", "schnell", "chroma_flash", "kandinsky", "
     ["klein4b", "klein4b_ref", "zturbo", "ernie", "schnell", "chroma_flash", "kandinsky", "moss"]
 GGUF = {"zturbo": ("zimage-turbo-Q8_0.gguf", "leejet/Z-Image-Turbo-GGUF/resolve/main/z_image_turbo-Q8_0.gguf"),
         "ernie": ("ernie-turbo-Q8_0.gguf", "unsloth/ERNIE-Image-Turbo-GGUF/resolve/main/ernie-image-turbo-Q8_0.gguf"),
-        "schnell": ("flux1-schnell-city96-Q8_0.gguf", "city96/FLUX.1-schnell-gguf/resolve/main/flux1-schnell-Q8_0.gguf"),
+        "schnell": ("flux1-schnell-city96-Q6_K.gguf", "city96/FLUX.1-schnell-gguf/resolve/main/flux1-schnell-Q6_K.gguf"),
         "chroma_flash": ("chroma1-flash-Q8_0.gguf", "silveroxides/Chroma1-Flash-GGUF/resolve/main/Chroma1-HD-Flash-Q8_0.gguf")}
 REPOS = {  # (repo, allow_patterns): pengekod teks, tokenizer, VAE dan config sahaja
     "zturbo": [("Tongyi-MAI/Z-Image-Turbo", ["*.json", "text_encoder/*", "tokenizer/*", "vae/*", "scheduler/*", "transformer/*.json"])],
@@ -29,7 +29,7 @@ FREE_AFTER = {"klein4b": ["klein4b-Q8_0.gguf", ("black-forest-labs/FLUX.2-klein-
               "klein4b_ref": ["klein4b-Q8_0.gguf", ("black-forest-labs/FLUX.2-klein-4B",)],
               "zturbo": ["zimage-turbo-Q8_0.gguf", ("Tongyi-MAI/Z-Image-Turbo",)],
               "ernie": ["ernie-turbo-Q8_0.gguf", ("baidu/ERNIE-Image-Turbo",)],
-              "schnell": ["flux1-schnell-city96-Q8_0.gguf"],
+              "schnell": ["flux1-schnell-city96-Q6_K.gguf"],
               "chroma_flash": ["chroma1-flash-Q8_0.gguf", ("unsloth/FLUX.1-schnell",), ("lodestones/Chroma1-Flash",)],
               "kandinsky": [("kandinsky-community/kandinsky-2-2-decoder",), ("kandinsky-community/kandinsky-2-2-prior",)]}
 

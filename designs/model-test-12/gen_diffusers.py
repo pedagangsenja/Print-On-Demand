@@ -24,7 +24,7 @@ CFG = {
     "ernie": dict(repo="baidu/ERNIE-Image-Turbo", pipe="ErnieImagePipeline", tr="ErnieImageTransformer2DModel",
                   gguf="ernie-turbo-Q8_0.gguf", steps=8, guidance=1.0, extra={"use_pe": False}, noext={"pe": None}),
     "schnell": dict(repo="unsloth/FLUX.1-schnell", pipe="FluxPipeline", tr="FluxTransformer2DModel",
-                    gguf="flux1-schnell-city96-Q8_0.gguf", steps=4, guidance=0.0, extra={"max_sequence_length": 256}),
+                    gguf="flux1-schnell-city96-Q6_K.gguf", steps=4, guidance=0.0, extra={"max_sequence_length": 256}),
     "chroma_flash": dict(repo="lodestones/Chroma1-Flash", pipe="ChromaPipeline", tr="ChromaTransformer2DModel",
                          gguf="chroma1-flash-Q8_0.gguf", steps=10, guidance=1.0),
 }
