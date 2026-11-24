@@ -53,6 +53,8 @@
 .pod-np-meta { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs) var(--cds-gap-sm); align-items: center; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
 .pod-table-wrap { overflow-x: auto; min-width: 0; }
 .pod-scroll { max-height: 460px; overflow: auto; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); }
+.al-engine { display: inline-block; align-self: start; padding: 1px 10px; border-radius: 999px; font-size: var(--cds-font-size-caption); font-weight: var(--cds-font-weight-medium); background: var(--color-fg); color: var(--color-bg); }
+.al-engine[data-none="1"] { background: transparent; color: var(--color-fg-muted); border: 1px dashed var(--color-border-line); font-weight: 400; }
 .ms-toggle { appearance: none; background: none; border: 0; padding: 0; font: inherit; font-weight: 600; color: var(--color-fg); cursor: pointer; text-align: left; display: inline-flex; gap: 5px; align-items: baseline; }
 .ms-toggle::before { content: '\25b8'; font-size: 9px; color: var(--color-fg-muted); }
 .ms-toggle[aria-expanded="true"]::before { content: '\25be'; }
@@ -189,7 +191,7 @@
 .mt-zoom figcaption { color: #fff; font-size: 0.95rem; text-align: center; max-width: 720px; }
 .mt-zoom-close { position: absolute; top: 12px; right: 12px; padding: 6px 12px; border-radius: 999px; border: 1px solid #fff; background: transparent; color: #fff; cursor: pointer; }
 @media print { .mt-zoom { display: none; } }
-@media print { .pod-tabbar, .pod-nav, .pod th { position: static; } .pod-scroll { max-height: none; overflow: visible; border: 0; } .pod-nav, .pod-tabbar { display: none; } .pod details { border: 0; } #tab-design, #tab-font, #tab-model, #tab-lesen, #tab-sejarah, #tab-setup, #tab-workflow, #tab-aliran, #tab-daftar { break-before: page; } }
+@media print { .pod-tabbar, .pod-nav, .pod th { position: static; } .pod-scroll { max-height: none; overflow: visible; border: 0; } .pod-nav, .pod-tabbar { display: none; } .pod details { border: 0; } #tab-font, #tab-model, #tab-lesen, #tab-sejarah, #tab-setup, #tab-workflow, #tab-aliran, #tab-daftar { break-before: page; } }
 </style>
 <link rel="stylesheet" href="aliran.css">
 
@@ -202,9 +204,8 @@
 
 <div class="pod-tabbar" role="tablist" aria-label="Tab dashboard">
     <button type="button" class="pod-tab-btn" role="tab" id="btn-poster" data-tab="tab-poster" aria-controls="tab-poster" aria-selected="true">Ujikaji</button>
-    <button type="button" class="pod-tab-btn" role="tab" id="btn-design" data-tab="tab-design" aria-controls="tab-design" aria-selected="false" tabindex="-1">Design</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-font" data-tab="tab-font" aria-controls="tab-font" aria-selected="false" tabindex="-1">Font</button>
-    <button type="button" class="pod-tab-btn" role="tab" id="btn-model" data-tab="tab-model" aria-controls="tab-model" aria-selected="false" tabindex="-1">Model</button>
+    <button type="button" class="pod-tab-btn" role="tab" id="btn-model" data-tab="tab-model" aria-controls="tab-model" aria-selected="false" tabindex="-1">AI Image Test</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-lesen" data-tab="tab-lesen" aria-controls="tab-lesen" aria-selected="false" tabindex="-1">Lesen</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-sejarah" data-tab="tab-sejarah" aria-controls="tab-sejarah" aria-selected="false" tabindex="-1">Chat lepas</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-setup" data-tab="tab-setup" aria-controls="tab-setup" aria-selected="false" tabindex="-1">Setup</button>
@@ -630,42 +631,6 @@
 
 </section>
 
-<section id="tab-design" class="pod-tab" role="tabpanel" aria-labelledby="btn-design" hidden>
-
-<div id="d-intro" class="pod-section pod-first">
-  <p class="pod-lede">Design yang sudah siap untuk dijual: poster motivasi (3:4, cetak 18×24 in) dan design sarkastik SVG (persegi, untuk baju, mug dan pelekat). Semua hitam atas putih, dijana dengan FLUX.2 klein 4B; ejaan disemak dan dibaiki.</p>
-</div>
-
-<nav class="pod-nav" aria-label="Bahagian design">
-    <a href="#d-motiv">Poster motivasi</a>
-    <a href="#d-sarkas">Sarkastik SVG</a>
-    <a href="#d-sarkas-warna">Sarkastik warna</a>
-  </nav>
-
-<section id="d-motiv" class="pod-section">
-  <h2>Poster motivasi</h2>
-  <p class="pod-muted">Tekan gambar untuk besarkan. Fail asal PNG dan SVG dalam repo: designs/svg-typo/out/motiv/final/.</p>
-  <div class="d-grid" data-draw="d-gallery" data-source="design_motiv"></div>
-  <div class="mt-zoom" id="d-zoom" hidden role="dialog" aria-modal="true" aria-label="Gambar besar">
-    <figure><img id="d-zoom-img" alt=""><figcaption id="d-zoom-cap"></figcaption></figure>
-    <button type="button" class="mt-zoom-close" id="d-zoom-close">Tutup ✕</button>
-  </div>
-</section>
-
-<section id="d-sarkas" class="pod-section">
-  <h2>Design sarkastik SVG</h2>
-  <p class="pod-muted">Gaya bundle Etsy, ayat baharu: umum, kerja, kopi / introvert, ibu / keluarga. Tekan gambar untuk besarkan. Fail asal PNG dan SVG dalam repo: designs/svg-typo/out/batch4/final/.</p>
-  <div class="d-grid" data-draw="d-gallery-s" data-source="design_sarkas"></div>
-</section>
-
-<section id="d-sarkas-warna" class="pod-section">
-  <h2>Design sarkastik berwarna</h2>
-  <p class="pod-muted">30 design yang sama, latar gelap dan warna ikut 5 palet contoh Pinterest (oren, kuning, hijau, merah, biru; 6 design setiap palet). Palet hijau dan merah bertekstur kasar. Tekan gambar untuk besarkan. Fail PNG 2048 px dalam repo: designs/svg-typo/out/batch4/color/.</p>
-  <div class="d-grid" data-draw="d-gallery-w" data-source="design_sarkas_warna"></div>
-</section>
-
-</section>
-
 <section id="tab-font" class="pod-tab" role="tabpanel" aria-labelledby="btn-font" hidden>
 
 <div id="f-intro" class="pod-section pod-first">
@@ -803,6 +768,8 @@
 </div>
 
 <nav class="pod-nav" aria-label="Bahagian model AI">
+    <a href="#im-enjin">Daftar imej</a>
+    <a href="#im-log">Semua imej</a>
     <a href="#m-lettering-p9">Lettering P9</a>
     <a href="#m-ujian">Ujian 3 model</a>
     <a href="#m-lettering">Ujian lettering</a>
@@ -811,7 +778,59 @@
     <a href="#m-cadangan">Model ikut poster</a>
     <a href="#m-langkah">Pilih model</a>
     <a href="#m-sumber">Sumber</a>
+    <a href="#d-intro">Design</a>
+    <a href="#d-motiv">Poster motivasi</a>
+    <a href="#d-sarkas">Sarkastik SVG</a>
+    <a href="#d-sarkas-warna">Sarkastik warna</a>
   </nav>
+
+<section id="im-enjin" class="pod-section">
+  <h2>Daftar ujian imej: ringkasan ikut enjin</h2>
+  <p class="pod-muted"><b data-draw="im-total" data-source="image_stats" data-field="total" data-row="0">&mdash;</b> imej AI dijana dalam repo ini sepanjang fasa ujian; <b data-draw="im-pass" data-source="image_stats" data-field="pass" data-row="0">&mdash;</b> lulus (<b data-draw="im-rate" data-source="image_stats" data-field="rate" data-row="0">&mdash;</b>), jumlah masa jana <b data-draw="im-hours" data-source="image_stats" data-field="hours" data-row="0">&mdash;</b> jam.</p>
+  <div class="pod-fit">
+    <table id="im-table-enjin" data-source="image_by_engine" data-row-key="engine">
+      <colgroup><col style="width:28%"><col style="width:14%"><col style="width:14%"><col style="width:14%"><col style="width:15%"><col style="width:15%"></colgroup>
+      <thead><tr>
+        <th data-field="engine">Enjin</th>
+        <th class="pod-num" data-field="images">Imej</th>
+        <th class="pod-num" data-field="pass">Lulus</th>
+        <th class="pod-num" data-field="rate">% lulus</th>
+        <th class="pod-num" data-field="avg_s">Purata saat</th>
+        <th class="pod-num" data-field="total_min">Jumlah minit</th>
+      </tr></thead>
+      <tbody data-draw="im-enjin-body"></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="im-log" class="pod-section">
+  <h2>Semua imej yang pernah dijana</h2>
+  <p class="pod-muted">Setiap imej direkod: tarikh, enjin, variasi prompt, tempat jalan, tujuan, ayat, seed, saiz, saat, lulus atau tolak dan sebab. Imej baharu ditambah selepas setiap pusingan jana &mdash; Claude tanya dahulu sama ada hendak dimasukkan. Dijana oleh scripts/build_image_log.py.</p>
+  <div class="pod-fit">
+    <table id="im-table-log" data-source="image_log" data-row-key="id">
+      <colgroup>
+        <col style="width:7%"><col style="width:11%"><col style="width:8%"><col style="width:9%">
+        <col style="width:13%"><col style="width:16%"><col style="width:4%"><col style="width:7%">
+        <col style="width:5%"><col style="width:6%"><col style="width:9%"><col style="width:5%">
+      </colgroup>
+      <thead><tr>
+        <th data-field="date">Tarikh</th>
+        <th data-field="engine">Enjin</th>
+        <th data-field="variant">Variasi</th>
+        <th data-field="where">Tempat</th>
+        <th data-field="purpose">Tujuan</th>
+        <th data-field="text">Ayat</th>
+        <th class="pod-num" data-field="seed">Seed</th>
+        <th data-field="size">Saiz</th>
+        <th class="pod-num" data-field="seconds">Saat</th>
+        <th data-field="result">Keputusan</th>
+        <th data-field="wrong">Sebab</th>
+        <th data-field="img">Gambar</th>
+      </tr></thead>
+      <tbody data-draw="im-log-body"></tbody>
+    </table>
+  </div>
+</section>
 
 <section id="m-lettering-p9" class="pod-section">
   <h2>Lettering P9 (23 Nov): pelan percuma + ujian 6 gaya</h2>
@@ -1034,6 +1053,33 @@
       <tbody data-draw="m-sources-body"></tbody>
     </table>
   </div>
+</section>
+
+<section id="d-intro" class="pod-section">
+  <h2>Design</h2>
+  <p class="pod-lede">Design yang sudah siap untuk dijual: poster motivasi (3:4, cetak 18×24 in) dan design sarkastik SVG (persegi, untuk baju, mug dan pelekat). Semua hitam atas putih, dijana dengan FLUX.2 klein 4B; ejaan disemak dan dibaiki.</p>
+</section>
+
+<section id="d-motiv" class="pod-section">
+  <h2>Poster motivasi</h2>
+  <p class="pod-muted">Tekan gambar untuk besarkan. Fail asal PNG dan SVG dalam repo: designs/svg-typo/out/motiv/final/.</p>
+  <div class="d-grid" data-draw="d-gallery" data-source="design_motiv"></div>
+  <div class="mt-zoom" id="d-zoom" hidden role="dialog" aria-modal="true" aria-label="Gambar besar">
+    <figure><img id="d-zoom-img" alt=""><figcaption id="d-zoom-cap"></figcaption></figure>
+    <button type="button" class="mt-zoom-close" id="d-zoom-close">Tutup ✕</button>
+  </div>
+</section>
+
+<section id="d-sarkas" class="pod-section">
+  <h2>Design sarkastik SVG</h2>
+  <p class="pod-muted">Gaya bundle Etsy, ayat baharu: umum, kerja, kopi / introvert, ibu / keluarga. Tekan gambar untuk besarkan. Fail asal PNG dan SVG dalam repo: designs/svg-typo/out/batch4/final/.</p>
+  <div class="d-grid" data-draw="d-gallery-s" data-source="design_sarkas"></div>
+</section>
+
+<section id="d-sarkas-warna" class="pod-section">
+  <h2>Design sarkastik berwarna</h2>
+  <p class="pod-muted">30 design yang sama, latar gelap dan warna ikut 5 palet contoh Pinterest (oren, kuning, hijau, merah, biru; 6 design setiap palet). Palet hijau dan merah bertekstur kasar. Tekan gambar untuk besarkan. Fail PNG 2048 px dalam repo: designs/svg-typo/out/batch4/color/.</p>
+  <div class="d-grid" data-draw="d-gallery-w" data-source="design_sarkas_warna"></div>
 </section>
 
 </section>
@@ -1409,6 +1455,11 @@
       </select>
     </label>
     <label>Ikon / hiasan dibenarkan<input type="text" name="ikon" maxlength="200" placeholder="Contoh: swash, bintang"></label>
+    <label>Enjin yang jana<input type="text" name="enjin" maxlength="60" placeholder="Contoh: MOSS-Image SFT" list="al-enjin-list"></label>
+    <datalist id="al-enjin-list">
+      <option value="MOSS-Image SFT"></option><option value="ERNIE-Image-Turbo"></option><option value="Z-Image-Turbo"></option>
+      <option value="Qwen-Image-2512"></option><option value="FLUX.2 klein 4B"></option><option value="Font + kod (bukan AI)"></option>
+    </datalist>
     <label>Gambar contoh hitam putih (PNG, JPG, WebP)<input type="file" name="gambar" accept="image/png,image/jpeg,image/webp" required></label>
     <label>Link sumber rujukan<input type="url" name="sumber" maxlength="500" placeholder="https://"></label>
     <label class="al-wide">Nota<input type="text" name="nota" maxlength="400"></label>
@@ -3044,6 +3095,57 @@ POD.mRows('mn-body', 'model_notes', 6, (tr, r) => {
   const m = POD.cell(tr, r.item); m.style.fontWeight = '600';
   POD.cell(tr, r.stage); POD.cell(tr, r.why);
   POD.pillCell(tr, r.level); POD.linkCell(tr, r.source, 'buka');
+});
+dash.calc('image_stats', {
+  title: 'Ringkasan daftar ujian imej',
+  description: 'Jumlah imej dijana, bilangan lulus, peratus lulus dan jumlah jam masa jana, dikira daripada daftar ujian imej.',
+  inputs: ['image_log'],
+  fn: (rows) => {
+    const pass = rows.filter((r) => r.result === 'Lulus').length;
+    const secs = rows.reduce((s, r) => s + (Number(r.seconds) || 0), 0);
+    return [{ total: rows.length, pass, rate: rows.length ? Math.round((pass / rows.length) * 100) + '%' : '—',
+              hours: Math.round((secs / 3600) * 10) / 10 }];
+  }
+});
+dash.calc('image_by_engine', {
+  title: 'Ujian imej ikut enjin',
+  description: 'Bagi setiap enjin: bilangan imej, bilangan lulus, peratus lulus, purata saat setiap imej dan jumlah minit.',
+  inputs: ['image_log'],
+  fn: (rows) => {
+    const by = new Map();
+    rows.forEach((r) => {
+      const k = r.engine || '—';
+      const v = by.get(k) || { engine: k, images: 0, pass: 0, secs: 0 };
+      v.images += 1; if (r.result === 'Lulus') v.pass += 1; v.secs += Number(r.seconds) || 0;
+      by.set(k, v);
+    });
+    return [...by.values()].map((v) => ({
+      engine: v.engine, images: v.images, pass: v.pass,
+      rate: Math.round((v.pass / v.images) * 100) + '%',
+      avg_s: Math.round(v.secs / v.images), total_min: Math.round(v.secs / 60),
+    })).sort((a, b) => b.images - a.images);
+  }
+});
+POD.text('im-total', 'image_stats', (r) => r[0].total, POD.int);
+POD.text('im-pass', 'image_stats', (r) => r[0].pass, POD.int);
+POD.text('im-rate', 'image_stats', (r) => r[0].rate);
+POD.text('im-hours', 'image_stats', (r) => r[0].hours, (v) => String(v));
+POD.mRows('im-enjin-body', 'image_by_engine', 6, (tr, r) => {
+  tr.dataset.key = POD.enc(r.engine);
+  const m = POD.cell(tr, r.engine); m.style.fontWeight = '600';
+  POD.cell(tr, POD.int(r.images), 'pod-num'); POD.cell(tr, POD.int(r.pass), 'pod-num');
+  POD.cell(tr, r.rate, 'pod-num'); POD.cell(tr, POD.int(r.avg_s), 'pod-num'); POD.cell(tr, POD.int(r.total_min), 'pod-num');
+});
+POD.mRows('im-log-body', 'image_log', 12, (tr, r) => {
+  tr.dataset.key = POD.enc(r.id);
+  POD.cell(tr, POD.tarikh ? POD.tarikh(r.date) : r.date);
+  const m = POD.cell(tr, r.engine); m.style.fontWeight = '600';
+  POD.cell(tr, r.variant || '—'); POD.cell(tr, r.where); POD.cell(tr, r.purpose);
+  POD.cell(tr, r.text); POD.cell(tr, r.seed == null ? '—' : String(r.seed), 'pod-num');
+  POD.cell(tr, r.size); POD.cell(tr, r.seconds == null ? '—' : POD.int(r.seconds), 'pod-num');
+  const v = document.createElement('td'); v.appendChild(POD.pill(r.result, null, r.tone)); tr.appendChild(v);
+  POD.cell(tr, r.wrong || '—');
+  POD.linkCell(tr, r.img ? '/_blob/' + r.img : '', 'buka');
 });
 POD.mlQuota = (tier) => (el) => {
   const rows = POD.ok('hf_zerogpu_quota'); const q = rows ? rows.find((x) => x.tier === tier) : null;
