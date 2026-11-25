@@ -18,6 +18,14 @@ Lima kunci gaya: (1) Kad Gaya satu-satunya sumber; (2) QC sama untuk semua model
 
 Perkara terbuka (dijumpai semasa semakan langkah 5): nota P9 (`docs/research/posters/08-lettering.md`) merekod bahawa pengguna menolak susunan font dengan kod pada 22 Nov kerana nampak "ditaip". Laluan 3 dan 4 bergantung pada baris font, jadi kedua-duanya mesti diuji dan diluluskan pengguna sebelum masuk standard.
 
+## Pembetulan (25 Nov, selepas membaca cawangan sesi lain)
+
+Beberapa kenyataan awal dalam semakan ini sudah lapuk. Kerja berkaitan ada di cawangan lain yang tidak dibaca pada mulanya:
+- `claude/dazzling-cannon-5wzn6h` (P9b, 24 Nov): MOSS, ERNIE-Image-Turbo (GGUF Q8) dan FLUX.2 klein 4B diuji pada S1–S6 × 2 seed dengan prompt yang sama, text-to-image. Ejaan betul: MOSS 12/12, ERNIE 12/12, klein 6/12 (S3 dan S6 tiada seed betul). Purata masa: 438 s, 438 s, 93 s. Jadi jadual model × gaya sudah ada data pertama, dan "hanya MOSS diuji" tidak lagi benar.
+- `claude/happy-davinci-hv0xb3` (24 Nov): 60 imej mentah MOSS (10 quote 4 perkataan × 6 gaya). Keputusan QC tidak direkod dalam cawangan itu. Jadi S1–S6 sudah dijana pada lebih daripada satu ayat, tetapi masih 4 perkataan sahaja.
+- `claude/friendly-knuth-hkclbr` (25 Nov): rekod S dan C dalam Daftar S/C kini menyimpan `prompt` (terisi, dengan perkataan ujian) dan `asal` (imej rujukan). Jadi "prompt tidak disimpan" tidak lagi benar; yang masih tiada ialah ciri gaya berstruktur dan templat tanpa perkataan.
+- Carta aliran yang dihantar pada 25 Nov masih membawa tiga tanda lapuk ini dan perlu dibetulkan semasa susunan akhir.
+
 ## Langkah 1: Kad Gaya (disemak 25 Nov; disimpan atas arahan pengguna)
 
 Dapatan: prompt S1–S6 membawa 16 jenis maklumat; kad cadangan asal hanya ada tempat untuk 7.
@@ -58,7 +66,7 @@ Tambahan daripada semakan langkah 5 (disimpan atas arahan pengguna):
 - Setiap ciri QC dalam kad ditulis sebagai perkara yang boleh dilihat (ya / tidak), bukan kata sifat umum.
 - Imej bukti 1e disimpan dalam kad sebagai imej sauh: QC membanding hasil dengan upload dan dengan imej sauh.
 
-Tambahan daripada semakan langkah 6 (menunggu semakan pengguna):
+Tambahan daripada semakan langkah 6 (disimpan atas arahan pengguna):
 - Kad membawa parameter kemasan yang boleh dibaca skrip: bilangan dakwat dijangka, ruang tepi (peratus kanvas), jenis dan kekuatan tekstur, dan sama ada butiran halus (percikan kecil, garis inline) ialah ciri teras yang mesti kekal.
 
 Langkah kecil:
@@ -153,7 +161,7 @@ Yang perlu ditambah:
 9. Kalibrasi dengan pengguna: keputusan lulus / tolak pengguna dibanding dengan skor Claude; jika pengguna menolak imej yang lulus, sebabnya ditambah ke kad.
 10. Hasil QC mengisi jadual model × gaya (kadar lulus).
 
-## Langkah 6: Kemasan (cadangan 25 Nov; menunggu semakan pengguna)
+## Langkah 6: Kemasan (disemak 25 Nov; disimpan atas arahan pengguna)
 
 Dapatan: `finish.py` (S1–S6) membesarkan 4×, mengasingkan dakwat, membersih, menyurih ke vektor (potrace), memaksa palet gaya, menyusun satu blok di tengah (76% lebar, 78% tinggi, pusat 47%), merender 300 DPI untuk 5 saiz dan menambah tekstur prosedur (grain / worn / chalk). Semua tetapan ini tetap dalam skrip, bukan ikut gaya.
 
@@ -176,3 +184,34 @@ Yang perlu ditambah:
 8. Gabungan baris font untuk laluan 3–4 belum wujud dan perlu kelulusan pengguna (lihat perkara terbuka).
 9. Simpanan: SVG induk + info disimpan kekal; PNG besar dijana semula bila perlu; versi `finish.py` direkod.
 10. QC akhir selepas kemasan (lihat langkah 5).
+
+## Langkah 7, 8 dan 9 (cadangan 25 Nov; menunggu semakan pengguna)
+
+### Langkah 7: Pengguna lulus atau tolak
+Sedia ada: "lulus / tolak (~5 minit)"; Workflow w07 memperuntukkan 15 minit sehari untuk design, produk dan pin. Selepas setiap jana imej, pengguna memilih A atau SNC dan memadam sendiri yang tidak dimahukan. Sebab penolakan tidak direkod.
+Yang perlu ditambah:
+1. Paparan tetap: upload asal, imej sauh dan hasil sebelah-menyebelah, dengan skor QC dan ejaan.
+2. Keputusan direkod dengan sebab daripada senarai tetap (ejaan, gaya kurang serupa, terlalu serupa rujukan, tidak cantik, lain-lain).
+3. Sebab tolak disalurkan balik: ke kad (ciri baharu), ke jadual model × gaya, atau ke ulangan.
+4. Tiga titik kelulusan: kad (1d), contoh pertama laluan 3–4, dan hasil akhir.
+5. Had setiap sesi kelulusan (bilangan imej setiap helaian) supaya masa semakan realistik.
+
+### Langkah 8: Simpan
+Sedia ada (25 Nov): rekod S = nama, jenis, panjang, enjin, imej contoh, imej asal, prompt terisi, nota. Rekod C = nama, latar, senarai hex huruf, gaya, imej, prompt terisi, nota. `image_log` = satu baris setiap imej ujian (skrip di cawangan `claude/vigilant-knuth-0bmbio`).
+Yang perlu ditambah:
+1. Kad Gaya berstruktur dan templat prompt tanpa perkataan disimpan dalam rekod S (sekarang hanya prompt terisi).
+2. Rekod C: peranan setiap warna dan nama warna untuk prompt; satu sumber kod hex (C001 `#f4f1eb` berbanding `styles.py` `#f4f1ea`).
+3. Daftar design yang diluluskan (ayat, S, C, model, seed, fail induk, status produk); S&C hanya mendaftar gaya dan warna.
+4. Hasil kelayakan model disambung ke rekod S (enjin mana lulus untuk gaya itu).
+5. Satu sumber kerja: skrip dan data lettering kini berselerak di sekurang-kurangnya 7 cawangan; perlu digabung ke satu cawangan supaya setiap sesi nampak kerja sesi lain.
+6. Fail disimpan sebelum sesi tamat: imej mentah, SVG induk, log.
+7. Versi kad dan tarikh kemas kini.
+
+### Langkah 9: Mockup, pin, upload
+Sedia ada: diserah kepada Workflow (w02 semak trademark, w03 mockup, w04 upload Printify / WooCommerce, w05 jadual pin). Dalam salinan repo senarai Setup, 26 daripada 30 langkah masih "Belum"; skrip mockup belum dibuat.
+Yang perlu ditambah:
+1. Spesifikasi serahan daripada lettering ke Workflow: fail cetak setiap saiz ikut senarai semak pembekal, pratonton, ayat, kod S dan C, hasil saringan trademark.
+2. Setiap produk dan pin ditanda dengan kod S dan C, supaya tab Prestasi boleh menunjukkan gaya dan warna mana yang menang.
+3. Maklum balas jualan kembali ke S&C (gaya menang dapat lebih banyak ayat dan varian warna).
+4. Dasar platform tentang kandungan janaan AI dan design yang serupa rujukan: belum disemak.
+5. Langkah 9 bergantung pada Setup kedai yang belum siap; standard lettering boleh berhenti di serahan.
