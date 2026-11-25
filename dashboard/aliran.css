@@ -43,3 +43,5 @@
 .al-panel { color: var(--color-fg-muted); overflow-wrap: anywhere; border-top: 1px solid var(--color-border-line); padding-top: var(--cds-gap-xs); }
 .al-panel p { margin: 0; white-space: pre-wrap; }
 @media print { .al-empty, .al-tog { display: none; } .al-panel { display: block; } }
+.al-eng { cursor: default; color: var(--color-fg-muted); }
+.al-eng[data-none="1"] { border-style: dashed; }

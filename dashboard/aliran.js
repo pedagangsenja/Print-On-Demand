@@ -141,6 +141,11 @@
     };
     toggle('nota', 'Nota', r.nota);
     toggle('prompt', 'Prompt', r.prompt);
+    const eng = document.createElement('span'); eng.className = 'al-tog al-eng';
+    eng.textContent = txt(r.enjin) || 'Enjin tidak direkod';
+    if (!txt(r.enjin)) eng.dataset.none = '1';
+    eng.setAttribute('aria-label', 'Enjin: ' + eng.textContent);
+    bar.appendChild(eng);
     const del = document.createElement('button'); del.type = 'button'; del.className = 'al-del'; del.textContent = 'Padam';
     del.addEventListener('click', async () => {
       if (del.dataset.arm !== '1') { del.dataset.arm = '1'; del.textContent = 'Tekan sekali lagi untuk padam ' + code; return; }
@@ -173,12 +178,10 @@
     li.appendChild(b);
   };
   dash.draw('al-gaya-list', list('gaya_daftar', 'data/gaya/items', (li, r, code) => {
-    engine(li, r);
     thumb(li, r, code + ' ' + txt(r.nama), code, 'data/gaya/items');
     [line('Jenis ayat', r.jenis), line('Panjang ayat', r.panjang), line('Ikon / hiasan', r.ikon)].forEach((x) => { if (x) li.appendChild(x); });
   }));
   dash.draw('al-warna-list', list('warna_daftar', 'data/warna/items', (li, r, code) => {
-    engine(li, r);
     const cols = [r.latar].concat(Array.isArray(r.huruf) ? r.huruf : []).filter((c) => HEX.test(txt(c)));
     if (cols.length) {
       const sw = document.createElement('div'); sw.className = 'al-sw'; sw.setAttribute('role', 'img');
