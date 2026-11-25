@@ -15,7 +15,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import gen  # noqa: E402
 import kad  # noqa: E402
 
-DT = torch.bfloat16
+DT = gen.DT
+DEV = gen.DEV
 NAME = "moss"
 C = dict(repo="OpenMOSS-Team/MOSS-Image-SFT", varian="bf16 asal", steps=8, guidance=None,
          lora="lodestones/MOSS-Image-SFT-8-steps-dmd lora_latest.safetensors x0.7", penambah="thinking hidup")
@@ -56,8 +57,10 @@ def main():
 
     t0 = time.time()
     tok = AutoTokenizer.from_pretrained(M, subfolder="tokenizer")
+    mem = {"cpu": "9GiB"} if DEV == "cpu" else {**{i: "14GiB" for i in range(torch.cuda.device_count())}, "cpu": "20GiB"}
     te = AutoModel.from_pretrained(M, subfolder="text_encoder", dtype=DT, device_map="auto",
-                                   max_memory={"cpu": "9GiB"}, offload_folder=str(OFFLOAD)).eval()
+                                   max_memory=mem, offload_folder=str(OFFLOAD)).eval()
+    dev0 = te.get_input_embeddings().weight.device
     embs, prompts = {}, {}
     with torch.inference_mode():
         for kid, aid, _ in jobs:
@@ -67,11 +70,13 @@ def main():
             p, _ = kad.bina(kid, aid)
             txt = tok.apply_chat_template([{"role": "user", "content": p}], tokenize=False,
                                           add_generation_prompt=True, enable_thinking=True)
-            h = te(**tok(txt, return_tensors="pt", truncation=True, max_length=4096), use_cache=False,
+            h = te(**tok(txt, return_tensors="pt", truncation=True, max_length=4096).to(dev0), use_cache=False,
                    return_dict=True).last_hidden_state.to(DT).cpu()
             embs[key], prompts[key] = (h, torch.ones(1, h.shape[1], dtype=torch.bool)), p
             print("enc", key, tuple(h.shape), round(time.time() - t0, 1), flush=True)
     del te; gc.collect()
+    if DEV != "cpu":
+        torch.cuda.empty_cache()
 
     tr = MOSSImageTransformer.from_pretrained(M, subfolder="transformer", torch_dtype=DT).eval()
     repo, fname, strength = LORA
@@ -82,19 +87,20 @@ def main():
         setattr(par, child, LoRALinear(getattr(par, child), lora[f"{pre}{name}.lora_down.weight"],
                                        lora[f"{pre}{name}.lora_up.weight"], float(lora[f"{pre}{name}.alpha"]), strength))
     del lora; gc.collect()
+    tr.to(DEV)
     cfg = MOSSImageScheduler.load_config(M, subfolder="scheduler")
     sargs = {k: cfg[k] for k in ("num_train_timesteps", "shift", "training_shift")}
-    vae = AutoencoderKLFlux2.from_pretrained(M, subfolder="vae", torch_dtype=torch.float32).eval()
+    vae = AutoencoderKLFlux2.from_pretrained(M, subfolder="vae", torch_dtype=torch.float32).eval().to(DEV)
     proc = VaeImageProcessor(vae_scale_factor=16)
     for kid, aid, seed in jobs:
         key = f"{kid}{aid}"
         t1 = time.time()
-        pe, pm = embs[key]
-        lat = torch.randn(1, 128, gen.H // 16, gen.W // 16, generator=torch.Generator("cpu").manual_seed(seed))
-        sch = MOSSImageScheduler(**sargs); sch.set_timesteps(C["steps"], device="cpu")
+        pe, pm = (t.to(DEV) for t in embs[key])
+        lat = torch.randn(1, 128, gen.H // 16, gen.W // 16, generator=torch.Generator("cpu").manual_seed(seed)).to(DEV)
+        sch = MOSSImageScheduler(**sargs); sch.set_timesteps(C["steps"], device=DEV)
         with torch.inference_mode():
             for ts in sch.timesteps:
-                with torch.autocast("cpu", dtype=DT):
+                with torch.autocast("cpu" if DEV == "cpu" else "cuda", dtype=DT):
                     v = tr(lat, ts, pe, pm).sample.float()
                 lat = sch.step(v, ts, lat, return_dict=False)[0]
             z = lat.to(torch.float32); bn = vae.bn; eps = vae.config.batch_norm_eps

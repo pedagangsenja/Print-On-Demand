@@ -17,6 +17,11 @@ import kad  # noqa: E402
 HERE = Path(__file__).resolve().parent
 OUT = HERE / "out"
 DT = torch.bfloat16
+# Peranti: GEN_DEVICE=cpu (lalai) atau cuda (Kaggle GPU); GEN_DTYPE=fp16 pilihan; GEN_OUT = folder hasil.
+DEV = os.environ.get("GEN_DEVICE", "cpu")
+if os.environ.get("GEN_DTYPE") == "fp16":
+    DT = torch.float16
+OUT = Path(os.environ.get("GEN_OUT", str(OUT)))
 SEEDS = [42, 7]
 W, H = 768, 1024
 PROFIL = {
@@ -58,16 +63,16 @@ def fit(pipe_tok, kid, aid, max_tok):
 
 def encode(name, pipe, prompt):
     if name == "zturbo":
-        return pipe.encode_prompt(prompt, device="cpu", do_classifier_free_guidance=False)[0]
+        return pipe.encode_prompt(prompt, device=DEV, do_classifier_free_guidance=False)[0]
     if name == "ernie":
-        return pipe.encode_prompt(prompt, device="cpu")
+        return pipe.encode_prompt(prompt, device=DEV)
     if name == "schnell":
-        pe, ppe, _ = pipe.encode_prompt(prompt=prompt, prompt_2=None, device="cpu", max_sequence_length=256)
+        pe, ppe, _ = pipe.encode_prompt(prompt=prompt, prompt_2=None, device=DEV, max_sequence_length=256)
         return {"prompt_embeds": pe, "pooled_prompt_embeds": ppe}
     if name == "chroma_flash":
-        r = pipe.encode_prompt(prompt=prompt, device="cpu", do_classifier_free_guidance=False)
+        r = pipe.encode_prompt(prompt=prompt, device=DEV, do_classifier_free_guidance=False)
         return {"prompt_embeds": r[0], "prompt_attention_mask": r[2]} if len(r) > 2 else {"prompt_embeds": r[0]}
-    return pipe.encode_prompt(prompt, device="cpu")[0]
+    return pipe.encode_prompt(prompt, device=DEV)[0]
 
 
 def load_transformer(c):
@@ -102,7 +107,8 @@ def log_row(out, row):
 def base_row(name, c, kid, aid, seed, prompt, drop, sec):
     return dict(id=f"{kid}{aid}", kad=kid, ayat=aid, laluan=kad.AYAT[aid]["laluan"], model=name, repo=c["repo"],
                 varian=c["varian"], langkah=c["steps"], guidance=c["guidance"], lora=c.get("lora"),
-                penambah=c.get("penambah"), seed=seed, w=W, h=H, saat=sec, prompt=prompt, potong=drop,
+                penambah=c.get("penambah"), peranti=DEV if DEV == "cpu" else torch.cuda.get_device_name(0),
+                dtype=str(DT).replace("torch.", ""), seed=seed, w=W, h=H, saat=sec, prompt=prompt, potong=drop,
                 pembina=kad.VERSI_PEMBINA, versi=dict(torch=torch.__version__, diffusers=diffusers.__version__,
                                                       transformers=transformers.__version__),
                 masa=time.strftime("%Y-%m-%dT%H:%M:%S"))
@@ -140,7 +146,7 @@ def main():
         snapshot_download("unsloth/FLUX.1-schnell", allow_patterns=["text_encoder_2/*", "tokenizer_2/*"])
         noext.update(text_encoder=T5EncoderModel.from_pretrained("unsloth/FLUX.1-schnell", subfolder="text_encoder_2", torch_dtype=DT),
                      tokenizer=T5TokenizerFast.from_pretrained("unsloth/FLUX.1-schnell", subfolder="tokenizer_2"))
-    pipe = Pipe.from_pretrained(c["repo"], transformer=None, vae=None, torch_dtype=DT, **noext)
+    pipe = Pipe.from_pretrained(c["repo"], transformer=None, vae=None, torch_dtype=DT, **noext).to(DEV)
     tok = getattr(pipe, "tokenizer_2", None) if name == "schnell" else pipe.tokenizer
     embs, prompts = {}, {}
     with torch.inference_mode():
@@ -152,11 +158,13 @@ def main():
                 embs[key] = encode(name, pipe, p)
     print(name, "kod prompt", round(time.time() - t0, 1), "s", flush=True)
     del pipe; gc.collect()
+    if DEV != "cpu":
+        torch.cuda.empty_cache()
     tr = load_transformer(c)
     kw = dict(text_encoder=None, tokenizer=None, **c.get("noext", {}))
     if name == "schnell":
         kw.update(text_encoder_2=None, tokenizer_2=None)
-    pipe = Pipe.from_pretrained(c["repo"], transformer=tr, torch_dtype=DT, **kw)
+    pipe = Pipe.from_pretrained(c["repo"], transformer=tr, torch_dtype=DT, **kw).to(DEV)
     for kid, aid, seed in jobs:
         key = f"{kid}{aid}"
         e = embs[key]
