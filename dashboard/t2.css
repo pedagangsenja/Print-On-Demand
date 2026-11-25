@@ -1,0 +1,8 @@
+.t2-grid { table-layout: fixed; min-width: 860px; }
+.t2-grid th.t2-c0, .t2-grid td.t2-c0 { width: 140px; }
+.t2-grid td { padding: 6px; }
+.t2-grid .mt-cell img { aspect-ratio: 3 / 4; object-fit: cover; }
+.t2-grid tr.t2-kadrow td { background: var(--color-panel); padding: var(--cds-pad-sm) var(--cds-pad-md); }
+.t2-kadhead { display: flex; gap: var(--cds-gap-md); align-items: center; }
+.t2-refbtn { flex: none; width: 64px; padding: 0; border: 2px dashed var(--color-fg-muted); border-radius: 6px; background: var(--color-bg); cursor: zoom-in; overflow: hidden; }
+.t2-refbtn img { display: block; width: 100%; height: auto; }
