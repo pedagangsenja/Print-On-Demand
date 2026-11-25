@@ -54,9 +54,12 @@ Tambahan daripada semakan langkah 4 (disimpan atas arahan pengguna):
 - Nisbah kanvas rujukan dicatat (cth. upload ke-3 segi empat sama); kad menyatakan cara susunan disesuaikan ke potret 3:4.
 - Imej bukti 1e merekod enjin penuh yang menghasilkannya (model, varian fail, langkah, seed).
 
-Tambahan daripada semakan langkah 5 (menunggu semakan pengguna):
+Tambahan daripada semakan langkah 5 (disimpan atas arahan pengguna):
 - Setiap ciri QC dalam kad ditulis sebagai perkara yang boleh dilihat (ya / tidak), bukan kata sifat umum.
 - Imej bukti 1e disimpan dalam kad sebagai imej sauh: QC membanding hasil dengan upload dan dengan imej sauh.
+
+Tambahan daripada semakan langkah 6 (menunggu semakan pengguna):
+- Kad membawa parameter kemasan yang boleh dibaca skrip: bilangan dakwat dijangka, ruang tepi (peratus kanvas), jenis dan kekuatan tekstur, dan sama ada butiran halus (percikan kecil, garis inline) ialah ciri teras yang mesti kekal.
 
 Langkah kecil:
 - 1a. Simpan imej rujukan di tempat kekal (sekarang hanya dalam container).
@@ -131,7 +134,7 @@ Yang perlu ditambah:
 8. Imej mentah disimpan di tempat kekal sebelum sesi tamat (container sementara).
 9. Pemasangan: skrip setup environment belum ada PyTorch, diffusers dan OCR; model dimuat turun semula setiap sesi (MOSS 28 GB).
 
-## Langkah 5: QC (cadangan 25 Nov; menunggu semakan pengguna)
+## Langkah 5: QC (disemak 25 Nov; disimpan atas arahan pengguna)
 
 Dapatan: QC S1–S6 (P9) = 3 pintu wajib + 9 ciri gaya UMUM yang sama untuk semua gaya (lulus ≥ 8/9), disemak pada helaian semakan sebelum kemasan. Ciri itu tidak diambil daripada upload (cth. "latar gelap rata", "maksimum 2 jenis huruf"), sebab itu S001 lulus walaupun kurang melantun. SOP v3 pula memakai 8 ciri khusus setiap rujukan (lulus ≥ 7/8) dan merekod setiap keputusan.
 
@@ -149,3 +152,27 @@ Yang perlu ditambah:
 8. Peraturan memilih antara imej yang lulus (skor ciri kad, kemudian keterbacaan).
 9. Kalibrasi dengan pengguna: keputusan lulus / tolak pengguna dibanding dengan skor Claude; jika pengguna menolak imej yang lulus, sebabnya ditambah ke kad.
 10. Hasil QC mengisi jadual model × gaya (kadar lulus).
+
+## Langkah 6: Kemasan (cadangan 25 Nov; menunggu semakan pengguna)
+
+Dapatan: `finish.py` (S1–S6) membesarkan 4×, mengasingkan dakwat, membersih, menyurih ke vektor (potrace), memaksa palet gaya, menyusun satu blok di tengah (76% lebar, 78% tinggi, pusat 47%), merender 300 DPI untuk 5 saiz dan menambah tekstur prosedur (grain / worn / chalk). Semua tetapan ini tetap dalam skrip, bukan ikut gaya.
+
+Ukuran dan kes (P9):
+- S6 seed 42: 2 lapisan warna terhasil sedangkan 3 dijangka (garis inline tercantum dengan putih); seed 7 dapat 3. Boleh dikesan automatik.
+- S4: tekstur kapur asal dibuang semasa vektor dan dibina semula secara prosedur.
+- Pembersihan membuang objek di bawah ~30 piksel sumber (kira-kira titik 6 piksel pada imej 768 lebar), jadi percikan kecil dan garis rambut boleh hilang.
+- Masa: 7–10 s setiap saiz untuk gaya rata; S2 (grain) 5 saiz dalam 82 s. PNG 24×36: 50 MB.
+- 768×1024 ke 24×36 in pada 300 DPI (7200×10800) = pembesaran 9.4 kali; vektor mengekalkan tepi tajam untuk dakwat rata sahaja.
+- Seed tekstur tetap (7): corak lusuh yang sama pada setiap poster.
+
+Yang perlu ditambah:
+1. Parameter kemasan dibaca daripada kad (ruang tepi, tekstur, bilangan dakwat, butiran halus), bukan tetap dalam skrip.
+2. Semakan automatik selepas kemasan: bilangan lapisan = bilangan dakwat dijangka; peratus dakwat yang hilang berbanding imej mentah; amaran jika melebihi ambang.
+3. Ambang butiran halus ikut gaya; gaya yang ciri terasnya percikan atau inline perlu tetapan lebih halus atau imej mentah lebih besar (belum diuji).
+4. Pemetaan warna ikut peranan (bukan warna terdekat sahaja), supaya varian warna C lain boleh dibuat daripada satu imej.
+5. Tekstur: seed berbeza setiap design; jenis dan kekuatan ikut kad; jenis baharu ditambah bila gaya memerlukan.
+6. Spesifikasi cetak pembekal sebagai senarai semak: 300 DPI (Printify, rasmi); bleed, kawasan selamat, had saiz fail dan profil warna belum disemak.
+7. F3 (raster) belum wujud: perlu pembesar imej; di CPU perlahan dan belum dipasang. Ditangguh atau dihadkan saiz sehingga diuji.
+8. Gabungan baris font untuk laluan 3–4 belum wujud dan perlu kelulusan pengguna (lihat perkara terbuka).
+9. Simpanan: SVG induk + info disimpan kekal; PNG besar dijana semula bila perlu; versi `finish.py` direkod.
+10. QC akhir selepas kemasan (lihat langkah 5).
