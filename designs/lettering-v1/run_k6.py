@@ -18,7 +18,12 @@ for e in ENJIN:
     t0 = time.time()
     script = "gen_moss.py" if e == "moss" else "gen.py"
     cmd = [sys.executable, str(HERE / script)] + ([] if e == "moss" else [e]) + IDS
-    rc = subprocess.run(cmd).returncode
+    for cubaan in range(3):  # muat turun kadang-kadang terputus; cache disimpan antara cubaan
+        rc = subprocess.run(cmd).returncode
+        if rc == 0:
+            break
+        print(f"== {e} gagal rc={rc}, cubaan {cubaan + 1}/3", flush=True)
+        time.sleep(30)
     sec = round(time.time() - t0)
     with open(OUT / "enjin_masa.jsonl", "a") as f:
         f.write(json.dumps(dict(enjin=e, rc=rc, saat=sec, peranti=os.environ.get("GEN_DEVICE", "cpu"),
