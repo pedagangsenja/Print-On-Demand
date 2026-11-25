@@ -44,6 +44,10 @@ Tambahan yang disyorkan:
 - Senarai "jangan salin": ayat, susun atur tepat, tandatangan atau logo rujukan.
 - Julat panjang ayat yang sesuai untuk gaya itu.
 
+Tambahan daripada semakan langkah 3 (menunggu semakan pengguna):
+- Setiap medan kad disimpan sebagai pasangan: semakan QC (BM) + frasa prompt (Inggeris). Satu sumber untuk prompt dan QC, seperti `build_prompts.py` v3.
+- Setiap warna dalam C ada "nama warna untuk prompt" (cth. bright yellow), kerana kod hex tidak boleh masuk prompt.
+
 Langkah kecil:
 - 1a. Simpan imej rujukan di tempat kekal (sekarang hanya dalam container).
 - 1b. Semak gaya sedia ada dalam S&C (elak pendua).
@@ -51,7 +55,7 @@ Langkah kecil:
 - 1d. Pengguna luluskan kad dan sahkan ciri teras (~2 minit).
 - 1e. Imej bukti: satu ayat pendek, 2 seed, dibanding dengan upload. Kad aktif dan masuk S&C hanya selepas lulus.
 
-## Langkah 2: Ayat, peranan dan laluan (cadangan 25 Nov; menunggu semakan pengguna)
+## Langkah 2: Ayat, peranan dan laluan (disemak 25 Nov; disimpan atas arahan pengguna)
 
 Dapatan: S1–S6 hanya menyimpan senarai 4 perkataan; baris, peranan dan huruf besar/kecil terkunci dalam templat. "Semak trademark" tiada kaedah bertulis.
 
@@ -72,3 +76,25 @@ Yang perlu ditambah:
 10. Hasil langkah: Spesifikasi Teks berstruktur (baris, perkataan, peranan, huruf, tanda baca, laluan, perkataan berisiko). Ini rujukan ejaan untuk QC.
 
 Langkah kecil: 2a ayat dan saringan; 2b ukur dan pilih laluan; 2c padan dengan kad; 2d peranan, baris, huruf, tanda baca; 2e Spesifikasi Teks.
+
+## Langkah 3: Pembina prompt (cadangan 25 Nov; menunggu semakan pengguna)
+
+Dapatan: prompt S1–S6 ialah 6 ayat templat tulisan tangan + ekor tetap, sama untuk semua model (hanya MOSS diuji), tanpa semakan automatik dan tanpa versi. SOP v3 sudah ada reka bentuk yang lebih baik (setiap unsur gaya = semakan QC + ayat prompt; `rev` naik bila prompt dibaiki) tetapi tidak dibawa ke S1–S6.
+
+Ukuran (25 Nov):
+- Prompt S1–S6 (4 perkataan): 87–124 kata, 143–197 token T5, 129–177 token CLIP.
+- Format S6 dengan 8 perkataan: 154 kata, 258 token T5 (melebihi had schnell 256).
+- Had lalai diffusers: klein 4B, Z-Image dan Chroma 512 token; schnell 256; CLIP 77.
+- ERNIE: penambah prompt (`use_pe`) hidup secara lalai; ujian 23–24 Nov mematikannya. Ujian v1: ERNIE 0/5 design betul, ERNIE + penambah 2/5.
+
+Yang perlu ditambah:
+1. Rangka tetap 9 bahagian, setiap satu dipetakan daripada medan kad: medium + portrait; latar; susunan; teks ("The text reads exactly, N lines:" + arahan setiap baris); hierarki; hiasan; ruang tepi; had warna + larangan khusus; ekor tetap.
+2. Pembina ialah kod, bukan tulisan bebas: kad + Spesifikasi Teks yang sama mesti menghasilkan prompt yang sama.
+3. Semakan automatik sebelum jana: setiap petikan muncul sekali; petikan sama tepat dengan Spesifikasi Teks; tiada angka, hex, nama font atau jenama; bilangan baris betul; dalam had token.
+4. Had token setiap model + turutan potong: teks, bentuk huruf, susunan, hierarki, hiasan, ruang tepi, ekor.
+5. Profil model: format (penuh / ringkas), pembalut (cth. MOSS guna templat chat), penambah prompt hidup / mati, sokongan negative prompt.
+6. Format tidak diandaikan: "T5 ringkas, teks di depan" ialah hipotesis; diuji A/B dalam ujian kelayakan dan format menang direkod dalam profil.
+7. Templat ikut laluan: laluan 1–2 seluruh ayat; laluan 3 perkataan utama sahaja; laluan 4 tajuk + hiasan tanpa teks.
+8. Perpustakaan ayat penegas terikat pada ciri QC; nombor `rev` direkod. Jika rev yang sama selalu diperlukan, kad dikemas kini.
+9. Simpanan: prompt + versi pembina + versi kad + rev disimpan bersama imej.
+10. Ujian setara: pembina mesti menghasilkan semula S1–S6 (ayat 4 perkataan) dengan imej yang tidak lebih buruk, sebelum dipakai untuk gaya baharu.
