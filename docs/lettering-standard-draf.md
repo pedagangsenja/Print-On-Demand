@@ -44,9 +44,13 @@ Tambahan yang disyorkan:
 - Senarai "jangan salin": ayat, susun atur tepat, tandatangan atau logo rujukan.
 - Julat panjang ayat yang sesuai untuk gaya itu.
 
-Tambahan daripada semakan langkah 3 (menunggu semakan pengguna):
+Tambahan daripada semakan langkah 3 (disimpan atas arahan pengguna):
 - Setiap medan kad disimpan sebagai pasangan: semakan QC (BM) + frasa prompt (Inggeris). Satu sumber untuk prompt dan QC, seperti `build_prompts.py` v3.
 - Setiap warna dalam C ada "nama warna untuk prompt" (cth. bright yellow), kerana kod hex tidak boleh masuk prompt.
+
+Tambahan daripada semakan langkah 4 (menunggu semakan pengguna):
+- Nisbah kanvas rujukan dicatat (cth. upload ke-3 segi empat sama); kad menyatakan cara susunan disesuaikan ke potret 3:4.
+- Imej bukti 1e merekod enjin penuh yang menghasilkannya (model, varian fail, langkah, seed).
 
 Langkah kecil:
 - 1a. Simpan imej rujukan di tempat kekal (sekarang hanya dalam container).
@@ -77,7 +81,7 @@ Yang perlu ditambah:
 
 Langkah kecil: 2a ayat dan saringan; 2b ukur dan pilih laluan; 2c padan dengan kad; 2d peranan, baris, huruf, tanda baca; 2e Spesifikasi Teks.
 
-## Langkah 3: Pembina prompt (cadangan 25 Nov; menunggu semakan pengguna)
+## Langkah 3: Pembina prompt (disemak 25 Nov; disimpan atas arahan pengguna)
 
 Dapatan: prompt S1–S6 ialah 6 ayat templat tulisan tangan + ekor tetap, sama untuk semua model (hanya MOSS diuji), tanpa semakan automatik dan tanpa versi. SOP v3 sudah ada reka bentuk yang lebih baik (setiap unsur gaya = semakan QC + ayat prompt; `rev` naik bila prompt dibaiki) tetapi tidak dibawa ke S1–S6.
 
@@ -98,3 +102,25 @@ Yang perlu ditambah:
 8. Perpustakaan ayat penegas terikat pada ciri QC; nombor `rev` direkod. Jika rev yang sama selalu diperlukan, kad dikemas kini.
 9. Simpanan: prompt + versi pembina + versi kad + rev disimpan bersama imej.
 10. Ujian setara: pembina mesti menghasilkan semula S1–S6 (ayat 4 perkataan) dengan imej yang tidak lebih buruk, sebelum dipakai untuk gaya baharu.
+
+## Langkah 4: Jana (cadangan 25 Nov; menunggu semakan pengguna)
+
+Dapatan: S1–S6 dijana dengan satu gabungan sahaja (MOSS SFT bf16 + LoRA 8 langkah kekuatan 0.7, 768×1024, seed 42 dan 7). Log hanya menyimpan masa. Ujian 24 Nov memakai fail GGUF Q8 untuk model lain; kesan Q8 berbanding bf16 belum dibanding.
+
+Ukuran:
+- Masa CPU setiap imej: MOSS 439 s (P9, 12 imej); ERNIE + penambah 561 s (v3, 25 imej); klein 4B 68–81 s.
+- v3: purata 2.5 cubaan setiap design (julat 1–4).
+- P9: 12/12 ejaan betul; 5 daripada 6 pilihan ialah seed 42. Seed kedua berguna untuk pilihan rupa, bukan ejaan.
+- Enjin: stable-diffusion.cpp 676 s berbanding diffusers 68 s untuk imej klein yang sama (24 Nov).
+- Kegagalan 24 Nov: schnell Q8 (12.7 GB) kehabisan RAM 15 GB; disk penuh dua kali bila dua model besar dimuat turun serentak.
+
+Yang perlu ditambah:
+1. Tetapan dikunci dalam profil model: model, varian fail (bf16 / Q8 / Q6), langkah, guidance, LoRA dan kekuatan, penambah prompt. Kelayakan sah untuk gabungan itu sahaja.
+2. Enjin dikunci: diffusers (bf16 + AMX); versi perpustakaan direkod.
+3. Anggaran masa sebelum mula dan had cubaan setiap design.
+4. Strategi seed: senarai tetap (42, 7, 123, 2024). Laluan 1: 2 seed terus. Laluan 2: 3–4 seed. Ulangan dijana satu demi satu.
+5. Susunan kerja: ikut model (muat sekali, jana semua); kod prompt dahulu; satu model besar pada satu masa; semak RAM dan disk sebelum muat turun; boleh disambung semula.
+6. Saiz kanvas ikut laluan dan kelas kemasan: 768×1024 untuk laluan 1–2 dengan F1/F2; laluan 3–4 dan F3 perlu saiz sendiri (belum ditetapkan, belum diuji).
+7. Log lengkap setiap imej: model, varian, langkah, guidance, LoRA, seed, saiz, versi, masa, prompt.
+8. Imej mentah disimpan di tempat kekal sebelum sesi tamat (container sementara).
+9. Pemasangan: skrip setup environment belum ada PyTorch, diffusers dan OCR; model dimuat turun semula setiap sesi (MOSS 28 GB).
