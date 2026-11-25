@@ -45,3 +45,6 @@
 @media print { .al-empty, .al-tog { display: none; } .al-panel { display: block; } }
 .al-eng { cursor: default; color: var(--color-fg-muted); }
 .al-eng[data-none="1"] { border-style: dashed; }
+.al-item h3 { display: grid; grid-template-rows: auto calc(2 * 1.4em); gap: 4px; align-items: start; margin: 0; line-height: 1.4; }
+.al-item h3 .al-code { justify-self: start; }
+.al-item h3 > span:last-child { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
