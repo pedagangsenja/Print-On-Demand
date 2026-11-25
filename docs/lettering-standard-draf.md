@@ -16,6 +16,8 @@ Laluan ikut panjang ayat baharu (bukan ayat rujukan):
 
 Lima kunci gaya: (1) Kad Gaya satu-satunya sumber; (2) QC sama untuk semua model; (3) model hanya untuk gaya yang ia lulus (jadual model × gaya); (4) skrip paksa warna, margin, tekstur; (5) peraturan ulang (ayat penegas + seed baharu, maks 4, kemudian model sandaran).
 
+Perkara terbuka (dijumpai semasa semakan langkah 5): nota P9 (`docs/research/posters/08-lettering.md`) merekod bahawa pengguna menolak susunan font dengan kod pada 22 Nov kerana nampak "ditaip". Laluan 3 dan 4 bergantung pada baris font, jadi kedua-duanya mesti diuji dan diluluskan pengguna sebelum masuk standard.
+
 ## Langkah 1: Kad Gaya (disemak 25 Nov; disimpan atas arahan pengguna)
 
 Dapatan: prompt S1–S6 membawa 16 jenis maklumat; kad cadangan asal hanya ada tempat untuk 7.
@@ -48,9 +50,13 @@ Tambahan daripada semakan langkah 3 (disimpan atas arahan pengguna):
 - Setiap medan kad disimpan sebagai pasangan: semakan QC (BM) + frasa prompt (Inggeris). Satu sumber untuk prompt dan QC, seperti `build_prompts.py` v3.
 - Setiap warna dalam C ada "nama warna untuk prompt" (cth. bright yellow), kerana kod hex tidak boleh masuk prompt.
 
-Tambahan daripada semakan langkah 4 (menunggu semakan pengguna):
+Tambahan daripada semakan langkah 4 (disimpan atas arahan pengguna):
 - Nisbah kanvas rujukan dicatat (cth. upload ke-3 segi empat sama); kad menyatakan cara susunan disesuaikan ke potret 3:4.
 - Imej bukti 1e merekod enjin penuh yang menghasilkannya (model, varian fail, langkah, seed).
+
+Tambahan daripada semakan langkah 5 (menunggu semakan pengguna):
+- Setiap ciri QC dalam kad ditulis sebagai perkara yang boleh dilihat (ya / tidak), bukan kata sifat umum.
+- Imej bukti 1e disimpan dalam kad sebagai imej sauh: QC membanding hasil dengan upload dan dengan imej sauh.
 
 Langkah kecil:
 - 1a. Simpan imej rujukan di tempat kekal (sekarang hanya dalam container).
@@ -103,7 +109,7 @@ Yang perlu ditambah:
 9. Simpanan: prompt + versi pembina + versi kad + rev disimpan bersama imej.
 10. Ujian setara: pembina mesti menghasilkan semula S1–S6 (ayat 4 perkataan) dengan imej yang tidak lebih buruk, sebelum dipakai untuk gaya baharu.
 
-## Langkah 4: Jana (cadangan 25 Nov; menunggu semakan pengguna)
+## Langkah 4: Jana (disemak 25 Nov; disimpan atas arahan pengguna)
 
 Dapatan: S1–S6 dijana dengan satu gabungan sahaja (MOSS SFT bf16 + LoRA 8 langkah kekuatan 0.7, 768×1024, seed 42 dan 7). Log hanya menyimpan masa. Ujian 24 Nov memakai fail GGUF Q8 untuk model lain; kesan Q8 berbanding bf16 belum dibanding.
 
@@ -124,3 +130,22 @@ Yang perlu ditambah:
 7. Log lengkap setiap imej: model, varian, langkah, guidance, LoRA, seed, saiz, versi, masa, prompt.
 8. Imej mentah disimpan di tempat kekal sebelum sesi tamat (container sementara).
 9. Pemasangan: skrip setup environment belum ada PyTorch, diffusers dan OCR; model dimuat turun semula setiap sesi (MOSS 28 GB).
+
+## Langkah 5: QC (cadangan 25 Nov; menunggu semakan pengguna)
+
+Dapatan: QC S1–S6 (P9) = 3 pintu wajib + 9 ciri gaya UMUM yang sama untuk semua gaya (lulus ≥ 8/9), disemak pada helaian semakan sebelum kemasan. Ciri itu tidak diambil daripada upload (cth. "latar gelap rata", "maksimum 2 jenis huruf"), sebab itu S001 lulus walaupun kurang melantun. SOP v3 pula memakai 8 ciri khusus setiap rujukan (lulus ≥ 7/8) dan merekod setiap keputusan.
+
+Ukuran (v3, 25 imej): gagal teks rawak 8; gagal ejaan 6; gaya < 7/8 5; cacat 1; lulus semua 9. Teks rawak ialah kegagalan paling kerap.
+OCR (RapidOCR, 24 Nov): panduan yang ejaannya betul hanya dapat skor 0.33–0.88, jadi OCR tidak boleh meluluskan imej; ia hanya menanda.
+
+Yang perlu ditambah:
+1. Dua jenis ciri: ciri kad (khusus, daripada upload, dengan ciri teras wajib) dan ciri sejagat (sama untuk semua gaya).
+2. Ciri sejagat diambil daripada P9: boleh dibaca pada lakaran kecil Pinterest (~236 px lebar; angka daripada nota P9, sumber tidak dinyatakan), tiada teks terpotong, margin mencukupi.
+3. Prosedur ejaan: banding dengan Spesifikasi Teks huruf demi huruf, termasuk huruf besar / kecil, tanda baca, susunan baris, perkataan tertinggal atau berulang; disemak pada potongan besar, bukan lakaran kecil.
+4. Prosedur teks rawak: semak tepi, sudut, hiasan dan bekas teks; OCR menanda teks tambahan.
+5. QC dua kali: imej mentah (sebelum kemasan) dan imej akhir (selepas kemasan), untuk semua laluan. Nota P9: inline S6 tercantum semasa vektor.
+6. Rekod berstruktur setiap imej: pintu, setiap ciri lulus / gagal + sebab, cubaan, tindakan.
+7. Peraturan ulang ikut jenis gagal: ejaan = seed baharu, kemudian huruf besar untuk baris kecil; gaya = ayat penegas ciri yang gagal; teks rawak = buang unsur berisiko; selepas 4 cubaan = model sandaran, kemudian pendekkan ayat, kemudian lapor.
+8. Peraturan memilih antara imej yang lulus (skor ciri kad, kemudian keterbacaan).
+9. Kalibrasi dengan pengguna: keputusan lulus / tolak pengguna dibanding dengan skor Claude; jika pengguna menolak imej yang lulus, sebabnya ditambah ke kad.
+10. Hasil QC mengisi jadual model × gaya (kadar lulus).
