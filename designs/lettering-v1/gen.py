@@ -26,7 +26,8 @@ SEEDS = [42, 7]
 W, H = 768, 1024
 PROFIL = {
     "klein4b": dict(repo="black-forest-labs/FLUX.2-klein-4B", pipe="Flux2KleinPipeline", tr="Flux2Transformer2DModel",
-                    varian="bf16 asal", steps=4, guidance=1.0, max_tok=512),
+                    varian="bf16 asal", steps=4, guidance=1.0, max_tok=512,
+                    pat=["*.json", "text_encoder/*", "tokenizer/*", "vae/*", "scheduler/*", "transformer/*"]),
     "zturbo": dict(repo="Tongyi-MAI/Z-Image-Turbo", pipe="ZImagePipeline", tr="ZImageTransformer2DModel",
                    gguf=("leejet/Z-Image-Turbo-GGUF", "z_image_turbo-Q8_0.gguf"), varian="GGUF Q8_0", steps=9,
                    guidance=0.0, max_tok=512,
