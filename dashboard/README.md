@@ -13,3 +13,4 @@ Dashboard: https://claude.ai/artifact/EeAC4MqQijSGYGTWfZW3Sg (jenis "Data").
 - **Workflow**: tugas harian/mingguan/bulanan anda dan Claude (`data/export/setup/workflow.json`).
 - **Prestasi**: rangka 5 analisa, corong sasaran 10 jualan/hari × $30, milestone dan alat data (data `data/export/prestasi/*.json`, dijana oleh `scripts/build_prestasi.py`). Angka sebenar diisi bila GA4, Pinterest dan WooCommerce disambung.
 - **Semua produk**: riset semua produk (data `data/export/*.json`).
+- **FC** › sub tab **Design**: carta aliran lettering v1, 9 langkah + baris Tukar model × 6 lajur (Sedia ada · Alat · Cadangan pertama · Alat · Standard v1 · Alat), status alat 25 Nov 2026. Dijana oleh `scripts/build_fc_design.py <index.html>` (ganti antara penanda `FC:DESIGN`).
