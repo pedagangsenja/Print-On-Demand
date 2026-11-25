@@ -1,24 +1,100 @@
-# Standard Lettering: draf kerja (belum muktamad)
+# Standard Lettering: dokumen serahan (25 Nov 2026)
 
-Nota kerja semasa menyemak cadangan standard langkah demi langkah (25 Nov 2026). Akan disusun semula selepas semua langkah disemak.
-Asas: aliran S1–S6 (Lettering P9, `scripts/lettering/styles.py` dan `finish.py` di cawangan `claude/affectionate-wright-7y95k3`) dan SOP v3 (cawangan `claude/sharp-franklin-29eamk`).
-Tahap bukti semua angka di bawah: lemah (ujian kecil, dinilai oleh Claude).
+Dokumen ini menyerahkan kerja daripada sesi 24–25 Nov (cawangan `claude/admiring-cerf-b3bdfi`) kepada chat baharu. Belum ada apa-apa yang dibina daripada cadangan; semuanya kajian dan cadangan.
+Tahap bukti semua angka ujian: lemah (ujian kecil, satu hingga empat seed, dinilai oleh Claude), kecuali lesen (rasmi, API Hugging Face 24 Nov).
 
-## Rangka cadangan
+Kandungan:
+1. Model yang dimuktamadkan
+2. Workflow asal S1–S6
+3. Cadangan pertama: 4 lapisan, 4 laluan, 5 kunci
+4. Kajian cadangan langkah demi langkah (1–9)
+5. Keputusan tertangguh
+6. Peta cawangan dan fail
 
-4 lapisan (Kad Gaya, pembina prompt, QC ikut kad, kemasan ikut kelas), 4 laluan ikut panjang ayat, 5 kunci gaya.
+Carta aliran sebelah-menyebelah (bahagian 2 dan 3): `docs/lettering-aliran.png`, dijana oleh `scripts/lettering_flowchart.py`.
 
-Laluan ikut panjang ayat baharu (bukan ayat rujukan):
-1. Pendek, 1–4 perkataan: AI penuh, satu blok.
-2. Sederhana, 5–8: AI penuh, hierarki wajib.
-3. Panjang, 9–16: hibrid. AI lukis perkataan utama, font berlesen untuk baris lain.
-4. Terlalu panjang, 17+: font dahulu. AI buat tajuk dan hiasan sahaja.
+## 1. Model yang dimuktamadkan
 
-Lima kunci gaya: (1) Kad Gaya satu-satunya sumber; (2) QC sama untuk semua model; (3) model hanya untuk gaya yang ia lulus (jadual model × gaya); (4) skrip paksa warna, margin, tekstur; (5) peraturan ulang (ayat penegas + seed baharu, maks 4, kemudian model sandaran).
+Syarat pengguna: percuma, jalan di CPU sahaja (container 4 teras, 15 GB RAM, tiada GPU), tiada kuota, lesen komersial tanpa syarat. Disemak satu per satu pada 24 Nov: fail LICENSE, kad model, gate, dan lesen setiap komponen (pengekod teks dipadankan melalui config; VAE melalui hash fail).
 
-Perkara terbuka (dijumpai semasa semakan langkah 5): nota P9 (`docs/research/posters/08-lettering.md`) merekod bahawa pengguna menolak susunan font dengan kod pada 22 Nov kerana nampak "ditaip". Laluan 3 dan 4 bergantung pada baris font, jadi kedua-duanya mesti diuji dan diluluskan pengguna sebelum masuk standard.
+Lulus: 12 model (11 penuh + 1 dengan titik kelabu). Enjin jana: diffusers 0.43 + PyTorch 2.15, bf16 dengan AMX. stable-diffusion.cpp tidak dipakai (676 s berbanding 68 s untuk imej klein yang sama).
 
-## Pembetulan (25 Nov, selepas membaca cawangan sesi lain)
+| # | Model (repo Hugging Face) | Lesen | Pengekod teks (keluarga) | Fail yang dipakai | Tetapan | Masa CPU / imej 768×1024 | Hasil ujian |
+|---|---|---|---|---|---|---|---|
+| 1 | MOSS-Image SFT (`OpenMOSS-Team/MOSS-Image-SFT`) + LoRA `lodestones/MOSS-Image-SFT-8-steps-dmd` | Apache 2.0 (kedua-dua) | Qwen3.5-9B (LLM) | bf16 asal, 27–28 GB; pengekod sebahagian di cakera | 8 langkah, tanpa CFG, LoRA 0.7 | 439 s | S1–S6: 12/12 ejaan betul (P9, P9b). Lettering BM 9–16 perkataan: 0/5 |
+| 2 | ERNIE-Image-Turbo (`baidu/ERNIE-Image-Turbo`) | Apache 2.0 | Ministral-3-3B (LLM) + penambah prompt | GGUF Q8 `unsloth/ERNIE-Image-Turbo-GGUF`, 8.7 GB | 8 langkah, guidance 1.0 | 438 s (P9b); 409 s (23 Nov) | S1–S6: 12/12 (P9b). 23 Nov: 10/10. v3 BM 9–16 perkataan dengan penambah: 14/20 |
+| 3 | FLUX.2 klein 4B (`black-forest-labs/FLUX.2-klein-4B`) | Apache 2.0 | Qwen3-4B (LLM) | GGUF Q8 `leejet/FLUX.2-klein-4B-GGUF`, 4.3 GB | 4 langkah, guidance 1.0 | 68–93 s | S1–S6: 6/12 (P9b; S3 dan S6 0/2). 23 Nov: 3/10. Chat ini, teks sahaja: 5/9 |
+| 4 | Z-Image-Turbo (`Tongyi-MAI/Z-Image-Turbo`) | Apache 2.0 | Qwen3-4B (LLM) | GGUF Q8 `leejet/Z-Image-Turbo-GGUF`, 6.6 GB | 9 langkah, guidance 0 | 280 s (23 Nov) | 23 Nov: 6/10. Belum diuji pada S1–S6 |
+| 5 | FLUX.1-schnell (`black-forest-labs/FLUX.1-schnell`; komponen dari `unsloth/FLUX.1-schnell`) | Apache 2.0; titik kelabu: CLIP-L OpenAI tiada tag lesen | T5-XXL + CLIP-L (T5) | GGUF Q6_K `city96/FLUX.1-schnell-gguf`, 9.8 GB (Q8 12.7 GB kehabisan RAM) | 4–6 langkah, guidance 0, had 256 token | 260 s (img2img) | Text-to-image belum diuji |
+| 6 | Chroma1-Flash / Chroma1-HD (`lodestones/Chroma1-Flash`) | Apache 2.0 | T5-XXL (T5), tiada CLIP | GGUF Q8 `silveroxides/Chroma1-Flash-GGUF`, 9.7 GB; T5 dikongsi dengan schnell (hash sama) | Flash: 10 langkah, guidance 1.0 | 266 s (img2img) | Text-to-image belum diuji |
+| 7 | Z-Image asas (`Tongyi-MAI/Z-Image`) | Apache 2.0 | Qwen3-4B (LLM) | belum dimuat turun | 28–50 langkah | belum diukur | Belum diuji (lambat) |
+| 8 | FLUX.2 klein base 4B (`black-forest-labs/FLUX.2-klein-base-4B`) | Apache 2.0 | Qwen3-4B (LLM) | belum dimuat turun | 50 langkah | belum diukur | Belum diuji (lambat) |
+| 9 | AuraFlow v0.3 (`fal/AuraFlow-v0.3`) | Apache 2.0 | Pile-T5-XL (T5) | belum dimuat turun | 50 langkah | belum diukur | Belum diuji |
+| 10 | LongCat-Image (`meituan-longcat/LongCat-Image`) | Apache 2.0 | Qwen2.5-VL-7B (LLM) | belum dimuat turun | 50 langkah | belum diukur | Belum diuji |
+| 11 | OmniGen v1 (`Shitao/OmniGen-v1`) | MIT | Phi-3-mini | belum dimuat turun | – | belum diukur | Belum diuji |
+| 12 | Kandinsky 2.2 (`kandinsky-community/kandinsky-2-2-decoder`) | Apache 2.0 | CLIP-bigG (had 77 token) | fail asal | 50 langkah | 391 s (img2img) | 0/9: huruf rosak. Tidak sesuai untuk lettering |
+
+Kedudukan untuk lettering: MOSS dan ERNIE (kedua-duanya 12/12 pada S1–S6) ialah model utama; klein 4B paling laju tetapi 6/12; Z-Image-Turbo, schnell dan Chroma perlu ujian text-to-image pada S1–S6 sebelum dipakai; model 7–11 belum diuji; Kandinsky digugurkan.
+
+Tidak lulus syarat (jangan dipakai): Emuru (bukan penjana gambar); FLUX.3 Image Klein (had pendapatan US$5 juta); SDXL, SSD-1B, Segmind-Vega (OpenRAIL++); OmniSVG 1.1 (dibina atas Qwen2.5-VL-3B, lesen research); Lumina-Image-2.0 (Gemma); HiDream-I1 (Llama, 17B); FLUX.2 klein 9B / dev (bukan komersial). Tak muat RAM: Qwen-Image / 2512, GLM-Image, NextStep-1.1, LLaDA-Image, Ming-Image. Belum pasti: Nitro-E, Lens, MiniT2I.
+
+Ujian 24 Nov dalam chat ini (cara "panduan susun atur", img2img kekuatan 0.6, 63 imej): ejaan 9/9 untuk ERNIE, MOSS, Z-Image, Chroma dan schnell; klein 8/9; Kandinsky 0/9. Hasil nampak seperti template kerana model hanya menokok tekstur atas font. Cara ini DITOLAK; standard memakai text-to-image penuh. Data: `designs/model-test-12/results.json`.
+
+## 2. Workflow asal S1–S6 (Lettering P9, 23–24 Nov)
+
+Sumber: `scripts/lettering/styles.py`, `gen_moss.py`, `sheet.py`, `finish.py` dan `docs/research/posters/08-lettering.md` di cawangan `claude/affectionate-wright-7y95k3`; perbandingan 3 enjin di `claude/dazzling-cannon-5wzn6h`.
+
+1. Rujukan: pengguna upload poster rujukan; Claude ambil ciri umum sahaja (ayat, susun atur dan tandatangan tidak disalin).
+2. Ayat: 3–7 perkataan Inggeris (diuji pada 4 perkataan sahaja), semak trademark, tetapkan baris dan perkataan utama. Definisi dashboard: pendek ≤ 6 perkataan, panjang ≥ 7.
+3. Prompt: 6 templat tetap dalam `styles.py` (S1–S6), slot 4 perkataan dengan huruf besar / kecil ditetapkan, + ekor larangan tetap (`COMMON_TAIL`). Panjang 87–124 kata.
+4. Jana: text-to-image penuh, 768×1024, seed 42 dan 7 (CPU). Enjin asal MOSS SFT + LoRA 8 langkah.
+5. QC pada helaian semakan: 3 pintu wajib (G1 ejaan 100%, G2 tiada teks rawak, G3 tiada cacat) + 9 ciri gaya umum yang sama untuk semua gaya (lulus ≥ 8/9). Gagal: seed baharu (maksimum 4).
+6. Kemasan `finish.py`: besarkan 4×, asing dakwat, bersih, vektor (potrace), paksa palet gaya, susun satu blok di tengah (76% × 78%), 300 DPI untuk 8×10, 11×14, 16×20, 18×24, 24×36, tekstur prosedur (grain / worn / chalk).
+7. Pengguna lulus atau tolak (~5 minit).
+8. Simpan dalam Daftar S/C: gaya S (`data/gaya/items`) dan warna C (`data/warna/items`). Sejak 25 Nov rekod menyimpan prompt terisi dan imej asal.
+9. Mockup, pin, upload: diserah kepada Workflow (belum dibuat).
+
+Struktur prompt S1–S6 (urutan tetap): medium + "portrait"; latar satu warna bernama; bentuk susunan; "The text reads exactly, N lines:" + arahan setiap perkataan (jenis huruf, saiz, warna); hiasan; ruang tepi; had warna atau larangan khusus; ekor larangan. Peraturan tersirat: setiap perkataan dalam petikan muncul sekali; tiada kod hex atau nombor; huruf diterangkan ikut kelakuan, bukan nama font.
+
+Hasil: MOSS 12/12 dan ERNIE 12/12 ejaan betul pada "Small steps every day"; klein 4B 6/12. 60 imej MOSS lagi (10 quote × 6 gaya) dijana di `claude/happy-davinci-hv0xb3`, QC tidak direkod. Kelemahan yang dicatat: S1 kurang melantun berbanding rujukan; S3 semua baris hampir sama besar; S4 tekstur kapur dibina semula; S6 seed 42 garis inline tercantum semasa vektor.
+
+## 3. Cadangan pertama (25 Nov): 4 lapisan, 4 laluan, 5 kunci
+
+Sebab cadangan: templat S1–S6 terkunci pada 4 perkataan; gaya, warna dan latar bercampur dalam satu ayat; QC tidak diambil daripada upload; tiada peraturan tukar model; `finish.py` hanya untuk dakwat rata atas latar satu warna.
+
+Empat lapisan:
+1. Kad Gaya: data berstruktur yang dinyahkod daripada upload; warna C berasingan.
+2. Pembina prompt: kad + ayat + warna C + keluarga model menghasilkan prompt.
+3. QC ikut kad: 3 pintu wajib + ciri kad (≥ 7/8).
+4. Kemasan ikut kelas: F1 vektor rata, F2 rata + tekstur, F3 raster (belum wujud).
+
+Empat laluan, ikut panjang ayat baharu (bukan ayat rujukan):
+
+| Laluan | Panjang | Cara | Bukti: imej betul semua ejaan (102 imej, semua ujian digabung) |
+|---|---|---|---|
+| 1 Pendek | 1–4 perkataan | AI penuh, satu blok, 2 seed | 25/28 (89%) |
+| 2 Sederhana | 5–8 | AI penuh, hierarki wajib, 3–4 seed | 17/27 (63%) |
+| 3 Panjang | 9–16 | Hibrid: AI lukis 2–4 perkataan utama; baris lain font berlesen; skrip susun ikut kad | 20/44 (45%) bila AI penuh |
+| 4 Terlalu panjang | 17+ | Font dahulu: AI buat tajuk 1–3 perkataan dan hiasan sahaja | 1/3 (33%) bila AI penuh |
+
+Laluan 3 dan 4 belum dibina dan belum diuji. Perkara terbuka: nota P9 merekod pengguna menolak susunan font dengan kod pada 22 Nov kerana nampak "ditaip"; kedua-dua laluan mesti diuji dan diluluskan pengguna sebelum masuk standard.
+
+Lima kunci gaya (supaya gaya diikut walaupun model ditukar):
+1. Kad Gaya satu-satunya sumber gaya.
+2. QC yang sama untuk semua model.
+3. Model hanya dipakai untuk gaya yang ia lulus (jadual model × gaya).
+4. Skrip memaksa warna, margin, tekstur.
+5. Peraturan ulang: ayat penegas + seed baharu (maksimum 4), kemudian model sandaran. Bukti v3 (ERNIE + penambah, 10 design): gaya ≥ 7/8 pada cubaan pertama 6/10; menjelang cubaan ke-3 10/10.
+
+Keluarga model: LLM (MOSS, klein, Z-Image, ERNIE) menerima prompt penuh; T5 (schnell, Chroma) dicadang menerima versi ringkas dengan teks di depan (hipotesis, belum diuji).
+
+Aliran cadangan (9 langkah): 1 Kad Gaya; 2 Ayat + peranan + laluan; 3 Pembina prompt; 4 Jana; 5 QC ikut kad; 6 Kemasan ikut kelas; 7 Pengguna lulus atau tolak; 8 Simpan dalam S&C; 9 Mockup, pin, upload.
+
+## 4. Kajian cadangan langkah demi langkah
+
+Setiap langkah dibanding dengan S1–S6. Langkah 1–6 (termasuk semua tambahan langkah 1) disimpan atas arahan pengguna; langkah 7–9 masih menunggu semakan pengguna. Susunan akhir (satu standard + carta aliran baharu) belum dibuat.
+
+### Pembetulan (25 Nov, selepas membaca cawangan sesi lain)
 
 Beberapa kenyataan awal dalam semakan ini sudah lapuk. Kerja berkaitan ada di cawangan lain yang tidak dibaca pada mulanya:
 - `claude/dazzling-cannon-5wzn6h` (P9b, 24 Nov): MOSS, ERNIE-Image-Turbo (GGUF Q8) dan FLUX.2 klein 4B diuji pada S1–S6 × 2 seed dengan prompt yang sama, text-to-image. Ejaan betul: MOSS 12/12, ERNIE 12/12, klein 6/12 (S3 dan S6 tiada seed betul). Purata masa: 438 s, 438 s, 93 s. Jadi jadual model × gaya sudah ada data pertama, dan "hanya MOSS diuji" tidak lagi benar.
@@ -26,7 +102,7 @@ Beberapa kenyataan awal dalam semakan ini sudah lapuk. Kerja berkaitan ada di ca
 - `claude/friendly-knuth-hkclbr` (25 Nov): rekod S dan C dalam Daftar S/C kini menyimpan `prompt` (terisi, dengan perkataan ujian) dan `asal` (imej rujukan). Jadi "prompt tidak disimpan" tidak lagi benar; yang masih tiada ialah ciri gaya berstruktur dan templat tanpa perkataan.
 - Carta aliran yang dihantar pada 25 Nov masih membawa tiga tanda lapuk ini dan perlu dibetulkan semasa susunan akhir.
 
-## Langkah 1: Kad Gaya (disemak 25 Nov; disimpan atas arahan pengguna)
+### Langkah 1: Kad Gaya (disemak 25 Nov; disimpan atas arahan pengguna)
 
 Dapatan: prompt S1–S6 membawa 16 jenis maklumat; kad cadangan asal hanya ada tempat untuk 7.
 
@@ -76,7 +152,7 @@ Langkah kecil:
 - 1d. Pengguna luluskan kad dan sahkan ciri teras (~2 minit).
 - 1e. Imej bukti: satu ayat pendek, 2 seed, dibanding dengan upload. Kad aktif dan masuk S&C hanya selepas lulus.
 
-## Langkah 2: Ayat, peranan dan laluan (disemak 25 Nov; disimpan atas arahan pengguna)
+### Langkah 2: Ayat, peranan dan laluan (disemak 25 Nov; disimpan atas arahan pengguna)
 
 Dapatan: S1–S6 hanya menyimpan senarai 4 perkataan; baris, peranan dan huruf besar/kecil terkunci dalam templat. "Semak trademark" tiada kaedah bertulis.
 
@@ -98,7 +174,7 @@ Yang perlu ditambah:
 
 Langkah kecil: 2a ayat dan saringan; 2b ukur dan pilih laluan; 2c padan dengan kad; 2d peranan, baris, huruf, tanda baca; 2e Spesifikasi Teks.
 
-## Langkah 3: Pembina prompt (disemak 25 Nov; disimpan atas arahan pengguna)
+### Langkah 3: Pembina prompt (disemak 25 Nov; disimpan atas arahan pengguna)
 
 Dapatan: prompt S1–S6 ialah 6 ayat templat tulisan tangan + ekor tetap, sama untuk semua model (hanya MOSS diuji), tanpa semakan automatik dan tanpa versi. SOP v3 sudah ada reka bentuk yang lebih baik (setiap unsur gaya = semakan QC + ayat prompt; `rev` naik bila prompt dibaiki) tetapi tidak dibawa ke S1–S6.
 
@@ -120,7 +196,7 @@ Yang perlu ditambah:
 9. Simpanan: prompt + versi pembina + versi kad + rev disimpan bersama imej.
 10. Ujian setara: pembina mesti menghasilkan semula S1–S6 (ayat 4 perkataan) dengan imej yang tidak lebih buruk, sebelum dipakai untuk gaya baharu.
 
-## Langkah 4: Jana (disemak 25 Nov; disimpan atas arahan pengguna)
+### Langkah 4: Jana (disemak 25 Nov; disimpan atas arahan pengguna)
 
 Dapatan: S1–S6 dijana dengan satu gabungan sahaja (MOSS SFT bf16 + LoRA 8 langkah kekuatan 0.7, 768×1024, seed 42 dan 7). Log hanya menyimpan masa. Ujian 24 Nov memakai fail GGUF Q8 untuk model lain; kesan Q8 berbanding bf16 belum dibanding.
 
@@ -142,7 +218,7 @@ Yang perlu ditambah:
 8. Imej mentah disimpan di tempat kekal sebelum sesi tamat (container sementara).
 9. Pemasangan: skrip setup environment belum ada PyTorch, diffusers dan OCR; model dimuat turun semula setiap sesi (MOSS 28 GB).
 
-## Langkah 5: QC (disemak 25 Nov; disimpan atas arahan pengguna)
+### Langkah 5: QC (disemak 25 Nov; disimpan atas arahan pengguna)
 
 Dapatan: QC S1–S6 (P9) = 3 pintu wajib + 9 ciri gaya UMUM yang sama untuk semua gaya (lulus ≥ 8/9), disemak pada helaian semakan sebelum kemasan. Ciri itu tidak diambil daripada upload (cth. "latar gelap rata", "maksimum 2 jenis huruf"), sebab itu S001 lulus walaupun kurang melantun. SOP v3 pula memakai 8 ciri khusus setiap rujukan (lulus ≥ 7/8) dan merekod setiap keputusan.
 
@@ -161,7 +237,7 @@ Yang perlu ditambah:
 9. Kalibrasi dengan pengguna: keputusan lulus / tolak pengguna dibanding dengan skor Claude; jika pengguna menolak imej yang lulus, sebabnya ditambah ke kad.
 10. Hasil QC mengisi jadual model × gaya (kadar lulus).
 
-## Langkah 6: Kemasan (disemak 25 Nov; disimpan atas arahan pengguna)
+### Langkah 6: Kemasan (disemak 25 Nov; disimpan atas arahan pengguna)
 
 Dapatan: `finish.py` (S1–S6) membesarkan 4×, mengasingkan dakwat, membersih, menyurih ke vektor (potrace), memaksa palet gaya, menyusun satu blok di tengah (76% lebar, 78% tinggi, pusat 47%), merender 300 DPI untuk 5 saiz dan menambah tekstur prosedur (grain / worn / chalk). Semua tetapan ini tetap dalam skrip, bukan ikut gaya.
 
@@ -185,9 +261,9 @@ Yang perlu ditambah:
 9. Simpanan: SVG induk + info disimpan kekal; PNG besar dijana semula bila perlu; versi `finish.py` direkod.
 10. QC akhir selepas kemasan (lihat langkah 5).
 
-## Langkah 7, 8 dan 9 (cadangan 25 Nov; menunggu semakan pengguna)
+### Langkah 7, 8 dan 9 (cadangan 25 Nov; menunggu semakan pengguna)
 
-### Langkah 7: Pengguna lulus atau tolak
+#### Langkah 7: Pengguna lulus atau tolak
 Sedia ada: "lulus / tolak (~5 minit)"; Workflow w07 memperuntukkan 15 minit sehari untuk design, produk dan pin. Selepas setiap jana imej, pengguna memilih A atau SNC dan memadam sendiri yang tidak dimahukan. Sebab penolakan tidak direkod.
 Yang perlu ditambah:
 1. Paparan tetap: upload asal, imej sauh dan hasil sebelah-menyebelah, dengan skor QC dan ejaan.
@@ -196,7 +272,7 @@ Yang perlu ditambah:
 4. Tiga titik kelulusan: kad (1d), contoh pertama laluan 3–4, dan hasil akhir.
 5. Had setiap sesi kelulusan (bilangan imej setiap helaian) supaya masa semakan realistik.
 
-### Langkah 8: Simpan
+#### Langkah 8: Simpan
 Sedia ada (25 Nov): rekod S = nama, jenis, panjang, enjin, imej contoh, imej asal, prompt terisi, nota. Rekod C = nama, latar, senarai hex huruf, gaya, imej, prompt terisi, nota. `image_log` = satu baris setiap imej ujian (skrip di cawangan `claude/vigilant-knuth-0bmbio`).
 Yang perlu ditambah:
 1. Kad Gaya berstruktur dan templat prompt tanpa perkataan disimpan dalam rekod S (sekarang hanya prompt terisi).
@@ -207,7 +283,7 @@ Yang perlu ditambah:
 6. Fail disimpan sebelum sesi tamat: imej mentah, SVG induk, log.
 7. Versi kad dan tarikh kemas kini.
 
-### Langkah 9: Mockup, pin, upload
+#### Langkah 9: Mockup, pin, upload
 Sedia ada: diserah kepada Workflow (w02 semak trademark, w03 mockup, w04 upload Printify / WooCommerce, w05 jadual pin). Dalam salinan repo senarai Setup, 26 daripada 30 langkah masih "Belum"; skrip mockup belum dibuat.
 Yang perlu ditambah:
 1. Spesifikasi serahan daripada lettering ke Workflow: fail cetak setiap saiz ikut senarai semak pembekal, pratonton, ayat, kod S dan C, hasil saringan trademark.
@@ -215,3 +291,30 @@ Yang perlu ditambah:
 3. Maklum balas jualan kembali ke S&C (gaya menang dapat lebih banyak ayat dan varian warna).
 4. Dasar platform tentang kandungan janaan AI dan design yang serupa rujukan: belum disemak.
 5. Langkah 9 bergantung pada Setup kedai yang belum siap; standard lettering boleh berhenti di serahan.
+
+## 5. Keputusan tertangguh (menunggu pengguna)
+
+1. Setuju tambahan langkah 7, 8 dan 9?
+2. Susun semua langkah jadi satu standard dan carta aliran baharu.
+3. Gabung kerja lettering dari cawangan lain ke satu cawangan; cawangan mana jadi induk? (`CLAUDE.md` menamakan `claude/jolly-hamilton-sdopyz`.)
+4. Tangguh F3; standard versi pertama meliputi F1 dan F2 sahaja?
+5. Uji laluan 3 pada satu ayat ~12 perkataan sebelum masuk standard?
+6. Tambah PyTorch, diffusers dan OCR ke skrip setup environment (sekarang hanya potrace dan alat vektor)?
+7. Simpan 3 upload rujukan sesi ini sebagai imej asal dalam Daftar S/C? Fail hanya ada dalam container (`designs/model-test-12/refs/`, tidak di-commit); perlu dimuat naik semula dalam chat baharu.
+8. 72 imej ujian 24 Nov (63 panduan + 9 klein teks sahaja): A (tab AI Image Test) atau SNC? Imej hanya ada dalam container sesi 24–25 Nov (tidak di-commit) dan hilang bila sesi itu tamat; data ringkas kekal di `designs/model-test-12/results.json`.
+
+Tiga upload rujukan sesi ini: (1) blok grunge kuning-putih atas hitam, 5 perkataan; (2) skrip berus putih atas hitam, 4 perkataan, sama rujukan dengan S003 (IMG_5732); (3) lettering vintaj krim atas hitam, 7 perkataan, segi empat sama.
+
+## 6. Peta cawangan dan fail
+
+| Cawangan | Isi berkaitan |
+|---|---|
+| `claude/admiring-cerf-b3bdfi` (sesi ini) | Dokumen ini; `docs/lettering-aliran.png`; `scripts/lettering_flowchart.py`; `designs/model-test-12/` (skrip jana 7 model, panduan, `results.json`) |
+| `claude/affectionate-wright-7y95k3` | Lettering P9: `scripts/lettering/styles.py`, `gen_moss.py`, `sheet.py`, `finish.py`; `docs/research/posters/08-lettering.md`; `data/export/lettering_p9/` |
+| `claude/dazzling-cannon-5wzn6h` | P9b: MOSS vs ERNIE vs klein pada S1–S6 (`designs/lettering-p9b/`, `lettering_p9_engines.json`) |
+| `claude/happy-davinci-hv0xb3` | Ujian 10 quote: 60 imej mentah MOSS (`designs/lettering/test-10quote/`) |
+| `claude/sharp-franklin-29eamk` | SOP v3: `designs/lettering-test/v3/build_prompts.py`; `data/export/models/lettering_*.json` (ujian v1–v3, rubrik QC, jurang) |
+| `claude/friendly-knuth-hkclbr` | Daftar S/C terkini (prompt dan imej asal dalam rekod) |
+| `claude/vigilant-knuth-0bmbio` | `scripts/build_image_log.py` (dataset `image_log`) |
+
+Dashboard: https://claude.ai/artifact/EeAC4MqQijSGYGTWfZW3Sg (stor `data/gaya/items`, `data/warna/items`; dataset `image_log`, `model_compare`, `model_test`).
