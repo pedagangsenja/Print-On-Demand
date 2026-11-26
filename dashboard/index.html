@@ -191,39 +191,11 @@
 .mt-zoom figcaption { color: #fff; font-size: 0.95rem; text-align: center; max-width: 720px; }
 .mt-zoom-close { position: absolute; top: 12px; right: 12px; padding: 6px 12px; border-radius: 999px; border: 1px solid #fff; background: transparent; color: #fff; cursor: pointer; }
 @media print { .mt-zoom { display: none; } }
-@media print { .pod-tabbar, .pod-nav, .pod th { position: static; } .pod-scroll { max-height: none; overflow: visible; border: 0; } .pod-nav, .pod-tabbar { display: none; } .pod details { border: 0; } #tab-font, #tab-model, #tab-lesen, #tab-sejarah, #tab-setup, #tab-workflow, #tab-aliran, #tab-daftar, #tab-fc { break-before: page; } }
-/* FC tab */
-.fc-subbar { display: flex; gap: var(--cds-gap-xs); border-bottom: 1px solid var(--color-border-line); }
-.fc-sub-btn { appearance: none; background: none; border: 0; border-bottom: 2px solid transparent; margin-bottom: -1px; padding: 4px var(--cds-pad-md); font: inherit; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); cursor: pointer; }
-.fc-sub-btn[aria-selected="true"] { color: var(--color-fg); border-bottom-color: var(--color-fg); font-weight: var(--cds-font-weight-medium); }
-.fc-sub-btn:focus-visible { outline: 2px solid var(--color-fg); outline-offset: 2px; }
-.fc-sub[hidden] { display: none !important; }
-.fc-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
-.fc-wrap { overflow-x: auto; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); }
-.pod .fc-table { min-width: 1500px; table-layout: fixed; }
-.pod .fc-table th { position: static; white-space: normal; border-top: 3px solid var(--fc-accent); color: var(--color-fg); }
-.pod .fc-table th, .pod .fc-table td { width: 21%; }
-.pod .fc-table th.fc-alat, .pod .fc-table td.fc-alat { width: 12.33%; background: var(--color-panel); }
-.pod .fc-table td.fc-alat + td { border-left: 2px solid var(--color-border-line); }
-.fc-c1 { --fc-accent: #64748b; } .fc-c2 { --fc-accent: #0f9488; } .fc-c3 { --fc-accent: #6366f1; }
-.fc-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px; }
-.fc-head:empty { display: none; }
-.fc-tag { font-size: 11px; font-weight: var(--cds-font-weight-medium); letter-spacing: .04em; color: var(--fc-accent); }
-.pod .fc-st { color: var(--fc-accent); border-color: currentColor; font-size: 11px; }
-.fc-title { display: block; margin: 2px 0 4px; }
-.fc-table ul { margin: 0; padding-left: 16px; display: grid; gap: 3px; }
-.fc-minis { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 6px; }
-.fc-mini { border: 1px solid var(--color-border-line); border-left: 3px solid var(--fc-accent); border-radius: var(--cds-radius); padding: 4px 6px; display: grid; gap: 2px; }
-.fc-mini b { color: var(--fc-accent); }
-.fc-chips { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
-.pod .fc-chips .pod-pill { white-space: normal; border-radius: 10px; }
-.fc-legend > span { white-space: nowrap; }
-.pod .fc-key { color: #3b82f6; border-color: currentColor; }
-.pod .fc-table .fc-tools { list-style: none; padding: 0; gap: 6px; }
-.fc-tools li { display: grid; gap: 1px; justify-items: start; }
-.fc-tools span:not(.pod-pill) { color: var(--color-fg-muted); }
+@media print { .pod-tabbar, .pod-nav, .pod th { position: static; } .pod-scroll { max-height: none; overflow: visible; border: 0; } .pod-nav, .pod-tabbar { display: none; } .pod details { border: 0; } #tab-font, #tab-model, #tab-lesen, #tab-sejarah, #tab-setup, #tab-workflow, #tab-aliran, #tab-daftar, #tab-fc, #tab-model2 { break-before: page; } }
 </style>
+<link rel="stylesheet" href="fc.css">
 <link rel="stylesheet" href="aliran.css">
+<link rel="stylesheet" href="t2.css">
 
 <div class="pod">
 
@@ -236,6 +208,8 @@
     <button type="button" class="pod-tab-btn" role="tab" id="btn-poster" data-tab="tab-poster" aria-controls="tab-poster" aria-selected="true">Ujikaji</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-font" data-tab="tab-font" aria-controls="tab-font" aria-selected="false" tabindex="-1">Font</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-model" data-tab="tab-model" aria-controls="tab-model" aria-selected="false" tabindex="-1">AI Image Test</button>
+    <button type="button" class="pod-tab-btn" role="tab" id="btn-model2" data-tab="tab-model2" aria-controls="tab-model2" aria-selected="false" tabindex="-1">AI Image Test 2</button>
+    <button type="button" class="pod-tab-btn" role="tab" id="btn-cvg" data-tab="tab-cvg" aria-controls="tab-cvg" aria-selected="false" tabindex="-1">CPU vs GPU</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-lesen" data-tab="tab-lesen" aria-controls="tab-lesen" aria-selected="false" tabindex="-1">Lesen</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-sejarah" data-tab="tab-sejarah" aria-controls="tab-sejarah" aria-selected="false" tabindex="-1">Chat lepas</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-setup" data-tab="tab-setup" aria-controls="tab-setup" aria-selected="false" tabindex="-1">Setup</button>
@@ -1123,6 +1097,135 @@
 
 </section>
 
+<section id="tab-cvg" class="pod-tab" role="tabpanel" aria-labelledby="btn-cvg" hidden>
+<section id="cvg-ringkas" class="pod-section">
+  <h2>CPU vs GPU: ujian gaya K6, 6 enjin</h2>
+  <p class="pod-lede">CPU: <b data-draw="cvg-cpu-n" data-source="cvg_peranti" data-field="imej" data-where="peranti=CPU">&mdash;</b> imej siap. GPU: <b data-draw="cvg-gpu-n" data-source="cvg_peranti" data-field="imej" data-where="peranti=GPU">&mdash;</b> imej (<span data-draw="cvg-gpu-status" data-source="cvg_peranti" data-field="status" data-where="peranti=GPU">&mdash;</span>). GPU HF: <b data-draw="cvg-hf-n" data-source="cvg_peranti" data-field="imej" data-where="peranti=GPU HF">&mdash;</b> imej.</p>
+  <p class="pod-muted">Gaya K6 (rujukan IMG_5734), Standard Lettering v1. Setiap enjin: 3 ayat (pendek, sederhana, panjang) &times; 2 seed (42, 7), 768&times;1024. Prompt, tetapan model dan seed sama di CPU dan GPU, jadi bezanya ialah peranti. Ejaan disemak dengan mata oleh Claude. Bukti <span class="pod-pill" data-level="lemah">Lemah</span>: 2 seed setiap ayat. "belum" = belum dijana. GPU = Kaggle T4. GPU HF = Space awam Hugging Face (ZeroGPU), 2 enjin &times; seed 42 sahaja; masanya jam dinding termasuk barisan.</p>
+  <div class="pod-fit">
+    <table id="cvg-table-peranti" data-source="cvg_peranti" data-row-key="peranti">
+      <thead><tr>
+        <th data-field="peranti">Peranti</th>
+        <th data-field="tempat">Tempat</th>
+        <th class="pod-wide" data-field="butiran">Butiran</th>
+        <th class="pod-num" data-field="imej">Imej</th>
+        <th data-field="status">Status</th>
+      </tr></thead>
+      <tbody data-draw="cvg-peranti-body"></tbody>
+    </table>
+  </div>
+</section>
+<section id="cvg-enjin" class="pod-section">
+  <h2>Ikut enjin: ejaan betul dan masa</h2>
+  <p class="pod-muted">"Ejaan betul" ikut peraturan ketat V1: setiap huruf, huruf besar / kecil dan tanda baca sama dengan ayat. "Saat / imej" ialah purata masa jana satu imej, tanpa masa muat turun model. "Lebih laju (kali)" = saat CPU &divide; saat GPU, pada imej yang sama (ayat dan seed sama).</p>
+  <div class="pod-fit">
+    <table id="cvg-table-enjin" data-source="cvg_enjin" data-row-key="enjin">
+      <thead><tr>
+        <th data-field="enjin">Enjin</th>
+        <th class="pod-num" data-field="cpu_ejaan">Ejaan betul CPU</th>
+        <th class="pod-num" data-field="gpu_ejaan">Ejaan betul GPU</th>
+        <th class="pod-num" data-field="hf_ejaan">Ejaan betul GPU HF</th>
+        <th class="pod-num" data-field="cpu_saat">Saat / imej CPU</th>
+        <th class="pod-num" data-field="gpu_saat">Saat / imej GPU</th>
+        <th class="pod-num" data-field="hf_saat">Saat / imej GPU HF</th>
+        <th class="pod-num" data-field="gpu_laju_x">GPU lebih laju (kali)</th>
+        <th class="pod-num" data-field="hf_laju_x">GPU HF lebih laju (kali)</th>
+        <th class="pod-wide" data-field="gaya_cpu">Gaya (semakan CPU)</th>
+      </tr></thead>
+      <tbody data-draw="cvg-enjin-body"></tbody>
+    </table>
+  </div>
+</section>
+<section id="cvg-ayat" class="pod-section">
+  <h2>Ikut panjang ayat: ejaan betul (daripada 2 seed)</h2>
+  <p class="pod-muted">Pendek: "Brave Hearts Begin Again". Sederhana: "Every Small Step Builds a Bolder You". Panjang: "Keep Showing Up on Hard Days Because Better Mornings Are Coming".</p>
+  <div class="pod-fit">
+    <table id="cvg-table-ayat" data-source="cvg_ayat" data-row-key="enjin">
+      <thead><tr>
+        <th data-field="enjin">Enjin</th>
+        <th class="pod-num" data-field="cpu_P">Pendek CPU</th>
+        <th class="pod-num" data-field="gpu_P">Pendek GPU</th>
+        <th class="pod-num" data-field="hf_P">Pendek GPU HF</th>
+        <th class="pod-num" data-field="cpu_D">Sederhana CPU</th>
+        <th class="pod-num" data-field="gpu_D">Sederhana GPU</th>
+        <th class="pod-num" data-field="hf_D">Sederhana GPU HF</th>
+        <th class="pod-num" data-field="cpu_L">Panjang CPU</th>
+        <th class="pod-num" data-field="gpu_L">Panjang GPU</th>
+        <th class="pod-num" data-field="hf_L">Panjang GPU HF</th>
+      </tr></thead>
+      <tbody data-draw="cvg-ayat-body"></tbody>
+    </table>
+  </div>
+</section>
+<section id="cvg-galeri" class="pod-section">
+  <h2>Gambar hasil: CPU, GPU Kaggle, GPU HF (kiri ke kanan)</h2>
+  <p class="pod-muted">Kad pertama ialah imej rujukan gaya K6 (design orang lain, rujukan sahaja, bukan untuk dijual). Setiap kad lain: satu ayat dan satu seed. Tekan gambar untuk besarkan.</p>
+  <div class="p9-grid" data-draw="cvg-galeri" data-source="cvg_imej cvg_peranti"></div>
+</section>
+<section id="cvg-imej" class="pod-section">
+  <h2>Setiap imej (36)</h2>
+  <div class="pod-fit">
+    <table id="cvg-table-imej" data-source="cvg_imej" data-row-key="kunci">
+      <thead><tr>
+        <th data-field="enjin">Enjin</th>
+        <th data-field="ayat">Ayat</th>
+        <th class="pod-num" data-field="seed">Seed</th>
+        <th class="pod-num" data-field="cpu_saat">Saat CPU</th>
+        <th data-field="cpu_ejaan">Ejaan CPU</th>
+        <th class="pod-wide" data-field="cpu_sebab">Sebab gagal CPU</th>
+        <th class="pod-num" data-field="gpu_saat">Saat GPU</th>
+        <th data-field="gpu_ejaan">Ejaan GPU</th>
+        <th class="pod-wide" data-field="gpu_sebab">Sebab gagal GPU</th>
+        <th class="pod-num" data-field="hf_saat">Saat GPU HF</th>
+        <th data-field="hf_ejaan">Ejaan GPU HF</th>
+        <th class="pod-wide" data-field="hf_sebab">Sebab gagal GPU HF</th>
+      </tr></thead>
+      <tbody data-draw="cvg-imej-body"></tbody>
+    </table>
+  </div>
+</section>
+</section>
+
+<section id="tab-model2" class="pod-tab" role="tabpanel" aria-labelledby="btn-model2" hidden>
+<div id="t2-intro" class="pod-section pod-first">
+<h2>AI Image Test 2: ujian Standard Lettering v1</h2>
+<p class="pod-lede">5 model × 5 gaya rujukan (K1–K5) × 3 ayat × 2 seed: <b data-draw="t2-n" data-source="ai2_totals" data-field="imej" data-row="0">—</b> imej, <b data-draw="t2-ok" data-source="ai2_totals" data-field="lulus" data-row="0">—</b> lulus. Paling banyak lulus: <b data-draw="t2-best" data-source="ai2_totals" data-field="terbaik" data-row="0">—</b> (<b data-draw="t2-best-n" data-source="ai2_totals" data-field="terbaik_lulus" data-row="0">—</b>/30).</p>
+<p class="pod-muted">Lulus = ejaan betul + tiada teks rawak + tiada cacat + semua ciri teras + gaya ≥ 7/8. <b>Layak</b> untuk satu gaya = 4 imej ayat pendek dan sederhana semua lulus. 25 Nov 2026, CPU, 768×1024. Belum disimpan ke AI Image Test atau Daftar S/C. Bukti <span class="pod-pill" data-level="lemah">Lemah</span>: semakan mata Claude, satu cubaan.</p>
+</div>
+<div id="t2-models" class="pod-section">
+<h2>Ringkasan setiap model</h2>
+<div class="pod-table-wrap"><table id="t2-sum" data-source="ai2_summary" data-row-key="model"><thead><tr>
+<th data-field="model_name">Model</th><th data-field="lulus" class="pod-num">Lulus /30</th><th data-field="ejaan_p" class="pod-num">Ejaan pendek /10</th><th data-field="ejaan_d" class="pod-num">Ejaan sederhana /10</th><th data-field="ejaan_l" class="pod-num">Ejaan panjang /10</th><th data-field="rawak" class="pod-num">Ada teks rawak</th><th data-field="layak">Layak gaya</th><th data-field="purata_min" class="pod-num">Minit / imej</th><th data-field="versi">Versi</th>
+</tr></thead><tbody data-draw="t2-sum-body"></tbody></table></div>
+</div>
+<div id="t2-kad" class="pod-section">
+<h2>Lulus ikut gaya (/6 imej)</h2>
+<p class="pod-muted">Angka hijau = model layak untuk gaya itu.</p>
+<div class="pod-table-wrap"><table id="t2-kad-table" data-source="ai2_bykad" data-row-key="kad"><thead><tr>
+<th data-field="kad_name">Gaya</th><th data-field="klein4b" class="pod-num">klein 4B</th><th data-field="schnell" class="pod-num">schnell</th><th data-field="zturbo" class="pod-num">Z-Image</th><th data-field="ernie" class="pod-num">ERNIE</th><th data-field="moss" class="pod-num">MOSS</th><th data-field="layak">Model layak</th>
+</tr></thead><tbody data-draw="t2-kad-body"></tbody></table></div>
+</div>
+<div id="t2-banding" class="pod-section">
+<h2>Banding gambar</h2>
+<p class="pod-muted">Baris = ayat dan seed; lajur = model. Hijau = lulus, merah = gagal; sebab di bawah gambar. Tekan gambar untuk besarkan. Rujukan ialah design orang lain: banding gaya sahaja.</p>
+<div class="pod-select-row"><label for="t2-f-kad" class="pod-muted">Gaya</label><select id="t2-f-kad" class="dash-select" aria-label="Tapis gaya"><option value="">Semua</option><option>K1</option><option>K2</option><option>K3</option><option>K4</option><option>K5</option></select>
+<label for="t2-f-ayat" class="pod-muted">Ayat</label><select id="t2-f-ayat" class="dash-select" aria-label="Tapis ayat"><option value="">Semua</option><option value="P">Pendek</option><option value="D">Sederhana</option><option value="L">Panjang</option></select></div>
+<div class="pod-table-wrap" data-source="ai2_images ai2_refs"><table class="t2-grid" id="t2-grid"><thead><tr>
+<th class="t2-c0">Ayat · seed</th><th>klein 4B</th><th>schnell</th><th>Z-Image</th><th>ERNIE</th><th>MOSS + LoRA</th>
+</tr></thead><tbody data-draw="t2-grid"></tbody></table></div>
+<div class="mt-zoom" id="t2-zoom" hidden role="dialog" aria-modal="true" aria-label="Gambar besar"><figure data-draw="t2-zoom"></figure><button type="button" class="mt-zoom-close" id="t2-zoom-close">Tutup ✕</button></div>
+</div>
+<div id="t2-butiran" class="pod-section">
+<h2>Butiran semakan setiap imej</h2>
+<p class="pod-muted">G1 = ejaan betul, G2 = tiada teks rawak, G3 = tiada cacat, Teras = ciri utama gaya ada, Gaya = ciri dipenuhi /8. Sumber: <code>designs/lettering-v1/qc/</code>. Chroma1-Flash dilangkau (terlalu perlahan); Kandinsky 2.2 tidak diuji.</p>
+<div class="pod-select-row"><label for="t2-f-model" class="pod-muted">Model</label><select id="t2-f-model" class="dash-select" aria-label="Tapis model"><option value="">Semua</option><option value="klein4b">klein 4B</option><option value="schnell">schnell</option><option value="zturbo">Z-Image</option><option value="ernie">ERNIE</option><option value="moss">MOSS</option></select>
+<label for="t2-f-hasil" class="pod-muted">Hasil</label><select id="t2-f-hasil" class="dash-select" aria-label="Tapis hasil"><option value="">Semua</option><option value="1">Lulus</option><option value="0">Gagal</option></select></div>
+<div class="pod-scroll"><table id="t2-detail" data-source="ai2_images" data-row-key="key"><thead><tr>
+<th data-field="model_name">Model</th><th data-field="id">Imej</th><th data-field="ayat_name">Ayat</th><th data-field="g1">G1</th><th data-field="g2">G2</th><th data-field="g3">G3</th><th data-field="teras">Teras</th><th data-field="gaya" class="pod-num">Gaya</th><th data-field="lulus">Hasil</th><th data-field="sebab">Sebab / ciri kurang</th><th data-field="saat" class="pod-num">Saat</th>
+</tr></thead><tbody data-draw="t2-detail-body"></tbody></table></div>
+</div>
+</section>
+
 <section id="tab-lesen" class="pod-tab" role="tabpanel" aria-labelledby="btn-lesen" hidden>
 
 <div id="l-intro" class="pod-section pod-first">
@@ -1560,19 +1663,14 @@
 
 
 
+<!-- FC:TAB START -->
 <section id="tab-fc" class="pod-tab" role="tabpanel" aria-labelledby="btn-fc" hidden>
 <div class="fc-subbar" role="tablist" aria-label="Sub tab FC">
   <button type="button" class="fc-sub-btn" role="tab" id="btn-fc-design" data-sub="fc-design" aria-controls="fc-design" aria-selected="true">Design</button>
 </div>
-<section id="fc-design" class="pod-section pod-first fc-sub" role="tabpanel" aria-labelledby="btn-fc-design">
-  <h2>Aliran kerja lettering: sedia ada, cadangan pertama, standard v1</h2>
-  <p class="pod-muted">Sumber: carta v1 (scripts/lettering_flowchart.py) dan docs/lettering-standard.md, 25 Nov 2026. Standard v1 dipersetujui pengguna 25 Nov; belum dibina sepenuhnya. Laluan 3–4 percubaan, F3 ditangguh. Status alat = keadaan 25 Nov 2026.</p>
-  <p class="fc-legend"><span><span class="pod-pill " data-tone="ok">ada</span> alat wujud dan dipakai</span><span><span class="pod-pill " data-tone="warn">sebahagian</span> separuh siap / sedang diuji</span><span><span class="pod-pill " data-tone="bad">belum dibina</span> belum wujud</span><span><span class="pod-pill fc-key">Kunci</span> 5 kunci gaya</span><span><span class="pod-pill fc-warn" data-tone="warn">! kelemahan</span> kelemahan aliran sedia ada</span></p>
-<!-- FC:DESIGN START -->
-<div class="fc-wrap"><table class="fc-table"><thead><tr><th class="fc-c1">Sedia ada: S1–S6 (Lettering P9)</th><th class="fc-c1 fc-alat">Alat</th><th class="fc-c2">Cadangan pertama: 4 lapisan, 5 kunci</th><th class="fc-c2 fc-alat">Alat</th><th class="fc-c3">Standard v1: aliran terkini</th><th class="fc-c3 fc-alat">Alat</th></tr></thead><tbody><tr><td class="fc-c1"><div class="fc-head"></div><b class="fc-title">1. Rujukan</b><ul><li>Upload rujukan</li><li>Ambil ciri umum sahaja</li></ul><div class="fc-chips"><span class="pod-pill fc-warn" data-tone="warn">! Ciri gaya hanya ada dalam ayat templat</span></div></td><td class="fc-c1 fc-alat"><ul class="fc-tools"><li><b>Anda</b><span>upload imej rujukan</span><span class="pod-pill " data-tone="ok">ada</span></li><li><b>Claude</b><span>baca imej, ambil ciri umum</span><span class="pod-pill " data-tone="ok">ada</span></li></ul></td><td class="fc-c2"><div class="fc-head"><span class="fc-tag">LAPISAN 1</span><span class="pod-pill fc-st">BAHARU</span></div><b class="fc-title">1. Kad Gaya</b><ul><li>Gaya lama: guna kad dalam S&amp;C</li><li>Gaya baharu: Claude isi kad daripada upload</li><li>Isi kad: medium, bentuk huruf ikut peranan, susunan, hierarki, hiasan, kelas kemasan, 8 ciri QC, julat panjang sesuai</li><li>Warna C berasingan: latar + dakwat 1–3</li></ul><div class="fc-chips"><span class="pod-pill fc-key">Kunci 1: Kad Gaya satu-satunya sumber gaya</span></div></td><td class="fc-c2 fc-alat"><ul class="fc-tools"><li><b>Claude</b><span>isi kad daripada upload</span><span class="pod-pill " data-tone="ok">ada</span></li><li><b>Tab Daftar S/C</b><span>semak gaya lama</span><span class="pod-pill " data-tone="ok">ada</span></li></ul></td><td class="fc-c3"><div class="fc-head"><span class="fc-tag">LAPISAN 1</span><span class="pod-pill fc-st">DIKEMAS KINI</span></div><b class="fc-title">1. Kad Gaya</b><ul><li>1a simpan rujukan di tempat kekal; 1b semak pendua dalam S&amp;C</li><li>1c isi kad 16 medan; setiap medan = semakan QC (ya / tidak) + frasa prompt</li><li>2–3 ciri teras wajib lulus; unsur berisiko; senarai jangan salin; julat panjang ayat</li><li>Warna C berasingan: peranan + nama warna untuk prompt</li><li>1d anda luluskan kad (~2 minit); 1e imej bukti (ayat pendek, 2 seed) jadi imej sauh</li></ul><div class="fc-chips"><span class="pod-pill fc-key">Kunci 1: Kad Gaya satu-satunya sumber gaya</span></div></td><td class="fc-c3 fc-alat"><ul class="fc-tools"><li><b>Tab Daftar S/C</b><span>1a simpan rujukan, 1b semak pendua</span><span class="pod-pill " data-tone="ok">ada</span></li><li><b>kad.py (Python)</b><span>Kad Gaya K1–K6, ciri QC + frasa prompt</span><span class="pod-pill " data-tone="warn">sebahagian</span></li><li><b>Anda</b><span>1d luluskan kad</span><span class="pod-pill " data-tone="ok">ada</span></li><li><b>gen_moss.py / gen.py</b><span>1e imej bukti, 2 seed</span><span class="pod-pill " data-tone="ok">ada</span></li></ul></td></tr><tr><td class="fc-c1"><div class="fc-head"></div><b class="fc-title">2. Ayat</b><ul><li>3–7 perkataan, semak trademark</li><li>Tetapkan baris dan perkataan utama</li></ul><div class="fc-chips"><span class="pod-pill fc-warn" data-tone="warn">! Diuji pada 4 perkataan sahaja</span><span class="pod-pill fc-warn" data-tone="warn">! Hanya 2 kelas: pendek ≤ 6, panjang ≥ 7</span></div></td><td class="fc-c1 fc-alat"><ul class="fc-tools"><li><b>Claude</b><span>pilih ayat, baris, perkataan utama</span><span class="pod-pill " data-tone="ok">ada</span></li><li><b>Semak trademark</b><span>tiada kaedah bertulis</span><span class="pod-pill " data-tone="bad">belum dibina</span></li></ul></td><td class="fc-c2"><div class="fc-head"><span class="pod-pill fc-st">DIUBAH</span></div><b class="fc-title">2. Ayat + peranan + laluan</b><ul><li>Semak trademark</li><li>Setiap perkataan: utama / sokongan / penyambung</li><li>Laluan ikut panjang ayat baharu, bukan ayat rujukan</li></ul><div class="fc-minis"><div class="fc-mini"><b>Laluan 1</b><span>Pendek (1–4 perkataan). AI penuh, satu blok</span></div><div class="fc-mini"><b>Laluan 2</b><span>Sederhana (5–8). AI penuh, hierarki wajib</span></div><div class="fc-mini"><b>Laluan 3</b><span>Panjang (9–16). Hibrid: AI lukis perkataan utama, font berlesen untuk baris lain</span></div><div class="fc-mini"><b>Laluan 4</b><span>Terlalu panjang (17+). Font dahulu: AI buat tajuk dan hiasan sahaja</span></div></div></td><td class="fc-c2 fc-alat"><ul class="fc-tools"><li><b>Claude</b><span>peranan setiap perkataan, pilih laluan</span><span class="pod-pill " data-tone="ok">ada</span></li><li><b>USPTO</b><span>semak trademark (Setup s26: Belum)</span><span class="pod-pill " data-tone="bad">belum dibina</span></li><li><b>Font berlesen</b><span>laluan 3–4</span><span class="pod-pill " data-tone="bad">belum dibina</span></li></ul></td><td class="fc-c3"><div class="fc-head"><span class="pod-pill fc-st">DIKEMAS KINI</span></div><b class="fc-title">2. Ayat + peranan + laluan</b><ul><li>Ayat asal; saringan trademark bertulis, hasil direkod</li><li>Ukur kesukaran: bilangan perkataan, perkataan 7+ huruf, perkataan berulang</li><li>Kata isi = utama; kata fungsi = penyambung; perkataan 7+ huruf jadi utama</li><li>Sokongan dan penyambung HURUF BESAR kecuali kad wajibkan skrip</li><li>Hasil: Spesifikasi Teks (rujukan ejaan untuk QC)</li></ul><div class="fc-minis"><div class="fc-mini"><b>Laluan 1: standard v1</b><span>1–4 perkataan. AI penuh, satu blok</span></div><div class="fc-mini"><b>Laluan 2: standard v1</b><span>5–8 perkataan. AI penuh, hierarki wajib</span></div><div class="fc-mini"><b>Laluan 3: percubaan</b><span>9–16 perkataan. Hibrid. Belum diuji; perlu kelulusan anda</span></div><div class="fc-mini"><b>Laluan 4: percubaan</b><span>17+ perkataan. Font dahulu. Belum diuji; perlu kelulusan anda</span></div></div></td><td class="fc-c3 fc-alat"><ul class="fc-tools"><li><b>kad.py (Python)</b><span>Spesifikasi Teks + ukur kesukaran</span><span class="pod-pill " data-tone="warn">sebahagian</span></li><li><b>Claude</b><span>peranan, pilih laluan</span><span class="pod-pill " data-tone="ok">ada</span></li><li><b>USPTO</b><span>saringan bertulis, hasil direkod</span><span class="pod-pill " data-tone="bad">belum dibina</span></li><li><b>Font berlesen</b><span>laluan 3–4 (percubaan)</span><span class="pod-pill " data-tone="bad">belum dibina</span></li></ul></td></tr><tr><td class="fc-c1"><div class="fc-head"></div><b class="fc-title">3. Prompt: templat tetap</b><ul><li>styles.py: 6 ayat siap (S1–S6)</li><li>Arahan setiap perkataan + ekor larangan</li></ul><div class="fc-chips"><span class="pod-pill fc-warn" data-tone="warn">! Dikunci pada 4 perkataan</span><span class="pod-pill fc-warn" data-tone="warn">! Gaya, warna dan latar bercampur</span></div></td><td class="fc-c1 fc-alat"><ul class="fc-tools"><li><b>styles.py (Python)</b><span>6 prompt siap S1–S6</span><span class="pod-pill " data-tone="ok">ada</span></li></ul></td><td class="fc-c2"><div class="fc-head"><span class="fc-tag">LAPISAN 2</span><span class="pod-pill fc-st">BAHARU</span></div><b class="fc-title">3. Pembina prompt</b><ul><li>Kad Gaya + ayat + warna C + keluarga model</li><li>Peraturan: petikan sekali sahaja, tiada hex atau nombor, ayat hierarki wajib</li></ul><div class="fc-minis"><div class="fc-mini"><b>Keluarga LLM</b><span>MOSS, klein, Z-Image, ERNIE: prompt penuh</span></div><div class="fc-mini"><b>Keluarga T5</b><span>schnell, Chroma: ringkas, teks di depan</span></div></div></td><td class="fc-c2 fc-alat"><ul class="fc-tools"><li><b>Pembina prompt (Python)</b><span>dibina sebagai kad.py dalam v1</span><span class="pod-pill " data-tone="warn">sebahagian</span></li></ul></td><td class="fc-c3"><div class="fc-head"><span class="fc-tag">LAPISAN 2</span><span class="pod-pill fc-st">DIKEMAS KINI</span></div><b class="fc-title">3. Pembina prompt (kod)</b><ul><li>Kad + Spesifikasi Teks yang sama → prompt yang sama</li><li>Rangka tetap 9 bahagian; had token setiap model + turutan potong</li><li>Semak automatik: petikan sekali, sama dengan Spesifikasi Teks, tiada hex / nombor / nama font</li><li>Profil model: format, pembalut, penambah prompt; format T5 diuji A/B dahulu</li><li>Syarat pakai: hasilkan semula S1–S6 tidak lebih buruk</li></ul></td><td class="fc-c3 fc-alat"><ul class="fc-tools"><li><b>kad.py: bina() + semak() (Python)</b><span>prompt + semakan automatik</span><span class="pod-pill " data-tone="warn">sebahagian</span></li><li><b>gen.py: PROFIL</b><span>profil setiap model dikunci</span><span class="pod-pill " data-tone="warn">sebahagian</span></li></ul></td></tr><tr><td class="fc-c1"><div class="fc-head"></div><b class="fc-title">4. Jana</b><ul><li>MOSS SFT + LoRA 8 langkah</li><li>Text-to-image penuh, 768×1024</li><li>2 seed (CPU)</li></ul><div class="fc-chips"><span class="pod-pill fc-warn" data-tone="warn">! Tiada peraturan tukar model</span></div></td><td class="fc-c1 fc-alat"><ul class="fc-tools"><li><b>MOSS-Image SFT + LoRA</b><span>model, 8 langkah</span><span class="pod-pill " data-tone="ok">ada</span></li><li><b>gen_moss.py (Python, diffusers)</b><span>CPU, 2 seed</span><span class="pod-pill " data-tone="ok">ada</span></li></ul></td><td class="fc-c2"><div class="fc-head"><span class="pod-pill fc-st">DIUBAH</span></div><b class="fc-title">4. Jana</b><ul><li>Text-to-image penuh, 768×1024</li><li>Laluan 1–2: seluruh ayat. Laluan 3: perkataan utama sahaja. Laluan 4: tajuk + hiasan</li><li>Seed: 2 (laluan 1), 3–4 (laluan 2)</li><li>Log: model, seed, prompt, masa</li></ul><div class="fc-chips"><span class="pod-pill fc-key">Kunci 3: model hanya untuk gaya yang ia lulus</span></div></td><td class="fc-c2 fc-alat"><ul class="fc-tools"><li><b>MOSS-Image, ERNIE-Image-Turbo</b><span>keluarga LLM</span><span class="pod-pill " data-tone="ok">ada</span></li><li><b>FLUX.2 klein 4B, Z-Image-Turbo</b><span>keluarga LLM</span><span class="pod-pill " data-tone="ok">ada</span></li><li><b>FLUX.1 schnell, Chroma</b><span>keluarga T5</span><span class="pod-pill " data-tone="ok">ada</span></li><li><b>diffusers (Python)</b><span>enjin</span><span class="pod-pill " data-tone="ok">ada</span></li></ul></td><td class="fc-c3"><div class="fc-head"><span class="pod-pill fc-st">DIKEMAS KINI</span></div><b class="fc-title">4. Jana</b><ul><li>Tetapan dikunci dalam profil model; enjin diffusers</li><li>Model utama: MOSS dan ERNIE (12/12 pada S1–S6); klein 4B 6/12</li><li>Seed tetap 42, 7, 123, 2024: laluan 1 = 2 seed, laluan 2 = 3–4</li><li>Satu model besar pada satu masa; semak RAM dan disk dahulu</li><li>Log lengkap setiap imej; imej mentah disimpan sebelum sesi tamat</li></ul><div class="fc-chips"><span class="pod-pill fc-key">Kunci 3: model hanya untuk gaya yang ia lulus</span></div></td><td class="fc-c3 fc-alat"><ul class="fc-tools"><li><b>gen_moss.py</b><span>MOSS SFT + LoRA</span><span class="pod-pill " data-tone="ok">ada</span></li><li><b>gen.py</b><span>ERNIE, klein 4B, Z-Image, schnell, Chroma, Kandinsky</span><span class="pod-pill " data-tone="ok">ada</span></li><li><b>run_k6.py</b><span>ujian 6 enjin, satu demi satu</span><span class="pod-pill " data-tone="ok">ada</span></li><li><b>Kaggle GPU (GEN_DEVICE)</b><span>banding CPU vs GPU</span><span class="pod-pill " data-tone="warn">belum diuji</span></li></ul></td></tr><tr><td class="fc-c1"><div class="fc-head"></div><b class="fc-title">5. QC</b><ul><li>Ejaan 100%, tiada teks rawak, tiada cacat</li><li>9 ciri gaya (semak mata)</li><li>Gagal: seed baharu (maks 4)</li></ul></td><td class="fc-c1 fc-alat"><ul class="fc-tools"><li><b>Claude</b><span>semak mata: ejaan + 9 ciri gaya</span><span class="pod-pill " data-tone="ok">ada</span></li></ul></td><td class="fc-c2"><div class="fc-head"><span class="fc-tag">LAPISAN 3</span><span class="pod-pill fc-st">DIUBAH</span></div><b class="fc-title">5. QC ikut kad</b><ul><li>OCR saring dahulu, kemudian semak mata</li><li>3 pintu wajib: ejaan 100%, tiada teks rawak, tiada cacat</li><li>Gaya: sekurang-kurangnya 7/8 ciri kad</li><li>Gagal: tambah ayat penegas + seed baharu (maks 4), kemudian model sandaran</li></ul><div class="fc-chips"><span class="pod-pill fc-key">Kunci 2: QC sama untuk semua model</span><span class="pod-pill fc-key">Kunci 5: peraturan ulang</span></div></td><td class="fc-c2 fc-alat"><ul class="fc-tools"><li><b>RapidOCR</b><span>saring ejaan</span><span class="pod-pill " data-tone="warn">diuji 24 Nov</span></li><li><b>Claude</b><span>semak mata + ayat penegas</span><span class="pod-pill " data-tone="ok">ada</span></li></ul></td><td class="fc-c3"><div class="fc-head"><span class="fc-tag">LAPISAN 3</span><span class="pod-pill fc-st">DIKEMAS KINI</span></div><b class="fc-title">5. QC ikut kad</b><ul><li>3 pintu wajib; ejaan huruf demi huruf ikut Spesifikasi Teks; OCR hanya menanda</li><li>Ciri kad ≥ 7/8 + ciri teras wajib; banding dengan upload dan imej sauh</li><li>Ciri sejagat: boleh dibaca kecil, tiada teks terpotong, margin cukup</li><li>QC dua kali: imej mentah dan selepas kemasan</li><li>Ulang ikut jenis gagal (maks 4) → model sandaran → pendekkan ayat → lapor</li></ul><div class="fc-chips"><span class="pod-pill fc-key">Kunci 2: QC sama untuk semua model</span><span class="pod-pill fc-key">Kunci 5: peraturan ulang</span></div></td><td class="fc-c3 fc-alat"><ul class="fc-tools"><li><b>Claude + helaian semakan</b><span>3 pintu, ciri kad ≥ 7/8</span><span class="pod-pill " data-tone="ok">ada</span></li><li><b>RapidOCR</b><span>hanya menanda (skor 0.33–0.88 pada ejaan betul)</span><span class="pod-pill " data-tone="warn">diuji 24 Nov</span></li><li><b>qc/&lt;model&gt;.json</b><span>rekod QC setiap imej</span><span class="pod-pill " data-tone="warn">sebahagian</span></li></ul></td></tr><tr><td class="fc-c1"><div class="fc-head"></div><b class="fc-title">6. Kemasan: finish.py</b><ul><li>Vektor → palet gaya → margin seragam</li><li>300 DPI, 8×10 hingga 24×36</li><li>Tekstur: grain / worn / chalk</li></ul><div class="fc-chips"><span class="pod-pill fc-warn" data-tone="warn">! Dakwat rata atas latar satu warna sahaja</span></div></td><td class="fc-c1 fc-alat"><ul class="fc-tools"><li><b>finish.py (Python)</b><span>k-means, potrace, cairosvg, tekstur</span><span class="pod-pill " data-tone="ok">ada</span></li></ul></td><td class="fc-c2"><div class="fc-head"><span class="fc-tag">LAPISAN 4</span><span class="pod-pill fc-st">DIUBAH</span></div><b class="fc-title">6. Kemasan ikut kelas</b><ul><li>Palet C dipaksa di sini</li><li>F1 dan F2: 1 imej → beberapa warna</li><li>Laluan 3–4: skrip gabung baris font ikut kad, kemudian semak 8 ciri sekali lagi</li></ul><div class="fc-minis"><div class="fc-mini"><b>F1</b><span>Vektor rata (finish.py)</span></div><div class="fc-mini"><b>F2</b><span>Rata + tekstur</span></div><div class="fc-mini"><b>F3</b><span>Raster: gaya bergambar, gradien</span></div></div><div class="fc-chips"><span class="pod-pill fc-key">Kunci 4: skrip paksa warna, margin, tekstur</span></div></td><td class="fc-c2 fc-alat"><ul class="fc-tools"><li><b>finish.py</b><span>F1 vektor rata, F2 tekstur</span><span class="pod-pill " data-tone="ok">ada</span></li><li><b>Alat F3 raster</b><span>belum dipilih</span><span class="pod-pill " data-tone="bad">belum dibina</span></li><li><b>Skrip gabung baris font</b><span>laluan 3–4</span><span class="pod-pill " data-tone="bad">belum dibina</span></li></ul></td><td class="fc-c3"><div class="fc-head"><span class="fc-tag">LAPISAN 4</span><span class="pod-pill fc-st">DIKEMAS KINI</span></div><b class="fc-title">6. Kemasan ikut kad</b><ul><li>Parameter daripada kad: margin, tekstur, bilangan dakwat, butiran halus</li><li>Semak automatik: bilangan lapisan dan dakwat yang hilang</li><li>Warna ikut peranan: 1 imej → beberapa warna C</li><li>Seed tekstur berbeza setiap design</li><li>Simpan SVG induk; PNG besar dijana semula bila perlu</li></ul><div class="fc-minis"><div class="fc-mini"><b>F1: v1</b><span>Vektor rata</span></div><div class="fc-mini"><b>F2: v1</b><span>Rata + tekstur</span></div><div class="fc-mini"><b>F3: ditangguh</b><span>Raster; belum wujud</span></div></div><div class="fc-chips"><span class="pod-pill fc-key">Kunci 4: skrip paksa warna, margin, tekstur</span></div></td><td class="fc-c3 fc-alat"><ul class="fc-tools"><li><b>finish.py</b><span>F1 / F2; parameter masih tetap dalam skrip</span><span class="pod-pill " data-tone="warn">sebahagian</span></li><li><b>Kemasan ikut kad (Python)</b><span>baca kad + semakan automatik</span><span class="pod-pill " data-tone="bad">belum dibina</span></li></ul></td></tr><tr><td class="fc-c1"><div class="fc-head"></div><b class="fc-title">7. Anda lulus atau tolak</b><ul><li>~5 minit</li></ul></td><td class="fc-c1 fc-alat"><ul class="fc-tools"><li><b>Anda</b><span>~5 minit</span><span class="pod-pill " data-tone="ok">ada</span></li></ul></td><td class="fc-c2"><div class="fc-head"></div><b class="fc-title">7. Anda lulus atau tolak</b><ul><li>~5 minit</li></ul></td><td class="fc-c2 fc-alat"><ul class="fc-tools"><li><b>Anda</b><span>~5 minit</span><span class="pod-pill " data-tone="ok">ada</span></li></ul></td><td class="fc-c3"><div class="fc-head"><span class="pod-pill fc-st">DIKEMAS KINI</span></div><b class="fc-title">7. Anda lulus atau tolak</b><ul><li>Papar upload, imej sauh dan hasil sebelah-menyebelah + skor QC</li><li>Sebab tolak daripada senarai tetap; disalur balik ke kad, jadual model × gaya atau ulangan</li><li>3 titik kelulusan: kad, contoh pertama laluan 3–4, hasil akhir</li><li>Had bilangan imej setiap helaian</li></ul></td><td class="fc-c3 fc-alat"><ul class="fc-tools"><li><b>Anda</b><span>3 titik kelulusan</span><span class="pod-pill " data-tone="ok">ada</span></li><li><b>Paparan sebelah-menyebelah</b><span>upload, imej sauh, hasil + skor QC</span><span class="pod-pill " data-tone="bad">belum dibina</span></li><li><b>Tab AI Image Test / Daftar S/C</b><span>pilih A atau SNC selepas setiap jana</span><span class="pod-pill " data-tone="ok">ada</span></li></ul></td></tr><tr><td class="fc-c1"><div class="fc-head"></div><b class="fc-title">8. Simpan dalam S&amp;C</b><ul><li>Nama, nota, imej contoh, imej asal, prompt terisi</li></ul><div class="fc-chips"><span class="pod-pill fc-warn" data-tone="warn">! Prompt terisi sahaja; tiada ciri gaya berstruktur</span></div></td><td class="fc-c1 fc-alat"><ul class="fc-tools"><li><b>Tab Daftar S/C</b><span>stor data/gaya + data/warna</span><span class="pod-pill " data-tone="ok">ada</span></li></ul></td><td class="fc-c2"><div class="fc-head"><span class="pod-pill fc-st">DIUBAH</span></div><b class="fc-title">8. Simpan dalam S&amp;C</b><ul><li>Kad Gaya + prompt + model + seed + imej</li><li>Gaya boleh dijana semula</li></ul></td><td class="fc-c2 fc-alat"><ul class="fc-tools"><li><b>Tab Daftar S/C</b><span>rekod S dan C</span><span class="pod-pill " data-tone="ok">ada</span></li><li><b>Kad Gaya berstruktur dalam stor</b><span class="pod-pill " data-tone="bad">belum dibina</span></li></ul></td><td class="fc-c3"><div class="fc-head"><span class="pod-pill fc-st">DIKEMAS KINI</span></div><b class="fc-title">8. Simpan dalam S&amp;C</b><ul><li>Rekod S: Kad Gaya + templat prompt tanpa perkataan + model lulus + versi kad</li><li>Rekod C: peranan + nama warna; satu sumber kod hex</li><li>Daftar design lulus: ayat, S, C, model, seed, fail induk</li><li>Semua fail disimpan sebelum sesi tamat</li></ul></td><td class="fc-c3 fc-alat"><ul class="fc-tools"><li><b>Tab Daftar S/C</b><span>rekod S dan C</span><span class="pod-pill " data-tone="ok">ada</span></li><li><b>Kad Gaya berstruktur dalam stor</b><span>templat, model lulus, versi</span><span class="pod-pill " data-tone="bad">belum dibina</span></li><li><b>Daftar design</b><span>ayat, S, C, model, seed, fail induk</span><span class="pod-pill " data-tone="bad">belum dibina</span></li></ul></td></tr><tr><td class="fc-c1"><div class="fc-head"></div><b class="fc-title">9. Mockup → pin → upload</b></td><td class="fc-c1 fc-alat"><ul class="fc-tools"><li><b>Skrip mockup</b><span>Workflow w03</span><span class="pod-pill " data-tone="bad">belum dibina</span></li><li><b>Printify API</b><span>w04; akaun Printify: Sedang (Setup s09)</span><span class="pod-pill " data-tone="warn">sebahagian</span></li><li><b>Pinterest API</b><span>w05; Setup s15–s18: Belum</span><span class="pod-pill " data-tone="bad">belum dibina</span></li></ul></td><td class="fc-c2"><div class="fc-head"></div><b class="fc-title">9. Mockup → pin → upload</b></td><td class="fc-c2 fc-alat"><ul class="fc-tools"><li><b>Skrip mockup</b><span>Workflow w03</span><span class="pod-pill " data-tone="bad">belum dibina</span></li><li><b>Printify API</b><span>w04; Setup s09: Sedang</span><span class="pod-pill " data-tone="warn">sebahagian</span></li><li><b>Pinterest API</b><span>w05; Setup s15–s18: Belum</span><span class="pod-pill " data-tone="bad">belum dibina</span></li></ul></td><td class="fc-c3"><div class="fc-head"><span class="pod-pill fc-st">DIKEMAS KINI</span></div><b class="fc-title">9. Serahan → mockup → pin → upload</b><ul><li>Standard berhenti di serahan kepada Workflow</li><li>Serahan: fail cetak setiap saiz, pratonton, ayat, kod S dan C, hasil trademark</li><li>Produk dan pin ditanda kod S / C → tab Prestasi</li><li>Jualan kembali ke S&amp;C: gaya menang dapat lebih ayat dan warna</li></ul></td><td class="fc-c3 fc-alat"><ul class="fc-tools"><li><b>USPTO</b><span>w02 hasil saringan dalam serahan</span><span class="pod-pill " data-tone="bad">belum dibina</span></li><li><b>Skrip mockup</b><span>w03</span><span class="pod-pill " data-tone="bad">belum dibina</span></li><li><b>Printify API</b><span>w04; Setup s09: Sedang</span><span class="pod-pill " data-tone="warn">sebahagian</span></li><li><b>Pinterest API</b><span>w05; Setup s15–s18: Belum</span><span class="pod-pill " data-tone="bad">belum dibina</span></li><li><b>Prestasi (kod S / C)</b><span>tiada dalam dashboard semasa</span><span class="pod-pill " data-tone="bad">belum dibina</span></li></ul></td></tr><tr><td class="fc-c1"><div class="fc-head"></div><b class="fc-title">Tukar model</b><ul><li>Tiada peraturan bertulis.</li><li>Ujian P9b (24 Nov) pada S1–S6: MOSS 12/12, ERNIE 12/12, klein 4B 6/12 imej ejaan betul.</li></ul></td><td class="fc-c1 fc-alat"><ul class="fc-tools"><li><b>Ujian P9b</b><span>MOSS, ERNIE, klein 4B pada S1–S6</span><span class="pod-pill " data-tone="ok">ada</span></li></ul></td><td class="fc-c2"><div class="fc-head"></div><b class="fc-title">Tukar model</b><ul><li>Ujian kelayakan sekali bagi setiap model baharu, direkod dalam jadual model × gaya.</li><li>Setiap gaya × ayat pendek dan sederhana × 2 seed.</li><li>Lulus: ≥ 90% imej ejaan betul, gaya ≥ 7/8, tiada teks liar.</li></ul></td><td class="fc-c2 fc-alat"><ul class="fc-tools"><li><b>Jadual model × gaya</b><span class="pod-pill " data-tone="bad">belum dibina</span></li></ul></td><td class="fc-c3"><div class="fc-head"></div><b class="fc-title">Tukar model</b><ul><li>Standard v1 (25 Nov, dipersetujui pengguna): laluan 1–2, kemasan F1–F2. Belum dibina.</li><li>Ujian kelayakan seperti cadangan, sah untuk gabungan tetapan yang dikunci sahaja.</li><li>Tahap bukti angka: lemah.</li></ul></td><td class="fc-c3 fc-alat"><ul class="fc-tools"><li><b>gen.py + run_k6.py</b><span>ujian kelayakan setiap enjin</span><span class="pod-pill " data-tone="ok">ada</span></li><li><b>qc/&lt;model&gt;.json</b><span>hasil → jadual model × gaya</span><span class="pod-pill " data-tone="warn">sebahagian</span></li></ul></td></tr></tbody></table></div>
-<!-- FC:DESIGN END -->
+<section id="fc-design" class="pod-section pod-first fc-sub" role="tabpanel" aria-labelledby="btn-fc-design"><p class="pod-muted">Memuatkan carta…</p></section>
 </section>
-</section>
+<!-- FC:TAB END -->
 
 </div>
 
@@ -3443,15 +3541,9 @@ dash.draw('f-rej-body', (tb) => {
 });
 </script>
 <script src="aliran.js"></script>
-<script>
-(() => {
-  const btns = [...document.querySelectorAll('.fc-sub-btn')];
-  const open = (id) => btns.forEach((b) => {
-    const on = b.dataset.sub === id;
-    b.setAttribute('aria-selected', on ? 'true' : 'false'); b.tabIndex = on ? 0 : -1;
-    const p = document.getElementById(b.dataset.sub); if (p) p.hidden = !on;
-  });
-  btns.forEach((b) => b.addEventListener('click', () => open(b.dataset.sub)));
-})();
-</script>
+<!-- FC:JS START -->
+<script src="fc.js"></script>
+<!-- FC:JS END -->
 
+<script src="t2.js"></script>
+<script src="cvg.js"></script>

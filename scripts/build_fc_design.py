@@ -3,8 +3,9 @@
 Sumber isi: scripts/lettering_flowchart.py dan docs/lettering-standard.md (cawangan great-sagan / funny-goldberg, 25 Nov 2026).
 Status alat = keadaan 25 Nov 2026 (bukti: designs/lettering-v1/*, scripts/lettering/*, data/export/setup/*.json).
 
-Guna: python3 scripts/build_fc_design.py <dashboard.html>
-  Kali pertama: tambah butang tab FC, seksyen, CSS dan JS. Seterusnya: ganti jadual antara penanda FC:DESIGN sahaja.
+Guna: python3 scripts/build_fc_design.py <index.html> <folder keluar>
+  Ubah index.html (butang tab FC, rangka seksyen, pautan fc.css / fc.js) dan tulis fc.css + fc.js ke folder keluar.
+  Isi jadual dan gaya dalam fail berasingan kerana stor dashboard menghadkan setiap dokumen kepada 256 KB.
 """
 import html
 import re
@@ -199,36 +200,73 @@ ROWS = [
 ]
 
 
+TONE_LABEL = {"ok": "ada", "warn": "separuh", "bad": "belum"}
+HEAD = [("Sedia ada", "S1–S6 · Lettering P9", ""), ("Cadangan pertama", "4 lapisan · 5 kunci", ""),
+        ("Standard v1", "aliran terkini · 25 Nov", "TERKINI")]
+
+
 def pill(text, tone, cls=""):
-    return f'<span class="pod-pill {cls}" data-tone="{tone}">{E(text)}</span>' if tone else f'<span class="pod-pill {cls}">{E(text)}</span>'
+    t = f' data-tone="{tone}"' if tone else ""
+    return f'<span class="pod-pill {cls}"{t}>{E(text)}</span>'
+
+
+def badge(title):
+    m = re.match(r"(\d+)\.\s*(.*)", title)
+    return (m.group(1), m.group(2)) if m else ("⇄", title)
 
 
 def cell(s):
-    o = ['<div class="fc-head">']
-    if s.get("tag"):
-        o.append(f'<span class="fc-tag">{E(s["tag"])}</span>')
-    if s.get("status"):
-        o.append(f'<span class="pod-pill fc-st">{E(s["status"])}</span>')
-    o.append(f'</div><b class="fc-title">{E(s["title"])}</b>')
+    num, title = badge(s["title"])
+    o = []
+    if s.get("tag") or s.get("status"):
+        o.append('<div class="fc-meta">')
+        if s.get("tag"):
+            o.append(f'<span class="fc-tag">{E(s["tag"])}</span>')
+        if s.get("status"):
+            o.append(f'<span class="fc-st">{E(s["status"])}</span>')
+        o.append("</div>")
+    o.append(f'<div class="fc-title"><span class="fc-num">{E(num)}</span><b>{E(title)}</b></div>')
+    det = []
     if s["body"]:
-        o.append("<ul>" + "".join(f"<li>{E(b)}</li>" for b in s["body"]) + "</ul>")
+        det.append('<ul class="fc-body">' + "".join(f"<li>{E(b)}</li>" for b in s["body"]) + "</ul>")
     if s.get("minis"):
-        o.append('<div class="fc-minis">' + "".join(
+        det.append('<div class="fc-minis">' + "".join(
             f'<div class="fc-mini"><b>{E(h)}</b><span>{E(t)}</span></div>' for h, t in s["minis"]) + "</div>")
-    chips = [f'<span class="pod-pill fc-key">{E(k)}</span>' for k in s.get("keys", [])]
-    chips += [pill("! " + w, "warn", "fc-warn") for w in s.get("warn", [])]
+    chips = [f'<span class="fc-chip fc-key"><i>K</i>{E(k)}</span>' for k in s.get("keys", [])]
+    chips += [f'<span class="fc-chip fc-warn"><i>!</i>{E(w)}</span>' for w in s.get("warn", [])]
     if chips:
-        o.append('<div class="fc-chips">' + "".join(chips) + "</div>")
+        det.append('<div class="fc-chips">' + "".join(chips) + "</div>")
+    if det:
+        o.append('<div class="fc-det">' + "".join(det) + "</div>")
     return "".join(o)
 
 
 def tools(ts):
     return '<ul class="fc-tools">' + "".join(
-        f'<li><b>{E(n)}</b>{f"<span>{E(d)}</span>" if d else ""}{pill(st[0], st[1])}</li>' for n, d, st in ts) + "</ul>"
+        f'<li class="fc-tool" data-tone="{st[1]}"><div class="fc-tool-top"><b>{E(n)}</b>'
+        f'<span class="fc-stat">{E(st[0])}</span></div>{f"<span class=fc-desc>{E(d)}</span>" if d else ""}</li>'
+        for n, d, st in ts) + "</ul>"
+
+
+def summary(i):
+    c = {"ok": 0, "warn": 0, "bad": 0}
+    for row in ROWS:
+        for _, _, st in row[i][1]:
+            c[st[1]] += 1
+    n = sum(c.values())
+    bar = "".join(f'<span data-tone="{k}" style="flex:{v}"></span>' for k, v in c.items() if v)
+    txt = " · ".join(f"{v} {TONE_LABEL[k]}" for k, v in c.items() if v)
+    return (f'<span class="fc-bar" role="img" aria-label="{n} alat: {E(txt)}">{bar}</span>'
+            f'<span class="fc-count">{E(txt)}</span>')
 
 
 def table():
-    head = "".join(f'<th class="{c}">{E(t)}</th><th class="{c} fc-alat">Alat</th>' for t, c in COLS)
+    head = ""
+    for i, ((name, sub, flag), (_, c)) in enumerate(zip(HEAD, COLS)):
+        fl = f'<span class="fc-flag">{E(flag)}</span>' if flag else ""
+        head += (f'<th class="{c}" scope="col"><span class="fc-hname">{E(name)}{fl}</span>'
+                 f'<span class="fc-hsub">{E(sub)}</span></th>'
+                 f'<th class="{c} fc-alat" scope="col"><span class="fc-hname">Alat</span>{summary(i)}</th>')
     body = []
     for row in ROWS:
         tds = "".join(f'<td class="{COLS[i][1]}">{cell(s)}</td><td class="{COLS[i][1]} fc-alat">{tools(t)}</td>'
@@ -238,56 +276,110 @@ def table():
             f'<tbody>{"".join(body)}</tbody></table></div>')
 
 
-START, END = "<!-- FC:DESIGN START -->", "<!-- FC:DESIGN END -->"
+def content():
+    legend = "".join(f'<span><i class="fc-dot" data-tone="{t}"></i>{E(l)}</span>' for t, l in (
+        ("ok", "ada: alat wujud dan dipakai"), ("warn", "separuh siap / sedang diuji"), ("bad", "belum dibina")))
+    legend += ('<span><span class="fc-chip fc-key"><i>K</i>Kunci</span> 5 kunci gaya</span>'
+               '<span><span class="fc-chip fc-warn"><i>!</i>Kelemahan</span> aliran sedia ada</span>')
+    return f"""<div class="fc-intro">
+<h2>Aliran kerja lettering: 3 versi, 9 langkah</h2>
+<p class="fc-how"><b>Cara baca:</b> setiap baris satu langkah (1 → 9). Ke kanan: aliran lama → cadangan → standard terkini. Lajur <b>Alat</b> di sebelah setiap versi menunjukkan alat yang dipakai dan statusnya.</p>
+<p class="pod-muted">Sumber: carta v1 (scripts/lettering_flowchart.py) dan docs/lettering-standard.md, 25 Nov 2026. Standard v1 dipersetujui 25 Nov; belum dibina sepenuhnya. Laluan 3–4 percubaan, F3 ditangguh. Status alat = keadaan 25 Nov 2026.</p>
+</div>
+<div class="fc-bar-top">
+<div class="fc-legend">{legend}</div>
+<div class="fc-mode" role="group" aria-label="Paparan"><button type="button" data-mode="penuh" aria-pressed="true">Penuh</button><button type="button" data-mode="ringkas" aria-pressed="false">Ringkas</button></div>
+</div>
+<div class="fc-frame" data-mode="penuh">{table()}</div>"""
 
-SECTION = f"""<section id="tab-fc" class="pod-tab" role="tabpanel" aria-labelledby="btn-fc" hidden>
+
+SECTION = """<!-- FC:TAB START -->
+<section id="tab-fc" class="pod-tab" role="tabpanel" aria-labelledby="btn-fc" hidden>
 <div class="fc-subbar" role="tablist" aria-label="Sub tab FC">
   <button type="button" class="fc-sub-btn" role="tab" id="btn-fc-design" data-sub="fc-design" aria-controls="fc-design" aria-selected="true">Design</button>
 </div>
-<section id="fc-design" class="pod-section pod-first fc-sub" role="tabpanel" aria-labelledby="btn-fc-design">
-  <h2>Aliran kerja lettering: sedia ada, cadangan pertama, standard v1</h2>
-  <p class="pod-muted">Sumber: carta v1 (scripts/lettering_flowchart.py) dan docs/lettering-standard.md, 25 Nov 2026. Standard v1 dipersetujui pengguna 25 Nov; belum dibina sepenuhnya. Laluan 3–4 percubaan, F3 ditangguh. Status alat = keadaan 25 Nov 2026.</p>
-  <p class="fc-legend"><span>{pill("ada", "ok")} alat wujud dan dipakai</span><span>{pill("sebahagian", "warn")} separuh siap / sedang diuji</span><span>{pill("belum dibina", "bad")} belum wujud</span><span><span class="pod-pill fc-key">Kunci</span> 5 kunci gaya</span><span>{pill("! kelemahan", "warn", "fc-warn")} kelemahan aliran sedia ada</span></p>
-{START}
-{END}
+<section id="fc-design" class="pod-section pod-first fc-sub" role="tabpanel" aria-labelledby="btn-fc-design"><p class="pod-muted">Memuatkan carta…</p></section>
 </section>
-</section>
-"""
+<!-- FC:TAB END -->"""
 
-CSS = """/* FC tab */
+TAB_S, TAB_E = "<!-- FC:TAB START -->", "<!-- FC:TAB END -->"
+CSS_S, CSS_E = "/* FC:CSS START */", "/* FC:CSS END */"
+JS_S, JS_E = "<!-- FC:JS START -->", "<!-- FC:JS END -->"
+
+CSS = """.fc-c1 { --fc-accent: #64748b; } .fc-c2 { --fc-accent: #0d9488; } .fc-c3 { --fc-accent: #6366f1; }
+#tab-fc { --fc-on: #fff; --fc-ok: var(--color-ok, #1a7f37); --fc-warn: var(--color-warn, #9a6700); --fc-bad: var(--color-bad, #cf222e); --fc-key: #2563eb; }
+@media (prefers-color-scheme: dark) { .fc-c1 { --fc-accent: #94a3b8; } .fc-c2 { --fc-accent: #2dd4bf; } .fc-c3 { --fc-accent: #a5b4fc; } #tab-fc { --fc-on: #111; --fc-key: #60a5fa; } }
 .fc-subbar { display: flex; gap: var(--cds-gap-xs); border-bottom: 1px solid var(--color-border-line); }
 .fc-sub-btn { appearance: none; background: none; border: 0; border-bottom: 2px solid transparent; margin-bottom: -1px; padding: 4px var(--cds-pad-md); font: inherit; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); cursor: pointer; }
 .fc-sub-btn[aria-selected="true"] { color: var(--color-fg); border-bottom-color: var(--color-fg); font-weight: var(--cds-font-weight-medium); }
-.fc-sub-btn:focus-visible { outline: 2px solid var(--color-fg); outline-offset: 2px; }
+.fc-sub-btn:focus-visible, .fc-mode button:focus-visible { outline: 2px solid var(--color-fg); outline-offset: 2px; }
 .fc-sub[hidden] { display: none !important; }
-.fc-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
-.fc-wrap { overflow-x: auto; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); }
-.pod .fc-table { min-width: 1500px; table-layout: fixed; }
-.pod .fc-table th { position: static; white-space: normal; border-top: 3px solid var(--fc-accent); color: var(--color-fg); }
-.pod .fc-table th, .pod .fc-table td { width: 21%; }
-.pod .fc-table th.fc-alat, .pod .fc-table td.fc-alat { width: 12.33%; background: var(--color-panel); }
-.pod .fc-table td.fc-alat + td { border-left: 2px solid var(--color-border-line); }
-.fc-c1 { --fc-accent: #64748b; } .fc-c2 { --fc-accent: #0f9488; } .fc-c3 { --fc-accent: #6366f1; }
-.fc-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px; }
-.fc-head:empty { display: none; }
-.fc-tag { font-size: 11px; font-weight: var(--cds-font-weight-medium); letter-spacing: .04em; color: var(--fc-accent); }
-.pod .fc-st { color: var(--fc-accent); border-color: currentColor; font-size: 11px; }
-.fc-title { display: block; margin: 2px 0 4px; }
-.fc-table ul { margin: 0; padding-left: 16px; display: grid; gap: 3px; }
-.fc-minis { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 6px; }
-.fc-mini { border: 1px solid var(--color-border-line); border-left: 3px solid var(--fc-accent); border-radius: var(--cds-radius); padding: 4px 6px; display: grid; gap: 2px; }
+.fc-intro { display: grid; gap: 6px; max-width: 900px; }
+.fc-intro h2 { margin: 0; }
+.fc-how { margin: 0; padding: 8px 12px; border-left: 3px solid var(--fc-key); background: color-mix(in srgb, var(--fc-key) 7%, transparent); border-radius: 0 var(--cds-radius) var(--cds-radius) 0; }
+.fc-bar-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; margin: 12px 0 8px; }
+.fc-legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.fc-legend > span { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+.fc-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.fc-dot[data-tone="ok"], .fc-bar [data-tone="ok"] { background: var(--fc-ok); }
+.fc-dot[data-tone="warn"], .fc-bar [data-tone="warn"] { background: var(--fc-warn); }
+.fc-dot[data-tone="bad"], .fc-bar [data-tone="bad"] { background: var(--fc-bad); }
+.fc-mode { display: inline-flex; border: 1px solid var(--color-border-line); border-radius: 999px; padding: 2px; }
+.fc-mode button { appearance: none; border: 0; background: none; font: inherit; font-size: var(--cds-font-size-caption); padding: 3px 14px; border-radius: 999px; color: var(--color-fg-muted); cursor: pointer; }
+.fc-mode button[aria-pressed="true"] { background: var(--color-fg); color: var(--color-bg); }
+.fc-wrap { overflow: auto; border: 1px solid var(--color-border-line); border-radius: calc(var(--cds-radius) * 1.5); }
+@media (min-width: 700px) { .fc-wrap { max-height: 82vh; } }
+.fc-sub, .fc-frame, .fc-wrap, .fc-intro, .fc-bar-top { min-width: 0; max-width: 100%; }
+.pod .fc-table { min-width: 1560px; table-layout: fixed; border-collapse: separate; border-spacing: 0; font-size: var(--cds-font-size-caption); }
+.pod .fc-table th, .pod .fc-table td { width: 19%; padding: 12px; border-bottom: 1px solid var(--color-border-line); vertical-align: top; }
+.pod .fc-table .fc-alat { width: 14.33%; }
+.pod .fc-table th { position: sticky; top: 0; z-index: 2; white-space: normal; color: var(--color-fg); border-top: 4px solid var(--fc-accent); border-bottom: 1px solid var(--color-border-line);
+  background: linear-gradient(color-mix(in srgb, var(--fc-accent) 16%, transparent), color-mix(in srgb, var(--fc-accent) 16%, transparent)) var(--color-bg); }
+.pod .fc-table td { background: var(--color-bg); }
+.pod .fc-table td.fc-alat { background: color-mix(in srgb, var(--fc-accent) 7%, var(--color-bg)); }
+.pod .fc-table th.fc-c2:not(.fc-alat), .pod .fc-table th.fc-c3:not(.fc-alat), .pod .fc-table td.fc-c2:not(.fc-alat), .pod .fc-table td.fc-c3:not(.fc-alat) { border-left: 6px solid var(--color-panel); }
+.pod .fc-table tbody tr:hover td { background: color-mix(in srgb, var(--fc-accent) 5%, var(--color-bg)); }
+.pod .fc-table tbody tr:hover td.fc-alat { background: color-mix(in srgb, var(--fc-accent) 12%, var(--color-bg)); }
+.pod .fc-table tbody tr:last-child td { border-bottom: 0; border-top: 2px dashed var(--color-border-line); }
+.fc-hname { display: flex; align-items: center; gap: 8px; font-size: var(--cds-font-size-body); font-weight: var(--cds-font-weight-medium); }
+.fc-hsub { display: block; color: var(--color-fg-muted); font-weight: 400; margin-top: 2px; }
+.fc-flag { font-size: 10px; letter-spacing: .06em; padding: 1px 7px; border-radius: 999px; background: var(--fc-accent); color: var(--fc-on); }
+.fc-bar { display: flex; height: 6px; border-radius: 3px; overflow: hidden; margin: 8px 0 4px; gap: 2px; }
+.fc-count { display: block; color: var(--color-fg-muted); font-weight: 400; font-size: 11px; }
+.fc-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 6px; }
+.fc-tag { font-size: 10px; font-weight: var(--cds-font-weight-medium); letter-spacing: .06em; color: var(--fc-accent); }
+.fc-st { font-size: 10px; letter-spacing: .04em; padding: 1px 7px; border-radius: 999px; border: 1px solid var(--fc-accent); color: var(--fc-accent); }
+.fc-title { display: flex; align-items: center; gap: 8px; font-size: var(--cds-font-size-body); line-height: 1.3; }
+.fc-num { flex: none; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; background: var(--fc-accent); color: var(--fc-on); font-size: 13px; font-weight: 700; }
+.fc-det { display: grid; gap: 8px; margin-top: 8px; }
+.pod .fc-table ul.fc-body { list-style: none; margin: 0; padding: 0; display: grid; gap: 5px; line-height: 1.45; }
+.fc-body li { position: relative; padding-left: 14px; }
+.fc-body li::before { content: ""; position: absolute; left: 2px; top: .55em; width: 5px; height: 5px; border-radius: 50%; background: var(--fc-accent); }
+.fc-minis { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.fc-mini { border-radius: var(--cds-radius); padding: 6px 8px; display: grid; gap: 2px; background: color-mix(in srgb, var(--fc-accent) 9%, transparent); line-height: 1.35; }
 .fc-mini b { color: var(--fc-accent); }
-.fc-chips { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
-.pod .fc-chips .pod-pill { white-space: normal; border-radius: 10px; }
-.fc-legend > span { white-space: nowrap; }
-.pod .fc-key { color: #3b82f6; border-color: currentColor; }
-.pod .fc-table .fc-tools { list-style: none; padding: 0; gap: 6px; }
-.fc-tools li { display: grid; gap: 1px; justify-items: start; }
-.fc-tools span:not(.pod-pill) { color: var(--color-fg-muted); }
+.fc-chips { display: flex; flex-wrap: wrap; gap: 5px; }
+.fc-chip { display: inline-flex; align-items: flex-start; gap: 6px; padding: 3px 9px 3px 3px; border-radius: 12px; font-size: 12px; line-height: 1.4; }
+.fc-chip i { flex: none; font-style: normal; font-weight: 700; font-size: 10px; width: 16px; height: 16px; border-radius: 50%; display: grid; place-items: center; margin-top: 1px; }
+.fc-key { background: color-mix(in srgb, var(--fc-key) 12%, transparent); color: var(--fc-key); }
+.fc-key i { background: var(--fc-key); color: var(--fc-on); }
+.fc-warn { background: color-mix(in srgb, var(--fc-warn) 14%, transparent); color: var(--fc-warn); }
+.fc-warn i { background: var(--fc-warn); color: var(--fc-on); }
+.pod .fc-table ul.fc-tools { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.fc-tool { --t: var(--fc-ok); background: var(--color-bg); border: 1px solid var(--color-border-line); border-left: 4px solid var(--t); border-radius: var(--cds-radius); padding: 6px 8px; display: grid; gap: 2px; line-height: 1.35; }
+.fc-tool[data-tone="warn"] { --t: var(--fc-warn); } .fc-tool[data-tone="bad"] { --t: var(--fc-bad); }
+.fc-tool-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 6px; }
+.fc-tool-top b { overflow-wrap: anywhere; }
+.fc-stat { flex: none; font-size: 10px; font-weight: var(--cds-font-weight-medium); color: var(--t); white-space: nowrap; }
+.fc-stat::before { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--t); margin-right: 4px; vertical-align: 1px; }
+.fc-desc { color: var(--color-fg-muted); }
+.fc-frame[data-mode="ringkas"] .fc-det, .fc-frame[data-mode="ringkas"] .fc-desc { display: none; }
+.pod .fc-frame[data-mode="ringkas"] .fc-table { min-width: 1150px; }
 """
 
-JS = """<script>
-(() => {
+JS = """(() => {
+  const box = document.getElementById('fc-design');
+  if (box) box.innerHTML = HTML;
   const btns = [...document.querySelectorAll('.fc-sub-btn')];
   const open = (id) => btns.forEach((b) => {
     const on = b.dataset.sub === id;
@@ -295,30 +387,77 @@ JS = """<script>
     const p = document.getElementById(b.dataset.sub); if (p) p.hidden = !on;
   });
   btns.forEach((b) => b.addEventListener('click', () => open(b.dataset.sub)));
+  const frame = document.querySelector('#tab-fc .fc-frame');
+  const mb = [...document.querySelectorAll('#tab-fc .fc-mode button')];
+  const setMode = (m) => {
+    if (!frame) return;
+    frame.dataset.mode = m;
+    mb.forEach((b) => b.setAttribute('aria-pressed', b.dataset.mode === m ? 'true' : 'false'));
+    try { localStorage.setItem('fc-mode', m); } catch (e) {}
+  };
+  mb.forEach((b) => b.addEventListener('click', () => setMode(b.dataset.mode)));
+  try { const m = localStorage.getItem('fc-mode'); if (m === 'ringkas' || m === 'penuh') setMode(m); } catch (e) {}
 })();
-</script>
 """
+
+LINK = '<link rel="stylesheet" href="fc.css">'
+SCRIPT = JS_S + '\n<script src="fc.js"></script>\n' + JS_E
 
 BTN = ('    <button type="button" class="pod-tab-btn" role="tab" id="btn-fc" data-tab="tab-fc" aria-controls="tab-fc" '
        'aria-selected="false" tabindex="-1">FC</button>\n')
 
+# Blok versi pertama (26 Nov) tanpa penanda: dikenal dan diganti sekali.
+OLD_CSS = re.compile(r"/\* FC tab \*/.*?(?=</style>)", re.S)
+OLD_TAB = re.compile(r'<section id="tab-fc".*?<!-- FC:DESIGN END -->\n</section>\n</section>\n', re.S)
+OLD_JS = re.compile(r"<script>\n\(\(\) => \{\n  const btns = \[\.\.\.document\.querySelectorAll\('\.fc-sub-btn'\)\];.*?</script>\n", re.S)
 
-def main(path):
+
+def put(s, a, b, new, old=None, insert=None):
+    """Ganti blok antara penanda a..b; jika tiada, ganti blok lama (old) atau sisip (insert(s, new))."""
+    if a in s:
+        return re.sub(re.escape(a) + ".*?" + re.escape(b), lambda m: new, s, count=1, flags=re.S)
+    if old and old.search(s):
+        return old.sub(lambda m: new + "\n", s, count=1)
+    return insert(s, new)
+
+
+def ins_before(anchor):
+    def f(s, new):
+        a = s.index(anchor)
+        return s[:a] + new + "\n" + s[a:]
+    return f
+
+
+def ins_after_last_script(s, new):
+    a = s.rindex("</script>") + len("</script>")
+    return s[:a] + "\n" + new + s[a:]
+
+
+def main(path, out):
+    import json
+    import os
     s = open(path, encoding="utf-8").read()
-    if START not in s:
+    if 'id="btn-fc"' not in s:
         a = s.index('data-tab="tab-daftar"')
         a = s.index("\n", a) + 1
         s = s[:a] + BTN + s[a:]
-        s = s.replace("#tab-aliran, #tab-daftar { break-before", "#tab-aliran, #tab-daftar, #tab-fc { break-before", 1)
-        s = s.replace("</style>", CSS + "</style>", 1)
-        a = s.index("</div>\n\n<script>\nwindow.POD = window.POD || {};")
-        s = s[:a] + SECTION + "\n" + s[a:]
-        a = s.rindex("</script>") + len("</script>")
-        s = s[:a] + "\n" + JS + s[a:]
-    s = re.sub(re.escape(START) + ".*?" + re.escape(END), lambda m: START + "\n" + table() + "\n" + END, s, flags=re.S)
+    if "#tab-fc { break-before" not in s and "#tab-fc," not in s:
+        s = s.replace("#tab-daftar { break-before", "#tab-daftar, #tab-fc { break-before", 1)
+    s = OLD_CSS.sub("", s, count=1)
+    s = re.sub(re.escape(CSS_S) + ".*?" + re.escape(CSS_E) + "\n?", "", s, count=1, flags=re.S)
+    if LINK not in s:
+        a = s.index('<link rel="stylesheet"')
+        s = s[:a] + LINK + "\n" + s[a:]
+    s = put(s, TAB_S, TAB_E, SECTION, OLD_TAB, ins_before("</div>\n\n<script>\nwindow.POD = window.POD || {};"))
+    s = put(s, JS_S, JS_E, SCRIPT, OLD_JS, ins_after_last_script)
     open(path, "w", encoding="utf-8").write(s)
-    print(f"ok: {path}, {len(ROWS)} baris x 6 lajur")
+    os.makedirs(out, exist_ok=True)
+    open(os.path.join(out, "fc.css"), "w", encoding="utf-8").write(CSS)
+    open(os.path.join(out, "fc.js"), "w", encoding="utf-8").write(
+        "/* Dijana oleh scripts/build_fc_design.py; jangan ubah secara manual. */\n(() => {\nconst HTML = "
+        + json.dumps(content(), ensure_ascii=False) + ";\n" + JS.split("\n", 1)[1])
+    print(f"ok: {path} ({len(s.encode())} bait), fc.css, fc.js; {len(ROWS)} baris x 6 lajur")
 
 
 if __name__ == "__main__":
-    main(sys.argv[1])
+    main(sys.argv[1], sys.argv[2])
