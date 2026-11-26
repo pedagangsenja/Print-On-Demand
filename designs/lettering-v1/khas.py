@@ -1,4 +1,5 @@
-"""Percubaan (bukan Standard v1): satu prompt khas bagi setiap model, kad K3 x ayat H, hitam putih.
+"""Contoh tulisan tangan bagi aturan prompt ikut model (Standard Lettering v1.2, langkah 3.4-3.7, rev r1):
+satu prompt khas bagi setiap model, kad K3 x ayat H, hitam putih. Pembina kod belum dibina.
 
 Tujuan: uji sama ada prompt yang ditulis ikut panduan setiap model memberi hasil lebih baik daripada
 satu prompt sama (kad.bina). Ditulis tangan oleh Claude 26 Nov 2026 daripada kajian online:
