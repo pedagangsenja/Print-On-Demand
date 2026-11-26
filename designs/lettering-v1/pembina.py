@@ -7,6 +7,7 @@ Model: klein4b, zturbo, ernie (prompt mentah untuk PE), moss, klein3, qwen, glm.
 Guna: python3 pembina.py                 -> semak semua kad x ayat x model (3.11)
       python3 pembina.py K3H klein4b     -> cetak satu prompt
       python3 pembina.py --banding       -> banding K3H dengan contoh tulisan tangan khas.py
+      python3 pembina.py --daftar        -> daftar aturan setiap model (bahagian standard, rev, status, sumber)
 """
 import difflib
 import json
@@ -16,7 +17,27 @@ import sys
 import kad
 
 VERSI = "v1.2-p1"
-REV = {"klein4b": "r1", "zturbo": "r1", "ernie": "r1", "moss": "r1", "klein3": "r0", "qwen": "r0", "glm": "r0"}
+# Daftar aturan model (standard 3.12). Setiap model ada SATU baris di sini, SATU fungsi aturan di bawah dan SATU
+# bahagian 3.x dalam docs/lettering-standard.md. Model baharu: ikut "Kaedah model baharu" (3.12), kemudian tambah
+# baris + fungsi + bahagian. Model yang belum ada baris memakai rangka am (kad.bina) dan ditanda "am".
+# rev r0 = ditulis daripada sumber sahaja, belum diuji; r1+ = sudah diuji pada imej.
+DAFTAR = {
+    "klein4b": dict(nama="FLUX.2 klein 4B", bahagian="3.4", rev="r1", tarikh="2026-11-26",
+                    status="diuji: K3H, CPU, 3 seed", sumber="kad model BFL (rasmi); panduan BFL (lemah)"),
+    "zturbo": dict(nama="Z-Image Turbo", bahagian="3.5", rev="r1", tarikh="2026-11-26",
+                   status="diuji: K3H, CPU, 3 seed", sumber="pasukan Z-Image di Hugging Face + pe.py (rasmi)"),
+    "ernie": dict(nama="ERNIE-Image-Turbo", bahagian="3.6", rev="r1", tarikh="2026-11-26",
+                  status="diuji: K3H, CPU, 3 seed", sumber="dokumen diffusers + kad model (rasmi)"),
+    "moss": dict(nama="MOSS-Image SFT + LoRA 8 langkah", bahagian="3.7", rev="r1", tarikh="2026-11-26",
+                 status="diuji: K3H, CPU, 3 seed", sumber="kad model + panduan MOSS (rasmi); kad LoRA (pihak ketiga)"),
+    "klein3": dict(nama="FLUX 3 Image Klein", bahagian="3.8", rev="r0", tarikh="2026-11-26",
+                   status="belum diuji", sumber="kad model + system_prompts.json (rasmi)"),
+    "qwen": dict(nama="Qwen-Image-2512", bahagian="3.9", rev="r0", tarikh="2026-11-26",
+                 status="belum diuji", sumber="kad model + prompt_utils.py (rasmi)"),
+    "glm": dict(nama="GLM-Image", bahagian="3.10", rev="r0", tarikh="2026-11-26",
+                status="belum diuji", sumber="kad model + prompt_utils.py (rasmi)"),
+}
+REV = {k: v["rev"] for k, v in DAFTAR.items()}
 MODEL = list(REV)
 W, H = 768, 1024
 SATU = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"]
@@ -386,9 +407,17 @@ ATURAN = dict(klein4b=klein4b, zturbo=zturbo, ernie=ernie, moss=moss, klein3=kle
 
 
 def bina(model, kid, aid):
-    """Prompt bagi satu model x kad x ayat. Pulang (prompt, petikan Spesifikasi Teks)."""
+    """Prompt bagi satu model x kad x ayat. Pulang (prompt, petikan Spesifikasi Teks).
+    Model tanpa aturan sendiri (tiada dalam DAFTAR): rangka am 3.3 (kad.bina), sehingga aturannya ditulis (3.12)."""
+    if model not in ATURAN:
+        return kad.bina(kid, aid)
     m = bahan(kid, aid)
     return ATURAN[model](m), m["petikan"]
+
+
+def rev(model):
+    """Rev aturan yang dipakai; 'am' = model belum ada aturan sendiri."""
+    return REV.get(model, "am")
 
 
 # ---------- 3.11 Semakan automatik sebelum jana ----------
@@ -411,6 +440,9 @@ def _sejagat(teks, err):
 
 def semak(model, kid, aid, prompt=None):
     """Senarai ralat; kosong = lulus. Prompt yang gagal TIDAK dijana."""
+    if model not in ATURAN:  # rangka am: semakan pembina v1.1
+        pr, q = kad.bina(kid, aid)
+        return kad.semak(prompt if prompt is not None else pr, q, kad.AYAT[aid]["ayat"])
     m = bahan(kid, aid)
     spec, err = m["petikan"], []
     p = prompt if prompt is not None else ATURAN[model](m)
@@ -548,9 +580,12 @@ def banding():
 if __name__ == "__main__":
     if len(sys.argv) == 1:
         sys.exit(1 if semua() else 0)
-    if sys.argv[1] == "--banding":
+    if sys.argv[1] == "--daftar":
+        for k, d in DAFTAR.items():
+            print(f"{k:8} {d['bahagian']:5} {d['rev']:3} {d['nama']:32} {d['status']:26} {d['sumber']}")
+    elif sys.argv[1] == "--banding":
         banding()
     else:
         kid, aid = sys.argv[1][:-1], sys.argv[1][-1]
         for model in sys.argv[2:] or MODEL:
-            print(f"--- {model} ({REV[model]}) semak: {semak(model, kid, aid) or 'lulus'}\n{bina(model, kid, aid)[0]}\n")
+            print(f"--- {model} ({rev(model)}) semak: {semak(model, kid, aid) or 'lulus'}\n{bina(model, kid, aid)[0]}\n")

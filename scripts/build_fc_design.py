@@ -1,7 +1,7 @@
 """Tab FC > Design dalam dashboard: carta aliran lettering v1.2 (9 langkah x 3 lajur) + lajur Alat bagi setiap lajur.
 
 Sumber isi: scripts/lettering_flowchart.py dan docs/lettering-standard.md (v1: 25 Nov 2026; lajur ketiga dikemas kini ke v1.2, 26 Nov 2026).
-Status alat = keadaan 25 Nov 2026 (bukti: designs/lettering-v1/*, scripts/lettering/*, data/export/setup/*.json).
+Status alat = keadaan 26 Nov 2026 (bukti: designs/lettering-v1/*, scripts/lettering/*, data/export/setup/*.json).
 
 Guna: python3 scripts/build_fc_design.py <index.html> <folder keluar>
   Ubah index.html (butang tab FC, rangka seksyen, pautan fc.css / fc.js) dan tulis fc.css + fc.js ke folder keluar.
@@ -85,7 +85,9 @@ ROWS = [
                  "Hitam putih sahaja; tiada negative prompt; tiada nama warna, hex, nombor atau nama font",
                  "Semak automatik sebelum jana; prompt yang gagal tidak dijana",
                  "Aturan diubah hanya melalui kitaran QC, satu ubahan setiap pusingan; direkod dalam Catatan pembaikan",
-                 "Bukti lemah (K3 × 1 ayat × 3 seed, 26 Nov): ejaan betul 6/12 dengan rangka am, 11/12 dengan aturan model"],
+                 "Bukti lemah (K3 × 1 ayat × 3 seed, 26 Nov): ejaan betul 6/12 dengan rangka am, 11/12 dengan aturan model",
+                 "Kaedah model baharu (3.12): kaji sumber rasmi → jawab borang 10 soalan → tulis aturan r0 → simpan untuk model itu sahaja → ujian kelayakan",
+                 "Setiap model ada standard prompt sendiri dalam daftar aturan; model belum berdaftar memakai rangka am (rev am)"],
            minis=[("klein 4B", "Satu perenggan prosa; satu ayat setiap baris; gaya ditulis terus selepas perkataan; had dalam satu ayat di hujung"),
                   ("Z-Image Turbo", "Huraian panjang seperti kapsyen; baris bernombor; had ditulis sebagai ayat positif"),
                   ("ERNIE Turbo", "Prompt mentah pendek + penambah prompt rasmi sekali (seed 42); hasil disemak sebelum jana"),
@@ -94,8 +96,10 @@ ROWS = [
                   ("Qwen-Image-2512 (r0, belum diuji)", "Kurang 200 perkataan; setiap baris = kedudukan, perkataan dalam petikan, gaya"),
                   ("GLM-Image (r0, belum diuji)", "Naratif bersambung tanpa senarai; setiap baris = kedudukan, fungsi, perkataan dalam petikan, gaya font")]),
       [("kad.py: bina() + semak() (Python)", "rangka am hitam putih (v1.1) + semakan automatik", PART),
-       ("khas.py (Python)", "7 aturan sebagai contoh tulisan tangan (K3 × ayat H); 4 sudah dijana", PART),
-       ("Pembina kod ikut model", "jana prompt setiap model daripada kad (v1.2)", NO),
+       ("khas.py (Python)", "7 aturan sebagai contoh tulisan tangan (K3 × ayat H); rekod ujian pertama sahaja", PART),
+       ("pembina.py (Python)", "prompt 7 model daripada kad + semakan 3.11; 210 prompt lulus semakan; belum dibuktikan pada imej", PART),
+       ("pembina.py --daftar", "daftar aturan setiap model: bahagian standard, rev, status, sumber", OK),
+       ("Borang 10 soalan model baharu", "standard 3.12; aturan baharu disimpan di 3.14", OK),
        ("gen.py: PROFIL", "profil setiap model dikunci", PART)])),
 
     ((dict(title="4. Jana", body=["MOSS SFT + LoRA 8 langkah", "Text-to-image penuh, 768×1024", "2 seed (CPU)"],
@@ -118,9 +122,13 @@ ROWS = [
                  "Tidak dipilih: FLUX.1 schnell (3/30 ejaan betul), Chroma1-Flash (0/6); simpanan: Ovis-Image-7B",
                  "Seed tetap 42, 7, 123, 2024: laluan 1 = 2 seed, laluan 2 = 3–4",
                  "Satu model besar pada satu masa; semak RAM dan disk dahulu",
-                 "Log lengkap setiap imej; imej mentah disimpan sebelum sesi tamat"],
+                 "Log lengkap setiap imej; imej mentah disimpan sebelum sesi tamat",
+                 "Peraturan langkau (26 Nov): turutan MOSS → ERNIE → Z-Image → klein 4B; model terlalu lama atau gagal 3 cubaan dilangkau, model seterusnya terus jalan",
+                 "Terlalu lama = lebih 20 minit muat turun + 13 minit setiap imej (cadangan, menunggu pengesahan anda)",
+                 "Setiap langkau direkod (langkau.jsonl) dan dilaporkan dalam chat; langkau bukan gagal QC"],
            keys=["Kunci 3: model hanya untuk gaya yang ia lulus"]),
       [("gen_moss.py", "MOSS SFT + LoRA", OK),
+       ("run_v12.sh", "jana ikut pembina, satu model satu masa, dengan langkau; logik diuji tanpa jana", PART),
        ("gen.py", "ERNIE, klein 4B, Z-Image, schnell, Chroma, Kandinsky", OK),
        ("run_k6.py", "ujian 6 enjin, satu demi satu", OK), ("Kaggle GPU (GEN_DEVICE)", "banding CPU vs GPU", GPU),
        ("gen_hf_space.py", "profil Space untuk FLUX 3 Klein, Qwen-Image-2512, GLM-Image", NO)])),
@@ -144,10 +152,13 @@ ROWS = [
                  "Cacat sama pada 2 daripada 3 seed = reka semula prompt model itu, satu ubahan setiap pusingan, seed sama",
                  "Had 2 pusingan → tukar model → pendekkan ayat → lapor; pembaikan berjaya ditulis balik ke aturan model",
                  "5b Pembetulan skrip (v1.2), selepas 3 pintu lulus: condong, ruang tepi, kedudukan, hitam putih bersih",
-                 "5b hanya jalan bila ukuran tersasar daripada ukuran rujukan kad; ejaan dan bentuk huruf mesti jana semula"],
+                 "5b hanya jalan bila ukuran tersasar daripada ukuran rujukan kad; ejaan dan bentuk huruf mesti jana semula",
+                 "Daftar skrip (26 Nov): SK01 condong, SK02 ruang tepi, SK03 kedudukan, SK04 hitam putih bersih, SK05 ukuran rujukan, SK06 finish.py, SK07 warna, SK08 bayang",
+                 "Skrip baharu: bila gambar upload ada ciri yang tiada skrip → tulis, simpan di skrip/<ID>_<nama>.py, uji pada imej sedia ada, daftar, kemas kini standard + dashboard, beritahu anda"],
            keys=["Kunci 2: QC sama untuk semua model", "Kunci 5: kitaran QC tetap; pembetulan skrip bila perlu sahaja"]),
       [("Claude + helaian semakan", "3 pintu, ciri kad ≥ 7/8", OK),
-       ("Skrip pembetulan 5b (Python)", "ukur, betulkan, ukur semula; had toleransi belum ditetapkan", NO),
+       ("Skrip pembetulan 5b: SK01–SK04 (Python)", "ukur, betulkan, ukur semula; had toleransi belum ditetapkan", NO),
+       ("Daftar skrip + kaedah skrip baharu", "dalam standard, selepas langkah 6", OK),
        ("RapidOCR", "hanya menanda (skor 0.33–0.88 pada ejaan betul)", TESTED),
        ("qc/<model>.json", "rekod QC setiap imej", PART)])),
 
@@ -222,9 +233,10 @@ ROWS = [
                                       "Setiap gaya × ayat pendek dan sederhana × 2 seed.",
                                       "Lulus: ≥ 90% imej ejaan betul, gaya ≥ 7/8, tiada teks liar."]),
       [("Jadual model × gaya", "", NO)]),
-     (dict(title="Tukar model", body=["Standard v1.2 (v1 dipersetujui 25 Nov; v1.2 diluluskan pengguna 26 Nov): laluan 1–2, kemasan F1–F2. Belum dibina sepenuhnya.",
+     (dict(title="Tukar model", body=["Standard v1.2 (v1 dipersetujui 25 Nov; v1.2 diluluskan pengguna 26 Nov): laluan 1–2, kemasan F1–F2. Sebahagian dibina: pembina prompt siap, skrip pembetulan belum.",
                                       "Ujian kelayakan seperti cadangan, sah untuk gabungan tetapan yang dikunci sahaja.",
-                                      "Model baharu perlu aturan prompt sendiri, diuji banding dengan rangka am pada seed 42, 7, 123.",
+                                      "Model baharu perlu aturan prompt sendiri: ikut Kaedah model baharu (3.12), kemudian diuji banding dengan rangka am pada seed 42, 7, 123.",
+                                      "Model terlalu lama atau bermasalah semasa jana: langkau, jalankan model seterusnya, lapor dalam chat.",
                                       "Menunggu ujian kelayakan: FLUX 3 Image Klein, Qwen-Image-2512, GLM-Image (aturan r0).",
                                       "Tahap bukti angka: lemah."]),
       [("gen.py + run_k6.py", "ujian kelayakan setiap enjin", OK),
@@ -343,7 +355,7 @@ def content():
 <h2>Aliran kerja lettering: 3 versi, 9 langkah</h2>
 <p class="fc-how"><b>Cara baca:</b> setiap baris satu langkah (1 → 9). Ke kanan: aliran lama → cadangan → standard terkini. Lajur <b>Alat</b> di sebelah setiap versi menunjukkan alat yang dipakai dan statusnya. Poin bertanda <b class="fc-t-s">oren</b> = susunan, <b class="fc-t-w">merah jambu</b> = warna.</p>
 {focus}
-<p class="pod-muted">Sumber: carta v1 (scripts/lettering_flowchart.py) dan docs/lettering-standard.md. Standard v1 dipersetujui 25 Nov 2026; v1.2 diluluskan pengguna 26 Nov 2026 (aturan prompt untuk 7 model, kitaran QC, ukuran rujukan, pembetulan skrip); belum dibina sepenuhnya. Laluan 3–4 percubaan, F3 ditangguh. Status alat = keadaan 26 Nov 2026.</p>
+<p class="pod-muted">Sumber: carta v1 (scripts/lettering_flowchart.py) dan docs/lettering-standard.md. Standard v1 dipersetujui 25 Nov 2026; v1.2 diluluskan pengguna 26 Nov 2026 (aturan prompt untuk 7 model, kitaran QC, ukuran rujukan, pembetulan skrip, kaedah model baharu, daftar skrip, peraturan langkau); sebahagian dibina. Laluan 3–4 percubaan, F3 ditangguh. Status alat = keadaan 26 Nov 2026.</p>
 </div>
 <div class="fc-bar-top">
 <div class="fc-legend">{legend}</div>

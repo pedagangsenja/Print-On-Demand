@@ -8,6 +8,9 @@ Status: v1 dipersetujui pengguna 25 Nov 2026; v1.2 diluluskan pengguna sebagai s
 3. **Ukuran rujukan dalam Kad** (langkah 1): angka diukur daripada gambar upload, bukan diteka.
 4. **Pembetulan selepas jana oleh skrip** (langkah 5b): ruang tepi, kedudukan, condong, hitam putih bersih; hanya bila ukuran tersasar.
 5. **Mata pengguna pintu terakhir** (langkah 7): imej yang lulus QC tetapi nampak buruk = gagal; sebabnya masuk Kad.
+6. **Kaedah model baharu** (3.12, arahan pengguna 26 Nov 2026): model yang belum ada aturan dikaji dahulu ikut borang 10 soalan; aturannya ditulis dan disimpan untuk model itu sahaja, supaya setiap model ada standard prompt sendiri.
+7. **Daftar skrip dan kaedah skrip baharu** (selepas langkah 6, arahan pengguna 26 Nov 2026): empat skrip pembetulan + skrip kemasan didaftar; skrip baharu dibina bila gambar upload memerlukannya, kemudian disimpan, didaftar dan dimasukkan ke dashboard.
+8. **Peraturan langkau model** (langkah 4, arahan pengguna 26 Nov 2026): model yang terlalu lama atau bermasalah dilangkau, model seterusnya dijalankan, dan hal itu dilaporkan dalam chat.
 
 Yang kekal daripada v1: hitam putih dahulu dan warna oleh skrip; pintu G1–G3; seed tetap; Kad Gaya satu-satunya sumber gaya; 768×1024.
 Bukti, ukuran dan sebab setiap peraturan: `docs/lettering-standard-handover.md` (tahap bukti angka: lemah, kecuali lesen: rasmi). Carta 3 lajur: `docs/lettering-aliran.png` (`scripts/lettering_flowchart.py`).
@@ -252,10 +255,52 @@ Prompt yang gagal mana-mana semakan TIDAK dijana.
 - GLM-Image: satu perenggan; tiada senarai, nombor baris atau tajuk; tiada petikan selain perkataan Spesifikasi Teks; lebar dan tinggi boleh dibahagi 32.
 - MOSS: JSON sah; kunci wajib ada; setiap `bbox` di dalam kanvas dan y_atas < y_bawah, x_kiri < x_kanan; bilangan butir teks sama dengan bilangan baris.
 
-### 3.12 Menambah atau mengubah aturan model
-- **Model baharu:** (1) baca kad model rasmi dan panduan prompt rasminya; (2) catat sumber dan tahap bukti; (3) tulis aturan dengan tujuh medan yang sama seperti 3.4–3.10: sumber, bentuk, turutan, cara tulis teks dan gaya, cara tulis had, tetapan, cacat diketahui; (4) uji banding rangka am lawan aturan baharu: kad sama, ayat sama, seed 42, 7, 123; (5) aturan diterima jika bilangan imej lulus tidak kurang daripada rangka am.
-- **Mengubah aturan sedia ada:** hanya melalui kitaran QC (langkah 5), SATU ubahan setiap pusingan. Setiap ubahan, berjaya atau tidak, direkod dalam "Catatan pembaikan aturan model" di hujung dokumen ini; ubahan yang berjaya menaikkan rev aturan (r1 → r2).
-- **Rekod bersama setiap imej:** prompt, model, rev aturan, versi kad, versi pembina.
+### 3.12 Kaedah model baharu, dan mengubah aturan model (arahan pengguna 26 Nov 2026)
+**Tujuan:** setiap model ada standard prompt sendiri. Bila model itu dipakai semula kelak, aturannya sudah ada dan tidak perlu dikaji lagi.
+
+**Bila dipakai:** model tiada dalam daftar aturan (`python3 pembina.py --daftar`). Sehingga aturannya siap, model itu memakai rangka am (3.3) dan direkod sebagai rev `am`.
+
+**A. Kaji sumber, ikut keutamaan:**
+1. Kad model rasmi.
+2. Repo rasmi pembuat: panduan prompt, skrip atau arahan penambah prompt (system prompt), contoh prompt.
+3. Dokumen pipeline (diffusers) dan kod Space rasmi: tetapan lalai, penambah prompt hidup atau mati.
+4. Perbincangan pasukan pembuat (Hugging Face, GitHub).
+5. Pihak ketiga: hanya jika 1–4 tiada; ditanda bukti lemah.
+
+Sumber yang tidak dapat dibuka dicatat. Tiada jawapan rasmi = tulis "tiada sumber rasmi"; jangan teka.
+
+**B. Borang 10 soalan (dijawab dengan petikan sumber):**
+
+| # | Soalan | Menentukan |
+|---|---|---|
+| 1 | Pengekod teks apa, dan berapa had token? | Panjang prompt |
+| 2 | Bentuk prompt yang dilatih atau dianjurkan: prosa, kapsyen panjang, kata kunci, JSON, kotak? | Bentuk |
+| 3 | Bagaimana teks yang dilukis ditulis (petikan, medan khas)? Ada contoh rasmi poster atau teks? | Cara tulis teks dan gaya |
+| 4 | Ada penambah prompt rasmi? Hidup secara lalai? Hasilnya boleh disemak sebelum jana? | Hidup, mati, atau dua peringkat |
+| 5 | Model suling atau memakai CFG? Negative prompt dibaca? | Cara tulis had |
+| 6 | Sokong susun atur: kotak, koordinat, gambar rujukan? | Kotak daripada ukuran kad |
+| 7 | Tetapan rasmi: langkah, guidance, syarat resolusi | Profil dikunci |
+| 8 | Saiz fail dan RAM; boleh jalan di CPU atau perlu Space? Masa setiap imej? | Tempat jalan, had masa langkau |
+| 9 | Lesen untuk hasil komersial | Boleh dipakai atau tidak |
+| 10 | Kelemahan diketahui (kad model, ujian orang lain) | Cacat diketahui |
+
+**C. Tulis aturan (rev r0)** dengan tujuh medan yang sama seperti 3.4–3.10: sumber, bentuk, turutan ayat, cara tulis teks dan gaya, cara tulis had, tetapan, cacat diketahui. Aturan mesti memuatkan kesemua lapan blok isi (3.2) dan mematuhi peraturan sejagat.
+
+**D. Simpan untuk model itu SAHAJA** (aturan model lain tidak disentuh):
+1. Bahagian baharu dalam dokumen ini, di bawah "3.14 Aturan model tambahan" (3.14.1, 3.14.2, …), bersama jawapan borang.
+2. `pembina.py`: satu baris dalam `DAFTAR`, satu fungsi aturan, dan semakan khusus model itu dalam `semak` (3.11).
+3. Profil dikunci dalam `gen.py` (`PROFIL`) atau `gen_hf_space.py`, dan satu baris dalam jadual profil langkah 4.
+4. Dashboard: tab FC › Design (langkah 3) dan tab Aliran (langkah 6), dalam sesi yang sama.
+5. Satu baris dalam "Catatan pembaikan aturan model". Nombor versi standard kekal v1.2.
+
+**E. Semak tanpa jana:** `python3 pembina.py` mesti lulus bagi semua kad × ayat untuk model baharu itu.
+
+**F. Ujian kelayakan (perlu izin jana daripada pengguna):** rangka am lawan aturan baharu; kad sama, ayat sama, seed 42, 7, 123. Aturan diterima (r0 → r1) jika bilangan imej lulus tidak kurang daripada rangka am. Jika gagal: model ditanda "tidak layak" bersama sebabnya, dan aturannya tetap disimpan supaya tidak dikaji semula.
+
+**Mengubah aturan sedia ada:** hanya melalui kitaran QC (langkah 5), SATU ubahan setiap pusingan. Setiap ubahan, berjaya atau tidak, direkod dalam "Catatan pembaikan aturan model"; ubahan yang berjaya menaikkan rev aturan (r1 → r2).
+
+**Rekod bersama setiap imej:** prompt, model, rev aturan, versi kad, versi pembina.
+
 - **Status (26 Nov 2026):** pembina kod bagi ketujuh-tujuh model sudah dibina (3.13). Contoh tulisan tangan `khas.py` (khas-v0) disimpan sebagai rekod ujian pertama sahaja; prompt baharu mesti datang daripada pembina.
 
 ### 3.13 Pembina kod (`designs/lettering-v1/pembina.py`, versi v1.2-p1, 26 Nov 2026)
@@ -271,7 +316,11 @@ Prompt yang gagal mana-mana semakan TIDAK dijana.
   4. Kotak MOSS / FLUX 3 Klein bagi kad tanpa ukuran: lebar blok = kanvas tolak ruang tepi kad; tinggi baris lalai 168 (utama), 136 (sokongan), 80 (penyambung) piksel; baris bersentuhan; bekas diberi sela 8 piksel; blok dipusatkan. Ini nilai sementara sehingga ukuran rujukan diukur.
   5. Kata fungsi GLM: `main title`, `second title`, `closing title`, `supporting line`, `connecting word` / `connecting phrase`.
   6. Kata sifat yang bukan daripada kad dibuang daripada rangka ("minimalist", "bold and minimal").
-- **Syarat pakai:** hasil pembina pada K3 × ayat H tidak lebih buruk daripada contoh tulisan tangan (11/12 ejaan betul). Keputusan ujian: lihat "Ujian pembina kod" di bawah.
+- **Model tanpa aturan:** `pembina.bina` memulangkan rangka am (3.3) dan rev `am`, sehingga aturannya ditulis ikut 3.12.
+- **Syarat pakai:** hasil pembina pada K3 × ayat H tidak lebih buruk daripada contoh tulisan tangan (11/12 ejaan betul). **Belum dibuktikan pada imej:** ujian 26 Nov dihentikan atas arahan pengguna selepas 6 imej klein 4B, dan 6 imej itu dipadam atas arahan pengguna; tiada hasil disimpan.
+
+### 3.14 Aturan model tambahan
+Tempat menyimpan aturan model baharu yang ditulis ikut 3.12 (3.14.1, 3.14.2, …). Belum ada.
 
 ## Langkah 4: Jana
 - Text-to-image penuh, hitam putih sahaja (dakwat putih atas latar hitam), 768×1024 (laluan 1–2, F1 / F2). Enjin: diffusers; versi perpustakaan direkod.
@@ -295,6 +344,15 @@ Prompt yang gagal mana-mana semakan TIDAK dijana.
 | GLM-Image | Space `multimodalart/GLM-Image` | 50 | 1.5 | tidak dipakai | 3.10 | MIT | kira-kira 2 imej sehari |
 
 Kuota: daripada jadual induk model dalam dashboard (2512 diukur 22–23 Nov; yang lain dikira daripada saat GPU setiap imej; bukti lemah).
+
+### Peraturan langkau model (v1.2, arahan pengguna 26 Nov 2026)
+- **Turutan model (CPU):** MOSS → ERNIE Turbo → Z-Image Turbo → klein 4B. Asas: lulus QC dalam AI Image Test 2 (23/30, 21/30, 13/30, 7/30; bukti lemah). Tiga model Space GPU tidak dijalankan (keputusan pengguna 26 Nov 2026: tiada Space GPU).
+- **Langkau bila terlalu lama:** masa satu model melebihi 20 minit (muat turun) + 13 minit bagi setiap imej. 13 minit ialah kira-kira dua kali masa paling perlahan yang direkod (392 s, MOSS). Angka ini cadangan Claude; menunggu pengesahan pengguna.
+- **Langkau bila bermasalah:** gagal 3 cubaan berturut-turut (muat turun, RAM, ralat kod), prompt gagal semakan 3.11, atau kuota Space habis.
+- **Tindakan:** model itu dihentikan dan model seterusnya terus dijalankan. Model yang dilangkau tidak diulang dalam sesi yang sama kecuali diminta pengguna.
+- **Rekod:** `langkau.jsonl` dalam folder hasil (model, sebab, saat). Claude menulis dalam chat sebaik sahaja berlaku, dan sekali lagi dalam jadual akhir: model apa, sebab, dan berapa imej sempat siap.
+- **Langkau bukan gagal QC:** model yang dilangkau tidak ditanda "tidak layak"; ia hanya tidak dijalankan pada sesi itu.
+- **Alat:** `designs/lettering-v1/run_v12.sh` (logik langkau diuji dengan arahan palsu, 26 Nov; belum diuji pada larian jana sebenar).
 
 ### Pemilihan tujuh model (semakan 26 Nov 2026)
 Hasil lama dengan rangka am, AI Image Test 2 (150 imej, 5 gaya × 3 ayat × 2 seed, CPU, semakan mata, bukti lemah):
@@ -391,6 +449,38 @@ Turutan semakan setiap imej: pintu wajib G1–G3 → ukur dan betulkan (5b) → 
 - Cetak: 300 DPI (Printify, rasmi), saiz 8×10, 11×14, 16×20, 18×24, 24×36. Bleed, kawasan selamat, had saiz fail dan profil warna: belum disemak.
 - Simpan SVG induk + info; PNG besar dijana semula bila perlu; versi `finish.py` direkod.
 
+## Daftar skrip dan kaedah skrip baharu (v1.2, arahan pengguna 26 Nov 2026)
+Skrip di sini ialah kerja SELEPAS jana (pembetulan 5b dan kemasan langkah 6). Alat prompt dan jana ada dalam 3.13 dan langkah 4.
+
+| ID | Skrip | Langkah | Tugas | Parameter daripada kad | Status (26 Nov 2026) |
+|---|---|---|---|---|---|
+| SK01 | Condong | 5b | Putar blok ke sudut rujukan kad | sudut condong | Belum dibina |
+| SK02 | Ruang tepi | 5b | Skala blok supaya ruang tepi sama dengan kad | ruang tepi (%) | Belum dibina |
+| SK03 | Kedudukan | 5b | Pusatkan blok pada kanvas | – | Belum dibina |
+| SK04 | Hitam putih bersih | 5b | Tukar kelabu dan tepi kabur kepada hitam dan putih tulen | – | Belum dibina |
+| SK05 | Ukuran rujukan | 1 | Ukur ruang tepi, sudut dan nisbah baris daripada gambar upload | – | Belum dibina |
+| SK06 | Vektor + saiz cetak (`finish.py`) | 6 | SVG induk, susun di tengah, PNG 300 DPI | ruang tepi, tekstur | Ada di cawangan `claude/dazzling-cannon-5wzn6h`; dicuba pada 1 imej K3H (SVG + 18×24 terhasil); palet masih tetap S1–S6 |
+| SK07 | Warna C ikut peranan | 6 | Warnakan lapisan ikut peta peranan kad | peta warna | Belum dibina |
+| SK08 | Bayang ikut kad | 6 | Bayang 3D / lembut yang AI tidak jana (cth. K3) | arah dan tebal bayang | Belum dibina |
+
+Empat skrip pembetulan (SK01–SK04) ialah set asas. Skrip lain ditambah hanya ikut kaedah di bawah.
+
+**Bila skrip baharu perlu:**
+1. Semasa Kad Gaya dibuat daripada gambar upload: ada ciri yang AI tidak dibenarkan atau tidak boleh jana dalam hitam putih (warna, bayang, tekstur, kecerunan), atau ciri yang mesti tepat ukurannya (lengkung, condong, jarak), dan tiada skrip dalam daftar yang membuatnya.
+2. Dalam kitaran QC: cacat yang sama berulang, dan ia bukan soal ejaan atau bentuk huruf (jadual kitaran QC, baris "Bukan prompt").
+
+**Kaedah skrip baharu:**
+1. **Nyatakan ciri itu pada kad:** ciri QC + ukuran daripada gambar upload, dan rujuk gambar itu (cth. IMG_5775). Skrip bergantung kepada gambar upload, bukan tekaan.
+2. **Semak daftar dahulu:** jika skrip sedia ada boleh diberi parameter baharu, tambah parameter; jangan buat skrip baharu.
+3. **Tulis skrip:** satu tugas satu skrip; parameter dibaca daripada kad, bukan tetap dalam skrip; input = imej yang lulus G1–G3; hasil disimpan berasingan (imej asal tidak ditimpa); log ukuran sebelum dan selepas.
+4. **Simpan:** `designs/lettering-v1/skrip/<ID>_<nama>.py`. Kepala fail mencatat: ID, tugas, kad dan gambar upload yang memerlukannya, parameter kad, versi, tarikh.
+5. **Uji pada imej yang sudah ada** (tiada jana baharu): sekurang-kurangnya 1 imej lulus daripada kad itu dan 1 imej kad lain (pastikan tidak merosakkan). Ejaan disemak semula selepas skrip.
+6. **Daftar:** tambah baris dalam jadual di atas (ID seterusnya), dan catat ID itu pada kad yang memerlukannya. Nombor versi standard kekal v1.2.
+7. **Dashboard:** kemas kini tab FC › Design (langkah 5 atau 6) dan tab Aliran dalam sesi yang sama.
+8. **Beritahu pengguna dalam chat:** skrip apa, untuk gambar mana, hasil ujian.
+
+**Turutan jalan:** skrip pembetulan baharu masuk SEBELUM SK04, kerana hitam putih bersih mesti akhir sekali. Skrip kemasan baharu ikut urutan langkah 6: vektor, warna, bayang / tekstur, saiz cetak.
+
 ## Langkah 7: Pengguna lulus atau tolak
 - **Mata pengguna ialah pintu terakhir (v1.2).** Imej yang lulus semua QC tetapi nampak buruk di mata pengguna = gagal. Skor QC tidak mengatasi keputusan pengguna.
 - Pengguna memilih daripada SATU helaian; imej sudah ditapis oleh QC dahulu.
@@ -416,7 +506,7 @@ Turutan semakan setiap imej: pintu wajib G1–G3 → ukur dan betulkan (5b) → 
 
 ## Tukar model
 Ujian kelayakan sekali bagi setiap model baharu (dan setiap gabungan tetapan): setiap gaya × ayat pendek dan sederhana × 2 seed. Lulus: ≥ 90% imej ejaan betul, gaya ≥ 7/8, tiada teks liar. Hasil direkod dalam jadual model × gaya.
-Model baharu juga memerlukan aturan prompt sendiri sebelum dipakai untuk design sebenar (3.12).
+Model baharu juga memerlukan aturan prompt sendiri sebelum dipakai untuk design sebenar: ikut "Kaedah model baharu" (3.12). Model yang terlalu lama atau bermasalah semasa jana: ikut "Peraturan langkau model" (langkah 4).
 
 ## Catatan pembaikan aturan model
 Setiap ubahan aturan (3.4–3.10) direkod di sini. Ujian pertama (26 Nov 2026, K3 × ayat H, seed 42, 7, 123, semakan mata, bukti lemah) mengubah beberapa perkara serentak, kerana dibuat sebelum peraturan "satu ubahan setiap pusingan".
@@ -430,7 +520,9 @@ Setiap ubahan aturan (3.4–3.10) direkod di sini. Ujian pertama (26 Nov 2026, K
 
 ## Belum selesai
 - v1.2, sudah dibina (26 Nov): pembina kod bagi tujuh model + semakan 3.11 (`pembina.py`, 3.13).
-- v1.2, belum dibina: skrip ukuran rujukan daripada upload; skrip pembetulan 5b dan had toleransinya; semakan ejaan automatik (kini mata sahaja).
+- v1.2, sudah ditulis (26 Nov): kaedah model baharu (3.12), daftar skrip + kaedah skrip baharu, peraturan langkau model (`run_v12.sh`).
+- v1.2, belum dibina: skrip SK01–SK05, SK07, SK08 (lihat Daftar skrip) dan had toleransi 5b; `finish.py` (SK06) belum dibawa ke cawangan ini; semakan ejaan automatik (kini mata sahaja).
+- v1.2, belum dibuktikan pada imej: hasil pembina kod (3.13). Had masa langkau menunggu pengesahan pengguna.
 - v1.2, bukti masih lemah: aturan 3.4–3.7 diuji pada satu kad (K3) dan satu ayat sahaja. Perlu diulang pada kad lain dan ayat pendek sebelum dianggap kukuh.
 - v1.2, belum diuji langsung: aturan 3.8–3.10 (FLUX 3 Image Klein, Qwen-Image-2512, GLM-Image). Perlu ujian kelayakan melalui Space (GPU, kuota harian); pengguna sebelum ini meminta CPU sahaja, jadi ujian ini menunggu kebenaran. `gen_hf_space.py` belum ada profil untuk tiga Space ini.
 - Calon v1.3, belum diuji: gambar rujukan sebagai input model (klein 4B dan Z-Image ada saluran input gambar dalam diffusers; ERNIE tiada).
