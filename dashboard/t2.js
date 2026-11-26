@@ -74,18 +74,22 @@ POD.mRows('t2-kad-body', 'ai2_bykad', 7, (tr, r) => {
   });
   const l = POD.cell(tr, r.layak); if (r.layak === 'Tiada') l.className = 'mt-bad';
 });
-POD.t2Open = (src, cap) => {
+POD.t2Names = { klein4b: 'FLUX.2 klein 4B', schnell: 'FLUX.1-schnell', zturbo: 'Z-Image-Turbo', ernie: 'ERNIE-Image-Turbo', moss: 'MOSS + LoRA' };
+POD.t2Label = (r) => POD.t2Names[r.model] || r.model_name;
+POD.t2Open = (src, cap, label) => {
   const z = document.getElementById('t2-zoom'); if (!z) return;
-  POD.t2.zoom = { src, cap }; z.hidden = false; dash.draw('t2-zoom');
+  POD.t2.zoom = { src, cap, label }; z.hidden = false; dash.draw('t2-zoom');
   const c = document.getElementById('t2-zoom-close'); if (c) c.focus();
 };
 POD.t2Close = () => { const z = document.getElementById('t2-zoom'); if (z && !z.hidden) { z.hidden = true; POD.t2.zoom = null; } };
 dash.draw('t2-zoom', (fig) => {
   fig.replaceChildren();
   const z = POD.t2.zoom; if (!z) return;
-  const im = document.createElement('img'); im.src = z.src; im.alt = z.cap;
+  const wrap = document.createElement('div'); wrap.className = 't2-zoomwrap';
+  const im = document.createElement('img'); im.src = z.src; im.alt = z.cap; wrap.appendChild(im);
+  if (z.label) { const tag = document.createElement('span'); tag.className = 't2-tag t2-tag-big'; tag.textContent = z.label; wrap.appendChild(tag); }
   const cap = document.createElement('figcaption'); cap.textContent = z.cap;
-  fig.append(im, cap);
+  fig.append(wrap, cap);
 });
 dash.draw('t2-grid', (tb) => {
   const rows = POD.ok('ai2_images'); tb.replaceChildren();
@@ -105,7 +109,7 @@ dash.draw('t2-grid', (tb) => {
       b.setAttribute('aria-label', `Lihat rujukan ${k}`);
       const im = document.createElement('img'); im.src = ref.ref_img; im.alt = `Rujukan ${k}`; im.loading = 'lazy';
       b.appendChild(im);
-      b.addEventListener('click', () => POD.t2Open(ref.ref_img, `Rujukan anda · ${k} · ${ref.kad_name} (design orang lain, rujukan gaya sahaja)`));
+      b.addEventListener('click', () => POD.t2Open(ref.ref_img, `Rujukan anda · ${k} · ${ref.kad_name} (design orang lain, rujukan gaya sahaja)`, 'Rujukan anda'));
       wrap.appendChild(b);
     }
     const txt = document.createElement('div');
@@ -132,8 +136,9 @@ dash.draw('t2-grid', (tb) => {
             const b = document.createElement('button'); b.type = 'button';
             b.setAttribute('aria-label', `Besarkan: ${r.model_name}, ${id}`);
             const im = document.createElement('img'); im.src = src; im.loading = 'lazy'; im.alt = `${r.model_name}: ${r.text}`; im.width = r.w; im.height = r.h;
-            b.appendChild(im);
-            b.addEventListener('click', () => POD.t2Open(src, `${r.model_name} · ${r.kad} ${r.ayat_name} · seed ${r.seed} · ${r.lulus ? 'Lulus' : 'Gagal'} · gaya ${r.gaya}${r.sebab ? ' · ' + r.sebab : ''} · ${r.saat} s`));
+            const tag = document.createElement('span'); tag.className = 't2-tag'; tag.textContent = POD.t2Label(r);
+            b.append(im, tag);
+            b.addEventListener('click', () => POD.t2Open(src, `${r.model_name} · ${r.kad} ${r.ayat_name} · seed ${r.seed} · ${r.lulus ? 'Lulus' : 'Gagal'} · gaya ${r.gaya}${r.sebab ? ' · ' + r.sebab : ''} · ${r.saat} s`, POD.t2Label(r)));
             fig.appendChild(b);
           }
           const cap = document.createElement('figcaption'); cap.className = 'mt-cap';
