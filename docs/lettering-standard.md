@@ -3,7 +3,7 @@
 Status: v1 dipersetujui pengguna 25 Nov 2026; v1.2 diluluskan pengguna sebagai standard 26 Nov 2026 (menggantikan v1); **belum dibina** (lihat "Belum selesai"). Liputan: laluan 1–2 (ayat 1–8 perkataan), kemasan F1–F2. Laluan 3–4 = percubaan (belum diuji); F3 ditangguh.
 
 ## Apa berubah dalam v1.2
-1. **Prompt ikut model** (langkah 3): isi gaya tetap daripada Kad; cara menulis berbeza bagi setiap model (3.4 klein 4B, 3.5 Z-Image Turbo, 3.6 ERNIE Turbo, 3.7 MOSS).
+1. **Prompt ikut model** (langkah 3): isi gaya tetap daripada Kad; cara menulis berbeza bagi setiap model. Tujuh model: 3.4 klein 4B, 3.5 Z-Image Turbo, 3.6 ERNIE Turbo, 3.7 MOSS (diuji), dan 3.8 FLUX 3 Image Klein, 3.9 Qwen-Image-2512, 3.10 GLM-Image (belum diuji).
 2. **Kitaran QC** (langkah 5): tukar seed dahulu; reka semula prompt model itu hanya untuk cacat sistematik; had 2 pusingan; pembaikan ditulis balik ke aturan model.
 3. **Ukuran rujukan dalam Kad** (langkah 1): angka diukur daripada gambar upload, bukan diteka.
 4. **Pembetulan selepas jana oleh skrip** (langkah 5b): ruang tepi, kedudukan, condong, hitam putih bersih; hanya bila ukuran tersasar.
@@ -60,7 +60,8 @@ Sebab (bukti lemah): AI Image Test 2, 150 imej: gaya satu dakwat (K1, K4) 40/60 
 - Isi prompt datang daripada dua sumber sahaja: Kad Gaya (gaya) dan Spesifikasi Teks (perkataan).
 - Aturan model hanya menentukan CARA MENULIS isi itu. Aturan model tidak boleh menambah, membuang atau menukar ciri gaya.
 - Pembina ialah kod: kad + Spesifikasi Teks + model yang sama mesti menghasilkan prompt yang sama.
-- Model yang ada aturan sendiri (3.4–3.7) WAJIB memakai aturan itu. Model tanpa aturan memakai rangka am (3.3) sehingga aturannya ditulis (3.9).
+- Model yang ada aturan sendiri (3.4–3.10) WAJIB memakai aturan itu. Model tanpa aturan memakai rangka am (3.3) sehingga aturannya ditulis (3.12).
+- Tujuh model ada aturan: empat sudah diuji (3.4–3.7, rev r1) dan tiga ditulis daripada sumber rasmi sahaja, belum diuji (3.8–3.10, rev r0). Aturan r0 mesti lulus ujian kelayakan (3.12) sebelum dipakai untuk design sebenar.
 - Sebab (bukti lemah: kad K3 × ayat H "Patience Builds What Hurry Breaks", 3 seed, CPU, semakan mata, 26 Nov 2026). Imej ejaan betul:
 
 | Model | Rangka am (3.3) | Aturan model |
@@ -91,7 +92,7 @@ Peraturan sejagat (semua model):
 1. Setiap perkataan Spesifikasi Teks ditulis tepat SEKALI dalam petikan berganda `"…"` (MOSS: dalam medan `text`), ejaan dan huruf besar / kecil sama. Tiada perkataan lain dalam petikan.
 2. Bahasa Inggeris. Tiada angka, kod hex, nama font, jenama, atau nama warna selain black dan white.
 3. Perkataan dalam label ditulis sebagai: hitam, di dalam label segi empat putih pekat.
-4. Tiada negative prompt untuk mana-mana model. Tetapan yang dikunci semuanya tanpa CFG (guidance 0 atau 1), jadi negative prompt tidak dibaca. Larangan ditulis di dalam prompt ikut aturan model.
+4. Negative prompt tidak dipakai. Model suling (klein 4B, Z-Image Turbo, ERNIE Turbo, MOSS + LoRA, FLUX 3 Image Klein) jalan tanpa CFG, jadi negative prompt tidak dibaca. Qwen-Image-2512 dan GLM-Image memakai CFG, tetapi Space yang dipakai tidak menerima negative prompt dan lalai rasmi Qwen-Image ialah kosong. Larangan ditulis di dalam prompt ikut aturan model.
 5. Tiada kata kualiti kosong ("masterpiece", "best quality", "8k").
 
 ### 3.3 Rangka am (pembina v1.1, `kad.bina`)
@@ -174,19 +175,88 @@ Dipakai untuk model tanpa aturan sendiri, dan sebagai pembanding dalam ujian kel
 - **Tetapan:** bf16 asal, 8 langkah, tanpa CFG, LoRA `lodestones/MOSS-Image-SFT-8-steps-dmd` × 0.7, templat sembang "thinking" hidup.
 - **Cacat diketahui (r1):** blok tidak condong, kerana kotak JSON tegak. Condong dibuat oleh skrip (5b), bukan oleh prompt.
 
-### 3.8 Semakan automatik sebelum jana (semua model)
+### 3.8 Aturan FLUX 3 Image Klein (rev r0: sumber rasmi sahaja, BELUM diuji)
+- **Sumber (rasmi):** kad model `black-forest-labs/flux-3-image-klein` dan arahan penambah prompt rasminya (`flux-3-image-klein-pup`, `system_prompts.json`).
+  - "Always run a prompt upsampler… trained on full scene captions… a short prompt sent as typed gives generic output."
+  - Untuk prompt yang sudah berupa kapsyen penuh, langkah penambah dibuang "so the caption is not expanded twice".
+  - Kapsyen: satu blok prosa; medium dan gaya dahulu; kedudukan relatif bingkai; teks disalin tepat dalam petikan berganda dengan tipografi, warna dan kedudukan; "state negations as what is present"; 100–350 perkataan.
+  - Susun atur kotak: senarai JSON selepas kapsyen; `bbox` = `[y_min, x_min, y_max, x_max]` pada grid 0–1000, asalan kiri atas; kotak membimbing kedudukan dan saiz, bukan topeng keras.
+- **Keputusan standard:** pembina MENULIS kapsyen penuh sendiri dan penambah prompt DIMATIKAN (`prompt_upsampling=False`). Sebab: ejaan dan isi mesti dikawal oleh kad, dan sumber rasmi sendiri membenarkannya untuk kapsyen penuh.
+- **Bentuk:** SATU baris: kapsyen global (satu perenggan), satu ruang, kemudian SATU senarai JSON (jadual unsur).
+- **Kapsyen global, turutan ayat:**
+  1. Medium dan gaya dahulu (blok A): `Flat vector hand-lettering quote poster in black and white, portrait format.`
+  2. Latar, ruang tepi dan susunan blok (B, G, C), dengan id: `A solid black background <background_1> fills the frame with wide empty margins.`
+  3. Setiap baris dari atas ke bawah, dimulakan dengan sauh kedudukan (`At the top,` `Directly below it,` `In the center,` `Below the label,` `At the bottom,`), menyebut baris itu pada tahap identiti sahaja dan memetik id-nya: `a line of huge heavy condensed sans-serif capitals <En_Text_1>`.
+  4. Penutup (H) sebagai apa yang ADA: `The poster holds only these five lines of lettering, in pure white and pure black with flat fills and crisp edges.`
+- **Dalam kapsyen DILARANG:** perkataan Spesifikasi Teks, petikan, koordinat, pertimbangan mutu atau emosi. Semua itu duduk dalam jadual.
+- **Jadual unsur:** satu baris bagi setiap baris teks, satu bagi latar, satu bagi setiap hiasan. Kunci ikut turutan: `id`, `bbox`, `desc`.
+  - `id` baris teks: `En_Text_1`, `En_Text_2`… dari atas ke bawah. Unsur lain: kata nama + indeks dari kiri ke kanan (`background_1`, `sparkle_1`, `sparkle_2`). Setiap id unik, dan setiap id disebut sekali dalam kapsyen.
+  - `desc`: bermula dengan identiti unsur, tanpa kedudukan; baris teks membawa perkataan tepat dalam petikan berganda serta tipografinya: `Huge heavy condensed bold sans-serif capitals in pure white reading "PATIENCE", flat vector.`
+  - Label: `Small solid white rectangular label carrying small bold black sans-serif capitals reading "WHAT".`
+- **`bbox` daripada ukuran kad:** y = piksel_y ÷ tinggi kanvas × 1000; x = piksel_x ÷ lebar kanvas × 1000; integer; tinggalkan sedikit ruang di sekeliling teks. Daripada kotak MOSS (asalan tengah): y = (y + 512) ÷ 1024 × 1000, x = (x + 384) ÷ 768 × 1000.
+- **Panjang kapsyen:** 100–350 perkataan (rasmi). Contoh K3H: kapsyen + jadual 303 perkataan.
+- **Tetapan:** checkpoint suling, 16 langkah, tanpa guidance (Space: mod "Distilled (16 steps)", `guidance_scale` 1.0), `prompt_upsampling` False, 768×1024, seed tetap.
+- **Tempat jalan:** Space rasmi `black-forest-labs/flux-3-image-klein` (GPU, kuota harian). CPU belum diukur.
+- **Lesen (rasmi):** FLUX Kommunity v1.0: hasil komersial dibenarkan untuk pengguna dengan hasil kasar di bawah US$5 juta setahun, tertakluk kepada syarat lesen. Berbeza daripada enam model lain (Apache 2.0 / MIT).
+- **Cacat diketahui:** belum diuji. Kad model: teks boleh tidak tepat; unsur kecil yang diminta mungkin tidak muncul; unsur boleh melepasi kotaknya.
+
+### 3.9 Aturan Qwen-Image-2512 (rev r0: sumber rasmi sahaja, BELUM diuji dengan aturan ini)
+- **Sumber (rasmi):** kad model `Qwen/Qwen-Image` dan `Qwen/Qwen-Image-2512`; skrip penulis semula prompt rasmi (`QwenLM/Qwen-Image`, `prompt_utils.py`).
+  - "If the input requires rendering text in the image, enclose specific text in quotation marks, specify its position… and style. This text should remain unaltered and not translated."
+  - "ensure that the Rewritten Prompt is less than 200 words"; padankan dengan satu gaya yang tepat dan khusus.
+  - Contoh rasmi poster: `Art poster design: Handwritten calligraphy title "Art Design" in dissolving particle font, small signature "QwenImage", …`
+  - Tetapan rasmi: 50 langkah, `true_cfg_scale` 4.0; negative prompt lalai kosong.
+- **Bentuk:** satu perenggan, KURANG daripada 200 perkataan, ayat dan frasa pendek.
+- **Turutan:**
+  1. Jenis karya dan gaya khusus dahulu (blok A): `Typography poster design, flat vector hand-lettering, black and white, portrait.`
+  2. Latar dan ruang tepi (B, G); kemudian susunan blok (C).
+  3. Setiap baris dari atas ke bawah. Setiap satu WAJIB ada tiga perkara, ikut turutan: kedudukan, perkataan dalam petikan, gaya. `At the top, the title word "PATIENCE" in huge heavy condensed bold sans-serif capitals.`
+  4. Hiasan (F) bersama baris yang berkaitan.
+  5. Penutup: gaya ringkas + had (H): `Clean minimalist graphic design, flat fills, crisp edges, pure black and white only. No other text, no people, no objects.` Ayat "No …" dibenarkan untuk model ini (contoh rasmi memakainya).
+- **Akhiran rasmi `, Ultra HD, 4K, cinematic composition.` TIDAK ditambah dalam r0** (andaian: ia untuk rupa fotografi, bukan vektor rata). Ujian kelayakan mesti membandingkan dengan dan tanpa akhiran itu.
+- **Penambah prompt Space DIMATIKAN** (`prompt_enhance=False`): hasilnya tidak dapat disemak sebelum jana.
+- **Tetapan:** 50 langkah, guidance 4.0, nisbah 3:4 (Space tidak menerima saiz piksel; saiz sebenar direkod), seed tetap.
+- **Qwen-Image-Fast** (Qwen-Image + LoRA Lightning, 8 langkah, guidance 1.0): aturan menulis sama, tetapi profil berasingan dengan ujian kelayakan sendiri.
+- **Tempat jalan:** Space sahaja (41 GB, tidak muat di CPU 15 GB). Kuota percuma: kira-kira 1 imej sehari untuk 2512 (diukur 22–23 Nov), kira-kira 3 sehari untuk Fast (dikira daripada saat GPU).
+- **Lesen:** Apache 2.0 (rasmi).
+- **Cacat diketahui:** ujian lama dengan prompt lain: 11/14 perkataan betul pada satu ayat panjang (1 imej). Belum diuji dengan aturan ini.
+
+### 3.10 Aturan GLM-Image (rev r0: sumber rasmi sahaja, BELUM diuji dengan aturan ini)
+- **Sumber (rasmi):** kad model `zai-org/GLM-Image` dan skrip penambah prompt rasminya (`zai-org/GLM-Image`, `examples/prompt_utils.py`).
+  - "ensure that all text intended to be rendered in the image is enclosed in quotation marks"; "strongly recommend using GLM-4.7 to enhance prompts".
+  - Peraturan penambah rasmi: bahasa naratif yang bersambung, tanpa senarai, nombor atau tajuk; HANYA teks yang dilukis berada dalam petikan; gaya visual keseluruhan mesti dinyatakan; untuk teks: salin tepat (huruf besar / kecil, tanda baca, pecahan baris), nyatakan kedudukan dan pembawanya, gaya font, warna, cara persembahan, dan fungsinya (tajuk, keterangan, label, hiasan).
+  - Resolusi mesti boleh dibahagi 32; penjana autoregresif bersampel (suhu 0.9), jadi hasil lebih berubah antara seed.
+- **Keputusan standard:** penambah GLM-4.7 tidak dipakai (perkhidmatan luar). Pembina menulis prompt penuh ikut peraturan penambah itu sendiri. Penyimpangan ini direkod dan dinilai dalam ujian kelayakan.
+- **Bentuk:** SATU perenggan naratif, ayat penuh yang bersambung. DILARANG: senarai, baris bernombor ("Line one…"), tajuk, titik bertindih diikuti senarai.
+- **Turutan ayat:**
+  1. Gaya visual keseluruhan dan pembawa (blok A): `A graphic design poster in flat vector hand-lettering style, portrait format, printed in pure black and white.`
+  2. Latar, ruang tepi, cara teks dipersembahkan dan susunan blok (B, G, C): `…all lettering is flat white print with crisp edges, arranged as five stacked lines in one tight block at the center…`
+  3. Setiap baris dari atas ke bawah, satu ayat setiap baris, dengan EMPAT perkara: kedudukan, fungsi, perkataan dalam petikan selepas "reads", gaya font dan warna. `At the top of the block, the main title reads "PATIENCE" in huge heavy condensed bold sans-serif capital letters.`
+  4. Fungsi ikut peranan kad: utama = `main title` / `closing title`; sokongan = `supporting line`; penyambung = `connecting word`.
+  5. Hiasan sebagai hiasan (F): `with three short white sparkle strokes as decoration on the left and on the right of the label`.
+  6. Penutup (H): `Only these five words appear on the poster, and the overall look is clean, bold and minimal.`
+- **Petikan:** tiada apa-apa selain perkataan Spesifikasi Teks berada dalam petikan.
+- **Tetapan:** 50 langkah, guidance 1.5, 768×1024 (kedua-duanya boleh dibahagi 32), seed tetap.
+- **Tempat jalan:** Space `multimodalart/GLM-Image` (36 GB, tiada GGUF; tidak muat di CPU). Kuota percuma: kira-kira 2 imej sehari (dikira daripada saat GPU).
+- **Lesen:** MIT (rasmi).
+- **Cacat diketahui:** 2 imej K3 hitam putih (26 Nov, rangka am) kedua-duanya gagal: perkataan berulang. Forum Hugging Face: perlahan, huruf rawak salah (pihak ketiga). Dahulu ditanda "Tolak" dalam jadual induk; kini calon yang mesti lulus ujian kelayakan dengan aturan ini.
+
+### 3.11 Semakan automatik sebelum jana (semua model)
 Prompt yang gagal mana-mana semakan TIDAK dijana.
 - Semua model: perkataan dalam petikan (MOSS: senarai `text`) sama tepat dengan Spesifikasi Teks, ikut turutan, sekali setiap satu; tiada angka, hex, nama font, jenama, atau nama warna selain black dan white; dalam had token model.
 - klein 4B: satu perenggan; tiada senarai gaya terpisah; tiada senarai larangan selepas ayat had (no signature, no watermark, no logo, no frame…).
 - Z-Image Turbo: bilangan ayat "Line …" sama dengan bilangan baris; tiada frasa "no …" dalam ayat penutup.
 - ERNIE Turbo: semakan pada prompt mentah DAN pada hasil PE (3.6).
+- FLUX 3 Image Klein: satu baris; kapsyen tanpa petikan dan tanpa koordinat; setiap id dalam jadual disebut sekali dalam kapsyen dan sebaliknya; id unik; setiap `bbox` dalam grid 0–1000 dengan y_min < y_max, x_min < x_max; bilangan baris `En_Text` sama dengan bilangan baris teks.
+- Qwen-Image-2512: kurang daripada 200 perkataan; setiap petikan diikuti gaya dan didahului kedudukan.
+- GLM-Image: satu perenggan; tiada senarai, nombor baris atau tajuk; tiada petikan selain perkataan Spesifikasi Teks; lebar dan tinggi boleh dibahagi 32.
 - MOSS: JSON sah; kunci wajib ada; setiap `bbox` di dalam kanvas dan y_atas < y_bawah, x_kiri < x_kanan; bilangan butir teks sama dengan bilangan baris.
 
-### 3.9 Menambah atau mengubah aturan model
-- **Model baharu:** (1) baca kad model rasmi dan panduan prompt rasminya; (2) catat sumber dan tahap bukti; (3) tulis aturan dengan tujuh medan yang sama seperti 3.4–3.7: sumber, bentuk, turutan, cara tulis teks dan gaya, cara tulis had, tetapan, cacat diketahui; (4) uji banding rangka am lawan aturan baharu: kad sama, ayat sama, seed 42, 7, 123; (5) aturan diterima jika bilangan imej lulus tidak kurang daripada rangka am.
+### 3.12 Menambah atau mengubah aturan model
+- **Model baharu:** (1) baca kad model rasmi dan panduan prompt rasminya; (2) catat sumber dan tahap bukti; (3) tulis aturan dengan tujuh medan yang sama seperti 3.4–3.10: sumber, bentuk, turutan, cara tulis teks dan gaya, cara tulis had, tetapan, cacat diketahui; (4) uji banding rangka am lawan aturan baharu: kad sama, ayat sama, seed 42, 7, 123; (5) aturan diterima jika bilangan imej lulus tidak kurang daripada rangka am.
 - **Mengubah aturan sedia ada:** hanya melalui kitaran QC (langkah 5), SATU ubahan setiap pusingan. Setiap ubahan, berjaya atau tidak, direkod dalam "Catatan pembaikan aturan model" di hujung dokumen ini; ubahan yang berjaya menaikkan rev aturan (r1 → r2).
 - **Rekod bersama setiap imej:** prompt, model, rev aturan, versi kad, versi pembina.
-- **Status:** aturan 3.4–3.7 kini wujud sebagai contoh tulisan tangan untuk K3 × ayat H (`designs/lettering-v1/khas.py`, versi khas-v0, lulus `khas.semak`). Pembina kod bagi setiap model belum dibina. Sehingga dibina, prompt ditulis tangan ikut aturan ini, ayat demi ayat, dan mesti lulus semakan 3.8.
+- **Status:** ketujuh-tujuh aturan kini wujud sebagai contoh tulisan tangan untuk K3 × ayat H (`designs/lettering-v1/khas.py`, versi khas-v0, lulus `khas.semak`). Contoh 3.4–3.7 sudah dijana dan disemak; contoh 3.8–3.10 belum dijana. Pembina kod bagi setiap model belum dibina. Sehingga dibina, prompt ditulis tangan ikut aturan ini, ayat demi ayat, dan mesti lulus semakan 3.8.
 
 ## Langkah 4: Jana
 - Text-to-image penuh, hitam putih sahaja (dakwat putih atas latar hitam), 768×1024 (laluan 1–2, F1 / F2). Enjin: diffusers; versi perpustakaan direkod.
@@ -201,7 +271,38 @@ Prompt yang gagal mana-mana semakan TIDAK dijana.
 | ERNIE-Image-Turbo | GGUF Q8_0 | 8 | 1.0 | PE rasmi, sekali, seed 42 | 3.6 | 305–373 s |
 | MOSS-Image SFT + LoRA × 0.7 | bf16 asal | 8 | tanpa CFG | templat "thinking" hidup | 3.7 | 337–392 s |
 
-- Qwen-Image dan GLM-Image: tidak muat dalam RAM 15 GB di CPU; di luar v1.2.
+- Tiga model tambahan (26 Nov 2026), dijalankan melalui Space Hugging Face (GPU, kuota harian) kerana tidak muat atau belum diukur di CPU. Belum diuji dengan aturan sendiri; perlu ujian kelayakan dahulu:
+
+| Model | Tempat jalan | Langkah | Guidance | Penambah prompt | Aturan | Lesen | Kuota percuma |
+|---|---|---|---|---|---|---|---|
+| FLUX 3 Image Klein | Space `black-forest-labs/flux-3-image-klein` | 16 | tiada | dimatikan | 3.8 | FLUX Kommunity v1.0 (bersyarat) | kira-kira 9 imej sehari |
+| Qwen-Image-2512 | Space `Qwen/Qwen-Image-2512` | 50 | 4.0 | dimatikan | 3.9 | Apache 2.0 | kira-kira 1 imej sehari |
+| GLM-Image | Space `multimodalart/GLM-Image` | 50 | 1.5 | tidak dipakai | 3.10 | MIT | kira-kira 2 imej sehari |
+
+Kuota: daripada jadual induk model dalam dashboard (2512 diukur 22–23 Nov; yang lain dikira daripada saat GPU setiap imej; bukti lemah).
+
+### Pemilihan tujuh model (semakan 26 Nov 2026)
+Hasil lama dengan rangka am, AI Image Test 2 (150 imej, 5 gaya × 3 ayat × 2 seed, CPU, semakan mata, bukti lemah):
+
+| Model | Lulus QC | Ejaan betul | Keputusan |
+|---|---|---|---|
+| MOSS-Image SFT + LoRA | 23/30 | 30/30 | Kekal |
+| ERNIE-Image-Turbo | 21/30 | 29/30 | Kekal |
+| Z-Image Turbo | 13/30 | 26/30 | Kekal |
+| FLUX.2 klein 4B | 7/30 | 14/30 | Kekal; aturan sendiri menaikkan ejaan 0/3 → 3/3 pada K3 |
+| FLUX.1 schnell | 1/30 | 3/30 | Tidak dipilih |
+
+Dinilai dan tidak dipilih:
+- FLUX.1 schnell: 3/30 ejaan betul; perkataan berulang.
+- Chroma1-Flash: 0/6 ejaan betul pada ujian K6, kira-kira 562 saat setiap imej di CPU.
+- Ovis-Image-7B: skor teks pembuat kuat (CVTG-2K 0.920), tetapi 50 langkah terlalu perlahan di CPU dan tiada Space yang disambungkan. Simpanan: calon kelapan jika GLM-Image gagal ujian kelayakan.
+- HiDream-O1-Image-Dev: perlu GPU Kaggle; belum ada laluan jalan.
+- ERNIE-Image dan Z-Image penuh (50 langkah): keluarga yang sama dengan versi Turbo, terlalu perlahan di CPU.
+
+Sebab tiga yang dipilih:
+- FLUX 3 Image Klein: ujian bebas 30 poster, 18 tepat, tertinggi dalam ujian itu (pihak ketiga); menyokong kotak susun atur dan gambar rujukan.
+- Qwen-Image-2512: rupa paling kaya dalam ujian lama kita; kemas kini Disember memperbaik teks (kad model, rasmi).
+- GLM-Image: pengekod huruf khas (Glyph Encoder, kad model, rasmi); hasil lama lemah, jadi ia paling berisiko antara tiga.
 - Seed: senarai tetap 42, 7, 123, 2024. Laluan 1: 2 seed terus. Laluan 2: 3–4 seed. Ulangan dijana satu demi satu.
 - Susunan kerja: ikut model (muat sekali, jana semua); satu model besar pada satu masa; semak RAM dan disk sebelum muat turun; boleh disambung semula. Anggaran masa dinyatakan sebelum mula.
 - Log setiap imej: model, varian, langkah, guidance, LoRA, seed, saiz, versi, masa, prompt.
@@ -242,7 +343,7 @@ Turutan semakan setiap imej: pintu wajib G1–G3 → ukur dan betulkan (5b) → 
 | Ruang tepi, kedudukan, condong, kelabu | Bukan prompt: skrip pembetulan (5b) |
 | Bentuk huruf hodoh atau nisbah baris salah | Frasa bentuk huruf atau hierarki dalam aturan model; jika masih gagal, tukar model |
 
-5. **Ubahan berjaya** (lebih banyak seed lulus daripada sebelumnya, tiada cacat baharu): ditulis balik ke aturan model itu (3.4–3.7), rev naik, dicatat dalam "Catatan pembaikan aturan model". Design seterusnya terus memakai aturan yang sudah dibaiki.
+5. **Ubahan berjaya** (lebih banyak seed lulus daripada sebelumnya, tiada cacat baharu): ditulis balik ke aturan model itu (3.4–3.10), rev naik, dicatat dalam "Catatan pembaikan aturan model". Design seterusnya terus memakai aturan yang sudah dibaiki.
 6. **Ubahan tidak berjaya:** dibuang, dan dicatat juga supaya tidak diulang.
 7. **Selepas 2 pusingan masih tiada imej lulus:** tukar ke model seterusnya ikut jadual model × gaya; kemudian pendekkan ayat; kemudian lapor kepada pengguna.
 8. **Had imej:** paling banyak 10 imej bagi setiap model untuk satu design (4 seed + 2 pusingan × 3 seed).
@@ -300,10 +401,10 @@ Turutan semakan setiap imej: pintu wajib G1–G3 → ukur dan betulkan (5b) → 
 
 ## Tukar model
 Ujian kelayakan sekali bagi setiap model baharu (dan setiap gabungan tetapan): setiap gaya × ayat pendek dan sederhana × 2 seed. Lulus: ≥ 90% imej ejaan betul, gaya ≥ 7/8, tiada teks liar. Hasil direkod dalam jadual model × gaya.
-Model baharu juga memerlukan aturan prompt sendiri sebelum dipakai untuk design sebenar (3.9).
+Model baharu juga memerlukan aturan prompt sendiri sebelum dipakai untuk design sebenar (3.12).
 
 ## Catatan pembaikan aturan model
-Setiap ubahan aturan (3.4–3.7) direkod di sini. Ujian pertama (26 Nov 2026, K3 × ayat H, seed 42, 7, 123, semakan mata, bukti lemah) mengubah beberapa perkara serentak, kerana dibuat sebelum peraturan "satu ubahan setiap pusingan".
+Setiap ubahan aturan (3.4–3.10) direkod di sini. Ujian pertama (26 Nov 2026, K3 × ayat H, seed 42, 7, 123, semakan mata, bukti lemah) mengubah beberapa perkara serentak, kerana dibuat sebelum peraturan "satu ubahan setiap pusingan".
 
 | Tarikh | Model | Rev | Cacat dengan rangka am | Ubahan | Ejaan betul sebelum → selepas |
 |---|---|---|---|---|---|
@@ -315,6 +416,7 @@ Setiap ubahan aturan (3.4–3.7) direkod di sini. Ujian pertama (26 Nov 2026, K3
 ## Belum selesai
 - v1.2, belum dibina: pembina kod bagi setiap model (kini contoh tulisan tangan `khas.py`); skrip ukuran rujukan daripada upload; skrip pembetulan 5b dan had toleransinya; semakan ejaan automatik (kini mata sahaja).
 - v1.2, bukti masih lemah: aturan 3.4–3.7 diuji pada satu kad (K3) dan satu ayat sahaja. Perlu diulang pada kad lain dan ayat pendek sebelum dianggap kukuh.
+- v1.2, belum diuji langsung: aturan 3.8–3.10 (FLUX 3 Image Klein, Qwen-Image-2512, GLM-Image). Perlu ujian kelayakan melalui Space (GPU, kuota harian); pengguna sebelum ini meminta CPU sahaja, jadi ujian ini menunggu kebenaran. `gen_hf_space.py` belum ada profil untuk tiga Space ini.
 - Calon v1.3, belum diuji: gambar rujukan sebagai input model (klein 4B dan Z-Image ada saluran input gambar dalam diffusers; ERNIE tiada).
 - Belum dibina: struktur Kad Gaya, pembina prompt, rekod QC, kemasan ikut kad, daftar design.
 - Skrip warna ikut peranan belum dibina; `finish.py` masih memaksa palet tetap.

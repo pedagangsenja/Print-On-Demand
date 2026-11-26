@@ -80,6 +80,7 @@ ROWS = [
      (dict(tag="LAPISAN 2", status="V1.2", title="3. Pembina prompt: satu isi, aturan ikut model",
            body=["Isi sama untuk semua model: Kad Gaya + Spesifikasi Teks (8 blok isi)",
                  "Cara menulis ikut aturan model; aturan tidak boleh menambah atau membuang ciri gaya",
+                 "7 model ada aturan: 4 sudah diuji (r1), 3 daripada sumber rasmi sahaja dan belum diuji (r0)",
                  "Model tanpa aturan sendiri: rangka am 9 bahagian (pembina v1.1)",
                  "Hitam putih sahaja; tiada negative prompt; tiada nama warna, hex, nombor atau nama font",
                  "Semak automatik sebelum jana; prompt yang gagal tidak dijana",
@@ -88,9 +89,12 @@ ROWS = [
            minis=[("klein 4B", "Satu perenggan prosa; satu ayat setiap baris; gaya ditulis terus selepas perkataan; had dalam satu ayat di hujung"),
                   ("Z-Image Turbo", "Huraian panjang seperti kapsyen; baris bernombor; had ditulis sebagai ayat positif"),
                   ("ERNIE Turbo", "Prompt mentah pendek + penambah prompt rasmi sekali (seed 42); hasil disemak sebelum jana"),
-                  ("MOSS + LoRA", "Satu objek JSON; satu butir dan satu kotak piksel bagi setiap baris")]),
+                  ("MOSS + LoRA", "Satu objek JSON; satu butir dan satu kotak piksel bagi setiap baris"),
+                  ("FLUX 3 Image Klein (r0, belum diuji)", "Kapsyen penuh satu perenggan + jadual kotak JSON grid 0–1000; penambah prompt dimatikan"),
+                  ("Qwen-Image-2512 (r0, belum diuji)", "Kurang 200 perkataan; setiap baris = kedudukan, perkataan dalam petikan, gaya"),
+                  ("GLM-Image (r0, belum diuji)", "Naratif bersambung tanpa senarai; setiap baris = kedudukan, fungsi, perkataan dalam petikan, gaya font")]),
       [("kad.py: bina() + semak() (Python)", "rangka am hitam putih (v1.1) + semakan automatik", PART),
-       ("khas.py (Python)", "4 aturan sebagai contoh tulisan tangan (K3 × ayat H)", PART),
+       ("khas.py (Python)", "7 aturan sebagai contoh tulisan tangan (K3 × ayat H); 4 sudah dijana", PART),
        ("Pembina kod ikut model", "jana prompt setiap model daripada kad (v1.2)", NO),
        ("gen.py: PROFIL", "profil setiap model dikunci", PART)])),
 
@@ -110,13 +114,16 @@ ROWS = [
                  "Model utama: MOSS dan ERNIE (12/12 pada S1–S6); klein 4B 6/12",
                  "Profil dikunci v1.2: klein 4B, Z-Image Turbo, ERNIE Turbo, MOSS + LoRA; setiap satu dengan aturan prompt sendiri",
                  "Masa setiap imej di CPU (log 26 Nov, bukti lemah): klein 85–118 s, Z-Image kira-kira 260 s, ERNIE 305–373 s, MOSS 337–392 s",
+                 "3 model tambahan melalui Space Hugging Face (GPU, kuota harian): FLUX 3 Image Klein, Qwen-Image-2512, GLM-Image; belum diuji",
+                 "Tidak dipilih: FLUX.1 schnell (3/30 ejaan betul), Chroma1-Flash (0/6); simpanan: Ovis-Image-7B",
                  "Seed tetap 42, 7, 123, 2024: laluan 1 = 2 seed, laluan 2 = 3–4",
                  "Satu model besar pada satu masa; semak RAM dan disk dahulu",
                  "Log lengkap setiap imej; imej mentah disimpan sebelum sesi tamat"],
            keys=["Kunci 3: model hanya untuk gaya yang ia lulus"]),
       [("gen_moss.py", "MOSS SFT + LoRA", OK),
        ("gen.py", "ERNIE, klein 4B, Z-Image, schnell, Chroma, Kandinsky", OK),
-       ("run_k6.py", "ujian 6 enjin, satu demi satu", OK), ("Kaggle GPU (GEN_DEVICE)", "banding CPU vs GPU", GPU)])),
+       ("run_k6.py", "ujian 6 enjin, satu demi satu", OK), ("Kaggle GPU (GEN_DEVICE)", "banding CPU vs GPU", GPU),
+       ("gen_hf_space.py", "profil Space untuk FLUX 3 Klein, Qwen-Image-2512, GLM-Image", NO)])),
 
     ((dict(title="5. QC", body=["Ejaan 100%, tiada teks rawak, tiada cacat", "9 ciri gaya (semak mata)",
                                 "Gagal: seed baharu (maks 4)"]),
@@ -218,6 +225,7 @@ ROWS = [
      (dict(title="Tukar model", body=["Standard v1.2 (v1 dipersetujui 25 Nov; v1.2 diluluskan pengguna 26 Nov): laluan 1–2, kemasan F1–F2. Belum dibina sepenuhnya.",
                                       "Ujian kelayakan seperti cadangan, sah untuk gabungan tetapan yang dikunci sahaja.",
                                       "Model baharu perlu aturan prompt sendiri, diuji banding dengan rangka am pada seed 42, 7, 123.",
+                                      "Menunggu ujian kelayakan: FLUX 3 Image Klein, Qwen-Image-2512, GLM-Image (aturan r0).",
                                       "Tahap bukti angka: lemah."]),
       [("gen.py + run_k6.py", "ujian kelayakan setiap enjin", OK),
        ("qc/<model>.json", "hasil → jadual model × gaya", PART)])),
@@ -335,7 +343,7 @@ def content():
 <h2>Aliran kerja lettering: 3 versi, 9 langkah</h2>
 <p class="fc-how"><b>Cara baca:</b> setiap baris satu langkah (1 → 9). Ke kanan: aliran lama → cadangan → standard terkini. Lajur <b>Alat</b> di sebelah setiap versi menunjukkan alat yang dipakai dan statusnya. Poin bertanda <b class="fc-t-s">oren</b> = susunan, <b class="fc-t-w">merah jambu</b> = warna.</p>
 {focus}
-<p class="pod-muted">Sumber: carta v1 (scripts/lettering_flowchart.py) dan docs/lettering-standard.md. Standard v1 dipersetujui 25 Nov 2026; v1.2 diluluskan pengguna 26 Nov 2026 (aturan prompt ikut model, kitaran QC, ukuran rujukan, pembetulan skrip); belum dibina sepenuhnya. Laluan 3–4 percubaan, F3 ditangguh. Status alat = keadaan 26 Nov 2026.</p>
+<p class="pod-muted">Sumber: carta v1 (scripts/lettering_flowchart.py) dan docs/lettering-standard.md. Standard v1 dipersetujui 25 Nov 2026; v1.2 diluluskan pengguna 26 Nov 2026 (aturan prompt untuk 7 model, kitaran QC, ukuran rujukan, pembetulan skrip); belum dibina sepenuhnya. Laluan 3–4 percubaan, F3 ditangguh. Status alat = keadaan 26 Nov 2026.</p>
 </div>
 <div class="fc-bar-top">
 <div class="fc-legend">{legend}</div>

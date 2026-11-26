@@ -9,6 +9,12 @@ satu prompt sama (kad.bina). Ditulis tangan oleh Claude 26 Nov 2026 daripada kaj
 - ernie: dokumen diffusers: penambah prompt (PE) hidup secara lalai; prompt mentah ringkas, PE yang kembangkan.
 - moss: panduan pengguna MOSS-Image + kad LoRA 8 langkah (dilatih dengan kapsyen JSON): susun atur JSON,
   kotak setiap baris dalam piksel berpusat (yxyx), kanvas 768x1024.
+Tambahan 26 Nov 2026 (rev r0, daripada sumber rasmi sahaja, BELUM diuji; langkah 3.8-3.10):
+- klein3 (FLUX 3 Image Klein): kad model + system_prompts.json penambah prompt rasmi: kapsyen penuh satu perenggan,
+  kemudian jadual kotak JSON (grid 0-1000, [y_min, x_min, y_max, x_max]); penambah prompt dimatikan.
+- qwen (Qwen-Image-2512): kad model + prompt_utils.py rasmi: kurang 200 perkataan; setiap teks = petikan + kedudukan + gaya.
+- glm (GLM-Image): kad model + prompt_utils.py rasmi: naratif bersambung tanpa senarai; hanya teks dalam petikan;
+  gaya visual dinyatakan; setiap teks = kedudukan, font, warna, fungsi.
 Guna: python3 khas.py  -> cetak semakan setiap prompt
 """
 import json
@@ -90,13 +96,84 @@ MOSS_LAYOUT = {
 }
 MOSS = json.dumps(MOSS_LAYOUT, ensure_ascii=False)
 
-PROMPT = {"klein4b": KLEIN, "zturbo": ZTURBO, "ernie": ERNIE_MENTAH, "moss": MOSS}
+W, H = 768, 1024
+
+
+def grid(b):
+    """Kotak MOSS (piksel, asalan tengah, yxyx) -> grid 0-1000 FLUX 3 Klein (asalan kiri atas, yxyx)."""
+    y0, x0, y1, x1 = b
+    return [round((y0 + H / 2) / H * 1000), round((x0 + W / 2) / W * 1000),
+            round((y1 + H / 2) / H * 1000), round((x1 + W / 2) / W * 1000)]
+
+
+_B = {i.get("text") or i["caption"]: i["bbox"] for i in MOSS_LAYOUT["items"]}
+KLEIN3_KAPSYEN = (
+    "Flat vector hand-lettering quote poster in black and white, portrait format. A solid black background "
+    "<background_1> fills the frame with wide empty margins. Five lines of white lettering are stacked in one "
+    "tight block in the center of the frame, tilted slightly so each line rises toward the right, with "
+    "neighbouring lines touching. At the top, a line of huge heavy condensed sans-serif capitals <En_Text_1>. "
+    "Directly below it, a line of large bold brush script <En_Text_2>. In the center, a small white rectangular "
+    "label <En_Text_3> with a cluster of short sparkle strokes on its left <sparkle_1> and on its right "
+    "<sparkle_2>. Below the label, a second line of bold brush script <En_Text_4>. At the bottom, the tallest "
+    "line, in heavy condensed sans-serif capitals <En_Text_5>. The poster holds only these five lines of "
+    "lettering, in pure white and pure black with flat fills and crisp edges."
+)
+KLEIN3_JADUAL = [
+    {"id": "background_1", "bbox": [0, 0, 1000, 1000], "desc": "A flat solid black field with no texture."},
+    {"id": "En_Text_1", "bbox": grid(_B["PATIENCE"]),
+     "desc": 'Huge heavy condensed bold sans-serif capitals in pure white reading "PATIENCE", flat vector.'},
+    {"id": "En_Text_2", "bbox": grid(_B["Builds"]),
+     "desc": 'Large bold flowing brush script in pure white with a big looping initial capital reading "Builds".'},
+    {"id": "sparkle_1", "bbox": grid(_B["Three short white sparkle strokes left of the label."]),
+     "desc": "Three short white sparkle strokes radiating outward."},
+    {"id": "En_Text_3", "bbox": grid(_B["WHAT"]),
+     "desc": 'Small solid white rectangular label carrying small bold black sans-serif capitals reading "WHAT".'},
+    {"id": "sparkle_2", "bbox": grid(_B["Three short white sparkle strokes right of the label."]),
+     "desc": "Three short white sparkle strokes radiating outward."},
+    {"id": "En_Text_4", "bbox": grid(_B["Hurry"]),
+     "desc": 'Large bold flowing brush script in pure white with a big looping initial capital reading "Hurry".'},
+    {"id": "En_Text_5", "bbox": grid(_B["BREAKS"]),
+     "desc": 'Huge heavy condensed bold sans-serif capitals in pure white reading "BREAKS", the tallest line.'},
+]
+KLEIN3 = KLEIN3_KAPSYEN + " " + json.dumps(KLEIN3_JADUAL, ensure_ascii=False)
+
+QWEN = (
+    'Typography poster design, flat vector hand-lettering, black and white, portrait. Solid black background '
+    'with wide empty margins. Five stacked lines of white lettering form one tight block in the center, tilted '
+    'slightly so each line rises to the right. At the top, the title word "PATIENCE" in huge heavy condensed '
+    'bold sans-serif capitals. Directly below it, "Builds" in large bold flowing brush script with a looping '
+    'initial capital. In the center, a small solid white rectangular label with the word "WHAT" in small bold '
+    'black sans-serif capitals, three short white sparkle strokes on its left and on its right. Below the '
+    'label, "Hurry" in the same bold brush script. At the bottom, "BREAKS" in the same heavy condensed '
+    'sans-serif capitals, the tallest line. Clean minimalist graphic design, flat fills, crisp edges, pure '
+    'black and white only. No other text, no people, no objects.'
+)
+
+GLM = (
+    'A graphic design poster in flat vector hand-lettering style, portrait format, printed in pure black and '
+    'white. The whole poster is a solid black surface with wide empty margins, and all lettering is flat white '
+    'print with crisp edges, arranged as five stacked lines in one tight block at the center that tilts '
+    'slightly so each line rises toward the right. At the top of the block, the main title reads "PATIENCE" in '
+    'huge heavy condensed bold sans-serif capital letters. Directly beneath it, the supporting line reads '
+    '"Builds" in large bold flowing brush script with a looping initial capital. At the center sits a small '
+    'solid white rectangular label, and the connecting word printed on it reads "WHAT" in small bold black '
+    'sans-serif capital letters, with three short white sparkle strokes as decoration on the left and on the '
+    'right of the label. Below the label, the second supporting line reads "Hurry" in the same bold brush '
+    'script. At the bottom, the closing title reads "BREAKS" in the same heavy condensed sans-serif capital '
+    'letters and is the tallest line of the poster. Only these five words appear on the poster, and the overall '
+    'look is clean, bold and minimal.'
+)
+
+PROMPT = {"klein4b": KLEIN, "zturbo": ZTURBO, "ernie": ERNIE_MENTAH, "moss": MOSS,
+          "klein3": KLEIN3, "qwen": QWEN, "glm": GLM}
 
 
 def petikan(model, prompt=None):
     """Teks yang diminta dilukis, ikut turutan dalam prompt."""
     if model == "moss" and prompt is None:
         return [i["text"] for i in MOSS_LAYOUT["items"] if "text" in i]
+    if model == "klein3" and prompt is None:
+        return re.findall(r'"([^"]+)"', KLEIN3_KAPSYEN) + [q for r in KLEIN3_JADUAL for q in re.findall(r'"([^"]+)"', r["desc"])]
     return re.findall(r'"([^"]+)"', prompt or PROMPT[model])
 
 
@@ -106,6 +183,16 @@ def semak(model, prompt=None):
     err = []
     if q != SPEC:
         err.append(f"petikan {q} tidak sama dengan Spesifikasi Teks")
+    if model == "klein3" and prompt is None:
+        ids = [r["id"] for r in KLEIN3_JADUAL]
+        if sorted(re.findall(r"<([^>]+)>", KLEIN3_KAPSYEN)) != sorted(ids) or len(set(ids)) != len(ids):
+            err.append("id dalam kapsyen tidak sama dengan id dalam jadual")
+        for r in KLEIN3_JADUAL:
+            y0, x0, y1, x1 = r["bbox"]
+            if not (0 <= y0 < y1 <= 1000 and 0 <= x0 < x1 <= 1000):
+                err.append(f"kotak {r['id']} di luar grid 0-1000")
+    if model == "qwen" and len((prompt or QWEN).split()) >= 200:
+        err.append("qwen: 200 perkataan atau lebih")
     return err
 
 
