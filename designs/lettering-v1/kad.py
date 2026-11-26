@@ -238,6 +238,7 @@ KAD = {
 # hiasan_kotak = hiasan yang ada kotak sendiri (MOSS, FLUX 3 Klein): pada = atas / bawah blok.
 # ukuran (piksel, kanvas 768x1024, lebar x tinggi): hanya K3 ada nilai contoh (khas.py, percubaan); kad lain pakai
 # lalai pembina sehingga ukuran rujukan diukur daripada upload.
+# rujukan = angka yang diukur skrip SK05 daripada gambar upload (sudut condong, ruang tepi); dipakai langkah 5b.
 _SANS = dict(penuh="heavy condensed bold sans-serif capitals", ringkas="heavy condensed sans-serif capitals")
 _K5 = dict(penuh="chunky bold hand-drawn capitals with a bouncy uneven baseline", ringkas="chunky hand-drawn capitals")
 BLOK = {
@@ -283,7 +284,9 @@ BLOK = {
         tiada=["gray", "shadow", "texture"], ada="flat fills, sharp edges, and a clean empty background",
         sama_lebar=False,
         ukuran=dict(utama=(608, 168), tertinggi=(624, 216), sokongan=(512, 168), penyambung=(224, 80),
-                    sisi=(72, 64))),
+                    sisi=(72, 64)),
+        # Diukur skrip SK05 daripada gambar upload IMG_5775 (salinan dashboard 236x354), 26 Nov 2026. Satu gambar.
+        rujukan=dict(condong_darjah=7.6, tepi_pct=13.6, sumber="SK05 pada IMG_5775")),
     "K4": dict(
         medium="typographic poster", gaya="vintage Victorian hand-lettered", latar_warna="solid black",
         latar_isi="tiny scattered white specks", tepi="a worn distressed print texture", bentuk="one tall column",

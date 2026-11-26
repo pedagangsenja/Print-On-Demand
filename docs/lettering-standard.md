@@ -347,7 +347,7 @@ Kuota: daripada jadual induk model dalam dashboard (2512 diukur 22–23 Nov; yan
 
 ### Peraturan langkau model (v1.2, arahan pengguna 26 Nov 2026)
 - **Turutan model (CPU):** MOSS → ERNIE Turbo → Z-Image Turbo → klein 4B. Asas: lulus QC dalam AI Image Test 2 (23/30, 21/30, 13/30, 7/30; bukti lemah). Tiga model Space GPU tidak dijalankan (keputusan pengguna 26 Nov 2026: tiada Space GPU).
-- **Langkau bila terlalu lama:** masa satu model melebihi 20 minit (muat turun) + 13 minit bagi setiap imej. 13 minit ialah kira-kira dua kali masa paling perlahan yang direkod (392 s, MOSS). Angka ini cadangan Claude; menunggu pengesahan pengguna.
+- **Langkau bila terlalu lama:** masa satu model melebihi 20 minit (muat turun) + 13 minit bagi setiap imej. 13 minit ialah kira-kira dua kali masa paling perlahan yang direkod (392 s, MOSS). Disahkan pengguna 26 Nov 2026.
 - **Langkau bila bermasalah:** gagal 3 cubaan berturut-turut (muat turun, RAM, ralat kod), prompt gagal semakan 3.11, atau kuota Space habis.
 - **Tindakan:** model itu dihentikan dan model seterusnya terus dijalankan. Model yang dilangkau tidak diulang dalam sesi yang sama kecuali diminta pengguna.
 - **Rekod:** `langkau.jsonl` dalam folder hasil (model, sebab, saat). Claude menulis dalam chat sebaik sahaja berlaku, dan sekali lagi dalam jadual akhir: model apa, sebab, dan berapa imej sempat siap.
@@ -435,7 +435,11 @@ Turutan semakan setiap imej: pintu wajib G1–G3 → ukur dan betulkan (5b) → 
 - **Ditangguh (berisiko):** membuang hiasan yang tidak diminta. Skrip boleh tersilap membuang titik huruf atau hiasan yang memang diminta.
 - **Tidak boleh dibetulkan skrip (masuk kitaran QC):** ejaan, perkataan berulang, bentuk huruf, nisbah saiz antara baris yang bertindih.
 - **Log:** ukuran sebelum, pembetulan yang dijalankan, ukuran selepas. Imej mentah asal tidak ditimpa; imej yang dibetulkan disimpan berasingan.
-- **Belum ditetapkan:** had toleransi setiap ukuran. Ia ditetapkan daripada ukuran upload dan ujian, bukan tekaan. Skrip belum dibina.
+- **Skrip (dibina 26 Nov 2026):** `designs/lettering-v1/skrip/betulkan.py` menjalankan SK01 → SK02 → SK03 → SK04 dan menulis `log_5b.jsonl`. Tiga pembetulan pertama digabung menjadi satu putaran + skala + alihan, supaya imej dilukis semula sekali sahaja.
+- **Angka rujukan:** diukur skrip SK05 daripada gambar upload dan disimpan pada kad (`kad.BLOK[..]["rujukan"]`). K3: condong 7.6°, ruang tepi 13.6% (IMG_5775, satu gambar). Kad lain belum diukur; tanpa sudut rujukan, SK01 tidak jalan.
+- **Had toleransi SEMENTARA (cadangan Claude, belum ditetapkan daripada ujian):** condong ±1.5°; ruang tepi ±2 mata peratus; kedudukan ±1.5% kanvas; kelabu rata 0.3% piksel. Menunggu pengesahan pengguna.
+- **Ujian (26 Nov 2026, tanpa jana baharu):** 12 imej K3H sedia ada (aturan model) dibetulkan; kesemuanya sampai ke condong 7.5–7.7° dan ruang tepi 13.2–13.7%, tiada dakwat menyentuh tepi. Semakan mata pada 4 imej: ejaan tidak berubah. Bukti lemah (satu kad).
+- **Had skrip:** SK04 tidak menyentuh kad yang memang ada bayang lembut (K1). Sudut diukur daripada garis dasar baris, bukan condong italik huruf.
 - Ruang tepi untuk cetak kekal urusan kemasan (langkah 6); pembetulan di sini hanya supaya imej mentah menepati kad.
 
 ## Langkah 6: Kemasan ikut kad
@@ -454,14 +458,16 @@ Skrip di sini ialah kerja SELEPAS jana (pembetulan 5b dan kemasan langkah 6). Al
 
 | ID | Skrip | Langkah | Tugas | Parameter daripada kad | Status (26 Nov 2026) |
 |---|---|---|---|---|---|
-| SK01 | Condong | 5b | Putar blok ke sudut rujukan kad | sudut condong | Belum dibina |
-| SK02 | Ruang tepi | 5b | Skala blok supaya ruang tepi sama dengan kad | ruang tepi (%) | Belum dibina |
-| SK03 | Kedudukan | 5b | Pusatkan blok pada kanvas | – | Belum dibina |
-| SK04 | Hitam putih bersih | 5b | Tukar kelabu dan tepi kabur kepada hitam dan putih tulen | – | Belum dibina |
-| SK05 | Ukuran rujukan | 1 | Ukur ruang tepi, sudut dan nisbah baris daripada gambar upload | – | Belum dibina |
-| SK06 | Vektor + saiz cetak (`finish.py`) | 6 | SVG induk, susun di tengah, PNG 300 DPI | ruang tepi, tekstur | Ada di cawangan `claude/dazzling-cannon-5wzn6h`; dicuba pada 1 imej K3H (SVG + 18×24 terhasil); palet masih tetap S1–S6 |
+| SK01 | Condong (`SK01_condong.py`) | 5b | Putar blok ke sudut rujukan kad | sudut condong | Dibina; diuji pada 12 imej K3H sedia ada |
+| SK02 | Ruang tepi (`SK02_ruang_tepi.py`) | 5b | Skala blok supaya ruang tepi sama dengan kad | ruang tepi (%) | Dibina; diuji pada 12 imej K3H sedia ada |
+| SK03 | Kedudukan (`SK03_kedudukan.py`) | 5b | Pusatkan blok pada kanvas | – | Dibina; diuji pada 12 imej K3H sedia ada |
+| SK04 | Hitam putih bersih (`SK04_hitam_putih.py`) | 5b | Tukar kelabu dan tepi kabur kepada hitam dan putih tulen | – | Dibina; diuji pada 12 imej K3H sedia ada |
+| SK05 | Ukuran (`SK05_ukur.py`) | 1, 5b | Ukur ruang tepi, kedudukan, sudut condong dan kelabu pada gambar upload atau imej mentah | – | Dibina; diuji pada 2 gambar upload (K3, K6) dan 24 imej K3H. Nisbah baris: anggaran sahaja (baris bertindih tidak dapat diasingkan) |
+| SK06 | Vektor + saiz cetak (`SK06_finish.py` + `styles.py`) | 6 | SVG induk, susun di tengah, PNG 300 DPI | ruang tepi, tekstur | Dibawa dari `claude/dazzling-cannon-5wzn6h` tanpa ubah kod; diuji pada 1 imej K3H selepas 5b (SVG + 18×24). Palet, ruang tepi dan tekstur masih tetap S1–S6, belum dibaca daripada kad |
 | SK07 | Warna C ikut peranan | 6 | Warnakan lapisan ikut peta peranan kad | peta warna | Belum dibina |
 | SK08 | Bayang ikut kad | 6 | Bayang 3D / lembut yang AI tidak jana (cth. K3) | arah dan tebal bayang | Belum dibina |
+
+Semua skrip di `designs/lettering-v1/skrip/`. Jalan 5b penuh: `python3 skrip/betulkan.py <kad> <folder keluar> <imej…> [--condong D] [--tepi P]` (satu folder keluar bagi setiap model). Ukur gambar upload: `python3 skrip/SK05_ukur.py <gambar>`.
 
 Empat skrip pembetulan (SK01–SK04) ialah set asas. Skrip lain ditambah hanya ikut kaedah di bawah.
 
@@ -521,13 +527,14 @@ Setiap ubahan aturan (3.4–3.10) direkod di sini. Ujian pertama (26 Nov 2026, K
 ## Belum selesai
 - v1.2, sudah dibina (26 Nov): pembina kod bagi tujuh model + semakan 3.11 (`pembina.py`, 3.13).
 - v1.2, sudah ditulis (26 Nov): kaedah model baharu (3.12), daftar skrip + kaedah skrip baharu, peraturan langkau model (`run_v12.sh`).
-- v1.2, belum dibina: skrip SK01–SK05, SK07, SK08 (lihat Daftar skrip) dan had toleransi 5b; `finish.py` (SK06) belum dibawa ke cawangan ini; semakan ejaan automatik (kini mata sahaja).
-- v1.2, belum dibuktikan pada imej: hasil pembina kod (3.13). Had masa langkau menunggu pengesahan pengguna.
+- v1.2, sudah dibina (26 Nov): SK01–SK05 dan `betulkan.py`; SK06 (`finish.py`) dibawa ke cawangan ini.
+- v1.2, belum dibina: SK07 (warna ikut peranan), SK08 (bayang ikut kad); kemasan belum membaca palet, ruang tepi dan tekstur daripada kad; semakan ejaan automatik (kini mata sahaja).
+- v1.2, belum disahkan: had toleransi 5b (sementara); sudut rujukan K1 dan K6 belum diukur; hasil pembina kod (3.13) belum dibuktikan pada imej.
 - v1.2, bukti masih lemah: aturan 3.4–3.7 diuji pada satu kad (K3) dan satu ayat sahaja. Perlu diulang pada kad lain dan ayat pendek sebelum dianggap kukuh.
 - v1.2, belum diuji langsung: aturan 3.8–3.10 (FLUX 3 Image Klein, Qwen-Image-2512, GLM-Image). Perlu ujian kelayakan melalui Space (GPU, kuota harian); pengguna sebelum ini meminta CPU sahaja, jadi ujian ini menunggu kebenaran. `gen_hf_space.py` belum ada profil untuk tiga Space ini.
 - Calon v1.3, belum diuji: gambar rujukan sebagai input model (klein 4B dan Z-Image ada saluran input gambar dalam diffusers; ERNIE tiada).
 - Belum dibina: struktur Kad Gaya, pembina prompt, rekod QC, kemasan ikut kad, daftar design.
-- Skrip warna ikut peranan belum dibina; `finish.py` masih memaksa palet tetap.
+- Skrip warna ikut peranan (SK07) belum dibina; `SK06_finish.py` masih memaksa palet tetap.
 - Prompt hitam putih K2, K3 dan K4 (pembina v1.1) belum diuji pada model utama. K3 hitam putih: 2 imej GLM-Image sahaja (26 Nov), kedua-dua gagal QC (perkataan berulang).
 - Ujian banding gaya yang sama: hitam putih lawan berwarna.
 - Ujian laluan 3 pada satu ayat ~12 perkataan.
