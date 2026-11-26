@@ -2,15 +2,18 @@
 
 5 kad daripada upload pengguna 25 Nov 2026 (design orang lain = rujukan gaya sahaja; ayat, susun atur tepat,
 tandatangan dan logo tidak disalin). Setiap ciri = pasangan semakan QC (BM, ya / tidak) + frasa prompt (EN).
-Warna dalam prompt guna nama sahaja; kod hex dipaksa kemudian semasa kemasan.
+Peraturan v1 (keputusan pengguna 26 Nov 2026): AI jana HITAM PUTIH dahulu (dakwat putih atas latar hitam).
+Warna C diletak oleh skrip kemasan selepas QC ejaan, ayat dan gaya lulus. Mod lalai pembina = "hp".
+Mod "warna" (nama warna dalam prompt) dikekalkan hanya untuk mengulang ujian lama (prompts.json, AI Image Test 2).
 
-Guna: python3 kad.py prompts.json   -> tulis 15 prompt (5 kad x 3 ayat) + semakan automatik
+Guna: python3 kad.py prompts_hp.json          -> prompt hitam putih (lalai) + semakan automatik
+      python3 kad.py prompts.json warna       -> prompt berwarna lama (pembina v1.0)
 """
 import json
 import re
 import sys
 
-VERSI_PEMBINA = "v1.0"
+VERSI_PEMBINA = "v1.1"
 TAIL = ("No other text, no letters except the quoted words, no signature, no watermark, no logo, "
         "no frame, no border, no mockup, flat graphic artwork.")
 
@@ -195,9 +198,35 @@ ORD = ["first", "second", "third", "fourth", "fifth", "sixth"]
 LABEL = {"utama": "large", "sokongan": "medium", "penyambung": "small"}
 
 
-def bina(kid, aid, drop=()):
-    """Rangka 9 bahagian. Bentuk huruf setiap peranan diterangkan sekali; setiap baris hanya membawa label peranan."""
+WARNA_LAIN = re.compile(r"\b(?:(?:golden|mustard|dark|light|pale|warm|deep|bright|antique|charcoal) )*"
+                        r"(yellow|gold|golden|mustard|cream|ivory|beige|gray|grey|red|orange|pink|blue|navy|green|"
+                        r"teal|purple|brown|tan|silver)\b", re.I)
+
+
+def hitam_putih(teks, k):
+    """Tukar frasa kad kepada hitam putih: semua dakwat = white, latar = black, tiada kelabu, tiada bayang."""
+    teks = re.sub(r",? with an? [a-z ]*\b(?:gray|grey)\b[a-z ]*shadow", "", teks)
+    teks = re.sub(r"Only [^.]*\.\s*", "", teks)
+    nama = {w[2] for w in k["warna"]["dakwat"]} | {k["warna"]["latar"][2]}
+    for n in sorted(nama - {"white", "black"}, key=len, reverse=True):
+        ganti = "black" if "black" in n else "white"
+        teks = teks.replace(n, ganti).replace(n.capitalize(), ganti.capitalize())
+    teks = WARNA_LAIN.sub("white", teks)
+    return re.sub(r"\b(white|black)(?:,? (?:and )?\1\b)+", r"\1", teks, flags=re.I)
+
+
+def bina(kid, aid, drop=(), mod="hp"):
+    """Rangka 9 bahagian. Bentuk huruf setiap peranan diterangkan sekali; setiap baris hanya membawa label peranan.
+    mod="hp" (lalai): hitam putih sahaja. mod="warna": nama warna kad masuk prompt (pembina v1.0, ujian lama)."""
     k, a = KAD[kid], AYAT[aid]
+    if mod == "hp":
+        k = dict(k, huruf={r: (kes_, hitam_putih(f, k), "black" if w == "black" else "white")
+                           for r, (kes_, f, w) in k["huruf"].items()},
+                 **{f: hitam_putih(k[f], k) for f in ("medium", "latar", "susunan", "hierarki", "hiasan", "margin",
+                                                      "larangan")})
+        if "on black only" not in k["larangan"].lower():  # kad satu dakwat sudah ada had ini; prompt kekal seperti diuji
+            k["larangan"] = (k["larangan"].strip() + " Black and white only, no gray" +
+                             ("." if "no shadow" in k["larangan"].lower() else ", no shadow.")).strip()
     n = len(a["baris"])
     used = [r for r in ("utama", "sokongan", "penyambung") if any(r == b[1] for b in a["baris"])]
     gaya = " ".join(f"{LABEL[r].capitalize()} words: {k['huruf'][r][1]}" +
@@ -215,8 +244,10 @@ def bina(kid, aid, drop=()):
     return " ".join(v for n, v in parts if n not in drop), quotes
 
 
-def semak(prompt, quotes, spec):
+def semak(prompt, quotes, spec, mod="hp"):
     err = []
+    if mod == "hp" and WARNA_LAIN.search(re.sub(r'"[^"]*"|no gray', "", prompt)):
+        err.append("ada nama warna selain black / white: " + WARNA_LAIN.search(re.sub(r'"[^"]*"|no gray', "", prompt)).group(0))
     for q in quotes:
         if prompt.count(f'"{q}"') != 1:
             err.append(f"petikan {q!r} bukan sekali")
@@ -229,14 +260,15 @@ def semak(prompt, quotes, spec):
     return err
 
 
-def main(out):
+def main(out, mod="hp"):
     rows = []
     for kid in KAD:
         for aid in AYAT:
-            p, q = bina(kid, aid)
-            e = semak(p, q, AYAT[aid]["ayat"])
+            p, q = bina(kid, aid, mod=mod)
+            e = semak(p, q, AYAT[aid]["ayat"], mod)
             rows.append(dict(id=f"{kid}{aid}", kad=kid, ayat=aid, laluan=AYAT[aid]["laluan"], prompt=p, petikan=q,
-                             kata=len(p.split()), pembina=VERSI_PEMBINA, w=768, h=1024, semak=e or "lulus"))
+                             kata=len(p.split()), pembina=VERSI_PEMBINA if mod == "hp" else "v1.0", mod=mod,
+                             w=768, h=1024, semak=e or "lulus"))
             if e:
                 print(kid, aid, e)
     json.dump(rows, open(out, "w"), indent=1, ensure_ascii=False)
@@ -244,4 +276,4 @@ def main(out):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1])
+    main(sys.argv[1], sys.argv[2] if len(sys.argv) > 2 else "hp")

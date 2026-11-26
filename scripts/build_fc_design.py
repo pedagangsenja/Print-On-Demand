@@ -78,10 +78,11 @@ ROWS = [
      (dict(tag="LAPISAN 2", status="DIKEMAS KINI", title="3. Pembina prompt (kod)",
            body=["Kad + Spesifikasi Teks yang sama → prompt yang sama",
                  "Rangka tetap 9 bahagian; had token setiap model + turutan potong",
+                 "Hitam putih sahaja: tiada nama warna dalam prompt (pembina v1.1, 26 Nov)",
                  "Semak automatik: petikan sekali, sama dengan Spesifikasi Teks, tiada hex / nombor / nama font",
                  "Profil model: format, pembalut, penambah prompt; format T5 diuji A/B dahulu",
                  "Syarat pakai: hasilkan semula S1–S6 tidak lebih buruk"]),
-      [("kad.py: bina() + semak() (Python)", "prompt + semakan automatik", PART),
+      [("kad.py: bina() + semak() (Python)", "prompt hitam putih (v1.1) + semakan automatik", PART),
        ("gen.py: PROFIL", "profil setiap model dikunci", PART)])),
 
     ((dict(title="4. Jana", body=["MOSS SFT + LoRA 8 langkah", "Text-to-image penuh, 768×1024", "2 seed (CPU)"],
@@ -95,7 +96,8 @@ ROWS = [
       [("MOSS-Image, ERNIE-Image-Turbo", "keluarga LLM", OK), ("FLUX.2 klein 4B, Z-Image-Turbo", "keluarga LLM", OK),
        ("FLUX.1 schnell, Chroma", "keluarga T5", OK), ("diffusers (Python)", "enjin", OK)]),
      (dict(status="DIKEMAS KINI", title="4. Jana",
-           body=["Tetapan dikunci dalam profil model; enjin diffusers",
+           body=["Jana hitam putih dahulu: dakwat putih atas latar hitam, tiada warna lain",
+                 "Tetapan dikunci dalam profil model; enjin diffusers",
                  "Model utama: MOSS dan ERNIE (12/12 pada S1–S6); klein 4B 6/12",
                  "Seed tetap 42, 7, 123, 2024: laluan 1 = 2 seed, laluan 2 = 3–4",
                  "Satu model besar pada satu masa; semak RAM dan disk dahulu",
@@ -115,10 +117,11 @@ ROWS = [
            keys=["Kunci 2: QC sama untuk semua model", "Kunci 5: peraturan ulang"]),
       [("RapidOCR", "saring ejaan", TESTED), ("Claude", "semak mata + ayat penegas", OK)]),
      (dict(tag="LAPISAN 3", status="DIKEMAS KINI", title="5. QC ikut kad",
-           body=["3 pintu wajib; ejaan huruf demi huruf ikut Spesifikasi Teks; OCR hanya menanda",
+           body=["QC pada imej hitam putih dahulu: ejaan, ayat, gaya",
+                 "3 pintu wajib; ejaan huruf demi huruf ikut Spesifikasi Teks; OCR hanya menanda",
                  "Ciri kad ≥ 7/8 + ciri teras wajib; banding dengan upload dan imej sauh",
                  "Ciri sejagat: boleh dibaca kecil, tiada teks terpotong, margin cukup",
-                 "QC dua kali: imej mentah dan selepas kemasan",
+                 "QC dua kali: imej mentah hitam putih, dan selepas warna + kemasan",
                  "Ulang ikut jenis gagal (maks 4) → model sandaran → pendekkan ayat → lapor"],
            keys=["Kunci 2: QC sama untuk semua model", "Kunci 5: peraturan ulang"]),
       [("Claude + helaian semakan", "3 pintu, ciri kad ≥ 7/8", OK),
@@ -137,12 +140,14 @@ ROWS = [
       [("finish.py", "F1 / F2; paksa palet C dan margin", OK), ("Alat F3 raster", "belum dipilih", NO),
        ("Skrip gabung baris font", "laluan 3–4", NO)]),
      (dict(tag="LAPISAN 4", status="DIKEMAS KINI", title="6. Kemasan ikut kad",
-           body=["Parameter daripada kad: margin, tekstur, bilangan dakwat, butiran halus",
+           body=["Bermula hanya selepas QC hitam putih lulus",
+                 "Parameter daripada kad: margin, tekstur, bilangan dakwat, butiran halus",
                  "Semak automatik: bilangan lapisan dan dakwat yang hilang",
-                 "Warna ikut peranan: 1 imej → beberapa warna C", "Seed tekstur berbeza setiap design",
+                 "Warna C diletak oleh skrip ikut peranan: 1 imej → beberapa warna C",
+                 "Seed tekstur berbeza setiap design",
                  "Simpan SVG induk; PNG besar dijana semula bila perlu"],
            minis=[("F1: v1", "Vektor rata"), ("F2: v1", "Rata + tekstur"), ("F3: ditangguh", "Raster; belum wujud")],
-           keys=["Kunci 4: skrip paksa warna, margin, tekstur"]),
+           keys=["Kunci 4: AI jana hitam putih; skrip letak warna, margin, tekstur selepas QC lulus"]),
       [("finish.py", "F1 / F2; palet, margin dan tekstur masih tetap dalam skrip", PART),
        ("Kemasan ikut kad (Python)", "baca warna, margin dan tekstur daripada kad", NO)])),
 
@@ -202,7 +207,7 @@ ROWS = [
 
 TONE_LABEL = {"ok": "ada", "warn": "separuh", "bad": "belum"}
 HEAD = [("Sedia ada", "S1–S6 · Lettering P9", ""), ("Cadangan pertama", "4 lapisan · 5 kunci", ""),
-        ("Standard v1", "aliran terkini · 25 Nov", "TERKINI")]
+        ("Standard v1", "aliran terkini · 26 Nov", "TERKINI")]
 
 
 # Susunan (layout huruf) dan warna: dua faktor utama design; ditonjolkan dalam jadual.
