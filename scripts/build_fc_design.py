@@ -1,6 +1,6 @@
-"""Tab FC > Design dalam dashboard: carta aliran lettering v1 (9 langkah x 3 lajur) + lajur Alat bagi setiap lajur.
+"""Tab FC > Design dalam dashboard: carta aliran lettering v1.2 (9 langkah x 3 lajur) + lajur Alat bagi setiap lajur.
 
-Sumber isi: scripts/lettering_flowchart.py dan docs/lettering-standard.md (cawangan great-sagan / funny-goldberg, 25 Nov 2026).
+Sumber isi: scripts/lettering_flowchart.py dan docs/lettering-standard.md (v1: 25 Nov 2026; lajur ketiga dikemas kini ke v1.2, 26 Nov 2026).
 Status alat = keadaan 25 Nov 2026 (bukti: designs/lettering-v1/*, scripts/lettering/*, data/export/setup/*.json).
 
 Guna: python3 scripts/build_fc_design.py <index.html> <folder keluar>
@@ -17,7 +17,7 @@ TESTED = ("diuji 24 Nov", "warn")
 GPU = ("belum diuji", "warn")
 
 COLS = [("Sedia ada: S1–S6 (Lettering P9)", "fc-c1"), ("Cadangan pertama: 4 lapisan, 5 kunci", "fc-c2"),
-        ("Standard v1: aliran terkini", "fc-c3")]
+        ("Standard v1.2: aliran terkini", "fc-c3")]
 
 # Setiap baris: (sedia ada, alat), (cadangan pertama, alat), (standard v1, alat)
 ROWS = [
@@ -35,10 +35,12 @@ ROWS = [
                  "1c isi kad 16 medan; setiap medan = semakan QC (ya / tidak) + frasa prompt",
                  "2–3 ciri teras wajib lulus; unsur berisiko; senarai jangan salin; julat panjang ayat",
                  "Warna C berasingan: peranan + nama warna untuk prompt",
+                 "Ukuran rujukan (v1.2): nisbah tinggi baris, ruang tepi, saiz label dan sudut condong diukur daripada upload, bukan diteka",
                  "1d anda luluskan kad (~2 minit); 1e imej bukti (ayat pendek, 2 seed) jadi imej sauh"],
            keys=["Kunci 1: Kad Gaya satu-satunya sumber gaya"]),
       [("Tab Daftar S/C", "1a simpan rujukan, 1b semak pendua", OK),
        ("kad.py (Python)", "Kad Gaya K1–K6, ciri QC + frasa prompt", PART),
+       ("Skrip ukuran rujukan (Python)", "ukur upload, simpan angka dalam kad (v1.2)", NO),
        ("Anda", "1d luluskan kad", OK), ("gen_moss.py / gen.py", "1e imej bukti, 2 seed", OK)])),
 
     ((dict(title="2. Ayat", body=["3–7 perkataan, semak trademark", "Tetapkan baris dan perkataan utama"],
@@ -75,14 +77,21 @@ ROWS = [
            minis=[("Keluarga LLM", "MOSS, klein, Z-Image, ERNIE: prompt penuh"),
                   ("Keluarga T5", "schnell, Chroma: ringkas, teks di depan")]),
       [("Pembina prompt (Python)", "dibina sebagai kad.py dalam v1", PART)]),
-     (dict(tag="LAPISAN 2", status="DIKEMAS KINI", title="3. Pembina prompt (kod)",
-           body=["Kad + Spesifikasi Teks yang sama → prompt yang sama",
-                 "Rangka tetap 9 bahagian; had token setiap model + turutan potong",
-                 "Hitam putih sahaja: tiada nama warna dalam prompt (pembina v1.1, 26 Nov)",
-                 "Semak automatik: petikan sekali, sama dengan Spesifikasi Teks, tiada hex / nombor / nama font",
-                 "Profil model: format, pembalut, penambah prompt; format T5 diuji A/B dahulu",
-                 "Syarat pakai: hasilkan semula S1–S6 tidak lebih buruk"]),
-      [("kad.py: bina() + semak() (Python)", "prompt hitam putih (v1.1) + semakan automatik", PART),
+     (dict(tag="LAPISAN 2", status="V1.2", title="3. Pembina prompt: satu isi, aturan ikut model",
+           body=["Isi sama untuk semua model: Kad Gaya + Spesifikasi Teks (8 blok isi)",
+                 "Cara menulis ikut aturan model; aturan tidak boleh menambah atau membuang ciri gaya",
+                 "Model tanpa aturan sendiri: rangka am 9 bahagian (pembina v1.1)",
+                 "Hitam putih sahaja; tiada negative prompt; tiada nama warna, hex, nombor atau nama font",
+                 "Semak automatik sebelum jana; prompt yang gagal tidak dijana",
+                 "Aturan diubah hanya melalui kitaran QC, satu ubahan setiap pusingan; direkod dalam Catatan pembaikan",
+                 "Bukti lemah (K3 × 1 ayat × 3 seed, 26 Nov): ejaan betul 6/12 dengan rangka am, 11/12 dengan aturan model"],
+           minis=[("klein 4B", "Satu perenggan prosa; satu ayat setiap baris; gaya ditulis terus selepas perkataan; had dalam satu ayat di hujung"),
+                  ("Z-Image Turbo", "Huraian panjang seperti kapsyen; baris bernombor; had ditulis sebagai ayat positif"),
+                  ("ERNIE Turbo", "Prompt mentah pendek + penambah prompt rasmi sekali (seed 42); hasil disemak sebelum jana"),
+                  ("MOSS + LoRA", "Satu objek JSON; satu butir dan satu kotak piksel bagi setiap baris")]),
+      [("kad.py: bina() + semak() (Python)", "rangka am hitam putih (v1.1) + semakan automatik", PART),
+       ("khas.py (Python)", "4 aturan sebagai contoh tulisan tangan (K3 × ayat H)", PART),
+       ("Pembina kod ikut model", "jana prompt setiap model daripada kad (v1.2)", NO),
        ("gen.py: PROFIL", "profil setiap model dikunci", PART)])),
 
     ((dict(title="4. Jana", body=["MOSS SFT + LoRA 8 langkah", "Text-to-image penuh, 768×1024", "2 seed (CPU)"],
@@ -99,6 +108,8 @@ ROWS = [
            body=["Jana hitam putih dahulu: dakwat putih atas latar hitam, tiada warna lain",
                  "Tetapan dikunci dalam profil model; enjin diffusers",
                  "Model utama: MOSS dan ERNIE (12/12 pada S1–S6); klein 4B 6/12",
+                 "Profil dikunci v1.2: klein 4B, Z-Image Turbo, ERNIE Turbo, MOSS + LoRA; setiap satu dengan aturan prompt sendiri",
+                 "Masa setiap imej di CPU (log 26 Nov, bukti lemah): klein 85–118 s, Z-Image kira-kira 260 s, ERNIE 305–373 s, MOSS 337–392 s",
                  "Seed tetap 42, 7, 123, 2024: laluan 1 = 2 seed, laluan 2 = 3–4",
                  "Satu model besar pada satu masa; semak RAM dan disk dahulu",
                  "Log lengkap setiap imej; imej mentah disimpan sebelum sesi tamat"],
@@ -122,9 +133,14 @@ ROWS = [
                  "Ciri kad ≥ 7/8 + ciri teras wajib; banding dengan upload dan imej sauh",
                  "Ciri sejagat: boleh dibaca kecil, tiada teks terpotong, margin cukup",
                  "QC dua kali: imej mentah hitam putih, dan selepas warna + kemasan",
-                 "Ulang ikut jenis gagal (maks 4) → model sandaran → pendekkan ayat → lapor"],
-           keys=["Kunci 2: QC sama untuk semua model", "Kunci 5: peraturan ulang"]),
+                 "Kitaran QC (v1.2): cacat pada satu seed = tukar seed, prompt tidak diubah",
+                 "Cacat sama pada 2 daripada 3 seed = reka semula prompt model itu, satu ubahan setiap pusingan, seed sama",
+                 "Had 2 pusingan → tukar model → pendekkan ayat → lapor; pembaikan berjaya ditulis balik ke aturan model",
+                 "5b Pembetulan skrip (v1.2), selepas 3 pintu lulus: condong, ruang tepi, kedudukan, hitam putih bersih",
+                 "5b hanya jalan bila ukuran tersasar daripada ukuran rujukan kad; ejaan dan bentuk huruf mesti jana semula"],
+           keys=["Kunci 2: QC sama untuk semua model", "Kunci 5: kitaran QC tetap; pembetulan skrip bila perlu sahaja"]),
       [("Claude + helaian semakan", "3 pintu, ciri kad ≥ 7/8", OK),
+       ("Skrip pembetulan 5b (Python)", "ukur, betulkan, ukur semula; had toleransi belum ditetapkan", NO),
        ("RapidOCR", "hanya menanda (skor 0.33–0.88 pada ejaan betul)", TESTED),
        ("qc/<model>.json", "rekod QC setiap imej", PART)])),
 
@@ -156,10 +172,12 @@ ROWS = [
      (dict(title="7. Anda lulus atau tolak", body=["~5 minit"]),
       [("Anda", "~5 minit", OK)]),
      (dict(status="DIKEMAS KINI", title="7. Anda lulus atau tolak",
-           body=["Papar upload, imej sauh dan hasil sebelah-menyebelah + skor QC",
-                 "Sebab tolak daripada senarai tetap; disalur balik ke kad, jadual model × gaya atau ulangan",
-                 "3 titik kelulusan: kad, contoh pertama laluan 3–4, hasil akhir", "Had bilangan imej setiap helaian"]),
-      [("Anda", "3 titik kelulusan", OK), ("Paparan sebelah-menyebelah", "upload, imej sauh, hasil + skor QC", NO),
+           body=["Mata anda pintu terakhir (v1.2): imej lulus QC tetapi nampak buruk = gagal",
+                 "Papar upload, imej sauh dan hasil sebelah-menyebelah + skor QC; anda pilih daripada satu helaian",
+                 "Sebab tolak daripada senarai tetap; disalur balik ke kad, aturan model, jadual model × gaya atau ulangan",
+                 "4 titik kelulusan: kad, contoh pertama laluan 3–4, hitam putih lulus QC, hasil akhir berwarna",
+                 "Had bilangan imej setiap helaian"]),
+      [("Anda", "4 titik kelulusan", OK), ("Paparan sebelah-menyebelah", "upload, imej sauh, hasil + skor QC", NO),
        ("Tab AI Image Test / Daftar S/C", "pilih A atau SNC selepas setiap jana", OK)])),
 
     ((dict(title="8. Simpan dalam S&C", body=["Nama, nota, imej contoh, imej asal, prompt terisi"],
@@ -197,8 +215,9 @@ ROWS = [
                                       "Setiap gaya × ayat pendek dan sederhana × 2 seed.",
                                       "Lulus: ≥ 90% imej ejaan betul, gaya ≥ 7/8, tiada teks liar."]),
       [("Jadual model × gaya", "", NO)]),
-     (dict(title="Tukar model", body=["Standard v1 (25 Nov, dipersetujui pengguna): laluan 1–2, kemasan F1–F2. Belum dibina.",
+     (dict(title="Tukar model", body=["Standard v1.2 (v1 dipersetujui 25 Nov; v1.2 diluluskan pengguna 26 Nov): laluan 1–2, kemasan F1–F2. Belum dibina sepenuhnya.",
                                       "Ujian kelayakan seperti cadangan, sah untuk gabungan tetapan yang dikunci sahaja.",
+                                      "Model baharu perlu aturan prompt sendiri, diuji banding dengan rangka am pada seed 42, 7, 123.",
                                       "Tahap bukti angka: lemah."]),
       [("gen.py + run_k6.py", "ujian kelayakan setiap enjin", OK),
        ("qc/<model>.json", "hasil → jadual model × gaya", PART)])),
@@ -207,7 +226,7 @@ ROWS = [
 
 TONE_LABEL = {"ok": "ada", "warn": "separuh", "bad": "belum"}
 HEAD = [("Sedia ada", "S1–S6 · Lettering P9", ""), ("Cadangan pertama", "4 lapisan · 5 kunci", ""),
-        ("Standard v1", "aliran terkini · 26 Nov", "TERKINI")]
+        ("Standard v1.2", "aliran terkini · 26 Nov", "TERKINI")]
 
 
 # Susunan (layout huruf) dan warna: dua faktor utama design; ditonjolkan dalam jadual.
@@ -316,7 +335,7 @@ def content():
 <h2>Aliran kerja lettering: 3 versi, 9 langkah</h2>
 <p class="fc-how"><b>Cara baca:</b> setiap baris satu langkah (1 → 9). Ke kanan: aliran lama → cadangan → standard terkini. Lajur <b>Alat</b> di sebelah setiap versi menunjukkan alat yang dipakai dan statusnya. Poin bertanda <b class="fc-t-s">oren</b> = susunan, <b class="fc-t-w">merah jambu</b> = warna.</p>
 {focus}
-<p class="pod-muted">Sumber: carta v1 (scripts/lettering_flowchart.py) dan docs/lettering-standard.md, 25 Nov 2026. Standard v1 dipersetujui 25 Nov; belum dibina sepenuhnya. Laluan 3–4 percubaan, F3 ditangguh. Status alat = keadaan 25 Nov 2026.</p>
+<p class="pod-muted">Sumber: carta v1 (scripts/lettering_flowchart.py) dan docs/lettering-standard.md. Standard v1 dipersetujui 25 Nov 2026; v1.2 diluluskan pengguna 26 Nov 2026 (aturan prompt ikut model, kitaran QC, ukuran rujukan, pembetulan skrip); belum dibina sepenuhnya. Laluan 3–4 percubaan, F3 ditangguh. Status alat = keadaan 26 Nov 2026.</p>
 </div>
 <div class="fc-bar-top">
 <div class="fc-legend">{legend}</div>

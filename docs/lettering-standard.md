@@ -1,6 +1,6 @@
 # Standard Lettering v1.2 (v1: 25 Nov 2026; v1.2: 26 Nov 2026)
 
-Status: v1 dipersetujui pengguna 25 Nov 2026; rombakan v1.2 diarahkan pengguna 26 Nov 2026; **belum dibina** (lihat "Belum selesai"). Liputan: laluan 1–2 (ayat 1–8 perkataan), kemasan F1–F2. Laluan 3–4 = percubaan (belum diuji); F3 ditangguh.
+Status: v1 dipersetujui pengguna 25 Nov 2026; v1.2 diluluskan pengguna sebagai standard 26 Nov 2026 (menggantikan v1); **belum dibina** (lihat "Belum selesai"). Liputan: laluan 1–2 (ayat 1–8 perkataan), kemasan F1–F2. Laluan 3–4 = percubaan (belum diuji); F3 ditangguh.
 
 ## Apa berubah dalam v1.2
 1. **Prompt ikut model** (langkah 3): isi gaya tetap daripada Kad; cara menulis berbeza bagi setiap model (3.4 klein 4B, 3.5 Z-Image Turbo, 3.6 ERNIE Turbo, 3.7 MOSS).
