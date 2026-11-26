@@ -24,6 +24,7 @@ for e1 in ${@:-moss ernie zturbo klein4b}; do
     baki=$(( HAD_SAAT - ($(date +%s) - t0) )); [ $baki -le 0 ] && { rc=124; break; }
     if [ -n "${PERINTAH_UJI:-}" ]; then timeout "$baki" bash -c "$PERINTAH_UJI" _ "$e1"   # ujian skrip ini sahaja
     elif [ "$e1" = moss ]; then timeout "$baki" python3 "$HERE/gen_moss.py" $IDS
+    elif [ "$e1" = klein3 ]; then timeout "$baki" python3 "$HERE/gen_flux3.py" $IDS
     else timeout "$baki" python3 "$HERE/gen.py" "$e1" $IDS; fi
     rc=$?; [ $rc -eq 0 ] && break; [ $rc -eq 124 ] && break
     echo "== $e1 gagal rc=$rc, cubaan $cubaan/3"; sleep "${JEDA:-30}"
