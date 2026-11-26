@@ -31,6 +31,11 @@ AYAT = {
     "W": dict(nama="sederhana", laluan=2, ayat="Winners Act While Others Wait",
               baris=[("Winners", "utama"), ("Act", "sokongan"), ("While", "penyambung"), ("Others", "sokongan"),
                      ("Wait", "utama")]),
+    # 26 Nov 2026: ayat dipilih Claude (pengguna serah pilihan) untuk ujian 6 model pada kad K3 (id K3H).
+    # Kesukaran: 5 perkataan, 1 perkataan 7+ huruf (Patience, dijadikan utama), tiada perkataan berulang.
+    "H": dict(nama="sederhana", laluan=2, ayat="Patience Builds What Hurry Breaks",
+              baris=[("Patience", "utama"), ("Builds", "sokongan"), ("What", "penyambung"), ("Hurry", "sokongan"),
+                     ("Breaks", "utama")]),
 }
 
 # Langkah 1: Kad Gaya. huruf[peranan] = (kes, frasa bentuk huruf, nama warna untuk prompt)
