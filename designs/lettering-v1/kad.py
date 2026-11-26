@@ -32,7 +32,7 @@ AYAT = {
 # Langkah 1: Kad Gaya. huruf[peranan] = (kes, frasa bentuk huruf, nama warna untuk prompt)
 KAD = {
     "K1": dict(
-        nama="Skrip swash tebal bertaut (putih atas hitam)", ref="IMG_5818", snc="baharu",
+        nama="Skrip swash tebal bertaut (putih atas hitam)", ref="IMG_5818", snc="S007 + C003 (didaftar 26 Nov 2026)",
         kelas="F2", dakwat=1, ruang_tepi=14, tekstur="grain halus", julat="4-8 perkataan",
         warna=dict(latar=("hitam", "#0c0c0c", "black"), dakwat=[("putih", "#f2f2ee", "white")]),
         medium="Bold hand-lettered script typography poster, portrait.",
@@ -56,7 +56,7 @@ KAD = {
             ("Baris rapat dan bertindih / bertaut", False),
             ("Bayang lembut di bawah garisan huruf", False)]),
     "K2": dict(
-        nama="Blok sans pekat lusuh + jalur kuning", ref="IMG_5792", snc="baharu",
+        nama="Blok sans pekat lusuh + jalur kuning", ref="IMG_5792", snc="S008 + C007 (didaftar 26 Nov 2026)",
         kelas="F2", dakwat=3, ruang_tepi=8, tekstur="grunge lusuh sederhana", julat="3-8 perkataan",
         warna=dict(latar=("hitam", "#0a0a0a", "black"),
                    dakwat=[("putih lusuh", "#ecebe6", "white"), ("kuning mustard", "#e0a526", "mustard yellow"),
@@ -82,7 +82,7 @@ KAD = {
             ("Jarak baris rapat", False),
             ("Hanya putih, kuning dan hitam", False)]),
     "K3": dict(
-        nama="Campuran sans kuning + skrip putih + label", ref="IMG_5775", snc="baharu",
+        nama="Campuran sans kuning + skrip putih + label", ref="IMG_5775", snc="S009 + C008 (didaftar 26 Nov 2026)",
         kelas="F1", dakwat=3, ruang_tepi=12, tekstur="tiada", julat="4-8 perkataan",
         warna=dict(latar=("hitam", "#0b0b0b", "black"),
                    dakwat=[("kuning keemasan", "#f5b51c", "golden yellow"), ("putih", "#f7f7f5", "white"),
@@ -109,7 +109,7 @@ KAD = {
             ("Latar hitam rata, tiada tekstur", False),
             ("Maksimum 3 warna dakwat", False)]),
     "K4": dict(
-        nama="Serif vintaj dekoratif + hiasan bertitik (krim atas hitam)", ref="IMG_5764", snc="baharu",
+        nama="Serif vintaj dekoratif + hiasan bertitik (krim atas hitam)", ref="IMG_5764", snc="S010; warna hampir C002 (didaftar 26 Nov 2026)",
         kelas="F2", dakwat=1, ruang_tepi=12, tekstur="lusuh cetakan", julat="4-12 perkataan",
         warna=dict(latar=("hitam arang", "#1b1918", "charcoal black"), dakwat=[("krim", "#eadfcb", "cream")]),
         medium="Vintage Victorian hand-lettered typographic poster, portrait.",
@@ -160,7 +160,7 @@ KAD = {
             ("Ekor huruf memanjang", False),
             ("Tiada hiasan lain", False)]),
     "K6": dict(
-        nama="Skrip berus tirus + swash reben + bintik bintang (putih atas hitam)", ref="IMG_5734", snc="baharu",
+        nama="Skrip berus tirus + swash reben + bintik bintang (putih atas hitam)", ref="IMG_5734", snc="S011 + C003 (didaftar 26 Nov 2026)",
         kelas="F2", dakwat=1, ruang_tepi=10, tekstur="butir berus kering halus", julat="4-8 perkataan",
         warna=dict(latar=("hitam", "#0a0a0a", "black"), dakwat=[("putih", "#f4f4f0", "white")]),
         medium="Hand-lettered brush calligraphy poster, portrait.",
