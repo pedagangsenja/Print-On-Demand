@@ -67,7 +67,7 @@ def main():
             key = f"{kid}{aid}"
             if key in embs:
                 continue
-            p, _ = kad.bina(kid, aid)
+            p = gen.khas.PROMPT["moss"] if gen.VARIAN == "khas" else kad.bina(kid, aid)[0]
             txt = tok.apply_chat_template([{"role": "user", "content": p}], tokenize=False,
                                           add_generation_prompt=True, enable_thinking=True)
             h = te(**tok(txt, return_tensors="pt", truncation=True, max_length=4096).to(dev0), use_cache=False,
