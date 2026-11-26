@@ -22,7 +22,7 @@ DEV = os.environ.get("GEN_DEVICE", "cpu")
 if os.environ.get("GEN_DTYPE") == "fp16":
     DT = torch.float16
 OUT = Path(os.environ.get("GEN_OUT", str(OUT)))
-SEEDS = [42, 7]
+SEEDS = [int(s) for s in os.environ.get("GEN_SEEDS", "42,7").split(",")]  # laluan 2: GEN_SEEDS=42,7,123
 W, H = 768, 1024
 PROFIL = {
     "klein4b": dict(repo="black-forest-labs/FLUX.2-klein-4B", pipe="Flux2KleinPipeline", tr="Flux2Transformer2DModel",

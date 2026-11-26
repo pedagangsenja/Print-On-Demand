@@ -27,6 +27,10 @@ AYAT = {
     "L": dict(nama="panjang", laluan=3, ayat="Keep Showing Up on Hard Days Because Better Mornings Are Coming",
               baris=[("Keep Showing Up", "utama"), ("on hard days", "sokongan"), ("because", "penyambung"),
                      ("Better Mornings", "utama"), ("are coming", "penyambung")]),
+    # 26 Nov 2026: ayat baharu untuk kad K3 (dipilih pengguna); hanya dijana dengan K3 (id K3W).
+    "W": dict(nama="sederhana", laluan=2, ayat="Winners Act While Others Wait",
+              baris=[("Winners", "utama"), ("Act", "sokongan"), ("While", "penyambung"), ("Others", "sokongan"),
+                     ("Wait", "utama")]),
 }
 
 # Langkah 1: Kad Gaya. huruf[peranan] = (kes, frasa bentuk huruf, nama warna untuk prompt)
@@ -83,6 +87,38 @@ KAD = {
             ("Hanya putih, kuning dan hitam", False)]),
     "K3": dict(
         nama="Campuran sans kuning + skrip putih + label", ref="IMG_5775", snc="S009 + C008 (didaftar 26 Nov 2026)",
+        versi="v1.2 (26 Nov 2026: kajian semula IMG_5775, diluluskan pengguna)",
+        kelas="F1", dakwat=3, ruang_tepi=15, tekstur="tiada", julat="4-8 perkataan",
+        warna=dict(latar=("hitam", "#0b0b0b", "black"),
+                   dakwat=[("kuning keemasan", "#f5b51c", "golden yellow"), ("putih", "#f7f7f5", "white"),
+                           ("kelabu bayang", "#3a3a3a", "dark gray")]),
+        kemasan="Bayang 3D kelabu di bawah / kanan skrip putih ditambah skrip kemasan; AI tidak menjananya.",
+        medium="Modern mixed-font hand-lettering quote poster, flat vector, portrait.",
+        latar="Solid black background.",
+        susunan=("One tight centered block of lines alternating two lettering styles; lines touch and slightly "
+                 "overlap; the whole block is tilted slightly so every line rises to the right."),
+        huruf={"utama": ("upper", "huge heavy condensed bold sans-serif capitals", "golden yellow"),
+               "sokongan": ("title", "large bold flowing brush script, big looping capitals, with a dark gray "
+                                     "drop shadow", "white"),
+               "penyambung": ("upper", "small bold sans-serif capitals in black inside a small golden yellow "
+                                       "rectangular label", "black")},
+        hierarki="Sans lines frame the top and the bottom; the bottom line is the tallest; the label is small.",
+        hiasan="Three short golden yellow sparkle strokes on each side of the label line.",
+        margin="Wide black margins.",
+        larangan="Only golden yellow, white, dark gray and black. No gradient, no texture.",
+        risiko=["label berteks boleh menambah huruf rawak", "warna bertukar antara peranan",
+                "baris bertindih boleh menutup huruf", "blok condong boleh memotong huruf di tepi"],
+        jangan_salin=["ayat Success grows where excuses end", "susunan perkataan rujukan (kata kerja + WHERE)"],
+        qc=[("Sans tebal huruf besar di baris atas dan baris bawah mengapit baris skrip", True),
+            ("Perkataan penyambung dalam label kotak kecil, huruf gelap atas kotak", True),
+            ("Baris tengah skrip berus tebal bersambung, huruf awal besar bergelung", True),
+            ("Kontras saiz kuat; baris sans bawah paling besar", False),
+            ("Seluruh blok condong naik ke kanan", False),
+            ("Baris rapat, bersentuh atau bertindih sedikit", False),
+            ("Garis percikan kecil di sisi kiri dan kanan baris label", False),
+            ("Latar hitam rata, tiada tekstur, ruang tepi luas", False)]),
+    "K3_lama": dict(  # v1.0 (26 Nov 2026) disimpan untuk mengulang ujian lama sahaja
+        nama="Campuran sans kuning + skrip putih + label (v1.0)", ref="IMG_5775", snc="S009 + C008",
         kelas="F1", dakwat=3, ruang_tepi=12, tekstur="tiada", julat="4-8 perkataan",
         warna=dict(latar=("hitam", "#0b0b0b", "black"),
                    dakwat=[("kuning keemasan", "#f5b51c", "golden yellow"), ("putih", "#f7f7f5", "white"),
