@@ -514,6 +514,29 @@ Empat skrip pembetulan (SK01–SK04) ialah set asas. Skrip lain ditambah hanya i
 Ujian kelayakan sekali bagi setiap model baharu (dan setiap gabungan tetapan): setiap gaya × ayat pendek dan sederhana × 2 seed. Lulus: ≥ 90% imej ejaan betul, gaya ≥ 7/8, tiada teks liar. Hasil direkod dalam jadual model × gaya.
 Model baharu juga memerlukan aturan prompt sendiri sebelum dipakai untuk design sebenar: ikut "Kaedah model baharu" (3.12). Model yang terlalu lama atau bermasalah semasa jana: ikut "Peraturan langkau model" (langkah 4).
 
+## Larian v1.2 pertama (26–27 Nov 2026, semalaman, arahan pengguna)
+- **Tugas:** tiga gambar upload, ayat diganti, ayat sama untuk semua model, 3 seed (42, 7, 123), CPU, hitam putih.
+- **Design dan kad:**
+
+| Id | Gambar upload | Kad | Ayat (cadangan Claude, diluluskan pengguna) | Rujukan diukur SK05 |
+|---|---|---|---|---|
+| K3K | IMG_5775 | K3 (sedia ada) | Kindness Stays After Words Fade | condong 7.5–7.6°, ruang tepi 13.6% |
+| K7M | IMG_5765 (helaian 6 poster) | K7 (baharu) | Make Room for Wonder | condong 12.4° (median 6 panel, julat 10.1–14.5), ruang tepi 6.2% (julat 5.4–10.3) |
+| K8G | IMG_5735 | K8 (baharu) | Keep Going You Are Almost There | condong 7.4°, ruang tepi 12.2% (gambar melintang, latar bertekstur) |
+
+- **K7 dan K8** dibuat Claude daripada gambar; pengguna membenarkan jana tanpa menunggu kelulusan kad (titik kelulusan 1d ditangguh ke pagi 27 Nov). Kedua-dua kad v1.0, belum diluluskan.
+- **Model (soalan pengguna: boleh semua 7 di CPU? jika tidak, yang boleh sahaja):**
+
+| Model | Keputusan | Sebab |
+|---|---|---|
+| MOSS, ERNIE Turbo, Z-Image Turbo, klein 4B | Dijalankan di CPU | Profil dikunci, sudah diukur |
+| FLUX 3 Image Klein | Dicuba di CPU selepas empat model di atas | Transformer 5.6B (11.1 GB bf16) + pengekod teks 9 GB; muat jika dimuat berasingan; belum pernah diukur |
+| Qwen-Image-2512 | DILANGKAU, tidak dijalankan | Tidak muat: repo 57.7 GB (transformer kira-kira 41 GB) lawan RAM 15 GB; 50 langkah dengan CFG. Tidak diukur; keputusan daripada saiz fail (rasmi) |
+| GLM-Image | DILANGKAU, tidak dijalankan | Tidak muat: repo 35.8 GB (pengekod 20 GB + transformer 15 GB) lawan RAM 15 GB; tiada GGUF. Tidak diukur; keputusan daripada saiz fail (rasmi) |
+
+- **Simpanan imej:** dalam repo sahaja (`designs/lettering-v1/raw/v12-cpu/`); pengguna memilih A atau SNC pada pagi 27 Nov.
+- **Hasil:** lihat `designs/lettering-v1/qc/v12_cpu.json` dan ringkasan di bawah apabila larian tamat.
+
 ## Catatan pembaikan aturan model
 Setiap ubahan aturan (3.4–3.10) direkod di sini. Ujian pertama (26 Nov 2026, K3 × ayat H, seed 42, 7, 123, semakan mata, bukti lemah) mengubah beberapa perkara serentak, kerana dibuat sebelum peraturan "satu ubahan setiap pusingan".
 
