@@ -191,7 +191,7 @@
 .mt-zoom figcaption { color: #fff; font-size: 0.95rem; text-align: center; max-width: 720px; }
 .mt-zoom-close { position: absolute; top: 12px; right: 12px; padding: 6px 12px; border-radius: 999px; border: 1px solid #fff; background: transparent; color: #fff; cursor: pointer; }
 @media print { .mt-zoom { display: none; } }
-@media print { .pod-tabbar, .pod-nav, .pod th { position: static; } .pod-scroll { max-height: none; overflow: visible; border: 0; } .pod-nav, .pod-tabbar { display: none; } .pod details { border: 0; } #tab-font, #tab-model, #tab-lesen, #tab-sejarah, #tab-setup, #tab-workflow, #tab-aliran, #tab-daftar, #tab-fc { break-before: page; } }
+@media print { .pod-tabbar, .pod-nav, .pod th { position: static; } .pod-scroll { max-height: none; overflow: visible; border: 0; } .pod-nav, .pod-tabbar { display: none; } .pod details { border: 0; } #tab-font, #tab-model, #tab-lesen, #tab-sejarah, #tab-setup, #tab-workflow, #tab-aliran, #tab-daftar, #tab-fc, #tab-model2 { break-before: page; } }
 /* FC tab */
 .fc-subbar { display: flex; gap: var(--cds-gap-xs); border-bottom: 1px solid var(--color-border-line); }
 .fc-sub-btn { appearance: none; background: none; border: 0; border-bottom: 2px solid transparent; margin-bottom: -1px; padding: 4px var(--cds-pad-md); font: inherit; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); cursor: pointer; }
@@ -224,6 +224,7 @@
 .fc-tools span:not(.pod-pill) { color: var(--color-fg-muted); }
 </style>
 <link rel="stylesheet" href="aliran.css">
+<link rel="stylesheet" href="t2.css">
 
 <div class="pod">
 
@@ -236,6 +237,7 @@
     <button type="button" class="pod-tab-btn" role="tab" id="btn-poster" data-tab="tab-poster" aria-controls="tab-poster" aria-selected="true">Ujikaji</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-font" data-tab="tab-font" aria-controls="tab-font" aria-selected="false" tabindex="-1">Font</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-model" data-tab="tab-model" aria-controls="tab-model" aria-selected="false" tabindex="-1">AI Image Test</button>
+    <button type="button" class="pod-tab-btn" role="tab" id="btn-model2" data-tab="tab-model2" aria-controls="tab-model2" aria-selected="false" tabindex="-1">AI Image Test 2</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-cvg" data-tab="tab-cvg" aria-controls="tab-cvg" aria-selected="false" tabindex="-1">CPU vs GPU</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-lesen" data-tab="tab-lesen" aria-controls="tab-lesen" aria-selected="false" tabindex="-1">Lesen</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-sejarah" data-tab="tab-sejarah" aria-controls="tab-sejarah" aria-selected="false" tabindex="-1">Chat lepas</button>
@@ -1178,6 +1180,11 @@
     </table>
   </div>
 </section>
+<section id="cvg-galeri" class="pod-section">
+  <h2>Gambar hasil: CPU (kiri) dan GPU (kanan)</h2>
+  <p class="pod-muted">Kad pertama ialah imej rujukan gaya K6 (design orang lain, rujukan sahaja, bukan untuk dijual). Setiap kad lain: satu ayat dan satu seed. Tekan gambar untuk besarkan.</p>
+  <div class="p9-grid" data-draw="cvg-galeri" data-source="cvg_imej cvg_peranti"></div>
+</section>
 <section id="cvg-imej" class="pod-section">
   <h2>Setiap imej (36)</h2>
   <div class="pod-fit">
@@ -1197,6 +1204,46 @@
     </table>
   </div>
 </section>
+</section>
+
+<section id="tab-model2" class="pod-tab" role="tabpanel" aria-labelledby="btn-model2" hidden>
+<div id="t2-intro" class="pod-section pod-first">
+<h2>AI Image Test 2: ujian Standard Lettering v1</h2>
+<p class="pod-lede">5 model × 5 gaya rujukan (K1–K5) × 3 ayat × 2 seed: <b data-draw="t2-n" data-source="ai2_totals" data-field="imej" data-row="0">—</b> imej, <b data-draw="t2-ok" data-source="ai2_totals" data-field="lulus" data-row="0">—</b> lulus. Paling banyak lulus: <b data-draw="t2-best" data-source="ai2_totals" data-field="terbaik" data-row="0">—</b> (<b data-draw="t2-best-n" data-source="ai2_totals" data-field="terbaik_lulus" data-row="0">—</b>/30).</p>
+<p class="pod-muted">Lulus = ejaan betul + tiada teks rawak + tiada cacat + semua ciri teras + gaya ≥ 7/8. <b>Layak</b> untuk satu gaya = 4 imej ayat pendek dan sederhana semua lulus. 25 Nov 2026, CPU, 768×1024. Belum disimpan ke AI Image Test atau Daftar S/C. Bukti <span class="pod-pill" data-level="lemah">Lemah</span>: semakan mata Claude, satu cubaan.</p>
+</div>
+<div id="t2-models" class="pod-section">
+<h2>Ringkasan setiap model</h2>
+<div class="pod-table-wrap"><table id="t2-sum" data-source="ai2_summary" data-row-key="model"><thead><tr>
+<th data-field="model_name">Model</th><th data-field="lulus" class="pod-num">Lulus /30</th><th data-field="ejaan_p" class="pod-num">Ejaan pendek /10</th><th data-field="ejaan_d" class="pod-num">Ejaan sederhana /10</th><th data-field="ejaan_l" class="pod-num">Ejaan panjang /10</th><th data-field="rawak" class="pod-num">Ada teks rawak</th><th data-field="layak">Layak gaya</th><th data-field="purata_min" class="pod-num">Minit / imej</th><th data-field="versi">Versi</th>
+</tr></thead><tbody data-draw="t2-sum-body"></tbody></table></div>
+</div>
+<div id="t2-kad" class="pod-section">
+<h2>Lulus ikut gaya (/6 imej)</h2>
+<p class="pod-muted">Angka hijau = model layak untuk gaya itu.</p>
+<div class="pod-table-wrap"><table id="t2-kad-table" data-source="ai2_bykad" data-row-key="kad"><thead><tr>
+<th data-field="kad_name">Gaya</th><th data-field="klein4b" class="pod-num">klein 4B</th><th data-field="schnell" class="pod-num">schnell</th><th data-field="zturbo" class="pod-num">Z-Image</th><th data-field="ernie" class="pod-num">ERNIE</th><th data-field="moss" class="pod-num">MOSS</th><th data-field="layak">Model layak</th>
+</tr></thead><tbody data-draw="t2-kad-body"></tbody></table></div>
+</div>
+<div id="t2-banding" class="pod-section">
+<h2>Banding gambar</h2>
+<p class="pod-muted">Baris = ayat dan seed; lajur = model. Hijau = lulus, merah = gagal; sebab di bawah gambar. Tekan gambar untuk besarkan. Rujukan ialah design orang lain: banding gaya sahaja.</p>
+<div class="pod-select-row"><label for="t2-f-kad" class="pod-muted">Gaya</label><select id="t2-f-kad" class="dash-select" aria-label="Tapis gaya"><option value="">Semua</option><option>K1</option><option>K2</option><option>K3</option><option>K4</option><option>K5</option></select>
+<label for="t2-f-ayat" class="pod-muted">Ayat</label><select id="t2-f-ayat" class="dash-select" aria-label="Tapis ayat"><option value="">Semua</option><option value="P">Pendek</option><option value="D">Sederhana</option><option value="L">Panjang</option></select></div>
+<div class="pod-table-wrap" data-source="ai2_images ai2_refs"><table class="t2-grid" id="t2-grid"><thead><tr>
+<th class="t2-c0">Ayat · seed</th><th>klein 4B</th><th>schnell</th><th>Z-Image</th><th>ERNIE</th><th>MOSS + LoRA</th>
+</tr></thead><tbody data-draw="t2-grid"></tbody></table></div>
+<div class="mt-zoom" id="t2-zoom" hidden role="dialog" aria-modal="true" aria-label="Gambar besar"><figure data-draw="t2-zoom"></figure><button type="button" class="mt-zoom-close" id="t2-zoom-close">Tutup ✕</button></div>
+</div>
+<div id="t2-butiran" class="pod-section">
+<h2>Butiran semakan setiap imej</h2>
+<p class="pod-muted">G1 = ejaan betul, G2 = tiada teks rawak, G3 = tiada cacat, Teras = ciri utama gaya ada, Gaya = ciri dipenuhi /8. Sumber: <code>designs/lettering-v1/qc/</code>. Chroma1-Flash dilangkau (terlalu perlahan); Kandinsky 2.2 tidak diuji.</p>
+<div class="pod-select-row"><label for="t2-f-model" class="pod-muted">Model</label><select id="t2-f-model" class="dash-select" aria-label="Tapis model"><option value="">Semua</option><option value="klein4b">klein 4B</option><option value="schnell">schnell</option><option value="zturbo">Z-Image</option><option value="ernie">ERNIE</option><option value="moss">MOSS</option></select>
+<label for="t2-f-hasil" class="pod-muted">Hasil</label><select id="t2-f-hasil" class="dash-select" aria-label="Tapis hasil"><option value="">Semua</option><option value="1">Lulus</option><option value="0">Gagal</option></select></div>
+<div class="pod-scroll"><table id="t2-detail" data-source="ai2_images" data-row-key="key"><thead><tr>
+<th data-field="model_name">Model</th><th data-field="id">Imej</th><th data-field="ayat_name">Ayat</th><th data-field="g1">G1</th><th data-field="g2">G2</th><th data-field="g3">G3</th><th data-field="teras">Teras</th><th data-field="gaya" class="pod-num">Gaya</th><th data-field="lulus">Hasil</th><th data-field="sebab">Sebab / ciri kurang</th><th data-field="saat" class="pod-num">Saat</th>
+</tr></thead><tbody data-draw="t2-detail-body"></tbody></table></div>
+</div>
 </section>
 
 <section id="tab-lesen" class="pod-tab" role="tabpanel" aria-labelledby="btn-lesen" hidden>
@@ -3531,37 +3578,5 @@ dash.draw('f-rej-body', (tb) => {
 })();
 </script>
 
-<script>
-(() => {
-  const na = (v) => (v == null || v === '' ? 'belum' : String(v));
-  const dash0 = (v) => (v == null || v === '' ? '—' : String(v));
-  const one = (name, field, dev) => dash.draw(name, (el) => {
-    const rows = POD.ok('cvg_peranti'); const r = rows && rows.find((x) => x.peranti === dev);
-    el.textContent = r ? String(r[field]) : '—';
-  });
-  one('cvg-cpu-n', 'imej', 'CPU'); one('cvg-gpu-n', 'imej', 'GPU'); one('cvg-gpu-status', 'status', 'GPU');
-  POD.mRows('cvg-peranti-body', 'cvg_peranti', 5, (tr, r) => {
-    tr.dataset.key = POD.enc(r.peranti);
-    const m = POD.cell(tr, r.peranti); m.style.fontWeight = '600';
-    POD.cell(tr, r.tempat); POD.cell(tr, r.butiran, 'pod-wide'); POD.cell(tr, String(r.imej), 'pod-num'); POD.cell(tr, r.status);
-  });
-  POD.mRows('cvg-enjin-body', 'cvg_enjin', 7, (tr, r) => {
-    tr.dataset.key = POD.enc(r.enjin);
-    const m = POD.cell(tr, r.enjin); m.style.fontWeight = '600';
-    POD.cell(tr, dash0(r.cpu_ejaan), 'pod-num'); POD.cell(tr, na(r.gpu_ejaan), 'pod-num');
-    POD.cell(tr, dash0(r.cpu_saat), 'pod-num'); POD.cell(tr, na(r.gpu_saat), 'pod-num');
-    POD.cell(tr, na(r.gpu_laju_x), 'pod-num'); POD.cell(tr, r.gaya_cpu, 'pod-wide');
-  });
-  POD.mRows('cvg-ayat-body', 'cvg_ayat', 7, (tr, r) => {
-    tr.dataset.key = POD.enc(r.enjin);
-    const m = POD.cell(tr, r.enjin); m.style.fontWeight = '600';
-    ['P', 'D', 'L'].forEach((a) => { POD.cell(tr, dash0(r['cpu_' + a]), 'pod-num'); POD.cell(tr, na(r['gpu_' + a]), 'pod-num'); });
-  });
-  POD.mRows('cvg-imej-body', 'cvg_imej', 9, (tr, r) => {
-    tr.dataset.key = POD.enc(r.kunci);
-    POD.cell(tr, r.enjin); POD.cell(tr, r.ayat); POD.cell(tr, String(r.seed), 'pod-num');
-    POD.cell(tr, dash0(r.cpu_saat), 'pod-num'); POD.cell(tr, dash0(r.cpu_ejaan)); POD.cell(tr, dash0(r.cpu_sebab), 'pod-wide');
-    POD.cell(tr, na(r.gpu_saat), 'pod-num'); POD.cell(tr, na(r.gpu_ejaan)); POD.cell(tr, na(r.gpu_sebab), 'pod-wide');
-  });
-})();
-</script>
+<script src="t2.js"></script>
+<script src="cvg.js"></script>

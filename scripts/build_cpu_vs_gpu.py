@@ -1,6 +1,6 @@
 """Tab dashboard "CPU vs GPU": ujian K6 (Standard Lettering v1), 6 enjin x 3 ayat x 2 seed, di CPU dan Kaggle GPU.
 
-Input:  designs/lettering-v1/raw/k6-cpu/<enjin>/log.jsonl, qc/k6_cpu.json
+Input:  designs/lettering-v1/raw/k6-cpu/<enjin>/log.jsonl, qc/k6_cpu.json, qc/k6_dashboard_blobs.json (url gambar)
         designs/lettering-v1/raw/k6-gpu/<enjin>/log.jsonl, qc/k6_gpu.json (bila GPU sudah berjalan)
 Output: data/export/cpu_vs_gpu/{cvg_enjin,cvg_ayat,cvg_imej,cvg_peranti}.json, format {rows, meta}.
 Lajur GPU kosong (null) selagi tiada log GPU: tiada angka direka.
@@ -49,6 +49,8 @@ def load(dev):
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
+    bf = V1 / "qc/k6_dashboard_blobs.json"  # url gambar di dashboard (hasil muat naik)
+    blobs = json.loads(bf.read_text()) if bf.exists() else {}
     data = {d: load(d) for d in ("cpu", "gpu")}
     imej, enjin, ayat = [], [], []
     for e, nama in ENJIN:
@@ -62,6 +64,7 @@ def main():
                     row[f"{d}_saat"] = lg["saat"] if lg else None
                     row[f"{d}_ejaan"] = None if not qq else ("Lulus" if qq["ejaan"] else "Gagal")
                     row[f"{d}_sebab"] = qq.get("sebab") or None if qq else None
+                    row[f"{d}_img"] = blobs.get(f"{d}_{e}_{iid}")
                     per[d].append((a, lg, qq))
                 imej.append(row)
         r = dict(enjin=nama, gaya_cpu=GAYA[e])
@@ -85,7 +88,7 @@ def main():
     for p in PERANTI:
         d = p["peranti"].lower()
         n = sum(1 for r in imej if r[f"{d}_saat"] is not None)
-        peranti.append(dict(p, imej=n, status=p["status_awal"] if d == "gpu" and n == 0 else "Siap" if n == 36 else
+        peranti.append(dict(p, imej=n, ref_img=blobs.get("ref_K6") if d == "cpu" else None, status=p["status_awal"] if d == "gpu" and n == 0 else "Siap" if n == 36 else
                             f"{n}/36 imej"))
     code = Path(__file__).read_text()
     meta = [dict(label="build_cpu_vs_gpu.py", value=code, type="code", lang="python"),
