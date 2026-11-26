@@ -199,9 +199,9 @@ Dipakai untuk model tanpa aturan sendiri, dan sebagai pembanding dalam ujian kel
 - **`bbox` daripada ukuran kad:** y = piksel_y ÷ tinggi kanvas × 1000; x = piksel_x ÷ lebar kanvas × 1000; integer; tinggalkan sedikit ruang di sekeliling teks. Daripada kotak MOSS (asalan tengah): y = (y + 512) ÷ 1024 × 1000, x = (x + 384) ÷ 768 × 1000.
 - **Panjang kapsyen:** 100–350 perkataan (rasmi). Contoh K3H: kapsyen + jadual 303 perkataan.
 - **Tetapan:** checkpoint suling, 16 langkah, tanpa guidance (Space: mod "Distilled (16 steps)", `guidance_scale` 1.0), `prompt_upsampling` False, 768×1024, seed tetap.
-- **Tempat jalan:** Space rasmi `black-forest-labs/flux-3-image-klein` (GPU, kuota harian). CPU belum diukur.
+- **Tempat jalan:** CPU boleh (diukur 26 Nov 2026: 357 s setiap imej, 768×1024, 16 langkah, bf16; `gen_flux3.py`, pipeline modular diffusers, pengekod teks dan transformer dimuat berasingan; perlu torchvision). Space rasmi `black-forest-labs/flux-3-image-klein` (GPU, kuota harian) tidak dipakai.
 - **Lesen (rasmi):** FLUX Kommunity v1.0: hasil komersial dibenarkan untuk pengguna dengan hasil kasar di bawah US$5 juta setahun, tertakluk kepada syarat lesen. Berbeza daripada enam model lain (Apache 2.0 / MIT).
-- **Cacat diketahui:** belum diuji. Kad model: teks boleh tidak tepat; unsur kecil yang diminta mungkin tidak muncul; unsur boleh melepasi kotaknya.
+- **Cacat diketahui (ujian pertama, 26 Nov 2026, 9 imej, 3 kad):** blok tidak condong (kotak tegak; dibetulkan SK01); lorekan kelabu pada huruf K7 (dibersih SK04). Ejaan 9/9. Kad model: teks boleh tidak tepat; unsur kecil yang diminta mungkin tidak muncul; unsur boleh melepasi kotaknya.
 
 ### 3.9 Aturan Qwen-Image-2512 (rev r0: sumber rasmi sahaja, BELUM diuji dengan aturan ini)
 - **Sumber (rasmi):** kad model `Qwen/Qwen-Image` dan `Qwen/Qwen-Image-2512`; skrip penulis semula prompt rasmi (`QwenLM/Qwen-Image`, `prompt_utils.py`).
@@ -334,6 +334,7 @@ Tempat menyimpan aturan model baharu yang ditulis ikut 3.12 (3.14.1, 3.14.2, …
 | Z-Image Turbo | GGUF Q8_0 | 9 | 0.0 | tiada | 3.5 | kira-kira 260 s |
 | ERNIE-Image-Turbo | GGUF Q8_0 | 8 | 1.0 | PE rasmi, sekali, seed 42 | 3.6 | 305–373 s |
 | MOSS-Image SFT + LoRA × 0.7 | bf16 asal | 8 | tanpa CFG | templat "thinking" hidup | 3.7 | 337–392 s |
+| FLUX 3 Image Klein (suling) | bf16 asal | 16 | tiada | dibuang (kapsyen penuh daripada pembina) | 3.8 (r0) | kira-kira 357 s |
 
 - Tiga model tambahan (26 Nov 2026), dijalankan melalui Space Hugging Face (GPU, kuota harian) kerana tidak muat atau belum diukur di CPU. Belum diuji dengan aturan sendiri; perlu ujian kelayakan dahulu:
 
@@ -530,12 +531,12 @@ Model baharu juga memerlukan aturan prompt sendiri sebelum dipakai untuk design 
 | Model | Keputusan | Sebab |
 |---|---|---|
 | MOSS, ERNIE Turbo, Z-Image Turbo, klein 4B | Dijalankan di CPU | Profil dikunci, sudah diukur |
-| FLUX 3 Image Klein | Dicuba di CPU selepas empat model di atas | Transformer 5.6B (11.1 GB bf16) + pengekod teks 9 GB; muat jika dimuat berasingan; belum pernah diukur |
+| FLUX 3 Image Klein | Dijalankan di CPU (berjaya pada cubaan ketiga) | Transformer 5.6B (11.1 GB bf16) + pengekod teks 8.3 GB, dimuat berasingan. Cubaan 1 gagal: pustaka torchvision tiada (dipasang). Cubaan 2 dihentikan: muat turun dalam pipeline hanya kira-kira 1.7 MB sesaat (muat turun terus dengan 8 sambungan menyelesaikannya). Cubaan 3: 357 s setiap imej |
 | Qwen-Image-2512 | DILANGKAU, tidak dijalankan | Tidak muat: repo 57.7 GB (transformer kira-kira 41 GB) lawan RAM 15 GB; 50 langkah dengan CFG. Tidak diukur; keputusan daripada saiz fail (rasmi) |
 | GLM-Image | DILANGKAU, tidak dijalankan | Tidak muat: repo 35.8 GB (pengekod 20 GB + transformer 15 GB) lawan RAM 15 GB; tiada GGUF. Tidak diukur; keputusan daripada saiz fail (rasmi) |
 
 - **Simpanan imej:** dalam repo sahaja (`designs/lettering-v1/raw/v12-cpu/`); pengguna memilih A atau SNC pada pagi 27 Nov.
-- **Hasil pusingan 0** (36 imej; semakan mata Claude, bukti lemah; lulus = pintu G1 ejaan + G2 tiada teks atau tanda rawak). Rekod setiap imej: `designs/lettering-v1/qc/v12_cpu.json`. Helaian: `qc/v12_cpu_K3K.jpg`, `qc/v12_cpu_K7M.jpg`, `qc/v12_cpu_K8G.jpg`.
+- **Hasil pusingan 0** (45 imej; semakan mata Claude, bukti lemah; lulus = pintu G1 ejaan + G2 tiada teks atau tanda rawak). Rekod setiap imej: `designs/lettering-v1/qc/v12_cpu.json`. Helaian: `qc/v12_cpu_K3K.jpg`, `qc/v12_cpu_K7M.jpg`, `qc/v12_cpu_K8G.jpg`.
 
 | Model | K3K | K7M | K8G | Jumlah | Masa model (termasuk muat turun) |
 |---|---|---|---|---|---|
@@ -543,7 +544,8 @@ Model baharu juga memerlukan aturan prompt sendiri sebelum dipakai untuk design 
 | ERNIE Turbo | 2/3 | 3/3 | 3/3 | 8/9 | 73 minit |
 | Z-Image Turbo | 3/3 | 1/3 | 0/3 | 4/9 | 52 minit |
 | klein 4B | 3/3 | 2/3 | 1/3 | 6/9 | 17 minit |
-| Jumlah | 11/12 | 9/12 | 4/12 | 24/36 | tiada model CPU dilangkau |
+| FLUX 3 Image Klein (aturan r0) | 3/3 | 3/3 | 3/3 | 9/9 | 57 minit (muat turun berasingan, kira-kira 10 minit) |
+| Jumlah | 14/15 | 12/15 | 7/15 | 33/45 | Qwen-Image-2512 dan GLM-Image dilangkau (tidak muat) |
 
 - **Pembina kod (3.13):** K3 dengan ayat baharu memberi 11/12, sama dengan contoh tulisan tangan pada ayat H (11/12). Ayat berbeza, jadi ini bukti lemah bahawa pembina tidak lebih buruk.
 - **PE ERNIE (3.6):** K3K seed PE 42 ditolak semakan (PE memetik huruf 'S' sebagai rujukan), seed 7 lulus; K7M dan K8G lulus pada seed 42.
@@ -558,7 +560,8 @@ Model baharu juga memerlukan aturan prompt sendiri sebelum dipakai untuk design 
 | Z-Image × K3 | Bintang menggantikan percikan; label kecil | 3/3 |
 | ERNIE × K8 | Huruf berus nipis, bukan marker bulat tebal (gaya, bukan ejaan) | 3/3 |
 
-- **5b:** 24 imej yang lulus dibetulkan (`designs/lettering-v1/betul/v12-cpu/`, `log_5b.jsonl`); 0 gagal semakan akhir. Dua pembaikan skrip semasa larian: SK05 v1.1 (bintik latar di tepi tidak lagi menggagalkan imej) dan SK02 v1.1 (ruang tepi sisi dan atas / bawah berasingan; K3: 13.6 / 15.5, K7: 6.2 / 11.3).
+- **FLUX 3 Image Klein:** ujian pertama aturan 3.8 (kapsyen + jadual kotak, penambah prompt dibuang). 9/9 lulus G1–G2; kedudukan baris mengikut kotak. Pembanding rangka am belum dijalankan, jadi rev kekal r0 (syarat 3.12 F belum dipenuhi). Lesen FLUX Kommunity: hasil komersial bersyarat; pengguna belum memutuskan.
+- **5b:** 33 imej yang lulus dibetulkan (24 + 9 FLUX 3 Klein); angka di bawah untuk 24 yang pertama: imej dibetulkan (`designs/lettering-v1/betul/v12-cpu/`, `log_5b.jsonl`); 0 gagal semakan akhir. Dua pembaikan skrip semasa larian: SK05 v1.1 (bintik latar di tepi tidak lagi menggagalkan imej) dan SK02 v1.1 (ruang tepi sisi dan atas / bawah berasingan; K3: 13.6 / 15.5, K7: 6.2 / 11.3).
 - **Kemasan (SK06):** imej terbaik setiap design, pilihan Claude menunggu keputusan pengguna: K3K MOSS seed 42 (gaya S3, putih; warna kuning belum kerana SK07 belum dibina), K7M MOSS seed 42 (gaya S2, krim + butir), K8G klein 4B seed 42 (gaya S4, kapur). Fail: `designs/lettering-v1/final/v12-cpu/` (SVG induk + pratonton 18×24); gambar ringkas `qc/v12_cpu_akhir.jpg`.
 
 ## Catatan pembaikan aturan model
