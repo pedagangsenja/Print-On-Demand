@@ -1129,8 +1129,8 @@
 <section id="tab-cvg" class="pod-tab" role="tabpanel" aria-labelledby="btn-cvg" hidden>
 <section id="cvg-ringkas" class="pod-section">
   <h2>CPU vs GPU: ujian gaya K6, 6 enjin</h2>
-  <p class="pod-lede">CPU: <b data-draw="cvg-cpu-n" data-source="cvg_peranti" data-field="imej" data-where="peranti=CPU">&mdash;</b> imej siap. GPU: <b data-draw="cvg-gpu-n" data-source="cvg_peranti" data-field="imej" data-where="peranti=GPU">&mdash;</b> imej (<span data-draw="cvg-gpu-status" data-source="cvg_peranti" data-field="status" data-where="peranti=GPU">&mdash;</span>).</p>
-  <p class="pod-muted">Gaya K6 (rujukan IMG_5734), Standard Lettering v1. Setiap enjin: 3 ayat (pendek, sederhana, panjang) &times; 2 seed (42, 7), 768&times;1024. Prompt, tetapan model dan seed sama di CPU dan GPU, jadi bezanya ialah peranti. Ejaan disemak dengan mata oleh Claude. Bukti <span class="pod-pill" data-level="lemah">Lemah</span>: 2 seed setiap ayat. "belum" = GPU belum berjalan.</p>
+  <p class="pod-lede">CPU: <b data-draw="cvg-cpu-n" data-source="cvg_peranti" data-field="imej" data-where="peranti=CPU">&mdash;</b> imej siap. GPU: <b data-draw="cvg-gpu-n" data-source="cvg_peranti" data-field="imej" data-where="peranti=GPU">&mdash;</b> imej (<span data-draw="cvg-gpu-status" data-source="cvg_peranti" data-field="status" data-where="peranti=GPU">&mdash;</span>). GPU HF: <b data-draw="cvg-hf-n" data-source="cvg_peranti" data-field="imej" data-where="peranti=GPU HF">&mdash;</b> imej.</p>
+  <p class="pod-muted">Gaya K6 (rujukan IMG_5734), Standard Lettering v1. Setiap enjin: 3 ayat (pendek, sederhana, panjang) &times; 2 seed (42, 7), 768&times;1024. Prompt, tetapan model dan seed sama di CPU dan GPU, jadi bezanya ialah peranti. Ejaan disemak dengan mata oleh Claude. Bukti <span class="pod-pill" data-level="lemah">Lemah</span>: 2 seed setiap ayat. "belum" = belum dijana. GPU = Kaggle T4. GPU HF = Space awam Hugging Face (ZeroGPU), 2 enjin &times; seed 42 sahaja; masanya jam dinding termasuk barisan.</p>
   <div class="pod-fit">
     <table id="cvg-table-peranti" data-source="cvg_peranti" data-row-key="peranti">
       <thead><tr>
@@ -1146,16 +1146,19 @@
 </section>
 <section id="cvg-enjin" class="pod-section">
   <h2>Ikut enjin: ejaan betul dan masa</h2>
-  <p class="pod-muted">"Ejaan betul" ikut peraturan ketat V1: setiap huruf, huruf besar / kecil dan tanda baca sama dengan ayat. "Saat / imej" ialah purata masa jana satu imej, tanpa masa muat turun model. "GPU lebih laju (kali)" = saat CPU &divide; saat GPU.</p>
+  <p class="pod-muted">"Ejaan betul" ikut peraturan ketat V1: setiap huruf, huruf besar / kecil dan tanda baca sama dengan ayat. "Saat / imej" ialah purata masa jana satu imej, tanpa masa muat turun model. "Lebih laju (kali)" = saat CPU &divide; saat GPU, pada imej yang sama (ayat dan seed sama).</p>
   <div class="pod-fit">
     <table id="cvg-table-enjin" data-source="cvg_enjin" data-row-key="enjin">
       <thead><tr>
         <th data-field="enjin">Enjin</th>
         <th class="pod-num" data-field="cpu_ejaan">Ejaan betul CPU</th>
         <th class="pod-num" data-field="gpu_ejaan">Ejaan betul GPU</th>
+        <th class="pod-num" data-field="hf_ejaan">Ejaan betul GPU HF</th>
         <th class="pod-num" data-field="cpu_saat">Saat / imej CPU</th>
         <th class="pod-num" data-field="gpu_saat">Saat / imej GPU</th>
+        <th class="pod-num" data-field="hf_saat">Saat / imej GPU HF</th>
         <th class="pod-num" data-field="gpu_laju_x">GPU lebih laju (kali)</th>
+        <th class="pod-num" data-field="hf_laju_x">GPU HF lebih laju (kali)</th>
         <th class="pod-wide" data-field="gaya_cpu">Gaya (semakan CPU)</th>
       </tr></thead>
       <tbody data-draw="cvg-enjin-body"></tbody>
@@ -1171,17 +1174,20 @@
         <th data-field="enjin">Enjin</th>
         <th class="pod-num" data-field="cpu_P">Pendek CPU</th>
         <th class="pod-num" data-field="gpu_P">Pendek GPU</th>
+        <th class="pod-num" data-field="hf_P">Pendek GPU HF</th>
         <th class="pod-num" data-field="cpu_D">Sederhana CPU</th>
         <th class="pod-num" data-field="gpu_D">Sederhana GPU</th>
+        <th class="pod-num" data-field="hf_D">Sederhana GPU HF</th>
         <th class="pod-num" data-field="cpu_L">Panjang CPU</th>
         <th class="pod-num" data-field="gpu_L">Panjang GPU</th>
+        <th class="pod-num" data-field="hf_L">Panjang GPU HF</th>
       </tr></thead>
       <tbody data-draw="cvg-ayat-body"></tbody>
     </table>
   </div>
 </section>
 <section id="cvg-galeri" class="pod-section">
-  <h2>Gambar hasil: CPU (kiri) dan GPU (kanan)</h2>
+  <h2>Gambar hasil: CPU, GPU Kaggle, GPU HF (kiri ke kanan)</h2>
   <p class="pod-muted">Kad pertama ialah imej rujukan gaya K6 (design orang lain, rujukan sahaja, bukan untuk dijual). Setiap kad lain: satu ayat dan satu seed. Tekan gambar untuk besarkan.</p>
   <div class="p9-grid" data-draw="cvg-galeri" data-source="cvg_imej cvg_peranti"></div>
 </section>
@@ -1199,6 +1205,9 @@
         <th class="pod-num" data-field="gpu_saat">Saat GPU</th>
         <th data-field="gpu_ejaan">Ejaan GPU</th>
         <th class="pod-wide" data-field="gpu_sebab">Sebab gagal GPU</th>
+        <th class="pod-num" data-field="hf_saat">Saat GPU HF</th>
+        <th data-field="hf_ejaan">Ejaan GPU HF</th>
+        <th class="pod-wide" data-field="hf_sebab">Sebab gagal GPU HF</th>
       </tr></thead>
       <tbody data-draw="cvg-imej-body"></tbody>
     </table>

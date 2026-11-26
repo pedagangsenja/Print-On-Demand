@@ -1,0 +1,62 @@
+[
+ {
+  "model": "zturbo",
+  "id": "K6P_s42",
+  "ejaan": true,
+  "kata_betul": true,
+  "sebab": "",
+  "gaya": "swash, bintang, blok tegak",
+  "peranti": "hf_zerogpu",
+  "disemak": "Claude, mata, helaian semakan, 26 Nov 2026"
+ },
+ {
+  "model": "zturbo",
+  "id": "K6D_s42",
+  "ejaan": false,
+  "kata_betul": true,
+  "sebab": "'Small' jadi 'small' (huruf kecil)",
+  "gaya": "swash, blok tegak",
+  "peranti": "hf_zerogpu",
+  "disemak": "Claude, mata, helaian semakan, 26 Nov 2026"
+ },
+ {
+  "model": "zturbo",
+  "id": "K6L_s42",
+  "ejaan": false,
+  "kata_betul": true,
+  "sebab": "koma tambahan selepas 'Up'",
+  "gaya": "swash, bintang",
+  "peranti": "hf_zerogpu",
+  "disemak": "Claude, mata, helaian semakan, 26 Nov 2026"
+ },
+ {
+  "model": "moss",
+  "id": "K6P_s42",
+  "ejaan": true,
+  "kata_betul": true,
+  "sebab": "",
+  "gaya": "swash atas+bawah+celah, bintang",
+  "peranti": "hf_zerogpu",
+  "disemak": "Claude, mata, helaian semakan, 26 Nov 2026"
+ },
+ {
+  "model": "moss",
+  "id": "K6D_s42",
+  "ejaan": false,
+  "kata_betul": false,
+  "sebab": "'builds' jadi 'build bss'",
+  "gaya": "swash, bintang",
+  "peranti": "hf_zerogpu",
+  "disemak": "Claude, mata, helaian semakan, 26 Nov 2026"
+ },
+ {
+  "model": "moss",
+  "id": "K6L_s42",
+  "ejaan": true,
+  "kata_betul": true,
+  "sebab": "",
+  "gaya": "swash atas+bawah+celah, bintang",
+  "peranti": "hf_zerogpu",
+  "disemak": "Claude, mata, helaian semakan, 26 Nov 2026"
+ }
+]

@@ -3,3 +3,4 @@ out/
 __pycache__/
 out_cpu/
 out_gpu/
+out_gpu_hf/

@@ -36,5 +36,11 @@
  "cpu_zturbo_K6L_s7": "/_blob/69ca5977058de7ae0d5a14f2878ef60d",
  "cpu_zturbo_K6P_s42": "/_blob/816ba26e28482c62ead239d53565d48d",
  "cpu_zturbo_K6P_s7": "/_blob/575095c8e9aef674a2b4cfe575ce389f",
- "ref_K6": "/_blob/947c5d6271563fc2bc2c0becfe39fc22"
+ "ref_K6": "/_blob/947c5d6271563fc2bc2c0becfe39fc22",
+ "hf_moss_K6D_s42": "/_blob/0de3a36d3da32b22084e3d5ba0d9ef90",
+ "hf_moss_K6L_s42": "/_blob/376f36b9a5c017de751a49855628de59",
+ "hf_moss_K6P_s42": "/_blob/63bd31f870d68b72bdf65620479332e0",
+ "hf_zturbo_K6D_s42": "/_blob/764268e062b83a5936eea4d11cefb93e",
+ "hf_zturbo_K6L_s42": "/_blob/ef46765a73bd7a057d8305815a706742",
+ "hf_zturbo_K6P_s42": "/_blob/b55c93fa4f4291926a469a55a987d3ea"
 }
