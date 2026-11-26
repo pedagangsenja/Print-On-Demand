@@ -317,7 +317,7 @@ Sumber yang tidak dapat dibuka dicatat. Tiada jawapan rasmi = tulis "tiada sumbe
   5. Kata fungsi GLM: `main title`, `second title`, `closing title`, `supporting line`, `connecting word` / `connecting phrase`.
   6. Kata sifat yang bukan daripada kad dibuang daripada rangka ("minimalist", "bold and minimal").
 - **Model tanpa aturan:** `pembina.bina` memulangkan rangka am (3.3) dan rev `am`, sehingga aturannya ditulis ikut 3.12.
-- **Syarat pakai:** hasil pembina pada K3 × ayat H tidak lebih buruk daripada contoh tulisan tangan (11/12 ejaan betul). **Belum dibuktikan pada imej:** ujian 26 Nov dihentikan atas arahan pengguna selepas 6 imej klein 4B, dan 6 imej itu dipadam atas arahan pengguna; tiada hasil disimpan.
+- **Syarat pakai:** hasil pembina pada K3 × ayat H tidak lebih buruk daripada contoh tulisan tangan (11/12 ejaan betul). Ujian pertama 26 Nov dihentikan dan 6 imejnya dipadam atas arahan pengguna. **Larian v1.2 pertama (26 Nov malam):** K3 × ayat baharu 11/12 ejaan betul dengan pembina (bukti lemah; lihat "Larian v1.2 pertama").
 
 ### 3.14 Aturan model tambahan
 Tempat menyimpan aturan model baharu yang ditulis ikut 3.12 (3.14.1, 3.14.2, …). Belum ada.
@@ -535,7 +535,31 @@ Model baharu juga memerlukan aturan prompt sendiri sebelum dipakai untuk design 
 | GLM-Image | DILANGKAU, tidak dijalankan | Tidak muat: repo 35.8 GB (pengekod 20 GB + transformer 15 GB) lawan RAM 15 GB; tiada GGUF. Tidak diukur; keputusan daripada saiz fail (rasmi) |
 
 - **Simpanan imej:** dalam repo sahaja (`designs/lettering-v1/raw/v12-cpu/`); pengguna memilih A atau SNC pada pagi 27 Nov.
-- **Hasil:** lihat `designs/lettering-v1/qc/v12_cpu.json` dan ringkasan di bawah apabila larian tamat.
+- **Hasil pusingan 0** (36 imej; semakan mata Claude, bukti lemah; lulus = pintu G1 ejaan + G2 tiada teks atau tanda rawak). Rekod setiap imej: `designs/lettering-v1/qc/v12_cpu.json`. Helaian: `qc/v12_cpu_K3K.jpg`, `qc/v12_cpu_K7M.jpg`, `qc/v12_cpu_K8G.jpg`.
+
+| Model | K3K | K7M | K8G | Jumlah | Masa model (termasuk muat turun) |
+|---|---|---|---|---|---|
+| MOSS + LoRA | 3/3 | 3/3 | 0/3 | 6/9 | 55 minit |
+| ERNIE Turbo | 2/3 | 3/3 | 3/3 | 8/9 | 73 minit |
+| Z-Image Turbo | 3/3 | 1/3 | 0/3 | 4/9 | 52 minit |
+| klein 4B | 3/3 | 2/3 | 1/3 | 6/9 | 17 minit |
+| Jumlah | 11/12 | 9/12 | 4/12 | 24/36 | tiada model CPU dilangkau |
+
+- **Pembina kod (3.13):** K3 dengan ayat baharu memberi 11/12, sama dengan contoh tulisan tangan pada ayat H (11/12). Ayat berbeza, jadi ini bukti lemah bahawa pembina tidak lebih buruk.
+- **PE ERNIE (3.6):** K3K seed PE 42 ditolak semakan (PE memetik huruf 'S' sebagai rujukan), seed 7 lulus; K7M dan K8G lulus pada seed 42.
+- **Cacat yang sama pada 2 atau 3 seed (calon kitaran QC):**
+
+| Model × kad | Cacat | Bilangan |
+|---|---|---|
+| MOSS × K8 | 'ALMOST' jadi 'ALMIST' / 'ALMiOST' | 3/3 |
+| Z-Image × K8 | Baris 'KEEP GOING' dipisah jadi dua baris; bintik latar di hujung baris dibaca sebagai noktah | 3/3; 2/3 |
+| Z-Image × K7 | Titik tambahan selepas perkataan | 2/3 |
+| klein 4B × K3 | Percikan dilukis di dalam label (cacat r1 yang sudah diketahui) | 3/3 |
+| Z-Image × K3 | Bintang menggantikan percikan; label kecil | 3/3 |
+| ERNIE × K8 | Huruf berus nipis, bukan marker bulat tebal (gaya, bukan ejaan) | 3/3 |
+
+- **5b:** 24 imej yang lulus dibetulkan (`designs/lettering-v1/betul/v12-cpu/`, `log_5b.jsonl`); 0 gagal semakan akhir. Dua pembaikan skrip semasa larian: SK05 v1.1 (bintik latar di tepi tidak lagi menggagalkan imej) dan SK02 v1.1 (ruang tepi sisi dan atas / bawah berasingan; K3: 13.6 / 15.5, K7: 6.2 / 11.3).
+- **Kemasan (SK06):** imej terbaik setiap design, pilihan Claude menunggu keputusan pengguna: K3K MOSS seed 42 (gaya S3, putih; warna kuning belum kerana SK07 belum dibina), K7M MOSS seed 42 (gaya S2, krim + butir), K8G klein 4B seed 42 (gaya S4, kapur). Fail: `designs/lettering-v1/final/v12-cpu/` (SVG induk + pratonton 18×24); gambar ringkas `qc/v12_cpu_akhir.jpg`.
 
 ## Catatan pembaikan aturan model
 Setiap ubahan aturan (3.4–3.10) direkod di sini. Ujian pertama (26 Nov 2026, K3 × ayat H, seed 42, 7, 123, semakan mata, bukti lemah) mengubah beberapa perkara serentak, kerana dibuat sebelum peraturan "satu ubahan setiap pusingan".
