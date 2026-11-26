@@ -1,1 +1,3 @@
 {"enjin": "zturbo", "rc": 0, "saat": 805, "peranti": "cpu", "prompt": "khas", "nota": "model dari cache", "masa": "2026-11-26T07:41:16"}
+{"enjin": "ernie", "rc": 0, "saat": 1505, "peranti": "cpu", "prompt": "khas", "nota": "transformer dari cache; PE dimuat turun", "masa": "2026-11-26T08:37:04"}
+{"enjin": "moss", "rc": 0, "saat": 1126, "peranti": "cpu", "prompt": "khas", "nota": "model dari cache", "masa": "2026-11-26T09:19:27"}
