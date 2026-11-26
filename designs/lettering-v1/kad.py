@@ -36,6 +36,15 @@ AYAT = {
     "H": dict(nama="sederhana", laluan=2, ayat="Patience Builds What Hurry Breaks",
               baris=[("Patience", "utama"), ("Builds", "sokongan"), ("What", "penyambung"), ("Hurry", "sokongan"),
                      ("Breaks", "utama")]),
+    # 26 Nov 2026 (malam): tiga ayat baharu untuk ujian v1.2 pada tiga gambar upload; cadangan Claude, diluluskan
+    # pengguna. Setiap ayat dijana dengan SATU kad sahaja: K (K3, id K3K), M (K7, id K7M), G (K8, id K8G).
+    "K": dict(nama="sederhana", laluan=2, ayat="Kindness Stays After Words Fade",
+              baris=[("Kindness", "utama"), ("Stays", "sokongan"), ("After", "penyambung"), ("Words", "sokongan"),
+                     ("Fade", "utama")]),
+    "M": dict(nama="pendek", laluan=1, ayat="Make Room for Wonder",
+              baris=[("Make", "sokongan"), ("Room", "utama"), ("for", "penyambung"), ("Wonder", "utama")]),
+    "G": dict(nama="sederhana", laluan=2, ayat="Keep Going You Are Almost There",
+              baris=[("Keep Going", "sokongan"), ("You Are", "penyambung"), ("Almost", "utama"), ("There", "sokongan")]),
 }
 
 # Langkah 1: Kad Gaya. huruf[peranan] = (kes, frasa bentuk huruf, nama warna untuk prompt)
@@ -228,6 +237,62 @@ KAD = {
             ("Bintik bintang putih kecil di latar", False),
             ("Huruf condong ke kanan, baris naik sedikit ke kanan", False),
             ("Putih satu warna atas hitam", False)]),
+    # K7, K8: dibuat Claude 26 Nov 2026 (malam) daripada upload pengguna; pengguna membenarkan jana tanpa menunggu
+    # kelulusan kad (titik kelulusan 1d ditangguh ke pagi 27 Nov). Ruang tepi dan condong diukur skrip SK05.
+    "K7": dict(
+        nama="Skrip berus kontras + huruf kecil besar + swash bawah (krim atas hitam)", ref="IMG_5765",
+        snc="belum didaftar (menunggu keputusan A / SNC pengguna)", versi="v1.0 (26 Nov 2026, belum diluluskan pengguna)",
+        kelas="F2", dakwat=1, ruang_tepi=6, tekstur="butir cetakan halus", julat="3-6 perkataan",
+        warna=dict(latar=("hitam", "#0c0c0c", "black"), dakwat=[("krim", "#ece6d8", "white")]),
+        medium="Hand-lettered script quote poster, portrait.",
+        latar="Solid black background.",
+        susunan=("All lines are stacked into one tight centered block; the lines nest closely and the whole block "
+                 "rises clearly to the right."),
+        huruf={"utama": ("title", "very large bold flowing brush script with thick and thin strokes and big swash capitals", "white"),
+               "sokongan": ("title", "large bold flowing brush script with a swash capital", "white"),
+               "penyambung": ("upper", "small bold sans-serif capitals with wide letter spacing", "white")},
+        hierarki="Script words are large; the small capital words sit in the gaps between them.",
+        hiasan="One long flourish swash sweeps under the last line; curled swash tails extend from the first and last letters.",
+        margin="Moderate black margins.",
+        larangan="Subtle fine print grain in the white letters. White on black only, no other colors, no outline.",
+        risiko=["swash boleh dibaca sebagai huruf tambahan", "skrip bersambung: salah ejaan lebih tinggi",
+                "perkataan kecil boleh hilang atau berulang"],
+        jangan_salin=["enam ayat rujukan (Stay hungry stay foolish dan lain-lain)", "susunan baris tepat rujukan"],
+        qc=[("Perkataan utama dalam skrip berus tebal bersambung, kontras tebal nipis", True),
+            ("Perkataan penyambung dalam huruf besar kecil tanpa kait, jarak huruf lebar", True),
+            ("Satu swash panjang di bawah baris akhir", True),
+            ("Huruf awal besar dengan swash", False),
+            ("Blok rapat di tengah, baris bersarang", False),
+            ("Baris naik jelas ke kanan", False),
+            ("Butir cetakan halus pada huruf", False),
+            ("Satu warna cerah atas hitam", False)]),
+    "K8": dict(
+        nama="Berus marker melantun tebal + bintik latar (putih atas hitam)", ref="IMG_5735",
+        snc="belum didaftar (menunggu keputusan A / SNC pengguna)", versi="v1.0 (26 Nov 2026, belum diluluskan pengguna)",
+        kelas="F2", dakwat=1, ruang_tepi=12, tekstur="tepi marker kering + butir latar", julat="4-7 perkataan",
+        warna=dict(latar=("hitam arang", "#1f1f1f", "black"), dakwat=[("putih", "#f3f3f1", "white")]),
+        medium="Hand-drawn brush lettering quote poster, portrait.",
+        latar="Solid black background with a few small scattered white dots.",
+        susunan=("All lines are stacked into one tight centered block; the lines sit close together and the whole "
+                 "block tilts so each line rises to the right."),
+        huruf={"utama": ("upper", "very large thick round brush-marker capitals with a bouncy uneven baseline", "white"),
+               "sokongan": ("upper", "large thick round brush-marker capitals with a bouncy uneven baseline", "white"),
+               "penyambung": ("lower", "smaller thick round brush-marker lowercase letters", "white")},
+        hierarki="One word is clearly the largest; the small words tuck in tightly.",
+        hiasan="No swashes, no icons.",
+        margin="Wide empty black margins.",
+        larangan="Slightly rough dry-marker edges on the white letters. White on black only, no other colors, no outline.",
+        risiko=["huruf melantun boleh menukar huruf besar / kecil", "bintik latar boleh jadi titik huruf rawak",
+                "baris rapat boleh menggabung perkataan"],
+        jangan_salin=["ayat We'll make this dream come true", "susunan baris tepat rujukan"],
+        qc=[("Huruf marker berus tebal, hujung bulat, satu ketebalan", True),
+            ("Garis dasar melantun, saiz huruf tidak sekata", True),
+            ("Satu perkataan paling besar di tengah blok", True),
+            ("Blok rapat, baris hampir bersentuh", False),
+            ("Seluruh blok condong naik ke kanan", False),
+            ("Bintik putih kecil bertabur di latar", False),
+            ("Tepi huruf sedikit kasar (marker kering)", False),
+            ("Putih satu warna atas hitam, tiada swash", False)]),
 }
 
 
@@ -336,6 +401,41 @@ BLOK = {
                            ayat="A second ribbon-like swash curls below the last line")],
         hiasan_baki="Swash tails fill the gaps.",
         tiada=["other colors", "outline"], ada="solid white strokes on a clean black background", sama_lebar=True),
+    "K7": dict(
+        medium="script lettering quote poster", gaya="hand-lettered", latar_warna="solid black", latar_isi=None,
+        tepi="a subtle fine print grain", bentuk="one tight block",
+        condong="rises clearly toward the right", sentuh="nest closely", margin="moderate black margins",
+        huruf={"utama": dict(penuh="very large bold flowing brush script with thick and thin strokes and big swash capitals",
+                             ringkas="bold flowing brush script"),
+               "sokongan": dict(penuh="large bold flowing brush script with a swash capital",
+                                ringkas="bold flowing brush script"),
+               "penyambung": dict(penuh="small bold sans-serif capitals with wide letter spacing",
+                                  ringkas="small bold sans-serif capitals")},
+        tertinggi=None, hierarki="Script words are large, and the small capital words sit in the gaps between them.",
+        hiasan=("One long flourish swash sweeps under the last line, and curled swash tails extend from the first "
+                "and last letters."), sisi=None,
+        hiasan_kotak=[dict(pada="bawah", nama="swash", frasa="a long flourish swash",
+                           ayat="One long flourish swash sweeps under the last line")],
+        hiasan_baki="Curled swash tails extend from the first and last letters.",
+        tiada=["other colors", "outline"], ada="solid white strokes on a clean black background", sama_lebar=False,
+        # Diukur SK05 daripada 6 panel IMG_5765 (400x600 setiap satu), 26 Nov 2026: median; julat condong 10.1-14.5,
+        # ruang tepi 5.4-10.3.
+        rujukan=dict(condong_darjah=12.4, tepi_pct=6.2, sumber="SK05 pada IMG_5765, median 6 panel")),
+    "K8": dict(
+        medium="brush lettering quote poster", gaya="hand-drawn", latar_warna="solid black",
+        latar_isi="a few small scattered white dots", tepi="slightly rough dry-marker edges", bentuk="one tight block",
+        condong="tilts so each line rises toward the right", sentuh="sit close together", margin="wide empty black margins",
+        huruf={"utama": dict(penuh="very large thick round brush-marker capitals with a bouncy uneven baseline",
+                             ringkas="thick round brush-marker capitals"),
+               "sokongan": dict(penuh="large thick round brush-marker capitals with a bouncy uneven baseline",
+                                ringkas="thick round brush-marker capitals"),
+               "penyambung": dict(penuh="smaller thick round brush-marker lowercase letters",
+                                  ringkas="thick round brush-marker lowercase letters")},
+        tertinggi=None, hierarki="One word is clearly the largest, and the small words tuck in tightly.",
+        hiasan=None, sisi=None, hiasan_kotak=[], tiada=["other colors", "outline", "swashes"],
+        ada="solid white strokes on a clean black background", sama_lebar=False,
+        # Diukur SK05 daripada IMG_5735 (600x449, melintang; latar bertekstur), 26 Nov 2026. Satu gambar.
+        rujukan=dict(condong_darjah=7.4, tepi_pct=12.2, sumber="SK05 pada IMG_5735")),
 }
 
 
