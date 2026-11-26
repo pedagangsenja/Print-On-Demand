@@ -11,6 +11,7 @@ Guna: python3 pembina.py                 -> semak semua kad x ayat x model (3.11
 """
 import difflib
 import json
+import os
 import re
 import sys
 
@@ -40,6 +41,11 @@ DAFTAR = {
 REV = {k: v["rev"] for k, v in DAFTAR.items()}
 MODEL = list(REV)
 W, H = 768, 1024
+# Ubahan CALON kitaran QC (langkah 5): hanya hidup bila dinamakan dalam PEMBINA_UJI (dipisah koma). Ubahan yang
+# berjaya ditulis balik ke aturan (rev naik) dan dibuang dari sini; yang gagal dicatat dan dibuang.
+#   zturbo_satu_baris: baris berbilang perkataan ditulis "... as N words side by side on one line" (Z-Image x K8:
+#   'KEEP GOING' dipisah jadi dua baris pada 3/3 seed, 26 Nov 2026).
+UJI = {u for u in os.environ.get("PEMBINA_UJI", "").split(",") if u}
 SATU = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"]
 KE = ["first", "second", "third", "fourth", "fifth", "sixth"]
 FUNGSI = {"utama": "title", "sokongan": "supporting line", "penyambung": "connecting word"}
@@ -159,7 +165,9 @@ def zturbo(m):
             if l is m["sisi"]:
                 t += f'; {b["sisi"]["frasa"]} sit on each side of the {l["nama"]}'
         else:
-            t = f'Line {SATU[l["i"]]}{p} reads "{l["q"]}" in {frasa(l, lambda d: f" as line {SATU[d]}")}'
+            sebaris = (f' as {SATU[len(l["q"].split()) - 1]} words side by side on one line'
+                       if "zturbo_satu_baris" in UJI and " " in l["q"] else "")
+            t = f'Line {SATU[l["i"]]}{p} reads "{l["q"]}"{sebaris} in {frasa(l, lambda d: f" as line {SATU[d]}")}'
         s.append(t + (", and it is the tallest line of the poster." if l["tertinggi"] else "."))
     s += tambahan(b)
     s.append(f"The only text in the image is these {SATU[m['nw'] - 1]} words, each appearing once. The image uses "
