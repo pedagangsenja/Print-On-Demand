@@ -1,4 +1,6 @@
-"""SK05 Ukuran (Standard Lettering v1.2, langkah 1 dan 5b). Versi 1, 26 Nov 2026.
+"""SK05 Ukuran (Standard Lettering v1.2, langkah 1 dan 5b). Versi 1.1, 26 Nov 2026.
+v1.1: 'sentuh_tepi' kini hanya blok tulisan; bintik latar di tepi (kad K6, K8) dilapor sebagai 'bintik_tepi' dan
+      tidak lagi menggagalkan imej (ditemui pada larian pertama, ERNIE K8G seed 123).
 
 Tugas: ukur blok tulisan pada satu gambar: ruang tepi, kedudukan, sudut condong, kelabu, baris.
 Dipakai dua cara:
@@ -18,7 +20,7 @@ import cv2
 import numpy as np
 from PIL import Image
 
-VERSI = "SK05 v1"
+VERSI = "SK05 v1.1"
 
 
 def muat(path):
@@ -114,7 +116,9 @@ def ukur(rgb):
         kelabu_pct=round(float(kelabu.mean()) * 100, 2),
         kelabu_rata_pct=round(float((kelabu & (julat < 50)).mean()) * 100, 2),
         latar=[int(v) for v in latar(rgb)],
-        sentuh_tepi=bool(semua[0].any() or semua[-1].any() or semua[:, 0].any() or semua[:, -1].any()),
+        # huruf / blok menyentuh tepi kanvas (mungkin terpotong). Bintik latar kecil (bintang, titik) dikira berasingan.
+        sentuh_tepi=bool(blok[0].any() or blok[-1].any() or blok[:, 0].any() or blok[:, -1].any()),
+        bintik_tepi=bool(semua[0].any() or semua[-1].any() or semua[:, 0].any() or semua[:, -1].any()),
         baris=baris(blok, sudut), versi=VERSI)
 
 

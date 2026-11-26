@@ -1,4 +1,7 @@
-"""SK02 Ruang tepi (Standard Lettering v1.2, langkah 5b, pembetulan 2 daripada 4). Versi 1, 26 Nov 2026.
+"""SK02 Ruang tepi (Standard Lettering v1.2, langkah 5b, pembetulan 2 daripada 4). Versi 1.1, 26 Nov 2026.
+v1.1: ruang tepi sisi dan atas / bawah boleh berbeza (diukur berasingan daripada gambar upload). Sebab: rujukan K7
+      (poster 2:3) ada sisi 6% tetapi atas / bawah 11%; satu angka menjadikan blok terlalu rapat ke atas dan bawah
+      pada kanvas 3:4 (ditemui pada larian pertama).
 
 Tugas: skala blok tulisan (sekata, dari pusat blok) supaya ruang tepi sama dengan nilai kad.
 Diperlukan oleh: semua kad (set asas).
@@ -14,13 +17,22 @@ import asas
 ID = "SK02"
 
 
+def beza_tepi(u, ruj):
+    """Pulang (beza dalam mata peratus pada sisi yang mengehad, faktor skala). Rujukan boleh memberi ruang tepi sisi
+    dan atas / bawah berasingan (tepi_sisi_pct, tepi_atas_bawah_pct); jika tiada, satu angka tepi_pct untuk semua."""
+    x0, y0, x1, y1 = u["kotak"]
+    ts, ta = ruj.get("tepi_sisi_pct", ruj["tepi_pct"]), ruj.get("tepi_atas_bawah_pct", ruj["tepi_pct"])
+    fw, fh = u["w"] * (1 - 2 * ts / 100) / (x1 - x0), u["h"] * (1 - 2 * ta / 100) / (y1 - y0)
+    if fw <= fh:  # lebar mengehad
+        return round((1 - (x1 - x0) / u["w"]) / 2 * 100 - ts, 1), fw
+    return round((1 - (y1 - y0) / u["h"]) / 2 * 100 - ta, 1), fh
+
+
 def matriks(u, ruj, had=asas.HAD):
-    beza = round(u["tepi_pct"] - ruj["tepi_pct"], 1)
+    beza, f = beza_tepi(u, ruj)
     if abs(beza) <= had["tepi"]:
         return None, dict(jalan=False, sebab=f"dalam had: beza {beza} mata")
     x0, y0, x1, y1 = u["kotak"]
-    muat_ = 1 - 2 * ruj["tepi_pct"] / 100
-    f = min(u["w"] * muat_ / (x1 - x0), u["h"] * muat_ / (y1 - y0))
     return asas.tiga(cv2.getRotationMatrix2D(((x0 + x1) / 2, (y0 + y1) / 2), 0, f)), dict(jalan=True, skala=round(f, 3))
 
 

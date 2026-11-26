@@ -351,7 +351,8 @@ BLOK = {
         ukuran=dict(utama=(608, 168), tertinggi=(624, 216), sokongan=(512, 168), penyambung=(224, 80),
                     sisi=(72, 64)),
         # Diukur skrip SK05 daripada gambar upload IMG_5775 (salinan dashboard 236x354), 26 Nov 2026. Satu gambar.
-        rujukan=dict(condong_darjah=7.6, tepi_pct=13.6, sumber="SK05 pada IMG_5775")),
+        rujukan=dict(condong_darjah=7.6, tepi_pct=13.6, tepi_sisi_pct=13.6, tepi_atas_bawah_pct=15.5,
+                     sumber="SK05 pada IMG_5775")),
     "K4": dict(
         medium="typographic poster", gaya="vintage Victorian hand-lettered", latar_warna="solid black",
         latar_isi="tiny scattered white specks", tepi="a worn distressed print texture", bentuk="one tall column",
@@ -420,7 +421,8 @@ BLOK = {
         tiada=["other colors", "outline"], ada="solid white strokes on a clean black background", sama_lebar=False,
         # Diukur SK05 daripada 6 panel IMG_5765 (400x600 setiap satu), 26 Nov 2026: median; julat condong 10.1-14.5,
         # ruang tepi 5.4-10.3.
-        rujukan=dict(condong_darjah=12.4, tepi_pct=6.2, sumber="SK05 pada IMG_5765, median 6 panel")),
+        rujukan=dict(condong_darjah=12.4, tepi_pct=6.2, tepi_sisi_pct=6.2, tepi_atas_bawah_pct=11.3,
+                     sumber="SK05 pada IMG_5765, median 6 panel")),
     "K8": dict(
         medium="brush lettering quote poster", gaya="hand-drawn", latar_warna="solid black",
         latar_isi="a few small scattered white dots", tepi="slightly rough dry-marker edges", bentuk="one tight block",

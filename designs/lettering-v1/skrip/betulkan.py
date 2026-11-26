@@ -22,7 +22,7 @@ import SK02_ruang_tepi
 import SK03_kedudukan
 import SK04_hitam_putih
 
-VERSI = "5b v1"
+VERSI = "5b v1.1"
 
 
 def betulkan(rgb, ruj, had=asas.HAD):
@@ -40,8 +40,8 @@ def betulkan(rgb, ruj, had=asas.HAD):
     gagal = []
     if selepas["sentuh_tepi"]:
         gagal.append("dakwat menyentuh tepi kanvas (huruf mungkin terpotong)")
-    if abs(selepas["tepi_pct"] - ruj["tepi_pct"]) > had["tepi"]:
-        gagal.append(f"ruang tepi {selepas['tepi_pct']} % masih di luar had (rujukan {ruj['tepi_pct']})")
+    if abs(SK02_ruang_tepi.beza_tepi(selepas, ruj)[0]) > had["tepi"]:
+        gagal.append(f"ruang tepi masih di luar had: beza {SK02_ruang_tepi.beza_tepi(selepas, ruj)[0]} mata")
     if ruj["kad_condong"] and ruj["condong_darjah"] is not None and \
             abs(selepas["condong_darjah"] - ruj["condong_darjah"]) > had["condong"]:
         gagal.append(f"condong {selepas['condong_darjah']} masih di luar had (rujukan {ruj['condong_darjah']})")
@@ -65,5 +65,8 @@ if __name__ == "__main__":
             fh.write(json.dumps(dict(imej=f, kad=kid, **log), ensure_ascii=False) + "\n")
         t = {k: (v.get("putar_darjah") or v.get("skala") or v.get("alih_px") or "jalan") for k, v in log["tindakan"].items() if v["jalan"]}
         print(Path(f).name, "| tindakan:", t or "tiada", "| condong", log["sebelum"]["condong_darjah"], "->",
-              log["selepas"]["condong_darjah"], "| tepi", log["sebelum"]["tepi_pct"], "->", log["selepas"]["tepi_pct"],
+              log["selepas"]["condong_darjah"], "| tepi sisi", min(log["sebelum"]["tepi"]["kiri"], log["sebelum"]["tepi"]["kanan"]), "->",
+              min(log["selepas"]["tepi"]["kiri"], log["selepas"]["tepi"]["kanan"]), "atas/bawah",
+              min(log["sebelum"]["tepi"]["atas"], log["sebelum"]["tepi"]["bawah"]), "->",
+              min(log["selepas"]["tepi"]["atas"], log["selepas"]["tepi"]["bawah"]),
               "| lulus" if log["lulus"] else f"| GAGAL: {log['gagal']}")
