@@ -1,6 +1,6 @@
 # Standard Lettering v1.2 (v1: 25 Nov 2026; v1.2: 26 Nov 2026)
 
-Status: v1 dipersetujui pengguna 25 Nov 2026; v1.2 diluluskan pengguna sebagai standard 26 Nov 2026 (menggantikan v1); **belum dibina** (lihat "Belum selesai"). Liputan: laluan 1–2 (ayat 1–8 perkataan), kemasan F1–F2. Laluan 3–4 = percubaan (belum diuji); F3 ditangguh.
+Status: v1 dipersetujui pengguna 25 Nov 2026; v1.2 diluluskan pengguna sebagai standard 26 Nov 2026 (menggantikan v1); **sebahagian dibina**: pembina prompt ikut model siap (3.13); selebihnya lihat "Belum selesai". Liputan: laluan 1–2 (ayat 1–8 perkataan), kemasan F1–F2. Laluan 3–4 = percubaan (belum diuji); F3 ditangguh.
 
 ## Apa berubah dalam v1.2
 1. **Prompt ikut model** (langkah 3): isi gaya tetap daripada Kad; cara menulis berbeza bagi setiap model. Tujuh model: 3.4 klein 4B, 3.5 Z-Image Turbo, 3.6 ERNIE Turbo, 3.7 MOSS (diuji), dan 3.8 FLUX 3 Image Klein, 3.9 Qwen-Image-2512, 3.10 GLM-Image (belum diuji).
@@ -256,7 +256,22 @@ Prompt yang gagal mana-mana semakan TIDAK dijana.
 - **Model baharu:** (1) baca kad model rasmi dan panduan prompt rasminya; (2) catat sumber dan tahap bukti; (3) tulis aturan dengan tujuh medan yang sama seperti 3.4–3.10: sumber, bentuk, turutan, cara tulis teks dan gaya, cara tulis had, tetapan, cacat diketahui; (4) uji banding rangka am lawan aturan baharu: kad sama, ayat sama, seed 42, 7, 123; (5) aturan diterima jika bilangan imej lulus tidak kurang daripada rangka am.
 - **Mengubah aturan sedia ada:** hanya melalui kitaran QC (langkah 5), SATU ubahan setiap pusingan. Setiap ubahan, berjaya atau tidak, direkod dalam "Catatan pembaikan aturan model" di hujung dokumen ini; ubahan yang berjaya menaikkan rev aturan (r1 → r2).
 - **Rekod bersama setiap imej:** prompt, model, rev aturan, versi kad, versi pembina.
-- **Status:** ketujuh-tujuh aturan kini wujud sebagai contoh tulisan tangan untuk K3 × ayat H (`designs/lettering-v1/khas.py`, versi khas-v0, lulus `khas.semak`). Contoh 3.4–3.7 sudah dijana dan disemak; contoh 3.8–3.10 belum dijana. Pembina kod bagi setiap model belum dibina. Sehingga dibina, prompt ditulis tangan ikut aturan ini, ayat demi ayat, dan mesti lulus semakan 3.8.
+- **Status (26 Nov 2026):** pembina kod bagi ketujuh-tujuh model sudah dibina (3.13). Contoh tulisan tangan `khas.py` (khas-v0) disimpan sebagai rekod ujian pertama sahaja; prompt baharu mesti datang daripada pembina.
+
+### 3.13 Pembina kod (`designs/lettering-v1/pembina.py`, versi v1.2-p1, 26 Nov 2026)
+- **Guna:** `python3 pembina.py` (semak semua), `python3 pembina.py K3H klein4b` (cetak satu prompt), `python3 pembina.py --banding` (banding dengan `khas.py`). Jana: `GEN_VARIAN=pembina` dalam `gen.py` / `gen_moss.py`; larian penuh `run_v12.sh`.
+- **Sumber isi:** `kad.BLOK` (blok A–H setiap kad sebagai frasa hitam putih, diambil daripada Kad Gaya; tiada ciri baharu) + `kad.AYAT`. Enam kad ada blok: K1–K6.
+- **Satu frasa bagi setiap peranan:** `penuh` pada sebutan pertama, `the same <ringkas>` pada ulangan. Semua model memakai frasa yang sama; aturan model hanya menyusun ayat.
+- **Semakan 3.11 dalam kod:** `pembina.semak` (semua model) dan `pembina.semak_pe` (hasil PE ERNIE; gagal → seed PE 7, kemudian 123, kemudian rangka am tanpa PE). 210 prompt (6 kad × 5 ayat × 7 model) lulus semakan.
+- **Beza dengan contoh tulisan tangan (K3 × ayat H):** perkataan sama 93% (klein 4B), 84% (Z-Image), 79% (ERNIE mentah), 95% (MOSS), 87% (FLUX 3 Klein), 89% (Qwen), 89% (GLM). Sebab beza: contoh tulisan tangan memakai frasa gaya yang berlainan antara model ("thick, connected", "very large"); pembina memakai satu frasa kad. Kotak MOSS: satu kotak berbeza 8 piksel.
+- **Keputusan pembina yang tidak tertulis dalam 3.4–3.10 (direkod di sini):**
+  1. Ayat had klein 4B: kad yang ada hiasan di bawah baris akhir (K4, K6) mendapat `no other lettering below the last line`, bukan `nothing below the last line`.
+  2. Hiasan sisi label (K3) hanya ditulis jika ayat ada baris berlabel; ayat tanpa penyambung tidak mendapat percikan.
+  3. Baris tertinggi (K3) = baris utama yang terakhir, dan hanya jika ada lebih daripada satu baris utama.
+  4. Kotak MOSS / FLUX 3 Klein bagi kad tanpa ukuran: lebar blok = kanvas tolak ruang tepi kad; tinggi baris lalai 168 (utama), 136 (sokongan), 80 (penyambung) piksel; baris bersentuhan; bekas diberi sela 8 piksel; blok dipusatkan. Ini nilai sementara sehingga ukuran rujukan diukur.
+  5. Kata fungsi GLM: `main title`, `second title`, `closing title`, `supporting line`, `connecting word` / `connecting phrase`.
+  6. Kata sifat yang bukan daripada kad dibuang daripada rangka ("minimalist", "bold and minimal").
+- **Syarat pakai:** hasil pembina pada K3 × ayat H tidak lebih buruk daripada contoh tulisan tangan (11/12 ejaan betul). Keputusan ujian: lihat "Ujian pembina kod" di bawah.
 
 ## Langkah 4: Jana
 - Text-to-image penuh, hitam putih sahaja (dakwat putih atas latar hitam), 768×1024 (laluan 1–2, F1 / F2). Enjin: diffusers; versi perpustakaan direkod.
@@ -414,7 +429,8 @@ Setiap ubahan aturan (3.4–3.10) direkod di sini. Ujian pertama (26 Nov 2026, K
 | 26 Nov 2026 | MOSS + LoRA | r1 | Garis lengkung tambahan atas dan bawah | Susun atur JSON dengan kotak setiap baris | 3/3 → 3/3 |
 
 ## Belum selesai
-- v1.2, belum dibina: pembina kod bagi setiap model (kini contoh tulisan tangan `khas.py`); skrip ukuran rujukan daripada upload; skrip pembetulan 5b dan had toleransinya; semakan ejaan automatik (kini mata sahaja).
+- v1.2, sudah dibina (26 Nov): pembina kod bagi tujuh model + semakan 3.11 (`pembina.py`, 3.13).
+- v1.2, belum dibina: skrip ukuran rujukan daripada upload; skrip pembetulan 5b dan had toleransinya; semakan ejaan automatik (kini mata sahaja).
 - v1.2, bukti masih lemah: aturan 3.4–3.7 diuji pada satu kad (K3) dan satu ayat sahaja. Perlu diulang pada kad lain dan ayat pendek sebelum dianggap kukuh.
 - v1.2, belum diuji langsung: aturan 3.8–3.10 (FLUX 3 Image Klein, Qwen-Image-2512, GLM-Image). Perlu ujian kelayakan melalui Space (GPU, kuota harian); pengguna sebelum ini meminta CPU sahaja, jadi ujian ini menunggu kebenaran. `gen_hf_space.py` belum ada profil untuk tiga Space ini.
 - Calon v1.3, belum diuji: gambar rujukan sebagai input model (klein 4B dan Z-Image ada saluran input gambar dalam diffusers; ERNIE tiada).

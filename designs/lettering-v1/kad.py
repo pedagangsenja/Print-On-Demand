@@ -231,6 +231,111 @@ KAD = {
 }
 
 
+# v1.2 (26 Nov 2026): blok isi 3.2 (A-H) sebagai FRASA, hitam putih, untuk pembina ikut model (pembina.py).
+# Diambil daripada kad di atas; tiada ciri baharu. Frasa disambung oleh aturan model, jadi tiada noktah di hujung.
+# huruf[peranan]: penuh = sebutan pertama, ringkas = sebutan ulangan ("the same ..."); atau bekas + nama + dalam
+# bagi perkataan yang duduk dalam bekas (label / kotak). sisi = hiasan di kiri dan kanan baris berbekas.
+# hiasan_kotak = hiasan yang ada kotak sendiri (MOSS, FLUX 3 Klein): pada = atas / bawah blok.
+# ukuran (piksel, kanvas 768x1024, lebar x tinggi): hanya K3 ada nilai contoh (khas.py, percubaan); kad lain pakai
+# lalai pembina sehingga ukuran rujukan diukur daripada upload.
+_SANS = dict(penuh="heavy condensed bold sans-serif capitals", ringkas="heavy condensed sans-serif capitals")
+_K5 = dict(penuh="chunky bold hand-drawn capitals with a bouncy uneven baseline", ringkas="chunky hand-drawn capitals")
+BLOK = {
+    "K1": dict(
+        medium="script typography poster", gaya="bold hand-lettered", latar_warna="solid black",
+        latar_isi="a very subtle fine fabric grain", tepi="a soft dark shadow under the strokes",
+        bentuk="one tight egg-shaped oval lockup", condong="slants to the right", sentuh="interlock",
+        margin="wide empty black margins",
+        huruf={"utama": dict(penuh="very large heavy connected brush script with big looping capitals",
+                             ringkas="heavy connected brush script"),
+               "sokongan": dict(penuh="large heavy connected brush script", ringkas="heavy connected brush script"),
+               "penyambung": dict(penuh="small heavy brush script", ringkas="small heavy brush script")},
+        tertinggi=None, hierarki="Small words sit in the gaps between the large words.",
+        hiasan="Thick curling swash tails fill the empty spaces around the oval.", sisi=None, hiasan_kotak=[],
+        tiada=["other colors", "outline"], ada="solid white strokes on a clean black background", sama_lebar=False),
+    "K2": dict(
+        medium="typographic quote poster", gaya="bold distressed", latar_warna="solid black", latar_isi=None,
+        tepi="a gritty grunge texture",
+        bentuk="one tight justified block in which every line is stretched to the same full width",
+        condong=None, sentuh=None, margin="moderate black margins",
+        huruf={"utama": dict(bekas="full-width solid white box", nama="box",
+                             dalam="heavy condensed bold black sans-serif capitals"),
+               "sokongan": _SANS, "penyambung": _SANS},
+        tertinggi=None, hierarki="All lines share the same width, so shorter lines have taller letters.",
+        hiasan="A thin white bar runs across the top, above the block.", sisi=None,
+        hiasan_kotak=[dict(pada="atas", nama="bar", frasa="a thin solid white bar across the full width",
+                           ayat="A thin white bar runs across the top, above the block")],
+        tiada=["gray", "outline", "shadow"], ada="gritty textured fills on a clean black background",
+        sama_lebar=True),
+    "K3": dict(
+        medium="hand-lettering quote poster", gaya="flat vector", latar_warna="solid black", latar_isi=None,
+        tepi="crisp clean vector edges", bentuk="one tight block",
+        condong="tilts slightly so each line rises toward the right", sentuh="touch and slightly overlap",
+        margin="wide empty black margins",
+        huruf={"utama": dict(penuh="huge heavy condensed bold sans-serif capitals",
+                             ringkas="heavy condensed sans-serif capitals"),
+               "sokongan": dict(penuh="large bold flowing brush script with a big looping initial capital",
+                                ringkas="bold brush script"),
+               "penyambung": dict(bekas="small solid white rectangular label", nama="label",
+                                  dalam="small bold black sans-serif capitals")},
+        tertinggi="akhir", hierarki=None, hiasan=None,
+        sisi=dict(nama="sparkle", frasa="three short white sparkle strokes"), hiasan_kotak=[],
+        tiada=["gray", "shadow", "texture"], ada="flat fills, sharp edges, and a clean empty background",
+        sama_lebar=False,
+        ukuran=dict(utama=(608, 168), tertinggi=(624, 216), sokongan=(512, 168), penyambung=(224, 80),
+                    sisi=(72, 64))),
+    "K4": dict(
+        medium="typographic poster", gaya="vintage Victorian hand-lettered", latar_warna="solid black",
+        latar_isi="tiny scattered white specks", tepi="a worn distressed print texture", bentuk="one tall column",
+        condong=None, sentuh=None, margin="wide empty black margins",
+        huruf={"utama": dict(penuh="very large decorative vintage serif capitals with an oversized first letter "
+                                   "and slightly playful letter heights", ringkas="decorative vintage serif capitals"),
+               "sokongan": dict(penuh="medium decorative vintage serif capitals",
+                                ringkas="medium decorative vintage serif capitals"),
+               "penyambung": dict(penuh="small serif capitals", ringkas="small serif capitals")},
+        tertinggi=None, hierarki="Main lines are much larger than the small connecting words.",
+        hiasan=("Thin ornamental rules made of dotted lines and small curled scrolls separate the lines, and "
+                "symmetrical Victorian flourish ornaments sit above the top line and below the bottom line."),
+        sisi=None,
+        hiasan_kotak=[dict(pada="atas", nama="flourish", frasa="a symmetrical Victorian flourish ornament",
+                           ayat="A symmetrical Victorian flourish ornament sits above the top line"),
+                      dict(pada="bawah", nama="flourish", frasa="a symmetrical Victorian flourish ornament",
+                           ayat="A matching flourish ornament sits below the bottom line")],
+        hiasan_baki="Thin ornamental rules made of dotted lines and small curled scrolls separate the lines.",
+        tiada=["other colors"], ada="one white ink on a clean black background", sama_lebar=False),
+    "K5": dict(
+        medium="typographic quote poster", gaya="hand-drawn", latar_warna="solid black", latar_isi=None,
+        tepi="a rough chalky distressed texture",
+        bentuk="one tight rectangular block in which every line is stretched to the same width",
+        condong=None, sentuh="touch and interlock", margin="wide empty black margins",
+        huruf={"utama": _K5, "sokongan": _K5,
+               "penyambung": dict(penuh="smaller bouncy hand-drawn lowercase letters",
+                                  ringkas="bouncy hand-drawn lowercase letters")},
+        tertinggi=None, hierarki="Main lines are the largest, and small lowercase words fill the gaps.",
+        hiasan="Some letters end in long playful tails that hook under the next letters.", sisi=None,
+        hiasan_kotak=[], tiada=["other colors"], ada="white chalky letters on a clean black background",
+        sama_lebar=True),
+    "K6": dict(
+        medium="brush calligraphy poster", gaya="hand-lettered", latar_warna="solid black",
+        latar_isi="a few tiny white star dots", tepi="a fine dry-brush grain in the strokes",
+        bentuk="one tall block of equal-width lines", condong="rises slightly to the right", sentuh="interlock",
+        margin="moderate black margins",
+        huruf={"utama": dict(penuh="large flowing brush calligraphy script with thick downstrokes, thin upstrokes "
+                                   "and looping capitals", ringkas="flowing brush calligraphy script"),
+               "sokongan": dict(penuh="flowing connected brush script", ringkas="flowing connected brush script"),
+               "penyambung": dict(penuh="small lowercase brush script", ringkas="small lowercase brush script")},
+        tertinggi=None, hierarki="Large words span the full block width, and small words tuck in beside them.",
+        hiasan=("Long ribbon-like swashes curl above the first line and below the last line, and swash tails fill "
+                "the gaps."), sisi=None,
+        hiasan_kotak=[dict(pada="atas", nama="swash", frasa="a long ribbon-like swash",
+                           ayat="A long ribbon-like swash curls above the first line"),
+                      dict(pada="bawah", nama="swash", frasa="a long ribbon-like swash",
+                           ayat="A second ribbon-like swash curls below the last line")],
+        hiasan_baki="Swash tails fill the gaps.",
+        tiada=["other colors", "outline"], ada="solid white strokes on a clean black background", sama_lebar=True),
+}
+
+
 def kes(teks, k):
     return {"upper": teks.upper(), "lower": teks.lower(), "title": teks.title()}[k]
 

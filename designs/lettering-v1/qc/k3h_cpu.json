@@ -1,0 +1,31 @@
+{
+ "nota": "Semakan mata Claude, 26 Nov 2026, kad K3 x ayat H, CPU, seed 42 / 7 / 123. Tahap bukti lemah. ok = ejaan betul dan tiada teks tambahan. img = id aset dashboard.",
+ "k3h-cpu": {
+  "klein4b": {"42": [false, "Label tambahan di bawah: 'BREEAYS'; 'WHAT' tiada kotak", "51d383afed1871180a699fc304c1f672"],
+              "7": [false, "Label tambahan di bawah: 'BREAKS' berulang; 'WHAT' tiada kotak", "7c23da856a943cc272f9c4d1e2e82b46"],
+              "123": [false, "'WHAT' rosak (huruf T cacat), tiada kotak; bintang tidak diminta", "6af705d7d50e331b4bf5ff6a58cd9719"]},
+  "zturbo": {"42": [true, "Bintang dan garis lengkung tidak diminta", "bb5768a02196d20a49b00a0227822958"],
+             "7": [true, "Bintang dan garis lengkung tidak diminta", "1992c698d253fbcd97dc29f9c67a2c80"],
+             "123": [true, "Bintang dan garis lengkung tidak diminta", "fcfab5757c60890e5015bb972ad44597"]},
+  "ernie": {"42": [false, "'WHAT WHAT' (perkataan label berulang)", "12947f24d5af860186dc0f9872a67235"],
+            "7": [false, "'WHAT WHAT' (perkataan label berulang)", "bbc9466c50ca619788f738dd995b2633"],
+            "123": [false, "'WHAT WHAT' (perkataan label berulang)", "ffaad0caa0f29d38a66b930d3bb1bb34"]},
+  "moss": {"42": [true, "Garis lengkung tambahan atas dan bawah", "aa6b51023f0e33c92ab48f14ee63c05d"],
+           "7": [true, "Garis lengkung tambahan di bawah", "545af149d368056a520c3618cdc507e8"],
+           "123": [true, "Garis tambahan atas dan bawah", "6b3317a001e48d11517546f6956db44a"]}
+ },
+ "k3h-khas-cpu": {
+  "klein4b": {"42": [true, "Percikan dilukis di dalam label", "b39e60733f042fe52d29a3896e4054e7"],
+              "7": [true, "Percikan dilukis di dalam label", "5d9b2800076f0aba6178843776ad259e"],
+              "123": [true, "", "efff4e5d258b8eb40b3fc613a8732ad0"]},
+  "zturbo": {"42": [true, "Percikan hanya di kanan label; ruang tepi sempit", "9478c1e2c808c4026c37cdf572442a75"],
+             "7": [true, "Percikan hanya di kanan label; ruang tepi sempit", "d8862656bd0ecf288865d4587261aab1"],
+             "123": [true, "Percikan hanya di kanan label; ruang tepi sempit", "cb22ffa9b9e6c387a44e4a8eef31bcf7"]},
+  "ernie": {"42": [true, "Bintang tidak diminta; label lebih besar daripada rujukan", "0762466f5883b7903b254a3f11490ab8"],
+            "7": [true, "Bintang tidak diminta; label lebih besar daripada rujukan", "d0d986e768f62b93927fe7547849823b"],
+            "123": [false, "'Builds' meragukan (huruf u / i); label besar", "b2ec5ad549f791c222593e2963f9c44e"]},
+  "moss": {"42": [true, "Blok tidak condong", "808a1bec79c5cc9e4e277ced55a39a62"],
+           "7": [true, "Blok tidak condong", "0110be0300606ff59a39be41cc7ab4b9"],
+           "123": [true, "Blok tidak condong", "ac68b1bfea60a832248657ff1ce78370"]}
+ }
+}
