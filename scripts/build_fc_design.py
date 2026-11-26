@@ -128,13 +128,13 @@ ROWS = [
     ((dict(title="6. Kemasan: finish.py", body=["Vektor → palet gaya → margin seragam", "300 DPI, 8×10 hingga 24×36",
                                                 "Tekstur: grain / worn / chalk"],
            warn=["Dakwat rata atas latar satu warna sahaja"]),
-      [("finish.py (Python)", "k-means, potrace, cairosvg, tekstur", OK)]),
+      [("finish.py (Python)", "paksa palet gaya, margin seragam, tekstur (k-means, potrace, cairosvg)", OK)]),
      (dict(tag="LAPISAN 4", status="DIUBAH", title="6. Kemasan ikut kelas",
            body=["Palet C dipaksa di sini", "F1 dan F2: 1 imej → beberapa warna",
                  "Laluan 3–4: skrip gabung baris font ikut kad, kemudian semak 8 ciri sekali lagi"],
            minis=[("F1", "Vektor rata (finish.py)"), ("F2", "Rata + tekstur"), ("F3", "Raster: gaya bergambar, gradien")],
            keys=["Kunci 4: skrip paksa warna, margin, tekstur"]),
-      [("finish.py", "F1 vektor rata, F2 tekstur", OK), ("Alat F3 raster", "belum dipilih", NO),
+      [("finish.py", "F1 / F2; paksa palet C dan margin", OK), ("Alat F3 raster", "belum dipilih", NO),
        ("Skrip gabung baris font", "laluan 3–4", NO)]),
      (dict(tag="LAPISAN 4", status="DIKEMAS KINI", title="6. Kemasan ikut kad",
            body=["Parameter daripada kad: margin, tekstur, bilangan dakwat, butiran halus",
@@ -143,8 +143,8 @@ ROWS = [
                  "Simpan SVG induk; PNG besar dijana semula bila perlu"],
            minis=[("F1: v1", "Vektor rata"), ("F2: v1", "Rata + tekstur"), ("F3: ditangguh", "Raster; belum wujud")],
            keys=["Kunci 4: skrip paksa warna, margin, tekstur"]),
-      [("finish.py", "F1 / F2; parameter masih tetap dalam skrip", PART),
-       ("Kemasan ikut kad (Python)", "baca kad + semakan automatik", NO)])),
+      [("finish.py", "F1 / F2; palet, margin dan tekstur masih tetap dalam skrip", PART),
+       ("Kemasan ikut kad (Python)", "baca warna, margin dan tekstur daripada kad", NO)])),
 
     ((dict(title="7. Anda lulus atau tolak", body=["~5 minit"]),
       [("Anda", "~5 minit", OK)]),
@@ -205,6 +205,24 @@ HEAD = [("Sedia ada", "S1–S6 · Lettering P9", ""), ("Cadangan pertama", "4 la
         ("Standard v1", "aliran terkini · 25 Nov", "TERKINI")]
 
 
+# Susunan (layout huruf) dan warna: dua faktor utama design; ditonjolkan dalam jadual.
+SUS = re.compile(r"susun|baris|hierarki|margin|ruang tepi|bentuk huruf|perkataan utama|utama /|kata isi|huruf besar|satu blok|tajuk", re.I)
+WAR = re.compile(r"warna|palet|dakwat|latar|Rekod C", re.I)
+IC = {"s": '<i class="fc-ic-s" aria-hidden="true"></i>', "w": '<i class="fc-ic-w" aria-hidden="true"></i>'}
+
+
+def fl(text):
+    return ("s" if SUS.search(text) else "") + ("w" if WAR.search(text) else "")
+
+
+def hc(f):
+    return " ".join({"s": "fc-hs", "w": "fc-hw"}[c] for c in f)
+
+
+def tagchips(f):
+    return "".join(f'<span class="fc-tg fc-tg-{c}">{IC[c]}{"Susunan" if c == "s" else "Warna"}</span>' for c in f)
+
+
 def pill(text, tone, cls=""):
     t = f' data-tone="{tone}"' if tone else ""
     return f'<span class="pod-pill {cls}"{t}>{E(text)}</span>'
@@ -217,23 +235,27 @@ def badge(title):
 
 def cell(s):
     num, title = badge(s["title"])
+    texts = s["body"] + [h + " " + t for h, t in s.get("minis", [])] + s.get("keys", []) + s.get("warn", [])
+    cf = "".join(c for c in "sw" if any(c in fl(x) for x in texts))
     o = []
-    if s.get("tag") or s.get("status"):
+    if s.get("tag") or s.get("status") or cf:
         o.append('<div class="fc-meta">')
         if s.get("tag"):
             o.append(f'<span class="fc-tag">{E(s["tag"])}</span>')
         if s.get("status"):
             o.append(f'<span class="fc-st">{E(s["status"])}</span>')
+        if cf:
+            o.append(f'<span class="fc-tgs">{tagchips(cf)}</span>')
         o.append("</div>")
     o.append(f'<div class="fc-title"><span class="fc-num">{E(num)}</span><b>{E(title)}</b></div>')
     det = []
     if s["body"]:
-        det.append('<ul class="fc-body">' + "".join(f"<li>{E(b)}</li>" for b in s["body"]) + "</ul>")
+        det.append('<ul class="fc-body">' + "".join(f'<li class="{hc(fl(b))}">{E(b)}</li>' for b in s["body"]) + "</ul>")
     if s.get("minis"):
         det.append('<div class="fc-minis">' + "".join(
-            f'<div class="fc-mini"><b>{E(h)}</b><span>{E(t)}</span></div>' for h, t in s["minis"]) + "</div>")
-    chips = [f'<span class="fc-chip fc-key"><i>K</i>{E(k)}</span>' for k in s.get("keys", [])]
-    chips += [f'<span class="fc-chip fc-warn"><i>!</i>{E(w)}</span>' for w in s.get("warn", [])]
+            f'<div class="fc-mini {hc(fl(h + " " + t))}"><b>{E(h)}</b><span>{E(t)}</span></div>' for h, t in s["minis"]) + "</div>")
+    chips = [f'<span class="fc-chip fc-key {hc(fl(k))}"><i>K</i>{E(k)}</span>' for k in s.get("keys", [])]
+    chips += [f'<span class="fc-chip fc-warn {hc(fl(w))}"><i>!</i>{E(w)}</span>' for w in s.get("warn", [])]
     if chips:
         det.append('<div class="fc-chips">' + "".join(chips) + "</div>")
     if det:
@@ -243,7 +265,8 @@ def cell(s):
 
 def tools(ts):
     return '<ul class="fc-tools">' + "".join(
-        f'<li class="fc-tool" data-tone="{st[1]}"><div class="fc-tool-top"><b>{E(n)}</b>'
+        f'<li class="fc-tool {hc(fl(n + " " + d))}" data-tone="{st[1]}"><div class="fc-tool-top"><b>{E(n)}'
+        f'{"".join(IC[c] for c in fl(n + " " + d))}</b>'
         f'<span class="fc-stat">{E(st[0])}</span></div>{f"<span class=fc-desc>{E(d)}</span>" if d else ""}</li>'
         for n, d, st in ts) + "</ul>"
 
@@ -281,16 +304,21 @@ def content():
         ("ok", "ada: alat wujud dan dipakai"), ("warn", "separuh siap / sedang diuji"), ("bad", "belum dibina")))
     legend += ('<span><span class="fc-chip fc-key"><i>K</i>Kunci</span> 5 kunci gaya</span>'
                '<span><span class="fc-chip fc-warn"><i>!</i>Kelemahan</span> aliran sedia ada</span>')
+    focus = ('<div class="fc-focus"><p><b>Dua faktor utama design:</b></p>'
+             f'<span class="fc-tg fc-tg-s">{IC["s"]}Susunan</span><span>bentuk huruf, baris, hierarki, perkataan utama, margin</span>'
+             f'<span class="fc-tg fc-tg-w">{IC["w"]}Warna</span><span>warna C, palet, latar, dakwat</span></div>')
     return f"""<div class="fc-intro">
 <h2>Aliran kerja lettering: 3 versi, 9 langkah</h2>
-<p class="fc-how"><b>Cara baca:</b> setiap baris satu langkah (1 → 9). Ke kanan: aliran lama → cadangan → standard terkini. Lajur <b>Alat</b> di sebelah setiap versi menunjukkan alat yang dipakai dan statusnya.</p>
+<p class="fc-how"><b>Cara baca:</b> setiap baris satu langkah (1 → 9). Ke kanan: aliran lama → cadangan → standard terkini. Lajur <b>Alat</b> di sebelah setiap versi menunjukkan alat yang dipakai dan statusnya. Poin bertanda <b class="fc-t-s">oren</b> = susunan, <b class="fc-t-w">merah jambu</b> = warna.</p>
+{focus}
 <p class="pod-muted">Sumber: carta v1 (scripts/lettering_flowchart.py) dan docs/lettering-standard.md, 25 Nov 2026. Standard v1 dipersetujui 25 Nov; belum dibina sepenuhnya. Laluan 3–4 percubaan, F3 ditangguh. Status alat = keadaan 25 Nov 2026.</p>
 </div>
 <div class="fc-bar-top">
 <div class="fc-legend">{legend}</div>
-<div class="fc-mode" role="group" aria-label="Paparan"><button type="button" data-mode="penuh" aria-pressed="true">Penuh</button><button type="button" data-mode="ringkas" aria-pressed="false">Ringkas</button></div>
+<div class="fc-ctl"><div class="fc-mode fc-hlset" role="group" aria-label="Tonjolkan"><span>Tonjol</span><button type="button" data-hl="semua" aria-pressed="true">Kedua-dua</button><button type="button" data-hl="susunan" aria-pressed="false">Susunan</button><button type="button" data-hl="warna" aria-pressed="false">Warna</button><button type="button" data-hl="tiada" aria-pressed="false">Tiada</button></div>
+<div class="fc-mode fc-modeset" role="group" aria-label="Paparan"><button type="button" data-mode="penuh" aria-pressed="true">Penuh</button><button type="button" data-mode="ringkas" aria-pressed="false">Ringkas</button></div></div>
 </div>
-<div class="fc-frame" data-mode="penuh">{table()}</div>"""
+<div class="fc-frame" data-mode="penuh" data-hl="semua">{table()}</div>"""
 
 
 SECTION = """<!-- FC:TAB START -->
@@ -324,6 +352,39 @@ CSS = """.fc-c1 { --fc-accent: #64748b; } .fc-c2 { --fc-accent: #0d9488; } .fc-c
 .fc-dot[data-tone="ok"], .fc-bar [data-tone="ok"] { background: var(--fc-ok); }
 .fc-dot[data-tone="warn"], .fc-bar [data-tone="warn"] { background: var(--fc-warn); }
 .fc-dot[data-tone="bad"], .fc-bar [data-tone="bad"] { background: var(--fc-bad); }
+#tab-fc { --fc-sus: #ea580c; --fc-war: #db2777; }
+@media (prefers-color-scheme: dark) { #tab-fc { --fc-sus: #fb923c; --fc-war: #f472b6; } }
+.fc-t-s { color: var(--fc-sus); } .fc-t-w { color: var(--fc-war); }
+.fc-ic-s, .fc-ic-w { display: inline-block; flex: none; width: 12px; height: 10px; vertical-align: -1px; margin-left: 5px; }
+.fc-ic-s { background: linear-gradient(var(--fc-sus), var(--fc-sus)) 0 0 / 100% 2px no-repeat, linear-gradient(var(--fc-sus), var(--fc-sus)) 0 4px / 60% 2px no-repeat, linear-gradient(var(--fc-sus), var(--fc-sus)) 0 8px / 85% 2px no-repeat; }
+.fc-ic-w { width: 11px; height: 11px; border-radius: 50%; background: conic-gradient(#ef4444, #f59e0b, #22c55e, #3b82f6, #a855f7, #ec4899, #ef4444); }
+.fc-tg .fc-ic-s, .fc-tg .fc-ic-w { margin: 0 5px 0 0; }
+.fc-tg { display: inline-flex; align-items: center; font-size: 10px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.fc-tg-s { color: var(--fc-sus); background: color-mix(in srgb, var(--fc-sus) 13%, transparent); }
+.fc-tg-w { color: var(--fc-war); background: color-mix(in srgb, var(--fc-war) 13%, transparent); }
+.fc-tgs { display: inline-flex; gap: 4px; margin-left: auto; }
+.fc-focus { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 6px 10px; padding: 10px 12px; border-radius: var(--cds-radius); border: 1px solid var(--color-border-line); background: linear-gradient(90deg, color-mix(in srgb, var(--fc-sus) 7%, transparent), color-mix(in srgb, var(--fc-war) 7%, transparent)); }
+.fc-focus p { grid-column: 1 / -1; margin: 0; }
+.fc-how, .fc-focus { max-width: 900px; }
+.fc-frame:is([data-hl="semua"], [data-hl="susunan"]) .fc-chip.fc-hs { box-shadow: inset 0 0 0 1.5px var(--fc-sus); }
+.fc-frame:is([data-hl="semua"], [data-hl="warna"]) .fc-chip.fc-hw { box-shadow: inset 0 0 0 1.5px var(--fc-war); }
+.fc-focus .fc-tg { justify-self: start; font-size: 11px; }
+.fc-ctl { display: flex; flex-wrap: wrap; gap: 8px; }
+.fc-hlset > span { align-self: center; padding: 0 6px 0 10px; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.fc-hlset button[data-hl="susunan"][aria-pressed="true"] { background: var(--fc-sus); color: #fff; }
+.fc-hlset button[data-hl="warna"][aria-pressed="true"] { background: var(--fc-war); color: #fff; }
+.fc-body li.fc-hs, .fc-body li.fc-hw { border-radius: 4px; padding-top: 1px; padding-bottom: 1px; }
+.fc-frame:is([data-hl="semua"], [data-hl="susunan"]) .fc-body li.fc-hs { background: color-mix(in srgb, var(--fc-sus) 13%, transparent); }
+.fc-frame:is([data-hl="semua"], [data-hl="susunan"]) .fc-body li.fc-hs::before { background: var(--fc-sus); width: 7px; height: 7px; left: 1px; top: .5em; }
+.fc-frame:is([data-hl="semua"], [data-hl="warna"]) .fc-body li.fc-hw { background: color-mix(in srgb, var(--fc-war) 12%, transparent); }
+.fc-frame:is([data-hl="semua"], [data-hl="warna"]) .fc-body li.fc-hw::before { background: var(--fc-war); width: 7px; height: 7px; left: 1px; top: .5em; }
+.fc-frame[data-hl="semua"] .fc-body li.fc-hs.fc-hw { background: linear-gradient(90deg, color-mix(in srgb, var(--fc-sus) 15%, transparent), color-mix(in srgb, var(--fc-war) 15%, transparent)); }
+.fc-frame:is([data-hl="semua"], [data-hl="susunan"]) .fc-mini.fc-hs { box-shadow: inset 0 0 0 2px var(--fc-sus); }
+.fc-frame:is([data-hl="semua"], [data-hl="warna"]) .fc-mini.fc-hw { box-shadow: inset 0 0 0 2px var(--fc-war); }
+.fc-frame:is([data-hl="semua"], [data-hl="susunan"]) .fc-tool.fc-hs { box-shadow: 0 0 0 2px color-mix(in srgb, var(--fc-sus) 55%, transparent); }
+.fc-frame:is([data-hl="semua"], [data-hl="warna"]) .fc-tool.fc-hw { box-shadow: 0 0 0 2px color-mix(in srgb, var(--fc-war) 55%, transparent); }
+.fc-frame[data-hl="tiada"] :is(.fc-tgs, .fc-ic-s, .fc-ic-w), .fc-frame[data-hl="susunan"] :is(.fc-tg-w, .fc-tool .fc-ic-w), .fc-frame[data-hl="warna"] :is(.fc-tg-s, .fc-tool .fc-ic-s) { display: none; }
+.fc-frame[data-hl="susunan"] :is(.fc-body li, .fc-mini, .fc-tool, .fc-chip):not(.fc-hs), .fc-frame[data-hl="warna"] :is(.fc-body li, .fc-mini, .fc-tool, .fc-chip):not(.fc-hw) { opacity: .35; }
 .fc-mode { display: inline-flex; border: 1px solid var(--color-border-line); border-radius: 999px; padding: 2px; }
 .fc-mode button { appearance: none; border: 0; background: none; font: inherit; font-size: var(--cds-font-size-caption); padding: 3px 14px; border-radius: 999px; color: var(--color-fg-muted); cursor: pointer; }
 .fc-mode button[aria-pressed="true"] { background: var(--color-fg); color: var(--color-bg); }
@@ -388,7 +449,16 @@ JS = """(() => {
   });
   btns.forEach((b) => b.addEventListener('click', () => open(b.dataset.sub)));
   const frame = document.querySelector('#tab-fc .fc-frame');
-  const mb = [...document.querySelectorAll('#tab-fc .fc-mode button')];
+  const mb = [...document.querySelectorAll('#tab-fc .fc-modeset button')];
+  const hb = [...document.querySelectorAll('#tab-fc .fc-hlset button')];
+  const setHl = (h) => {
+    if (!frame) return;
+    frame.dataset.hl = h;
+    hb.forEach((b) => b.setAttribute('aria-pressed', b.dataset.hl === h ? 'true' : 'false'));
+    try { localStorage.setItem('fc-hl', h); } catch (e) {}
+  };
+  hb.forEach((b) => b.addEventListener('click', () => setHl(b.dataset.hl)));
+  try { const h = localStorage.getItem('fc-hl'); if (['semua', 'susunan', 'warna', 'tiada'].includes(h)) setHl(h); } catch (e) {}
   const setMode = (m) => {
     if (!frame) return;
     frame.dataset.mode = m;
