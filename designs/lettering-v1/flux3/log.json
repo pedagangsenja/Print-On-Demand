@@ -1,0 +1,34 @@
+{
+ "model": "black-forest-labs/flux-3-image-klein (distilled, BF16; weights from ml-resources mirror, sha256 = official)",
+ "tempat": "Kaggle CPU",
+ "kad": "K3BW",
+ "ayat": "B",
+ "pembina": "v1.0",
+ "w": 768,
+ "h": 1024,
+ "langkah": 16,
+ "penambah_prompt": false,
+ "prompt": "Modern mixed-font hand-lettering quote poster, flat vector, portrait. Solid black background. Centered stacked lines of different sizes, alternating between two lettering styles; the top line is gently arched. The text reads exactly, five lines: first line \"COURAGE\" (large), second line \"Speaks\" (medium), third line \"WHEN\" (small), fourth line \"Doubt\" (medium), fifth line \"SLEEPS\" (large). Large words: huge heavy rounded bold sans-serif capitals, white. Medium words: large bold brush script, white. Small words: small bold sans-serif capitals in black inside a small white rectangular label. Strong size contrast: sans lines biggest, script lines large, labels small. A few short white sparkle strokes beside the top line and next to one script word. Generous black margins. Only white and black. No gray, no gradient, no texture, no shadow. No other text, no letters except the quoted words, no signature, no watermark, no logo, no frame, no border, no mockup, flat graphic artwork.",
+ "hasil": [
+  {
+   "seed": 42,
+   "file": "K3BW_B_flux3klein_cpu_s42.png",
+   "saat": 22231.7,
+   "ok": true,
+   "qc": {
+    "oleh": "Claude, semakan visual (bukti lemah)",
+    "G1_ejaan": "lulus (COURAGE, Speaks, WHEN, Doubt, SLEEPS; tiada ulangan)",
+    "G2_teks_rawak": "lulus",
+    "G3_kecacatan": "kecil: tekstur berus kering di tepi huruf (2.4% piksel kelabu), larangan 'no texture' tidak dipatuhi sepenuhnya",
+    "ciri_kad": "6/8 (gagal: baris atas tidak melengkung; bayang skrip tidak berkenaan kerana hitam putih); ciri teras lulus",
+    "keputusan": "gagal had 7/8, calon terbaik setakat ini"
+   }
+  },
+  {
+   "seed": 7,
+   "ok": false,
+   "nota": "dihentikan Kaggle pada had 12 jam, langkah 14/16"
+  }
+ ],
+ "masa_seed42": "6 jam 10 minit (16 langkah x ~23 minit)"
+}
