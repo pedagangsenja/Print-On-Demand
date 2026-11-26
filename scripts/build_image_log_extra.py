@@ -14,7 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 V1 = ROOT / "designs/lettering-v1"
 OUT = ROOT / "data/export/models"
-ENJIN = {"klein4b": ("FLUX.2 klein 4B", ""), "zturbo": ("Z-Image-Turbo", ""), "ernie": ("ERNIE-Image-Turbo", ""),
+ENJIN = {"klein3": ("FLUX 3 Image Klein", "suling 16 langkah"), "klein4b": ("FLUX.2 klein 4B", ""), "zturbo": ("Z-Image-Turbo", ""), "ernie": ("ERNIE-Image-Turbo", ""),
          "moss": ("MOSS-Image SFT", "LoRA 8 langkah")}
 # (fail qc, folder raw, awalan id, tarikh, tujuan, variasi prompt, gaya)
 SET = [
@@ -22,11 +22,17 @@ SET = [
      "rangka am, pembina v1.1", "K3 campuran sans + skrip + label, hitam putih"),
     ("k3h_cpu", "k3h-khas-cpu", "k3h-khas", "2026-11-26", "Standard v1.2: K3 × ayat H, aturan ikut model r1",
      "aturan model r1 (khas.py)", "K3 campuran sans + skrip + label, hitam putih"),
-    ("v12_pembina_cpu", "v12-pembina-cpu", "v12-pembina", "2026-11-26",
-     "Standard v1.2: pembina kod ikut model (K3H ulangan, K6P kad lain)", "pembina kod v1.2-p1",
-     {"K3H": "K3 campuran sans + skrip + label, hitam putih", "K6P": "K6 skrip berus + swash reben, hitam putih"}),
+    ("v12_cpu", "v12-cpu", "v12", "2026-11-26",
+     "Larian v1.2 pertama: 3 design x 5 model, pembina kod", "pembina kod v1.2-p1",
+     {"K3K": "K3 campuran sans + skrip + label, hitam putih", "K7M": "K7 skrip berus + huruf kecil + swash, hitam putih",
+      "K8G": "K8 berus marker melantun, hitam putih"}),
+    ("v12_cpu", "v12-cpu-p1", "v12-p1", "2026-11-26",
+     "Larian v1.2 pertama: kitaran QC pusingan 1 (satu ubahan)", "pembina kod v1.2-p1 + ubahan calon",
+     {"K8J": "K8 berus marker melantun, hitam putih", "K8G": "K8 berus marker melantun, hitam putih"}),
 ]
-TEKS = {"K3H": "PATIENCE / Builds / WHAT / Hurry / BREAKS", "K6P": "Brave / Hearts / Begin / Again"}
+TEKS = {"K3H": "PATIENCE / Builds / WHAT / Hurry / BREAKS", "K6P": "Brave / Hearts / Begin / Again",
+        "K3K": "KINDNESS / Stays / AFTER / Words / FADE", "K7M": "Make / Room / FOR / Wonder",
+        "K8G": "KEEP GOING / you are / ALMOST / THERE", "K8J": "KEEP GOING / you are / ALMOST / THERE"}
 
 
 def baris():
@@ -37,6 +43,8 @@ def baris():
             continue
         qc = json.loads(f.read_text()).get(folder, {})
         for enjin, imej in qc.items():
+            if not isinstance(imej, dict):
+                continue
             log = {}
             lf = V1 / "raw" / folder / enjin / "log.jsonl"
             for ln in (lf.read_text().splitlines() if lf.exists() else []):
@@ -44,6 +52,8 @@ def baris():
                 log[(r["id"], str(r["seed"]))] = r
             nama, var = ENJIN[enjin]
             for kunci, (ok, salah, img) in imej.items():
+                if not img:  # belum dimuat naik (pengguna belum pilih A / SNC): tidak masuk daftar
+                    continue
                 idd, seed = kunci.split("_s") if "_s" in kunci else ("K3H", kunci)
                 r = log.get((idd, seed), {})
                 v = "; ".join(x for x in (var, variasi, "penambah prompt" if "hidup" in str(r.get("penambah")) and enjin == "ernie" else "") if x)

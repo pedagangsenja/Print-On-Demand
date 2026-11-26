@@ -236,5 +236,42 @@
     ""
    ]
   }
+ },
+ "v12-cpu-p1": {
+  "nota": "Kitaran QC pusingan 1, 26 Nov 2026: satu ubahan setiap model, seed sama. Kedua-dua ubahan TIDAK berjaya.",
+  "moss": {
+   "K8J_s42": [
+    false,
+    "'ALMOST' jadi 'ALMiST' (peranan ditukar: tiada beza)",
+    ""
+   ],
+   "K8J_s7": [
+    false,
+    "'ALMOST' jadi 'ALMiST'",
+    ""
+   ],
+   "K8J_s123": [
+    false,
+    "'ALMOST' jadi 'ALMiST'",
+    ""
+   ]
+  },
+  "zturbo": {
+   "K8G_s42": [
+    false,
+    "Masih 5 baris (KEEP / GOING dipisah); bintik selepas 'THERE'",
+    ""
+   ],
+   "K8G_s7": [
+    false,
+    "Masih 5 baris; 'ALMOST' jadi 'ALWOST'; bintik selepas 'THERE'",
+    ""
+   ],
+   "K8G_s123": [
+    false,
+    "Masih 5 baris; bintik selepas 'THERE'",
+    ""
+   ]
+  }
  }
 }

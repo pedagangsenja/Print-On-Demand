@@ -560,6 +560,14 @@ Model baharu juga memerlukan aturan prompt sendiri sebelum dipakai untuk design 
 | Z-Image × K3 | Bintang menggantikan percikan; label kecil | 3/3 |
 | ERNIE × K8 | Huruf berus nipis, bukan marker bulat tebal (gaya, bukan ejaan) | 3/3 |
 
+- **Kitaran QC pusingan 1** (dua kes tanpa imej lulus; satu ubahan, seed sama; helaian `qc/v12_cpu_pusingan1.jpg`):
+
+| Model × kad | Ubahan tunggal | Hasil | Keputusan |
+|---|---|---|---|
+| MOSS × K8 | Tukar peranan 'Almost' (utama → sokongan) dan 'There' (sokongan → utama), id K8J | 0/3 → 0/3 ('ALMiST' 3/3) | Tidak berjaya; dibuang. Tiada ubahan lain dalam jadual kitaran QC, jadi terus ke "tukar model" |
+| Z-Image × K8 | Baris berbilang perkataan ditulis "as two words side by side on one line" | 0/3 → 0/3 (masih 5 baris; 'ALWOST' pada seed 7) | Tidak berjaya; dibuang |
+
+- **Model × kad selepas larian ini** (bukti lemah, satu ayat setiap kad): K8 = ERNIE, FLUX 3 Klein (lulus 3/3), klein 4B (1/3); MOSS dan Z-Image tidak sesuai untuk K8. K7 = MOSS, ERNIE, FLUX 3 Klein (3/3), klein 4B (2/3), Z-Image (1/3). K3 = semua lima model (ERNIE 2/3, lain 3/3).
 - **FLUX 3 Image Klein:** ujian pertama aturan 3.8 (kapsyen + jadual kotak, penambah prompt dibuang). 9/9 lulus G1–G2; kedudukan baris mengikut kotak. Pembanding rangka am belum dijalankan, jadi rev kekal r0 (syarat 3.12 F belum dipenuhi). Lesen FLUX Kommunity: hasil komersial bersyarat; pengguna belum memutuskan.
 - **5b:** 33 imej yang lulus dibetulkan (24 + 9 FLUX 3 Klein); angka di bawah untuk 24 yang pertama: imej dibetulkan (`designs/lettering-v1/betul/v12-cpu/`, `log_5b.jsonl`); 0 gagal semakan akhir. Dua pembaikan skrip semasa larian: SK05 v1.1 (bintik latar di tepi tidak lagi menggagalkan imej) dan SK02 v1.1 (ruang tepi sisi dan atas / bawah berasingan; K3: 13.6 / 15.5, K7: 6.2 / 11.3).
 - **Kemasan (SK06):** imej terbaik setiap design, pilihan Claude menunggu keputusan pengguna: K3K MOSS seed 42 (gaya S3, putih; warna kuning belum kerana SK07 belum dibina), K7M MOSS seed 42 (gaya S2, krim + butir), K8G klein 4B seed 42 (gaya S4, kapur). Fail: `designs/lettering-v1/final/v12-cpu/` (SVG induk + pratonton 18×24); gambar ringkas `qc/v12_cpu_akhir.jpg`.
@@ -573,6 +581,9 @@ Setiap ubahan aturan (3.4–3.10) direkod di sini. Ujian pertama (26 Nov 2026, K
 | 26 Nov 2026 | Z-Image Turbo | r1 | Bintang dan garis lengkung yang tidak diminta | Huraian panjang, baris bernombor, had positif | 3/3 → 3/3 |
 | 26 Nov 2026 | ERNIE Turbo | r1 | "WHAT WHAT" (3/3) | Prompt mentah pendek + PE rasmi | 0/3 → 2/3 |
 | 26 Nov 2026 | MOSS + LoRA | r1 | Garis lengkung tambahan atas dan bawah | Susun atur JSON dengan kotak setiap baris | 3/3 → 3/3 |
+| 26 Nov 2026 | MOSS + LoRA | r1 (tiada perubahan) | K8 × ayat G: 'ALMOST' jadi 'ALMIST' (3/3) | Tukar peranan perkataan (kitaran QC pusingan 1). TIDAK berjaya, dibuang | 0/3 → 0/3 |
+| 26 Nov 2026 | Z-Image Turbo | r1 (tiada perubahan) | K8 × ayat G: baris dua perkataan dipisah jadi dua baris (3/3) | Tambah "as two words side by side on one line". TIDAK berjaya, dibuang | 0/3 → 0/3 |
+| 26 Nov 2026 | FLUX 3 Image Klein | r0 (ujian pertama) | Tiada pembanding rangka am | Aturan 3.8 seperti ditulis; CPU | 9/9 pada K3, K7, K8 |
 
 ## Belum selesai
 - v1.2, sudah dibina (26 Nov): pembina kod bagi tujuh model + semakan 3.11 (`pembina.py`, 3.13).
