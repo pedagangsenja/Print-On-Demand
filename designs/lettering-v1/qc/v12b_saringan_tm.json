@@ -1,7 +1,44 @@
-{"tarikh": "2026-11-27", "kaedah": "carian web frasa tepat dalam tanda petik + 'trademark' (hasil Justia, pihak ketiga); saringan sahaja, bukan pengesahan undang-undang; USPTO belum disemak terus",
+{
+ "tarikh": "2026-11-27",
+ "kaedah": "carian web frasa tepat dalam tanda petik + 'trademark' (hasil Justia, pihak ketiga); saringan sahaja, bukan pengesahan undang-undang; USPTO belum disemak terus",
  "ayat": [
-  {"id": "B", "ayat": "Build It Daily", "frasa_tepat": "tiada", "hampir": ["BUILD DAILY (Reg. 5826480, pakaian, BD WEST LLC)"], "risiko": "sederhana: mengandungi BUILD + DAILY; jangan pakai pada pakaian tanpa semakan USPTO"},
-  {"id": "V", "ayat": "Be Brave Do Good", "frasa_tepat": "tiada", "hampir": ["BE GOOD-DO GOOD (Reg. 4965168, 4556626)", "BE BRAVE (beberapa pemilik)"], "risiko": "rendah"},
-  {"id": "N", "ayat": "Begin Shaky. Grow Steady. Small steps add up.", "frasa_tepat": "tiada (juga tiada sebagai petikan)", "hampir": [], "risiko": "rendah"},
-  {"id": "Y", "ayat": "Stay Humble. Let Your Growth Show.", "frasa_tepat": "tiada", "hampir": ["STAY HUMBLE. STAY HOPEFUL. (Reg. 6064465)", "STAY HUMBLE (dibatalkan)"], "risiko": "rendah"}],
- "tahap_bukti": "lemah (pihak ketiga)"}
+  {
+   "id": "B",
+   "ayat": "Build It Daily",
+   "frasa_tepat": "tiada",
+   "hampir": [
+    "BUILD DAILY (Reg. 5826480, pakaian, BD WEST LLC)"
+   ],
+   "risiko": "sederhana: mengandungi BUILD + DAILY; jangan pakai pada pakaian tanpa semakan USPTO",
+   "keputusan_pengguna": "kekal untuk poster (pengguna, 27 Nov 2026)"
+  },
+  {
+   "id": "V",
+   "ayat": "Be Brave Do Good",
+   "frasa_tepat": "tiada",
+   "hampir": [
+    "BE GOOD-DO GOOD (Reg. 4965168, 4556626)",
+    "BE BRAVE (beberapa pemilik)"
+   ],
+   "risiko": "rendah"
+  },
+  {
+   "id": "N",
+   "ayat": "Begin Shaky. Grow Steady. Small steps add up.",
+   "frasa_tepat": "tiada (juga tiada sebagai petikan)",
+   "hampir": [],
+   "risiko": "rendah"
+  },
+  {
+   "id": "Y",
+   "ayat": "Stay Humble. Let Your Growth Show.",
+   "frasa_tepat": "tiada",
+   "hampir": [
+    "STAY HUMBLE. STAY HOPEFUL. (Reg. 6064465)",
+    "STAY HUMBLE (dibatalkan)"
+   ],
+   "risiko": "rendah"
+  }
+ ],
+ "tahap_bukti": "lemah (pihak ketiga)"
+}
