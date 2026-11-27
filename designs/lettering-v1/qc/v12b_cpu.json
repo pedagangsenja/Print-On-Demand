@@ -344,6 +344,16 @@
     true,
     "",
     ""
+   ],
+   "K10F_s123": [
+    false,
+    "G1: 'FEWER' jadi 'FEVER', 'BIGGER' jadi 'BIGIER'",
+    ""
+   ],
+   "K12O_s123": [
+    false,
+    "G1: 'LOOSELY' jadi 'LOSELY'",
+    ""
    ]
   }
  }
