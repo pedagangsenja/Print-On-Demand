@@ -165,6 +165,21 @@
     true,
     "Ejaan betul; hiasan atas menyentuh huruf O (tempat salah); dakwat krim (kelabu, SK04)",
     ""
+   ],
+   "K13S_s42": [
+    true,
+    "Ejaan betul; blok rata kiri kanan (justified); sentuh tepi kiri / kanan (ruang tepi, SK02); huruf lebar bukan condensed (nota gaya)",
+    ""
+   ],
+   "K13S_s7": [
+    true,
+    "Ejaan betul; blok rata kiri kanan (justified); sentuh tepi kiri / kanan (ruang tepi, SK02); huruf lebar bukan condensed (nota gaya)",
+    ""
+   ],
+   "K13S_s123": [
+    true,
+    "Ejaan betul; blok rata kiri kanan (justified); sentuh tepi kiri / kanan (ruang tepi, SK02); huruf lebar bukan condensed (nota gaya)",
+    ""
    ]
   }
  }
