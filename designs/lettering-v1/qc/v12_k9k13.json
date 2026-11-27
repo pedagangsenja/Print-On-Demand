@@ -91,12 +91,12 @@
    ],
    "K11A_s42": [
     true,
-    "Ejaan betul; bingkai putih separa di tepi (SK04/SK02); tiada condong",
+    "Ejaan betul; garis tambahan: bingkai putih separa di tepi; tiada condong (SK01)",
     ""
    ],
    "K11A_s7": [
     true,
-    "Ejaan betul; bingkai putih separa (SK04)",
+    "Ejaan betul; garis tambahan: bingkai putih separa di tepi",
     ""
    ],
    "K12T_s42": [
@@ -107,6 +107,21 @@
    "K12T_s7": [
     true,
     "Ejaan betul; kuat",
+    ""
+   ],
+   "K13S_s42": [
+    true,
+    "Ejaan betul; blok penuh, baris hampir sama lebar",
+    ""
+   ],
+   "K13S_s7": [
+    true,
+    "Ejaan betul; garis tambahan: bingkai putih separa di tepi",
+    ""
+   ],
+   "K13S_s123": [
+    true,
+    "Ejaan betul; blok penuh",
     ""
    ]
   }
