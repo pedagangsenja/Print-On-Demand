@@ -356,5 +356,39 @@
     ""
    ]
   }
+ },
+ "v12b-cpu-p1": {
+  "zturbo": {
+   "K10F_s42": [
+    false,
+    "G1: 'FEWER' jadi 'FERER'",
+    ""
+   ],
+   "K10F_s7": [
+    false,
+    "G1: 'FEWER' jadi 'FENER'",
+    ""
+   ],
+   "K10F_s123": [
+    false,
+    "G1: 'FEWER' jadi 'FEHER'",
+    ""
+   ],
+   "K12O_s42": [
+    false,
+    "G2: titik tambahan selepas setiap perkataan",
+    ""
+   ],
+   "K12O_s7": [
+    false,
+    "G2: titik tambahan selepas setiap perkataan",
+    ""
+   ],
+   "K12O_s123": [
+    false,
+    "G2: titik tambahan selepas setiap perkataan",
+    ""
+   ]
+  }
  }
 }

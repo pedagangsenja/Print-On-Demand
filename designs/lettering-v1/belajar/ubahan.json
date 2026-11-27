@@ -132,5 +132,65 @@
   "selepas": "9/9",
   "keputusan": "menang",
   "nota": "Ujian kelayakan 3.12 F: rangka am (raw/v12-cpu-am) 6/9, gagal K8G 3/3 ('KEEP GOING' tanpa jarak); aturan 3.8 (raw/v12-cpu) 9/9; CPU; teks aturan tidak berubah"
+ },
+ {
+  "tarikh": "2026-11-27",
+  "rev_dari": "r1",
+  "rev_ke": "r1",
+  "model": "zturbo",
+  "ubahan": "tukar_peranan",
+  "kelas": [
+   "ejaan"
+  ],
+  "design": "K10F",
+  "sebelum": "0/3",
+  "selepas": "0/3",
+  "keputusan": "kalah",
+  "nota": "Kitaran QC pusingan 1 (larian v1.2 kedua, raw/v12b-cpu-p1): FEWER utama -> sokongan, EXCUSES sokongan -> utama. 'FEWER' tetap jadi FERER / FENER / FEHER (sama seperti pusingan 0). Dibuang"
+ },
+ {
+  "tarikh": "2026-11-27",
+  "rev_dari": "r1",
+  "rev_ke": "r1",
+  "model": "zturbo",
+  "ubahan": "had_positif",
+  "kelas": [
+   "rawak"
+  ],
+  "design": "K12O",
+  "sebelum": "0/3",
+  "selepas": "0/3",
+  "keputusan": "kalah",
+  "nota": "Kitaran QC pusingan 1: tambah 'Each word ends cleanly with its last letter, followed only by empty black space.' Titik selepas setiap perkataan masih 3/3. Dibuang"
+ },
+ {
+  "tarikh": "2026-11-27",
+  "rev_dari": "r1",
+  "rev_ke": "r1",
+  "model": "zturbo",
+  "ubahan": "huruf_besar",
+  "kelas": [
+   "ejaan"
+  ],
+  "design": "K10F",
+  "sebelum": "-",
+  "selepas": "-",
+  "keputusan": "tidak berkenaan",
+  "nota": "Baris FEWER sudah huruf besar dalam kad K10; tiada ubahan untuk dicuba"
+ },
+ {
+  "tarikh": "2026-11-27",
+  "rev_dari": "r1",
+  "rev_ke": "r1",
+  "model": "klein4b",
+  "ubahan": "huruf_besar",
+  "kelas": [
+   "ejaan"
+  ],
+  "design": "K9Q, K10F, K12O",
+  "sebelum": "-",
+  "selepas": "-",
+  "keputusan": "tidak berkenaan",
+  "nota": "Baris yang salah eja (BUILDS, FEWER, BIGGER, LOOSELY) sudah huruf besar dalam kad K9, K10, K12; pilihan kedua (tukar_peranan) diuji"
  }
 ]

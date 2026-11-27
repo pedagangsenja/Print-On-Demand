@@ -110,7 +110,7 @@ def muat_qc(L):
         if stem.endswith("_snc"):
             batch = stem[:-4].replace("_", "-")
             for kod, r in d.get("rekod", {}).items():
-                if "imej" not in r:  # kod warna C merujuk kod gaya S (warna oleh skrip, bukan prompt)
+                if "imej" not in r or "/" not in r["imej"]:  # kod warna C (kemasan skrip, cth. 'moss_K3K_s42'): bukan prompt
                     continue
                 model, nama = r["imej"].split("/")
                 i, s = nama.rsplit("_s", 1)
