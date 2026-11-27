@@ -1,0 +1,14 @@
+{
+ "nota": "Larian 27 Nov 2026: lima gambar upload, K9-K13, CPU, hitam putih. Semakan mata Claude pada helaian + potongan besar. Bukti lemah. ok = G1 (ejaan, huruf besar / kecil, baris) dan G2 (tiada teks / tanda rawak).",
+ "saringan_trademark": {
+  "kaedah": "Carian web (enjin carian umum, 27 Nov 2026) bagi frasa tepat + 'trademark'; semak hasil Justia / USPTO yang keluar. Saringan sahaja, bukan pengesahan undang-undang; TESS/TSDR USPTO belum disemak terus.",
+  "hasil": {
+   "R Hold your ground": "Permohonan HOLD YOUR GROUND (siri 88916197, pakaian) ditinggalkan 2021-03-09 (Justia, pihak ketiga). Risiko rendah; semak TSDR sebelum jual.",
+   "Q Do The Work Quietly": "Tiada rekod ditemui.",
+   "A Doubt Loses To Action": "Tiada rekod frasa tepat. DOUBT (CBS, kelas 9) dan DOUBT YOUR DOUBT (ditinggalkan) bukan frasa ini.",
+   "T Effort Today Freedom Tomorrow": "Tiada rekod ditemui.",
+   "S Steady Hands Build Strong Lives": "Tiada rekod frasa tepat. STEADY HANDS (sarung tangan, 2018) dan A STEADY HAND (2024, khidmat amal) bukan frasa penuh."
+  }
+ },
+ "v12-cpu-k9k13": {}
+}
