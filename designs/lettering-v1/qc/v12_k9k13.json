@@ -10,5 +10,105 @@
    "S Steady Hands Build Strong Lives": "Tiada rekod frasa tepat. STEADY HANDS (sarung tangan, 2018) dan A STEADY HAND (2024, khidmat amal) bukan frasa penuh."
   }
  },
- "v12-cpu-k9k13": {}
+ "v12-cpu-k9k13": {
+  "moss": {
+   "K9R_s42": [
+    true,
+    "Ejaan betul; skrip berus + garis swash",
+    ""
+   ],
+   "K9R_s7": [
+    true,
+    "Ejaan betul",
+    ""
+   ],
+   "K10Q_s42": [
+    true,
+    "Ejaan betul; blok tinggi di kanvas (SK03)",
+    ""
+   ],
+   "K10Q_s7": [
+    true,
+    "Ejaan betul; blok tinggi (SK03)",
+    ""
+   ],
+   "K11A_s42": [
+    true,
+    "Ejaan betul",
+    ""
+   ],
+   "K11A_s7": [
+    true,
+    "Ejaan betul",
+    ""
+   ],
+   "K12T_s42": [
+    true,
+    "Ejaan betul; banner TODAY",
+    ""
+   ],
+   "K12T_s7": [
+    true,
+    "Ejaan betul",
+    ""
+   ],
+   "K13S_s42": [
+    true,
+    "Ejaan betul; lebar baris tidak sama (BUILD dijarakkan) - nota gaya",
+    ""
+   ],
+   "K13S_s7": [
+    true,
+    "Ejaan betul; nota gaya sama",
+    ""
+   ],
+   "K13S_s123": [
+    true,
+    "Ejaan betul; nota gaya sama",
+    ""
+   ]
+  },
+  "ernie": {
+   "K9R_s42": [
+    true,
+    "Ejaan betul; skrip berus + swash; paling hampir rujukan",
+    ""
+   ],
+   "K9R_s7": [
+    true,
+    "Ejaan betul",
+    ""
+   ],
+   "K10Q_s42": [
+    true,
+    "Ejaan betul; WORK tidak cukup besar (hierarki lemah, nota gaya)",
+    ""
+   ],
+   "K10Q_s7": [
+    true,
+    "Ejaan betul; hierarki lemah sama",
+    ""
+   ],
+   "K11A_s42": [
+    true,
+    "Ejaan betul; bingkai putih separa di tepi (SK04/SK02); tiada condong",
+    ""
+   ],
+   "K11A_s7": [
+    true,
+    "Ejaan betul; bingkai putih separa (SK04)",
+    ""
+   ],
+   "K12T_s42": [
+    true,
+    "Ejaan betul; banner + bintang + garis; kuat",
+    ""
+   ],
+   "K12T_s7": [
+    true,
+    "Ejaan betul; kuat",
+    ""
+   ]
+  }
+ }
 }
