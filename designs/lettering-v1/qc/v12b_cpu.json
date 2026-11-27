@@ -245,12 +245,12 @@
    ],
    "K12O_s42": [
     false,
-    "G2: titik selepas setiap perkataan (HOLD. LOOSELY. ...)",
+    "G2: titik tambahan selepas setiap perkataan (HOLD. LOOSELY. ...)",
     ""
    ],
    "K12O_s7": [
     false,
-    "G2: titik selepas setiap perkataan (HOLD. LOOSELY. ...)",
+    "G2: titik tambahan selepas setiap perkataan (HOLD. LOOSELY. ...)",
     ""
    ],
    "K13V_s42": [
@@ -266,6 +266,16 @@
    "K13V_s123": [
     true,
     "Tiada tanda petik (ciri teras 3 gagal); anak panah satu sisi sahaja",
+    ""
+   ],
+   "K10F_s123": [
+    false,
+    "G1: 'FEWER' jadi 'FEHER'",
+    ""
+   ],
+   "K12O_s123": [
+    false,
+    "G2: titik tambahan selepas baris (LOOSELY. DEEPLY.) dan bintik kecil di sudut huruf; sengkang sisi hanya di sisi LOVE",
     ""
    ]
   },

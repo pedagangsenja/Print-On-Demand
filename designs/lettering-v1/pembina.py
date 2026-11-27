@@ -43,7 +43,11 @@ MODEL = list(REV)
 W, H = 768, 1024
 # Ubahan CALON kitaran QC (langkah 5): hanya hidup bila dinamakan dalam PEMBINA_UJI (dipisah koma). Ubahan yang
 # berjaya ditulis balik ke aturan (rev naik) dan dibuang dari sini; yang gagal dicatat dalam standard dan dibuang.
-# Tiada calon semasa. (26 Nov 2026: 'zturbo_satu_baris' diuji pada K8G, tidak berjaya, dibuang.)
+# (26 Nov 2026: 'zturbo_satu_baris' diuji pada K8G, tidak berjaya, dibuang.)
+# Calon semasa (27 Nov 2026, larian v1.2 kedua, kitaran QC pusingan 1):
+#   <model>_tukar_peranan: perkataan yang salah eja berulang bertukar peranan dengan baris jiran (TUKAR); ayat sama.
+#   zturbo_had_positif: ayat had positif tambahan "setiap perkataan berakhir dengan huruf terakhirnya" (titik rawak K12O).
+TUKAR = {("K10", "F"): "Fewer", ("K12", "O"): "Loosely"}
 # Nama calon = <model>_<id pilihan> daripada belajar.py (KELAS), cth. zturbo_had_positif; belajar.py memutuskan menang / kalah (3.15).
 UJI = {u for u in os.environ.get("PEMBINA_UJI", "").split(",") if u}
 SATU = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"]
@@ -60,7 +64,13 @@ def cap(s):
 
 def bahan(kid, aid):
     """Lapan blok isi (3.2) bagi satu kad x satu ayat: frasa kad + baris teks dengan peranan."""
-    b, a, k = kad.BLOK[kid], kad.AYAT[aid], kad.KAD[kid]
+    b, a, k = kad.BLOK[kid], dict(kad.AYAT[aid]), kad.KAD[kid]
+    if any(u.endswith("_tukar_peranan") for u in UJI) and (kid, aid) in TUKAR:
+        x = [list(t) for t in a["baris"]]
+        i = next(j for j, t in enumerate(x) if t[0] == TUKAR[(kid, aid)])
+        j = next(j for j in sorted(range(len(x)), key=lambda j: abs(j - i)) if x[j][1] != x[i][1])
+        x[i][1], x[j][1] = x[j][1], x[i][1]
+        a["baris"] = [tuple(t) for t in x]
     n, nampak, baris = len(a["baris"]), {}, []
     utama = [i for i, (_, r) in enumerate(a["baris"]) if r == "utama"]
     for i, (t, r) in enumerate(a["baris"]):
@@ -170,6 +180,8 @@ def zturbo(m):
     s += tambahan(b)
     s.append(f"The only text in the image is these {SATU[m['nw'] - 1]} words, each appearing once. The image uses "
              f"only pure white and pure black, {b['ada']}.")
+    if "zturbo_had_positif" in UJI:
+        s.append("Each word ends cleanly with its last letter, followed only by empty black space.")
     return " ".join(s)
 
 
