@@ -181,6 +181,48 @@
     "Ejaan betul; blok rata kiri kanan (justified); sentuh tepi kiri / kanan (ruang tepi, SK02); huruf lebar bukan condensed (nota gaya)",
     ""
    ]
+  },
+  "zturbo": {
+   "K9R_s42": [
+    true,
+    "Ejaan betul; blok hampir sentuh tepi kiri (ruang tepi, SK02)",
+    ""
+   ],
+   "K9R_s7": [
+    true,
+    "Ejaan betul; skrip berus + swash",
+    ""
+   ],
+   "K10Q_s42": [
+    true,
+    "Ejaan betul; WORK paling besar (hierarki betul); sentuh tepi atas (ruang tepi, SK02)",
+    ""
+   ],
+   "K10Q_s7": [
+    true,
+    "Ejaan betul; hierarki betul",
+    ""
+   ],
+   "K11A_s42": [
+    false,
+    "G2: tanda rawak serpihan jalur di atas kiri huruf A, dibaca seperti tanda petikan; bar ucapan tiada",
+    ""
+   ],
+   "K11A_s7": [
+    true,
+    "Ejaan betul; jalur hazard menyentuh huruf A dan C (hiasan di tempat salah); LOSES TO tidak kecil (nota gaya)",
+    ""
+   ],
+   "K12T_s42": [
+    true,
+    "Ejaan betul; hiasan atas menyentuh huruf O (tempat salah)",
+    ""
+   ],
+   "K12T_s7": [
+    true,
+    "Ejaan betul; hiasan atas menyentuh huruf O (tempat salah)",
+    ""
+   ]
   }
  }
 }
