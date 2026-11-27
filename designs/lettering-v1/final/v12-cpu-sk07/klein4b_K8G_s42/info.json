@@ -1,0 +1,19 @@
+{
+ "raw": "klein4b_K8G_s42_warna.png",
+ "style": "S4",
+ "palet": "kad K8",
+ "bg": "#1f1f1f",
+ "fills": [
+  "#f3f3f1"
+ ],
+ "layers": 1,
+ "ink_px": [
+  3040573
+ ],
+ "sizes": {
+  "18x24": [
+   5400,
+   7200
+  ]
+ }
+}

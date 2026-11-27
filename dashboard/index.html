@@ -192,6 +192,33 @@
 .mt-zoom-close { position: absolute; top: 12px; right: 12px; padding: 6px 12px; border-radius: 999px; border: 1px solid #fff; background: transparent; color: #fff; cursor: pointer; }
 @media print { .mt-zoom { display: none; } }
 @media print { .pod-tabbar, .pod-nav, .pod th { position: static; } .pod-scroll { max-height: none; overflow: visible; border: 0; } .pod-nav, .pod-tabbar { display: none; } .pod details { border: 0; } #tab-font, #tab-model, #tab-lesen, #tab-sejarah, #tab-setup, #tab-workflow, #tab-aliran, #tab-daftar, #tab-fc, #tab-model2 { break-before: page; } }
+.pod-kod-pane { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-md); font-size: var(--cds-font-size-caption); line-height: 1.45; min-width: 0; }
+.pod-kod-pane h2 { margin: 0; font-size: var(--cds-font-size-body); }
+.pod-kod-head { display: flex; align-items: center; justify-content: space-between; gap: 6px; margin-bottom: 6px; }
+.pod-kod-toggle { appearance: none; flex: none; width: 28px; height: 28px; display: grid; place-items: center; padding: 0; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background: var(--color-bg); color: var(--color-fg); font: inherit; font-size: 16px; line-height: 1; cursor: pointer; }
+.pod-kod-toggle::before { content: "»"; }
+.pod-kod-toggle[aria-expanded="false"]::before { content: "«"; }
+.pod-kod-toggle:hover { background: var(--color-panel); }
+.pod-kod-toggle:focus-visible { outline: 2px solid var(--color-fg); outline-offset: 2px; }
+.pod-kod-tutup .pod-kod-isi { display: none; }
+.pod-kod-tutup .pod-kod-head { margin-bottom: 0; }
+.pod-kod { margin: 0; display: flex; flex-wrap: wrap; gap: 6px 14px; }
+.pod-kod > div { display: flex; gap: 6px; align-items: baseline; min-width: 0; }
+.pod-kod dt { margin: 0; flex: none; font-weight: 700; min-width: 2.2em; text-align: center; padding: 0 5px; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background: var(--color-bg); color: var(--color-fg); }
+.pod-kod dd { margin: 0; color: var(--color-fg-muted); }
+.pod-kod-eg { margin: 8px 0 0; color: var(--color-fg-muted); }
+@media (min-width: 1000px) {
+  .pod { grid-template-columns: minmax(0, 1fr) 230px; column-gap: var(--cds-gap-lg); row-gap: 0; }
+  .pod > * { grid-column: 1; }
+  .pod > * + * { margin-top: calc(var(--cds-gap-xl) * 1.5); }
+  .pod > .pod-kod-pane { grid-column: 2; grid-row: 1 / span 999; align-self: start; position: sticky; top: 8px; z-index: 35; margin-top: 0; max-height: calc(100vh - 16px); overflow-y: auto; }
+  .pod.pod-kod-tutup { grid-template-columns: minmax(0, 1fr) 40px; }
+  .pod-kod-tutup > .pod-kod-pane { padding: 6px 5px; overflow: visible; }
+  .pod-kod-tutup .pod-kod-head { flex-direction: column-reverse; gap: 8px; }
+  .pod-kod-tutup .pod-kod-pane h2 { writing-mode: vertical-rl; font-size: var(--cds-font-size-caption); }
+  .pod-kod { flex-direction: column; gap: 6px; }
+}
+@media print { .pod-kod-pane { display: none; } }
 </style>
 <link rel="stylesheet" href="fc.css">
 <link rel="stylesheet" href="aliran.css">
@@ -205,6 +232,23 @@
   <div class="pod-kicker">Riset untuk kedai typography di Pinterest</div>
   <h1>Riset POD Typography</h1>
 </header>
+
+<aside id="kod-pendek" class="pod-kod-pane" aria-labelledby="kod-pendek-h">
+  <div class="pod-kod-head"><h2 id="kod-pendek-h">Kod pendek</h2><button type="button" class="pod-kod-toggle" id="kod-pendek-btn" aria-expanded="true" aria-controls="kod-pendek-isi" aria-label="Lipat kod pendek ke kanan"></button></div>
+  <div class="pod-kod-isi" id="kod-pendek-isi">
+  <dl class="pod-kod">
+    <div><dt>A</dt><dd>Ayat: nombor ayat poster (A001)</dd></div>
+    <div><dt>S</dt><dd>Style: gaya tipografi (S001), tab Daftar S/C</dd></div>
+    <div><dt>C</dt><dd>Color: gabungan warna (C001), tab Daftar S/C</dd></div>
+    <div><dt>K</dt><dd>Kad Gaya: ciri gaya + frasa prompt (K1–K8), tab FC</dd></div>
+    <div><dt>SK</dt><dd>Skrip pembetulan Python (SK01 condong, SK02 ruang tepi, SK03 kedudukan, SK04 hitam putih, SK05 ukur)</dd></div>
+    <div><dt>U</dt><dd>Ujian imej AI (U01–U10), tab AI Image Test</dd></div>
+    <div><dt>P</dt><dd>Riset poster (P1–P8), tab Ujikaji</dd></div>
+    <div><dt>♥</dt><dd>Gambar yang anda suka, tab ♥ Disukai</dd></div>
+  </dl>
+  <p class="pod-kod-eg">Contoh kod poster: <b>A001-S003-C002</b> = ayat 1, gaya 3, warna 2. Hitam putih tanpa C: <b>A001-S003</b>.</p>
+  </div>
+</aside>
 
 <div class="pod-tabbar" role="tablist" aria-label="Tab dashboard">
     <button type="button" class="pod-tab-btn" role="tab" id="btn-poster" data-tab="tab-poster" aria-controls="tab-poster" aria-selected="true">Ujikaji</button>
@@ -764,6 +808,13 @@
 <th data-field="nama">Model</th><th data-field="rev">Rev</th><th data-field="imej_semasa" class="pod-num">Imej (rev ini)</th><th data-field="lulus_semasa" class="pod-num">Lulus</th><th data-field="pct_semasa" class="pod-num">% lulus</th><th data-field="suka" class="pod-num">♥</th><th data-field="tolak" class="pod-num">Tolak</th><th data-field="ubahan_dicuba" class="pod-num">Ubahan dicuba</th><th data-field="cacat_berulang">Cacat berulang</th><th data-field="tindakan">Tindakan seterusnya</th>
 </tr></thead><tbody data-draw="t2-aturan-body"></tbody></table></div>
 </div>
+<div id="t2-sk" class="pod-section">
+<h2>Skrip SK: belajar selepas setiap batch</h2>
+<p class="pod-muted">Claude mengemas kini jadual ini selepas 5b dan kemasan setiap batch (standard lettering v1.2, "Belajar SK", <code>belajar_sk.py</code>). Log SK, semakan Claude, ♥ dan tolak anda menentukan satu ubahan seterusnya bagi setiap SK: baiki kod, tambah parameter kad, atau cipta SK baharu terus. Input rosak = SK betul menolak imej yang rosak (bukan cacat SK). Bukti <span class="pod-pill" data-level="lemah">Lemah</span>: satu batch, satu kad berwarna.</p>
+<div class="pod-table-wrap"><table id="t2-sk-tbl" data-source="sk_belajar" data-row-key="sk"><thead><tr>
+<th data-field="sk">SK</th><th data-field="nama">Skrip</th><th data-field="langkah">Langkah</th><th data-field="versi">Versi</th><th data-field="imej" class="pod-num">Imej</th><th data-field="lulus" class="pod-num">Tanpa cacat</th><th data-field="cacat_sk" class="pod-num">Cacat SK</th><th data-field="input_rosak" class="pod-num">Input rosak</th><th data-field="belum_semak" class="pod-num">Belum semak</th><th data-field="tolak" class="pod-num">Tolak</th><th data-field="suka" class="pod-num">♥</th><th data-field="ubahan_dicuba" class="pod-num">Ubahan dicuba</th><th data-field="cacat_berulang">Cacat berulang</th><th data-field="tindakan">Tindakan seterusnya</th>
+</tr></thead><tbody data-draw="t2-sk-body"></tbody></table></div>
+</div>
 <div id="t2-banding" class="pod-section">
 <h2>Banding gambar</h2>
 <p class="pod-muted">Satu kotak = satu ujian, terbaru di atas; tekan tajuk untuk buka. Kiri: rujukan, tarikh, ayat dan seed. Lajur = model. Bingkai hijau = lulus, merah = gagal, kelabu = design siap (tiada QC). Tekan gambar untuk besarkan. Rujukan ialah design orang lain: banding gaya sahaja.</p>
@@ -1216,7 +1267,7 @@
       <h3>C. Warna dan latar</h3>
       <ol>
         <li><b>9</b><span>Pilih warna <b>C</b> dan warna latar yang padan dengan jenis ayat (2), ikon (4) dan gaya S (5).</span></li>
-        <li><b>10</b><span>Tukar design yang lulus kepada vektor, kemudian warnakan semula ikut C. Dua atau tiga pilihan C ditunjuk sekali gus.</span></li>
+        <li><b>10</b><span>Warnakan semula design yang lulus ikut C oleh skrip: SK07 warnakan setiap baris ikut peranannya (sans, skrip, label, hiasan), SK08 tambah bayang yang AI tidak jana (K3: bawah setiap strok skrip kelabu cerah, diukur pada gambar upload), kemudian SK06 tukar kepada vektor (dibina 27 Nov 2026; satu arahan: kemasan.py). Jika baris bertaut tidak dapat diasingkan, design itu kekal hitam putih atau dijana semula. Dua atau tiga pilihan C ditunjuk sekali gus.</span></li>
         <li><b>11</b><span>Design akhir berwarna. <b class="al-wait">Tunggu kelulusan anda.</b></span></li>
       </ol>
     </div>
@@ -3124,6 +3175,26 @@ dash.draw('f-rej-body', (tb) => {
     tb.appendChild(tr);
   });
 });
+</script>
+<script>
+(() => {
+  const KEY = 'pod-kod-tutup';
+  const set = (tutup) => {
+    document.querySelectorAll('.pod').forEach((p) => p.classList.toggle('pod-kod-tutup', tutup));
+    document.querySelectorAll('.pod-kod-toggle').forEach((b) => {
+      b.setAttribute('aria-expanded', tutup ? 'false' : 'true');
+      b.setAttribute('aria-label', tutup ? 'Buka kod pendek' : 'Lipat kod pendek ke kanan');
+    });
+  };
+  let tutup = false;
+  try { tutup = localStorage.getItem(KEY) === '1'; } catch (e) { /* tiada storan */ }
+  set(tutup);
+  document.querySelectorAll('.pod-kod-toggle').forEach((b) => b.addEventListener('click', () => {
+    tutup = b.getAttribute('aria-expanded') === 'true';
+    set(tutup);
+    try { localStorage.setItem(KEY, tutup ? '1' : '0'); } catch (e) { /* tiada storan */ }
+  }));
+})();
 </script>
 <script src="aliran.js"></script>
 <!-- FC:JS START -->

@@ -1,10 +1,14 @@
 # SK06 Vektor + saiz cetak (Standard Lettering v1.2, langkah 6). Dibawa ke cawangan ini 26 Nov 2026.
-# Asal: scripts/lettering/finish.py, cawangan claude/dazzling-cannon-5wzn6h (commit 23229f1, 24 Nov 2026); kod TIDAK diubah.
+# Asal: scripts/lettering/finish.py, cawangan claude/dazzling-cannon-5wzn6h (commit 23229f1, 24 Nov 2026).
+# 27 Nov 2026: satu parameter ditambah, --palet <json> (hasil SK07 / SK08): latar dan dakwat tepat ikut peranan kad
+# atau warna C; topeng diambil terus daripada warna tepat setiap piksel (segment_palet, tanpa k-means) dan
+# dilembutkan sebelum surih. Tanpa --palet: kod asal.
 # Tugas: imej yang lulus QC + 5b -> SVG induk (potrace) -> susun di tengah -> PNG 300 DPI + pratonton.
 # Diperlukan oleh: semua kad (set asas kemasan). Diuji 26 Nov 2026 pada imej K3H sedia ada (gaya S3: satu dakwat putih).
 # Had diketahui: palet, ruang tepi (76% x 78%) dan tekstur masih tetap ikut gaya S1-S6 dalam styles.py, belum dibaca
-# daripada Kad Gaya. Warna ikut peranan = SK07 (belum dibina); bayang = SK08 (belum dibina).
-# Guna: python3 SK06_finish.py <imej> <S1..S6> <folder keluar> [--sizes 18x24,24x36] [--keep-color]
+# daripada Kad Gaya. Warna ikut peranan = SK07, bayang = SK08 (dibina 27 Nov 2026; hantar --palet).
+# 27 Nov 2026: VERSI dicatat dalam info.json (dibaca belajar_sk.py). Naikkan VERSI setiap kali kod berubah.
+# Guna: python3 SK06_finish.py <imej> <S1..S6> <folder keluar> [--sizes 18x24,24x36] [--keep-color] [--palet <json>]
 """Siapkan imej lettering AI untuk cetak (CPU sahaja).
 
 Langkah: besarkan 4x -> asingkan warna (k-means Lab) -> bersihkan bintik -> surih vektor (potrace)
@@ -25,6 +29,8 @@ import cairosvg
 import cv2
 import numpy as np
 from PIL import Image
+
+VERSI = "SK06 v1 (27 Nov 2026)"
 from scipy.optimize import linear_sum_assignment
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -92,6 +98,29 @@ def segment(img, n_ink):
     return labels, conv(centers), conv(bg)[0]
 
 
+def segment_palet(img, palet):
+    """Imej rata SK07 / SK08 (tepi anti-alias = campuran latar + satu dakwat). Bagi setiap piksel: dakwat yang paling
+    hampir dengan garis latar -> dakwat itu, dan kelegapan alfa di sepanjang garis itu. Alfa setiap dakwat dibesarkan
+    4x (kubik) dan dilembutkan (Gaussian) supaya anak tangga piksel jadi lengkung; jumlah alfa > 0.5 = siluet, dan
+    setiap piksel siluet ikut dakwat dengan nilai tertinggi (tiada celah atau tindih antara lapisan)."""
+    bg = hex2rgb(palet["latar"])
+    inks = np.array([hex2rgb(h) for h in palet["dakwat"]], np.float32)
+    v = img.astype(np.float32) - bg
+    e = inks - bg
+    t = np.clip((v @ e.T) / np.maximum((e * e).sum(1), 1e-6), 0, 1)              # H x W x K
+    resid = ((v[..., None, :] - t[..., None] * e[None, None]) ** 2).sum(-1)
+    k = resid.argmin(-1)
+    a = np.take_along_axis(t, k[..., None], -1)[..., 0]
+    soft = []
+    for i in range(len(inks)):
+        m = cv2.resize(np.where(k == i, a, 0).astype(np.float32), None, fx=UP, fy=UP, interpolation=cv2.INTER_CUBIC)
+        soft.append(cv2.GaussianBlur(m, (0, 0), UP * 0.5))
+    soft = np.stack(soft)
+    ink = soft.sum(0) > 0.5
+    labels = np.where(ink, soft.argmax(0), -1).astype(np.int32)
+    return labels, inks, bg
+
+
 def clean(mask, area_min):
     m = mask.astype(np.uint8)
     k = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (5, 5))
@@ -115,8 +144,8 @@ def potrace_paths(mask, tmp):
     return tr, re.findall(r'<path d="([^"]+)"', s)
 
 
-def vectorize(img, n_ink):
-    labels, centers, bg_rgb = segment(img, n_ink)
+def vectorize(img, n_ink, palet=None):
+    labels, centers, bg_rgb = segment_palet(img, palet) if palet else segment(img, n_ink)
     H, W = labels.shape
     masks = {i: clean(labels == i, area_min=int(30 * UP * UP)) for i in range(len(centers))}
     masks = {i: m for i, m in masks.items() if m.any()}
@@ -155,6 +184,13 @@ def map_palette(vec, style, keep_color):
     for r, c in zip(rows, cols):
         fills[r] = style["inks"][c]
     return style["bg"], fills
+
+
+def map_palet(vec, palet):
+    """Lapisan -> dakwat palet yang paling hampir (Lab). Imej SK07 / SK08 sudah rata, jadi padanan terus."""
+    ink = to_lab([hex2rgb(h) for h in palet["dakwat"]])
+    lay = to_lab([l["rgb"] for l in vec["layers"]])
+    return palet["latar"], [palet["dakwat"][int(((ink - c) ** 2).sum(-1).argmin())] for c in lay]
 
 
 def compose_svg(vec, bg_hex, fills, W, H):
@@ -219,18 +255,21 @@ def main():
     raw, sid, out = Path(args.pop(0)), args.pop(0), Path(args.pop(0))
     sizes = ["18x24"]
     keep = False
+    palet = None
     while args:
         a = args.pop(0)
         if a == "--sizes":
             sizes = args.pop(0).split(",")
         elif a == "--keep-color":
             keep = True
+        elif a == "--palet":
+            palet = json.loads(Path(args.pop(0)).read_text())
     style = STYLES[sid]
     out.mkdir(parents=True, exist_ok=True)
     img = np.array(Image.open(raw).convert("RGB"))
-    vec = vectorize(img, len(style["inks"]))
-    bg_hex, fills = map_palette(vec, style, keep)
-    info = {"raw": raw.name, "style": sid, "bg": bg_hex, "fills": fills, "layers": len(vec["layers"]),
+    vec = vectorize(img, len(palet["dakwat"]) if palet else len(style["inks"]), palet)
+    bg_hex, fills = map_palet(vec, palet) if palet else map_palette(vec, style, keep)
+    info = {"versi": VERSI, "raw": raw.name, "style": sid, "palet": palet and palet.get("sumber"), "bg": bg_hex, "fills": fills, "layers": len(vec["layers"]),
             "ink_px": [l["area"] for l in vec["layers"]], "sizes": {}}
     master = compose_svg(vec, bg_hex, fills, 1800, 2400)
     (out / "master.svg").write_text(master)

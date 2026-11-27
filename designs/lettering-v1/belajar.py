@@ -27,8 +27,9 @@ from collections import Counter, defaultdict
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import pembina  # noqa: E402
+import belajar_sk  # noqa: E402
 
-VERSI = "b1 (27 Nov 2026)"
+VERSI = "b1.1 (27 Nov 2026)"
 B = os.path.join(HERE, "belajar")
 STOR = os.path.join(B, "stor", "data")
 EXPORT = os.path.normpath(os.path.join(HERE, "..", "..", "data", "export", "ai_tests", "aturan_belajar.json"))
@@ -60,7 +61,8 @@ KELAS = {
     "ditolak": ("Ditolak pengguna tanpa sebab", r"^dipadam|^ditolak", []),
 }
 POLA = {k: re.compile(v[1], re.I) for k, v in KELAS.items()}
-BUKAN_PROMPT = re.compile(r"condong|ruang tepi|atas tengah|kelabu|lorekan|latar tidak hitam", re.I)
+# Bukan kerja prompt: cacat milik skrip SK (5b / langkah 6); senarai kelas di belajar_sk.KELAS_SK (b1.1: diselaraskan)
+BUKAN_PROMPT = re.compile(r"condong|ruang tepi|atas tengah|kelabu|lorekan|latar tidak hitam|" + belajar_sk.POLA_SK.pattern, re.I)
 HABIS = "Pilihan ubahan habis: tukar ke model seterusnya ikut jadual model × gaya, kemudian pendekkan ayat, kemudian lapor kepada pengguna"
 
 
