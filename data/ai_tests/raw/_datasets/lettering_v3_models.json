@@ -1,0 +1,19 @@
+{
+ "id": "lettering_v3_models",
+ "version": 2,
+ "data": {
+  "description": "Empat lajur galeri: cubaan 1-4 dengan seed 42, 7, 123, 2024.",
+  "fixed": true,
+  "source": {
+   "format": "json",
+   "kind": "file",
+   "name": "lettering_v3_models.json",
+   "url": "/_blob/4a3c8a08da1faf448c5831f27fc1a48e"
+  },
+  "title": "Pusingan QC v3: lajur cubaan",
+  "updated": {
+   "at": "2026-11-23T15:55:00Z",
+   "by": "Claude"
+  }
+ }
+}

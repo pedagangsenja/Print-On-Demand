@@ -1,0 +1,19 @@
+{
+ "id": "lettering_v3_refs",
+ "version": 2,
+ "data": {
+  "description": "Poster rujukan (upload anda 23 Nov) untuk setiap 10 design v3. Design orang lain, rujukan gaya sahaja.",
+  "fixed": true,
+  "source": {
+   "format": "json",
+   "kind": "file",
+   "name": "lettering_v3_refs.json",
+   "url": "/_blob/ccd4cf15e44d8d355df6e8be7c9a4dfa"
+  },
+  "title": "Pusingan QC v3: poster rujukan anda",
+  "updated": {
+   "at": "2026-11-23T15:55:00Z",
+   "by": "Claude"
+  }
+ }
+}

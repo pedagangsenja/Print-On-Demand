@@ -1,0 +1,19 @@
+{
+ "id": "lettering_test_models",
+ "version": 1,
+ "data": {
+  "description": "Empat cara jana (ERNIE, ERNIE + penambah prompt, MOSS-Image SFT 8 langkah, Qwen-Image-2512 di Space) dengan lesen, sumber, kekuatan, kelemahan dan nota jika imej tiada.",
+  "fixed": true,
+  "source": {
+   "format": "json",
+   "kind": "file",
+   "name": "lettering_test_models.json",
+   "url": "/_blob/6dca07407b58368c801ead62fc796a5d"
+  },
+  "title": "Ujian lettering: cara jana yang diuji",
+  "updated": {
+   "at": "2026-11-23T08:45:00Z",
+   "by": "Claude"
+  }
+ }
+}

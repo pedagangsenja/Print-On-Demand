@@ -1,0 +1,19 @@
+{
+ "id": "model_test_models",
+ "version": 1,
+ "data": {
+  "description": "3 model yang diuji: lesen (Hugging Face), kekuatan dan kelemahan dari semakan 30 imej.",
+  "fixed": true,
+  "source": {
+   "format": "json",
+   "kind": "file",
+   "name": "model_test_models.json",
+   "url": "/_blob/c5f0ce6891b5a829333a3731d7f65043"
+  },
+  "title": "Model dalam ujian 23 Nov",
+  "updated": {
+   "at": "2026-11-23T05:30:00Z",
+   "by": "Claude"
+  }
+ }
+}

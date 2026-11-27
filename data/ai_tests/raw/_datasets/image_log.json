@@ -1,0 +1,19 @@
+{
+ "id": "image_log",
+ "version": 2,
+ "data": {
+  "description": "Satu baris untuk setiap imej AI yang dijana dalam repo ini: tarikh, enjin, tempat jalan, tujuan, ayat, seed, saiz, saat, lulus atau tolak dan sebab. Dijana oleh scripts/build_image_log.py daripada dataset ujian per-imej; baris ujian Standard Lettering v1 ditambah oleh scripts/build_image_log_extra.py.",
+  "fixed": true,
+  "source": {
+   "format": "json",
+   "kind": "file",
+   "name": "image_log.json",
+   "url": "/_blob/89ac2449012d25463b3bdb423967733f"
+  },
+  "title": "Daftar ujian imej AI",
+  "updated": {
+   "at": "2026-11-26T13:20:00Z",
+   "by": "Claude"
+  }
+ }
+}

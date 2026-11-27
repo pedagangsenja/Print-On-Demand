@@ -1,0 +1,19 @@
+{
+ "id": "ai2_refs",
+ "version": 1,
+ "data": {
+  "description": "5 kad gaya: nama, gambar rujukan anda, ciri teras dan ciri lain yang disemak.",
+  "fixed": true,
+  "source": {
+   "format": "json",
+   "kind": "file",
+   "name": "ai2_refs.json",
+   "url": "/_blob/a6910a1f9a5a752726cf55399f40adec"
+  },
+  "title": "AI Image Test 2: gaya rujukan K1–K5",
+  "updated": {
+   "at": "2026-11-25T23:45:00Z",
+   "by": "Claude"
+  }
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "id": "ai2_images",
+ "version": 1,
+ "data": {
+  "description": "150 imej (5 model × 5 gaya × 3 ayat × 2 seed) dengan semakan QC Standard Lettering v1 oleh Claude (mata, satu cubaan): ejaan, teks rawak, cacat, ciri teras, skor gaya, lulus, sebab dan saat jana.",
+  "fixed": true,
+  "source": {
+   "format": "json",
+   "kind": "file",
+   "name": "ai2_images.json",
+   "url": "/_blob/f360aba238eec14af1a66f5a5262f995"
+  },
+  "title": "AI Image Test 2: hasil setiap imej",
+  "updated": {
+   "at": "2026-11-25T23:45:00Z",
+   "by": "Claude"
+  }
+ }
+}

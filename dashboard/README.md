@@ -13,3 +13,15 @@ Dashboard: https://claude.ai/artifact/EeAC4MqQijSGYGTWfZW3Sg (jenis "Data").
 - **Workflow**: tugas harian/mingguan/bulanan anda dan Claude (`data/export/setup/workflow.json`).
 - **Prestasi**: rangka 5 analisa, corong sasaran 10 jualan/hari × $30, milestone dan alat data (data `data/export/prestasi/*.json`, dijana oleh `scripts/build_prestasi.py`). Angka sebenar diisi bila GA4, Pinterest dan WooCommerce disambung.
 - **Semua produk**: riset semua produk (data `data/export/*.json`).
+- **AI Image Test**: satu tempat untuk SEMUA imej AI (ujian dan generation). Dataset `ai_all` = `data/export/ai_tests/ai_all.json`, dijana oleh `scripts/build_ai_tests.py` (kod `t2.js`, `t2.css`). Atas: jadual banding model (kiraan `ai_banding`, berubah sendiri). Tengah: grid gambar satu kotak setiap ujian. Bawah: butiran setiap imej + "Info model" (boleh lipat).
+
+## AI Image Test: cara tambah ujian atau generation baharu
+
+1. Tulis `data/ai_tests/rows/Uxx.json` (nombor ujian seterusnya, cth. `U11`): senarai baris, satu baris = satu imej. Lajur wajib:
+   `key` (`Uxx|...`, unik), `ujian`, `ujian_nama`, `ujian_nota`, `jenis` (`Ujian` / `Generation`), `standard` (syarat lulus), `tarikh` (YYYY-MM-DD), `model` (kunci asas: `klein4b`, `schnell`, `zturbo`, `ernie`, `moss`, `qwen2512`, `chroma`; model baharu: tambah dalam `MODELS` skrip), `label` (teks atas gambar), `lajur` (tajuk lajur grid, biasanya nama model), `tempat` (`CPU` / `GPU …` / `—`), `kad` + `kad_name` (kumpulan gaya), `ref_img` (`/_blob/…` rujukan atau null), `baris` (cth. `Pendek · seed 42`), `teks`, `seed`, `saat`, `img` (`/_blob/…`), `lulus` (true / false / null untuk design siap), `ejaan` (true / false / null), `gaya` (cth. `7/8` atau ""), `sebab`, `ai` (false untuk imej bukan AI), `bukti` (`lemah` …).
+   Pilihan: `rawak`, `cacat`, `teras`, `varian`, `nota`, `tanda` (cth. `★ Final`), `img_siap`, `w`, `h`, `kad_nota`, `ref_nota`.
+2. Upload gambar ke artifact dahulu (`asset: true`) untuk dapat url `/_blob/…`.
+3. `python3 scripts/build_ai_tests.py` → upload `data/export/ai_tests/ai_all.json` (`asset: true`) → kemas kini `datasets/ai_all` (`source.url` baharu + `updated`) dengan ArtifactData `update` + `if_version`.
+4. Jadual banding, ringkasan, grid dan butiran berubah sendiri.
+
+Data lama (sebelum 27 Nov 2026) disalin di `data/ai_tests/raw/` (baris) dan `data/ai_tests/raw/_datasets/` (tajuk dan sumber dataset yang dibuang dari dashboard). Gambar kekal dalam artifact.

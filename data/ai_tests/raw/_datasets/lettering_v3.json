@@ -1,0 +1,19 @@
+{
+ "id": "lettering_v3",
+ "version": 3,
+ "data": {
+  "description": "Satu baris untuk setiap imej yang dijana dalam pusingan QC v3: design, cubaan (1-4), seed, versi prompt, keputusan QC (ejaan, teks rawak, cacat, skor gaya /8), tindakan seterusnya, masa dan gambar kecil. Semakan mata oleh Claude; tahap bukti lemah.",
+  "fixed": true,
+  "source": {
+   "format": "json",
+   "kind": "file",
+   "name": "lettering_v3.json",
+   "url": "/_blob/6f1f1e93505fffda7248c32dda1541ba"
+  },
+  "title": "Pusingan QC v3: setiap cubaan",
+  "updated": {
+   "at": "2026-11-23T17:14:00Z",
+   "by": "Claude"
+  }
+ }
+}

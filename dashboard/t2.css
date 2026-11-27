@@ -21,3 +21,5 @@
 .t2-zoomwrap { position: relative; display: inline-block; max-width: min(100%, 720px); }
 .t2-zoomwrap img { display: block; max-width: 100%; }
 .mt-cell .t2-link { display: inline; width: auto; justify-self: start; padding: 0; border: 0; background: none; overflow: visible; color: var(--color-fg); text-decoration: underline; font-size: var(--cds-font-size-caption); cursor: pointer; }
+.t2-info > summary { font-size: var(--cds-font-size-body); }
+.t2-info .pod-section { margin-top: var(--cds-gap-md); }

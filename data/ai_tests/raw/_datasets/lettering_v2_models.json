@@ -1,0 +1,19 @@
+{
+ "id": "lettering_v2_models",
+ "version": 2,
+ "data": {
+  "description": "Dua lajur galeri v2: ERNIE + penambah prompt dengan seed 42 dan seed 7.",
+  "fixed": true,
+  "source": {
+   "format": "json",
+   "kind": "file",
+   "name": "lettering_v2_models.json",
+   "url": "/_blob/9c834373cf671b3fa3e4db78a4e92f1c"
+  },
+  "title": "Ujian ERNIE v2: seed yang diuji",
+  "updated": {
+   "at": "2026-11-23T10:40:00Z",
+   "by": "Claude"
+  }
+ }
+}

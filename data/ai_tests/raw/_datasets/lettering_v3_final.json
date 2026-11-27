@@ -1,0 +1,19 @@
+{
+ "id": "lettering_v3_final",
+ "version": 3,
+ "data": {
+  "description": "Hanya imej yang lulus QC: ejaan 100%, tiada teks rawak, tiada cacat, gaya 7/8 atau lebih.",
+  "fixed": true,
+  "source": {
+   "format": "json",
+   "kind": "file",
+   "name": "lettering_v3_final.json",
+   "url": "/_blob/3968b98052280f8a6f1bb7fc51590c6d"
+  },
+  "title": "Pusingan QC v3: gambar final (lulus QC)",
+  "updated": {
+   "at": "2026-11-23T17:14:00Z",
+   "by": "Claude"
+  }
+ }
+}

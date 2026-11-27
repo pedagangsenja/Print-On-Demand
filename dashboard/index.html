@@ -208,9 +208,7 @@
 <div class="pod-tabbar" role="tablist" aria-label="Tab dashboard">
     <button type="button" class="pod-tab-btn" role="tab" id="btn-poster" data-tab="tab-poster" aria-controls="tab-poster" aria-selected="true">Ujikaji</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-font" data-tab="tab-font" aria-controls="tab-font" aria-selected="false" tabindex="-1">Font</button>
-    <button type="button" class="pod-tab-btn" role="tab" id="btn-model" data-tab="tab-model" aria-controls="tab-model" aria-selected="false" tabindex="-1">AI Image Test</button>
-    <button type="button" class="pod-tab-btn" role="tab" id="btn-model2" data-tab="tab-model2" aria-controls="tab-model2" aria-selected="false" tabindex="-1">AI Image Test 2</button>
-    <button type="button" class="pod-tab-btn" role="tab" id="btn-cvg" data-tab="tab-cvg" aria-controls="tab-cvg" aria-selected="false" tabindex="-1">CPU vs GPU</button>
+    <button type="button" class="pod-tab-btn" role="tab" id="btn-model2" data-tab="tab-model2" aria-controls="tab-model2" aria-selected="false" tabindex="-1">AI Image Test</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-lesen" data-tab="tab-lesen" aria-controls="tab-lesen" aria-selected="false" tabindex="-1">Lesen</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-sejarah" data-tab="tab-sejarah" aria-controls="tab-sejarah" aria-selected="false" tabindex="-1">Chat lepas</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-setup" data-tab="tab-setup" aria-controls="tab-setup" aria-selected="false" tabindex="-1">Setup</button>
@@ -745,417 +743,6 @@
 
 </section>
 
-<section id="tab-model" class="pod-tab" role="tabpanel" aria-labelledby="btn-model" hidden>
-
-<div id="m-intro" class="pod-section pod-first">
-  <p class="pod-lede">Sekarang kita guna <b>FLUX.2 klein 4B</b>: <b data-draw="m-designs" data-source="model_klein_stats" data-field="designs" data-row="0">—</b> design lulus daripada <b data-draw="m-images" data-source="model_klein_stats" data-field="images" data-row="0">—</b> imej. Calon yang lebih kuat menulis huruf: <b>Z-Image-Turbo</b> untuk ayat pendek dan <b>ERNIE-Image-Turbo</b> untuk ayat panjang dan berwarna. Untuk poster berlatar gambar, cara paling selamat ialah hibrid: AI lukis latar, tulisan guna font berlesen. Semua model yang dicadang percuma dan berlesen komersial. Hasil ujian sebenar 3 model (dengan gambar) ada di bahagian pertama di bawah.</p>
-  <div class="pod-kpis" id="m-kpis">
-    <div class="pod-kpi" id="m-kpi-now">
-      <div class="pod-q">Model sekarang</div>
-      <div class="pod-big">klein 4B</div>
-      <div class="pod-muted">Apache 2.0, paling laju</div>
-    </div>
-    <div class="pod-kpi" id="m-kpi-per">
-      <div class="pod-q">Imej setiap design lulus</div>
-      <div class="pod-big" data-draw="m-per" data-source="model_klein_stats" data-field="per_design" data-row="0">—</div>
-      <div class="pod-muted">batch 1–3, kerana salah eja</div>
-    </div>
-    <div class="pod-kpi pod-hl" id="m-kpi-uji">
-      <div class="pod-q">Ejaan betul terbaik (ujian 23 Nov)</div>
-      <div class="pod-big" data-draw="m-best-score" data-source="model_test_summary" data-field="score" data-row="0">—</div>
-      <div class="pod-muted" data-draw="m-best-name" data-source="model_test_summary" data-field="model_name" data-row="0">—</div>
-    </div>
-    <div class="pod-kpi" id="m-kpi-tolak">
-      <div class="pod-q">Model ditolak</div>
-      <div class="pod-big" data-draw="m-rej" data-source="model_counts" data-field="rejected" data-row="0">—</div>
-      <div class="pod-muted">lesen atau terlalu besar</div>
-    </div>
-  </div>
-</div>
-
-<nav class="pod-nav" aria-label="Bahagian model AI">
-    <a href="#im-enjin">Daftar imej</a>
-    <a href="#im-log">Semua imej</a>
-    <a href="#m-lettering-p9">Lettering P9</a>
-    <a href="#m-ujian">Ujian 3 model</a>
-    <a href="#m-lettering">Ujian lettering</a>
-    <a href="#m-lettering-v2">ERNIE v2</a>
-    <a href="#m-lettering-v3">QC v3</a>
-    <a href="#m-cadangan">Model ikut poster</a>
-    <a href="#m-langkah">Pilih model</a>
-    <a href="#m-sumber">Sumber</a>
-    <a href="#d-intro">Design</a>
-    <a href="#d-motiv">Poster motivasi</a>
-    <a href="#d-sarkas">Sarkastik SVG</a>
-    <a href="#d-sarkas-warna">Sarkastik warna</a>
-  </nav>
-
-<section id="im-enjin" class="pod-section">
-  <h2>Daftar ujian imej: ringkasan ikut enjin</h2>
-  <p class="pod-muted"><b data-draw="im-total" data-source="image_stats" data-field="total" data-row="0">&mdash;</b> imej AI dijana dalam repo ini sepanjang fasa ujian; <b data-draw="im-pass" data-source="image_stats" data-field="pass" data-row="0">&mdash;</b> lulus (<b data-draw="im-rate" data-source="image_stats" data-field="rate" data-row="0">&mdash;</b>), jumlah masa jana <b data-draw="im-hours" data-source="image_stats" data-field="hours" data-row="0">&mdash;</b> jam.</p>
-  <div class="pod-fit">
-    <table id="im-table-enjin" data-source="image_by_engine" data-row-key="engine">
-      <colgroup><col style="width:28%"><col style="width:14%"><col style="width:14%"><col style="width:14%"><col style="width:15%"><col style="width:15%"></colgroup>
-      <thead><tr>
-        <th data-field="engine">Enjin</th>
-        <th class="pod-num" data-field="images">Imej</th>
-        <th class="pod-num" data-field="pass">Lulus</th>
-        <th class="pod-num" data-field="rate">% lulus</th>
-        <th class="pod-num" data-field="avg_s">Purata saat</th>
-        <th class="pod-num" data-field="total_min">Jumlah minit</th>
-      </tr></thead>
-      <tbody data-draw="im-enjin-body"></tbody>
-    </table>
-  </div>
-</section>
-
-<section id="im-log" class="pod-section">
-  <h2>Semua imej yang pernah dijana</h2>
-  <p class="pod-muted">Setiap imej direkod: tarikh, enjin, variasi prompt, tempat jalan, tujuan, ayat, seed, saiz, saat, lulus atau tolak dan sebab. Imej baharu ditambah selepas setiap pusingan jana &mdash; Claude tanya dahulu sama ada hendak dimasukkan. Dijana oleh scripts/build_image_log.py.</p>
-  <div class="pod-fit">
-    <table id="im-table-log" data-source="image_log" data-row-key="id">
-      <colgroup>
-        <col style="width:7%"><col style="width:11%"><col style="width:8%"><col style="width:9%">
-        <col style="width:13%"><col style="width:16%"><col style="width:4%"><col style="width:7%">
-        <col style="width:5%"><col style="width:6%"><col style="width:9%"><col style="width:5%">
-      </colgroup>
-      <thead><tr>
-        <th data-field="date">Tarikh</th>
-        <th data-field="engine">Enjin</th>
-        <th data-field="variant">Variasi</th>
-        <th data-field="where">Tempat</th>
-        <th data-field="purpose">Tujuan</th>
-        <th data-field="text">Ayat</th>
-        <th class="pod-num" data-field="seed">Seed</th>
-        <th data-field="size">Saiz</th>
-        <th class="pod-num" data-field="seconds">Saat</th>
-        <th data-field="result">Keputusan</th>
-        <th data-field="wrong">Sebab</th>
-        <th data-field="img">Gambar</th>
-      </tr></thead>
-      <tbody data-draw="im-log-body"></tbody>
-    </table>
-  </div>
-</section>
-
-<section id="m-lettering-p9" class="pod-section">
-  <h2>Lettering P9 (23–24 Nov): pelan percuma + ujian 6 gaya, 3 enjin</h2>
-  <p class="pod-lede">Pelan terkini: quote Inggeris pendek (3–7 perkataan) + langkah siap cetak vektor. Hasil ujian: <b data-draw="p9-sum" data-source="lettering_p9_test">—</b>. Pelan penuh: <code>docs/research/posters/08-lettering.md</code>.</p>
-  <p class="pod-muted">Kenapa cubaan lepas belum capai standard: model kecil di CPU (768×1024), ayat Melayu panjang (92–96% perkataan betul), tiada langkah siap cetak, Space Qwen hanya 1 imej/hari (minta 240 s, kuota percuma 300 s), Kaggle tiada GPU kerana telefon belum disahkan.</p>
-  <h3>Banding 3 enjin: quote, prompt dan seed sama (24 Nov)</h3>
-  <p class="pod-muted">Quote "Small steps every day", 6 gaya × seed 42 dan 7, 768×1024, CPU container 4 teras. "Betul" = tiada salah eja dan tiada teks rawak. "Siap cetak" = imej pilihan yang dilalukan finish.py. Semakan mata Claude; tahap bukti lemah.</p>
-  <div class="pod-table-wrap">
-    <table id="p9-engines" data-source="lettering_p9_engines" data-row-key="engine">
-      <thead><tr><th data-field="engine_name">Enjin</th><th data-field="ok">Imej betul</th><th data-field="styles_ok">Gaya ada imej betul</th><th data-field="avg_seconds">Purata masa</th><th data-field="finish">Siap cetak</th><th data-field="strength">Kekuatan</th><th data-field="weakness">Kelemahan</th></tr></thead>
-      <tbody data-draw="p9-engines-body"></tbody>
-    </table>
-  </div>
-  <h3>6 gaya: AI mentah (kiri) vs siap cetak 18×24 in, 300 DPI (kanan)</h3>
-  <p class="pod-muted">Quote ujian "Small steps every day" di CPU, dikumpul ikut enjin. FLUX.2 klein S3 dan S6: tiada seed betul, hanya imej mentah ditunjuk. Tekan gambar untuk besarkan. Semakan mata Claude; tahap bukti lemah.</p>
-  <div class="p9-grid" data-draw="p9-gallery" data-source="lettering_p9_test"></div>
-  <h3>Alat (semua percuma, hasil boleh dijual)</h3>
-  <div class="pod-table-wrap">
-    <table id="p9-tools" data-source="lettering_p9_tools" data-row-key="job">
-      <thead><tr><th data-field="job">Kerja</th><th data-field="tool">Alat</th><th data-field="license">Lesen</th><th data-field="where">Di mana</th><th data-field="status">Status</th></tr></thead>
-      <tbody data-draw="p9-tools-body"></tbody>
-    </table>
-  </div>
-  <h3>Langkah workflow</h3>
-  <div class="pod-table-wrap">
-    <table id="p9-steps" data-source="lettering_p9_steps" data-row-key="no">
-      <thead><tr><th data-field="no">#</th><th data-field="phase">Bila</th><th data-field="who">Siapa</th><th data-field="step">Langkah</th><th data-field="status">Status</th></tr></thead>
-      <tbody data-draw="p9-steps-body"></tbody>
-    </table>
-  </div>
-  <h3>Setiap imej ujian</h3>
-  <div class="pod-table-wrap">
-    <table id="p9-test" data-source="lettering_p9_test" data-row-key="id">
-      <thead><tr><th data-field="engine_name">Enjin</th><th data-field="style">Gaya</th><th data-field="seed">Seed</th><th data-field="wrong_n">Ejaan</th><th data-field="seconds">Masa</th><th data-field="pick">Pilihan</th><th data-field="note">Catatan</th></tr></thead>
-      <tbody data-draw="p9-test-body"></tbody>
-    </table>
-  </div>
-</section>
-
-<section id="m-ujian" class="pod-section">
-  <h2>Ujian sebenar: 3 model, 10 design yang sama</h2>
-  <p class="pod-muted">23 Nov 2026 di komputer awan (4 CPU, tiada GPU). Prompt dan seed sama (42), satu cubaan setiap design; ejaan disemak dengan mata. Ketiga-tiga model berlesen Apache 2.0 (hasil boleh dijual). Bukti <span class="pod-pill" data-level="lemah">Lemah</span>: ujian kecil, perlu ulang dengan lebih banyak seed.</p>
-  <div class="mt-models" data-draw="mt-models" data-source="model_test_summary"></div>
-  <div class="pod-table-wrap">
-    <table id="mt-table" data-source="model_test_summary" data-row-key="model">
-      <thead><tr>
-        <th data-field="model_name">Model</th>
-        <th data-field="score">Ejaan betul</th>
-        <th data-field="score_a">Gaya SVG Inggeris</th>
-        <th data-field="score_b">Lettering Melayu</th>
-        <th data-field="avg_s">Purata masa / imej</th>
-        <th data-field="per_ok_s">Masa untuk 1 imej betul</th>
-        <th data-field="strength">Kekuatan</th>
-        <th data-field="weakness">Kelemahan</th>
-        <th data-field="license">Lesen</th>
-      </tr></thead>
-      <tbody data-draw="mt-body"></tbody>
-    </table>
-  </div>
-  <h3>Hasil gambar</h3>
-  <p class="pod-muted">Kiri sekali = <b>rujukan anda</b> (bingkai putus-putus), diikuti 3 model. Bingkai hijau = ejaan betul, merah = ada salah eja. Tekan gambar untuk besarkan; tekan rujukan untuk lihat gambar penuh yang anda upload. Rujukan ialah design orang lain: untuk banding gaya sahaja, jangan tiru atau jual.</p>
-  <div class="pod-select-row">
-    <label for="mt-set" class="pod-muted">Tunjuk</label>
-    <select id="mt-set" class="dash-select" aria-label="Tapis jenis design">
-      <option value="">Semua 10 design</option>
-      <option value="A">Gaya SVG Inggeris (1–5)</option>
-      <option value="B">Lettering vintage Melayu (6–10)</option>
-    </select>
-    <label class="pod-muted"><input type="checkbox" id="mt-bad-only"> Hanya design yang ada salah eja</label>
-  </div>
-  <div class="mt-gallery" data-draw="mt-gallery" data-source="model_test model_test_refs"></div>
-  <div class="mt-zoom" id="mt-zoom" hidden role="dialog" aria-modal="true" aria-label="Gambar besar">
-    <figure><img id="mt-zoom-img" alt=""><figcaption id="mt-zoom-cap"></figcaption></figure>
-    <button type="button" class="mt-zoom-close" id="mt-zoom-close">Tutup ✕</button>
-  </div>
-</section>
-
-<section id="m-lettering" class="pod-section">
-  <h2>Ujian lettering: ayat panjang macam rujukan anda</h2>
-  <p class="pod-muted">5 design lettering Melayu baharu, 11–14 perkataan setiap satu. Prompt terperinci: susun padat penuh kanvas, 5 gaya huruf, ekor huruf berhias, bayang 3D dan tekstur. Seed 42, satu cubaan setiap design; ejaan disemak dengan mata. Bukti <span class="pod-pill" data-level="lemah">Lemah</span>: ujian kecil.</p>
-  <div class="mt-models" data-draw="lt-models" data-source="lettering_summary"></div>
-  <div class="pod-table-wrap">
-    <table id="lt-table" data-source="lettering_summary" data-row-key="model">
-      <thead><tr>
-        <th data-field="model_name">Model</th>
-        <th data-field="score">Design betul semua</th>
-        <th data-field="words_pct">Perkataan betul</th>
-        <th data-field="avg_s">Purata masa / imej</th>
-        <th data-field="how">Cara jana</th>
-        <th data-field="strength">Kekuatan</th>
-        <th data-field="weakness">Kelemahan</th>
-        <th data-field="license">Lesen</th>
-      </tr></thead>
-      <tbody data-draw="lt-body"></tbody>
-    </table>
-  </div>
-  <h3>Apa yang masih kurang berbanding rujukan</h3>
-  <div class="pod-table-wrap">
-    <table id="lt-gaps" data-source="lettering_gaps" data-row-key="gap">
-      <thead><tr>
-        <th data-field="gap">Perkara</th>
-        <th data-field="ref">Rujukan anda</th>
-        <th data-field="ai">Hasil AI</th>
-        <th data-field="closest">Paling dekat</th>
-        <th data-field="fix">Cara baiki</th>
-      </tr></thead>
-      <tbody data-draw="lt-gaps-body"></tbody>
-    </table>
-  </div>
-  <h3>Hasil gambar lettering</h3>
-  <p class="pod-muted">Kiri sekali = rujukan anda, diikuti 4 cara jana. Bingkai hijau = semua perkataan betul, merah = ada salah. Tekan gambar untuk besarkan.</p>
-  <div class="mt-gallery" data-draw="lt-gallery" data-source="lettering_test lettering_test_refs lettering_test_models"></div>
-</section>
-
-<section id="m-lettering-v2" class="pod-section">
-  <h2>Ujian ERNIE v2: ayat baharu, prompt ikut rujukan</h2>
-  <p class="pod-muted">5 ayat Melayu baharu. Prompt ditulis semula ikut ciri 5 poster rujukan anda: perkataan utama sangat besar, perkataan kecil dalam reben, satu tiang teks di tengah, tekstur dan tanda baca. ERNIE + penambah prompt, 2 seed (42 dan 7) setiap design. Ejaan disemak dengan mata. Bukti <span class="pod-pill" data-level="lemah">Lemah</span>: ujian kecil.</p>
-  <p><b data-draw="lt2-sum" data-source="lettering_v2_summary" data-field="ok"></b></p>
-  <h3>Ikut standard rujukan?</h3>
-  <div class="pod-table-wrap">
-    <table id="lt-std" data-source="lettering_standard" data-row-key="criterion">
-      <thead><tr>
-        <th data-field="criterion">Ciri</th>
-        <th data-field="ref">Rujukan anda</th>
-        <th data-field="v1">ERNIE v1 (ujian lepas)</th>
-        <th data-field="v1_pass">v1 ikut?</th>
-        <th data-field="v2">ERNIE v2</th>
-        <th data-field="v2_pass">v2 ikut?</th>
-      </tr></thead>
-      <tbody data-draw="lt-std-body"></tbody>
-    </table>
-  </div>
-  <h3>Hasil gambar v2</h3>
-  <p class="pod-muted">Kiri sekali = rujukan anda, diikuti seed 42 dan seed 7. Bingkai hijau = semua perkataan betul, merah = ada silap. Tekan gambar untuk besarkan.</p>
-  <div class="mt-gallery" data-draw="lt2-gallery" data-source="lettering_v2 lettering_v2_refs lettering_v2_models"></div>
-</section>
-
-<section id="m-lettering-v3" class="pod-section">
-  <h2>Pusingan QC v3: redo sehingga ikut standard rujukan</h2>
-  <p class="pod-muted">10 design baharu (2 setiap rujukan: satu gaya huruf macam rujukan, satu font lain). Setiap imej disemak: 3 pintu wajib (ejaan 100%, tiada teks rawak, tiada cacat) + 8 unsur gaya rujukan (lulus jika 7/8). Gagal = jana semula (seed baharu; prompt dibaiki jika unsur gaya gagal), maksimum 4 cubaan. Hanya imej lulus jadi final. SOP penuh: tab Workflow. Semakan mata oleh Claude; bukti <span class="pod-pill" data-level="lemah">Lemah</span>.</p>
-  <p><b data-draw="lt3-sum" data-source="lettering_v3_summary" data-field="passed"></b></p>
-  <h3>Kajian 5 rujukan anda: unsur yang digunakan</h3>
-  <div class="pod-table-wrap">
-    <table id="lt-deep" data-source="lettering_ref_elements" data-row-key="ref">
-      <thead><tr>
-        <th data-field="name">Rujukan</th>
-        <th data-field="words_lines">Perkataan / baris</th>
-        <th data-field="layout">Susun atur</th>
-        <th data-field="hierarchy">Hierarki saiz</th>
-        <th data-field="fonts">Gaya huruf</th>
-        <th data-field="ornaments">Hiasan</th>
-        <th data-field="texture">Tekstur / kedalaman</th>
-        <th data-field="palette">Warna</th>
-        <th data-field="extra">Lain-lain</th>
-      </tr></thead>
-      <tbody data-draw="lt-deep-body"></tbody>
-    </table>
-  </div>
-  <h3>Gambar final (lulus QC sahaja)</h3>
-  <p class="pod-muted">Kiri = rujukan anda, tengah = final. Kotak kosong = belum lulus selepas cubaan setakat ini.</p>
-  <div class="mt-gallery" data-draw="lt3-final" data-source="lettering_v3_final lettering_v3_refs lettering_v3_final_models"></div>
-  <h3>Rekod QC setiap cubaan</h3>
-  <div class="pod-table-wrap">
-    <table id="lt3-qc" data-source="lettering_v3" data-row-key="id">
-      <thead><tr>
-        <th data-field="id">Design</th>
-        <th data-field="attempt">Cubaan</th>
-        <th data-field="seed">Seed</th>
-        <th data-field="wrong_n">Ejaan</th>
-        <th data-field="style_score">Gaya</th>
-        <th data-field="verdict_text">Keputusan QC</th>
-        <th data-field="action">Tindakan</th>
-      </tr></thead>
-      <tbody data-draw="lt3-qc-body"></tbody>
-    </table>
-  </div>
-  <h3>Semua cubaan</h3>
-  <p class="pod-muted">Kiri = rujukan anda, diikuti cubaan 1-4. Bingkai hijau = lulus QC, merah = gagal.</p>
-  <div class="mt-gallery" data-draw="lt3-gallery" data-source="lettering_v3 lettering_v3_refs lettering_v3_models"></div>
-</section>
-
-<section id="m-cadangan" class="pod-section">
-  <h2>Model ikut jenis poster</h2>
-  <p class="pod-muted">Cadangan sementara sehingga ujian sebenar (langkah di bawah) siap.</p>
-  <div class="pod-table-wrap">
-    <table id="m-table-use" data-source="model_usecase" data-row-key="kind">
-      <thead><tr>
-        <th data-field="kind">Jenis poster</th>
-        <th data-field="main">Model utama</th>
-        <th data-field="backup">Sandaran</th>
-        <th data-field="process">Proses</th>
-        <th data-field="why">Sebab</th>
-      </tr></thead>
-      <tbody data-draw="m-use-body"></tbody>
-    </table>
-  </div>
-</section>
-
-<section id="m-langkah" class="pod-section">
-  <h2>Workflow pilih model</h2>
-  <p class="pod-muted">Ujian yang sama untuk semua model supaya boleh dibanding adil.</p>
-  <div class="pod-table-wrap">
-    <table id="m-table-workflow" data-source="model_workflow" data-row-key="no">
-      <thead><tr>
-        <th class="pod-num" data-field="no">#</th>
-        <th data-field="who">Siapa</th>
-        <th data-field="step">Langkah</th>
-        <th data-field="detail">Butiran</th>
-        <th data-field="status">Status</th>
-      </tr></thead>
-      <tbody data-draw="m-workflow-body"></tbody>
-    </table>
-  </div>
-</section>
-
-<section id="m-sumber" class="pod-section">
-  <h2>Sumber riset</h2>
-  <p class="pod-muted">Reddit, arxiv.org dan leaderboard Artificial Analysis tidak boleh dibaca dari sesi ini; forum diganti dengan perbincangan Hugging Face.</p>
-  <div class="pod-table-wrap pod-scroll">
-    <table id="m-table-sources" data-source="model_sources" data-row-key="source">
-      <thead><tr>
-        <th data-field="source">Sumber</th>
-        <th data-field="kind">Jenis</th>
-        <th data-field="used_for">Untuk</th>
-        <th data-field="level">Bukti</th>
-        <th data-field="url">Pautan</th>
-      </tr></thead>
-      <tbody data-draw="m-sources-body"></tbody>
-    </table>
-  </div>
-</section>
-
-<section id="d-intro" class="pod-section">
-  <h2>Design</h2>
-  <p class="pod-lede">Design yang sudah siap untuk dijual: poster motivasi (3:4, cetak 18×24 in) dan design sarkastik SVG (persegi, untuk baju, mug dan pelekat). Semua hitam atas putih, dijana dengan FLUX.2 klein 4B; ejaan disemak dan dibaiki.</p>
-</section>
-
-<section id="d-motiv" class="pod-section">
-  <h2>Poster motivasi</h2>
-  <p class="pod-muted">Tekan gambar untuk besarkan. Fail asal PNG dan SVG dalam repo: designs/svg-typo/out/motiv/final/.</p>
-  <div class="d-grid" data-draw="d-gallery" data-source="design_motiv"></div>
-  <div class="mt-zoom" id="d-zoom" hidden role="dialog" aria-modal="true" aria-label="Gambar besar">
-    <figure><img id="d-zoom-img" alt=""><figcaption id="d-zoom-cap"></figcaption></figure>
-    <button type="button" class="mt-zoom-close" id="d-zoom-close">Tutup ✕</button>
-  </div>
-</section>
-
-<section id="d-sarkas" class="pod-section">
-  <h2>Design sarkastik SVG</h2>
-  <p class="pod-muted">Gaya bundle Etsy, ayat baharu: umum, kerja, kopi / introvert, ibu / keluarga. Tekan gambar untuk besarkan. Fail asal PNG dan SVG dalam repo: designs/svg-typo/out/batch4/final/.</p>
-  <div class="d-grid" data-draw="d-gallery-s" data-source="design_sarkas"></div>
-</section>
-
-<section id="d-sarkas-warna" class="pod-section">
-  <h2>Design sarkastik berwarna</h2>
-  <p class="pod-muted">30 design yang sama, latar gelap dan warna ikut 5 palet contoh Pinterest (oren, kuning, hijau, merah, biru; 6 design setiap palet). Palet hijau dan merah bertekstur kasar. Tekan gambar untuk besarkan. Fail PNG 2048 px dalam repo: designs/svg-typo/out/batch4/color/.</p>
-  <div class="d-grid" data-draw="d-gallery-w" data-source="design_sarkas_warna"></div>
-</section>
-
-</section>
-
-<section id="tab-cvg" class="pod-tab" role="tabpanel" aria-labelledby="btn-cvg" hidden>
-<section id="cvg-ringkas" class="pod-section">
-  <h2>CPU lawan GPU: berapa laju, dan adakah hasilnya sama?</h2>
-  <p class="pod-lede">Pada imej yang sama, GPU <b data-draw="cvg-kali" data-source="cvg_enjin">&mdash;</b> lebih laju daripada CPU. Ejaan betul: CPU <b data-draw="cvg-ok-cpu" data-source="cvg_enjin">&mdash;</b> imej, GPU <b data-draw="cvg-ok-gpu" data-source="cvg_enjin">&mdash;</b> imej.</p>
-  <div class="cvg-legend">
-    <div><b>CPU</b> = pemproses biasa: komputer awan Claude, 4 teras. Percuma tetapi lambat.</div>
-    <div><b>GPU</b> = kad grafik: Space Hugging Face, kuota percuma 5 minit sehari. Sangat laju.</div>
-    <div class="pod-muted">Ujian adil: gaya K6, ayat, tetapan dan seed 42 sama di kedua-dua. Ejaan disemak dengan mata oleh Claude. Bukti <span class="pod-pill" data-level="lemah">Lemah</span>: 3 imej setiap enjin.</div>
-  </div>
-  <div class="cvg-cards" data-draw="cvg-cards" data-source="cvg_enjin"></div>
-</section>
-<section id="cvg-gambar" class="pod-section">
-  <h2>Gambar sebelah-menyebelah: CPU (kiri), GPU (kanan)</h2>
-  <p class="pod-muted">Ayat dan seed sama. Tekan gambar untuk besarkan.</p>
-  <div class="cvg-pairs" data-draw="cvg-pairs" data-source="cvg_banding"></div>
-</section>
-<section id="cvg-kaggle" class="pod-section">
-  <h2>GPU Kaggle (T4)</h2>
-  <p class="pod-muted">Status: <b data-draw="cvg-kaggle" data-source="cvg_peranti" data-field="status" data-where="peranti=GPU">&mdash;</b>. Bila ia berjalan, hasilnya ditambah di bahagian atas.</p>
-</section>
-<section id="cvg-cpu" class="pod-section">
-  <h2>Semua 6 enjin di CPU (6 imej setiap enjin)</h2>
-  <p class="pod-muted">"Ejaan betul" ikut peraturan ketat V1: huruf, huruf besar / kecil dan tanda baca sama dengan ayat.</p>
-  <div class="pod-fit">
-    <table id="cvg-table-enjin" data-source="cvg_enjin" data-row-key="enjin">
-      <thead><tr>
-        <th data-field="enjin">Enjin</th>
-        <th class="pod-num" data-field="cpu_ejaan">Ejaan betul</th>
-        <th class="pod-num" data-field="cpu_saat">Masa 1 imej</th>
-        <th class="pod-wide" data-field="gaya_cpu">Gaya</th>
-      </tr></thead>
-      <tbody data-draw="cvg-enjin-body"></tbody>
-    </table>
-  </div>
-  <details><summary>Lihat 36 gambar CPU</summary>
-    <div class="p9-grid" data-draw="cvg-galeri" data-source="cvg_imej cvg_peranti"></div>
-  </details>
-</section>
-<details id="cvg-butiran" class="pod-section"><summary>Butiran setiap imej (36)</summary>
-  <div class="pod-fit">
-    <table id="cvg-table-imej" data-source="cvg_imej" data-row-key="kunci">
-      <thead><tr>
-        <th data-field="enjin">Enjin</th>
-        <th data-field="ayat">Ayat</th>
-        <th class="pod-num" data-field="seed">Seed</th>
-        <th class="pod-num" data-field="cpu_saat">Masa CPU</th>
-        <th data-field="cpu_ejaan">Ejaan CPU</th>
-        <th class="pod-wide" data-field="cpu_sebab">Sebab gagal CPU</th>
-        <th class="pod-num" data-field="hf_saat">Masa GPU</th>
-        <th data-field="hf_ejaan">Ejaan GPU</th>
-        <th class="pod-wide" data-field="hf_sebab">Sebab gagal GPU</th>
-      </tr></thead>
-      <tbody data-draw="cvg-imej-body"></tbody>
-    </table>
-  </div>
-</details>
-</section>
-
 <section id="tab-model2" class="pod-tab" role="tabpanel" aria-labelledby="btn-model2" hidden>
 <div id="t2-intro" class="pod-section pod-first">
 <h2>AI Image Test: semua ujian dan generation</h2>
@@ -1185,6 +772,138 @@
 <th data-field="tarikh">Tarikh</th><th data-field="ujian_nama">Ujian</th><th data-field="label">Model</th><th data-field="tempat">Tempat</th><th data-field="baris">Ayat / design</th><th data-field="ejaan">Ejaan</th><th data-field="gaya" class="pod-num">Gaya</th><th data-field="lulus">Hasil</th><th data-field="sebab">Sebab / nota</th><th data-field="saat" class="pod-num">Saat</th><th data-field="standard">Standard</th>
 </tr></thead><tbody data-draw="t2-detail-body"></tbody></table></div>
 </div>
+<details id="t2-info" class="pod-section t2-info">
+<summary>Info model: jenis poster, workflow pilih model, standard lettering, alat, CPU lawan GPU, sumber riset</summary>
+<p class="pod-muted">Dipindah dari tab lama AI Image Test dan CPU vs GPU pada 27 Nov 2026. SOP dan rubrik QC lettering ada di tab Workflow; lesen model di tab Lesen.</p>
+<section id="m-cadangan" class="pod-section">
+  <h3>Model ikut jenis poster</h3>
+  <p class="pod-muted">Cadangan sementara sehingga ujian sebenar (langkah di bawah) siap.</p>
+  <div class="pod-table-wrap">
+    <table id="m-table-use" data-source="model_usecase" data-row-key="kind">
+      <thead><tr>
+        <th data-field="kind">Jenis poster</th>
+        <th data-field="main">Model utama</th>
+        <th data-field="backup">Sandaran</th>
+        <th data-field="process">Proses</th>
+        <th data-field="why">Sebab</th>
+      </tr></thead>
+      <tbody data-draw="m-use-body"></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="m-langkah" class="pod-section">
+  <h3>Workflow pilih model</h3>
+  <p class="pod-muted">Ujian yang sama untuk semua model supaya boleh dibanding adil.</p>
+  <div class="pod-table-wrap">
+    <table id="m-table-workflow" data-source="model_workflow" data-row-key="no">
+      <thead><tr>
+        <th class="pod-num" data-field="no">#</th>
+        <th data-field="who">Siapa</th>
+        <th data-field="step">Langkah</th>
+        <th data-field="detail">Butiran</th>
+        <th data-field="status">Status</th>
+      </tr></thead>
+      <tbody data-draw="m-workflow-body"></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="m-sumber" class="pod-section">
+  <h3>Sumber riset</h3>
+  <p class="pod-muted">Reddit, arxiv.org dan leaderboard Artificial Analysis tidak boleh dibaca dari sesi ini; forum diganti dengan perbincangan Hugging Face.</p>
+  <div class="pod-table-wrap pod-scroll">
+    <table id="m-table-sources" data-source="model_sources" data-row-key="source">
+      <thead><tr>
+        <th data-field="source">Sumber</th>
+        <th data-field="kind">Jenis</th>
+        <th data-field="used_for">Untuk</th>
+        <th data-field="level">Bukti</th>
+        <th data-field="url">Pautan</th>
+      </tr></thead>
+      <tbody data-draw="m-sources-body"></tbody>
+    </table>
+  </div>
+</section>
+<section id="t2-info-std" class="pod-section">
+  <h3>Standard lettering: rujukan anda lawan hasil AI</h3>
+  <h4>Kajian 5 rujukan anda: unsur yang digunakan</h4>
+  <div class="pod-table-wrap">
+    <table id="lt-deep" data-source="lettering_ref_elements" data-row-key="ref">
+      <thead><tr>
+        <th data-field="name">Rujukan</th>
+        <th data-field="words_lines">Perkataan / baris</th>
+        <th data-field="layout">Susun atur</th>
+        <th data-field="hierarchy">Hierarki saiz</th>
+        <th data-field="fonts">Gaya huruf</th>
+        <th data-field="ornaments">Hiasan</th>
+        <th data-field="texture">Tekstur / kedalaman</th>
+        <th data-field="palette">Warna</th>
+        <th data-field="extra">Lain-lain</th>
+      </tr></thead>
+      <tbody data-draw="lt-deep-body"></tbody>
+    </table>
+  </div>
+  <h4>Apa yang masih kurang berbanding rujukan</h4>
+  <div class="pod-table-wrap">
+    <table id="lt-gaps" data-source="lettering_gaps" data-row-key="gap">
+      <thead><tr>
+        <th data-field="gap">Perkara</th>
+        <th data-field="ref">Rujukan anda</th>
+        <th data-field="ai">Hasil AI</th>
+        <th data-field="closest">Paling dekat</th>
+        <th data-field="fix">Cara baiki</th>
+      </tr></thead>
+      <tbody data-draw="lt-gaps-body"></tbody>
+    </table>
+  </div>
+  <h4>Ikut standard rujukan?</h4>
+  <div class="pod-table-wrap">
+    <table id="lt-std" data-source="lettering_standard" data-row-key="criterion">
+      <thead><tr>
+        <th data-field="criterion">Ciri</th>
+        <th data-field="ref">Rujukan anda</th>
+        <th data-field="v1">ERNIE v1 (ujian lepas)</th>
+        <th data-field="v1_pass">v1 ikut?</th>
+        <th data-field="v2">ERNIE v2</th>
+        <th data-field="v2_pass">v2 ikut?</th>
+      </tr></thead>
+      <tbody data-draw="lt-std-body"></tbody>
+    </table>
+  </div>
+</section>
+<section id="t2-info-p9" class="pod-section">
+  <h3>Alat dan langkah workflow lettering (P9)</h3>
+  <h4>Alat (semua percuma, hasil boleh dijual)</h4>
+  <div class="pod-table-wrap">
+    <table id="p9-tools" data-source="lettering_p9_tools" data-row-key="job">
+      <thead><tr><th data-field="job">Kerja</th><th data-field="tool">Alat</th><th data-field="license">Lesen</th><th data-field="where">Di mana</th><th data-field="status">Status</th></tr></thead>
+      <tbody data-draw="p9-tools-body"></tbody>
+    </table>
+  </div>
+  <h4>Langkah workflow</h4>
+  <div class="pod-table-wrap">
+    <table id="p9-steps" data-source="lettering_p9_steps" data-row-key="no">
+      <thead><tr><th data-field="no">#</th><th data-field="phase">Bila</th><th data-field="who">Siapa</th><th data-field="step">Langkah</th><th data-field="status">Status</th></tr></thead>
+      <tbody data-draw="p9-steps-body"></tbody>
+    </table>
+  </div>
+</section>
+<section id="cvg-ringkas" class="pod-section">
+  <h3>CPU lawan GPU: berapa laju, dan adakah hasilnya sama?</h3>
+  <p class="pod-lede">Pada imej yang sama, GPU <b data-draw="cvg-kali" data-source="cvg_enjin">&mdash;</b> lebih laju daripada CPU. Ejaan betul: CPU <b data-draw="cvg-ok-cpu" data-source="cvg_enjin">&mdash;</b> imej, GPU <b data-draw="cvg-ok-gpu" data-source="cvg_enjin">&mdash;</b> imej.</p>
+  <div class="cvg-legend">
+    <div><b>CPU</b> = pemproses biasa: komputer awan Claude, 4 teras. Percuma tetapi lambat.</div>
+    <div><b>GPU</b> = kad grafik: Space Hugging Face, kuota percuma 5 minit sehari. Sangat laju.</div>
+    <div class="pod-muted">Ujian adil: gaya K6, ayat, tetapan dan seed 42 sama di kedua-dua. Ejaan disemak dengan mata oleh Claude. Bukti <span class="pod-pill" data-level="lemah">Lemah</span>: 3 imej setiap enjin.</div>
+  </div>
+  <div class="cvg-cards" data-draw="cvg-cards" data-source="cvg_enjin"></div>
+</section>
+<section id="cvg-kaggle" class="pod-section">
+  <h3>GPU Kaggle (T4)</h3>
+  <p class="pod-muted">Status: <b data-draw="cvg-kaggle" data-source="cvg_peranti" data-field="status" data-where="peranti=GPU">&mdash;</b>. Bila ia berjalan, hasilnya ditambah di bahagian atas.</p>
+</section>
+</details>
 </section>
 
 <section id="tab-lesen" class="pod-tab" role="tabpanel" aria-labelledby="btn-lesen" hidden>
@@ -2845,21 +2564,6 @@ dash.calc('model_counts', {
 POD.text('m-designs', 'model_klein_stats', (r) => r[0].designs, POD.int);
 POD.text('m-images', 'model_klein_stats', (r) => r[0].images, POD.int);
 POD.text('m-per', 'model_klein_stats', (r) => r[0].per_design, (v) => String(v));
-dash.calc('model_test_summary', {
-  title: 'Ringkasan ujian 3 model (23 Nov)',
-  description: 'Bagi setiap model: bilangan imej ejaan betul (semua, set A, set B), purata saat setiap imej, dan jumlah saat dibahagi imej betul. Disusun ikut ejaan betul terbanyak.',
-  inputs: ['model_test', 'model_test_models'],
-  fn: (images, models) => models.map((m) => {
-    const mine = images.filter((r) => r.model === m.model);
-    const ok = (set) => mine.filter((r) => r.ok && (!set || r.set === set)).length;
-    const n = (set) => mine.filter((r) => !set || r.set === set).length;
-    const total = mine.reduce((s, r) => s + Number(r.seconds || 0), 0);
-    return { model: m.model, model_name: m.model_name, order: m.model_order, ok: ok(), images: n(),
-      score: `${ok()}/${n()}`, score_a: `${ok('A')}/${n('A')}`, score_b: `${ok('B')}/${n('B')}`,
-      avg_s: mine.length ? Math.round(total / mine.length) : null, per_ok_s: ok() ? Math.round(total / ok()) : null,
-      strength: m.strength, weakness: m.weakness, license: m.license, source: m.source };
-  }).sort((a, b) => b.ok - a.ok || a.avg_s - b.avg_s)
-});
 POD.text('m-best-score', 'model_test_summary', (r) => r[0].score);
 POD.text('m-best-name', 'model_test_summary', (r) => r[0].model_name);
 POD.mtTime = (s) => (s == null ? '—' : `${s} s (~${Math.round(s / 60)} min)`);
@@ -2987,21 +2691,6 @@ POD.mtGallery = (testId, refsId, modelsId, opts) => (el) => {
   if (!shown) { const p = document.createElement('p'); p.className = 'pod-msg'; p.textContent = 'Tiada design untuk pilihan ini.'; el.appendChild(p); }
 };
 dash.draw('mt-gallery', POD.mtGallery('model_test', 'model_test_refs', null, { set: () => POD.mtSet, bad: () => POD.mtBadOnly, cols: 4 }));
-dash.calc('lettering_summary', {
-  title: 'Ringkasan ujian lettering (ayat panjang)',
-  description: 'Bagi setiap cara jana: design yang semua perkataannya betul, peratus perkataan betul (jumlah perkataan tolak perkataan salah), dan purata saat setiap imej. Disusun ikut design betul, kemudian peratus perkataan.',
-  inputs: ['lettering_test', 'lettering_test_models'],
-  fn: (images, models) => models.map((m) => {
-    const mine = images.filter((r) => r.model === m.model);
-    const ok = mine.filter((r) => r.ok).length;
-    const words = mine.reduce((s, r) => s + Number(r.words || 0), 0);
-    const bad = mine.reduce((s, r) => s + Number(r.wrong_n || 0), 0);
-    const total = mine.reduce((s, r) => s + Number(r.seconds || 0), 0);
-    return { model: m.model, model_name: m.model_name, ok, images: mine.length, score: mine.length ? `${ok}/${mine.length}` : '—',
-      words_pct: words ? Math.round((100 * (words - bad)) / words) : null, avg_s: mine.length ? Math.round(total / mine.length) : null,
-      how: m.how, strength: m.strength, weakness: m.weakness, license: m.license, source: m.source, missing_note: m.missing_note || '' };
-  }).sort((a, b) => b.ok - a.ok || (b.words_pct || 0) - (a.words_pct || 0))
-});
 dash.draw('lt-models', (el) => {
   const rows = POD.ok('lettering_summary'); el.replaceChildren();
   if (!rows) { const p = document.createElement('p'); p.className = 'pod-msg'; p.textContent = POD.statusMsg('lettering_summary'); el.appendChild(p); return; }
@@ -3039,18 +2728,6 @@ POD.mRows('lt-gaps-body', 'lettering_gaps', 5, (tr, r) => {
   POD.cell(tr, r.ref, 'pod-wide'); POD.cell(tr, r.ai, 'pod-wide'); POD.cell(tr, r.closest); POD.cell(tr, r.fix, 'pod-wide');
 });
 dash.draw('lt-gallery', POD.mtGallery('lettering_test', 'lettering_test_refs', 'lettering_test_models', { cols: 5 }));
-dash.calc('lettering_v2_summary', {
-  title: 'Ringkasan ujian ERNIE v2',
-  description: 'Jumlah imej v2, imej yang semua perkataannya betul tanpa huruf rawak, peratus perkataan betul dan purata saat setiap imej.',
-  inputs: ['lettering_v2'],
-  fn: (rows) => {
-    const words = rows.reduce((s, r) => s + Number(r.words || 0), 0);
-    const bad = rows.reduce((s, r) => s + Number(r.wrong_n || 0), 0);
-    const total = rows.reduce((s, r) => s + Number(r.seconds || 0), 0);
-    return [{ images: rows.length, ok: rows.filter((r) => r.ok).length,
-      words_pct: words ? Math.round((100 * (words - bad)) / words) : null, avg_s: rows.length ? Math.round(total / rows.length) : null }];
-  },
-});
 POD.text('lt2-sum', 'lettering_v2_summary', (rows) => rows[0],
   (r) => `Hasil v2: ${r.ok}/${r.images} imej betul semua · ${r.words_pct}% perkataan betul · purata ${POD.mtTime(r.avg_s)} setiap imej`);
 POD.stdPill = (tr, v) => {
@@ -3065,18 +2742,6 @@ POD.mRows('lt-std-body', 'lettering_standard', 6, (tr, r) => {
   POD.cell(tr, r.v2, 'pod-wide'); POD.stdPill(tr, r.v2_pass);
 });
 dash.draw('lt2-gallery', POD.mtGallery('lettering_v2', 'lettering_v2_refs', 'lettering_v2_models', { cols: 3 }));
-dash.calc('lettering_v3_summary', {
-  title: 'Ringkasan pusingan QC v3',
-  description: 'Bilangan design yang lulus QC (ejaan 100%, tiada teks rawak, tiada cacat, gaya 7/8 atau lebih), jumlah cubaan dan purata cubaan sehingga lulus.',
-  inputs: ['lettering_v3', 'lettering_v3_refs'],
-  fn: (rows, refs) => {
-    const passed = new Map();
-    rows.forEach((r) => { if (r.ok && (!passed.has(r.id) || r.attempt < passed.get(r.id))) passed.set(r.id, r.attempt); });
-    const tries = [...passed.values()];
-    return [{ designs: refs.length, passed: passed.size, attempts: rows.length,
-      avg_tries: tries.length ? Math.round((10 * tries.reduce((a, b) => a + b, 0)) / tries.length) / 10 : null }];
-  },
-});
 POD.text('lt3-sum', 'lettering_v3_summary', (rows) => rows[0],
   (r) => `Lulus QC: ${r.passed}/${r.designs} design · ${r.attempts} imej dijana · purata ${r.avg_tries == null ? '—' : r.avg_tries} cubaan sehingga lulus`);
 POD.mRows('lt-deep-body', 'lettering_ref_elements', 9, (tr, r) => {
@@ -3231,36 +2896,6 @@ POD.mRows('mn-body', 'model_notes', 6, (tr, r) => {
   const m = POD.cell(tr, r.item); m.style.fontWeight = '600';
   POD.cell(tr, r.stage); POD.cell(tr, r.why);
   POD.pillCell(tr, r.level); POD.linkCell(tr, r.source, 'buka');
-});
-dash.calc('image_stats', {
-  title: 'Ringkasan daftar ujian imej',
-  description: 'Jumlah imej dijana, bilangan lulus, peratus lulus dan jumlah jam masa jana, dikira daripada daftar ujian imej.',
-  inputs: ['image_log'],
-  fn: (rows) => {
-    const pass = rows.filter((r) => r.result === 'Lulus').length;
-    const secs = rows.reduce((s, r) => s + (Number(r.seconds) || 0), 0);
-    return [{ total: rows.length, pass, rate: rows.length ? Math.round((pass / rows.length) * 100) + '%' : '—',
-              hours: Math.round((secs / 3600) * 10) / 10 }];
-  }
-});
-dash.calc('image_by_engine', {
-  title: 'Ujian imej ikut enjin',
-  description: 'Bagi setiap enjin: bilangan imej, bilangan lulus, peratus lulus, purata saat setiap imej dan jumlah minit.',
-  inputs: ['image_log'],
-  fn: (rows) => {
-    const by = new Map();
-    rows.forEach((r) => {
-      const k = r.engine || '—';
-      const v = by.get(k) || { engine: k, images: 0, pass: 0, secs: 0 };
-      v.images += 1; if (r.result === 'Lulus') v.pass += 1; v.secs += Number(r.seconds) || 0;
-      by.set(k, v);
-    });
-    return [...by.values()].map((v) => ({
-      engine: v.engine, images: v.images, pass: v.pass,
-      rate: Math.round((v.pass / v.images) * 100) + '%',
-      avg_s: Math.round(v.secs / v.images), total_min: Math.round(v.secs / 60),
-    })).sort((a, b) => b.images - a.images);
-  }
 });
 POD.text('im-total', 'image_stats', (r) => r[0].total, POD.int);
 POD.text('im-pass', 'image_stats', (r) => r[0].pass, POD.int);

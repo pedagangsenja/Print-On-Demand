@@ -1,0 +1,19 @@
+{
+ "id": "lettering_v2_refs",
+ "version": 2,
+ "data": {
+  "description": "Poster lettering yang anda upload 23 Nov, satu untuk setiap design v2 (V1-V5). Design orang lain, rujukan gaya sahaja.",
+  "fixed": true,
+  "source": {
+   "format": "json",
+   "kind": "file",
+   "name": "lettering_v2_refs.json",
+   "url": "/_blob/373c6fe645ba79d94cb987abe70b5568"
+  },
+  "title": "Ujian ERNIE v2: poster rujukan anda",
+  "updated": {
+   "at": "2026-11-23T10:40:00Z",
+   "by": "Claude"
+  }
+ }
+}
