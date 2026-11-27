@@ -66,17 +66,17 @@
   "ernie": {
    "K9B_s42": [
     true,
-    "PE gagal semakan ('B' dipetik); rangka am dipakai dengan pepijat hp (latar putih, huruf putih + bayang hitam): selepas SK04 huruf berongga. Gagal G3 (bentuk). Pepijat dibaiki 27 Nov; jana semula; latar kelabu cerah",
+    "Huruf berongga selepas SK04 (pepijat kod hp kad.py dan semak_pe, dibaiki 27 Nov, dijana semula v12b-cpu-p1)",
     ""
    ],
    "K9B_s7": [
     true,
-    "PE gagal semakan ('B' dipetik); rangka am dipakai dengan pepijat hp (latar putih, huruf putih + bayang hitam): selepas SK04 huruf berongga. Gagal G3 (bentuk). Pepijat dibaiki 27 Nov; jana semula; SK01 gagal (condong 4.6 selepas SK04)",
+    "Huruf berongga selepas SK04 (pepijat kod hp kad.py dan semak_pe, dibaiki 27 Nov, dijana semula v12b-cpu-p1); condong 4.6 selepas SK04",
     ""
    ],
    "K9B_s123": [
     true,
-    "PE gagal semakan ('B' dipetik); rangka am dipakai dengan pepijat hp (latar putih, huruf putih + bayang hitam): selepas SK04 huruf berongga. Gagal G3 (bentuk). Pepijat dibaiki 27 Nov; jana semula",
+    "Huruf berongga selepas SK04 (pepijat kod hp kad.py dan semak_pe, dibaiki 27 Nov, dijana semula v12b-cpu-p1)",
     ""
    ],
    "K10V_s42": [
@@ -86,42 +86,42 @@
    ],
    "K10V_s7": [
     true,
-    "Ejaan betul; seluruh blok dalam panel putih (hiasan lebih, gagal G3)",
+    "Seluruh blok dalam panel putih tambahan",
     ""
    ],
    "K10V_s123": [
     true,
-    "Ejaan betul; seluruh blok dalam panel putih (hiasan lebih, gagal G3)",
+    "Seluruh blok dalam panel putih tambahan",
     ""
    ],
    "K11N_s42": [
     true,
-    "Ejaan betul; kotak 'SHAKY.' kelabu dan huruf Y kelabu pudar (bentuk, gagal G3); PE gagal semakan palsu ('SHAKY' bagi 'SHAKY.'); rangka am berpepijat hp (latar putih, dakwat hitam). Kedua-dua pepijat dibaiki 27 Nov; jana semula",
+    "Kotak atau bentuk huruf lain daripada kad (pepijat kod hp kad.py dan semak_pe, dibaiki 27 Nov, dijana semula v12b-cpu-p1)",
     ""
    ],
    "K11N_s7": [
     true,
-    "Ejaan betul; 'AK' huruf berongga (bentuk, gagal G3); PE gagal semakan palsu ('SHAKY' bagi 'SHAKY.'); rangka am berpepijat hp (latar putih, dakwat hitam). Kedua-dua pepijat dibaiki 27 Nov; jana semula",
+    "Kotak atau bentuk huruf lain daripada kad (pepijat kod hp kad.py dan semak_pe, dibaiki 27 Nov, dijana semula v12b-cpu-p1)",
     ""
    ],
    "K11N_s123": [
     true,
-    "Ejaan betul; kotak meliputi 'SHAKY.' dan 'GROW' (hiasan di tempat salah, gagal G3); PE gagal semakan palsu ('SHAKY' bagi 'SHAKY.'); rangka am berpepijat hp (latar putih, dakwat hitam). Kedua-dua pepijat dibaiki 27 Nov; jana semula",
+    "Kotak atau bentuk huruf lain daripada kad (pepijat kod hp kad.py dan semak_pe, dibaiki 27 Nov, dijana semula v12b-cpu-p1)",
     ""
    ],
    "K12Y_s42": [
     true,
-    "Ejaan dan noktah betul; tiada kotak pada 'GROWTH' (ciri kad); PE gagal semakan palsu ('SHAKY' bagi 'SHAKY.'); rangka am berpepijat hp (latar putih, dakwat hitam). Kedua-dua pepijat dibaiki 27 Nov; jana semula",
+    "Kotak atau bentuk huruf lain daripada kad (pepijat kod hp kad.py dan semak_pe, dibaiki 27 Nov, dijana semula v12b-cpu-p1)",
     ""
    ],
    "K12Y_s7": [
     true,
-    "Ejaan dan noktah betul; tiada kotak pada 'GROWTH' (ciri kad); PE gagal semakan palsu ('SHAKY' bagi 'SHAKY.'); rangka am berpepijat hp (latar putih, dakwat hitam). Kedua-dua pepijat dibaiki 27 Nov; jana semula",
+    "Kotak atau bentuk huruf lain daripada kad (pepijat kod hp kad.py dan semak_pe, dibaiki 27 Nov, dijana semula v12b-cpu-p1)",
     ""
    ],
    "K12Y_s123": [
     true,
-    "Ejaan betul; kotak putih pudar pada 'LET YOUR', bukan 'GROWTH' (hiasan di tempat salah); PE gagal semakan palsu ('SHAKY' bagi 'SHAKY.'); rangka am berpepijat hp (latar putih, dakwat hitam). Kedua-dua pepijat dibaiki 27 Nov; jana semula",
+    "Kotak atau bentuk huruf lain daripada kad (pepijat kod hp kad.py dan semak_pe, dibaiki 27 Nov, dijana semula v12b-cpu-p1)",
     ""
    ]
   },
@@ -385,6 +385,25 @@
    "K11N_s2024": [
     true,
     "Kotak tambahan pada 'STEADY.' (hiasan di tempat salah); bingkai putih nipis di tepi (mockup)",
+    ""
+   ]
+  }
+ },
+ "v12b-cpu-p2-uji": {
+  "ernie": {
+   "K11N_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K11N_s7": [
+    false,
+    "Tanda petikan tambahan pada 'BEGIN'",
+    ""
+   ],
+   "K11N_s123": [
+    true,
+    "",
     ""
    ]
   }

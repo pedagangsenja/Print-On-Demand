@@ -177,5 +177,20 @@
   "selepas": "-",
   "keputusan": "tidak berkenaan",
   "nota": "Tukar peranan mengubah design kad; FLUX 3 Klein dan MOSS lulus design sama, jadi tukar model (kitaran QC 7)"
+ },
+ {
+  "tarikh": "2026-11-27",
+  "model": "ernie",
+  "rev_dari": "r1",
+  "rev_ke": "r1",
+  "ubahan": "had_positif",
+  "kelas": [
+   "rawak"
+  ],
+  "design": "K11N",
+  "sebelum": "2/3",
+  "selepas": "2/3",
+  "keputusan": "kalah",
+  "nota": "Ayat had 'Only these N words, no other text' ditukar kepada 'The only text in the image is these N words, each drawn once exactly as written between the quotes, without the quote marks'. Tanda petikan pada 'BEGIN' kekal (s7). Catatan: kotak di tempat betul ('SHAKY.' sahaja) 3/3, sebelum 0/3 (bukti lemah; PE berubah setiap kali). Dibuang ikut 3.15"
  }
 ]

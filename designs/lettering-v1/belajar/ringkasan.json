@@ -1,7 +1,7 @@
 {
  "versi": "b1.1 (27 Nov 2026)",
  "tarikh": "2026-11-27",
- "imej": 198,
+ "imej": 202,
  "suka": 0,
  "tolak": 0,
  "model": {
@@ -265,57 +265,31 @@
      "design": 1
     },
     "r1": {
-     "imej": 30,
-     "lulus": 28,
-     "pct": 93,
+     "imej": 27,
+     "lulus": 26,
+     "pct": 96,
      "suka": 0,
      "tolak": 0,
      "design": 7
     }
    },
    "semasa": {
-    "imej": 30,
-    "lulus": 28,
-    "pct": 93,
+    "imej": 27,
+    "lulus": 26,
+    "pct": 96,
     "suka": 0,
     "tolak": 0,
     "design": 7
    },
    "semua": {
-    "imej": 42,
-    "lulus": 35,
+    "imej": 46,
+    "lulus": 38,
     "pct": 83,
     "suka": 0,
     "tolak": 0,
     "design": 11
    },
    "berulang": [
-    {
-     "kelas": "rawak",
-     "nama": "Teks rawak, label atau tanda baca tambahan",
-     "imej": 2,
-     "gagal": 2,
-     "design": [
-      "K11N",
-      "K3K"
-     ],
-     "cadangan": "had_positif",
-     "cadangan_teks": "Buang perkataan berisiko daripada ayat had (label, logo, signature, watermark); tulis had sebagai ayat positif"
-    },
-    {
-     "kelas": "lain",
-     "nama": "Cacat lain (tiada kelas)",
-     "imej": 13,
-     "gagal": 1,
-     "design": [
-      "K10V",
-      "K11N",
-      "K12Y",
-      "K9B"
-     ],
-     "cadangan": null,
-     "cadangan_teks": "Tanya pengguna sebabnya; tambah ke kad sebagai ciri QC"
-    },
     {
      "kelas": "bentuk",
      "nama": "Bentuk huruf atau saiz label lain daripada kad",
@@ -329,25 +303,24 @@
      "cadangan_teks": "Frasa bentuk huruf dalam aturan model"
     },
     {
-     "kelas": "luar_label",
-     "nama": "Perkataan tidak di dalam label",
-     "imej": 3,
+     "kelas": "lain",
+     "nama": "Cacat lain (tiada kelas)",
+     "imej": 2,
      "gagal": 0,
      "design": [
-      "K11N",
-      "K12Y"
+      "K10V"
      ],
-     "cadangan": "bekas_dahulu",
-     "cadangan_teks": "Tulis bekas dahulu, perkataan kemudian (\"a small white label, and inside that label the word ...\")"
+     "cadangan": null,
+     "cadangan_teks": "Tanya pengguna sebabnya; tambah ke kad sebagai ciri QC"
     }
    ],
-   "ubahan_dicuba": 1,
+   "ubahan_dicuba": 2,
    "suka_imej": [],
    "tindakan": [
     {
      "jenis": "cuba",
-     "ubahan": "had_positif",
-     "teks": "Satu ubahan untuk jana seterusnya model ini: PEMBINA_UJI=ernie_had_positif (Buang perkataan berisiko daripada ayat had (label, logo, signature, watermark); tulis had sebagai ayat positif) bagi cacat 'Teks rawak, label atau tanda baca tambahan' (2 imej, 2 design); jana bersama aturan semasa, seed sama"
+     "ubahan": "frasa_bentuk",
+     "teks": "Satu ubahan untuk jana seterusnya model ini: PEMBINA_UJI=ernie_frasa_bentuk (Frasa bentuk huruf dalam aturan model) bagi cacat 'Bentuk huruf atau saiz label lain daripada kad' (imej lulus; ciri gaya kad) (6 imej, 2 design); jana bersama aturan semasa, seed sama"
     }
    ]
   },

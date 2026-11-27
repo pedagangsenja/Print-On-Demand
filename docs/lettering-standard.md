@@ -712,13 +712,13 @@ Model baharu juga memerlukan aturan prompt sendiri sebelum dipakai untuk design 
 | Model | K9B | K10V | K11N | K12Y |
 |---|---|---|---|---|
 | MOSS | 3/3 | 3/3 | 3/3 | 3/3 |
-| ERNIE (jana semula selepas pepijat dibaiki) | 3/3 | 1/3 bersih (2 panel putih) | KEPUTUSAN_K11N | 3/3 |
+| ERNIE (jana semula selepas pepijat dibaiki) | 3/3 | 1/3 bersih (2 panel putih) | 2/3 tanpa kotak betul (s42, s2024 kotak tambahan pada 'STEADY.'; s7 tanda petikan; s123 tiada kotak); 4 seed habis → tukar model | 3/3 |
 | FLUX 3 Klein | 3/3 | 3/3 | 3/3 | 3/3 |
 | Z-Image | 1/3 (koma tambahan) | 3/3 | 2/3 | 2/3 |
 | klein 4B | 0/3 ('Daly') | 3/3 | 1/3 | 0/3 ('HUMBLE' tanpa noktah) |
 
 - **Dua pepijat dibaiki semasa larian:** (1) `kad.hitam_putih` menukar latar cerah (krim / putih) kepada putih, jadi rangka am hp menulis huruf putih atas putih (ERNIE K9B berongga selepas SK04); kini kad latar cerah = latar hitam, dakwat putih, kotak putih dengan huruf hitam (`terang`, `kotak_hp`). (2) `semak_pe` menolak PE ERNIE apabila petikan hanya hilang tanda baca hujung ('SHAKY' bagi 'SHAKY.'), lalu rangka am berpepijat dipakai; kini diterima. K9B tetap ditolak dengan betul (PE memetik huruf 'B').
-- **Belajar (3.15):** Z-Image `had_positif` pada K9B KALAH (1/3 → 1/3), dibuang. klein 4B: `huruf_besar` dan `tukar_peranan` tidak berkenaan (K9 skrip bersambung; 'HUMBLE.' sudah huruf besar; tukar peranan mengubah design), jadi pilihan habis → tukar model: FLUX 3 Klein dan MOSS lulus 3/3 pada K9B dan K12Y. ERNIE `had_positif` (tanda petikan tambahan, K3K + K11N) diuji pada K11N: KEPUTUSAN_UJI_ERNIE.
+- **Belajar (3.15):** Z-Image `had_positif` pada K9B KALAH (1/3 → 1/3), dibuang. klein 4B: `huruf_besar` dan `tukar_peranan` tidak berkenaan (K9 skrip bersambung; 'HUMBLE.' sudah huruf besar; tukar peranan mengubah design), jadi pilihan habis → tukar model: FLUX 3 Klein dan MOSS lulus 3/3 pada K9B dan K12Y. ERNIE `had_positif` (tanda petikan tambahan, K3K + K11N) diuji pada K11N: KALAH ikut G1–G2 (2/3 → 2/3; tanda petikan 'BEGIN' kekal pada s7), dibuang. Catatan bukti lemah: kotak di tempat betul ('SHAKY.' sahaja) 3/3, sebelum 0/3; PE berubah setiap kali, jadi sebab belum pasti. Cacat akibat pepijat kod yang sudah dibaiki kini tidak dikira oleh `belajar.py` ("pepijat kod" dalam nota QC).
 - **Kemasan (SK06, hitam putih):** FLUX 3 Klein seed 42 bagi setiap design: K9B S3, K10V S5 (lusuh), K11N S3, K12Y S3 (`final/v12b-cpu/`, helaian `qc/v12b_cpu_akhir.jpg`).
 - **Model × kad selepas larian ini (bukti lemah):** K9 = MOSS, ERNIE, FLUX 3 Klein; K10 = semua lima (ERNIE 1/3); K11 = MOSS, FLUX 3 Klein, Z-Image (2/3); K12 = MOSS, ERNIE, FLUX 3 Klein, Z-Image (2/3).
 
@@ -736,6 +736,7 @@ Setiap ubahan aturan (3.4–3.10) direkod di sini, dan juga dalam `designs/lette
 | 26 Nov 2026 | FLUX 3 Image Klein | r0 (ujian pertama) | Tiada pembanding rangka am | Aturan 3.8 seperti ditulis; CPU | 9/9 pada K3, K7, K8 |
 | 27 Nov 2026 | FLUX 3 Image Klein | r0 → r1 (ujian kelayakan, `belajar.py`) | K8 × ayat G: 'KEEP GOING' tanpa jarak antara perkataan (3/3) | Tiada ubahan teks; rangka am lawan aturan 3.8 pada kad, ayat dan seed yang sama | rangka am 6/9 → aturan 9/9 |
 | 27 Nov 2026 | Z-Image Turbo | r1 (tiada perubahan) | K9 × ayat B: koma tambahan selepas 'Build' / 'Daily' (2/3) | Ayat had: "written exactly as quoted, character for character, with nothing added after any word". TIDAK berjaya, dibuang | 1/3 → 1/3 |
+| 27 Nov 2026 | ERNIE Turbo | r1 (tiada perubahan) | K11 × ayat N: tanda petikan pada 'BEGIN' (s7); kotak di tempat salah | Ayat had positif: "The only text in the image is these N words, each drawn once exactly as written between the quotes, without the quote marks". TIDAK berjaya (G1–G2), dibuang; kotak betul 3/3 (sebelum 0/3) | 2/3 → 2/3 |
 
 ## Belum selesai
 - v1.2, sudah dibina (26 Nov): pembina kod bagi tujuh model + semakan 3.11 (`pembina.py`, 3.13).

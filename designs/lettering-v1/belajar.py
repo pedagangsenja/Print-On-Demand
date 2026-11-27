@@ -61,8 +61,8 @@ KELAS = {
     "ditolak": ("Ditolak pengguna tanpa sebab", r"^dipadam|^ditolak", []),
 }
 POLA = {k: re.compile(v[1], re.I) for k, v in KELAS.items()}
-# Bukan kerja prompt: cacat milik skrip SK (5b / langkah 6); senarai kelas di belajar_sk.KELAS_SK (b1.1: diselaraskan)
-BUKAN_PROMPT = re.compile(r"condong|ruang tepi|atas tengah|kelabu|lorekan|latar tidak hitam|" + belajar_sk.POLA_SK.pattern, re.I)
+# Bukan kerja prompt: cacat milik skrip SK (5b / langkah 6), dan cacat akibat pepijat kod yang sudah dibaiki (27 Nov 2026); senarai kelas di belajar_sk.KELAS_SK (b1.1: diselaraskan)
+BUKAN_PROMPT = re.compile(r"condong|ruang tepi|atas tengah|kelabu|lorekan|latar tidak hitam|pepijat kod|" + belajar_sk.POLA_SK.pattern, re.I)
 HABIS = "Pilihan ubahan habis: tukar ke model seterusnya ikut jadual model × gaya, kemudian pendekkan ayat, kemudian lapor kepada pengguna"
 
 

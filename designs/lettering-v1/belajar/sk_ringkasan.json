@@ -1,8 +1,8 @@
 {
  "versi": "s1 (27 Nov 2026)",
  "tarikh": "2026-11-27",
- "baris": 400,
- "imej": 87,
+ "baris": 448,
+ "imej": 99,
  "kad_dipakai": [
   "K10",
   "K11",
@@ -23,8 +23,8 @@
    "versi": "5b v1.1",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 37,
-     "lulus": 36,
+     "imej": 39,
+     "lulus": 38,
      "cacat": 1,
      "input_rosak": 0,
      "belum": 0,
@@ -32,8 +32,8 @@
     }
    },
    "semasa": {
-    "imej": 37,
-    "lulus": 36,
+    "imej": 39,
+    "lulus": 38,
     "cacat": 1,
     "input_rosak": 0,
     "belum": 0,
@@ -67,8 +67,8 @@
    "versi": "5b v1.1",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 37,
-     "lulus": 37,
+     "imej": 45,
+     "lulus": 45,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -76,8 +76,8 @@
     }
    },
    "semasa": {
-    "imej": 37,
-    "lulus": 37,
+    "imej": 45,
+    "lulus": 45,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -135,8 +135,8 @@
    "versi": "5b v1.1",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 56,
-     "lulus": 56,
+     "imej": 65,
+     "lulus": 65,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -144,8 +144,8 @@
     }
    },
    "semasa": {
-    "imej": 56,
-    "lulus": 56,
+    "imej": 65,
+    "lulus": 65,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,

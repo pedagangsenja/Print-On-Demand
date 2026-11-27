@@ -43,7 +43,7 @@ MODEL = list(REV)
 W, H = 768, 1024
 # Ubahan CALON kitaran QC (langkah 5): hanya hidup bila dinamakan dalam PEMBINA_UJI (dipisah koma). Ubahan yang
 # berjaya ditulis balik ke aturan (rev naik) dan dibuang dari sini; yang gagal dicatat dalam standard dan dibuang.
-# Calon semasa: ernie_had_positif (27 Nov 2026, K11N). (27 Nov 2026: 'zturbo_had_positif' diuji pada K9B, 1/3 -> 1/3, kalah, dibuang.) (26 Nov 2026: 'zturbo_satu_baris' diuji pada K8G, tidak berjaya, dibuang.)
+# Calon semasa: tiada. (27 Nov 2026: 'zturbo_had_positif' pada K9B 1/3 -> 1/3 dan 'ernie_had_positif' pada K11N 2/3 -> 2/3, kalah, dibuang.) (26 Nov 2026: 'zturbo_satu_baris' diuji pada K8G, tidak berjaya, dibuang.)
 # Nama calon = <model>_<id pilihan> daripada belajar.py (KELAS), cth. zturbo_had_positif; belajar.py memutuskan menang / kalah (3.15).
 UJI = {u for u in os.environ.get("PEMBINA_UJI", "").split(",") if u}
 SATU = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"]
@@ -190,11 +190,7 @@ def ernie(m):
          f"{cap(SATU[m['n'] - 1])} stacked lines in {b['bentuk']} in the center" +
          (f" that {b['condong']}" if b.get("condong") else "") + ": " + "; ".join(butir) + "."]
     s += tambahan(b)
-    had = f"Only these {SATU[m['nw'] - 1]} words, no other text"
-    if "ernie_had_positif" in UJI:  # calon kitaran QC (belajar 3.15, 27 Nov 2026): tanda petikan / teks tambahan (K3K, K11N)
-        had = (f"The only text in the image is these {SATU[m['nw'] - 1]} words, each drawn once exactly as written "
-               "between the quotes, without the quote marks")
-    s.append(f"{had}, pure black and white, "
+    s.append(f"Only these {SATU[m['nw'] - 1]} words, no other text, pure black and white, "
              f"{', '.join('no ' + x for x in b['tiada'])}, {b['gaya']} style, {b['margin']}.")
     return " ".join(s)
 
