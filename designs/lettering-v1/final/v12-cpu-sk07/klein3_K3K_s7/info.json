@@ -1,0 +1,23 @@
+{
+ "raw": "klein3_K3K_s7_bayang_warna.png",
+ "style": "S3",
+ "palet": "kad K3",
+ "bg": "#0b0b0b",
+ "fills": [
+  "#f5b51c",
+  "#f7f7f5",
+  "#b2b3b5"
+ ],
+ "layers": 3,
+ "ink_px": [
+  1580505,
+  453110,
+  244620
+ ],
+ "sizes": {
+  "18x24": [
+   5400,
+   7200
+  ]
+ }
+}

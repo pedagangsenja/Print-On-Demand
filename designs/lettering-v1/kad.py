@@ -81,6 +81,8 @@ KAD = {
     "K2": dict(
         nama="Blok sans pekat lusuh + jalur kuning", ref="IMG_5792", snc="S008 + C007 (didaftar 26 Nov 2026)",
         kelas="F2", dakwat=3, ruang_tepi=8, tekstur="grunge lusuh sederhana", julat="3-8 perkataan",
+        peta_warna=dict(utama=1, sokongan=0, penyambung=0, hiasan=1),   # kotak kuning, huruf putih, jalur atas kuning
+        skrip_kemasan=["SK07", "SK06"],
         warna=dict(latar=("hitam", "#0a0a0a", "black"),
                    dakwat=[("putih lusuh", "#ecebe6", "white"), ("kuning mustard", "#e0a526", "mustard yellow"),
                            ("hitam atas kuning", "#0a0a0a", "black")]),
@@ -110,8 +112,13 @@ KAD = {
         kelas="F1", dakwat=3, ruang_tepi=15, tekstur="tiada", julat="4-8 perkataan",
         warna=dict(latar=("hitam", "#0b0b0b", "black"),
                    dakwat=[("kuning keemasan", "#f5b51c", "golden yellow"), ("putih", "#f7f7f5", "white"),
-                           ("kelabu bayang", "#3a3a3a", "dark gray")]),
-        kemasan="Bayang 3D kelabu di bawah / kanan skrip putih ditambah skrip kemasan; AI tidak menjananya.",
+                           ("kelabu bayang cerah", "#b2b3b5", "light gray")]),
+        # 27 Nov 2026: kelabu bayang diukur SK08 --ukur pada IMG_5775 (#b2b3b5). Sebelum itu #3a3a3a "di bawah /
+        # kanan skrip" = tekaan tanpa ukuran; gambar upload menunjukkan kelabu CERAH di DALAM huruf.
+        kemasan=("Bayang 3D dalam huruf: bahagian bawah setiap strok skrip putih berwarna kelabu cerah (SK08); "
+                 "AI tidak menjananya. Warna ikut peranan oleh SK07."),
+        peta_warna=dict(utama=0, sokongan=1, penyambung=0, hiasan=0, bayang=2),   # peranan -> nombor dakwat (SK07)
+        skrip_kemasan=["SK07", "SK08", "SK06"],
         medium="Modern mixed-font hand-lettering quote poster, flat vector, portrait.",
         latar="Solid black background.",
         susunan=("One tight centered block of lines alternating two lettering styles; lines touch and slightly "
@@ -357,7 +364,12 @@ BLOK = {
                     sisi=(72, 64)),
         # Diukur skrip SK05 daripada gambar upload IMG_5775 (salinan dashboard 236x354), 26 Nov 2026. Satu gambar.
         rujukan=dict(condong_darjah=7.6, tepi_pct=13.6, tepi_sisi_pct=13.6, tepi_atas_bawah_pct=15.5,
-                     sumber="SK05 pada IMG_5775")),
+                     sumber="SK05 pada IMG_5775",
+                     # Diukur SK08 --ukur pada IMG_5775 (236x354), 27 Nov 2026. Satu gambar, resolusi rendah:
+                     # anggaran. IoU model dengan kelabu gambar = 0.389; kongsi kelabu dalam huruf 28.6% (model 35.3%).
+                     bayang=dict(jenis="dalam", peranan=["sokongan"], arah_relatif_darjah=250, nisbah=0.4,
+                                 warna_ukur="#b2b3b5", putih_ukur="#f1f1f3", iou=0.389, kongsi_ruj_pct=28.6,
+                                 kongsi_model_pct=35.3, sumber="SK08 --ukur pada IMG_5775"))),
     "K4": dict(
         medium="typographic poster", gaya="vintage Victorian hand-lettered", latar_warna="solid black",
         latar_isi="tiny scattered white specks", tepi="a worn distressed print texture", bentuk="one tall column",

@@ -499,12 +499,13 @@ Turutan semakan setiap imej: pintu wajib G1–G3 → ukur dan betulkan (5b) → 
 - Ruang tepi untuk cetak kekal urusan kemasan (langkah 6); pembetulan di sini hanya supaya imej mentah menepati kad.
 
 ## Langkah 6: Kemasan ikut kad
-- Bermula hanya selepas QC mentah (hitam putih) lulus. Urutan: vektor, warna C ikut peranan, bayang / tekstur, saiz cetak, QC akhir.
+- Bermula hanya selepas QC mentah (hitam putih) lulus. Urutan skrip (27 Nov 2026): SK07 warna C ikut peranan → SK08 bayang → SK06 vektor + tekstur + saiz cetak → QC akhir. Warna dan bayang dibuat pada imej rata (resolusi asal, tepi anti-alias dikekalkan) sebelum vektor, kerana peta peranan dan bayang perlukan piksel; SK06 menyurih semua lapisan sekali dengan palet tepat (`--palet`).
+- Jalan penuh: `python3 skrip/kemasan.py <kad> <ayat> <gaya S1..S6> <folder keluar> <imej…> [--warna Cxxx] [--sizes 18x24]`. Imej yang GAGAL SK07 dilangkau dan dilapor.
 - Kelas: F1 vektor rata; F2 rata + tekstur. F3 raster: ditangguh.
 - Parameter dibaca daripada kad (ruang tepi, tekstur, bilangan dakwat, butiran halus), bukan tetap dalam skrip.
 - Semakan automatik: bilangan lapisan = bilangan dakwat dijangka; peratus dakwat hilang berbanding imej mentah; amaran jika melebihi ambang. Ambang butiran halus ikut gaya.
 - Warna C diletak oleh skrip ikut peta peranan kad; satu imej lulus boleh jadi beberapa varian warna C tanpa jana semula.
-- Had: perkataan yang hurufnya bertaut merentas baris tidak boleh diasingkan untuk warna berbeza, jadi gaya itu kekal satu dakwat. Bayang lembut dan tekstur dibina semula oleh skrip.
+- Had: perkataan yang hurufnya bertaut merentas baris tidak selalu boleh diasingkan untuk warna berbeza. SK07 membelah baris bertaut pada garis mendatar yang paling sedikit dakwat (amaran); jika label tidak segi empat atau baris masuk teras baris lain > 30%, SK07 GAGAL dan imej itu kekal hitam putih atau dijana semula. Bayang 3D dalam huruf (K3) dibina semula oleh SK08; bayang lembut K1 belum boleh (lihat SK08). Tekstur oleh SK06.
 - Tekstur: seed berbeza setiap design; jenis dan kekuatan ikut kad.
 - Cetak: 300 DPI (Printify, rasmi), saiz 8×10, 11×14, 16×20, 18×24, 24×36. Bleed, kawasan selamat, had saiz fail dan profil warna: belum disemak.
 - Simpan SVG induk + info; PNG besar dijana semula bila perlu; versi `finish.py` direkod.
@@ -519,9 +520,9 @@ Skrip di sini ialah kerja SELEPAS jana (pembetulan 5b dan kemasan langkah 6). Al
 | SK03 | Kedudukan (`SK03_kedudukan.py`) | 5b | Pusatkan blok pada kanvas | – | Dibina; diuji pada 12 imej K3H sedia ada |
 | SK04 | Hitam putih bersih (`SK04_hitam_putih.py`) | 5b | Tukar kelabu dan tepi kabur kepada hitam dan putih tulen | – | Dibina; diuji pada 12 imej K3H sedia ada |
 | SK05 | Ukuran (`SK05_ukur.py`) | 1, 5b | Ukur ruang tepi, kedudukan, sudut condong dan kelabu pada gambar upload atau imej mentah | – | Dibina; diuji pada 2 gambar upload (K3, K6) dan 24 imej K3H. Nisbah baris: anggaran sahaja (baris bertindih tidak dapat diasingkan) |
-| SK06 | Vektor + saiz cetak (`SK06_finish.py` + `styles.py`) | 6 | SVG induk, susun di tengah, PNG 300 DPI | ruang tepi, tekstur | Dibawa dari `claude/dazzling-cannon-5wzn6h` tanpa ubah kod; diuji pada 1 imej K3H selepas 5b (SVG + 18×24). Palet, ruang tepi dan tekstur masih tetap S1–S6, belum dibaca daripada kad |
-| SK07 | Warna C ikut peranan | 6 | Warnakan lapisan ikut peta peranan kad | peta warna | Belum dibina |
-| SK08 | Bayang ikut kad | 6 | Bayang 3D / lembut yang AI tidak jana (cth. K3) | arah dan tebal bayang | Belum dibina |
+| SK06 | Vektor + saiz cetak (`SK06_finish.py` + `styles.py`) | 6 | SVG induk, susun di tengah, PNG 300 DPI | ruang tepi, tekstur | Dibawa dari `claude/dazzling-cannon-5wzn6h`; diuji pada 1 imej K3H selepas 5b (SVG + 18×24). 27 Nov: parameter `--palet` ditambah (warna tepat SK07 / SK08, topeng setiap warna dilembutkan sebelum surih). Ruang tepi dan tekstur masih tetap S1–S6, belum dibaca daripada kad |
+| SK07 | Warna C ikut peranan (`SK07_warna.py`) | 6 | Peta peranan setiap piksel (utama, sokongan, penyambung, hiasan) ikut baris Spesifikasi Teks, kemudian warna kad atau warna C | `peta_warna`, `warna` (kad); `--warna Cxxx` (Daftar S/C) | Dibina 27 Nov 2026; diuji pada 14 imej K3K (12 lulus, 2 GAGAL dikesan betul) + K7M, K8G (satu dakwat, tidak rosak) + 1 varian C001 |
+| SK08 | Bayang ikut kad (`SK08_bayang.py`) | 6 | Bayang 3D dalam huruf: bahagian bawah setiap strok peranan yang diminta jadi kelabu | `rujukan.bayang` (arah, nisbah, warna; diukur `--ukur` pada gambar upload) | Dibina 27 Nov 2026; diukur pada IMG_5775; diuji pada 12 imej K3K yang lulus SK07. Bayang lembut K1 belum (lihat bawah) |
 
 Semua skrip di `designs/lettering-v1/skrip/`. Jalan 5b penuh: `python3 skrip/betulkan.py <kad> <folder keluar> <imej…> [--condong D] [--tepi P]` (satu folder keluar bagi setiap model). Ukur gambar upload: `python3 skrip/SK05_ukur.py <gambar>`.
 
@@ -541,7 +542,15 @@ Empat skrip pembetulan (SK01–SK04) ialah set asas. Skrip lain ditambah hanya i
 7. **Dashboard:** kemas kini tab FC › Design (langkah 5 atau 6) dan tab Aliran dalam sesi yang sama.
 8. **Beritahu pengguna dalam chat:** skrip apa, untuk gambar mana, hasil ujian.
 
-**Turutan jalan:** skrip pembetulan baharu masuk SEBELUM SK04, kerana hitam putih bersih mesti akhir sekali. Skrip kemasan baharu ikut urutan langkah 6: vektor, warna, bayang / tekstur, saiz cetak.
+**Turutan jalan:** skrip pembetulan baharu masuk SEBELUM SK04, kerana hitam putih bersih mesti akhir sekali. Skrip kemasan baharu ikut urutan langkah 6: warna (SK07), bayang (SK08), kemudian vektor + tekstur + saiz cetak (SK06).
+
+**SK07 dan SK08 (dibina 27 Nov 2026, diluluskan pengguna: tanpa GIMP / Inkscape, Python sahaja):**
+- **SK07 kaedah:** sudut condong (SK05) → komponen bersambung dikumpul ikut julat teras menegak → kumpulan = baris Spesifikasi Teks (lebih: gabung yang paling rapat; kurang: kumpulan paling tinggi dibelah pada garis paling nipis) → komponen kecil di luar julat perkataan = hiasan → dalam baris berlabel, ekor huruf baris jiran di luar segi empat label dipulangkan → warna. Huruf dalam label = lubang, jadi kekal hitam. Tepi anti-alias imej 5b disimpan (`_alfa.png`) supaya tepi cetak licin.
+- **SK07 ujian (14 imej K3K selepas 5b, 5 model):** 12 lulus; 2 GAGAL dengan sebab betul (ernie s123: baris salah dibelah; zturbo s7: tiada label segi empat). Cacat yang masih nampak: ernie s42, puncak huruf S "Stays" yang bersentuh KINDNESS ikut kuning (amaran "dibelah" dicatat; pengguna semak di langkah 7). Kad satu dakwat K7M, K8G: tukar warna sahaja, tidak rosak. Varian C001 pada MOSS s42: lulus.
+- **SK08 ukuran IMG_5775 (salinan dashboard 236×354, satu gambar, anggaran):** bayang BUKAN di luar huruf. Bahagian bawah setiap strok skrip putih berwarna kelabu cerah (dua tona rata). Model: piksel dalam 40% larian strok yang paling hampir dengan arah 250° (relatif garis dasar, iaitu ke bawah dan sedikit ke kiri) = kelabu. Warna diukur #b2b3b5; putih #f1f1f3. Padanan model dengan gambar: IoU 0.389; kongsi kelabu dalam huruf 28.6% (model 35.3%). Kad K3 sebelum ini menulis "kelabu gelap #3a3a3a di bawah / kanan" tanpa ukuran; kad kini guna ukuran.
+- **SK08 ujian:** 12 imej K3K yang lulus SK07: kongsi bayang 33.6–36.5% setiap imej (rujukan model 35.3%), tiada amaran.
+- **SK08 had:** bayang lembut K1 (IMG_5818: bayang jatuh atas coretan lain di bawahnya) tidak boleh dibuat daripada imej hitam putih rata, kerana susunan coretan (mana di atas) tiada. Kad lain belum ada rujukan bayang.
+- **Hasil:** `designs/lettering-v1/final/v12-cpu-sk07/` (SVG induk + pratonton 18×24; PNG 300 DPI dijana semula bila perlu), `final/v12-cpu-sk07/peranan/` (peta, imej berwarna, palet, `log_6.jsonl`), helaian `qc/sk07_sk08_kemasan.jpg`.
 
 ## Langkah 7: Pengguna lulus atau tolak
 - **Mata pengguna ialah pintu terakhir (v1.2).** Imej yang lulus semua QC tetapi nampak buruk di mata pengguna = gagal. Skor QC tidak mengatasi keputusan pengguna.
@@ -625,7 +634,7 @@ Model baharu juga memerlukan aturan prompt sendiri sebelum dipakai untuk design 
 - **Model × kad selepas larian ini** (bukti lemah, satu ayat setiap kad): K8 = ERNIE, FLUX 3 Klein (lulus 3/3), klein 4B (1/3); MOSS dan Z-Image tidak sesuai untuk K8. K7 = MOSS, ERNIE, FLUX 3 Klein (3/3), klein 4B (2/3), Z-Image (1/3). K3 = semua lima model (ERNIE 2/3, lain 3/3).
 - **FLUX 3 Image Klein:** ujian pertama aturan 3.8 (kapsyen + jadual kotak, penambah prompt dibuang). 9/9 lulus G1–G2; kedudukan baris mengikut kotak. Pembanding rangka am belum dijalankan, jadi rev kekal r0 (syarat 3.12 F belum dipenuhi). Lesen FLUX Kommunity: hasil komersial bersyarat; pengguna menerima lesen 27 Nov 2026 (lihat 3.8).
 - **5b:** 33 imej yang lulus dibetulkan (24 + 9 FLUX 3 Klein); angka di bawah untuk 24 yang pertama: imej dibetulkan (`designs/lettering-v1/betul/v12-cpu/`, `log_5b.jsonl`); 0 gagal semakan akhir. Dua pembaikan skrip semasa larian: SK05 v1.1 (bintik latar di tepi tidak lagi menggagalkan imej) dan SK02 v1.1 (ruang tepi sisi dan atas / bawah berasingan; K3: 13.6 / 15.5, K7: 6.2 / 11.3).
-- **Kemasan (SK06):** imej terbaik setiap design, pilihan Claude; pengguna memilih melalui Daftar S/C: K3K MOSS seed 42 (gaya S3, putih; warna kuning belum kerana SK07 belum dibina), K7M MOSS seed 42 (gaya S2, krim + butir), K8G klein 4B seed 42 (gaya S4, kapur). Fail: `designs/lettering-v1/final/v12-cpu/` (SVG induk + pratonton 18×24); gambar ringkas `qc/v12_cpu_akhir.jpg`.
+- **Kemasan (SK06):** imej terbaik setiap design, pilihan Claude; pengguna memilih melalui Daftar S/C: K3K MOSS seed 42 (gaya S3, putih; warna kuning + bayang dibuat 27 Nov oleh SK07 + SK08, lihat daftar skrip), K7M MOSS seed 42 (gaya S2, krim + butir), K8G klein 4B seed 42 (gaya S4, kapur). Fail: `designs/lettering-v1/final/v12-cpu/` (SVG induk + pratonton 18×24); gambar ringkas `qc/v12_cpu_akhir.jpg`.
 
 ## Catatan pembaikan aturan model
 Setiap ubahan aturan (3.4–3.10) direkod di sini, dan juga dalam `designs/lettering-v1/belajar/ubahan.json` (dibaca oleh `belajar.py`, 3.15). Ujian pertama (26 Nov 2026, K3 × ayat H, seed 42, 7, 123, semakan mata, bukti lemah) mengubah beberapa perkara serentak, kerana dibuat sebelum peraturan "satu ubahan setiap pusingan".
@@ -645,13 +654,13 @@ Setiap ubahan aturan (3.4–3.10) direkod di sini, dan juga dalam `designs/lette
 - v1.2, sudah ditulis (26 Nov): kaedah model baharu (3.12), daftar skrip + kaedah skrip baharu, peraturan langkau model (`run_v12.sh`).
 - v1.2, sudah dibina (26 Nov): SK01–SK05 dan `betulkan.py`; SK06 (`finish.py`) dibawa ke cawangan ini.
 - v1.2, sudah dibina (27 Nov): belajar selepas setiap jana (`belajar.py`, 3.15). `gen_hf_space.py` (ujian K6 lama) belum mencatat `rev` dan `uji`.
-- v1.2, belum dibina: SK07 (warna ikut peranan), SK08 (bayang ikut kad); kemasan belum membaca palet, ruang tepi dan tekstur daripada kad; semakan ejaan automatik (kini mata sahaja).
+- v1.2, sudah dibina (27 Nov): SK07 (warna ikut peranan), SK08 (bayang dalam huruf K3), `kemasan.py`; SK06 `--palet`.
+- v1.2, belum dibina: kemasan belum membaca ruang tepi dan tekstur daripada kad; semakan ejaan automatik (kini mata sahaja); bayang lembut K1; garis potong SK07 masih lurus (boleh memotong huruf yang bersentuh baris lain).
 - v1.2, belum selesai: sudut rujukan K1 dan K6 belum diukur; pembanding rangka am untuk FLUX 3 Klein belum dijalankan; Qwen-Image-2512 dan GLM-Image belum diuji (tidak muat di CPU).
 - v1.2, bukti masih lemah: aturan 3.4–3.7 diuji pada satu kad (K3) dan satu ayat sahaja. Perlu diulang pada kad lain dan ayat pendek sebelum dianggap kukuh.
 - v1.2, belum diuji langsung: aturan 3.8–3.10 (FLUX 3 Image Klein, Qwen-Image-2512, GLM-Image). Perlu ujian kelayakan melalui Space (GPU, kuota harian); pengguna sebelum ini meminta CPU sahaja, jadi ujian ini menunggu kebenaran. `gen_hf_space.py` belum ada profil untuk tiga Space ini.
 - Calon v1.3, belum diuji: gambar rujukan sebagai input model (klein 4B dan Z-Image ada saluran input gambar dalam diffusers; ERNIE tiada).
 - Belum dibina: struktur Kad Gaya, pembina prompt, rekod QC, kemasan ikut kad, daftar design.
-- Skrip warna ikut peranan (SK07) belum dibina; `SK06_finish.py` masih memaksa palet tetap.
 - Prompt hitam putih K2, K3 dan K4 (pembina v1.1) belum diuji pada model utama. K3 hitam putih: 2 imej GLM-Image sahaja (26 Nov), kedua-dua gagal QC (perkataan berulang).
 - Ujian banding gaya yang sama: hitam putih lawan berwarna.
 - Ujian laluan 3 pada satu ayat ~12 perkataan.

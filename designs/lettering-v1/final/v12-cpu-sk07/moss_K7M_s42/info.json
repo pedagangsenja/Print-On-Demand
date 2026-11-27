@@ -1,0 +1,19 @@
+{
+ "raw": "moss_K7M_s42_warna.png",
+ "style": "S2",
+ "palet": "kad K7",
+ "bg": "#0c0c0c",
+ "fills": [
+  "#ece6d8"
+ ],
+ "layers": 1,
+ "ink_px": [
+  2286566
+ ],
+ "sizes": {
+  "18x24": [
+   5400,
+   7200
+  ]
+ }
+}
