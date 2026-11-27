@@ -695,6 +695,33 @@ Model baharu juga memerlukan aturan prompt sendiri sebelum dipakai untuk design 
 - **5b:** 33 imej yang lulus dibetulkan (24 + 9 FLUX 3 Klein); angka di bawah untuk 24 yang pertama: imej dibetulkan (`designs/lettering-v1/betul/v12-cpu/`, `log_5b.jsonl`); 0 gagal semakan akhir. Dua pembaikan skrip semasa larian: SK05 v1.1 (bintik latar di tepi tidak lagi menggagalkan imej) dan SK02 v1.1 (ruang tepi sisi dan atas / bawah berasingan; K3: 13.6 / 15.5, K7: 6.2 / 11.3).
 - **Kemasan (SK06):** imej terbaik setiap design, pilihan Claude; pengguna memilih melalui Daftar S/C: K3K MOSS seed 42 (gaya S3, putih; warna kuning + bayang dibuat 27 Nov oleh SK07 + SK08, lihat daftar skrip), K7M MOSS seed 42 (gaya S2, krim + butir), K8G klein 4B seed 42 (gaya S4, kapur). Fail: `designs/lettering-v1/final/v12-cpu/` (SVG induk + pratonton 18×24); gambar ringkas `qc/v12_cpu_akhir.jpg`.
 
+## Larian v1.2 kedua (27 Nov 2026, arahan pengguna)
+- **Tugas:** empat gambar upload, ayat baharu dipilih Claude, 3 seed (42, 7, 123), CPU, hitam putih, semua model yang muat.
+- **Design dan kad (dibuat Claude; jana terus, kelulusan kad menyusul):**
+
+| Id | Gambar upload | Kad | Ayat |
+|---|---|---|---|
+| K9B | IMG_5810 | K9 (baharu) | Build It Daily (tanda dagang hampir: BUILD DAILY, pakaian; pengguna kekalkan) |
+| K10V | IMG_5804 | K10 (baharu) | Be Brave Do Good |
+| K11N | IMG_5796 | K11 (baharu) | Begin Shaky. Grow Steady. Small steps add up. |
+| K12Y | IMG_5797 | K12 (baharu) | Stay Humble. Let Your Growth Show. |
+
+- **Model:** Qwen-Image-2512 dan GLM-Image DILANGKAU (tidak muat RAM 15 GB, sama seperti larian pertama).
+- **Lulus G1–G2 (ejaan, tiada teks rawak), QC `qc/v12b_cpu.json`, semakan mata, bukti lemah:**
+
+| Model | K9B | K10V | K11N | K12Y |
+|---|---|---|---|---|
+| MOSS | 3/3 | 3/3 | 3/3 | 3/3 |
+| ERNIE (jana semula selepas pepijat dibaiki) | 3/3 | 1/3 bersih (2 panel putih) | KEPUTUSAN_K11N | 3/3 |
+| FLUX 3 Klein | 3/3 | 3/3 | 3/3 | 3/3 |
+| Z-Image | 1/3 (koma tambahan) | 3/3 | 2/3 | 2/3 |
+| klein 4B | 0/3 ('Daly') | 3/3 | 1/3 | 0/3 ('HUMBLE' tanpa noktah) |
+
+- **Dua pepijat dibaiki semasa larian:** (1) `kad.hitam_putih` menukar latar cerah (krim / putih) kepada putih, jadi rangka am hp menulis huruf putih atas putih (ERNIE K9B berongga selepas SK04); kini kad latar cerah = latar hitam, dakwat putih, kotak putih dengan huruf hitam (`terang`, `kotak_hp`). (2) `semak_pe` menolak PE ERNIE apabila petikan hanya hilang tanda baca hujung ('SHAKY' bagi 'SHAKY.'), lalu rangka am berpepijat dipakai; kini diterima. K9B tetap ditolak dengan betul (PE memetik huruf 'B').
+- **Belajar (3.15):** Z-Image `had_positif` pada K9B KALAH (1/3 → 1/3), dibuang. klein 4B: `huruf_besar` dan `tukar_peranan` tidak berkenaan (K9 skrip bersambung; 'HUMBLE.' sudah huruf besar; tukar peranan mengubah design), jadi pilihan habis → tukar model: FLUX 3 Klein dan MOSS lulus 3/3 pada K9B dan K12Y. ERNIE `had_positif` (tanda petikan tambahan, K3K + K11N) diuji pada K11N: KEPUTUSAN_UJI_ERNIE.
+- **Kemasan (SK06, hitam putih):** FLUX 3 Klein seed 42 bagi setiap design: K9B S3, K10V S5 (lusuh), K11N S3, K12Y S3 (`final/v12b-cpu/`, helaian `qc/v12b_cpu_akhir.jpg`).
+- **Model × kad selepas larian ini (bukti lemah):** K9 = MOSS, ERNIE, FLUX 3 Klein; K10 = semua lima (ERNIE 1/3); K11 = MOSS, FLUX 3 Klein, Z-Image (2/3); K12 = MOSS, ERNIE, FLUX 3 Klein, Z-Image (2/3).
+
 ## Catatan pembaikan aturan model
 Setiap ubahan aturan (3.4–3.10) direkod di sini, dan juga dalam `designs/lettering-v1/belajar/ubahan.json` (dibaca oleh `belajar.py`, 3.15). Ujian pertama (26 Nov 2026, K3 × ayat H, seed 42, 7, 123, semakan mata, bukti lemah) mengubah beberapa perkara serentak, kerana dibuat sebelum peraturan "satu ubahan setiap pusingan".
 
@@ -708,6 +735,7 @@ Setiap ubahan aturan (3.4–3.10) direkod di sini, dan juga dalam `designs/lette
 | 26 Nov 2026 | Z-Image Turbo | r1 (tiada perubahan) | K8 × ayat G: baris dua perkataan dipisah jadi dua baris (3/3) | Tambah "as two words side by side on one line". TIDAK berjaya, dibuang | 0/3 → 0/3 |
 | 26 Nov 2026 | FLUX 3 Image Klein | r0 (ujian pertama) | Tiada pembanding rangka am | Aturan 3.8 seperti ditulis; CPU | 9/9 pada K3, K7, K8 |
 | 27 Nov 2026 | FLUX 3 Image Klein | r0 → r1 (ujian kelayakan, `belajar.py`) | K8 × ayat G: 'KEEP GOING' tanpa jarak antara perkataan (3/3) | Tiada ubahan teks; rangka am lawan aturan 3.8 pada kad, ayat dan seed yang sama | rangka am 6/9 → aturan 9/9 |
+| 27 Nov 2026 | Z-Image Turbo | r1 (tiada perubahan) | K9 × ayat B: koma tambahan selepas 'Build' / 'Daily' (2/3) | Ayat had: "written exactly as quoted, character for character, with nothing added after any word". TIDAK berjaya, dibuang | 1/3 → 1/3 |
 
 ## Belum selesai
 - v1.2, sudah dibina (26 Nov): pembina kod bagi tujuh model + semakan 3.11 (`pembina.py`, 3.13).
