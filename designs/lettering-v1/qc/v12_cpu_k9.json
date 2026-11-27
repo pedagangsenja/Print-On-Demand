@@ -201,6 +201,73 @@
     "Bingkai penuh + tekstur cop; blok kecil",
     ""
    ]
+  },
+  "zturbo": {
+   "K9R_s42": [
+    true,
+    "Reben bertakuk ada; caps sans biasa, tiada inline; sinar kecil",
+    ""
+   ],
+   "K9R_s7": [
+    true,
+    "Reben ada; caps sans biasa",
+    ""
+   ],
+   "K9R_s123": [
+    true,
+    "Reben 3D ada; caps sans bayang",
+    ""
+   ],
+   "K10E_s42": [
+    true,
+    "Sans tebal bertindan; ruang tepi sempit (< rujukan 8.8%)",
+    ""
+   ],
+   "K10E_s7": [
+    true,
+    "Sans tebal bertindan; ruang tepi sempit",
+    ""
+   ],
+   "K10E_s123": [
+    true,
+    "Sans tebal bertindan; ruang tepi sempit",
+    ""
+   ],
+   "K11C_s42": [
+    false,
+    "G1: NEED terlalu kecil + koma rawak selepas DAYS",
+    ""
+   ],
+   "K11C_s7": [
+    false,
+    "G1: NEED hilang",
+    ""
+   ],
+   "K11C_s123": [
+    false,
+    "G1: NEED kecil terselit dalam DAYS",
+    ""
+   ],
+   "K12S_s42": [
+    true,
+    "Huruf bulat tebal + titik; kurang 3D",
+    ""
+   ],
+   "K12S_s7": [
+    false,
+    "G1: huruf kecil i dalam WiNS / STiLL",
+    ""
+   ],
+   "K13U_s42": [
+    true,
+    "Bingkai penuh, anak panah, isi poster; tekstur cop lemah",
+    ""
+   ],
+   "K13U_s7": [
+    true,
+    "Bingkai penuh, anak panah; tekstur cop lemah",
+    ""
+   ]
   }
  }
 }
