@@ -67,6 +67,73 @@
     "",
     ""
    ]
+  },
+  "ernie": {
+   "K9Q_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K9Q_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K9Q_s123": [
+    true,
+    "",
+    ""
+   ],
+   "K10F_s42": [
+    true,
+    "Tekstur lusuh tiada (bukan teras)",
+    ""
+   ],
+   "K10F_s7": [
+    true,
+    "Tekstur lusuh tiada (bukan teras)",
+    ""
+   ],
+   "K11R_s42": [
+    true,
+    "Sengkang juga di sisi perkataan besar (hiasan lebih)",
+    ""
+   ],
+   "K11R_s7": [
+    true,
+    "Sengkang juga di sisi perkataan besar (hiasan lebih)",
+    ""
+   ],
+   "K11R_s123": [
+    true,
+    "Sengkang juga di sisi perkataan besar (hiasan lebih)",
+    ""
+   ],
+   "K12O_s42": [
+    true,
+    "Huruf tidak gemuk; huruf antara baris tidak bertaut (ciri teras 1, 3 gagal)",
+    ""
+   ],
+   "K12O_s7": [
+    true,
+    "Huruf tidak gemuk; huruf antara baris tidak bertaut (ciri teras 1, 3 gagal)",
+    ""
+   ],
+   "K13V_s42": [
+    true,
+    "Bar anak panah tambahan di atas dan garis di bawah (hiasan lebih); anak panah OR sehala",
+    ""
+   ],
+   "K13V_s7": [
+    true,
+    "Bar anak panah tambahan di atas (hiasan lebih); anak panah dua hala",
+    ""
+   ],
+   "K13V_s123": [
+    true,
+    "Anak panah dua hala (bukan menghala ke perkataan)",
+    ""
+   ]
   }
  }
 }
