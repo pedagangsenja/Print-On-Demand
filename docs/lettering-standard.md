@@ -554,6 +554,7 @@ Empat skrip pembetulan (SK01–SK04) ialah set asas. Skrip lain ditambah hanya i
 - **SK08 ujian:** 12 imej K3K yang lulus SK07: kongsi bayang 33.6–36.5% setiap imej (rujukan model 35.3%), tiada amaran.
 - **SK08 had:** bayang lembut K1 (IMG_5818: bayang jatuh atas coretan lain di bawahnya) tidak boleh dibuat daripada imej hitam putih rata, kerana susunan coretan (mana di atas) tiada. Kad lain belum ada rujukan bayang.
 - **Hasil:** `designs/lettering-v1/final/v12-cpu-sk07/` (SVG induk + pratonton 18×24; PNG 300 DPI dijana semula bila perlu), `final/v12-cpu-sk07/peranan/` (peta, imej berwarna, palet, `log_6.jsonl`), helaian `qc/sk07_sk08_kemasan.jpg`.
+- **Simpanan (keputusan pengguna 27 Nov 2026: SNC):** 11 design K3K berwarna + 1 varian C001 didaftar sebagai warna C011–C022 (gambar = pratonton 18×24, medan `gaya` = kod S imej hitam putih asal). Tiga imej hitam putih FLUX 3 Klein K3K (lesen diterima) didaftar sebagai gaya S036–S038 supaya design berwarna itu ada kod S. C008 dikemas kini: kelabu bayang #3a3a3a → #b2b3b5 (ukuran SK08). Peta rekod: `designs/lettering-v1/qc/sk07_sk08_snc.json`.
 
 ### Belajar SK selepas setiap batch: skrip dibaiki atau dicipta sendiri (keputusan pengguna 27 Nov 2026)
 **Tujuan:** sama seperti 3.15 untuk aturan prompt, tetapi untuk skrip SK. Setiap batch menambah bukti; kelemahan SK dibaiki, parameter kad yang belum dibaca ditambah, dan cacat tanpa SK mendapat SK baharu. Bukti, bukan tekaan.
