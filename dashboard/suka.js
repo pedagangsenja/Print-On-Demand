@@ -55,14 +55,20 @@
     });
     return b;
   };
+  // POD.modelTag(host, model): nama model di penjuru kiri atas host (setiap gambar jana AI, termasuk paparan besar).
+  POD.modelTag = (host, model) => {
+    if (!host) return null;
+    host.querySelectorAll(':scope > .pod-model-tag').forEach((x) => x.remove());
+    const m = model == null ? '' : String(model).trim(); if (!m) return null;
+    host.classList.add('pod-likable');
+    const t = document.createElement('span'); t.className = 'pod-model-tag'; t.textContent = m; t.title = m;
+    host.appendChild(t); return t;
+  };
   // POD.likeOn(host, src, info): letak ♥ di penjuru kanan atas host, dan nama model (info.model) di kiri atas.
   POD.likeOn = (host, src, info) => {
     const b = POD.heart(src, info); if (!b || !host) return null;
-    host.classList.add('pod-likable');
-    host.querySelectorAll(':scope > .pod-model-tag').forEach((x) => x.remove());
-    host.appendChild(b);
-    const m = info && info.model ? String(info.model).trim() : '';
-    if (m) { const t = document.createElement('span'); t.className = 'pod-model-tag'; t.textContent = m; t.title = m; host.appendChild(t); }
+    host.classList.add('pod-likable'); host.appendChild(b);
+    POD.modelTag(host, info && info.model);
     return b;
   };
 })();
