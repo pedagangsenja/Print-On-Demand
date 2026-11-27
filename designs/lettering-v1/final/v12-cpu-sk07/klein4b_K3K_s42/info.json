@@ -1,4 +1,5 @@
 {
+ "versi": "SK06 v1.2 (27 Nov 2026)",
  "raw": "klein4b_K3K_s42_bayang_warna.png",
  "style": "S3",
  "palet": "kad K3",
@@ -19,5 +20,29 @@
    5400,
    7200
   ]
+ },
+ "tekstur": {
+  "kad": "K3",
+  "teks": "tiada",
+  "jenis": "none",
+  "kuat": 0.0,
+  "tidak_dibuat": []
+ },
+ "amaran": [],
+ "tepi": {
+  "sasaran": {
+   "sisi": 13.6,
+   "atas_bawah": 15.5,
+   "sumber": "SK05 pada IMG_5775"
+  },
+  "hasil": {
+   "18x24": {
+    "kiri": 18.5,
+    "kanan": 18.5,
+    "atas": 15.5,
+    "bawah": 15.5
+   }
+  },
+  "dakwat_min_pct": 18.53
  }
 }

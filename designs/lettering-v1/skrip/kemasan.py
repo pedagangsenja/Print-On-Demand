@@ -2,7 +2,7 @@
 vektor + saiz cetak dengan palet tepat. Standard Lettering v1.2. Versi 1, 27 Nov 2026.
 
 Input = imej hitam putih yang lulus QC + 5b (folder betul/). Imej yang GAGAL SK07 dilangkau dan dilapor (kekal
-hitam putih atau jana semula). Tekstur ikut gaya SK06 (S1-S6) sehingga tekstur dibaca daripada kad.
+hitam putih atau jana semula). Tekstur ikut kad (SK06 v1.1 --kad); gaya S1-S6 untuk palet lalai sahaja.
 
 Guna: python3 kemasan.py <kad> <ayat> <gaya S1..S6> <folder keluar> <imej> [<imej> ...] [--warna Cxxx] [--sizes 18x24]
 Hasil: <folder keluar>/peranan/ (SK07, SK08: peta, imej berwarna, palet, log_6.jsonl) dan
@@ -51,7 +51,7 @@ if __name__ == "__main__":
             akhir = stem + "_bayang"
         r = subprocess.run([sys.executable, str(SINI / "SK06_finish.py"), str(folder / f"{akhir}_warna.png"), gaya,
                             str(keluar / stem), "--sizes", pil.get("sizes", "18x24"),
-                            "--palet", str(folder / f"{akhir}_palet.json")], capture_output=True, text=True)
+                            "--palet", str(folder / f"{akhir}_palet.json"), "--kad", kid], capture_output=True, text=True)
         info = json.loads(r.stdout.strip().splitlines()[-1]) if r.returncode == 0 else None
         print(stem, "| SK07 " + ("amaran: " + "; ".join(cat["amaran"]) if cat["amaran"] else "lulus"),
               f"| SK08 bayang {cb['kongsi_bayang_pct']}%" if ada_bayang else "",

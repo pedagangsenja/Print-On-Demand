@@ -538,7 +538,11 @@ BLOK = {
                       dict(pada="bawah", nama="swash", frasa="a long ribbon-like swash",
                            ayat="A second ribbon-like swash curls below the last line")],
         hiasan_baki="Swash tails fill the gaps.",
-        tiada=["other colors", "outline"], ada="solid white strokes on a clean black background", sama_lebar=True),
+        tiada=["other colors", "outline"], ada="solid white strokes on a clean black background", sama_lebar=True,
+        # Diukur SK05 daripada IMG_5734 (640x768, salinan dashboard blob 947c5d62), 27 Nov 2026 (Belajar SK, UKUR).
+        # Satu gambar; swash atas hampir mencecah tepi (atas 2.1%), jadi ruang atas / bawah sempit.
+        rujukan=dict(condong_darjah=11.8, tepi_pct=4.3, tepi_sisi_pct=9.8, tepi_atas_bawah_pct=4.3,
+                     sumber="SK05 pada IMG_5734")),
     "K7": dict(
         medium="script lettering quote poster", gaya="hand-lettered", latar_warna="solid black", latar_isi=None,
         tepi="a subtle fine print grain", bentuk="one tight block",
@@ -574,7 +578,14 @@ BLOK = {
         hiasan=None, sisi=None, hiasan_kotak=[], tiada=["other colors", "outline", "swashes"],
         ada="solid white strokes on a clean black background", sama_lebar=False,
         # Diukur SK05 daripada IMG_5735 (600x449, melintang; latar bertekstur), 26 Nov 2026. Satu gambar.
-        rujukan=dict(condong_darjah=7.4, tepi_pct=12.2, sumber="SK05 pada IMG_5735")),
+        rujukan=dict(condong_darjah=7.4, tepi_pct=12.2, sumber="SK05 pada IMG_5735",
+                     # Diukur SK06 --ukur-tekstur pada IMG_5735 (600x449 JPEG, salinan dashboard blob 33a1f39f), 27 Nov
+                     # 2026; penjana 'marker' ditala pada klein4b K8G s42 (18x24) supaya ukuran hasil = rujukan. Satu gambar.
+                     tekstur=dict(jenis="marker", latar_halus=8.9, latar_sederhana=5.93, latar_kasar=5.22, dakwat_sd=8.21,
+                                  dakwat_sd1=4.68, tepi_kasar=1.342, latar_median=27.0, lebar_blok=369,
+                                  g_sederhana=5.72, g_kasar=4.75, g_dakwat=5.28, sumber="SK06 --ukur-tekstur pada IMG_5735",
+                                  had=["butir bawah 1 px dan tepi marker kering tidak ditiru: pada JPEG 600x449 itu kesan "
+                                       "mampatan; perlu gambar upload lebih besar"]))),
     "K9": dict(
         medium="hand-lettered quote poster", gaya="playful", latar_warna="solid black",
         latar_isi="small white hearts scattered on the left and right sides", tepi="crisp clean vector edges",

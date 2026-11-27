@@ -1,4 +1,5 @@
 {
+ "versi": "SK06 v1.2 (27 Nov 2026)",
  "raw": "moss_K7M_s42_warna.png",
  "style": "S2",
  "palet": "kad K7",
@@ -15,5 +16,29 @@
    5400,
    7200
   ]
+ },
+ "tekstur": {
+  "kad": "K7",
+  "teks": "butir cetakan halus",
+  "jenis": "grain",
+  "kuat": 0.6,
+  "tidak_dibuat": []
+ },
+ "amaran": [],
+ "tepi": {
+  "sasaran": {
+   "sisi": 6.2,
+   "atas_bawah": 11.3,
+   "sumber": "SK05 pada IMG_5765, median 6 panel"
+  },
+  "hasil": {
+   "18x24": {
+    "kiri": 6.2,
+    "kanan": 6.2,
+    "atas": 13.5,
+    "bawah": 19.5
+   }
+  },
+  "dakwat_min_pct": 6.23
  }
 }
