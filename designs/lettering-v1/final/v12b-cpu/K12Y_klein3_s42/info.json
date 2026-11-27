@@ -1,0 +1,44 @@
+{
+ "versi": "SK06 v1.3 (27 Nov 2026)",
+ "raw": "K12Y_s42.png",
+ "style": "S3",
+ "palet": null,
+ "bg": "#0b0b0b",
+ "fills": [
+  "#ffffff"
+ ],
+ "layers": 1,
+ "ink_px": [
+  3726176
+ ],
+ "sizes": {
+  "18x24": [
+   5400,
+   7200
+  ]
+ },
+ "tekstur": {
+  "kad": "K12",
+  "teks": "tiada",
+  "jenis": "none",
+  "kuat": 0.0,
+  "tidak_dibuat": []
+ },
+ "amaran": [],
+ "tepi": {
+  "sasaran": {
+   "sisi": 8.3,
+   "atas_bawah": 10.2,
+   "sumber": "SK05 pada IMG_5797 (asal sisi 3.0 / atas-bawah 10.2)"
+  },
+  "hasil": {
+   "18x24": {
+    "kiri": 8.3,
+    "kanan": 8.3,
+    "atas": 10.2,
+    "bawah": 10.4
+   }
+  },
+  "dakwat_min_pct": 8.27
+ }
+}

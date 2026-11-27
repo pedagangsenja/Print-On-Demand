@@ -1,0 +1,44 @@
+{
+ "versi": "SK06 v1.3 (27 Nov 2026)",
+ "raw": "K10V_s42.png",
+ "style": "S5",
+ "palet": null,
+ "bg": "#0a0a0a",
+ "fills": [
+  "#f5f5f2"
+ ],
+ "layers": 1,
+ "ink_px": [
+  3055839
+ ],
+ "sizes": {
+  "18x24": [
+   5400,
+   7200
+  ]
+ },
+ "tekstur": {
+  "kad": "K10",
+  "teks": "grunge lusuh sederhana",
+  "jenis": "worn",
+  "kuat": 1.0,
+  "tidak_dibuat": []
+ },
+ "amaran": [],
+ "tepi": {
+  "sasaran": {
+   "sisi": 28.0,
+   "atas_bawah": 7.0,
+   "sumber": "SK05 pada IMG_5804 (asal sisi 20.6 / atas-bawah 7.0)"
+  },
+  "hasil": {
+   "18x24": {
+    "kiri": 28.0,
+    "kanan": 28.0,
+    "atas": 7.0,
+    "bawah": 7.4
+   }
+  },
+  "dakwat_min_pct": 9.37
+ }
+}

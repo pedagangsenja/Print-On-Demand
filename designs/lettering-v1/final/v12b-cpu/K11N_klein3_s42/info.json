@@ -1,0 +1,44 @@
+{
+ "versi": "SK06 v1.3 (27 Nov 2026)",
+ "raw": "K11N_s42.png",
+ "style": "S3",
+ "palet": null,
+ "bg": "#0b0b0b",
+ "fills": [
+  "#ffffff"
+ ],
+ "layers": 1,
+ "ink_px": [
+  5094966
+ ],
+ "sizes": {
+  "18x24": [
+   5400,
+   7200
+  ]
+ },
+ "tekstur": {
+  "kad": "K11",
+  "teks": "tiada",
+  "jenis": "none",
+  "kuat": 0.0,
+  "tidak_dibuat": []
+ },
+ "amaran": [],
+ "tepi": {
+  "sasaran": {
+   "sisi": 7.7,
+   "atas_bawah": 4.6,
+   "sumber": "SK05 pada IMG_5796 (asal sisi 2.2 / atas-bawah 4.6)"
+  },
+  "hasil": {
+   "18x24": {
+    "kiri": 7.7,
+    "kanan": 7.7,
+    "atas": 4.6,
+    "bawah": 5.4
+   }
+  },
+  "dakwat_min_pct": 6.17
+ }
+}

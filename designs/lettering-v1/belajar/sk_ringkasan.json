@@ -1,13 +1,17 @@
 {
  "versi": "s1 (27 Nov 2026)",
  "tarikh": "2026-11-27",
- "baris": 224,
- "imej": 40,
+ "baris": 400,
+ "imej": 87,
  "kad_dipakai": [
+  "K10",
+  "K11",
+  "K12",
   "K3",
   "K6",
   "K7",
-  "K8"
+  "K8",
+  "K9"
  ],
  "suka": 0,
  "sk": {
@@ -19,23 +23,33 @@
    "versi": "5b v1.1",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 28,
-     "lulus": 28,
-     "cacat": 0,
+     "imej": 37,
+     "lulus": 36,
+     "cacat": 1,
      "input_rosak": 0,
      "belum": 0,
      "tolak": 0
     }
    },
    "semasa": {
-    "imej": 28,
-    "lulus": 28,
-    "cacat": 0,
+    "imej": 37,
+    "lulus": 36,
+    "cacat": 1,
     "input_rosak": 0,
     "belum": 0,
     "tolak": 0
    },
-   "berulang": [],
+   "berulang": [
+    {
+     "kelas": "condong",
+     "nama": "Sudut condong lain daripada kad",
+     "imej": [
+      "v12b-cpu/klein3/K9B_s123"
+     ],
+     "n": 1,
+     "kalah": []
+    }
+   ],
    "calon": [],
    "ubahan_dicuba": 0,
    "tindakan": [
@@ -53,8 +67,8 @@
    "versi": "5b v1.1",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 19,
-     "lulus": 19,
+     "imej": 37,
+     "lulus": 37,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -62,8 +76,8 @@
     }
    },
    "semasa": {
-    "imej": 19,
-    "lulus": 19,
+    "imej": 37,
+    "lulus": 37,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -121,8 +135,8 @@
    "versi": "5b v1.1",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 32,
-     "lulus": 32,
+     "imej": 56,
+     "lulus": 56,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -130,8 +144,8 @@
     }
    },
    "semasa": {
-    "imej": 32,
-    "lulus": 32,
+    "imej": 56,
+    "lulus": 56,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -204,8 +218,8 @@
      "tolak": 0
     },
     "SK06 v1.3 (27 Nov 2026)": {
-     "imej": 3,
-     "lulus": 3,
+     "imej": 7,
+     "lulus": 7,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -213,8 +227,8 @@
     }
    },
    "semasa": {
-    "imej": 3,
-    "lulus": 3,
+    "imej": 7,
+    "lulus": 7,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
