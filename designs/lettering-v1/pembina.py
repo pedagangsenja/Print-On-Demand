@@ -43,7 +43,7 @@ MODEL = list(REV)
 W, H = 768, 1024
 # Ubahan CALON kitaran QC (langkah 5): hanya hidup bila dinamakan dalam PEMBINA_UJI (dipisah koma). Ubahan yang
 # berjaya ditulis balik ke aturan (rev naik) dan dibuang dari sini; yang gagal dicatat dalam standard dan dibuang.
-# Calon semasa: 'ernie_hiasan_tepat' (27 Nov 2026, bingkai putih ERNIE K11A, K13S). (26 Nov 2026: 'zturbo_satu_baris' diuji pada K8G, tidak berjaya, dibuang.)
+# Calon semasa: 'ernie_hiasan_tepat' (27 Nov 2026, bingkai putih ERNIE K11A, K13S); 'klein4b_hiasan_tepat' (bingkai K12T). (26 Nov 2026: 'zturbo_satu_baris' diuji pada K8G, tidak berjaya, dibuang.)
 # Nama calon = <model>_<id pilihan> daripada belajar.py (KELAS), cth. zturbo_had_positif; belajar.py memutuskan menang / kalah (3.15).
 UJI = {u for u in os.environ.get("PEMBINA_UJI", "").split(",") if u}
 SATU = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"]
@@ -137,6 +137,9 @@ def klein4b(m):
     if b.get("sentuh"):
         s.append(f"The lines {b['sentuh']}.")
     s += tambahan(b)
+    if "klein4b_hiasan_tepat" in UJI:  # calon 3.15 (27 Nov 2026): hiasan yang dibenarkan dinyatakan tepat (bingkai K12T)
+        s.append("These are the only decorations, on a clean empty background." if b.get("hiasan")
+                 else "There are no decorations, only a clean empty background.")
     ekor = "no other lettering below the last line" if bawah_ada_hiasan(b) else "nothing below the last line"
     s.append(f"The poster shows only these {SATU[m['nw'] - 1]} words, each of them once, in pure white and black "
              f"with {', '.join('no ' + x for x in b['tiada'])}, and {ekor}.")

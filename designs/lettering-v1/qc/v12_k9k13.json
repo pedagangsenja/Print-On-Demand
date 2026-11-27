@@ -279,6 +279,21 @@
     true,
     "garis tambahan: bingkai garis nipis di sekeliling (tidak diminta)",
     ""
+   ],
+   "K13S_s42": [
+    false,
+    "G1: 'BUILD' jadi 'BUIILD' (huruf I berulang)",
+    ""
+   ],
+   "K13S_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K13S_s123": [
+    true,
+    "",
+    ""
    ]
   }
  }
