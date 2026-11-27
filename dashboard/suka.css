@@ -1,0 +1,17 @@
+/* Butang like (♥) pada setiap gambar + tab Disukai */
+.pod-likable { position: relative; }
+.pod button.pod-heart.pod-heart { position: absolute; top: 6px; right: 6px; z-index: 3; width: 30px; height: 30px; aspect-ratio: auto; min-width: 0; padding: 0; margin: 0; display: grid; place-items: center; border: 1px solid rgba(255, 255, 255, 0.7); border-radius: 50%; background: rgba(0, 0, 0, 0.5); color: #fff; font-size: 16px; line-height: 1; cursor: pointer; overflow: visible; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); }
+.pod button.pod-heart.pod-heart:hover { background: rgba(0, 0, 0, 0.7); }
+.pod button.pod-heart.pod-heart[aria-pressed="true"] { background: #fff; color: #e0245e; border-color: #e0245e; }
+.pod button.pod-heart.pod-heart:focus-visible { outline: 2px solid var(--color-fg); outline-offset: 2px; }
+.pod-heart-msg { position: fixed; left: 50%; bottom: 16px; transform: translateX(-50%); z-index: 1001; margin: 0; padding: 8px 14px; border-radius: var(--cds-radius); background: var(--color-fg); color: var(--color-bg); max-width: calc(100% - 32px); }
+.pod-heart-msg[hidden] { display: none; }
+.suka-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: var(--cds-gap-md); }
+.suka-card { margin: 0; display: grid; gap: 4px; align-content: start; min-width: 0; }
+.suka-card img { display: block; width: 100%; height: auto; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background: #fff; }
+.suka-card figcaption { display: grid; gap: 2px; font-size: var(--cds-font-size-caption); line-height: 1.45; overflow-wrap: anywhere; }
+.suka-go { appearance: none; justify-self: start; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background: var(--color-panel); color: var(--color-fg); font: inherit; font-size: var(--cds-font-size-caption); padding: 2px 8px; cursor: pointer; }
+.suka-go:focus-visible { outline: 2px solid var(--color-fg); outline-offset: 2px; }
+.p9-card > .pod-likable { min-width: 0; }
+.t2-c0 > .pod-likable { display: inline-block; }
+.pod .t2-c0 > .pod-likable > button.pod-heart.pod-heart { width: 22px; height: 22px; font-size: 12px; top: 2px; right: 2px; }

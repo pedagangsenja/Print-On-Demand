@@ -11,10 +11,11 @@ Fail ini dimuat dalam setiap chat; kekalkan ringkas. **SEMUA peraturan dalam fai
    **A** = simpan di tab **AI Image Test** dashboard (dataset `image_log`), atau
    **SNC** = daftar di tab **Daftar S/C**: gaya **S** (stor `data/gaya/items`) + warna **C** (stor `data/warna/items`).
    Pengguna padam sendiri yang tidak mahu dalam Daftar S/C. Tujuan: design bagus tidak hilang.
+6. **Like (♥) gambar (keputusan pengguna 27 Nov 2026):** setiap gambar dashboard ada butang ♥; like disimpan di stor `data/likes/items/<id blob>` (dataset `likes`, tab **♥ Disukai**; editor sahaja). SEBELUM jana imej AI, baca stor ini (ArtifactData list) dan utamakan model / gaya / warna / teks yang di-like. Gambar baharu mesti guna `POD.likeOn(host, src, info)` (`files/suka.js`).
 
 ## Peraturan projek
 - Cawangan kerja: `claude/jolly-hamilton-sdopyz`; tiada PR kecuali diminta.
-- **Dashboard:** artifact sedia ada https://claude.ai/artifact/EeAC4MqQijSGYGTWfZW3Sg (jenis Data); jangan cipta baharu. Baca semula `files/index.html` sebelum ubah; salinan di `dashboard/index.html`. Tab: Poster · Setup · Workflow · Prestasi · Semua produk. Checklist Setup = stor `data/setup/checklist/<id>`; Claude semak dan kemas kini `status`, `checked_at`, `result` dengan ArtifactData (update + if_version).
+- **Dashboard:** artifact sedia ada https://claude.ai/artifact/EeAC4MqQijSGYGTWfZW3Sg (jenis Data); jangan cipta baharu. Baca semula `files/index.html` sebelum ubah; salinan di `dashboard/index.html`. Tab: Ujikaji · Font · AI Image Test · Lesen · Setup · Workflow · Aliran · Daftar S/C · FC · ♥ Disukai. Checklist Setup = stor `data/setup/checklist/<id>`; Claude semak dan kemas kini `status`, `checked_at`, `result` dengan ArtifactData (update + if_version).
 - Data dashboard dijana skrip: `scripts/poster_p1.py`…`poster_p7.py` → `data/export/posters/`; `scripts/build_prestasi.py` → `data/export/prestasi/`; `scripts/export_dashboard.py` → `data/export/`. Jangan ubah fail dijana secara manual.
 - Angka mesti bersumber; tanda tahap bukti (rasmi / pihak ketiga / lemah); jangan reka data.
 - Jangan jana fail muat turun (PDF, Word, Excel dll.) tanpa kebenaran pengguna.
