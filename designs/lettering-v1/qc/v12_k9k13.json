@@ -238,6 +238,48 @@
     "",
     ""
    ]
+  },
+  "klein4b": {
+   "K9R_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K9R_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K10Q_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K10Q_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K11A_s42": [
+    true,
+    "jalur hazard menyentuh atas huruf A (hiasan di tempat salah)",
+    ""
+   ],
+   "K11A_s7": [
+    true,
+    "jalur hazard menyentuh atas huruf A dan C (hiasan di tempat salah)",
+    ""
+   ],
+   "K12T_s42": [
+    false,
+    "G3: garis tambahan: garis tegak separa di tepi kanan (cacat cetak)",
+    ""
+   ],
+   "K12T_s7": [
+    true,
+    "garis tambahan: bingkai garis nipis di sekeliling (tidak diminta)",
+    ""
+   ]
   }
  }
 }
