@@ -464,7 +464,11 @@ BLOK = {
         hiasan_kotak=[dict(pada="atas", nama="bar", frasa="a thin solid white bar across the full width",
                            ayat="A thin white bar runs across the top, above the block")],
         tiada=["gray", "outline", "shadow"], ada="gritty textured fills on a clean black background",
-        sama_lebar=True),
+        sama_lebar=True,
+        # 27 Nov 2026 (Belajar SK, UKUR): SK05 pada IMG_5792 (736x736). Jalur atas terpotong di tepi gambar, jadi atas
+        # tidak boleh diukur; atas / bawah = bawah sahaja (10.6). Sisi 13.5 / 13.3. Satu gambar: anggaran.
+        rujukan=dict(condong_darjah=0.0, tepi_pct=10.6, tepi_sisi_pct=13.4, tepi_atas_bawah_pct=10.6,
+                     sumber="SK05 pada IMG_5792 (atas terpotong)")),
     "K3": dict(
         medium="hand-lettering quote poster", gaya="flat vector", latar_warna="solid black", latar_isi=None,
         tepi="crisp clean vector edges", bentuk="one tight block",
@@ -508,7 +512,12 @@ BLOK = {
                       dict(pada="bawah", nama="flourish", frasa="a symmetrical Victorian flourish ornament",
                            ayat="A matching flourish ornament sits below the bottom line")],
         hiasan_baki="Thin ornamental rules made of dotted lines and small curled scrolls separate the lines.",
-        tiada=["other colors"], ada="one white ink on a clean black background", sama_lebar=False),
+        tiada=["other colors"], ada="one white ink on a clean black background", sama_lebar=False,
+        # 27 Nov 2026 (Belajar SK, UKUR): SK05 pada kertas poster IMG_5764 (foto atas kayu, dipotong ke kertas 725x1169).
+        # Atas 8.9, bawah 11.5 (purata 10.2); sisi kiri 10.9, kanan 16.7 (tepi kanan kertas terpotong foto): sisi = kiri.
+        # Condong 1.1 (foto, bukan design): 0. Satu gambar: anggaran.
+        rujukan=dict(condong_darjah=0.0, tepi_pct=10.2, tepi_sisi_pct=10.9, tepi_atas_bawah_pct=10.2,
+                     sumber="SK05 pada kertas poster IMG_5764 (foto, anggaran)")),
     "K5": dict(
         medium="typographic quote poster", gaya="hand-drawn", latar_warna="solid black", latar_isi=None,
         tepi="a rough chalky distressed texture",
@@ -648,8 +657,15 @@ BLOK = {
         hiasan=None, sisi=None, hiasan_kotak=[],
         tiada=["gray", "outline", "shadow"], ada="gritty scratched white letters on a clean black background",
         sama_lebar=True,
-        rujukan=dict(condong_darjah=0.0, tepi_pct=15.4, tepi_sisi_pct=15.5, tepi_atas_bawah_pct=16.6,
-                     sumber="SK05 pada IMG_5793 (1170x1691), panel koral sahaja dianggap kanvas: anggaran")),
+        # 27 Nov 2026 (Belajar SK, UKUR): diukur semula di DALAM panel koral IMG_5793 (crop 801x1122, dakwat gelap ->
+        # putih atas hitam). Ukuran pertama (15.4 / 16.6) silap: ia ruang panel dalam bingkai hitam, bukan ruang teks.
+        rujukan=dict(condong_darjah=0.0, tepi_pct=6.1, tepi_sisi_pct=8.5, tepi_atas_bawah_pct=6.1,
+                     sumber="SK05 pada panel koral IMG_5793 (801x1122)",
+                     # SK06 v1.4 ukur_calar pada panel yang sama (blok 664 px). Penjana ditala pada moss K12F s42:
+                     # hasil 1.85 / 18.8 / 21.0 (beza <= 25%). Satu gambar, ada tera air samar: bukti lemah.
+                     tekstur=dict(jenis="calar", lubang_pct=2.08, calar_pct=24.9, calar_panjang=21.5, lebar_blok=664,
+                                  g_bil_calar=800, g_ambang_bintik=3.4, g_panjang=20,
+                                  sumber="SK06 ukur_calar pada panel koral IMG_5793"))),
 }
 
 

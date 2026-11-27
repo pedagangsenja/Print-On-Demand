@@ -1,13 +1,19 @@
 {
  "versi": "s1 (27 Nov 2026)",
  "tarikh": "2026-11-27",
- "baris": 224,
- "imej": 40,
+ "baris": 302,
+ "imej": 52,
  "kad_dipakai": [
+  "K10",
+  "K11",
+  "K12",
+  "K2",
   "K3",
+  "K4",
   "K6",
   "K7",
-  "K8"
+  "K8",
+  "K9"
  ],
  "suka": 0,
  "sk": {
@@ -19,8 +25,8 @@
    "versi": "5b v1.1",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 28,
-     "lulus": 28,
+     "imej": 30,
+     "lulus": 30,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -28,8 +34,8 @@
     }
    },
    "semasa": {
-    "imej": 28,
-    "lulus": 28,
+    "imej": 30,
+    "lulus": 30,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -53,8 +59,8 @@
    "versi": "5b v1.1",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 19,
-     "lulus": 19,
+     "imej": 25,
+     "lulus": 25,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -62,8 +68,8 @@
     }
    },
    "semasa": {
-    "imej": 19,
-    "lulus": 19,
+    "imej": 25,
+    "lulus": 25,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -121,8 +127,8 @@
    "versi": "5b v1.1",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 32,
-     "lulus": 32,
+     "imej": 40,
+     "lulus": 40,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -130,8 +136,8 @@
     }
    },
    "semasa": {
-    "imej": 32,
-    "lulus": 32,
+    "imej": 40,
+    "lulus": 40,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -177,7 +183,7 @@
    "nama": "finish",
    "fail": "SK06_finish.py",
    "langkah": "6",
-   "versi": "SK06 v1.3 (27 Nov 2026)",
+   "versi": "SK06 v1.4 (27 Nov 2026)",
    "ikut_versi": {
     "SK06 v1 (27 Nov 2026)": {
      "imej": 22,
@@ -204,25 +210,43 @@
      "tolak": 0
     },
     "SK06 v1.3 (27 Nov 2026)": {
-     "imej": 3,
-     "lulus": 3,
-     "cacat": 0,
+     "imej": 15,
+     "lulus": 13,
+     "cacat": 2,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    },
+    "SK06 v1.4 (27 Nov 2026)": {
+     "imej": 6,
+     "lulus": 5,
+     "cacat": 1,
      "input_rosak": 0,
      "belum": 0,
      "tolak": 0
     }
    },
    "semasa": {
-    "imej": 3,
-    "lulus": 3,
-    "cacat": 0,
+    "imej": 6,
+    "lulus": 5,
+    "cacat": 1,
     "input_rosak": 0,
     "belum": 0,
     "tolak": 0
    },
-   "berulang": [],
+   "berulang": [
+    {
+     "kelas": "tekstur",
+     "nama": "Tekstur lain daripada kad",
+     "imej": [
+      "v12-cpu-ref6/klein3/K12F_s42"
+     ],
+     "n": 1,
+     "kalah": []
+    }
+   ],
    "calon": [],
-   "ubahan_dicuba": 3,
+   "ubahan_dicuba": 4,
    "tindakan": [
     {
      "jenis": "ukur",
@@ -247,8 +271,8 @@
      "tolak": 0
     },
     "SK07 v1.1 (27 Nov 2026)": {
-     "imej": 17,
-     "lulus": 17,
+     "imej": 29,
+     "lulus": 29,
      "cacat": 0,
      "input_rosak": 1,
      "belum": 0,
@@ -256,8 +280,8 @@
     }
    },
    "semasa": {
-    "imej": 17,
-    "lulus": 17,
+    "imej": 29,
+    "lulus": 29,
     "cacat": 0,
     "input_rosak": 1,
     "belum": 0,
