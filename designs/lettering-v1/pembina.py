@@ -32,7 +32,7 @@ DAFTAR = {
     "moss": dict(nama="MOSS-Image SFT + LoRA 8 langkah", bahagian="3.7", rev="r1", tarikh="2026-11-26",
                  status="diuji: K3H, CPU, 3 seed", sumber="kad model + panduan MOSS (rasmi); kad LoRA (pihak ketiga)"),
     "klein3": dict(nama="FLUX 3 Image Klein", bahagian="3.8", rev="r0", tarikh="2026-11-26",
-                   status="diuji: 3 kad, CPU, 9/9; LESEN BELUM DITERIMA", sumber="kad model + system_prompts.json (rasmi)"),
+                   status="diuji: 3 kad, CPU, 9/9; lesen diterima pengguna 27 Nov 2026", sumber="kad model + system_prompts.json (rasmi)"),
     "qwen": dict(nama="Qwen-Image-2512", bahagian="3.9", rev="r0", tarikh="2026-11-26",
                  status="belum diuji", sumber="kad model + prompt_utils.py (rasmi)"),
     "glm": dict(nama="GLM-Image", bahagian="3.10", rev="r0", tarikh="2026-11-26",
