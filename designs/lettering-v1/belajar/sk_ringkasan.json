@@ -1,0 +1,309 @@
+{
+ "versi": "s1 (27 Nov 2026)",
+ "tarikh": "2026-11-27",
+ "baris": 177,
+ "imej": 34,
+ "kad_dipakai": [
+  "K3",
+  "K6",
+  "K7",
+  "K8"
+ ],
+ "suka": 0,
+ "sk": {
+  "SK01": {
+   "sk": "SK01",
+   "nama": "condong",
+   "fail": "SK01_condong.py",
+   "langkah": "5b",
+   "versi": "5b v1.1",
+   "ikut_versi": {
+    "5b v1.1": {
+     "imej": 28,
+     "lulus": 28,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    }
+   },
+   "semasa": {
+    "imej": 28,
+    "lulus": 28,
+    "cacat": 0,
+    "input_rosak": 0,
+    "belum": 0,
+    "tolak": 0
+   },
+   "berulang": [],
+   "calon": [],
+   "ubahan_dicuba": 0,
+   "tindakan": [
+    {
+     "jenis": "ukur",
+     "teks": "Kad K6 condong tetapi tiada rujukan sudut: ukur SK05 pada IMG_5734, tulis kad.BLOK['K6']['rujukan']"
+    }
+   ]
+  },
+  "SK02": {
+   "sk": "SK02",
+   "nama": "ruang tepi",
+   "fail": "SK02_ruang_tepi.py",
+   "langkah": "5b",
+   "versi": "5b v1.1",
+   "ikut_versi": {
+    "5b v1.1": {
+     "imej": 19,
+     "lulus": 19,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    }
+   },
+   "semasa": {
+    "imej": 19,
+    "lulus": 19,
+    "cacat": 0,
+    "input_rosak": 0,
+    "belum": 0,
+    "tolak": 0
+   },
+   "berulang": [],
+   "calon": [],
+   "ubahan_dicuba": 0,
+   "tindakan": [
+    {
+     "jenis": "ukur",
+     "teks": "Kad K6 tiada rujukan ruang tepi: ukur SK05 pada IMG_5734"
+    }
+   ]
+  },
+  "SK03": {
+   "sk": "SK03",
+   "nama": "kedudukan",
+   "fail": "SK03_kedudukan.py",
+   "langkah": "5b",
+   "versi": "5b v1.1",
+   "ikut_versi": {
+    "5b v1.1": {
+     "imej": 17,
+     "lulus": 17,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    }
+   },
+   "semasa": {
+    "imej": 17,
+    "lulus": 17,
+    "cacat": 0,
+    "input_rosak": 0,
+    "belum": 0,
+    "tolak": 0
+   },
+   "berulang": [],
+   "calon": [],
+   "ubahan_dicuba": 0,
+   "tindakan": [
+    {
+     "jenis": "tiada",
+     "teks": "Tiada tindakan: tiada cacat berulang"
+    }
+   ]
+  },
+  "SK04": {
+   "sk": "SK04",
+   "nama": "hitam putih",
+   "fail": "SK04_hitam_putih.py",
+   "langkah": "5b",
+   "versi": "5b v1.1",
+   "ikut_versi": {
+    "5b v1.1": {
+     "imej": 32,
+     "lulus": 32,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    }
+   },
+   "semasa": {
+    "imej": 32,
+    "lulus": 32,
+    "cacat": 0,
+    "input_rosak": 0,
+    "belum": 0,
+    "tolak": 0
+   },
+   "berulang": [],
+   "calon": [],
+   "ubahan_dicuba": 0,
+   "tindakan": [
+    {
+     "jenis": "tiada",
+     "teks": "Tiada tindakan: tiada cacat berulang"
+    }
+   ]
+  },
+  "SK05": {
+   "sk": "SK05",
+   "nama": "ukur",
+   "fail": "SK05_ukur.py",
+   "langkah": "1, 5b",
+   "versi": "SK05 v1.1",
+   "ikut_versi": {},
+   "semasa": {
+    "imej": 0,
+    "lulus": 0,
+    "cacat": 0,
+    "input_rosak": 0,
+    "belum": 0,
+    "tolak": 0
+   },
+   "berulang": [],
+   "calon": [],
+   "ubahan_dicuba": 0,
+   "tindakan": [
+    {
+     "jenis": "tiada",
+     "teks": "Tiada tindakan: tiada cacat berulang"
+    }
+   ]
+  },
+  "SK06": {
+   "sk": "SK06",
+   "nama": "finish",
+   "fail": "SK06_finish.py",
+   "langkah": "6",
+   "versi": "SK06 v1 (27 Nov 2026)",
+   "ikut_versi": {
+    "SK06 v1 (27 Nov 2026)": {
+     "imej": 15,
+     "lulus": 15,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    }
+   },
+   "semasa": {
+    "imej": 15,
+    "lulus": 15,
+    "cacat": 0,
+    "input_rosak": 0,
+    "belum": 0,
+    "tolak": 0
+   },
+   "berulang": [],
+   "calon": [],
+   "ubahan_dicuba": 0,
+   "tindakan": [
+    {
+     "jenis": "parameter",
+     "teks": "SK06 belum membaca tekstur kad (tetap S1-S6); kad dipakai dengan tekstur: K6 (butir berus kering halus), K7 (butir cetakan halus), K8 (tepi marker kering + butir latar). Tambah parameter tekstur daripada kad, uji pada imej sedia ada"
+    }
+   ]
+  },
+  "SK07": {
+   "sk": "SK07",
+   "nama": "warna",
+   "fail": "SK07_warna.py",
+   "langkah": "6",
+   "versi": "SK07 v1 (27 Nov 2026)",
+   "ikut_versi": {
+    "SK07 v1 (27 Nov 2026)": {
+     "imej": 17,
+     "lulus": 15,
+     "cacat": 2,
+     "input_rosak": 1,
+     "belum": 0,
+     "tolak": 0
+    }
+   },
+   "semasa": {
+    "imej": 17,
+    "lulus": 15,
+    "cacat": 2,
+    "input_rosak": 1,
+    "belum": 0,
+    "tolak": 0
+   },
+   "berulang": [
+    {
+     "kelas": "sambungan",
+     "nama": "Huruf bertaut dibelah (warna di sambungan)",
+     "imej": [
+      "v12-cpu/ernie/K3K_s123",
+      "v12-cpu/ernie/K3K_s42"
+     ],
+     "n": 2,
+     "kalah": []
+    },
+    {
+     "kelas": "belah_baris",
+     "nama": "Baris salah dibelah (warna ikut baris salah)",
+     "imej": [
+      "v12-cpu/ernie/K3K_s123"
+     ],
+     "n": 1,
+     "kalah": []
+    },
+    {
+     "kelas": "label",
+     "nama": "Label tidak dikesan sebagai segi empat",
+     "imej": [
+      "v12-cpu/ernie/K3K_s123"
+     ],
+     "n": 1,
+     "kalah": []
+    }
+   ],
+   "calon": [],
+   "ubahan_dicuba": 0,
+   "tindakan": [
+    {
+     "jenis": "baiki",
+     "kelas": "sambungan",
+     "teks": "BAIKI SK07 bagi cacat 'Huruf bertaut dibelah (warna di sambungan)' (2 imej: v12-cpu/ernie/K3K_s123, v12-cpu/ernie/K3K_s42). Satu ubahan kod, versi naik, catat sk_ubahan.json (cuba), jalan semula pada imej yang sama"
+    }
+   ]
+  },
+  "SK08": {
+   "sk": "SK08",
+   "nama": "bayang",
+   "fail": "SK08_bayang.py",
+   "langkah": "6",
+   "versi": "SK08 v1 (27 Nov 2026)",
+   "ikut_versi": {
+    "SK08 v1 (27 Nov 2026)": {
+     "imej": 13,
+     "lulus": 13,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    }
+   },
+   "semasa": {
+    "imej": 13,
+    "lulus": 13,
+    "cacat": 0,
+    "input_rosak": 0,
+    "belum": 0,
+    "tolak": 0
+   },
+   "berulang": [],
+   "calon": [],
+   "ubahan_dicuba": 0,
+   "tindakan": [
+    {
+     "jenis": "tiada",
+     "teks": "Tiada tindakan: tiada cacat berulang"
+    }
+   ]
+  }
+ },
+ "sk_baharu": []
+}

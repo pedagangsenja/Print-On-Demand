@@ -808,6 +808,13 @@
 <th data-field="nama">Model</th><th data-field="rev">Rev</th><th data-field="imej_semasa" class="pod-num">Imej (rev ini)</th><th data-field="lulus_semasa" class="pod-num">Lulus</th><th data-field="pct_semasa" class="pod-num">% lulus</th><th data-field="suka" class="pod-num">♥</th><th data-field="tolak" class="pod-num">Tolak</th><th data-field="ubahan_dicuba" class="pod-num">Ubahan dicuba</th><th data-field="cacat_berulang">Cacat berulang</th><th data-field="tindakan">Tindakan seterusnya</th>
 </tr></thead><tbody data-draw="t2-aturan-body"></tbody></table></div>
 </div>
+<div id="t2-sk" class="pod-section">
+<h2>Skrip SK: belajar selepas setiap batch</h2>
+<p class="pod-muted">Claude mengemas kini jadual ini selepas 5b dan kemasan setiap batch (standard lettering v1.2, "Belajar SK", <code>belajar_sk.py</code>). Log SK, semakan Claude, ♥ dan tolak anda menentukan satu ubahan seterusnya bagi setiap SK: baiki kod, tambah parameter kad, atau cipta SK baharu terus. Input rosak = SK betul menolak imej yang rosak (bukan cacat SK). Bukti <span class="pod-pill" data-level="lemah">Lemah</span>: satu batch, satu kad berwarna.</p>
+<div class="pod-table-wrap"><table id="t2-sk-tbl" data-source="sk_belajar" data-row-key="sk"><thead><tr>
+<th data-field="sk">SK</th><th data-field="nama">Skrip</th><th data-field="langkah">Langkah</th><th data-field="versi">Versi</th><th data-field="imej" class="pod-num">Imej</th><th data-field="lulus" class="pod-num">Tanpa cacat</th><th data-field="cacat_sk" class="pod-num">Cacat SK</th><th data-field="input_rosak" class="pod-num">Input rosak</th><th data-field="belum_semak" class="pod-num">Belum semak</th><th data-field="tolak" class="pod-num">Tolak</th><th data-field="suka" class="pod-num">♥</th><th data-field="ubahan_dicuba" class="pod-num">Ubahan dicuba</th><th data-field="cacat_berulang">Cacat berulang</th><th data-field="tindakan">Tindakan seterusnya</th>
+</tr></thead><tbody data-draw="t2-sk-body"></tbody></table></div>
+</div>
 <div id="t2-banding" class="pod-section">
 <h2>Banding gambar</h2>
 <p class="pod-muted">Satu kotak = satu ujian, terbaru di atas; tekan tajuk untuk buka. Kiri: rujukan, tarikh, ayat dan seed. Lajur = model. Bingkai hijau = lulus, merah = gagal, kelabu = design siap (tiada QC). Tekan gambar untuk besarkan. Rujukan ialah design orang lain: banding gaya sahaja.</p>

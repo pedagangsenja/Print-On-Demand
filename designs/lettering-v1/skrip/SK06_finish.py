@@ -7,6 +7,7 @@
 # Diperlukan oleh: semua kad (set asas kemasan). Diuji 26 Nov 2026 pada imej K3H sedia ada (gaya S3: satu dakwat putih).
 # Had diketahui: palet, ruang tepi (76% x 78%) dan tekstur masih tetap ikut gaya S1-S6 dalam styles.py, belum dibaca
 # daripada Kad Gaya. Warna ikut peranan = SK07, bayang = SK08 (dibina 27 Nov 2026; hantar --palet).
+# 27 Nov 2026: VERSI dicatat dalam info.json (dibaca belajar_sk.py). Naikkan VERSI setiap kali kod berubah.
 # Guna: python3 SK06_finish.py <imej> <S1..S6> <folder keluar> [--sizes 18x24,24x36] [--keep-color] [--palet <json>]
 """Siapkan imej lettering AI untuk cetak (CPU sahaja).
 
@@ -28,6 +29,8 @@ import cairosvg
 import cv2
 import numpy as np
 from PIL import Image
+
+VERSI = "SK06 v1 (27 Nov 2026)"
 from scipy.optimize import linear_sum_assignment
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -266,7 +269,7 @@ def main():
     img = np.array(Image.open(raw).convert("RGB"))
     vec = vectorize(img, len(palet["dakwat"]) if palet else len(style["inks"]), palet)
     bg_hex, fills = map_palet(vec, palet) if palet else map_palette(vec, style, keep)
-    info = {"raw": raw.name, "style": sid, "palet": palet and palet.get("sumber"), "bg": bg_hex, "fills": fills, "layers": len(vec["layers"]),
+    info = {"versi": VERSI, "raw": raw.name, "style": sid, "palet": palet and palet.get("sumber"), "bg": bg_hex, "fills": fills, "layers": len(vec["layers"]),
             "ink_px": [l["area"] for l in vec["layers"]], "sizes": {}}
     master = compose_svg(vec, bg_hex, fills, 1800, 2400)
     (out / "master.svg").write_text(master)

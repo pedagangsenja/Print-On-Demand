@@ -12,6 +12,7 @@ Status: v1 dipersetujui pengguna 25 Nov 2026; v1.2 diluluskan pengguna sebagai s
 7. **Daftar skrip dan kaedah skrip baharu** (selepas langkah 6, arahan pengguna 26 Nov 2026): empat skrip pembetulan + skrip kemasan didaftar; skrip baharu dibina bila gambar upload memerlukannya, kemudian disimpan, didaftar dan dimasukkan ke dashboard.
 8. **Peraturan langkau model** (langkah 4, arahan pengguna 26 Nov 2026): model yang terlalu lama atau bermasalah dilangkau, model seterusnya dijalankan, dan hal itu dilaporkan dalam chat.
 9. **Belajar selepas setiap jana** (3.15, keputusan pengguna 27 Nov 2026): `belajar.py` dijalankan selepas setiap batch; aturan prompt setiap model dikemas kini sendiri ikut QC, ♥ dan tolak pengguna.
+10. **Belajar SK selepas setiap batch** ("Belajar SK", keputusan pengguna 27 Nov 2026): `belajar_sk.py` dijalankan selepas 5b dan langkah 6; skrip SK dibaiki, diberi parameter kad, atau SK baharu dicipta terus ikut log SK, semakan Claude, ♥ dan tolak pengguna.
 
 Yang kekal daripada v1: hitam putih dahulu dan warna oleh skrip; pintu G1–G3; seed tetap; Kad Gaya satu-satunya sumber gaya; 768×1024.
 Bukti, ukuran dan sebab setiap peraturan: `docs/lettering-standard-handover.md` (tahap bukti angka: lemah, kecuali lesen: rasmi). Carta 3 lajur: `docs/lettering-aliran.png` (`scripts/lettering_flowchart.py`).
@@ -359,7 +360,7 @@ Tempat menyimpan aturan model baharu yang ditulis ikut 3.12 (3.14.1, 3.14.2, …
 
 **Peraturan belajar (kod: `belajar.py`, versi b1):**
 - **Isyarat:** QC G1–G2; ♥ pengguna; tolak pengguna (`pengguna.jsonl`, atau kod yang dipadam daripada Daftar S/C). Imej lulus = lulus QC dan tidak ditolak. Imej yang ditolak dikira cacat.
-- **Kelas cacat** ikut jadual kitaran QC (langkah 5): berulang, rawak, luar label, hiasan lebih, hiasan di tempat salah, baris, ejaan, bentuk, ditolak. Cacat "bukan prompt" (condong, ruang tepi, kedudukan, kelabu) diabaikan, kerana itu kerja skrip 5b.
+- **Kelas cacat** ikut jadual kitaran QC (langkah 5): berulang, rawak, luar label, hiasan lebih, hiasan di tempat salah, baris, ejaan, bentuk, ditolak. Cacat "bukan prompt" (condong, ruang tepi, kedudukan, kelabu, warna, bayang, tekstur, vektor: kelas `KELAS_SK`) diabaikan, kerana itu kerja skrip SK; ia dipelajari oleh `belajar_sk.py` ("Belajar SK", selepas Daftar skrip). b1.1: senarai ini dibaca terus daripada `belajar_sk.py`.
 - **Cacat berulang** = kelas yang sama pada sekurang-kurangnya 2 imej, sama ada pada 2 design atau lebih, atau pada 2 seed atau lebih dalam satu design. Bagi ejaan: hanya jika PERKATAAN yang sama salah.
 - **Satu ubahan setiap kali** bagi setiap model. Cacat yang membuat imej gagal didahulukan; cacat gaya pada imej yang lulus kemudian.
 - **Tiada ulangan:** ubahan yang pernah dicuba (`ubahan.json`) tidak dicuba lagi. "Huruf besar" dilangkau jika perkataan yang salah sudah huruf besar.
@@ -551,6 +552,50 @@ Empat skrip pembetulan (SK01–SK04) ialah set asas. Skrip lain ditambah hanya i
 - **SK08 ujian:** 12 imej K3K yang lulus SK07: kongsi bayang 33.6–36.5% setiap imej (rujukan model 35.3%), tiada amaran.
 - **SK08 had:** bayang lembut K1 (IMG_5818: bayang jatuh atas coretan lain di bawahnya) tidak boleh dibuat daripada imej hitam putih rata, kerana susunan coretan (mana di atas) tiada. Kad lain belum ada rujukan bayang.
 - **Hasil:** `designs/lettering-v1/final/v12-cpu-sk07/` (SVG induk + pratonton 18×24; PNG 300 DPI dijana semula bila perlu), `final/v12-cpu-sk07/peranan/` (peta, imej berwarna, palet, `log_6.jsonl`), helaian `qc/sk07_sk08_kemasan.jpg`.
+
+### Belajar SK selepas setiap batch: skrip dibaiki atau dicipta sendiri (keputusan pengguna 27 Nov 2026)
+**Tujuan:** sama seperti 3.15 untuk aturan prompt, tetapi untuk skrip SK. Setiap batch menambah bukti; kelemahan SK dibaiki, parameter kad yang belum dibaca ditambah, dan cacat tanpa SK mendapat SK baharu. Bukti, bukan tekaan.
+
+**Bila:** selepas SETIAP batch, selepas 5b dan langkah 6, dan selepas `belajar.py` (3.15). Tiada jana tambahan.
+
+**Langkah (Claude, dalam sesi yang sama, tanpa tanya):**
+1. Salin stor dashboard (sama seperti 3.15 langkah 1).
+2. Rekod keputusan pengguna pada imej siap dalam `belajar/sk_pengguna.jsonl`, satu baris setiap imej: `{"imej": "<batch>/<model>/<ID>_s<seed>[+Cxxx]", "keputusan": "lulus" atau "tolak", "sebab": "...", "sk": "SK08" (pilihan)}`. Tolak dalam `pengguna.jsonl` yang sebabnya milik SK, dan kod C yang dipadam daripada Daftar S/C, juga dikira.
+3. Jalan `python3 belajar_sk.py` (dalam `designs/lettering-v1/`). Hasil: `belajar/sk_log.jsonl` (sejarah imej × SK × versi; versi lama kekal untuk banding), `belajar/sk_ringkasan.json`, `data/export/ai_tests/sk_belajar.json` (dashboard), dan TINDAKAN bagi setiap SK.
+4. Laksana setiap TINDAKAN terus, kemudian lapor dalam jadual jawapan:
+   - **SEMAK:** lihat imej yang GAGAL atau ada amaran; tulis `belajar/sk_semakan.jsonl`: `silap` (kelemahan SK; `kelas` pilihan) atau `betul` (imej input rosak, atau amaran tidak merosakkan). Input rosak = jana semula / 3.15, bukan kerja SK.
+   - **BAIKI:** satu ubahan kod pada SK itu; naikkan `VERSI` (SK01–SK04: `VERSI` dalam `betulkan.py`); tambah baris `cuba` dalam `belajar/sk_ubahan.json` (`sk`, `ubahan`, `kelas`, `dari`, `ke`, `imej`, `tarikh`); jalan semula SK pada imej yang sama (tiada jana); jalan `belajar_sk.py` semula.
+   - **MENANG:** tanda `menang`; kemas kini jadual Daftar skrip (versi, status) dan "Catatan pembaikan SK".
+   - **KALAH:** pulangkan kod ke versi lama (git); tanda `kalah`; ia tidak dicuba lagi.
+   - **UJI SEMULA:** jalan semula SK versi baharu pada imej yang sama.
+   - **PARAMETER:** tambah parameter yang dibaca daripada kad (kaedah skrip baharu langkah 2), dijalankan sebagai ubahan (cuba, kemudian menang / kalah).
+   - **UKUR:** ukur gambar upload kad (SK05; SK08 `--ukur`), tulis rujukan pada kad.
+   - **SK BAHARU:** cipta terus ikut "Kaedah skrip baharu" 1–8; tambah kelas cacatnya ke `KELAS_SK` dalam `belajar_sk.py` dengan pemilik SK baharu; kepala fail ada `LANGKAH = "..."` dan `VERSI = "..."`.
+   - **HABIS:** 3 ubahan kalah bagi kelas yang sama: lapor pengguna; imej itu jana semula.
+   - **TANYA:** imej ditolak tanpa sebab: tanya pengguna sebabnya (dalam jadual).
+5. Muat naik `sk_belajar.json` ke dashboard (dataset `sk_belajar`, tab AI Image Test) dan simpan semua fail dalam git.
+
+**Peraturan belajar SK (kod: `belajar_sk.py`, versi s1):**
+- **Isyarat:** GAGAL dan amaran dalam log SK (`log_5b.jsonl`, `log_6.jsonl`, `info.json`); semakan Claude; tolak pengguna; ♥.
+- **Kelas cacat SK (`KELAS_SK`):** sentuh tepi, ruang tepi (SK02); condong (SK01); kedudukan (SK03); kelabu (SK04); label, baris salah dibelah, huruf bertaut dibelah, tiada huruf, warna (SK07); bayang (SK08); tekstur, vektor (SK06). "Ekor huruf dipulangkan" = maklumat, bukan cacat. Kelas yang sama dikeluarkan daripada belajar prompt (3.15, b1.1).
+- **GAGAL kerana input rosak** (semakan `betul`) tidak dikira cacat SK. **Amaran** dikira cacat hanya selepas semakan `silap` atau tolak pengguna.
+- **Cacat berulang** = kelas yang sama pada sekurang-kurangnya 2 imej, pada versi semasa SK.
+- **Satu ubahan setiap kali** bagi setiap SK; banding pada imej yang sama. **Menang** = lebih banyak imej tanpa cacat SK (atau sama, tetapi kelas sasaran berkurang), tanpa kelas cacat baharu.
+- **Tiada ulangan:** ubahan yang kalah disenarai dalam TINDAKAN supaya tidak dicuba lagi.
+- **Liputan kad:** setiap kad yang pernah dijana disemak: condong tanpa rujukan sudut, tiada rujukan ruang tepi, lebih satu dakwat tanpa `peta_warna`, bayang tanpa rujukan atau jenis yang SK08 tidak boleh buat (SK baharu), tekstur dan ruang tepi kad yang SK06 belum baca (parameter).
+- **SK baharu:** cacat tanpa SK pemilik pada sekurang-kurangnya 2 imej, atau ciri kad tanpa SK: dicipta terus (keputusan pengguna 27 Nov 2026) dan dilaporkan. 1 imej: dipantau.
+- **Versi:** setiap SK ada `VERSI` dalam kod dan log mencatatnya. SK06: `VERSI` ditambah 27 Nov 2026 (kod lain tidak berubah; `info.json` lama = SK06 v1).
+
+**Had:** ini bukan AI yang belajar sendiri. Ia peraturan tetap yang dijalankan Claude selepas setiap batch. Bukti kecil (satu batch, satu kad berwarna) mudah tersilap.
+
+**Keputusan pertama (27 Nov 2026; 34 imej, 177 baris imej × SK; ♥ 0; tolak 0; bukti lemah):**
+- SK01–SK04 (5b v1.1): 0 cacat. UKUR: kad K6 tiada rujukan sudut dan ruang tepi (IMG_5734).
+- SK06 v1: tekstur kad belum dibaca (K6, K7, K8): PARAMETER seterusnya; ruang tepi kad menyusul.
+- SK07 v1: semakan Claude 10 imej: 2 `silap` (ernie K3K s42 dan s123: huruf bertaut merentas baris diwarna salah); zturbo K3K s7 = input rosak (tiada label); 7 amaran tidak merosakkan. TINDAKAN: BAIKI SK07 (kelas huruf bertaut dibelah).
+- SK08 v1: 0 cacat.
+
+### Catatan pembaikan SK
+Setiap ubahan SK direkod di sini dan dalam `designs/lettering-v1/belajar/sk_ubahan.json`. Belum ada ubahan (27 Nov 2026).
 
 ## Langkah 7: Pengguna lulus atau tolak
 - **Mata pengguna ialah pintu terakhir (v1.2).** Imej yang lulus semua QC tetapi nampak buruk di mata pengguna = gagal. Skor QC tidak mengatasi keputusan pengguna.

@@ -62,6 +62,17 @@ POD.mRows('t2-aturan-body', 'aturan_belajar', 10, (tr, r) => {
   POD.cell(tr, r.suka, 'pod-num'); POD.cell(tr, r.tolak, 'pod-num'); POD.cell(tr, r.ubahan_dicuba, 'pod-num');
   POD.cell(tr, r.cacat_berulang, 'pod-wide'); POD.cell(tr, r.tindakan, 'pod-wide');
 });
+POD.mRows('t2-sk-body', 'sk_belajar', 14, (tr, r) => {
+  tr.dataset.key = POD.enc(r.sk);
+  POD.cell(tr, r.sk).style.fontWeight = '600';
+  POD.cell(tr, r.nama); POD.cell(tr, r.langkah); POD.cell(tr, r.versi);
+  POD.cell(tr, r.imej, 'pod-num'); POD.cell(tr, r.lulus, 'pod-num');
+  const c = POD.cell(tr, r.cacat_sk, 'pod-num'); c.style.fontWeight = '600';
+  if (r.cacat_sk != null) c.classList.add(r.cacat_sk ? 'mt-bad' : 'mt-ok');
+  POD.cell(tr, r.input_rosak, 'pod-num'); POD.cell(tr, r.belum_semak, 'pod-num'); POD.cell(tr, r.tolak, 'pod-num');
+  POD.cell(tr, r.suka, 'pod-num'); POD.cell(tr, r.ubahan_dicuba, 'pod-num');
+  POD.cell(tr, r.cacat_berulang, 'pod-wide'); POD.cell(tr, r.tindakan, 'pod-wide');
+});
 POD.t2Pilih = (sel, opts, key) => {
   sel.replaceChildren(new Option('Semua', ''), ...opts.map(([v, t]) => new Option(t, v)));
   sel.value = POD.t2[key];
