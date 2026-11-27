@@ -43,7 +43,8 @@ MODEL = list(REV)
 W, H = 768, 1024
 # Ubahan CALON kitaran QC (langkah 5): hanya hidup bila dinamakan dalam PEMBINA_UJI (dipisah koma). Ubahan yang
 # berjaya ditulis balik ke aturan (rev naik) dan dibuang dari sini; yang gagal dicatat dalam standard dan dibuang.
-# Tiada calon semasa. (26 Nov 2026: 'zturbo_satu_baris' diuji pada K8G, tidak berjaya, dibuang.)
+# Calon semasa (belajar.py b1.2, 27 Nov 2026, larian K9-K13): zturbo_had_positif, ernie_hiasan_tepat,
+# klein3_hiasan_kedudukan, klein4b_frasa_bentuk. (26 Nov 2026: 'zturbo_satu_baris' diuji pada K8G, tidak berjaya, dibuang.)
 # Nama calon = <model>_<id pilihan> daripada belajar.py (KELAS), cth. zturbo_had_positif; belajar.py memutuskan menang / kalah (3.15).
 UJI = {u for u in os.environ.get("PEMBINA_UJI", "").split(",") if u}
 SATU = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"]
@@ -136,6 +137,9 @@ def klein4b(m):
         s.append(t + (", and it is the largest line of all." if l["tertinggi"] else "."))
     if b.get("sentuh"):
         s.append(f"The lines {b['sentuh']}.")
+    if "klein4b_frasa_bentuk" in UJI:  # calon 3.15: frasa bentuk huruf
+        s.append(f"Every line uses the same {b['gaya']} letterforms" +
+                 (", and each line is stretched to exactly the same width." if b.get("sama_lebar") else "."))
     s += tambahan(b)
     ekor = "no other lettering below the last line" if bawah_ada_hiasan(b) else "nothing below the last line"
     s.append(f"The poster shows only these {SATU[m['nw'] - 1]} words, each of them once, in pure white and black "
@@ -168,8 +172,13 @@ def zturbo(m):
             t = f'Line {SATU[l["i"]]}{p} reads "{l["q"]}" in {frasa(l, lambda d: f" as line {SATU[d]}")}'
         s.append(t + (", and it is the tallest line of the poster." if l["tertinggi"] else "."))
     s += tambahan(b)
-    s.append(f"The only text in the image is these {SATU[m['nw'] - 1]} words, each appearing once. The image uses "
-             f"only pure white and pure black, {b['ada']}.")
+    if "zturbo_had_positif" in UJI:  # calon 3.15: had sebagai ayat positif, tanpa perkataan berisiko
+        s.append(f"The image shows exactly these {SATU[m['nw'] - 1]} words, each appearing once and spelled exactly as "
+                 f"quoted, in pure white on pure black, and every other area is plain empty black" +
+                 (f" apart from {b['latar_isi']}." if b.get("latar_isi") else "."))
+    else:
+        s.append(f"The only text in the image is these {SATU[m['nw'] - 1]} words, each appearing once. The image uses "
+                 f"only pure white and pure black, {b['ada']}.")
     return " ".join(s)
 
 
@@ -190,6 +199,9 @@ def ernie(m):
          f"{cap(SATU[m['n'] - 1])} stacked lines in {b['bentuk']} in the center" +
          (f" that {b['condong']}" if b.get("condong") else "") + ": " + "; ".join(butir) + "."]
     s += tambahan(b)
+    if "ernie_hiasan_tepat" in UJI:  # calon 3.15: hiasan dibenarkan dinyatakan tepat
+        s.append("Clean empty background" + (f" apart from {b['latar_isi']}" if b.get("latar_isi") else "") +
+                 ", no other shapes, lines or borders than those described.")
     s.append(f"Only these {SATU[m['nw'] - 1]} words, no other text, pure black and white, "
              f"{', '.join('no ' + x for x in b['tiada'])}, {b['gaya']} style, {b['margin']}.")
     return " ".join(s)
@@ -323,6 +335,8 @@ def klein3_bahagian(m):
         if l["bekas"]:
             a = "In the center" if l["tengah"] else a
             t = f"{a}, a {l['bekas']} <{i}>"
+            if "klein3_hiasan_kedudukan" in UJI:  # calon 3.15: kedudukan / lebar hiasan dinyatakan
+                t += " spanning the full width of the block"
             if "sisi" in x:
                 kiri, kanan = idbaru(b["sisi"]["nama"]), idbaru(b["sisi"]["nama"])
                 t += f" with {b['sisi']['frasa']} on its left <{kiri}> and on its right <{kanan}>"

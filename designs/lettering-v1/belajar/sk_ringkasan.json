@@ -1,13 +1,18 @@
 {
  "versi": "s1 (27 Nov 2026)",
  "tarikh": "2026-11-27",
- "baris": 224,
- "imej": 40,
+ "baris": 672,
+ "imej": 96,
  "kad_dipakai": [
+  "K10",
+  "K11",
+  "K12",
+  "K13",
   "K3",
   "K6",
   "K7",
-  "K8"
+  "K8",
+  "K9"
  ],
  "suka": 0,
  "sk": {
@@ -16,7 +21,7 @@
    "nama": "condong",
    "fail": "SK01_condong.py",
    "langkah": "5b",
-   "versi": "5b v1.1",
+   "versi": "5b v1.2",
    "ikut_versi": {
     "5b v1.1": {
      "imej": 28,
@@ -25,11 +30,19 @@
      "input_rosak": 0,
      "belum": 0,
      "tolak": 0
+    },
+    "5b v1.2": {
+     "imej": 0,
+     "lulus": 0,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
     }
    },
    "semasa": {
-    "imej": 28,
-    "lulus": 28,
+    "imej": 0,
+    "lulus": 0,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -50,11 +63,19 @@
    "nama": "ruang tepi",
    "fail": "SK02_ruang_tepi.py",
    "langkah": "5b",
-   "versi": "5b v1.1",
+   "versi": "5b v1.2",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 19,
-     "lulus": 19,
+     "imej": 51,
+     "lulus": 48,
+     "cacat": 3,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    },
+    "5b v1.2": {
+     "imej": 32,
+     "lulus": 32,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -62,8 +83,8 @@
     }
    },
    "semasa": {
-    "imej": 19,
-    "lulus": 19,
+    "imej": 32,
+    "lulus": 32,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -71,7 +92,7 @@
    },
    "berulang": [],
    "calon": [],
-   "ubahan_dicuba": 0,
+   "ubahan_dicuba": 1,
    "tindakan": [
     {
      "jenis": "tiada",
@@ -84,11 +105,19 @@
    "nama": "kedudukan",
    "fail": "SK03_kedudukan.py",
    "langkah": "5b",
-   "versi": "5b v1.1",
+   "versi": "5b v1.2",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 17,
-     "lulus": 17,
+     "imej": 28,
+     "lulus": 28,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    },
+    "5b v1.2": {
+     "imej": 10,
+     "lulus": 10,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -96,8 +125,8 @@
     }
    },
    "semasa": {
-    "imej": 17,
-    "lulus": 17,
+    "imej": 10,
+    "lulus": 10,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -118,11 +147,19 @@
    "nama": "hitam putih",
    "fail": "SK04_hitam_putih.py",
    "langkah": "5b",
-   "versi": "5b v1.1",
+   "versi": "5b v1.2",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 32,
-     "lulus": 32,
+     "imej": 67,
+     "lulus": 67,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    },
+    "5b v1.2": {
+     "imej": 35,
+     "lulus": 35,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -130,8 +167,8 @@
     }
    },
    "semasa": {
-    "imej": 32,
-    "lulus": 32,
+    "imej": 35,
+    "lulus": 35,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -228,6 +265,11 @@
      "jenis": "ukur",
      "medan": "tekstur_had",
      "teks": "Kad K8, had tekstur: butir bawah 1 px dan tepi marker kering tidak ditiru: pada JPEG 600x449 itu kesan mampatan; perlu gambar upload lebih besar"
+    },
+    {
+     "jenis": "parameter",
+     "medan": "tekstur_jenis",
+     "teks": "Tekstur kad belum ada jenisnya dalam SK06: K10 'tiada (vektor rata)'; K11 'kapur kering'; K11 'percikan latar'; K12 'tiada (vektor rata)'; K13 'cop getah lusuh'; K13 'butir kertas'; K9 'tiada (vektor rata)'. Tambah jenis tekstur prosedur (ukur pada gambar upload kad), uji pada imej sedia ada"
     }
    ]
   },
@@ -268,8 +310,8 @@
    "ubahan_dicuba": 1,
    "tindakan": [
     {
-     "jenis": "tiada",
-     "teks": "Tiada tindakan: tiada cacat berulang"
+     "jenis": "parameter",
+     "teks": "Kad K10 ada 4 dakwat tetapi tiada peta_warna: tulis peta peranan -> dakwat ikut IMG_5817"
     }
    ]
   },

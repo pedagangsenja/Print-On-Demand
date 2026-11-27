@@ -29,7 +29,7 @@ sys.path.insert(0, HERE)
 import pembina  # noqa: E402
 import belajar_sk  # noqa: E402
 
-VERSI = "b1.1 (27 Nov 2026)"
+VERSI = "b1.2 (27 Nov 2026)"
 B = os.path.join(HERE, "belajar")
 STOR = os.path.join(B, "stor", "data")
 EXPORT = os.path.normpath(os.path.join(HERE, "..", "..", "data", "export", "ai_tests", "aturan_belajar.json"))
@@ -47,7 +47,7 @@ KELAS = {
                    [("bekas_dahulu", "Tulis bekas dahulu, perkataan kemudian (\"a small white label, and inside that label the word ...\")")]),
     "hiasan_lebih": ("Hiasan yang tidak diminta", r"bintang|garis lengkung|garis tambahan",
                      [("hiasan_tepat", "Nyatakan hiasan yang dibenarkan dengan tepat, tambah \"clean empty background\"")]),
-    "hiasan_tempat": ("Hiasan di tempat salah", r"percikan dilukis di dalam|percikan hanya|tiada percikan|anak panah",
+    "hiasan_tempat": ("Hiasan di tempat salah", r"percikan dilukis di dalam|percikan hanya|tiada percikan|anak panah|bingkai hanya|reben kecil",
                       [("hiasan_kedudukan", "Nyatakan kedudukan hiasan (kiri dan kanan, di luar label)")]),
     "baris": ("Bilangan baris salah (baris dipisah)", r"\b\d baris|dipisah",
               [("dua_kata_sebaris", "Nyatakan dua perkataan sebaris (\"as two words side by side on one line\")"),
@@ -56,7 +56,7 @@ KELAS = {
               r"jadi|rosak|meragukan|huruf besar|huruf kecil|Morrrnings|omornings|Betters",
               [("huruf_besar", "Huruf besar untuk baris itu jika kad membenarkan"),
                ("tukar_peranan", "Tukar peranan perkataan itu")]),
-    "bentuk": ("Bentuk huruf atau saiz label lain daripada kad", r"nipis|label (lebih )?besar|label kecil",
+    "bentuk": ("Bentuk huruf atau saiz label lain daripada kad", r"nipis|label (lebih )?besar|label kecil|bentuk huruf|lebar baris",
                [("frasa_bentuk", "Frasa bentuk huruf dalam aturan model")]),
     "ditolak": ("Ditolak pengguna tanpa sebab", r"^dipadam|^ditolak", []),
 }
@@ -110,7 +110,7 @@ def muat_qc(L):
         if stem.endswith("_snc"):
             batch = stem[:-4].replace("_", "-")
             for kod, r in d.get("rekod", {}).items():
-                if "imej" not in r:  # kod warna C merujuk kod gaya S (warna oleh skrip, bukan prompt)
+                if "/" not in r.get("imej", "/"[:0]):  # kod warna C (skrip, bukan prompt) atau imej tanpa model/
                     continue
                 model, nama = r["imej"].split("/")
                 i, s = nama.rsplit("_s", 1)
