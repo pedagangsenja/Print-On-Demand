@@ -17,7 +17,12 @@
 # ruang_tepi kad). Sisi yang mengehad = nilai kad; pusat optik 0.47 hanya jika ruang atas / bawah tidak kurang
 # daripada kad. Ruang tepi diukur pada blok tulisan (topeng SK05, bintik hiasan kecil tidak dikira), sama seperti
 # SK02 / SK05. Ruang tepi hasil dicatat dalam info.json. Tanpa --kad: 76% x 78% seperti v1.
+# v1.3 (27 Nov 2026, Belajar SK, ubahan tekstur_marker): jenis tekstur 'marker' (tepi marker kering + butir latar)
+# dengan parameter yang diukur pada gambar upload kad (--ukur-tekstur; disimpan di kad.BLOK[k]['rujukan']['tekstur']).
+# Butir dijana pada skala rujukan (blok tulisan sama lebar), jadi rupa sama pada setiap saiz poster. Hasil diukur
+# semula pada skala rujukan dan dicatat dalam info.json (amaran jika beza > 30%).
 # Guna: python3 SK06_finish.py <imej> <S1..S6> <folder keluar> [--sizes 18x24,24x36] [--keep-color] [--palet <json>] [--kad Kx]
+#       python3 SK06_finish.py --ukur-tekstur <gambar upload>   (v1.3: ukuran tekstur untuk kad)
 """Siapkan imej lettering AI untuk cetak (CPU sahaja).
 
 Langkah: besarkan 4x -> asingkan warna (k-means Lab) -> bersihkan bintik -> surih vektor (potrace)
@@ -39,7 +44,7 @@ import cv2
 import numpy as np
 from PIL import Image
 
-VERSI = "SK06 v1.2 (27 Nov 2026)"
+VERSI = "SK06 v1.3 (27 Nov 2026)"
 from scipy.optimize import linear_sum_assignment
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -259,13 +264,62 @@ def compose_svg(vec, bg_hex, fills, W, H, tepi=None):
     return "\n".join(parts)
 
 
+def ukur_tekstur(rgb, lebar_blok=None):
+    """v1.3: ukur tekstur gambar latar gelap + dakwat cerah (gambar upload kad, atau hasil SK06 untuk banding).
+    lebar_blok = skala semula dahulu supaya blok tulisan selebar itu (piksel), jadi ukuran boleh dibanding pada
+    skala rujukan. Pulang sd butir latar (halus < 1 px, sederhana 1-16 px, kasar > 16 px), sd dakwat, kekasaran tepi
+    (perimeter / perimeter selepas licin 5 px) dan lebar blok (topeng SK05)."""
+    from SK05_ukur import topeng
+    blok, _ = topeng(rgb)
+    ys, xs = np.nonzero(blok)
+    bw = int(xs.max() - xs.min() + 1)
+    if lebar_blok and abs(bw - lebar_blok) > 2:
+        f = lebar_blok / bw
+        rgb = cv2.resize(rgb, (max(1, int(rgb.shape[1] * f)), max(1, int(rgb.shape[0] * f))), interpolation=cv2.INTER_AREA)
+        bw = lebar_blok
+    g = rgb.astype(np.float32).mean(-1)
+    t, _ = cv2.threshold(g.astype(np.uint8), 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+    ink = (g > t).astype(np.uint8)
+    teras = cv2.erode(ink, np.ones((5, 5), np.uint8)).astype(bool)
+    lat = cv2.erode(1 - ink, np.ones((9, 9), np.uint8)).astype(bool)
+    v = g.copy()
+    v[~lat] = np.median(g[lat])
+    sd = {sg: float((cv2.GaussianBlur(v, (0, 0), sg) if sg else v)[lat].std()) for sg in (0, 1, 16)}
+    d = g.copy()
+    d[~teras] = np.median(g[teras])
+    d1 = float(cv2.GaussianBlur(d, (0, 0), 1)[teras].std())   # butir dakwat >= 1 px (bawah 1 px = mampatan JPEG)
+    licin = cv2.morphologyEx(cv2.morphologyEx(ink, cv2.MORPH_OPEN, np.ones((5, 5), np.uint8)), cv2.MORPH_CLOSE, np.ones((5, 5), np.uint8))
+    per = lambda m: sum(cv2.arcLength(c, True) for c in cv2.findContours(m, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)[0]
+                        if cv2.contourArea(c) > 200)
+    return dict(latar_halus=round(max(0.0, sd[0] ** 2 - sd[1] ** 2) ** 0.5, 2), latar_sederhana=round(max(0.0, sd[1] ** 2 - sd[16] ** 2) ** 0.5, 2),
+                latar_kasar=round(sd[16], 2), dakwat_sd=round(float(g[teras].std()), 2), dakwat_sd1=round(d1, 2), tepi_kasar=round(per(ink) / max(1.0, per(licin)), 3),
+                latar_median=round(float(np.median(g[lat])), 1), lebar_blok=bw)
+
+
 def noise(shape, sigma, rng):
     n = rng.standard_normal(shape).astype(np.float32)
     n = cv2.GaussianBlur(n, (0, 0), sigma) if sigma > 0 else n
     return n / (n.std() + 1e-6)
 
 
-def texture(png_rgb, bg_hex, kind, seed=7, kuat=1.0):
+def tekstur_untuk(kid):
+    """Tekstur bagi kad: ukuran gambar upload (rujukan.tekstur) dahulu; jika tiada, teks kad (tekstur_kad) dan ganti
+    gaya daripada gambar upload yang sama. Dipakai oleh main() dan belajar_sk.py (liputan kad)."""
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+    import kad
+    teks = kad.KAD[kid].get("tekstur", "tiada")
+    ukur = (kad.BLOK.get(kid, {}).get("rujukan") or {}).get("tekstur")
+    if ukur:
+        return dict(kad=kid, teks=teks, jenis=ukur["jenis"], kuat=1.0, tidak_dibuat=[], ukur=ukur)
+    tk = dict(kad=kid, teks=teks, **tekstur_kad(teks))
+    ref = kad.KAD[kid].get("ref")
+    sama = next((g for g, st in STYLES.items() if st.get("ref") == ref and st["texture"] != "none"), None)
+    if tk["tidak_dibuat"] and tk["jenis"] == "none" and sama:   # ganti: gaya yang dibuat daripada gambar upload sama
+        tk.update(jenis=STYLES[sama]["texture"], kuat=1.0, ganti=f"tekstur gaya {sama} (gambar rujukan sama, {ref})")
+    return tk
+
+
+def texture(png_rgb, bg_hex, kind, seed=7, kuat=1.0, p=None, k=1.0):
     """Tekstur prosedur pada saiz akhir (skala ikut 300 DPI). kuat 1.0 = v1; < 1 = lebih halus (kurang lubang)."""
     if kind == "none":
         return png_rgb
@@ -295,6 +349,19 @@ def texture(png_rgb, bg_hex, kind, seed=7, kuat=1.0):
         cloud = (noise(shape, 120, rng) * 2.0 + noise(shape, 1.5, rng) * 1.5) * kuat
         base = bg + cloud[..., None]
         out = base + (img - bg) * a[..., None]
+    elif kind == "marker":   # v1.3: tepi marker kering + butir latar; p diukur pada gambar upload, k = px hasil / px rujukan
+        H, W = shape
+        hs, ws = max(8, int(round(H / k))), max(8, int(round(W / k)))
+
+        def nz(sg):   # hingar pada skala rujukan, dibesarkan ke saiz akhir
+            n = cv2.resize(noise((hs, ws), sg, rng), (W, H), interpolation=cv2.INTER_CUBIC)
+            return n / (n.std() + 1e-6)
+        # Hanya skala yang boleh diukur pada gambar upload (>= 1 px rujukan); butir bawah 1 px dan kekasaran tepi pada
+        # JPEG kecil = mampatan, jadi tidak ditiru (tepi kekal ikut imej AI).
+        lat = nz(3) * p["g_sederhana"] + nz(30) * p["g_kasar"]
+        a = ink
+        dk = nz(3) * p["g_dakwat"]
+        out = (bg + lat[..., None]) * (1 - a[..., None]) + (img + dk[..., None]) * a[..., None]
     else:
         raise ValueError(kind)
     return np.clip(out, 0, 255).astype(np.uint8)
@@ -302,6 +369,9 @@ def texture(png_rgb, bg_hex, kind, seed=7, kuat=1.0):
 
 def main():
     args = sys.argv[1:]
+    if args and args[0] == "--ukur-tekstur":   # v1.3: ukur tekstur gambar upload kad
+        print(json.dumps(dict(gambar=Path(args[1]).name, **ukur_tekstur(np.array(Image.open(args[1]).convert("RGB")))), ensure_ascii=False))
+        return
     raw, sid, out = Path(args.pop(0)), args.pop(0), Path(args.pop(0))
     sizes = ["18x24"]
     keep = False
@@ -320,18 +390,12 @@ def main():
             kid = args.pop(0)
     style = STYLES[sid]
     tk = dict(jenis=style["texture"], kuat=1.0, tidak_dibuat=[])
-    if kid:   # v1.1: tekstur ikut kad
-        sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-        import kad
-        tk = dict(kad=kid, teks=kad.KAD[kid].get("tekstur", "tiada"), **tekstur_kad(kad.KAD[kid].get("tekstur")))
+    if kid:   # v1.1: tekstur ikut kad (v1.3: ukuran gambar upload dahulu)
+        tk = tekstur_untuk(kid)
         import asas
         ruj = asas.rujukan(kid)   # sama seperti SK02 (5b)
         tepi = dict(sisi=float(ruj.get("tepi_sisi_pct", ruj["tepi_pct"])), atas_bawah=float(ruj.get("tepi_atas_bawah_pct", ruj["tepi_pct"])),
                     sumber=ruj.get("sumber", "kad"))
-        ref = kad.KAD[kid].get("ref")
-        sama = next((g for g, st in STYLES.items() if st.get("ref") == ref and st["texture"] != "none"), None)
-        if tk["tidak_dibuat"] and tk["jenis"] == "none" and sama:   # ganti: gaya yang dibuat daripada gambar upload sama
-            tk.update(jenis=STYLES[sama]["texture"], kuat=1.0, ganti=f"tekstur gaya {sama} (gambar rujukan sama, {ref})")
     out.mkdir(parents=True, exist_ok=True)
     img = np.array(Image.open(raw).convert("RGB"))
     vec = vectorize(img, len(palet["dakwat"]) if palet else len(style["inks"]), palet)
@@ -367,7 +431,18 @@ def main():
             if luar < 0.005 * min(W, H):
                 info["amaran"].append(f"dakwat menyentuh tepi kanvas {sz} (hiasan mungkin terpotong)")
         arr = np.array(Image.open(__import__("io").BytesIO(png)).convert("RGB"))
-        arr = texture(arr, bg_hex, tk["jenis"], kuat=tk["kuat"] or 1.0)
+        k_ = 1.0
+        if tk.get("ukur"):   # skala: lebar blok tulisan hasil / lebar blok gambar upload
+            s_, _, _, _ = letak(vec, W, H, tepi)
+            bb = vec.get("bbox_blok") or vec["bbox"]
+            k_ = s_ * (bb[2] - bb[0]) / tk["ukur"]["lebar_blok"]
+        arr = texture(arr, bg_hex, tk["jenis"], kuat=tk["kuat"] or 1.0, p=tk.get("ukur"), k=k_)
+        if tk.get("ukur"):   # ukur semula pada skala rujukan
+            h_ = ukur_tekstur(arr, tk["ukur"]["lebar_blok"])
+            info["tekstur"].setdefault("hasil_ukur", {})[sz] = h_
+            for m in ("latar_sederhana", "latar_kasar", "dakwat_sd1"):   # skala yang diukur dengan yakin sahaja
+                if abs(h_[m] - tk["ukur"][m]) > 0.3 * abs(tk["ukur"][m]):
+                    info["amaran"].append(f"tekstur {sz}: {m} {h_[m]} lawan rujukan {tk['ukur'][m]} (beza > 30%)")
         im = Image.fromarray(arr)
         im.save(out / f"{sz}.png", dpi=(DPI, DPI))
         im.resize((W * 1000 // H, 1000) if H > W else (1000, H * 1000 // W), Image.LANCZOS).save(

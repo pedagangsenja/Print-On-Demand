@@ -1,0 +1,74 @@
+{
+ "versi": "SK06 v1.3 (27 Nov 2026)",
+ "raw": "klein4b_K8G_s42_warna.png",
+ "style": "S3",
+ "palet": "kad K8",
+ "bg": "#1f1f1f",
+ "fills": [
+  "#f3f3f1"
+ ],
+ "layers": 1,
+ "ink_px": [
+  3040573
+ ],
+ "sizes": {
+  "18x24": [
+   5400,
+   7200
+  ]
+ },
+ "tekstur": {
+  "kad": "K8",
+  "teks": "tepi marker kering + butir latar",
+  "jenis": "marker",
+  "kuat": 1.0,
+  "tidak_dibuat": [],
+  "ukur": {
+   "jenis": "marker",
+   "latar_halus": 8.9,
+   "latar_sederhana": 5.93,
+   "latar_kasar": 5.22,
+   "dakwat_sd": 8.21,
+   "dakwat_sd1": 4.68,
+   "tepi_kasar": 1.342,
+   "latar_median": 27.0,
+   "lebar_blok": 369,
+   "g_sederhana": 5.72,
+   "g_kasar": 4.75,
+   "g_dakwat": 5.28,
+   "sumber": "SK06 --ukur-tekstur pada IMG_5735",
+   "had": [
+    "butir bawah 1 px dan tepi marker kering tidak ditiru: pada JPEG 600x449 itu kesan mampatan; perlu gambar upload lebih besar"
+   ]
+  },
+  "hasil_ukur": {
+   "18x24": {
+    "latar_halus": 2.02,
+    "latar_sederhana": 5.93,
+    "latar_kasar": 5.22,
+    "dakwat_sd": 5.21,
+    "dakwat_sd1": 4.68,
+    "tepi_kasar": 1.227,
+    "latar_median": 31.0,
+    "lebar_blok": 369
+   }
+  }
+ },
+ "amaran": [],
+ "tepi": {
+  "sasaran": {
+   "sisi": 12.2,
+   "atas_bawah": 12.2,
+   "sumber": "SK05 pada IMG_5735"
+  },
+  "hasil": {
+   "18x24": {
+    "kiri": 12.2,
+    "kanan": 12.2,
+    "atas": 12.2,
+    "bawah": 15.0
+   }
+  },
+  "dakwat_min_pct": 8.59
+ }
+}

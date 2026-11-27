@@ -1,7 +1,7 @@
 {
  "versi": "s1 (27 Nov 2026)",
  "tarikh": "2026-11-27",
- "baris": 221,
+ "baris": 224,
  "imej": 40,
  "kad_dipakai": [
   "K3",
@@ -40,8 +40,8 @@
    "ubahan_dicuba": 0,
    "tindakan": [
     {
-     "jenis": "ukur",
-     "teks": "Kad K6 condong tetapi tiada rujukan sudut: ukur SK05 pada IMG_5734, tulis kad.BLOK['K6']['rujukan']"
+     "jenis": "tiada",
+     "teks": "Tiada tindakan: tiada cacat berulang"
     }
    ]
   },
@@ -74,8 +74,8 @@
    "ubahan_dicuba": 0,
    "tindakan": [
     {
-     "jenis": "ukur",
-     "teks": "Kad K6 tiada rujukan ruang tepi: ukur SK05 pada IMG_5734"
+     "jenis": "tiada",
+     "teks": "Tiada tindakan: tiada cacat berulang"
     }
    ]
   },
@@ -177,7 +177,7 @@
    "nama": "finish",
    "fail": "SK06_finish.py",
    "langkah": "6",
-   "versi": "SK06 v1.2 (27 Nov 2026)",
+   "versi": "SK06 v1.3 (27 Nov 2026)",
    "ikut_versi": {
     "SK06 v1 (27 Nov 2026)": {
      "imej": 22,
@@ -202,11 +202,19 @@
      "input_rosak": 0,
      "belum": 0,
      "tolak": 0
+    },
+    "SK06 v1.3 (27 Nov 2026)": {
+     "imej": 3,
+     "lulus": 3,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
     }
    },
    "semasa": {
-    "imej": 16,
-    "lulus": 16,
+    "imej": 3,
+    "lulus": 3,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -214,12 +222,12 @@
    },
    "berulang": [],
    "calon": [],
-   "ubahan_dicuba": 2,
+   "ubahan_dicuba": 3,
    "tindakan": [
     {
-     "jenis": "parameter",
-     "medan": "tekstur_jenis",
-     "teks": "Tekstur kad belum ada jenisnya dalam SK06: K8 'tepi marker kering'; K8 'butir latar'. Tambah jenis tekstur prosedur (ukur pada gambar upload kad), uji pada imej sedia ada"
+     "jenis": "ukur",
+     "medan": "tekstur_had",
+     "teks": "Kad K8, had tekstur: butir bawah 1 px dan tepi marker kering tidak ditiru: pada JPEG 600x449 itu kesan mampatan; perlu gambar upload lebih besar"
     }
    ]
   },

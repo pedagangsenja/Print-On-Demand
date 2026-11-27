@@ -273,7 +273,11 @@ def liputan_kad(daf):
         try:
             sys.path.insert(0, SKRIP)
             import SK06_finish
-            tak = [(k, b) for k in tekstur for b in SK06_finish.tekstur_kad(kad.KAD[k]["tekstur"])["tidak_dibuat"]]
+            tku = {k: SK06_finish.tekstur_untuk(k) for k in tekstur}   # ukuran gambar upload dahulu, kemudian teks kad
+            tak = [(k, b) for k in tekstur for b in tku[k]["tidak_dibuat"]]
+            for k in tekstur:
+                for h in (tku[k].get("ukur") or {}).get("had", []):
+                    tind["SK06"].append(dict(jenis="ukur", medan="tekstur_had", teks=f"Kad {k}, had tekstur: {h}"))
         except Exception as e:  # noqa: BLE001
             tak = [("?", f"tidak dapat semak ({e})")]
         if tak:
