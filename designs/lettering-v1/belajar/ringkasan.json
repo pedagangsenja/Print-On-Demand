@@ -1,7 +1,7 @@
 {
  "versi": "b1.1 (27 Nov 2026)",
  "tarikh": "2026-11-27",
- "imej": 201,
+ "imej": 207,
  "suka": 0,
  "tolak": 0,
  "model": {
@@ -9,8 +9,8 @@
    "model": "klein4b",
    "nama": "FLUX.2 klein 4B",
    "bahagian": "3.4",
-   "rev": "r1",
-   "status": "diuji: K3H, CPU, 3 seed",
+   "rev": "r2",
+   "status": "diuji: K3H, CPU, 3 seed; r2: tukar peranan K12O 0/3 -> 2/3, CPU",
    "ikut_rev": {
     "am": {
      "imej": 9,
@@ -38,67 +38,28 @@
     }
    },
    "semasa": {
-    "imej": 24,
-    "lulus": 12,
-    "pct": 50,
+    "imej": 0,
+    "lulus": 0,
+    "pct": null,
     "suka": 0,
     "tolak": 0,
-    "design": 8
+    "design": 0
    },
    "semua": {
-    "imej": 36,
-    "lulus": 18,
-    "pct": 50,
+    "imej": 42,
+    "lulus": 20,
+    "pct": 48,
     "suka": 0,
     "tolak": 0,
     "design": 12
    },
-   "berulang": [
-    {
-     "kelas": "ejaan",
-     "nama": "Perkataan salah eja, rosak, atau huruf besar / kecil salah",
-     "imej": 8,
-     "gagal": 8,
-     "design": [
-      "K10F",
-      "K12O",
-      "K9Q"
-     ],
-     "cadangan": "tukar_peranan",
-     "cadangan_teks": "Tukar peranan perkataan itu"
-    },
-    {
-     "kelas": "lain",
-     "nama": "Cacat lain (tiada kelas)",
-     "imej": 4,
-     "gagal": 1,
-     "design": [
-      "K11R",
-      "K13V"
-     ],
-     "cadangan": null,
-     "cadangan_teks": "Tanya pengguna sebabnya; tambah ke kad sebagai ciri QC"
-    },
-    {
-     "kelas": "hiasan_tempat",
-     "nama": "Hiasan di tempat salah",
-     "imej": 4,
-     "gagal": 0,
-     "design": [
-      "K13V",
-      "K3K"
-     ],
-     "cadangan": "hiasan_kedudukan",
-     "cadangan_teks": "Nyatakan kedudukan hiasan (kiri dan kanan, di luar label)"
-    }
-   ],
-   "ubahan_dicuba": 2,
+   "berulang": [],
+   "ubahan_dicuba": 3,
    "suka_imej": [],
    "tindakan": [
     {
-     "jenis": "cuba",
-     "ubahan": "tukar_peranan",
-     "teks": "Satu ubahan untuk jana seterusnya model ini: PEMBINA_UJI=klein4b_tukar_peranan (Tukar peranan perkataan itu) bagi cacat 'Perkataan salah eja, rosak, atau huruf besar / kecil salah' (8 imej, 3 design); jana bersama aturan semasa, seed sama"
+     "jenis": "tiada",
+     "teks": "Tiada tindakan: tiada cacat berulang pada aturan semasa"
     }
    ]
   },

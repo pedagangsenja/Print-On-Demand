@@ -389,6 +389,38 @@
     "G2: titik tambahan selepas setiap perkataan",
     ""
    ]
+  },
+  "klein4b": {
+   "K10F_s42": [
+    false,
+    "G1: 'FEWER' jadi 'FEVER', 'BIGGER' jadi 'BIGIER'",
+    ""
+   ],
+   "K10F_s7": [
+    false,
+    "G1: 'FEWER' jadi 'FEVER', 'BIGGER' jadi 'BIGIER'",
+    ""
+   ],
+   "K10F_s123": [
+    false,
+    "G1: 'FEWER' jadi 'FEVER', 'BIGGER' jadi 'BIGIER'",
+    ""
+   ],
+   "K12O_s42": [
+    false,
+    "G1: 'LOOSELY' jadi 'LOSELY'",
+    ""
+   ],
+   "K12O_s7": [
+    true,
+    "",
+    "huruf nipis bergaris dalam; baris tidak bertaut (ciri teras 3 lemah); dua sengkang lebih di atas kanan HOLD"
+   ],
+   "K12O_s123": [
+    true,
+    "",
+    "baris tidak bertaut (ciri teras 3 lemah); sengkang sisi di sisi LOOSELY dan LOVE"
+   ]
   }
  }
 }

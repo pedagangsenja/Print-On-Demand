@@ -112,7 +112,7 @@ Dipakai untuk model tanpa aturan sendiri, dan sebagai pembanding dalam ujian kel
 - Simpan bersama imej: prompt, versi pembina, versi kad, rev.
 - Syarat pakai: pembina mesti menghasilkan semula S1–S6 (ayat 4 perkataan) dengan imej yang tidak lebih buruk.
 
-### 3.4 Aturan FLUX.2 klein 4B (rev r1)
+### 3.4 Aturan FLUX.2 klein 4B (rev r2)
 - **Sumber:** kad model: "Prompt following is heavily influenced by the prompting style" (rasmi). Panduan BFL: prosa mengalir, tiada penambah prompt (lemah: petikan carian sahaja, laman tidak dapat dibuka).
 - **Bentuk:** SATU perenggan prosa, ayat penuh. Bukan senarai kata kunci, bukan "nama: nilai", bukan baris bernombor.
 - **Turutan ayat:**
@@ -128,6 +128,7 @@ Dipakai untuk model tanpa aturan sendiri, dan sebagai pembanding dalam ujian kel
 - **Panjang:** dalam had 512 token. Contoh yang lulus: 203 perkataan.
 - **Tetapan:** bf16 asal, 4 langkah, guidance 1.0, tiada penambah prompt.
 - **Cacat diketahui (r1):** garis percikan dilukis di dalam label pada 2/3 imej. Ubahan pertama untuk dicuba: nyatakan `in the black space to the left and to the right of the label`.
+- **r2 (27 Nov 2026, kitaran QC larian v1.2 kedua): tukar peranan perkataan yang salah eja berulang.** K12O: "LOOSELY" jadi "LOSELY" 3/3 sebagai baris utama; sebagai baris sokongan (HOLD jadi utama) 2/3 dieja betul. Dalam kod: `pembina.TUKAR["klein4b"]`, bagi design yang sudah diuji sahaja (K12O). K10F ("FEWER" jadi "FEVER") tidak berubah dengan tukar peranan (0/3 → 0/3), jadi tidak ditulis. Bukti lemah: satu design, 3 seed, CPU.
 
 ### 3.5 Aturan Z-Image Turbo (rev r1)
 - **Sumber:** perbincangan rasmi pasukan Z-Image di Hugging Face dan templat penambah prompt mereka (`pe.py`): prompt panjang dan terperinci; teks tepat dalam petikan berganda; untuk poster, huraikan font dan susun atur; tiada negative prompt; had 512 token (rasmi). Julat 80–250 perkataan (pihak ketiga).
@@ -523,7 +524,7 @@ Skrip di sini ialah kerja SELEPAS jana (pembetulan 5b dan kemasan langkah 6). Al
 | SK04 | Hitam putih bersih (`SK04_hitam_putih.py`) | 5b | Tukar kelabu dan tepi kabur kepada hitam dan putih tulen | – | Dibina; diuji pada 12 imej K3H sedia ada |
 | SK05 | Ukuran (`SK05_ukur.py`) | 1, 5b | Ukur ruang tepi, kedudukan, sudut condong dan kelabu pada gambar upload atau imej mentah | – | Dibina; diuji pada 2 gambar upload (K3, K6) dan 24 imej K3H. Nisbah baris: anggaran sahaja (baris bertindih tidak dapat diasingkan) |
 | SK06 | Vektor + saiz cetak (`SK06_finish.py` + `styles.py`) | 6 | SVG induk, susun di tengah, PNG 300 DPI | ruang tepi, tekstur | Dibawa dari `claude/dazzling-cannon-5wzn6h`; diuji pada 1 imej K3H selepas 5b (SVG + 18×24). 27 Nov: parameter `--palet` ditambah (warna tepat SK07 / SK08, topeng setiap warna dilembutkan sebelum surih). Ruang tepi dan tekstur masih tetap S1–S6, belum dibaca daripada kad. **v1.1 (27 Nov 2026, Belajar SK, ubahan `tekstur_kad`, MENANG):** `--kad Kx` = jenis dan kekuatan tekstur daripada kad (kapur, lusuh / grunge, butir; "halus" = 0.6); bahagian tanpa jenis = amaran, diganti tekstur gaya daripada gambar upload yang sama (K8 → S4). **v1.2 (27 Nov 2026, ubahan `tepi_kad`, MENANG):** ruang tepi setiap saiz poster ikut kad (sama seperti SK02), diukur pada blok tulisan; amaran jika beza > 2 mata atau dakwat sentuh tepi. **v1.3 (27 Nov 2026, ubahan `tekstur_marker`, MENANG):** jenis tekstur `marker` (butir latar + butir dakwat) dengan parameter diukur pada gambar upload kad (`--ukur-tekstur`, disimpan di `rujukan.tekstur`); butir dijana pada skala rujukan dan hasil diukur semula (amaran jika beza > 30%) |
-| SK07 | Warna C ikut peranan (`SK07_warna.py`) | 6 | Peta peranan setiap piksel (utama, sokongan, penyambung, hiasan) ikut baris Spesifikasi Teks, kemudian warna kad atau warna C | `peta_warna`, `warna` (kad); `--warna Cxxx` (Daftar S/C) | Dibina 27 Nov 2026; diuji pada 14 imej K3K (12 lulus, 2 GAGAL dikesan betul) + K7M, K8G (satu dakwat, tidak rosak) + 1 varian C001. **v1.1 (27 Nov 2026, Belajar SK, ubahan `belah_leher`, MENANG):** huruf bertaut merentas baris dibelah pada leher paling sempit; 15 imej K3K: 15/15 tanpa cacat SK (v1: 13/15) |
+| SK07 | Warna C ikut peranan (`SK07_warna.py`) | 6 | Peta peranan setiap piksel (utama, sokongan, penyambung, hiasan) ikut baris Spesifikasi Teks, kemudian warna kad atau warna C | `peta_warna`, `warna` (kad); `--warna Cxxx` (Daftar S/C) | Dibina 27 Nov 2026; diuji pada 14 imej K3K (12 lulus, 2 GAGAL dikesan betul) + K7M, K8G (satu dakwat, tidak rosak) + 1 varian C001. **v1.1 (27 Nov 2026, Belajar SK, ubahan `belah_leher`, MENANG):** huruf bertaut merentas baris dibelah pada leher paling sempit; 15 imej K3K: 15/15 tanpa cacat SK (v1: 13/15). **v1.2 (27 Nov 2026, Belajar SK, parameter `hitam_putih`, MENANG):** `--warna HP` = latar kad + dakwat pertama kad untuk semua peranan (poster hitam putih sahaja; cth. K13 tanpa kuning); 17 imej K12O / K13V, 5 model: 17/17 lulus. **v1.3 (`hp_neutral`):** HP pada kad berwarna (K9–K11) = satu dakwat neutral paling kontras dengan latar, atau putih / hitam tulen (K10: putih); K12, K13 sama seperti v1.2 |
 | SK08 | Bayang ikut kad (`SK08_bayang.py`) | 6 | Bayang 3D dalam huruf: bahagian bawah setiap strok peranan yang diminta jadi kelabu | `rujukan.bayang` (arah, nisbah, warna; diukur `--ukur` pada gambar upload) | Dibina 27 Nov 2026; diukur pada IMG_5775; diuji pada 12 imej K3K yang lulus SK07. Bayang lembut K1 belum (lihat bawah) |
 
 Semua skrip di `designs/lettering-v1/skrip/`. Jalan 5b penuh: `python3 skrip/betulkan.py <kad> <folder keluar> <imej…> [--condong D] [--tepi P]` (satu folder keluar bagi setiap model). Ukur gambar upload: `python3 skrip/SK05_ukur.py <gambar>`.
@@ -696,6 +697,34 @@ Model baharu juga memerlukan aturan prompt sendiri sebelum dipakai untuk design 
 - **5b:** 33 imej yang lulus dibetulkan (24 + 9 FLUX 3 Klein); angka di bawah untuk 24 yang pertama: imej dibetulkan (`designs/lettering-v1/betul/v12-cpu/`, `log_5b.jsonl`); 0 gagal semakan akhir. Dua pembaikan skrip semasa larian: SK05 v1.1 (bintik latar di tepi tidak lagi menggagalkan imej) dan SK02 v1.1 (ruang tepi sisi dan atas / bawah berasingan; K3: 13.6 / 15.5, K7: 6.2 / 11.3).
 - **Kemasan (SK06):** imej terbaik setiap design, pilihan Claude; pengguna memilih melalui Daftar S/C: K3K MOSS seed 42 (gaya S3, putih; warna kuning + bayang dibuat 27 Nov oleh SK07 + SK08, lihat daftar skrip), K7M MOSS seed 42 (gaya S2, krim + butir), K8G klein 4B seed 42 (gaya S4, kapur). Fail: `designs/lettering-v1/final/v12-cpu/` (SVG induk + pratonton 18×24); gambar ringkas `qc/v12_cpu_akhir.jpg`.
 
+## Larian v1.2 kedua (27 Nov 2026, arahan pengguna)
+- **Tugas:** lima gambar upload, ayat baharu dipilih Claude, kad gaya baharu, semua model yang muat di CPU, hitam putih sahaja, QC dan gaya.
+- **Design dan kad (K9–K13 dibuat Claude, diluluskan pengguna 27 Nov 2026; jalur kuning K13 tidak dijana, keputusan pengguna):**
+
+| Id | Gambar upload | Kad | Ayat | Laluan |
+|---|---|---|---|---|
+| K9Q | IMG_5776 | K9 | Quiet Effort Builds Loud Results | 2 (seed 42, 7, 123) |
+| K10F | IMG_5777 | K10 | Fewer Excuses Bigger Moves | 1 (seed 42, 7; 123 untuk kitaran QC) |
+| K11R | IMG_5761 | K11 | The Real Power Is Steady Progress | 2 |
+| K12O | IMG_5762 | K12 | Hold Loosely Love Deeply | 1 |
+| K13V | IMG_5755 | K13 | Make the Move or Miss Your Moment | 2 |
+
+- **Model:** MOSS, ERNIE Turbo, FLUX 3 Image Klein, Z-Image Turbo, klein 4B di CPU, 768 × 1024. Qwen-Image-2512 dan GLM-Image dilangkau (tidak muat RAM 15 GB, seperti larian pertama). Purata masa setiap imej (`raw/v12b-cpu/*/log.jsonl`): MOSS 328 s, ERNIE 394 s, FLUX 3 Klein 401 s, Z-Image 306 s, klein 4B 95 s.
+- **QC pintu G1–G3 (mata Claude, bukti lemah; `qc/v12b_cpu.json`, helaian `qc/v12b_cpu_<id>.jpg`):**
+
+| Model | K9Q | K10F | K11R | K12O | K13V | Jumlah |
+|---|---|---|---|---|---|---|
+| MOSS | 3/3 | 2/2 | 3/3 | 2/2 | 2/3 | 12/13 |
+| ERNIE Turbo | 3/3 | 2/2 | 3/3 | 2/2 | 3/3 | 13/13 |
+| FLUX 3 Image Klein | 3/3 | 2/2 | 3/3 | 2/2 | 2/3 | 12/13 |
+| Z-Image Turbo | 3/3 | 0/3 | 3/3 | 0/3 | 2/3 | 8/15 |
+| klein 4B | 1/3 | 0/3 | 3/3 | 0/3 → 2/3 (r2) | 2/3 | 6/15 → 8/15 |
+
+- **Kitaran QC (pusingan 1, `raw/v12b-cpu-p1`, helaian `qc/v12b_cpu_p1_<id>.jpg`):** empat model × design tanpa imej lulus; seed 123 dijana dahulu (laluan 1), cacat sama 3/3 = sistematik. Z-Image K10F (FEWER salah eja) tukar peranan 0/3 → 0/3; Z-Image K12O (titik selepas perkataan) had positif 0/3 → 0/3; klein 4B K10F tukar peranan 0/3 → 0/3; klein 4B K12O tukar peranan 0/3 → 2/3 (aturan 3.4 r2). Pilihan ubahan habis bagi Z-Image (K10F, K12O) dan klein 4B K10F; design itu sudah ada imej lulus daripada MOSS, ERNIE dan FLUX 3 Klein, jadi tiada tukar model.
+- **Ciri kad yang lemah (lulus pintu, dicatat untuk 3.15):** K10F tidak condong pada sesetengah imej (SK01 betulkan ke 5.8°); K11R Z-Image tegak, bukan italik; K12O baris tidak bertaut (semua model); K13V tanda petik hilang (Z-Image) atau anak panah lebih (ERNIE).
+- **5b:** semua imej lulus pintu. GAGAL: MOSS K13V s42 (SK04 padam tanda petik kelabu); ERNIE dan FLUX 3 Klein K12O s7 (SK02: satu skala tidak padan ruang tepi dua paksi). Ketiga-tiganya dicatat `silap` dalam `belajar/sk_semakan.jsonl`.
+- **Langkah 6 (hitam putih sahaja):** `kemasan.py <kad> <ayat> S3 final/v12b-cpu <imej…> --warna HP` (SK07 v1.3): latar kad + satu dakwat neutral (K9–K11 putih atas hitam; K12, K13 hitam atas putih, ikut gambar upload).
+
 ## Catatan pembaikan aturan model
 Setiap ubahan aturan (3.4–3.10) direkod di sini, dan juga dalam `designs/lettering-v1/belajar/ubahan.json` (dibaca oleh `belajar.py`, 3.15). Ujian pertama (26 Nov 2026, K3 × ayat H, seed 42, 7, 123, semakan mata, bukti lemah) mengubah beberapa perkara serentak, kerana dibuat sebelum peraturan "satu ubahan setiap pusingan".
 
@@ -709,6 +738,9 @@ Setiap ubahan aturan (3.4–3.10) direkod di sini, dan juga dalam `designs/lette
 | 26 Nov 2026 | Z-Image Turbo | r1 (tiada perubahan) | K8 × ayat G: baris dua perkataan dipisah jadi dua baris (3/3) | Tambah "as two words side by side on one line". TIDAK berjaya, dibuang | 0/3 → 0/3 |
 | 26 Nov 2026 | FLUX 3 Image Klein | r0 (ujian pertama) | Tiada pembanding rangka am | Aturan 3.8 seperti ditulis; CPU | 9/9 pada K3, K7, K8 |
 | 27 Nov 2026 | FLUX 3 Image Klein | r0 → r1 (ujian kelayakan, `belajar.py`) | K8 × ayat G: 'KEEP GOING' tanpa jarak antara perkataan (3/3) | Tiada ubahan teks; rangka am lawan aturan 3.8 pada kad, ayat dan seed yang sama | rangka am 6/9 → aturan 9/9 |
+| 27 Nov 2026 | Z-Image Turbo | r1 (tiada perubahan) | K10F: 'FEWER' jadi 'FERER' / 'FENER' / 'FEHER' (3/3) | Tukar peranan (FEWER utama → sokongan). TIDAK berjaya, dibuang | 0/3 → 0/3 |
+| 27 Nov 2026 | Z-Image Turbo | r1 (tiada perubahan) | K12O: titik selepas setiap perkataan (3/3) | Had positif: "Each word ends cleanly with its last letter, followed only by empty black space." TIDAK berjaya, dibuang | 0/3 → 0/3 |
+| 27 Nov 2026 | FLUX.2 klein 4B | r1 → r2 | K12O: 'LOOSELY' jadi 'LOSELY' (3/3); K10F: 'FEWER' jadi 'FEVER' (3/3) | Tukar peranan perkataan itu (`belajar.py`: MENANG 0/6 → 2/6). Ditulis bagi K12O sahaja | K12O 0/3 → 2/3; K10F 0/3 → 0/3 |
 
 ## Belum selesai
 - v1.2, sudah dibina (26 Nov): pembina kod bagi tujuh model + semakan 3.11 (`pembina.py`, 3.13).

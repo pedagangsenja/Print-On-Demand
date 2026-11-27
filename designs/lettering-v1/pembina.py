@@ -23,8 +23,8 @@ VERSI = "v1.2-p1"
 # baris + fungsi + bahagian. Model yang belum ada baris memakai rangka am (kad.bina) dan ditanda "am".
 # rev r0 = ditulis daripada sumber sahaja, belum diuji; r1+ = sudah diuji pada imej.
 DAFTAR = {
-    "klein4b": dict(nama="FLUX.2 klein 4B", bahagian="3.4", rev="r1", tarikh="2026-11-26",
-                    status="diuji: K3H, CPU, 3 seed", sumber="kad model BFL (rasmi); panduan BFL (lemah)"),
+    "klein4b": dict(nama="FLUX.2 klein 4B", bahagian="3.4", rev="r2", tarikh="2026-11-27",
+                    status="diuji: K3H, CPU, 3 seed; r2: tukar peranan K12O 0/3 -> 2/3, CPU", sumber="kad model BFL (rasmi); panduan BFL (lemah)"),
     "zturbo": dict(nama="Z-Image Turbo", bahagian="3.5", rev="r1", tarikh="2026-11-26",
                    status="diuji: K3H, CPU, 3 seed", sumber="pasukan Z-Image di Hugging Face + pe.py (rasmi)"),
     "ernie": dict(nama="ERNIE-Image-Turbo", bahagian="3.6", rev="r1", tarikh="2026-11-26",
@@ -45,10 +45,14 @@ W, H = 768, 1024
 # berjaya ditulis balik ke aturan (rev naik) dan dibuang dari sini; yang gagal dicatat dalam standard dan dibuang.
 # (26 Nov 2026: 'zturbo_satu_baris' diuji pada K8G, tidak berjaya, dibuang.)
 # Calon semasa (27 Nov 2026, larian v1.2 kedua, kitaran QC pusingan 1):
-#   <model>_tukar_peranan: perkataan yang salah eja berulang bertukar peranan dengan baris jiran (TUKAR); ayat sama.
+#   <model>_tukar_peranan: perkataan yang salah eja berulang bertukar peranan dengan baris jiran (TUKAR_UJI); ayat sama.
 #   ernie_frasa_bentuk: bentuk huruf setiap peranan disebut semula sekali (TINDAKAN CUBA belajar.py; belum dijana).
 #   (zturbo_tukar_peranan K10F dan zturbo_had_positif K12O: KALAH 0/3 -> 0/3, dibuang 27 Nov 2026.)
-TUKAR = {("K10", "F"): "Fewer", ("K12", "O"): "Loosely"}
+#   (klein4b_tukar_peranan: MENANG 0/6 -> 2/6 kerana K12O 0/3 -> 2/3; ditulis balik sebagai aturan klein 4B r2 bagi K12O
+#    sahaja, dalam TUKAR; K10F 0/3 -> 0/3 tidak ditulis.)
+# Tukar peranan yang sudah menjadi aturan model (3.15 MENANG): model -> {(kad, ayat): perkataan}.
+TUKAR = {"klein4b": {("K12", "O"): "Loosely"}}
+TUKAR_UJI = {}  # calon: {(kad, ayat): perkataan}, hidup dengan PEMBINA_UJI=<model>_tukar_peranan
 # Nama calon = <model>_<id pilihan> daripada belajar.py (KELAS), cth. zturbo_had_positif; belajar.py memutuskan menang / kalah (3.15).
 UJI = {u for u in os.environ.get("PEMBINA_UJI", "").split(",") if u}
 SATU = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"]
@@ -63,12 +67,14 @@ def cap(s):
     return s[:1].upper() + s[1:]
 
 
-def bahan(kid, aid):
+def bahan(kid, aid, model=None):
     """Lapan blok isi (3.2) bagi satu kad x satu ayat: frasa kad + baris teks dengan peranan."""
     b, a, k = kad.BLOK[kid], dict(kad.AYAT[aid]), kad.KAD[kid]
-    if any(u.endswith("_tukar_peranan") for u in UJI) and (kid, aid) in TUKAR:
+    kata = TUKAR.get(model, {}).get((kid, aid)) or (
+        TUKAR_UJI.get((kid, aid)) if f"{model}_tukar_peranan" in UJI else None)
+    if kata:
         x = [list(t) for t in a["baris"]]
-        i = next(j for j, t in enumerate(x) if t[0] == TUKAR[(kid, aid)])
+        i = next(j for j, t in enumerate(x) if t[0] == kata)
         j = next(j for j in sorted(range(len(x)), key=lambda j: abs(j - i)) if x[j][1] != x[i][1])
         x[i][1], x[j][1] = x[j][1], x[i][1]
         a["baris"] = [tuple(t) for t in x]
@@ -431,7 +437,7 @@ def bina(model, kid, aid):
     Model tanpa aturan sendiri (tiada dalam DAFTAR): rangka am 3.3 (kad.bina), sehingga aturannya ditulis (3.12)."""
     if model not in ATURAN:
         return kad.bina(kid, aid)
-    m = bahan(kid, aid)
+    m = bahan(kid, aid, model)
     return ATURAN[model](m), m["petikan"]
 
 
@@ -463,7 +469,7 @@ def semak(model, kid, aid, prompt=None):
     if model not in ATURAN:  # rangka am: semakan pembina v1.1
         pr, q = kad.bina(kid, aid)
         return kad.semak(prompt if prompt is not None else pr, q, kad.AYAT[aid]["ayat"])
-    m = bahan(kid, aid)
+    m = bahan(kid, aid, model)
     spec, err = m["petikan"], []
     p = prompt if prompt is not None else ATURAN[model](m)
     if model == "moss":
