@@ -1,0 +1,19 @@
+{
+ "id": "ai2_models",
+ "version": 1,
+ "data": {
+  "description": "7 model dalam senarai ujian: versi dan langkah yang diuji, atau sebab dilangkau / tidak diuji.",
+  "fixed": true,
+  "source": {
+   "format": "json",
+   "kind": "file",
+   "name": "ai2_models.json",
+   "url": "/_blob/475406c88c2fd7ca32ef598778161c52"
+  },
+  "title": "AI Image Test 2: model diuji",
+  "updated": {
+   "at": "2026-11-25T23:45:00Z",
+   "by": "Claude"
+  }
+ }
+}

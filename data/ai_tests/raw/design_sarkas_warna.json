@@ -1,0 +1,304 @@
+{
+ "rows": [
+  {
+   "no": 1,
+   "id": "lazy",
+   "quote": "I'm not lazy, I'm just on energy saving mode",
+   "img": "/_blob/57dce3345435433cf613272badf5848f",
+   "palette": "oren",
+   "theme": "Umum · palet oren",
+   "file": "designs/svg-typo/out/batch4/color/lazy.png",
+   "format": "2048x2048 PNG, warna atas latar gelap"
+  },
+  {
+   "no": 2,
+   "id": "disturbed",
+   "quote": "Do not disturb, already disturbed",
+   "img": "/_blob/9de27f9b808b0241c91aba5fa8db1364",
+   "palette": "kuning",
+   "theme": "Umum · palet kuning",
+   "file": "designs/svg-typo/out/batch4/color/disturbed.png",
+   "format": "2048x2048 PNG, warna atas latar gelap"
+  },
+  {
+   "no": 3,
+   "id": "vacation",
+   "quote": "I need a six month vacation twice a year",
+   "img": "/_blob/4fcfafd06f4c20bfa75d61c2b013834a",
+   "palette": "hijau",
+   "theme": "Umum · palet hijau",
+   "file": "designs/svg-typo/out/batch4/color/vacation.png",
+   "format": "2048x2048 PNG, warna atas latar gelap"
+  },
+  {
+   "no": 4,
+   "id": "nobody",
+   "quote": "Cool story bro, nobody asked",
+   "img": "/_blob/a4fc596179d2b27a31472793563ddb9f",
+   "palette": "merah",
+   "theme": "Umum · palet merah",
+   "file": "designs/svg-typo/out/batch4/color/nobody.png",
+   "format": "2048x2048 PNG, warna atas latar gelap"
+  },
+  {
+   "no": 5,
+   "id": "adult",
+   "quote": "I can't adult today",
+   "img": "/_blob/4cb6141cacad1ca5726835225c0b57a3",
+   "palette": "biru",
+   "theme": "Umum · palet biru",
+   "file": "designs/svg-typo/out/batch4/color/adult.png",
+   "format": "2048x2048 PNG, warna atas latar gelap"
+  },
+  {
+   "no": 6,
+   "id": "funsize",
+   "quote": "I'm not short, I'm fun size",
+   "img": "/_blob/c7b508f7620c9fd83e3031778c566a24",
+   "palette": "oren",
+   "theme": "Umum · palet oren",
+   "file": "designs/svg-typo/out/batch4/color/funsize.png",
+   "format": "2048x2048 PNG, warna atas latar gelap"
+  },
+  {
+   "no": 7,
+   "id": "sideeye",
+   "quote": "Queen of the side eye",
+   "img": "/_blob/0f7eb1f0db4d805dd9e28185a0521589",
+   "palette": "kuning",
+   "theme": "Umum · palet kuning",
+   "file": "designs/svg-typo/out/batch4/color/sideeye.png",
+   "format": "2048x2048 PNG, warna atas latar gelap"
+  },
+  {
+   "no": 8,
+   "id": "judging",
+   "quote": "I'm silently judging you",
+   "img": "/_blob/990274ce8009ccedf22b6aada231e57b",
+   "palette": "hijau",
+   "theme": "Umum · palet hijau",
+   "file": "designs/svg-typo/out/batch4/color/judging.png",
+   "format": "2048x2048 PNG, warna atas latar gelap"
+  },
+  {
+   "no": 9,
+   "id": "bed",
+   "quote": "My bed is calling and I must go",
+   "img": "/_blob/f2efbe66807ba5a2fd4565c0a58cf944",
+   "palette": "merah",
+   "theme": "Umum · palet merah",
+   "file": "designs/svg-typo/out/batch4/color/bed.png",
+   "format": "2048x2048 PNG, warna atas latar gelap"
+  },
+  {
+   "no": 10,
+   "id": "cats",
+   "quote": "Easily distracted by cats",
+   "img": "/_blob/677433f74f4c370c690f1034e97c65a2",
+   "palette": "biru",
+   "theme": "Umum · palet biru",
+   "file": "designs/svg-typo/out/batch4/color/cats.png",
+   "format": "2048x2048 PNG, warna atas latar gelap"
+  },
+  {
+   "no": 11,
+   "id": "email",
+   "quote": "Per my last email",
+   "img": "/_blob/7f92fda17390f4de75641a9c199c1f4b",
+   "palette": "oren",
+   "theme": "Kerja · palet oren",
+   "file": "designs/svg-typo/out/batch4/color/email.png",
+   "format": "2048x2048 PNG, warna atas latar gelap"
+  },
+  {
+   "no": 12,
+   "id": "friday",
+   "quote": "Is it Friday yet?",
+   "img": "/_blob/54ebe5ac36e8f08f73068f1c850820cc",
+   "palette": "kuning",
+   "theme": "Kerja · palet kuning",
+   "file": "designs/svg-typo/out/batch4/color/friday.png",
+   "format": "2048x2048 PNG, warna atas latar gelap"
+  },
+  {
+   "no": 13,
+   "id": "hardly",
+   "quote": "Working hard or hardly working",
+   "img": "/_blob/2518cbc5a17632fb587620447d7335cb",
+   "palette": "hijau",
+   "theme": "Kerja · palet hijau",
+   "file": "designs/svg-typo/out/batch4/color/hardly.png",
+   "format": "2048x2048 PNG, warna atas latar gelap"
+  },
+  {
+   "no": 14,
+   "id": "patience",
+   "quote": "Out of office and out of patience",
+   "img": "/_blob/a1e4cf1809dec006ee4a0d2ddf141afc",
+   "palette": "merah",
+   "theme": "Kerja · palet merah",
+   "file": "designs/svg-typo/out/batch4/color/patience.png",
+   "format": "2048x2048 PNG, warna atas latar gelap"
+  },
+  {
+   "no": 15,
+   "id": "schedule",
+   "quote": "Let me check my schedule... nope",
+   "img": "/_blob/1b1b19d0a06844bd8a37d39f1513695d",
+   "palette": "biru",
+   "theme": "Kerja · palet biru",
+   "file": "designs/svg-typo/out/batch4/color/schedule.png",
+   "format": "2048x2048 PNG, warna atas latar gelap"
+  },
+  {
+   "no": 16,
+   "id": "meeting",
+   "quote": "This meeting could have been an email",
+   "img": "/_blob/46fce1a52d98bf6f03da3e6935be7aa6",
+   "palette": "oren",
+   "theme": "Kerja · palet oren",
+   "file": "designs/svg-typo/out/batch4/color/meeting.png",
+   "format": "2048x2048 PNG, warna atas latar gelap"
+  },
+  {
+   "no": 17,
+   "id": "monday",
+   "quote": "Monday again? Really?",
+   "img": "/_blob/112d8a2932b73481576a36cc80255e07",
+   "palette": "kuning",
+   "theme": "Kerja · palet kuning",
+   "file": "designs/svg-typo/out/batch4/color/monday.png",
+   "format": "2048x2048 PNG, warna atas latar gelap"
+  },
+  {
+   "no": 18,
+   "id": "coffeefirst",
+   "quote": "Coffee first, talk later",
+   "img": "/_blob/7a6e88b3cfaab988ce20dbb963941ae5",
+   "palette": "hijau",
+   "theme": "Kopi / introvert · palet hijau",
+   "file": "designs/svg-typo/out/batch4/color/coffeefirst.png",
+   "format": "2048x2048 PNG, warna atas latar gelap"
+  },
+  {
+   "no": 19,
+   "id": "decaf",
+   "quote": "Decaf? Never heard of her",
+   "img": "/_blob/0eb7d2d9c52e3063892f7bacdb45f99b",
+   "palette": "merah",
+   "theme": "Kopi / introvert · palet merah",
+   "file": "designs/svg-typo/out/batch4/color/decaf.png",
+   "format": "2048x2048 PNG, warna atas latar gelap"
+  },
+  {
+   "no": 20,
+   "id": "bloodtype",
+   "quote": "My blood type is coffee",
+   "img": "/_blob/fd003903cdba2f42fad9ef943921a69d",
+   "palette": "biru",
+   "theme": "Kopi / introvert · palet biru",
+   "file": "designs/svg-typo/out/batch4/color/bloodtype.png",
+   "format": "2048x2048 PNG, warna atas latar gelap"
+  },
+  {
+   "no": 21,
+   "id": "stayin",
+   "quote": "Staying in is the new going out",
+   "img": "/_blob/d666e2376a98686296e592817896cf54",
+   "palette": "oren",
+   "theme": "Kopi / introvert · palet oren",
+   "file": "designs/svg-typo/out/batch4/color/stayin.png",
+   "format": "2048x2048 PNG, warna atas latar gelap"
+  },
+  {
+   "no": 22,
+   "id": "peopling",
+   "quote": "Peopling is hard",
+   "img": "/_blob/ba5b0cd076bdf28199f60e35b44714cc",
+   "palette": "kuning",
+   "theme": "Kopi / introvert · palet kuning",
+   "file": "designs/svg-typo/out/batch4/color/peopling.png",
+   "format": "2048x2048 PNG, warna atas latar gelap"
+  },
+  {
+   "no": 23,
+   "id": "books",
+   "quote": "Introvert but willing to talk about books",
+   "img": "/_blob/e4b5818ca3ce0b1671147366196969d7",
+   "palette": "hijau",
+   "theme": "Kopi / introvert · palet hijau",
+   "file": "designs/svg-typo/out/batch4/color/books.png",
+   "format": "2048x2048 PNG, warna atas latar gelap"
+  },
+  {
+   "no": 24,
+   "id": "wenthome",
+   "quote": "I came, I saw, I went home",
+   "img": "/_blob/1e45c2a4d6374cf46aa9d35f40d2a2cb",
+   "palette": "merah",
+   "theme": "Kopi / introvert · palet merah",
+   "file": "designs/svg-typo/out/batch4/color/wenthome.png",
+   "format": "2048x2048 PNG, warna atas latar gelap"
+  },
+  {
+   "no": 25,
+   "id": "momvoice",
+   "quote": "I'm not yelling, this is my mom voice",
+   "img": "/_blob/c7e6aea547405e6ee1f0216effd463d7",
+   "palette": "biru",
+   "theme": "Ibu / keluarga · palet biru",
+   "file": "designs/svg-typo/out/batch4/color/momvoice.png",
+   "format": "2048x2048 PNG, warna atas latar gelap"
+  },
+  {
+   "no": 26,
+   "id": "askdad",
+   "quote": "Ask your dad",
+   "img": "/_blob/ff37755b3fa61b9e1936e8763dd2efa1",
+   "palette": "oren",
+   "theme": "Ibu / keluarga · palet oren",
+   "file": "designs/svg-typo/out/batch4/color/askdad.png",
+   "format": "2048x2048 PNG, warna atas latar gelap"
+  },
+  {
+   "no": 27,
+   "id": "saidso",
+   "quote": "Because I said so",
+   "img": "/_blob/217dc26d4b4c2bad1dbc84f8d133fbad",
+   "palette": "kuning",
+   "theme": "Ibu / keluarga · palet kuning",
+   "file": "designs/svg-typo/out/batch4/color/saidso.png",
+   "format": "2048x2048 PNG, warna atas latar gelap"
+  },
+  {
+   "no": 28,
+   "id": "tiredmom",
+   "quote": "Tired as a mother",
+   "img": "/_blob/99b0be4f9215242d210da5866a2bf64c",
+   "palette": "hijau",
+   "theme": "Ibu / keluarga · palet hijau",
+   "file": "designs/svg-typo/out/batch4/color/tiredmom.png",
+   "format": "2048x2048 PNG, warna atas latar gelap"
+  },
+  {
+   "no": 29,
+   "id": "tinyhumans",
+   "quote": "Raising tiny humans, send coffee",
+   "img": "/_blob/9af85379b7a06a4696b393cbde1bf0d6",
+   "palette": "merah",
+   "theme": "Ibu / keluarga · palet merah",
+   "file": "designs/svg-typo/out/batch4/color/tinyhumans.png",
+   "format": "2048x2048 PNG, warna atas latar gelap"
+  },
+  {
+   "no": 30,
+   "id": "momhair",
+   "quote": "Mom hair don't care",
+   "img": "/_blob/a7156e1f31adf8c33646e814108fe853",
+   "palette": "biru",
+   "theme": "Ibu / keluarga · palet biru",
+   "file": "designs/svg-typo/out/batch4/color/momhair.png",
+   "format": "2048x2048 PNG, warna atas latar gelap"
+  }
+ ]
+}

@@ -1,0 +1,50 @@
+[
+ {
+  "model": "ernie",
+  "model_name": "ERNIE-Image-Turbo",
+  "model_order": 0,
+  "how": "CPU komputer awan, GGUF Q8, 8 langkah, tanpa penambah prompt",
+  "license": "Apache 2.0",
+  "source": "https://huggingface.co/baidu/ERNIE-Image-Turbo",
+  "strength": "Susun atur padat dan warna ceria. Ilustrasi tangan + cawan menyatu dengan teks (design 5).",
+  "weakness": "Salah eja kecil pada 4 daripada 5 design (Hidupum, Ringjit, AKAK, Cukuk). Reben berisi huruf rawak (design 4).",
+  "missing_note": "",
+  "level": "lemah"
+ },
+ {
+  "model": "ernie_pe",
+  "model_name": "ERNIE-Image-Turbo + penambah prompt",
+  "model_order": 1,
+  "how": "Prompt ditulis semula dahulu oleh model penambah ERNIE (73-101 s, tidak termasuk dalam masa), kemudian dijana seperti ERNIE",
+  "license": "Apache 2.0",
+  "source": "https://huggingface.co/baidu/ERNIE-Image-Turbo",
+  "strength": "Paling banyak design betul (2/5: kapur dan lencana). Penambah tulis semula prompt dalam bahasa Cina tetapi kekalkan ayat Melayu.",
+  "weakness": "Perkataan panjang masih salah (Hidapum, Setteip, Waktuya). Tambah 73-101 s setiap prompt untuk tulis semula.",
+  "missing_note": "",
+  "level": "lemah"
+ },
+ {
+  "model": "moss",
+  "model_name": "MOSS-Image SFT (8 langkah)",
+  "model_order": 2,
+  "how": "CPU komputer awan, bf16 + LoRA 8 langkah lodestones (kekuatan 0.7), tanpa CFG",
+  "license": "Apache 2.0",
+  "source": "https://huggingface.co/OpenMOSS-Team/MOSS-Image-SFT",
+  "strength": "Paling laju di CPU. Huruf paling halus; hiasan, kapur dan ilustrasi cawan paling hampir rujukan. Hidupmu dan Cukup dieja betul.",
+  "weakness": "Setiap design ada 1-2 silap (Setaip, Sahambat, Sebah, Sykur, Mumpu). Reben berisi huruf rawak atau perkataan berulang (design 1, 3, 4).",
+  "missing_note": "",
+  "level": "lemah"
+ },
+ {
+  "model": "qwen2512",
+  "model_name": "Qwen-Image-2512",
+  "model_order": 3,
+  "how": "Space Hugging Face rasmi (GPU percuma), 50 langkah, guidance 4; masa = tunggu Space, bukan CPU",
+  "license": "Apache 2.0",
+  "source": "https://huggingface.co/Qwen/Qwen-Image-2512",
+  "strength": "Rupa paling kaya: lapisan warna, tekstur, reben dan hiasan paling hampir poster rujukan. Saiz imej paling besar (1104x1472).",
+  "weakness": "3 perkataan salah dalam 1 imej (Janjan, Senab, Nyarta). Kuota percuma cukup untuk 1 imej sehari sahaja.",
+  "missing_note": "Tidak dijana: kuota GPU percuma Space cukup untuk 1 imej sehari (boleh cuba lagi esok)",
+  "level": "lemah"
+ }
+]

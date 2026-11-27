@@ -1,0 +1,19 @@
+{
+ "id": "model_test",
+ "version": 1,
+ "data": {
+  "description": "10 design sama dijana oleh FLUX.2 klein 4B, Z-Image-Turbo dan ERNIE-Image-Turbo di CPU komputer awan, seed 42, satu cubaan. Ejaan disemak dengan mata; masa diukur. Gambar kecil disimpan dalam artifact.",
+  "fixed": true,
+  "source": {
+   "format": "json",
+   "kind": "file",
+   "name": "model_test.json",
+   "url": "/_blob/b66e6ea096e20c85257e8dd6f17d713b"
+  },
+  "title": "Ujian 3 model: 30 imej (23 Nov)",
+  "updated": {
+   "at": "2026-11-23T05:30:00Z",
+   "by": "Claude"
+  }
+ }
+}

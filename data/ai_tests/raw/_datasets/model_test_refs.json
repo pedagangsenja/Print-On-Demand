@@ -1,0 +1,19 @@
+{
+ "id": "model_test_refs",
+ "version": 1,
+ "data": {
+  "description": "Gambar contoh yang anda upload dalam chat 23 Nov, satu untuk setiap design ujian. Set A dipotong daripada bundle SVG; set B ialah poster penuh. Ini design orang lain, untuk rujukan gaya sahaja.",
+  "fixed": true,
+  "source": {
+   "format": "json",
+   "kind": "file",
+   "name": "model_test_refs.json",
+   "url": "/_blob/409243c1008e09ddcb4ff5ed9341046c"
+  },
+  "title": "Gambar rujukan anda untuk ujian model",
+  "updated": {
+   "at": "2026-11-23T06:20:00Z",
+   "by": "Claude"
+  }
+ }
+}

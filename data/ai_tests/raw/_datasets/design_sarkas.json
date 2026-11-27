@@ -1,0 +1,19 @@
+{
+ "id": "design_sarkas",
+ "version": 1,
+ "data": {
+  "description": "30 design typography sarkastik hitam atas putih (gaya bundle, ayat baharu) yang lulus semakan ejaan, dijana dengan FLUX.2 klein 4B di CPU komputer awan dan dibaiki dengan skrip. Gambar disimpan dalam artifact.",
+  "fixed": true,
+  "source": {
+   "format": "json",
+   "kind": "file",
+   "name": "sarkas_designs.json",
+   "url": "/_blob/18b35fa5501b2008461c7672588e23c8"
+  },
+  "title": "Design sarkastik siap (30)",
+  "updated": {
+   "at": "2026-11-23T13:11:00Z",
+   "by": "Claude"
+  }
+ }
+}

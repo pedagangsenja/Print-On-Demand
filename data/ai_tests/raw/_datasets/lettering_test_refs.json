@@ -1,0 +1,19 @@
+{
+ "id": "lettering_test_refs",
+ "version": 1,
+ "data": {
+  "description": "Poster lettering yang anda upload 23 Nov, satu untuk setiap design ujian L1-L5. Design orang lain, rujukan gaya sahaja.",
+  "fixed": true,
+  "source": {
+   "format": "json",
+   "kind": "file",
+   "name": "lettering_test_refs.json",
+   "url": "/_blob/1f58a2fbd7a0224197cba32f7b0ea0d0"
+  },
+  "title": "Ujian lettering: poster rujukan anda",
+  "updated": {
+   "at": "2026-11-23T08:45:00Z",
+   "by": "Claude"
+  }
+ }
+}

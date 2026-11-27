@@ -1,0 +1,19 @@
+{
+ "id": "lettering_p9_test",
+ "version": 2,
+ "data": {
+  "description": "Satu baris setiap imej: quote 'Small steps every day', 6 gaya x 2 seed x 3 enjin (MOSS-Image SFT, ERNIE-Image-Turbo, FLUX.2 klein 4B) di CPU; ejaan dan teks rawak (semakan mata Claude), masa jana, pilihan, gambar mentah vs siap cetak. Tahap bukti lemah.",
+  "fixed": true,
+  "source": {
+   "format": "json",
+   "kind": "file",
+   "name": "lettering_p9_test.json",
+   "url": "/_blob/71130c55c81e1deeaf4e151efa88d9a2"
+  },
+  "title": "Lettering P9: ujian 6 gaya, 3 enjin (CPU)",
+  "updated": {
+   "at": "2026-11-24T14:00:00Z",
+   "by": "Claude"
+  }
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "id": "lettering_v3_final_models",
+ "version": 3,
+ "data": {
+  "description": "Satu lajur galeri final; kotak kosong bila design belum lulus.",
+  "fixed": true,
+  "source": {
+   "format": "json",
+   "kind": "file",
+   "name": "lettering_v3_final_models.json",
+   "url": "/_blob/7a4b0414a62e3ea16112cf516873876b"
+  },
+  "title": "Pusingan QC v3: lajur final",
+  "updated": {
+   "at": "2026-11-23T17:14:00Z",
+   "by": "Claude"
+  }
+ }
+}

@@ -1,0 +1,16 @@
+[
+ {
+  "model": "s42",
+  "model_name": "ERNIE + penambah, seed 42",
+  "model_order": 0,
+  "missing_note": "Belum dijana",
+  "level": "lemah"
+ },
+ {
+  "model": "s7",
+  "model_name": "ERNIE + penambah, seed 7",
+  "model_order": 1,
+  "missing_note": "Belum dijana",
+  "level": "lemah"
+ }
+]

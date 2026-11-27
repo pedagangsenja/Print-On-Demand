@@ -1,0 +1,19 @@
+{
+ "id": "lettering_test",
+ "version": 1,
+ "data": {
+  "description": "Satu baris untuk setiap imej: cara jana, design (L1-L5), ayat Melayu 11-14 perkataan, perkataan salah eja atau teks rawak tambahan (semakan mata oleh Claude), masa jana dan gambar kecil. Seed 42, satu cubaan setiap design: tahap bukti lemah.",
+  "fixed": true,
+  "source": {
+   "format": "json",
+   "kind": "file",
+   "name": "lettering_test.json",
+   "url": "/_blob/1bd06e69344fdc99f951905adabb9246"
+  },
+  "title": "Ujian lettering ayat panjang: hasil setiap imej",
+  "updated": {
+   "at": "2026-11-23T08:45:00Z",
+   "by": "Claude"
+  }
+ }
+}
