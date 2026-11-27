@@ -201,6 +201,22 @@ Dipakai untuk model tanpa aturan sendiri, dan sebagai pembanding dalam ujian kel
 - **Tetapan:** checkpoint suling, 16 langkah, tanpa guidance (Space: mod "Distilled (16 steps)", `guidance_scale` 1.0), `prompt_upsampling` False, 768×1024, seed tetap.
 - **Tempat jalan:** CPU boleh (diukur 26 Nov 2026: 357 s setiap imej, 768×1024, 16 langkah, bf16; `gen_flux3.py`, pipeline modular diffusers, pengekod teks dan transformer dimuat berasingan; perlu torchvision). Space rasmi `black-forest-labs/flux-3-image-klein` (GPU, kuota harian) tidak dipakai.
 - **Lesen (rasmi):** FLUX Kommunity v1.0: hasil komersial dibenarkan untuk pengguna dengan hasil kasar di bawah US$5 juta setahun, tertakluk kepada syarat lesen. Berbeza daripada enam model lain (Apache 2.0 / MIT).
+- **Status pemakaian (keputusan pengguna 27 Nov 2026):** lesen BELUM diterima. Model ini hanya didaftar dalam standard bersama aturan promptnya; ia TIDAK dipakai untuk design jualan dan imejnya tidak didaftar dalam Daftar S/C. Ia tiada dalam turutan model lalai (`run_v12.sh`). Imej ujian 26 Nov disimpan dalam repo sebagai rekod sahaja.
+- **Cara jana prompt:** `python3 designs/lettering-v1/pembina.py <id> klein3` (contoh `K3K`); jana: `IDS="<id>" bash run_v12.sh klein3`.
+- **Borang 10 soalan (3.12 B), dijawab daripada kad model rasmi (dibaca 26 Nov 2026):**
+
+| # | Jawapan |
+|---|---|
+| 1 | Pengekod teks Qwen3-VL-4B-Instruct; had lalai diffusers 8192 token. Prompt kita 560–640 token |
+| 2 | Kapsyen adegan penuh. "A short prompt sent as typed gives generic output" |
+| 3 | Teks disalin tepat dalam petikan berganda, dengan tipografi, warna dan kedudukan. Contoh rasmi: `a cream banner embroidered "KNITTED ICEBERG VILLAGE"` |
+| 4 | Ada penambah prompt rasmi (`flux-3-image-klein-pup`, 9B, 18.8 GB), hidup secara lalai. Untuk kapsyen yang sudah penuh, blok `prompt_upsampler` dibuang. Hasilnya boleh dibaca (`output=["images", "prompt"]`) |
+| 5 | Model suling: 16 langkah, tanpa guidance, tiada negative prompt. Larangan ditulis sebagai apa yang ADA |
+| 6 | Kotak disokong: tag `<id>` dalam kapsyen + senarai JSON; `bbox` = [atas, kiri, bawah, kanan] pada grid 0–1000. Kotak membimbing kedudukan dan saiz, bukan topeng keras. Gambar rujukan: hingga 10 |
+| 7 | 16 langkah, tiada guidance; lalai 1024×1024. Kita: 768×1024 |
+| 8 | Transformer 5.6B = 11.1 GB bf16; pengekod teks 8.3 GB; VAE 0.3 GB. CPU 15 GB boleh jika pengekod teks dan transformer dimuat berasingan; 357 s setiap imej (diukur). Perlu torchvision |
+| 9 | FLUX Kommunity v1.0; repo berpagar (perlu setuju syarat). Pengguna belum menerima lesen |
+| 10 | Rasmi: teks boleh tidak tepat; unsur boleh melepasi kotak; unsur kecil mungkin tidak muncul. Ujian kita: 9/9 ejaan betul |
 - **Cacat diketahui (ujian pertama, 26 Nov 2026, 9 imej, 3 kad):** blok tidak condong (kotak tegak; dibetulkan SK01); lorekan kelabu pada huruf K7 (dibersih SK04). Ejaan 9/9. Kad model: teks boleh tidak tepat; unsur kecil yang diminta mungkin tidak muncul; unsur boleh melepasi kotaknya.
 
 ### 3.9 Aturan Qwen-Image-2512 (rev r0: sumber rasmi sahaja, BELUM diuji dengan aturan ini)
@@ -438,7 +454,7 @@ Turutan semakan setiap imej: pintu wajib G1–G3 → ukur dan betulkan (5b) → 
 - **Log:** ukuran sebelum, pembetulan yang dijalankan, ukuran selepas. Imej mentah asal tidak ditimpa; imej yang dibetulkan disimpan berasingan.
 - **Skrip (dibina 26 Nov 2026):** `designs/lettering-v1/skrip/betulkan.py` menjalankan SK01 → SK02 → SK03 → SK04 dan menulis `log_5b.jsonl`. Tiga pembetulan pertama digabung menjadi satu putaran + skala + alihan, supaya imej dilukis semula sekali sahaja.
 - **Angka rujukan:** diukur skrip SK05 daripada gambar upload dan disimpan pada kad (`kad.BLOK[..]["rujukan"]`). K3: condong 7.6°, ruang tepi 13.6% (IMG_5775, satu gambar). Kad lain belum diukur; tanpa sudut rujukan, SK01 tidak jalan.
-- **Had toleransi SEMENTARA (cadangan Claude, belum ditetapkan daripada ujian):** condong ±1.5°; ruang tepi ±2 mata peratus; kedudukan ±1.5% kanvas; kelabu rata 0.3% piksel. Menunggu pengesahan pengguna.
+- **Had toleransi (cadangan Claude, diluluskan pengguna 27 Nov 2026):** condong ±1.5°; ruang tepi ±2 mata peratus; kedudukan ±1.5% kanvas; kelabu rata 0.3% piksel. Belum ditentukur daripada ujian; boleh diubah bila ada data.
 - **Ujian (26 Nov 2026, tanpa jana baharu):** 12 imej K3H sedia ada (aturan model) dibetulkan; kesemuanya sampai ke condong 7.5–7.7° dan ruang tepi 13.2–13.7%, tiada dakwat menyentuh tepi. Semakan mata pada 4 imej: ejaan tidak berubah. Bukti lemah (satu kad).
 - **Had skrip:** SK04 tidak menyentuh kad yang memang ada bayang lembut (K1). Sudut diukur daripada garis dasar baris, bukan condong italik huruf.
 - Ruang tepi untuk cetak kekal urusan kemasan (langkah 6); pembetulan di sini hanya supaya imej mentah menepati kad.
@@ -525,7 +541,7 @@ Model baharu juga memerlukan aturan prompt sendiri sebelum dipakai untuk design 
 | K7M | IMG_5765 (helaian 6 poster) | K7 (baharu) | Make Room for Wonder | condong 12.4° (median 6 panel, julat 10.1–14.5), ruang tepi 6.2% (julat 5.4–10.3) |
 | K8G | IMG_5735 | K8 (baharu) | Keep Going You Are Almost There | condong 7.4°, ruang tepi 12.2% (gambar melintang, latar bertekstur) |
 
-- **K7 dan K8** dibuat Claude daripada gambar; pengguna membenarkan jana tanpa menunggu kelulusan kad (titik kelulusan 1d ditangguh ke pagi 27 Nov). Kedua-dua kad v1.0, belum diluluskan.
+- **K7 dan K8** dibuat Claude daripada gambar; pengguna membenarkan jana tanpa menunggu kelulusan kad. **Kedua-dua kad diluluskan pengguna pada 27 Nov 2026** (v1.0).
 - **Model (soalan pengguna: boleh semua 7 di CPU? jika tidak, yang boleh sahaja):**
 
 | Model | Keputusan | Sebab |
@@ -535,7 +551,7 @@ Model baharu juga memerlukan aturan prompt sendiri sebelum dipakai untuk design 
 | Qwen-Image-2512 | DILANGKAU, tidak dijalankan | Tidak muat: repo 57.7 GB (transformer kira-kira 41 GB) lawan RAM 15 GB; 50 langkah dengan CFG. Tidak diukur; keputusan daripada saiz fail (rasmi) |
 | GLM-Image | DILANGKAU, tidak dijalankan | Tidak muat: repo 35.8 GB (pengekod 20 GB + transformer 15 GB) lawan RAM 15 GB; tiada GGUF. Tidak diukur; keputusan daripada saiz fail (rasmi) |
 
-- **Simpanan imej:** dalam repo sahaja (`designs/lettering-v1/raw/v12-cpu/`); pengguna memilih A atau SNC pada pagi 27 Nov.
+- **Simpanan imej (keputusan pengguna 27 Nov 2026: SNC, semua imej lulus):** 24 imej yang lulus ejaan didaftar sebagai gaya S012–S035 (gambar = imej selepas 5b), dan dua warna C009 (krim + butir, K7) dan C010 (putih pudar + kapur, K8). Imej FLUX 3 Klein tidak didaftar (lesen belum diterima); imej salah ejaan tidak didaftar. Pengguna memadam sendiri yang tidak mahu. Peta rekod: `designs/lettering-v1/qc/v12_cpu_snc.json`. Semua imej kekal dalam repo (`designs/lettering-v1/raw/v12-cpu/`).
 - **Hasil pusingan 0** (45 imej; semakan mata Claude, bukti lemah; lulus = pintu G1 ejaan + G2 tiada teks atau tanda rawak). Rekod setiap imej: `designs/lettering-v1/qc/v12_cpu.json`. Helaian: `qc/v12_cpu_K3K.jpg`, `qc/v12_cpu_K7M.jpg`, `qc/v12_cpu_K8G.jpg`.
 
 | Model | K3K | K7M | K8G | Jumlah | Masa model (termasuk muat turun) |
@@ -570,7 +586,7 @@ Model baharu juga memerlukan aturan prompt sendiri sebelum dipakai untuk design 
 - **Model × kad selepas larian ini** (bukti lemah, satu ayat setiap kad): K8 = ERNIE, FLUX 3 Klein (lulus 3/3), klein 4B (1/3); MOSS dan Z-Image tidak sesuai untuk K8. K7 = MOSS, ERNIE, FLUX 3 Klein (3/3), klein 4B (2/3), Z-Image (1/3). K3 = semua lima model (ERNIE 2/3, lain 3/3).
 - **FLUX 3 Image Klein:** ujian pertama aturan 3.8 (kapsyen + jadual kotak, penambah prompt dibuang). 9/9 lulus G1–G2; kedudukan baris mengikut kotak. Pembanding rangka am belum dijalankan, jadi rev kekal r0 (syarat 3.12 F belum dipenuhi). Lesen FLUX Kommunity: hasil komersial bersyarat; pengguna belum memutuskan.
 - **5b:** 33 imej yang lulus dibetulkan (24 + 9 FLUX 3 Klein); angka di bawah untuk 24 yang pertama: imej dibetulkan (`designs/lettering-v1/betul/v12-cpu/`, `log_5b.jsonl`); 0 gagal semakan akhir. Dua pembaikan skrip semasa larian: SK05 v1.1 (bintik latar di tepi tidak lagi menggagalkan imej) dan SK02 v1.1 (ruang tepi sisi dan atas / bawah berasingan; K3: 13.6 / 15.5, K7: 6.2 / 11.3).
-- **Kemasan (SK06):** imej terbaik setiap design, pilihan Claude menunggu keputusan pengguna: K3K MOSS seed 42 (gaya S3, putih; warna kuning belum kerana SK07 belum dibina), K7M MOSS seed 42 (gaya S2, krim + butir), K8G klein 4B seed 42 (gaya S4, kapur). Fail: `designs/lettering-v1/final/v12-cpu/` (SVG induk + pratonton 18×24); gambar ringkas `qc/v12_cpu_akhir.jpg`.
+- **Kemasan (SK06):** imej terbaik setiap design, pilihan Claude; pengguna memilih melalui Daftar S/C: K3K MOSS seed 42 (gaya S3, putih; warna kuning belum kerana SK07 belum dibina), K7M MOSS seed 42 (gaya S2, krim + butir), K8G klein 4B seed 42 (gaya S4, kapur). Fail: `designs/lettering-v1/final/v12-cpu/` (SVG induk + pratonton 18×24); gambar ringkas `qc/v12_cpu_akhir.jpg`.
 
 ## Catatan pembaikan aturan model
 Setiap ubahan aturan (3.4–3.10) direkod di sini. Ujian pertama (26 Nov 2026, K3 × ayat H, seed 42, 7, 123, semakan mata, bukti lemah) mengubah beberapa perkara serentak, kerana dibuat sebelum peraturan "satu ubahan setiap pusingan".
@@ -590,7 +606,7 @@ Setiap ubahan aturan (3.4–3.10) direkod di sini. Ujian pertama (26 Nov 2026, K
 - v1.2, sudah ditulis (26 Nov): kaedah model baharu (3.12), daftar skrip + kaedah skrip baharu, peraturan langkau model (`run_v12.sh`).
 - v1.2, sudah dibina (26 Nov): SK01–SK05 dan `betulkan.py`; SK06 (`finish.py`) dibawa ke cawangan ini.
 - v1.2, belum dibina: SK07 (warna ikut peranan), SK08 (bayang ikut kad); kemasan belum membaca palet, ruang tepi dan tekstur daripada kad; semakan ejaan automatik (kini mata sahaja).
-- v1.2, belum disahkan: had toleransi 5b (sementara); sudut rujukan K1 dan K6 belum diukur; hasil pembina kod (3.13) belum dibuktikan pada imej.
+- v1.2, belum selesai: sudut rujukan K1 dan K6 belum diukur; pembanding rangka am untuk FLUX 3 Klein belum dijalankan; lesen FLUX 3 Klein belum diterima pengguna; Qwen-Image-2512 dan GLM-Image belum diuji (tidak muat di CPU).
 - v1.2, bukti masih lemah: aturan 3.4–3.7 diuji pada satu kad (K3) dan satu ayat sahaja. Perlu diulang pada kad lain dan ayat pendek sebelum dianggap kukuh.
 - v1.2, belum diuji langsung: aturan 3.8–3.10 (FLUX 3 Image Klein, Qwen-Image-2512, GLM-Image). Perlu ujian kelayakan melalui Space (GPU, kuota harian); pengguna sebelum ini meminta CPU sahaja, jadi ujian ini menunggu kebenaran. `gen_hf_space.py` belum ada profil untuk tiga Space ini.
 - Calon v1.3, belum diuji: gambar rujukan sebagai input model (klein 4B dan Z-Image ada saluran input gambar dalam diffusers; ERNIE tiada).

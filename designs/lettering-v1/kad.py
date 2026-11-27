@@ -242,11 +242,11 @@ KAD = {
             ("Bintik bintang putih kecil di latar", False),
             ("Huruf condong ke kanan, baris naik sedikit ke kanan", False),
             ("Putih satu warna atas hitam", False)]),
-    # K7, K8: dibuat Claude 26 Nov 2026 (malam) daripada upload pengguna; pengguna membenarkan jana tanpa menunggu
-    # kelulusan kad (titik kelulusan 1d ditangguh ke pagi 27 Nov). Ruang tepi dan condong diukur skrip SK05.
+    # K7, K8: dibuat Claude 26 Nov 2026 (malam) daripada upload pengguna; diluluskan pengguna 27 Nov 2026.
+    # Ruang tepi dan condong diukur skrip SK05.
     "K7": dict(
         nama="Skrip berus kontras + huruf kecil besar + swash bawah (krim atas hitam)", ref="IMG_5765",
-        snc="belum didaftar (menunggu keputusan A / SNC pengguna)", versi="v1.0 (26 Nov 2026, belum diluluskan pengguna)",
+        snc="S023-S031 + C009 (didaftar 27 Nov 2026)", versi="v1.0 (26 Nov 2026; diluluskan pengguna 27 Nov 2026)",
         kelas="F2", dakwat=1, ruang_tepi=6, tekstur="butir cetakan halus", julat="3-6 perkataan",
         warna=dict(latar=("hitam", "#0c0c0c", "black"), dakwat=[("krim", "#ece6d8", "white")]),
         medium="Hand-lettered script quote poster, portrait.",
@@ -273,7 +273,7 @@ KAD = {
             ("Satu warna cerah atas hitam", False)]),
     "K8": dict(
         nama="Berus marker melantun tebal + bintik latar (putih atas hitam)", ref="IMG_5735",
-        snc="belum didaftar (menunggu keputusan A / SNC pengguna)", versi="v1.0 (26 Nov 2026, belum diluluskan pengguna)",
+        snc="S032-S035 + C010 (didaftar 27 Nov 2026)", versi="v1.0 (26 Nov 2026; diluluskan pengguna 27 Nov 2026)",
         kelas="F2", dakwat=1, ruang_tepi=12, tekstur="tepi marker kering + butir latar", julat="4-7 perkataan",
         warna=dict(latar=("hitam arang", "#1f1f1f", "black"), dakwat=[("putih", "#f3f3f1", "white")]),
         medium="Hand-drawn brush lettering quote poster, portrait.",

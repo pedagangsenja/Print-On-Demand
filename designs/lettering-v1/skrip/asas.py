@@ -5,7 +5,7 @@ Rujukan = angka kad yang dibandingkan dengan ukuran imej. Sumber, ikut keutamaan
   2. kad.BLOK[kad]["rujukan"]: angka yang diukur SK05 daripada gambar upload;
   3. kad.KAD[kad]["ruang_tepi"]: angka kad (ruang tepi sahaja).
 Tiada angka rujukan = pembetulan itu TIDAK dijalankan (standard 5b).
-HAD = had toleransi SEMENTARA (cadangan Claude 26 Nov 2026, belum ditetapkan daripada ujian; standard 5b).
+HAD = had toleransi (cadangan Claude 26 Nov 2026, diluluskan pengguna 27 Nov 2026; belum ditentukur daripada ujian).
 """
 import json
 import sys
