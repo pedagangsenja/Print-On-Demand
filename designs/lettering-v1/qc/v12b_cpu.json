@@ -134,6 +134,73 @@
     "Anak panah dua hala (bukan menghala ke perkataan)",
     ""
    ]
+  },
+  "klein3": {
+   "K9Q_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K9Q_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K9Q_s123": [
+    true,
+    "",
+    ""
+   ],
+   "K10F_s42": [
+    true,
+    "Blok tidak condong (SK01 5b)",
+    ""
+   ],
+   "K10F_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K11R_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K11R_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K11R_s123": [
+    true,
+    "",
+    ""
+   ],
+   "K12O_s42": [
+    true,
+    "Huruf antara baris tidak bertaut (ciri teras 3 gagal)",
+    ""
+   ],
+   "K12O_s7": [
+    true,
+    "Huruf antara baris tidak bertaut (ciri teras 3 gagal)",
+    ""
+   ],
+   "K13V_s42": [
+    true,
+    "Tanda petik penutup di bawah MOMENT, bukan di sudut",
+    ""
+   ],
+   "K13V_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K13V_s123": [
+    false,
+    "G3: tanda petik penutup bersambung dengan kaki huruf N pada MOMENT",
+    ""
+   ]
   }
  }
 }
