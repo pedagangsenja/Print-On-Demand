@@ -1,6 +1,6 @@
 {
- "versi": "SK06 v1.3 (27 Nov 2026)",
- "raw": "K11S_s42.png",
+ "versi": "SK06 v1.5 (27 Nov 2026)",
+ "raw": "zturbo_K11S_s42.png",
  "style": "S3",
  "palet": null,
  "bg": "#0b0b0b",
@@ -20,15 +20,11 @@
  "tekstur": {
   "kad": "K11",
   "teks": "lusuh cetakan saring",
-  "jenis": "none",
-  "kuat": 0.0,
-  "tidak_dibuat": [
-   "lusuh cetakan saring"
-  ]
+  "jenis": "worn",
+  "kuat": 1.0,
+  "tidak_dibuat": []
  },
- "amaran": [
-  "tekstur kad 'lusuh cetakan saring' belum ada jenisnya dalam SK06: tidak dibuat"
- ],
+ "amaran": [],
  "tepi": {
   "sasaran": {
    "sisi": 15.0,

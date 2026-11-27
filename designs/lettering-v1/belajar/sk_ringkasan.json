@@ -1,13 +1,18 @@
 {
  "versi": "s1 (27 Nov 2026)",
  "tarikh": "2026-11-27",
- "baris": 224,
- "imej": 40,
+ "baris": 711,
+ "imej": 123,
  "kad_dipakai": [
+  "K10",
+  "K11",
+  "K12",
   "K3",
+  "K4",
   "K6",
   "K7",
-  "K8"
+  "K8",
+  "K9"
  ],
  "suka": 0,
  "sk": {
@@ -16,26 +21,44 @@
    "nama": "condong",
    "fail": "SK01_condong.py",
    "langkah": "5b",
-   "versi": "5b v1.1",
+   "versi": "5b v1.2",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 28,
-     "lulus": 28,
-     "cacat": 0,
+     "imej": 35,
+     "lulus": 34,
+     "cacat": 1,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    },
+    "5b v1.2": {
+     "imej": 7,
+     "lulus": 6,
+     "cacat": 1,
      "input_rosak": 0,
      "belum": 0,
      "tolak": 0
     }
    },
    "semasa": {
-    "imej": 28,
-    "lulus": 28,
-    "cacat": 0,
+    "imej": 7,
+    "lulus": 6,
+    "cacat": 1,
     "input_rosak": 0,
     "belum": 0,
     "tolak": 0
    },
-   "berulang": [],
+   "berulang": [
+    {
+     "kelas": "condong",
+     "nama": "Sudut condong lain daripada kad",
+     "imej": [
+      "v12b-cpu/ernie/K9B_s7"
+     ],
+     "n": 1,
+     "kalah": []
+    }
+   ],
    "calon": [],
    "ubahan_dicuba": 0,
    "tindakan": [
@@ -50,11 +73,19 @@
    "nama": "ruang tepi",
    "fail": "SK02_ruang_tepi.py",
    "langkah": "5b",
-   "versi": "5b v1.1",
+   "versi": "5b v1.2",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 19,
-     "lulus": 19,
+     "imej": 65,
+     "lulus": 63,
+     "cacat": 2,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    },
+    "5b v1.2": {
+     "imej": 46,
+     "lulus": 46,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -62,8 +93,8 @@
     }
    },
    "semasa": {
-    "imej": 19,
-    "lulus": 19,
+    "imej": 46,
+    "lulus": 46,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -71,7 +102,7 @@
    },
    "berulang": [],
    "calon": [],
-   "ubahan_dicuba": 0,
+   "ubahan_dicuba": 1,
    "tindakan": [
     {
      "jenis": "tiada",
@@ -84,11 +115,19 @@
    "nama": "kedudukan",
    "fail": "SK03_kedudukan.py",
    "langkah": "5b",
-   "versi": "5b v1.1",
+   "versi": "5b v1.2",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 17,
-     "lulus": 17,
+     "imej": 22,
+     "lulus": 22,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    },
+    "5b v1.2": {
+     "imej": 5,
+     "lulus": 5,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -96,8 +135,8 @@
     }
    },
    "semasa": {
-    "imej": 17,
-    "lulus": 17,
+    "imej": 5,
+    "lulus": 5,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -118,11 +157,19 @@
    "nama": "hitam putih",
    "fail": "SK04_hitam_putih.py",
    "langkah": "5b",
-   "versi": "5b v1.1",
+   "versi": "5b v1.2",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 32,
-     "lulus": 32,
+     "imej": 85,
+     "lulus": 85,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    },
+    "5b v1.2": {
+     "imej": 53,
+     "lulus": 53,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -130,8 +177,8 @@
     }
    },
    "semasa": {
-    "imej": 32,
-    "lulus": 32,
+    "imej": 53,
+    "lulus": 53,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -177,7 +224,7 @@
    "nama": "finish",
    "fail": "SK06_finish.py",
    "langkah": "6",
-   "versi": "SK06 v1.3 (27 Nov 2026)",
+   "versi": "SK06 v1.6 (27 Nov 2026)",
    "ikut_versi": {
     "SK06 v1 (27 Nov 2026)": {
      "imej": 22,
@@ -204,8 +251,32 @@
      "tolak": 0
     },
     "SK06 v1.3 (27 Nov 2026)": {
-     "imej": 3,
-     "lulus": 3,
+     "imej": 15,
+     "lulus": 13,
+     "cacat": 2,
+     "input_rosak": 0,
+     "belum": 7,
+     "tolak": 0
+    },
+    "SK06 v1.4 (27 Nov 2026)": {
+     "imej": 12,
+     "lulus": 7,
+     "cacat": 5,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    },
+    "SK06 v1.5 (27 Nov 2026)": {
+     "imej": 5,
+     "lulus": 5,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    },
+    "SK06 v1.6 (27 Nov 2026)": {
+     "imej": 2,
+     "lulus": 2,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -213,8 +284,8 @@
     }
    },
    "semasa": {
-    "imej": 3,
-    "lulus": 3,
+    "imej": 2,
+    "lulus": 2,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -222,7 +293,7 @@
    },
    "berulang": [],
    "calon": [],
-   "ubahan_dicuba": 3,
+   "ubahan_dicuba": 6,
    "tindakan": [
     {
      "jenis": "ukur",
@@ -247,8 +318,8 @@
      "tolak": 0
     },
     "SK07 v1.1 (27 Nov 2026)": {
-     "imej": 17,
-     "lulus": 17,
+     "imej": 33,
+     "lulus": 33,
      "cacat": 0,
      "input_rosak": 1,
      "belum": 0,
@@ -256,8 +327,8 @@
     }
    },
    "semasa": {
-    "imej": 17,
-    "lulus": 17,
+    "imej": 33,
+    "lulus": 33,
     "cacat": 0,
     "input_rosak": 1,
     "belum": 0,

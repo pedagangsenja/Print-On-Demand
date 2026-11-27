@@ -43,7 +43,8 @@ MODEL = list(REV)
 W, H = 768, 1024
 # Ubahan CALON kitaran QC (langkah 5): hanya hidup bila dinamakan dalam PEMBINA_UJI (dipisah koma). Ubahan yang
 # berjaya ditulis balik ke aturan (rev naik) dan dibuang dari sini; yang gagal dicatat dalam standard dan dibuang.
-# Calon semasa (27 Nov 2026, TINDAKAN [cuba] belajar.py selepas larian v12b-cpu): zturbo_had_positif, klein4b_hiasan_kedudukan.
+# Calon semasa (27 Nov 2026, TINDAKAN [cuba] belajar.py selepas larian v12b-cpu): zturbo_had_positif, klein4b_hiasan_kedudukan,
+# klein4b_cara_baris (selepas QC klein4b: BRILLIANT hilang huruf I 2/3).
 # (26 Nov 2026: 'zturbo_satu_baris' diuji pada K8G, tidak berjaya, dibuang.)
 # Nama calon = <model>_<id pilihan> daripada belajar.py (KELAS), cth. zturbo_had_positif; belajar.py memutuskan menang / kalah (3.15).
 UJI = {u for u in os.environ.get("PEMBINA_UJI", "").split(",") if u}
@@ -136,6 +137,10 @@ def klein4b(m):
         else:
             t = (f'{a}, the {l["kata"]} "{l["q"]}" {l["ialah"]} written in '
                  f'{frasa(l, lambda d: " as the top line" if d == 0 else "")}')
+        if "klein4b_cara_baris" in UJI:  # calon: kata panjang (>= 7 huruf) diberi bilangan huruf dalam ayat baris itu
+            n = [len(w) for w in l["q"].split() if 7 <= len(w) <= len(SATU) and w.isalpha()]
+            t += (f', a word spelled out in full with all {SATU[n[0] - 1]} of its letters' if len(n) == 1 and
+                  l["kata"] == "word" else "")
         s.append(t + (", and it is the largest line of all." if l["tertinggi"] else "."))
     if b.get("sentuh"):
         s.append(f"The lines {b['sentuh']}.")

@@ -22,7 +22,7 @@ import SK02_ruang_tepi
 import SK03_kedudukan
 import SK04_hitam_putih
 
-VERSI = "5b v1.1"
+VERSI = "5b v1.2"
 
 
 def betulkan(rgb, ruj, had=asas.HAD):
@@ -37,6 +37,13 @@ def betulkan(rgb, ruj, had=asas.HAD):
     hasil = asas.lukis(rgb, M) if ubah else rgb
     hasil, tindakan["SK04"] = SK04_hitam_putih.betul(hasil, ruj, had, selepas_ubah=ubah)
     selepas = asas.ukur(hasil)
+    # v1.2: SK02 diukur semula selepas SK04 (hiasan halus yang dibersihkan SK04 mengecilkan kotak blok) dan
+    # dijalankan sekali lagi pada imej asal dengan matriks gabungan, jika ruang tepi masih di luar had.
+    m2, cat2 = SK02_ruang_tepi.matriks(selepas, ruj, had)
+    if m2 is not None and selepas["kotak"]:
+        M = m2 @ M
+        hasil, tindakan["SK04"] = SK04_hitam_putih.betul(asas.lukis(rgb, M), ruj, had, selepas_ubah=True)
+        selepas, tindakan["SK02_ulang"] = asas.ukur(hasil), cat2
     gagal = []
     if selepas["sentuh_tepi"]:
         gagal.append("dakwat menyentuh tepi kanvas (huruf mungkin terpotong)")

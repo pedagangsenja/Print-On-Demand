@@ -1,5 +1,5 @@
 {
- "versi": "SK06 v1.3 (27 Nov 2026)",
+ "versi": "SK06 v1.4 (27 Nov 2026)",
  "raw": "moss_K4F_s42_C003_warna.png",
  "style": "S3",
  "palet": "C003",
@@ -9,7 +9,7 @@
  ],
  "layers": 1,
  "ink_px": [
-  2294957
+  2303199
  ],
  "sizes": {
   "18x24": [
@@ -39,6 +39,6 @@
     "bawah": 13.1
    }
   },
-  "dakwat_min_pct": 9.63
+  "dakwat_min_pct": 1.06
  }
 }
