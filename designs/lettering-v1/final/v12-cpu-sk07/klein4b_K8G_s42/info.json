@@ -1,4 +1,5 @@
 {
+ "versi": "SK06 v1.1 (27 Nov 2026)",
  "raw": "klein4b_K8G_s42_warna.png",
  "style": "S4",
  "palet": "kad K8",
@@ -15,5 +16,20 @@
    5400,
    7200
   ]
- }
+ },
+ "tekstur": {
+  "kad": "K8",
+  "teks": "tepi marker kering + butir latar",
+  "jenis": "chalk",
+  "kuat": 1.0,
+  "tidak_dibuat": [
+   "tepi marker kering",
+   "butir latar"
+  ],
+  "ganti": "tekstur gaya S4 (gambar rujukan sama, IMG_5735)"
+ },
+ "amaran": [
+  "tekstur kad 'tepi marker kering' belum ada jenisnya dalam SK06: diganti tekstur gaya S4 (gambar rujukan sama, IMG_5735)",
+  "tekstur kad 'butir latar' belum ada jenisnya dalam SK06: diganti tekstur gaya S4 (gambar rujukan sama, IMG_5735)"
+ ]
 }

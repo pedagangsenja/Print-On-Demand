@@ -8,7 +8,11 @@
 # Had diketahui: palet, ruang tepi (76% x 78%) dan tekstur masih tetap ikut gaya S1-S6 dalam styles.py, belum dibaca
 # daripada Kad Gaya. Warna ikut peranan = SK07, bayang = SK08 (dibina 27 Nov 2026; hantar --palet).
 # 27 Nov 2026: VERSI dicatat dalam info.json (dibaca belajar_sk.py). Naikkan VERSI setiap kali kod berubah.
-# Guna: python3 SK06_finish.py <imej> <S1..S6> <folder keluar> [--sizes 18x24,24x36] [--keep-color] [--palet <json>]
+# v1.1 (27 Nov 2026, Belajar SK, ubahan tekstur_kad): --kad Kx = jenis dan kekuatan tekstur dibaca daripada
+# kad.KAD[Kx]["tekstur"] (bukan tetap ikut gaya S1-S6); bahagian tekstur kad yang belum ada jenisnya dicatat
+# sebagai amaran dalam info.json; jika ada gaya S1-S6 daripada gambar upload yang sama (cth. K8 dan S4: IMG_5735),
+# tekstur gaya itu dipakai sebagai ganti. Tanpa --kad: tekstur gaya seperti v1.
+# Guna: python3 SK06_finish.py <imej> <S1..S6> <folder keluar> [--sizes 18x24,24x36] [--keep-color] [--palet <json>] [--kad Kx]
 """Siapkan imej lettering AI untuk cetak (CPU sahaja).
 
 Langkah: besarkan 4x -> asingkan warna (k-means Lab) -> bersihkan bintik -> surih vektor (potrace)
@@ -30,7 +34,7 @@ import cv2
 import numpy as np
 from PIL import Image
 
-VERSI = "SK06 v1 (27 Nov 2026)"
+VERSI = "SK06 v1.1 (27 Nov 2026)"
 from scipy.optimize import linear_sum_assignment
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -41,6 +45,31 @@ DPI = 300
 UP = 4            # skala naik sebelum surih
 FIT_W, FIT_H = 0.76, 0.78   # lockup muat dalam 76% lebar / 78% tinggi kanvas
 CENTER_Y = 0.47   # pusat optik sedikit di atas tengah
+
+# Tekstur kad (teks bebas dalam kad.py) -> jenis prosedur. Turutan = keutamaan. Kekuatan: "halus" 0.6, lain 1.0.
+TEKSTUR_KAD = [("kapur", "chalk"), ("lusuh", "worn"), ("grunge", "worn"), ("butir", "grain"), ("grain", "grain")]
+KUAT_KAD = {"halus": 0.6, "sederhana": 1.0}
+SOKONG = ("tiada", "kapur", "lusuh", "grunge", "butir", "grain", "halus", "sederhana", "cetakan", "berus kering")
+
+
+def tekstur_kad(teks):
+    """Pulang dict(jenis, kuat, tidak_dibuat) daripada teks tekstur kad, ikut bahagian (pisah '+' atau ','). Bahagian
+    tanpa padanan jenis, atau tekstur pada latar (SK06 hanya menekstur dakwat), masuk tidak_dibuat supaya
+    belajar_sk.py menandanya (cth. K8 'tepi marker kering', 'butir latar')."""
+    t = (teks or "tiada").lower().strip()
+    if t == "tiada":
+        return dict(jenis="none", kuat=0.0, tidak_dibuat=[])
+    jenis, kuat, tak = None, 1.0, []
+    for bah in [b.strip() for b in re.split(r"\s*\+\s*|,", t) if b.strip()]:
+        sisa = bah
+        for kata in SOKONG:
+            sisa = sisa.replace(kata, " ")
+        j = next((j for kata, j in TEKSTUR_KAD if kata in bah), None)
+        if sisa.strip() or "latar" in bah or not j:
+            tak.append(bah)
+        elif jenis is None:
+            jenis, kuat = j, next((v for kata, v in KUAT_KAD.items() if kata in bah), 1.0)
+    return dict(jenis=jenis or "none", kuat=kuat if jenis else 0.0, tidak_dibuat=tak)
 
 
 def hex2rgb(h):
@@ -215,8 +244,8 @@ def noise(shape, sigma, rng):
     return n / (n.std() + 1e-6)
 
 
-def texture(png_rgb, bg_hex, kind, seed=7):
-    """Tekstur prosedur pada saiz akhir (skala ikut 300 DPI)."""
+def texture(png_rgb, bg_hex, kind, seed=7, kuat=1.0):
+    """Tekstur prosedur pada saiz akhir (skala ikut 300 DPI). kuat 1.0 = v1; < 1 = lebih halus (kurang lubang)."""
     if kind == "none":
         return png_rgb
     rng = np.random.default_rng(seed)
@@ -225,14 +254,14 @@ def texture(png_rgb, bg_hex, kind, seed=7):
     ink = (np.abs(img - bg).sum(-1) > 60).astype(np.float32)   # topeng dakwat
     shape = ink.shape
     if kind == "grain":
-        hole = (noise(shape, 1.2, rng) * 0.6 + noise(shape, 6, rng) * 0.4) > 2.1
+        hole = (noise(shape, 1.2, rng) * 0.6 + noise(shape, 6, rng) * 0.4) > 2.1 + (1 - kuat) * 0.6
         a = ink * (1 - hole * 0.85)
-        g = noise(shape, 0.8, rng) * 5
+        g = noise(shape, 0.8, rng) * 5 * kuat
         out = bg + (img - bg) * a[..., None]
         out += g[..., None] * 0.6
     elif kind == "worn":
         n = noise(shape, 1.5, rng) * 0.5 + noise(shape, 5, rng) * 0.35 + noise(shape, 18, rng) * 0.35
-        hole = np.clip((n - 1.35) / 0.25, 0, 1)
+        hole = np.clip((n - 1.35 - (1 - kuat) * 0.4) / 0.25, 0, 1)
         a = ink * (1 - hole)
         out = bg + (img - bg) * a[..., None]
     elif kind == "chalk":
@@ -240,9 +269,9 @@ def texture(png_rgb, bg_hex, kind, seed=7):
         streak /= streak.std() + 1e-6
         fine = noise(shape, 0.9, rng)
         dens = np.clip(0.93 + 0.07 * streak + 0.05 * fine, 0, 1)
-        holes = (fine * 0.7 + streak * 0.5) < -1.6
+        holes = (fine * 0.7 + streak * 0.5) < -1.6 - (1 - kuat) * 0.5
         a = ink * dens * (1 - holes)
-        cloud = noise(shape, 120, rng) * 2.0 + noise(shape, 1.5, rng) * 1.5
+        cloud = (noise(shape, 120, rng) * 2.0 + noise(shape, 1.5, rng) * 1.5) * kuat
         base = bg + cloud[..., None]
         out = base + (img - bg) * a[..., None]
     else:
@@ -256,6 +285,7 @@ def main():
     sizes = ["18x24"]
     keep = False
     palet = None
+    kid = None
     while args:
         a = args.pop(0)
         if a == "--sizes":
@@ -264,13 +294,26 @@ def main():
             keep = True
         elif a == "--palet":
             palet = json.loads(Path(args.pop(0)).read_text())
+        elif a == "--kad":
+            kid = args.pop(0)
     style = STYLES[sid]
+    tk = dict(jenis=style["texture"], kuat=1.0, tidak_dibuat=[])
+    if kid:   # v1.1: tekstur ikut kad
+        sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+        import kad
+        tk = dict(kad=kid, teks=kad.KAD[kid].get("tekstur", "tiada"), **tekstur_kad(kad.KAD[kid].get("tekstur")))
+        ref = kad.KAD[kid].get("ref")
+        sama = next((g for g, st in STYLES.items() if st.get("ref") == ref and st["texture"] != "none"), None)
+        if tk["tidak_dibuat"] and tk["jenis"] == "none" and sama:   # ganti: gaya yang dibuat daripada gambar upload sama
+            tk.update(jenis=STYLES[sama]["texture"], kuat=1.0, ganti=f"tekstur gaya {sama} (gambar rujukan sama, {ref})")
     out.mkdir(parents=True, exist_ok=True)
     img = np.array(Image.open(raw).convert("RGB"))
     vec = vectorize(img, len(palet["dakwat"]) if palet else len(style["inks"]), palet)
     bg_hex, fills = map_palet(vec, palet) if palet else map_palette(vec, style, keep)
     info = {"versi": VERSI, "raw": raw.name, "style": sid, "palet": palet and palet.get("sumber"), "bg": bg_hex, "fills": fills, "layers": len(vec["layers"]),
-            "ink_px": [l["area"] for l in vec["layers"]], "sizes": {}}
+            "ink_px": [l["area"] for l in vec["layers"]], "sizes": {},
+            "tekstur": tk, "amaran": [f"tekstur kad '{b}' belum ada jenisnya dalam SK06: " + (f"diganti {tk['ganti']}" if tk.get("ganti") else "tidak dibuat")
+                                      for b in tk["tidak_dibuat"]]}
     master = compose_svg(vec, bg_hex, fills, 1800, 2400)
     (out / "master.svg").write_text(master)
     for sz in sizes:
@@ -278,7 +321,7 @@ def main():
         W, H = wi * DPI, hi * DPI
         png = cairosvg.svg2png(bytestring=compose_svg(vec, bg_hex, fills, W, H).encode(), output_width=W, output_height=H)
         arr = np.array(Image.open(__import__("io").BytesIO(png)).convert("RGB"))
-        arr = texture(arr, bg_hex, style["texture"])
+        arr = texture(arr, bg_hex, tk["jenis"], kuat=tk["kuat"] or 1.0)
         im = Image.fromarray(arr)
         im.save(out / f"{sz}.png", dpi=(DPI, DPI))
         im.resize((W * 1000 // H, 1000) if H > W else (1000, H * 1000 // W), Image.LANCZOS).save(

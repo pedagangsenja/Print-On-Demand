@@ -14,5 +14,24 @@
   "nota": "Huruf bertaut merentas baris: (a) komponen setinggi >= 1.6 x tinggi median huruf dikumpul ikut julat penuh; (b) dibelah pada leher paling sempit (watershed atas jarak ke tepi dakwat) antara dua baris berjiran tanpa label; sekitar label kekal cara v1. Sasaran: ernie K3K s42, s123 (semakan silap 27 Nov)",
   "bukti": "15 imej K3K yang sama (14 + varian C001): tanpa cacat SK 13/15 -> 15/15; kelas sambungan 2 -> 0; tiada kelas cacat baharu; 12 imej lain sama piksel demi piksel; zturbo s7 kekal GAGAL dengan sebab betul (input rosak). Bukti lemah: satu batch, satu kad",
   "hasil": "final/v12-cpu-sk07/ernie_K3K_s42 dijana semula; ernie_K3K_s123 kini siap (dahulu GAGAL)"
+ },
+ {
+  "sk": "SK06",
+  "ubahan": "tekstur_kad",
+  "jenis": "parameter",
+  "medan": "tekstur",
+  "kelas": "tekstur",
+  "dari": "SK06 v1 (27 Nov 2026)",
+  "ke": "SK06 v1.1 (27 Nov 2026)",
+  "imej": [
+   "v12-cpu/moss/K3K_s42",
+   "v12-cpu/moss/K7M_s42",
+   "v12-cpu/klein4b/K8G_s42"
+  ],
+  "keputusan": "menang",
+  "tarikh": "2026-11-27",
+  "nota": "--kad Kx: jenis + kekuatan tekstur daripada kad.KAD[Kx]['tekstur'] (kapur=chalk, lusuh/grunge=worn, butir/grain=grain; 'halus' = kuat 0.6). Bahagian tanpa jenis = amaran; ganti dengan tekstur gaya S1-S6 daripada gambar upload yang sama jika ada (K8 -> S4, IMG_5735)",
+  "bukti": "3 imej (K3K, K7M, K8G): tanpa cacat SK 3/3 -> 3/3; jurang 'SK06 belum baca tekstur kad' tertutup; K3K dan K8G sama piksel dengan v1 (beza 0.0); K7M kini butir halus ikut kad (disemak pada 300 DPI). Bukti lemah",
+  "hasil": "final/v12-cpu-sk07/moss_K7M_s42 dan klein4b_K8G_s42 dijana semula dengan --kad"
  }
 ]

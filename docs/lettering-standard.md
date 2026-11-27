@@ -522,7 +522,7 @@ Skrip di sini ialah kerja SELEPAS jana (pembetulan 5b dan kemasan langkah 6). Al
 | SK03 | Kedudukan (`SK03_kedudukan.py`) | 5b | Pusatkan blok pada kanvas | – | Dibina; diuji pada 12 imej K3H sedia ada |
 | SK04 | Hitam putih bersih (`SK04_hitam_putih.py`) | 5b | Tukar kelabu dan tepi kabur kepada hitam dan putih tulen | – | Dibina; diuji pada 12 imej K3H sedia ada |
 | SK05 | Ukuran (`SK05_ukur.py`) | 1, 5b | Ukur ruang tepi, kedudukan, sudut condong dan kelabu pada gambar upload atau imej mentah | – | Dibina; diuji pada 2 gambar upload (K3, K6) dan 24 imej K3H. Nisbah baris: anggaran sahaja (baris bertindih tidak dapat diasingkan) |
-| SK06 | Vektor + saiz cetak (`SK06_finish.py` + `styles.py`) | 6 | SVG induk, susun di tengah, PNG 300 DPI | ruang tepi, tekstur | Dibawa dari `claude/dazzling-cannon-5wzn6h`; diuji pada 1 imej K3H selepas 5b (SVG + 18×24). 27 Nov: parameter `--palet` ditambah (warna tepat SK07 / SK08, topeng setiap warna dilembutkan sebelum surih). Ruang tepi dan tekstur masih tetap S1–S6, belum dibaca daripada kad |
+| SK06 | Vektor + saiz cetak (`SK06_finish.py` + `styles.py`) | 6 | SVG induk, susun di tengah, PNG 300 DPI | ruang tepi, tekstur | Dibawa dari `claude/dazzling-cannon-5wzn6h`; diuji pada 1 imej K3H selepas 5b (SVG + 18×24). 27 Nov: parameter `--palet` ditambah (warna tepat SK07 / SK08, topeng setiap warna dilembutkan sebelum surih). Ruang tepi dan tekstur masih tetap S1–S6, belum dibaca daripada kad. **v1.1 (27 Nov 2026, Belajar SK, ubahan `tekstur_kad`, MENANG):** `--kad Kx` = jenis dan kekuatan tekstur daripada kad (kapur, lusuh / grunge, butir; "halus" = 0.6); bahagian tanpa jenis = amaran, diganti tekstur gaya daripada gambar upload yang sama (K8 → S4). Ruang tepi kad: ubahan seterusnya |
 | SK07 | Warna C ikut peranan (`SK07_warna.py`) | 6 | Peta peranan setiap piksel (utama, sokongan, penyambung, hiasan) ikut baris Spesifikasi Teks, kemudian warna kad atau warna C | `peta_warna`, `warna` (kad); `--warna Cxxx` (Daftar S/C) | Dibina 27 Nov 2026; diuji pada 14 imej K3K (12 lulus, 2 GAGAL dikesan betul) + K7M, K8G (satu dakwat, tidak rosak) + 1 varian C001. **v1.1 (27 Nov 2026, Belajar SK, ubahan `belah_leher`, MENANG):** huruf bertaut merentas baris dibelah pada leher paling sempit; 15 imej K3K: 15/15 tanpa cacat SK (v1: 13/15) |
 | SK08 | Bayang ikut kad (`SK08_bayang.py`) | 6 | Bayang 3D dalam huruf: bahagian bawah setiap strok peranan yang diminta jadi kelabu | `rujukan.bayang` (arah, nisbah, warna; diukur `--ukur` pada gambar upload) | Dibina 27 Nov 2026; diukur pada IMG_5775; diuji pada 12 imej K3K yang lulus SK07. Bayang lembut K1 belum (lihat bawah) |
 
@@ -586,6 +586,7 @@ Empat skrip pembetulan (SK01–SK04) ialah set asas. Skrip lain ditambah hanya i
 - **Tiada ulangan:** ubahan yang kalah disenarai dalam TINDAKAN supaya tidak dicuba lagi.
 - **Liputan kad:** setiap kad yang pernah dijana disemak: condong tanpa rujukan sudut, tiada rujukan ruang tepi, lebih satu dakwat tanpa `peta_warna`, bayang tanpa rujukan atau jenis yang SK08 tidak boleh buat (SK baharu), tekstur dan ruang tepi kad yang SK06 belum baca (parameter).
 - **SK baharu:** cacat tanpa SK pemilik pada sekurang-kurangnya 2 imej, atau ciri kad tanpa SK: dicipta terus (keputusan pengguna 27 Nov 2026) dan dilaporkan. 1 imej: dipantau.
+- **Ubahan jenis parameter** (`jenis: parameter`, `medan`): menang = tiada cacat baharu, lulus tidak turun, semua imej versi baharu disemak, dan jurang kad bagi medan itu tertutup.
 - **Versi:** setiap SK ada `VERSI` dalam kod dan log mencatatnya. SK06: `VERSI` ditambah 27 Nov 2026 (kod lain tidak berubah; `info.json` lama = SK06 v1).
 
 **Had:** ini bukan AI yang belajar sendiri. Ia peraturan tetap yang dijalankan Claude selepas setiap batch. Bukti kecil (satu batch, satu kad berwarna) mudah tersilap.
@@ -595,6 +596,7 @@ Empat skrip pembetulan (SK01–SK04) ialah set asas. Skrip lain ditambah hanya i
 - SK06 v1: tekstur kad belum dibaca (K6, K7, K8): PARAMETER seterusnya; ruang tepi kad menyusul.
 - SK07 v1: semakan Claude 10 imej: 2 `silap` (ernie K3K s42 dan s123: huruf bertaut merentas baris diwarna salah); zturbo K3K s7 = input rosak (tiada label); 7 amaran tidak merosakkan. TINDAKAN: BAIKI SK07 (kelas huruf bertaut dibelah).
 - **BAIKI SK07 dilaksana (diluluskan pengguna 27 Nov 2026): MENANG.** v1.1 `belah_leher`: 15 imej yang sama, tanpa cacat SK 13/15 → 15/15, kelas huruf bertaut 2 → 0, tiada kelas baharu; 12 imej lain sama piksel demi piksel. Kemasan ernie K3K s42 dijana semula; ernie K3K s123 kini siap. Log uji: `belajar/uji_sk/SK07_v1.1/log_6.jsonl`.
+- **PARAMETER SK06 dilaksana (diluluskan pengguna 27 Nov 2026): MENANG.** v1.1 `tekstur_kad`: 3 imej (K3K, K7M, K8G) 3/3 → 3/3 tanpa cacat; jurang "SK06 belum baca tekstur kad" tertutup; K3K dan K8G sama piksel dengan v1; K7M kini butir halus ikut kad K7 (sebelum ini butir penuh gaya S2). Kemasan K7M dan K8G dijana semula. Seterusnya: PARAMETER ruang tepi kad, kemudian jenis tekstur K8.
 - SK08 v1: 0 cacat.
 
 ### Catatan pembaikan SK
@@ -602,6 +604,7 @@ Setiap ubahan SK direkod di sini dan dalam `designs/lettering-v1/belajar/sk_ubah
 
 | Tarikh | SK | Ubahan | Kelas cacat | Versi | Keputusan | Bukti |
 |---|---|---|---|---|---|---|
+| 27 Nov 2026 | SK06 | `tekstur_kad`: tekstur dibaca daripada kad (`--kad`); bahagian tanpa jenis = amaran + ganti gaya daripada gambar yang sama | tekstur (parameter kad) | v1 → v1.1 | MENANG | 3 imej: 3/3 → 3/3, jurang tertutup; K3K, K8G sama piksel; K7M butir halus (dilihat pada 300 DPI). Bukti lemah |
 | 27 Nov 2026 | SK07 | `belah_leher`: komponen berbilang baris dikumpul ikut julat penuh; belah pada leher paling sempit antara baris tanpa label | huruf bertaut dibelah (sambungan) | v1 → v1.1 | MENANG | 15 imej K3K: 13/15 → 15/15; ernie s42 (puncak S kuning) dan s123 (baris salah dibelah) betul; 12 imej lain tidak berubah. Bukti lemah: satu batch, satu kad |
 
 ## Langkah 7: Pengguna lulus atau tolak
@@ -708,7 +711,7 @@ Setiap ubahan aturan (3.4–3.10) direkod di sini, dan juga dalam `designs/lette
 - v1.2, sudah dibina (26 Nov): SK01–SK05 dan `betulkan.py`; SK06 (`finish.py`) dibawa ke cawangan ini.
 - v1.2, sudah dibina (27 Nov): belajar selepas setiap jana (`belajar.py`, 3.15). `gen_hf_space.py` (ujian K6 lama) belum mencatat `rev` dan `uji`.
 - v1.2, sudah dibina (27 Nov): SK07 (warna ikut peranan), SK08 (bayang dalam huruf K3), `kemasan.py`; SK06 `--palet`.
-- v1.2, belum dibina: kemasan belum membaca ruang tepi dan tekstur daripada kad; semakan ejaan automatik (kini mata sahaja); bayang lembut K1; garis potong SK07 masih lurus (boleh memotong huruf yang bersentuh baris lain).
+- v1.2, belum dibina: kemasan belum membaca ruang tepi daripada kad; tekstur K8 (tepi marker kering, butir latar) belum ada jenis sendiri (diganti kapur S4); semakan ejaan automatik (kini mata sahaja); bayang lembut K1. (Selesai 27 Nov 2026 melalui Belajar SK: tekstur dibaca daripada kad, SK06 v1.1; garis potong SK07 tidak lagi lurus di sambungan, SK07 v1.1.)
 - v1.2, belum selesai: sudut rujukan K1 dan K6 belum diukur; Qwen-Image-2512 dan GLM-Image belum diuji (tidak muat di CPU).
 - v1.2, bukti masih lemah: aturan 3.4–3.7 diuji pada satu kad (K3) dan satu ayat sahaja. Perlu diulang pada kad lain dan ayat pendek sebelum dianggap kukuh.
 - v1.2, belum diuji langsung: aturan 3.9–3.10 (Qwen-Image-2512, GLM-Image). Aturan 3.8 (FLUX 3 Image Klein) lulus ujian kelayakan di CPU, 27 Nov 2026. Perlu ujian kelayakan melalui Space (GPU, kuota harian); pengguna sebelum ini meminta CPU sahaja, jadi ujian ini menunggu kebenaran. `gen_hf_space.py` belum ada profil untuk tiga Space ini.

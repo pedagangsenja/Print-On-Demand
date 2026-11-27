@@ -125,6 +125,7 @@ def baris_log():
                 mine = [x for x, k in kel if KELAS.get((k or ["lain"])[0], {}).get("sk") == sid]
                 rows.append(dict(sk=sid, versi=r.get("versi", "?"), imej=kunci(r["imej"]), larian=f.split(os.sep)[-3],
                                  kad=r.get("kad", ""), jalan=bool(t.get("jalan", sid == "SK04")), gagal=mine, amaran=[]))
+    semua_asas = {}
     for f in sorted(glob.glob(os.path.join(HERE, "final", "*", "peranan", "log_6.jsonl"))
                     + glob.glob(os.path.join(B, "uji_sk", "*", "log_6.jsonl"))):   # uji semula SK (log sahaja, tiada imej)
         larian, L = f.split(os.sep)[-3] if f.split(os.sep)[-2] == "peranan" else "uji_sk/" + f.split(os.sep)[-2], baca_jsonl(f)
@@ -138,13 +139,18 @@ def baris_log():
                 key += "+" + m[2]
             rows.append(dict(sk=r.get("skrip", "?"), versi=r.get("versi", "?"), imej=key, larian=larian, kad=r.get("kad", ""),
                              jalan=True, gagal=list(r.get("gagal") or []), amaran=list(r.get("amaran") or [])))
-        for g in sorted(glob.glob(os.path.join(os.path.dirname(os.path.dirname(f)), "*", "info.json"))):
-            nama = os.path.basename(os.path.dirname(g))
-            m = re.match(r"(.+?)_(C\d+)$", nama)
-            key = asas.get(m[1] if m else nama, f"{larian}/{nama}") + ("+" + m[2] if m else "")
-            info = baca_json(g, {})
-            v = info.get("versi") or TANPA_VERSI["SK06"]
-            rows.append(dict(sk="SK06", versi=v, imej=key, larian=larian, kad="", jalan=True, gagal=[], amaran=[]))
+        semua_asas.update(asas)
+    for g in sorted(glob.glob(os.path.join(HERE, "final", "*", "*", "info.json"))
+                    + glob.glob(os.path.join(B, "uji_sk", "*", "*", "info.json"))):   # SK06 (final, atau uji semula)
+        p = g.split(os.sep)
+        larian = p[-3] if "uji_sk" not in p else "uji_sk/" + p[-3]
+        nama = p[-2]
+        m = re.match(r"(.+?)_(C\d+)$", nama)
+        key = semua_asas.get(m[1] if m else nama, f"{larian}/{nama}") + ("+" + m[2] if m else "")
+        info = baca_json(g, {})
+        v = info.get("versi") or TANPA_VERSI["SK06"]
+        rows.append(dict(sk="SK06", versi=v, imej=key, larian=larian, kad=(info.get("tekstur") or {}).get("kad", ""),
+                         jalan=True, gagal=list(info.get("gagal") or []), amaran=list(info.get("amaran") or [])))
     return rows
 
 
@@ -257,12 +263,23 @@ def liputan_kad(daf):
     baca = lambda sid, medan: bool(re.search(r"""\[\s*["']%s["']\s*\]|get\(\s*["']%s["']""" % (medan, medan), daf.get(sid, {}).get("src", "")))
     tekstur = [k for k in pakai if kad.KAD[k].get("tekstur", "tiada") != "tiada"]
     if tekstur and "SK06" in daf and not baca("SK06", "tekstur"):
-        tind["SK06"].append(dict(jenis="parameter", teks=f"SK06 belum membaca tekstur kad (tetap S1-S6); kad dipakai dengan tekstur: "
+        tind["SK06"].append(dict(jenis="parameter", medan="tekstur", teks=f"SK06 belum membaca tekstur kad (tetap S1-S6); kad dipakai dengan tekstur: "
                                  + ", ".join(f"{k} ({kad.KAD[k]['tekstur']})" for k in tekstur)
                                  + ". Tambah parameter tekstur daripada kad, uji pada imej sedia ada"))
     if "SK06" in daf and not (baca("SK06", "ruang_tepi") or baca("SK06", "tepi_pct")):
-        tind["SK06"].append(dict(jenis="parameter", teks="SK06 belum membaca ruang tepi kad (tetap 76% x 78%). Tambah parameter "
+        tind["SK06"].append(dict(jenis="parameter", medan="ruang_tepi", teks="SK06 belum membaca ruang tepi kad (tetap 76% x 78%). Tambah parameter "
                                  "ruang tepi daripada kad (rujukan.tepi_pct atau ruang_tepi), uji pada imej sedia ada"))
+    if tekstur and "SK06" in daf and baca("SK06", "tekstur"):   # SK06 membaca kad: bahagian tekstur kad tanpa jenis
+        try:
+            sys.path.insert(0, SKRIP)
+            import SK06_finish
+            tak = [(k, b) for k in tekstur for b in SK06_finish.tekstur_kad(kad.KAD[k]["tekstur"])["tidak_dibuat"]]
+        except Exception as e:  # noqa: BLE001
+            tak = [("?", f"tidak dapat semak ({e})")]
+        if tak:
+            tind["SK06"].append(dict(jenis="parameter", medan="tekstur_jenis", teks="Tekstur kad belum ada jenisnya dalam SK06: "
+                                     + "; ".join(f"{k} '{b}'" for k, b in tak)
+                                     + ". Tambah jenis tekstur prosedur (ukur pada gambar upload kad), uji pada imej sedia ada"))
     for k in pakai:
         K, BL = kad.KAD[k], kad.BLOK.get(k, {})
         ruj, ref = BL.get("rujukan") or {}, K.get("ref", "?")
@@ -300,6 +317,13 @@ def ulasan(s, rows, ubahan, tind_kad):
             senarai = ", ".join(u.get("imej") or sorted({r["imej"] for r in b})[:6])
             tind.append(dict(jenis="uji_semula", teks=f"Ubahan '{u['ubahan']}' ({u['dari']} -> {u['ke']}) belum diuji: jalan semula "
                                                        f"{s['sk']} versi baharu pada imej yang sama ({senarai}); tiada jana"))
+        elif u.get("jenis") == "parameter" and la >= lb and not baru and not any(r["belum"] for r in a) \
+                and not any(t.get("medan") == u.get("medan") for t in tind_kad.get(s["sk"], [])):
+            tind.append(dict(jenis="menang", ubahan=u["ubahan"], teks=f"MENANG '{u['ubahan']}' {u['dari']} -> {u['ke']} (parameter "
+                             f"'{u.get('medan')}'): lulus {lb}/{n} -> {la}/{n}, jurang kad '{u.get('medan')}' tertutup, tiada cacat baharu, "
+                             f"semua imej disemak. Tanda menang dalam sk_ubahan.json, kemas kini jadual Daftar skrip + Catatan pembaikan SK"))
+        elif u.get("jenis") == "parameter" and la >= lb and not baru and any(r["belum"] for r in a):
+            tind.append(dict(jenis="semak", teks=f"Ubahan parameter '{u['ubahan']}': semak imej versi baharu dahulu (amaran belum disemak)"))
         elif (la > lb or (la == lb and ta < tb)) and not baru:
             tind.append(dict(jenis="menang", ubahan=u["ubahan"], teks=f"MENANG '{u['ubahan']}' {u['dari']} -> {u['ke']}: lulus {lb}/{n} -> {la}/{n}"
                              + (f", kelas '{u.get('kelas')}' {tb} -> {ta}" if u.get("kelas") else "")

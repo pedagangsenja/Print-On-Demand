@@ -1,8 +1,8 @@
 {
  "versi": "s1 (27 Nov 2026)",
  "tarikh": "2026-11-27",
- "baris": 194,
- "imej": 34,
+ "baris": 205,
+ "imej": 40,
  "kad_dipakai": [
   "K3",
   "K6",
@@ -177,11 +177,19 @@
    "nama": "finish",
    "fail": "SK06_finish.py",
    "langkah": "6",
-   "versi": "SK06 v1 (27 Nov 2026)",
+   "versi": "SK06 v1.1 (27 Nov 2026)",
    "ikut_versi": {
     "SK06 v1 (27 Nov 2026)": {
-     "imej": 16,
-     "lulus": 16,
+     "imej": 22,
+     "lulus": 22,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    },
+    "SK06 v1.1 (27 Nov 2026)": {
+     "imej": 3,
+     "lulus": 3,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -189,8 +197,8 @@
     }
    },
    "semasa": {
-    "imej": 16,
-    "lulus": 16,
+    "imej": 3,
+    "lulus": 3,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -198,11 +206,12 @@
    },
    "berulang": [],
    "calon": [],
-   "ubahan_dicuba": 0,
+   "ubahan_dicuba": 1,
    "tindakan": [
     {
      "jenis": "parameter",
-     "teks": "SK06 belum membaca tekstur kad (tetap S1-S6); kad dipakai dengan tekstur: K6 (butir berus kering halus), K7 (butir cetakan halus), K8 (tepi marker kering + butir latar). Tambah parameter tekstur daripada kad, uji pada imej sedia ada"
+     "medan": "ruang_tepi",
+     "teks": "SK06 belum membaca ruang tepi kad (tetap 76% x 78%). Tambah parameter ruang tepi daripada kad (rujukan.tepi_pct atau ruang_tepi), uji pada imej sedia ada"
     }
    ]
   },
@@ -222,8 +231,8 @@
      "tolak": 0
     },
     "SK07 v1.1 (27 Nov 2026)": {
-     "imej": 15,
-     "lulus": 15,
+     "imej": 17,
+     "lulus": 17,
      "cacat": 0,
      "input_rosak": 1,
      "belum": 0,
@@ -231,8 +240,8 @@
     }
    },
    "semasa": {
-    "imej": 15,
-    "lulus": 15,
+    "imej": 17,
+    "lulus": 17,
     "cacat": 0,
     "input_rosak": 1,
     "belum": 0,
