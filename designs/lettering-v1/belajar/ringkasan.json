@@ -1,7 +1,7 @@
 {
  "versi": "b1.1 (27 Nov 2026)",
  "tarikh": "2026-11-27",
- "imej": 117,
+ "imej": 126,
  "suka": 0,
  "tolak": 0,
  "model": {
@@ -338,10 +338,18 @@
    "model": "klein3",
    "nama": "FLUX 3 Image Klein",
    "bahagian": "3.8",
-   "rev": "r0",
-   "status": "diuji: 3 kad, CPU, 9/9; lesen diterima pengguna 27 Nov 2026",
+   "rev": "r1",
+   "status": "lulus kelayakan: 9/9 lawan rangka am 6/9, CPU; lesen diterima 27 Nov 2026",
    "ikut_rev": {
-    "r0": {
+    "am": {
+     "imej": 9,
+     "lulus": 6,
+     "pct": 67,
+     "suka": 0,
+     "tolak": 0,
+     "design": 3
+    },
+    "r1": {
      "imej": 9,
      "lulus": 9,
      "pct": 100,
@@ -359,20 +367,20 @@
     "design": 3
    },
    "semua": {
-    "imej": 9,
-    "lulus": 9,
-    "pct": 100,
+    "imej": 18,
+    "lulus": 15,
+    "pct": 83,
     "suka": 0,
     "tolak": 0,
     "design": 3
    },
    "berulang": [],
-   "ubahan_dicuba": 1,
+   "ubahan_dicuba": 2,
    "suka_imej": [],
    "tindakan": [
     {
-     "jenis": "kelayakan",
-     "teks": "Aturan r0 sudah dijana (9/9) tetapi tiada pembanding rangka am: jana rangka am pada kad, ayat dan seed yang sama (perlu izin jana)"
+     "jenis": "tiada",
+     "teks": "Tiada tindakan: tiada cacat berulang pada aturan semasa"
     }
    ]
   },

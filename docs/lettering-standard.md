@@ -3,7 +3,7 @@
 Status: v1 dipersetujui pengguna 25 Nov 2026; v1.2 diluluskan pengguna sebagai standard 26 Nov 2026 (menggantikan v1); **sebahagian dibina**: pembina prompt ikut model siap (3.13); selebihnya lihat "Belum selesai". Liputan: laluan 1–2 (ayat 1–8 perkataan), kemasan F1–F2. Laluan 3–4 = percubaan (belum diuji); F3 ditangguh.
 
 ## Apa berubah dalam v1.2
-1. **Prompt ikut model** (langkah 3): isi gaya tetap daripada Kad; cara menulis berbeza bagi setiap model. Tujuh model: 3.4 klein 4B, 3.5 Z-Image Turbo, 3.6 ERNIE Turbo, 3.7 MOSS (diuji), dan 3.8 FLUX 3 Image Klein, 3.9 Qwen-Image-2512, 3.10 GLM-Image (belum diuji).
+1. **Prompt ikut model** (langkah 3): isi gaya tetap daripada Kad; cara menulis berbeza bagi setiap model. Tujuh model: 3.4 klein 4B, 3.5 Z-Image Turbo, 3.6 ERNIE Turbo, 3.7 MOSS, 3.8 FLUX 3 Image Klein (diuji), dan 3.9 Qwen-Image-2512, 3.10 GLM-Image (belum diuji).
 2. **Kitaran QC** (langkah 5): tukar seed dahulu; reka semula prompt model itu hanya untuk cacat sistematik; had 2 pusingan; pembaikan ditulis balik ke aturan model.
 3. **Ukuran rujukan dalam Kad** (langkah 1): angka diukur daripada gambar upload, bukan diteka.
 4. **Pembetulan selepas jana oleh skrip** (langkah 5b): ruang tepi, kedudukan, condong, hitam putih bersih; hanya bila ukuran tersasar.
@@ -66,7 +66,7 @@ Sebab (bukti lemah): AI Image Test 2, 150 imej: gaya satu dakwat (K1, K4) 40/60 
 - Aturan model hanya menentukan CARA MENULIS isi itu. Aturan model tidak boleh menambah, membuang atau menukar ciri gaya.
 - Pembina ialah kod: kad + Spesifikasi Teks + model yang sama mesti menghasilkan prompt yang sama.
 - Model yang ada aturan sendiri (3.4–3.10) WAJIB memakai aturan itu. Model tanpa aturan memakai rangka am (3.3) sehingga aturannya ditulis (3.12).
-- Tujuh model ada aturan: empat sudah diuji (3.4–3.7, rev r1) dan tiga ditulis daripada sumber rasmi sahaja, belum diuji (3.8–3.10, rev r0). Aturan r0 mesti lulus ujian kelayakan (3.12) sebelum dipakai untuk design sebenar.
+- Tujuh model ada aturan: lima sudah diuji (3.4–3.8, rev r1; FLUX 3 Image Klein lulus ujian kelayakan 27 Nov 2026) dan dua ditulis daripada sumber rasmi sahaja, belum diuji (3.9–3.10, rev r0). Aturan r0 mesti lulus ujian kelayakan (3.12) sebelum dipakai untuk design sebenar.
 - Semua aturan belajar selepas setiap batch imej (3.15): hasil QC, ♥ dan tolak pengguna menentukan ubahan seterusnya; ubahan yang menang terus menaikkan rev.
 - Sebab (bukti lemah: kad K3 × ayat H "Patience Builds What Hurry Breaks", 3 seed, CPU, semakan mata, 26 Nov 2026). Imej ejaan betul:
 
@@ -181,7 +181,8 @@ Dipakai untuk model tanpa aturan sendiri, dan sebagai pembanding dalam ujian kel
 - **Tetapan:** bf16 asal, 8 langkah, tanpa CFG, LoRA `lodestones/MOSS-Image-SFT-8-steps-dmd` × 0.7, templat sembang "thinking" hidup.
 - **Cacat diketahui (r1):** blok tidak condong, kerana kotak JSON tegak. Condong dibuat oleh skrip (5b), bukan oleh prompt.
 
-### 3.8 Aturan FLUX 3 Image Klein (rev r0: sumber rasmi sahaja, BELUM diuji)
+### 3.8 Aturan FLUX 3 Image Klein (rev r1: lulus ujian kelayakan 27 Nov 2026)
+- **Rev r0 → r1:** Ujian kelayakan (27 Nov 2026, K3K, K7M, K8G, seed 42, 7, 123, CPU, semakan mata, bukti lemah): aturan 3.8 9/9 lawan rangka am 6/9 (rangka am: 'KEEP GOING' tanpa jarak pada 3/3 seed K8G). Teks aturan tidak berubah; hanya rev naik (3.15).
 - **Sumber (rasmi):** kad model `black-forest-labs/flux-3-image-klein` dan arahan penambah prompt rasminya (`flux-3-image-klein-pup`, `system_prompts.json`).
   - "Always run a prompt upsampler… trained on full scene captions… a short prompt sent as typed gives generic output."
   - Untuk prompt yang sudah berupa kapsyen penuh, langkah penambah dibuang "so the caption is not expanded twice".
@@ -375,7 +376,7 @@ Tempat menyimpan aturan model baharu yang ditulis ikut 3.12 (3.14.1, 3.14.2, …
 - Z-Image Turbo r1 (4/9): cuba `zturbo_had_positif` (teks dan tanda baca rawak, 4 imej, K7M dan K8G).
 - ERNIE Turbo r1 (8/9): cuba `ernie_frasa_bentuk` (skrip lebih nipis dan label lebih besar daripada kad, 6 imej lulus).
 - MOSS + LoRA r1 (6/9): 'ALMOST' salah pada 3/3 seed K8G; dua pilihan sudah dicuba atau tidak berkenaan → tukar model bagi ayat itu.
-- FLUX 3 Image Klein r0 (9/9): perlu jana rangka am pada kad, ayat dan seed yang sama untuk ujian kelayakan; lesen diterima pengguna (27 Nov 2026).
+- FLUX 3 Image Klein r0 (9/9): perlu ujian kelayakan. **Dijalankan pada hari yang sama:** rangka am 6/9 lawan aturan 9/9 → LULUS, r0 → r1 (3.8). Lesen diterima pengguna (27 Nov 2026).
 - Qwen-Image-2512 r0, GLM-Image r0: belum diuji.
 
 ## Langkah 4: Jana
@@ -390,7 +391,7 @@ Tempat menyimpan aturan model baharu yang ditulis ikut 3.12 (3.14.1, 3.14.2, …
 | Z-Image Turbo | GGUF Q8_0 | 9 | 0.0 | tiada | 3.5 | kira-kira 260 s |
 | ERNIE-Image-Turbo | GGUF Q8_0 | 8 | 1.0 | PE rasmi, sekali, seed 42 | 3.6 | 305–373 s |
 | MOSS-Image SFT + LoRA × 0.7 | bf16 asal | 8 | tanpa CFG | templat "thinking" hidup | 3.7 | 337–392 s |
-| FLUX 3 Image Klein (suling) | bf16 asal | 16 | tiada | dibuang (kapsyen penuh daripada pembina) | 3.8 (r0) | kira-kira 357 s |
+| FLUX 3 Image Klein (suling) | bf16 asal | 16 | tiada | dibuang (kapsyen penuh daripada pembina) | 3.8 (r1) | kira-kira 357 s |
 
 - Tiga model tambahan (26 Nov 2026), dijalankan melalui Space Hugging Face (GPU, kuota harian) kerana tidak muat atau belum diukur di CPU. Belum diuji dengan aturan sendiri; perlu ujian kelayakan dahulu:
 
@@ -683,7 +684,7 @@ Model baharu juga memerlukan aturan prompt sendiri sebelum dipakai untuk design 
 | Z-Image × K8 | Baris berbilang perkataan ditulis "as two words side by side on one line" | 0/3 → 0/3 (masih 5 baris; 'ALWOST' pada seed 7) | Tidak berjaya; dibuang |
 
 - **Model × kad selepas larian ini** (bukti lemah, satu ayat setiap kad): K8 = ERNIE, FLUX 3 Klein (lulus 3/3), klein 4B (1/3); MOSS dan Z-Image tidak sesuai untuk K8. K7 = MOSS, ERNIE, FLUX 3 Klein (3/3), klein 4B (2/3), Z-Image (1/3). K3 = semua lima model (ERNIE 2/3, lain 3/3).
-- **FLUX 3 Image Klein:** ujian pertama aturan 3.8 (kapsyen + jadual kotak, penambah prompt dibuang). 9/9 lulus G1–G2; kedudukan baris mengikut kotak. Pembanding rangka am belum dijalankan, jadi rev kekal r0 (syarat 3.12 F belum dipenuhi). Lesen FLUX Kommunity: hasil komersial bersyarat; pengguna menerima lesen 27 Nov 2026 (lihat 3.8).
+- **FLUX 3 Image Klein:** ujian pertama aturan 3.8 (kapsyen + jadual kotak, penambah prompt dibuang). 9/9 lulus G1–G2; kedudukan baris mengikut kotak. Pembanding rangka am dijalankan 27 Nov 2026 (`raw/v12-cpu-am/klein3`, QC `qc/v12_cpu_am.json`): rangka am 6/9, jadi aturan lulus ujian kelayakan dan rev naik r0 → r1. Lesen FLUX Kommunity: hasil komersial bersyarat; pengguna menerima lesen 27 Nov 2026 (lihat 3.8).
 - **5b:** 33 imej yang lulus dibetulkan (24 + 9 FLUX 3 Klein); angka di bawah untuk 24 yang pertama: imej dibetulkan (`designs/lettering-v1/betul/v12-cpu/`, `log_5b.jsonl`); 0 gagal semakan akhir. Dua pembaikan skrip semasa larian: SK05 v1.1 (bintik latar di tepi tidak lagi menggagalkan imej) dan SK02 v1.1 (ruang tepi sisi dan atas / bawah berasingan; K3: 13.6 / 15.5, K7: 6.2 / 11.3).
 - **Kemasan (SK06):** imej terbaik setiap design, pilihan Claude; pengguna memilih melalui Daftar S/C: K3K MOSS seed 42 (gaya S3, putih; warna kuning + bayang dibuat 27 Nov oleh SK07 + SK08, lihat daftar skrip), K7M MOSS seed 42 (gaya S2, krim + butir), K8G klein 4B seed 42 (gaya S4, kapur). Fail: `designs/lettering-v1/final/v12-cpu/` (SVG induk + pratonton 18×24); gambar ringkas `qc/v12_cpu_akhir.jpg`.
 
@@ -699,6 +700,7 @@ Setiap ubahan aturan (3.4–3.10) direkod di sini, dan juga dalam `designs/lette
 | 26 Nov 2026 | MOSS + LoRA | r1 (tiada perubahan) | K8 × ayat G: 'ALMOST' jadi 'ALMIST' (3/3) | Tukar peranan perkataan (kitaran QC pusingan 1). TIDAK berjaya, dibuang | 0/3 → 0/3 |
 | 26 Nov 2026 | Z-Image Turbo | r1 (tiada perubahan) | K8 × ayat G: baris dua perkataan dipisah jadi dua baris (3/3) | Tambah "as two words side by side on one line". TIDAK berjaya, dibuang | 0/3 → 0/3 |
 | 26 Nov 2026 | FLUX 3 Image Klein | r0 (ujian pertama) | Tiada pembanding rangka am | Aturan 3.8 seperti ditulis; CPU | 9/9 pada K3, K7, K8 |
+| 27 Nov 2026 | FLUX 3 Image Klein | r0 → r1 (ujian kelayakan, `belajar.py`) | K8 × ayat G: 'KEEP GOING' tanpa jarak antara perkataan (3/3) | Tiada ubahan teks; rangka am lawan aturan 3.8 pada kad, ayat dan seed yang sama | rangka am 6/9 → aturan 9/9 |
 
 ## Belum selesai
 - v1.2, sudah dibina (26 Nov): pembina kod bagi tujuh model + semakan 3.11 (`pembina.py`, 3.13).
@@ -707,9 +709,9 @@ Setiap ubahan aturan (3.4–3.10) direkod di sini, dan juga dalam `designs/lette
 - v1.2, sudah dibina (27 Nov): belajar selepas setiap jana (`belajar.py`, 3.15). `gen_hf_space.py` (ujian K6 lama) belum mencatat `rev` dan `uji`.
 - v1.2, sudah dibina (27 Nov): SK07 (warna ikut peranan), SK08 (bayang dalam huruf K3), `kemasan.py`; SK06 `--palet`.
 - v1.2, belum dibina: kemasan belum membaca ruang tepi dan tekstur daripada kad; semakan ejaan automatik (kini mata sahaja); bayang lembut K1; garis potong SK07 masih lurus (boleh memotong huruf yang bersentuh baris lain).
-- v1.2, belum selesai: sudut rujukan K1 dan K6 belum diukur; pembanding rangka am untuk FLUX 3 Klein belum dijalankan; Qwen-Image-2512 dan GLM-Image belum diuji (tidak muat di CPU).
+- v1.2, belum selesai: sudut rujukan K1 dan K6 belum diukur; Qwen-Image-2512 dan GLM-Image belum diuji (tidak muat di CPU).
 - v1.2, bukti masih lemah: aturan 3.4–3.7 diuji pada satu kad (K3) dan satu ayat sahaja. Perlu diulang pada kad lain dan ayat pendek sebelum dianggap kukuh.
-- v1.2, belum diuji langsung: aturan 3.8–3.10 (FLUX 3 Image Klein, Qwen-Image-2512, GLM-Image). Perlu ujian kelayakan melalui Space (GPU, kuota harian); pengguna sebelum ini meminta CPU sahaja, jadi ujian ini menunggu kebenaran. `gen_hf_space.py` belum ada profil untuk tiga Space ini.
+- v1.2, belum diuji langsung: aturan 3.9–3.10 (Qwen-Image-2512, GLM-Image). Aturan 3.8 (FLUX 3 Image Klein) lulus ujian kelayakan di CPU, 27 Nov 2026. Perlu ujian kelayakan melalui Space (GPU, kuota harian); pengguna sebelum ini meminta CPU sahaja, jadi ujian ini menunggu kebenaran. `gen_hf_space.py` belum ada profil untuk tiga Space ini.
 - Calon v1.3, belum diuji: gambar rujukan sebagai input model (klein 4B dan Z-Image ada saluran input gambar dalam diffusers; ERNIE tiada).
 - Belum dibina: struktur Kad Gaya, pembina prompt, rekod QC, kemasan ikut kad, daftar design.
 - Prompt hitam putih K2, K3 dan K4 (pembina v1.1) belum diuji pada model utama. K3 hitam putih: 2 imej GLM-Image sahaja (26 Nov), kedua-dua gagal QC (perkataan berulang).

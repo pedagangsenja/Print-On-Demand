@@ -1,5 +1,5 @@
 """Standard Lettering v1.2, langkah 4 (Jana): FLUX 3 Image Klein (suling, 16 langkah, tanpa guidance) di CPU.
-Aturan prompt 3.8 (rev r0): kapsyen penuh + jadual kotak JSON daripada pembina; blok penambah prompt DIBUANG
+Aturan prompt 3.8 (rev r1 sejak 27 Nov 2026): kapsyen penuh + jadual kotak JSON daripada pembina; blok penambah prompt DIBUANG
 (kad model: "for any prompt that already is a full caption, remove the upsampler step").
 Pipeline modular diffusers (kad model rasmi). RAM 15 GB: pengekod teks (Qwen3-VL-4B) dimuat dan dibuang dahulu,
 kemudian transformer 5.6B bf16. Lesen: FLUX Kommunity v1.0 (hasil komersial bersyarat).
