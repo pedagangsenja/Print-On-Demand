@@ -1,7 +1,139 @@
-{"nota": "Larian v1.2 K9-K13, 27 Nov 2026 (petang-malam), CPU, hitam putih sahaja. Semakan mata Claude pada helaian semakan (bukti lemah). ok = pintu G1 (ejaan, huruf besar / kecil, baris, tanda baca) dan G2 (tiada teks atau tanda rawak) lulus. Nota = ciri kad yang gagal / tersasar. Nilai ketiga = id aset dashboard (kosong: pengguna belum pilih A / SNC).",
- "v12-cpu-k9": {"moss": {
-  "K9R_s42": [true, "", ""], "K9R_s7": [true, "Caps serif tinggi, bukan sans sempit; garis inline ada", ""], "K9R_s123": [true, "Caps serif tinggi, bukan sans sempit", ""],
-  "K10E_s42": [true, "Baris hampir sama lebar (BE KIND sedikit sempit)", ""], "K10E_s7": [true, "", ""], "K10E_s123": [true, "", ""],
-  "K11C_s42": [true, "Huruf terlalu kemas, kurang pelik; tiada tekstur kapur; blok tidak isi poster", ""], "K11C_s7": [true, "Huruf terlalu kemas, kurang pelik; blok tidak isi poster", ""], "K11C_s123": [true, "Huruf bulat kemas, kurang pelik; blok tidak isi poster", ""],
-  "K12S_s42": [true, "", ""], "K12S_s7": [true, "", ""],
-  "K13U_s42": [true, "Tekstur cop lemah; bingkai hanya atas / bawah", ""], "K13U_s7": [true, "Tekstur cop ada; bingkai hanya atas / bawah", ""]}}}
+{
+ "nota": "Larian v1.2 K9-K13, 27 Nov 2026 (petang-malam), CPU, hitam putih sahaja. Semakan mata Claude pada helaian semakan (bukti lemah). ok = pintu G1 (ejaan, huruf besar / kecil, baris, tanda baca) dan G2 (tiada teks atau tanda rawak) lulus. Nota = ciri kad yang gagal / tersasar. Nilai ketiga = id aset dashboard (kosong: pengguna belum pilih A / SNC).",
+ "v12-cpu-k9": {
+  "moss": {
+   "K9R_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K9R_s7": [
+    true,
+    "Caps serif tinggi, bukan sans sempit; garis inline ada",
+    ""
+   ],
+   "K9R_s123": [
+    true,
+    "Caps serif tinggi, bukan sans sempit",
+    ""
+   ],
+   "K10E_s42": [
+    true,
+    "Baris hampir sama lebar (BE KIND sedikit sempit)",
+    ""
+   ],
+   "K10E_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K10E_s123": [
+    true,
+    "",
+    ""
+   ],
+   "K11C_s42": [
+    true,
+    "Huruf terlalu kemas, kurang pelik; tiada tekstur kapur; blok tidak isi poster",
+    ""
+   ],
+   "K11C_s7": [
+    true,
+    "Huruf terlalu kemas, kurang pelik; blok tidak isi poster",
+    ""
+   ],
+   "K11C_s123": [
+    true,
+    "Huruf bulat kemas, kurang pelik; blok tidak isi poster",
+    ""
+   ],
+   "K12S_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K12S_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K13U_s42": [
+    true,
+    "Tekstur cop lemah; bingkai hanya atas / bawah",
+    ""
+   ],
+   "K13U_s7": [
+    true,
+    "Tekstur cop ada; bingkai hanya atas / bawah",
+    ""
+   ]
+  },
+  "ernie": {
+   "K9R_s42": [
+    true,
+    "Sinar atas, reben bertakuk, campuran caps inline + skrip; paling hampir rujukan",
+    ""
+   ],
+   "K9R_s7": [
+    false,
+    "G2: jalur putih tepi kanan / bawah (bingkai rawak)",
+    ""
+   ],
+   "K9R_s123": [
+    true,
+    "Sinar matahari atas, reben ada",
+    ""
+   ],
+   "K10E_s42": [
+    true,
+    "Sans tebal bertindan, lebar baris hampir sama",
+    ""
+   ],
+   "K10E_s7": [
+    true,
+    "Sans tebal bertindan",
+    ""
+   ],
+   "K10E_s123": [
+    true,
+    "Sans tebal bertindan",
+    ""
+   ],
+   "K11C_s42": [
+    true,
+    "Huruf berus kasar + bintik; isi poster",
+    ""
+   ],
+   "K11C_s7": [
+    true,
+    "Huruf berus kasar + bintik",
+    ""
+   ],
+   "K11C_s123": [
+    true,
+    "Huruf berus kasar + bintik padat",
+    ""
+   ],
+   "K12S_s42": [
+    false,
+    "G1: COUNT dieja CQUNT",
+    ""
+   ],
+   "K12S_s7": [
+    true,
+    "Huruf gelembung 3D + titik / percikan",
+    ""
+   ],
+   "K13U_s42": [
+    true,
+    "Bingkai penuh kasar, anak panah, tekstur cop",
+    ""
+   ],
+   "K13U_s7": [
+    true,
+    "Bingkai penuh kasar, anak panah, tekstur cop",
+    ""
+   ]
+  }
+ }
+}
