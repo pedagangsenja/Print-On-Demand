@@ -407,11 +407,13 @@ def baris_peranan(rgb_, kid, aid):
     return (None if cat["gagal"] else peta), cat
 
 
-def peranan(rgb_, kid, aid):
-    if kad.KAD[kid]["dakwat"] == 1 and len(set(palet(kid)["peranan"].values())) == 1:
+def peranan(rgb_, kid, aid, warna=None):
+    # v1.3 (hp_neutral): --warna HP = satu dakwat untuk semua peranan, jadi peta peranan tidak diperlukan
+    if warna == "HP" or (kad.KAD[kid]["dakwat"] == 1 and len(set(palet(kid)["peranan"].values())) == 1):
         blok, semua = topeng(rgb_)
         return semua.astype(np.uint8) * KOD["utama"], dict(skrip=ID, versi=VERSI, condong_darjah=condong(blok),
-                                                           amaran=[], gagal=[], nota="kad satu dakwat")
+                                                           amaran=[], gagal=[],
+                                                           nota="hitam putih (HP)" if warna == "HP" else "kad satu dakwat")
     return baris_peranan(rgb_, kid, aid)
 
 
@@ -451,7 +453,7 @@ if __name__ == "__main__":
     f, kid, aid, keluar = Path(a[0]), a[1], a[2], Path(a[3])
     pal = palet(kid, pil.get("warna"))
     im = muat(f)
-    peta, cat = peranan(im, kid, aid)
+    peta, cat = peranan(im, kid, aid, pil.get("warna"))
     lulus = tulis(keluar, f.stem, peta, pal, dict(imej=str(f), kad=kid, ayat=aid, **cat), alfa(im))
     print(f.stem, "|", [b["teks"] + ":" + b["peranan"] for b in cat.get("baris", [])] or cat.get("nota", ""),
           "| hiasan", cat.get("hiasan", 0), "|", "lulus" if lulus else "GAGAL: " + "; ".join(cat["gagal"]),

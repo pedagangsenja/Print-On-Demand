@@ -1,0 +1,48 @@
+{
+ "versi": "SK06 v1.3 (27 Nov 2026)",
+ "raw": "ernie_K10F_s42_HP_warna.png",
+ "style": "S3",
+ "palet": "kad K10 HP",
+ "bg": "#030101",
+ "fills": [
+  "#ffffff"
+ ],
+ "layers": 1,
+ "ink_px": [
+  3755933
+ ],
+ "sizes": {
+  "18x24": [
+   5400,
+   7200
+  ]
+ },
+ "tekstur": {
+  "kad": "K10",
+  "teks": "cetakan lusuh berbintik",
+  "jenis": "none",
+  "kuat": 0.0,
+  "tidak_dibuat": [
+   "cetakan lusuh berbintik"
+  ]
+ },
+ "amaran": [
+  "tekstur kad 'cetakan lusuh berbintik' belum ada jenisnya dalam SK06: tidak dibuat"
+ ],
+ "tepi": {
+  "sasaran": {
+   "sisi": 10.8,
+   "atas_bawah": 9.8,
+   "sumber": "SK05 pada IMG_5777"
+  },
+  "hasil": {
+   "18x24": {
+    "kiri": 14.5,
+    "kanan": 14.5,
+    "atas": 9.8,
+    "bawah": 9.8
+   }
+  },
+  "dakwat_min_pct": 13.13
+ }
+}
