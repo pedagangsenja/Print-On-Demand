@@ -541,6 +541,7 @@ LATIN = re.compile(r"[A-Za-z][A-Za-z' ]*[A-Za-z]|[A-Za-z]")
 def semak_pe(hasil, kid, aid):
     """3.6: semakan pada hasil PE ERNIE. Setiap perkataan ada dan tepat; turutan sama; tiada perkataan Latin lain dalam petikan."""
     spec, err, mula = bahan(kid, aid)["petikan"], [], -1
+    tanpa_tanda = {re.sub(r"[.,!?;:]+$", "", q) for q in spec}
     for q in spec:
         i = hasil.find(q)
         if i < 0:
@@ -550,7 +551,7 @@ def semak_pe(hasil, kid, aid):
         mula = max(mula, i)
     for kump in PETIK_PE.findall(hasil):
         for kata in LATIN.findall("".join(kump)):
-            if kata.strip() not in spec:
+            if kata.strip() not in spec and kata.strip() not in tanpa_tanda:  # 'SHAKY' bagi 'SHAKY.' = perkataan sama
                 err.append(f"PE: perkataan Latin lain dalam petikan: {kata.strip()!r}")
     return err
 

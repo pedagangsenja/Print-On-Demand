@@ -62,6 +62,68 @@
     "",
     ""
    ]
+  },
+  "ernie": {
+   "K9B_s42": [
+    false,
+    "PE gagal semakan ('B' dipetik); rangka am dipakai dengan pepijat hp (latar putih, huruf putih + bayang hitam): selepas SK04 huruf berongga. Gagal G3 (bentuk). Pepijat dibaiki 27 Nov; jana semula; latar kelabu cerah",
+    ""
+   ],
+   "K9B_s7": [
+    false,
+    "PE gagal semakan ('B' dipetik); rangka am dipakai dengan pepijat hp (latar putih, huruf putih + bayang hitam): selepas SK04 huruf berongga. Gagal G3 (bentuk). Pepijat dibaiki 27 Nov; jana semula; SK01 gagal (condong 4.6 selepas SK04)",
+    ""
+   ],
+   "K9B_s123": [
+    false,
+    "PE gagal semakan ('B' dipetik); rangka am dipakai dengan pepijat hp (latar putih, huruf putih + bayang hitam): selepas SK04 huruf berongga. Gagal G3 (bentuk). Pepijat dibaiki 27 Nov; jana semula",
+    ""
+   ],
+   "K10V_s42": [
+    true,
+    "PE lulus. Blok sama lebar, putih atas hitam, bersih",
+    ""
+   ],
+   "K10V_s7": [
+    true,
+    "Ejaan betul; seluruh blok dalam panel putih (hiasan lebih, gagal G3)",
+    ""
+   ],
+   "K10V_s123": [
+    true,
+    "Ejaan betul; seluruh blok dalam panel putih (hiasan lebih, gagal G3)",
+    ""
+   ],
+   "K11N_s42": [
+    true,
+    "Ejaan betul; kotak 'SHAKY.' kelabu dan huruf Y kelabu pudar (bentuk, gagal G3); PE gagal semakan palsu ('SHAKY' bagi 'SHAKY.'); rangka am berpepijat hp (latar putih, dakwat hitam). Kedua-dua pepijat dibaiki 27 Nov; jana semula",
+    ""
+   ],
+   "K11N_s7": [
+    true,
+    "Ejaan betul; 'AK' huruf berongga (bentuk, gagal G3); PE gagal semakan palsu ('SHAKY' bagi 'SHAKY.'); rangka am berpepijat hp (latar putih, dakwat hitam). Kedua-dua pepijat dibaiki 27 Nov; jana semula",
+    ""
+   ],
+   "K11N_s123": [
+    true,
+    "Ejaan betul; kotak meliputi 'SHAKY.' dan 'GROW' (hiasan di tempat salah, gagal G3); PE gagal semakan palsu ('SHAKY' bagi 'SHAKY.'); rangka am berpepijat hp (latar putih, dakwat hitam). Kedua-dua pepijat dibaiki 27 Nov; jana semula",
+    ""
+   ],
+   "K12Y_s42": [
+    true,
+    "Ejaan dan noktah betul; tiada kotak pada 'GROWTH' (ciri kad); PE gagal semakan palsu ('SHAKY' bagi 'SHAKY.'); rangka am berpepijat hp (latar putih, dakwat hitam). Kedua-dua pepijat dibaiki 27 Nov; jana semula",
+    ""
+   ],
+   "K12Y_s7": [
+    true,
+    "Ejaan dan noktah betul; tiada kotak pada 'GROWTH' (ciri kad); PE gagal semakan palsu ('SHAKY' bagi 'SHAKY.'); rangka am berpepijat hp (latar putih, dakwat hitam). Kedua-dua pepijat dibaiki 27 Nov; jana semula",
+    ""
+   ],
+   "K12Y_s123": [
+    true,
+    "Ejaan betul; kotak putih pudar pada 'LET YOUR', bukan 'GROWTH' (hiasan di tempat salah); PE gagal semakan palsu ('SHAKY' bagi 'SHAKY.'); rangka am berpepijat hp (latar putih, dakwat hitam). Kedua-dua pepijat dibaiki 27 Nov; jana semula",
+    ""
+   ]
   }
  }
 }

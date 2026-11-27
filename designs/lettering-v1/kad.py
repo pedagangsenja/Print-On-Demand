@@ -681,13 +681,33 @@ WARNA_LAIN = re.compile(r"\b(?:(?:golden|mustard|dark|light|pale|warm|deep|brigh
                         r"teal|purple|brown|tan|silver)\b", re.I)
 
 
+def terang(k):
+    """Latar kad cerah (luminans > 128)? Kad begini ditukar polariti dalam mod hp: latar hitam, dakwat putih."""
+    h = k["warna"]["latar"][1].lstrip("#")
+    r, g, b = (int(h[i:i + 2], 16) for i in (0, 2, 4))
+    return 0.299 * r + 0.587 * g + 0.114 * b > 128
+
+
+def kotak_hp(f):
+    """Peranan dalam kotak (mod hp, kad latar cerah): huruf hitam di dalam kotak putih (standard, langkah 1)."""
+    i = f.find(" inside ")
+    return f if i < 0 else re.sub(r"\bwhite\b", "black", f[:i]) + re.sub(r"\bblack\b", "white", f[i:])
+
+
 def hitam_putih(teks, k):
     """Tukar frasa kad kepada hitam putih: semua dakwat = white, latar = black, tiada kelabu, tiada bayang."""
-    teks = re.sub(r",? with an? [a-z ]*\b(?:gray|grey)\b[a-z ]*shadow", "", teks)
+    teks = re.sub(r",? with an? [a-z ]*\b(?:gray|grey|dark)\b[a-z ]*shadow", "", teks)
     teks = re.sub(r"Only [^.]*\.\s*", "", teks)
     nama = {w[2] for w in k["warna"]["dakwat"]} | {k["warna"]["latar"][2]}
+    if terang(k):  # kad latar cerah (K9, K11, K12; 27 Nov 2026): latar -> black, dakwat -> white (polariti hp tetap)
+        lat = k["warna"]["latar"][2]
+        tukar = {lat: "black", "black": "white", "white": "black"}
+        pola = "|".join(sorted(map(re.escape, tukar), key=len, reverse=True))
+        teks = re.sub(rf"\b({pola})\b", lambda m: (lambda g: g.capitalize() if m.group(1)[0].isupper() else g)(
+            tukar[m.group(1).lower()]), teks, flags=re.I)
+        nama = nama - {lat}
     for n in sorted(nama - {"white", "black"}, key=len, reverse=True):
-        ganti = "black" if "black" in n else "white"
+        ganti = "black" if "black" in n or n == k["warna"]["latar"][2] else "white"   # latar sentiasa hitam
         teks = teks.replace(n, ganti).replace(n.capitalize(), ganti.capitalize())
     teks = WARNA_LAIN.sub("white", teks)
     return re.sub(r"\b(white|black)(?:,? (?:and )?\1\b)+", r"\1", teks, flags=re.I)
@@ -698,8 +718,15 @@ def bina(kid, aid, drop=(), mod="hp"):
     mod="hp" (lalai): hitam putih sahaja. mod="warna": nama warna kad masuk prompt (pembina v1.0, ujian lama)."""
     k, a = KAD[kid], AYAT[aid]
     if mod == "hp":
-        k = dict(k, huruf={r: (kes_, hitam_putih(f, k), "black" if w == "black" else "white")
-                           for r, (kes_, f, w) in k["huruf"].items()},
+        if terang(k):
+            hh = {}
+            for r, (kes_, f, w) in k["huruf"].items():
+                f2 = kotak_hp(hitam_putih(f, k))
+                hh[r] = (kes_, f2, "black" if " inside " in f2 else "white")
+        else:
+            hh = {r: (kes_, hitam_putih(f, k), "black" if w == "black" else "white")
+                  for r, (kes_, f, w) in k["huruf"].items()}
+        k = dict(k, huruf=hh,
                  **{f: hitam_putih(k[f], k) for f in ("medium", "latar", "susunan", "hierarki", "hiasan", "margin",
                                                       "larangan")})
         if "on black only" not in k["larangan"].lower():  # kad satu dakwat sudah ada had ini; prompt kekal seperti diuji
