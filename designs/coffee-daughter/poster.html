@@ -6,45 +6,51 @@ html,body{margin:0;background:#2a2a2c}svg{display:block}
 </style></head><body>
 <svg id="p" width="1200" height="1800" viewBox="0 0 1200 1800" xmlns="http://www.w3.org/2000/svg">
 <defs>
- <path id="top" d="M 175,690 A 425 425 0 0 1 1025,690"/>
- <path id="bot" d="M 100,1440 A 1900 1900 0 0 0 1100,1440"/>
- <filter id="grunge" x="0" y="0" width="1200" height="1800" filterUnits="userSpaceOnUse">
-  <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="2" seed="4" result="n1"/>
-  <feColorMatrix in="n1" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -30 0 0 0 22.2" result="m1"/>
-  <feTurbulence type="fractalNoise" baseFrequency="0.018 0.03" numOctaves="3" seed="21" result="n2"/>
-  <feColorMatrix in="n2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -40 0 0 0 29.4" result="m2"/>
-  <feComposite in="m1" in2="m2" operator="arithmetic" k1="1" result="m"/>
+ <path id="top" d="M 0,870 A 600 600 0 0 1 1200,870"/>
+ <filter id="grunge" x="0" y="0" width="1200" height="1800" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+  <feTurbulence type="fractalNoise" baseFrequency="0.38" numOctaves="2" seed="5" result="n1"/>
+  <feColorMatrix in="n1" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0"/>
+  <feComponentTransfer result="m1"><feFuncA type="discrete" tableValues="1 1 1 1 1 1 1 1 1 1 1 1 1 0 0"/></feComponentTransfer>
+  <feTurbulence type="fractalNoise" baseFrequency="0.022 0.05" numOctaves="4" seed="9" result="n2"/>
+  <feColorMatrix in="n2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0"/>
+  <feComponentTransfer result="m2"><feFuncA type="discrete" tableValues="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0"/></feComponentTransfer>
+  <feComposite in="m1" in2="m2" operator="in" result="m"/>
   <feComposite in="SourceGraphic" in2="m" operator="in"/>
  </filter>
  <mask id="kn" maskUnits="userSpaceOnUse" x="0" y="0" width="1200" height="1800">
   <rect width="1200" height="1800" fill="#fff"/>
-  <text class="s" x="575" y="565" font-size="88" text-anchor="middle" fill="#000">BE</text>
-  <text class="s" x="600" y="1224" font-size="150" text-anchor="middle" textLength="850" lengthAdjust="spacingAndGlyphs" fill="#000">DAUGHTER'S</text>
+  <text id="be" class="s" x="578" y="590" font-size="92" text-anchor="middle" fill="#000">BE</text>
+  <text id="dau" class="s fit" data-w="800" x="600" y="1250" text-anchor="middle" fill="#000">DAUGHTER'S</text>
  </mask>
 </defs>
 <rect width="1200" height="1800" fill="#2a2a2c"/>
-<g id="ink" fill="#f4f1ea"><g transform="translate(0 40)">
- <text class="s" font-size="84" letter-spacing="6"><textPath href="#top" startOffset="50%" text-anchor="middle">MAY YOUR COFFEE</textPath></text>
- <g fill="none" stroke="#f4f1ea" stroke-width="13" stroke-linecap="round">
-  <path d="M520,415 c-20,-26 20,-40 0,-66"/>
-  <path d="M575,405 c-20,-26 20,-40 0,-66"/>
-  <path d="M630,415 c-20,-26 20,-40 0,-66"/>
-  <path d="M700,500 h18 a46,46 0 0 1 0,92 h-30" stroke-width="26"/>
+<g id="ink" fill="#f4f1ea">
+ <text class="s" font-size="78" letter-spacing="7"><textPath href="#top" startOffset="50%" text-anchor="middle">MAY YOUR COFFEE</textPath></text>
+ <g fill="none" stroke="#f4f1ea" stroke-linecap="round" stroke-width="12">
+  <path d="M530,440 c-14,-18 -14,-30 0,-44 s14,-26 0,-44"/>
+  <path d="M580,432 c-14,-18 -14,-30 0,-44 s14,-26 0,-44 s-14,-24 -3,-36"/>
+  <path d="M630,440 c-14,-18 -14,-30 0,-44 s14,-26 0,-44"/>
  </g>
  <g mask="url(#kn)">
-  <path d="M440,446 H710 V540 Q710,632 618,632 H532 Q440,632 440,540 Z"/>
-  <rect x="400" y="648" width="350" height="22" rx="11"/>
-  <path d="M150,1068 L1050,1060 L1046,1268 L154,1274 Z"/>
+  <path d="M696,500 a64,64 0 1 1 0,128 h-24 v-34 h24 a30,30 0 1 0 0,-60 h-24 v-34 z"/>
+  <path d="M450,462 H706 V560 Q706,664 602,664 H554 Q450,664 450,560 Z"/>
+  <path d="M410,684 H746 Q740,708 708,708 H448 Q416,708 410,684 Z"/>
+  <path d="M146,1082 L1054,1074 L1050,1290 L150,1296 Z"/>
  </g>
- <text class="s" x="600" y="895" font-size="200" text-anchor="middle" textLength="930" lengthAdjust="spacingAndGlyphs">STRONGER</text>
- <text class="c" x="600" y="1028" font-size="170" text-anchor="middle" transform="rotate(-6 600 990)">than your</text>
- <text class="s" font-size="158" letter-spacing="10"><textPath href="#bot" startOffset="50%" text-anchor="middle">ATTITUDE</textPath></text>
- <g transform="translate(600 1610)">
-  <path d="M0,-26 l7.6,15.6 17.1,2.5 -12.4,12 2.9,17 -15.2,-8 -15.2,8 2.9,-17 -12.4,-12 17.1,-2.5z"/>
-  <path transform="translate(-70 6) scale(.6)" d="M0,-26 l7.6,15.6 17.1,2.5 -12.4,12 2.9,17 -15.2,-8 -15.2,8 2.9,-17 -12.4,-12 17.1,-2.5z"/>
-  <path transform="translate(70 6) scale(.6)" d="M0,-26 l7.6,15.6 17.1,2.5 -12.4,12 2.9,17 -15.2,-8 -15.2,8 2.9,-17 -12.4,-12 17.1,-2.5z"/>
+ <text class="s fit" data-w="940" x="600" y="920" text-anchor="middle">STRONGER</text>
+ <text class="c" x="604" y="1036" font-size="164" text-anchor="middle" transform="rotate(-6 600 1010)">than your</text>
+ <text class="s fit" data-w="940" x="600" y="1520" text-anchor="middle">ATTITUDE</text>
+ <g transform="translate(600 1612)">
+  <rect x="-470" y="-5" width="400" height="10" rx="5"/><rect x="70" y="-5" width="400" height="10" rx="5"/>
+  <path d="M0,-30 l8.8,18 19.7,2.9 -14.3,13.9 3.4,19.6 -17.6,-9.3 -17.6,9.3 3.4,-19.6 -14.3,-13.9 19.7,-2.9z"/>
  </g>
-</g></g>
+</g>
 </svg>
-<script>if(location.hash==='#grunge')document.getElementById('ink').setAttribute('filter','url(#grunge)');</script>
+<script>
+document.fonts.ready.then(()=>{
+ document.querySelectorAll('.fit').forEach(t=>{t.setAttribute('font-size',100);const w=t.getBBox().width;t.setAttribute('font-size',(100*(+t.dataset.w)/w).toFixed(2));});
+ if(location.hash==='#grunge')document.getElementById('ink').setAttribute('filter','url(#grunge)');
+ document.body.dataset.ready=1;
+});
+</script>
 </body></html>
