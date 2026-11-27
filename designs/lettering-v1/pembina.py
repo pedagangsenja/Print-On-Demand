@@ -43,7 +43,7 @@ MODEL = list(REV)
 W, H = 768, 1024
 # Ubahan CALON kitaran QC (langkah 5): hanya hidup bila dinamakan dalam PEMBINA_UJI (dipisah koma). Ubahan yang
 # berjaya ditulis balik ke aturan (rev naik) dan dibuang dari sini; yang gagal dicatat dalam standard dan dibuang.
-# Tiada calon semasa. (26 Nov 2026: 'zturbo_satu_baris' diuji pada K8G, tidak berjaya, dibuang.)
+# Calon semasa: 'ernie_hiasan_tepat' (27 Nov 2026, bingkai putih ERNIE K11A, K13S). (26 Nov 2026: 'zturbo_satu_baris' diuji pada K8G, tidak berjaya, dibuang.)
 # Nama calon = <model>_<id pilihan> daripada belajar.py (KELAS), cth. zturbo_had_positif; belajar.py memutuskan menang / kalah (3.15).
 UJI = {u for u in os.environ.get("PEMBINA_UJI", "").split(",") if u}
 SATU = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"]
@@ -190,6 +190,9 @@ def ernie(m):
          f"{cap(SATU[m['n'] - 1])} stacked lines in {b['bentuk']} in the center" +
          (f" that {b['condong']}" if b.get("condong") else "") + ": " + "; ".join(butir) + "."]
     s += tambahan(b)
+    if "ernie_hiasan_tepat" in UJI:  # calon 3.15 (27 Nov 2026): hiasan yang dibenarkan dinyatakan tepat
+        s.append("These are the only decorations, on a clean empty background." if b.get("hiasan")
+                 else "There are no decorations, only a clean empty background.")
     s.append(f"Only these {SATU[m['nw'] - 1]} words, no other text, pure black and white, "
              f"{', '.join('no ' + x for x in b['tiada'])}, {b['gaya']} style, {b['margin']}.")
     return " ".join(s)

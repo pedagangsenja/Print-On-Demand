@@ -14,79 +14,79 @@
   "moss": {
    "K9R_s42": [
     true,
-    "Ejaan betul; skrip berus + garis swash",
+    "",
     ""
    ],
    "K9R_s7": [
     true,
-    "Ejaan betul",
+    "",
     ""
    ],
    "K10Q_s42": [
     true,
-    "Ejaan betul; blok tinggi di kanvas (SK03)",
+    "kedudukan: blok tinggi di kanvas (SK03)",
     ""
    ],
    "K10Q_s7": [
     true,
-    "Ejaan betul; blok tinggi (SK03)",
+    "kedudukan: blok tinggi di kanvas (SK03)",
     ""
    ],
    "K11A_s42": [
     true,
-    "Ejaan betul",
+    "",
     ""
    ],
    "K11A_s7": [
     true,
-    "Ejaan betul",
+    "",
     ""
    ],
    "K12T_s42": [
     true,
-    "Ejaan betul; banner TODAY",
+    "",
     ""
    ],
    "K12T_s7": [
     true,
-    "Ejaan betul",
+    "",
     ""
    ],
    "K13S_s42": [
     true,
-    "Ejaan betul; lebar baris tidak sama (BUILD dijarakkan) - nota gaya",
+    "lebar baris tidak sama (BUILD dijarakkan) - nota gaya",
     ""
    ],
    "K13S_s7": [
     true,
-    "Ejaan betul; nota gaya sama",
+    "lebar baris tidak sama (BUILD dijarakkan) - nota gaya",
     ""
    ],
    "K13S_s123": [
     true,
-    "Ejaan betul; nota gaya sama",
+    "lebar baris tidak sama (BUILD dijarakkan) - nota gaya",
     ""
    ]
   },
   "ernie": {
    "K9R_s42": [
     true,
-    "Ejaan betul; skrip berus + swash; paling hampir rujukan",
+    "",
     ""
    ],
    "K9R_s7": [
     true,
-    "Ejaan betul",
+    "",
     ""
    ],
    "K10Q_s42": [
     true,
-    "Ejaan betul; WORK tidak cukup besar (hierarki lemah, nota gaya)",
+    "WORK tidak cukup besar (hierarki lemah, nota gaya)",
     ""
    ],
    "K10Q_s7": [
     true,
-    "Ejaan betul; hierarki lemah sama",
+    "WORK tidak cukup besar (hierarki lemah, nota gaya)",
     ""
    ],
    "K11A_s42": [
@@ -101,17 +101,17 @@
    ],
    "K12T_s42": [
     true,
-    "Ejaan betul; banner + bintang + garis; kuat",
+    "",
     ""
    ],
    "K12T_s7": [
     true,
-    "Ejaan betul; kuat",
+    "",
     ""
    ],
    "K13S_s42": [
     true,
-    "Ejaan betul; blok penuh, baris hampir sama lebar",
+    "",
     ""
    ],
    "K13S_s7": [
@@ -121,86 +121,86 @@
    ],
    "K13S_s123": [
     true,
-    "Ejaan betul; blok penuh",
+    "",
     ""
    ]
   },
   "klein3": {
    "K9R_s42": [
     true,
-    "Ejaan betul; blok kecil di tengah (ruang tepi, SK02)",
+    "blok kecil di tengah (ruang tepi, SK02)",
     ""
    ],
    "K9R_s7": [
     true,
-    "Ejaan betul; blok kecil (ruang tepi, SK02)",
+    "blok kecil (ruang tepi, SK02)",
     ""
    ],
    "K10Q_s42": [
     true,
-    "Ejaan betul; huruf tebal lebar, bukan condensed (nota gaya)",
+    "huruf tebal lebar, bukan condensed (nota gaya)",
     ""
    ],
    "K10Q_s7": [
     true,
-    "Ejaan betul; huruf lebar (nota gaya)",
+    "huruf lebar (nota gaya)",
     ""
    ],
    "K11A_s42": [
     true,
-    "Ejaan betul; condong ada; jalur hazard + bar ucapan",
+    "",
     ""
    ],
    "K11A_s7": [
     true,
-    "Ejaan betul; condong ada",
+    "",
     ""
    ],
    "K12T_s42": [
     true,
-    "Ejaan betul; hiasan atas menyentuh huruf O (tempat salah); dakwat krim bertekstur (kelabu, SK04)",
+    "hiasan atas menyentuh huruf O (tempat salah); dakwat krim bertekstur (kelabu, SK04)",
     ""
    ],
    "K12T_s7": [
     true,
-    "Ejaan betul; hiasan atas menyentuh huruf O (tempat salah); dakwat krim (kelabu, SK04)",
+    "hiasan atas menyentuh huruf O (tempat salah); dakwat krim (kelabu, SK04)",
     ""
    ],
    "K13S_s42": [
     true,
-    "Ejaan betul; blok rata kiri kanan (justified); sentuh tepi kiri / kanan (ruang tepi, SK02); huruf lebar bukan condensed (nota gaya)",
+    "sentuh tepi kiri / kanan (ruang tepi, SK02); huruf lebar bukan condensed (nota gaya)",
     ""
    ],
    "K13S_s7": [
     true,
-    "Ejaan betul; blok rata kiri kanan (justified); sentuh tepi kiri / kanan (ruang tepi, SK02); huruf lebar bukan condensed (nota gaya)",
+    "sentuh tepi kiri / kanan (ruang tepi, SK02); huruf lebar bukan condensed (nota gaya)",
     ""
    ],
    "K13S_s123": [
     true,
-    "Ejaan betul; blok rata kiri kanan (justified); sentuh tepi kiri / kanan (ruang tepi, SK02); huruf lebar bukan condensed (nota gaya)",
+    "sentuh tepi kiri / kanan (ruang tepi, SK02); huruf lebar bukan condensed (nota gaya)",
     ""
    ]
   },
   "zturbo": {
    "K9R_s42": [
     true,
-    "Ejaan betul; blok hampir sentuh tepi kiri (ruang tepi, SK02)",
+    "blok hampir sentuh tepi kiri (ruang tepi, SK02)",
     ""
    ],
    "K9R_s7": [
     true,
-    "Ejaan betul; skrip berus + swash",
+    "",
     ""
    ],
    "K10Q_s42": [
     true,
-    "Ejaan betul; WORK paling besar (hierarki betul); sentuh tepi atas (ruang tepi, SK02)",
+    "sentuh tepi atas (ruang tepi, SK02)",
     ""
    ],
    "K10Q_s7": [
     true,
-    "Ejaan betul; hierarki betul",
+    "",
     ""
    ],
    "K11A_s42": [
@@ -210,32 +210,32 @@
    ],
    "K11A_s7": [
     true,
-    "Ejaan betul; jalur hazard menyentuh huruf A dan C (hiasan di tempat salah); LOSES TO tidak kecil (nota gaya)",
+    "jalur hazard menyentuh huruf A dan C (hiasan di tempat salah); LOSES TO tidak kecil (nota gaya)",
     ""
    ],
    "K12T_s42": [
     true,
-    "Ejaan betul; hiasan atas menyentuh huruf O (tempat salah)",
+    "hiasan atas menyentuh huruf O (tempat salah)",
     ""
    ],
    "K12T_s7": [
     true,
-    "Ejaan betul; hiasan atas menyentuh huruf O (tempat salah)",
+    "hiasan atas menyentuh huruf O (tempat salah)",
     ""
    ],
    "K13S_s42": [
     true,
-    "Ejaan betul; blok penuh tinggi, baris hampir sama lebar; hampir sentuh tepi atas (ruang tepi, SK02)",
+    "hampir sentuh tepi atas (ruang tepi, SK02)",
     ""
    ],
    "K13S_s7": [
     true,
-    "Ejaan betul; blok penuh",
+    "",
     ""
    ],
    "K13S_s123": [
     true,
-    "Ejaan betul; blok penuh",
+    "",
     ""
    ]
   }
