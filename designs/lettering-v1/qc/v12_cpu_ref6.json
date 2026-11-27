@@ -5,160 +5,160 @@
    "K9A_s42": [
     true,
     "",
-    ""
+    "08f41bb7964b1986ff79e6a928598e88"
    ],
    "K10B_s42": [
     true,
     "",
-    ""
+    "38a7a3f7816ec3cbc218445a0427c951"
    ],
    "K11C_s42": [
     true,
     "",
-    ""
+    "c5a497d37d2d674776c614878f00ce12"
    ],
    "K2E_s42": [
     true,
     "",
-    ""
+    "635fbf9e4f7fe3df70cdb5e9fc3412c2"
    ],
    "K12F_s42": [
     true,
     "Baris tidak sama lebar; HABITS tidak gergasi (gaya separa)",
-    ""
+    "f25348aa5051f1e751d59ebccee344a8"
    ],
    "K4Q_s42": [
     true,
     "",
-    ""
+    "19fad4de361994528f322c9520784c65"
    ]
   },
   "ernie": {
    "K9A_s42": [
     true,
     "Garis tambahan: bingkai putih di tepi",
-    ""
+    "164a9324a6ac9e1dd0ddeca47fb7d60b"
    ],
    "K10B_s42": [
     true,
     "Garis tambahan: garis bulatan dilukis walaupun dilarang",
-    ""
+    "f3c69301f929f6d09925287d77940e0d"
    ],
    "K11C_s42": [
     false,
     "Tanda petikan rawak: 'Trust Your' Timing,",
-    ""
+    "34bc0ca80fbcd57c4b37d5f63fc69c2e"
    ],
    "K2E_s42": [
     true,
     "DREAMS putih, tiada kotak putih penuh (hanya kurungan); ciri teras gagal",
-    ""
+    "bf57ef7d0781f33b669e1a714c13cb10"
    ],
    "K12F_s42": [
     true,
     "",
-    ""
+    "b3ec5209b52ef07bd6a5561fb8395b9e"
    ],
    "K4Q_s42": [
     true,
     "",
-    ""
+    "24a706a6d24a4c7c9168b3731fb9f66c"
    ]
   },
   "klein3": {
    "K9A_s42": [
     true,
     "",
-    ""
+    "78e17afe1b350e8c8cbbe56141e82b75"
    ],
    "K10B_s42": [
     true,
     "",
-    ""
+    "4c66951ff49d142f2a6f7f02740025f2"
    ],
    "K11C_s42": [
     true,
     "Tekstur kelabu pada huruf walaupun dilarang",
-    ""
+    "b9a05b77167265841349508cac09da90"
    ],
    "K2E_s42": [
     true,
     "",
-    ""
+    "66792cad2dcd761b7da5ccb636adc17c"
    ],
    "K12F_s42": [
     true,
     "HABITS tidak gergasi (gaya separa)",
-    ""
+    "0869203c7c72735c5a017000e5760e8f"
    ],
    "K4Q_s42": [
     true,
     "",
-    ""
+    "d461e9a520e03662e29e43676189f59a"
    ]
   },
   "zturbo": {
    "K9A_s42": [
     true,
     "Ruang tepi sempit (kerja SK02)",
-    ""
+    "9f6e767a36defc2ecf2cb421895394a4"
    ],
    "K10B_s42": [
     true,
     "Ruang tepi sempit (kerja SK02)",
-    ""
+    "70c392342aff8092aef4cf97b3088225"
    ],
    "K11C_s42": [
     true,
     "Ruang tepi sempit (kerja SK02)",
-    ""
+    "6131bff9df1c70e305cdce0524b55ae6"
    ],
    "K2E_s42": [
     true,
     "Ruang tepi sempit (kerja SK02)",
-    ""
+    "5c36438d6110d59a46af4c7472b409e8"
    ],
    "K12F_s42": [
     true,
     "Ruang tepi sempit (kerja SK02)",
-    ""
+    "4ae58199fa0eba937af4d4cc6d1e8ef8"
    ],
    "K4Q_s42": [
     false,
     "Baris salah: 'QUIET WORK' dipecah jadi dua baris",
-    ""
+    "17daaffb90469906e2295957eb13a802"
    ]
   },
   "klein4b": {
    "K9A_s42": [
     true,
     "Perkataan sokongan bukan skrip (bentuk huruf tersasar)",
-    ""
+    "fe17b7f0e6b9779fe96843c28c58039e"
    ],
    "K10B_s42": [
     false,
     "'DAY' jadi 'DIAY', 'Kindness' jadi 'Kindnesss', 'LIFE' jadi 'LIFFE'; garis tambahan: garis bulatan dilukis",
-    ""
+    "754ea73e9f8536c793cc0777623766f8"
    ],
    "K11C_s42": [
     true,
     "",
-    ""
+    "c18ea59eaeef32c5c5abf25648616eed"
    ],
    "K2E_s42": [
     true,
     "",
-    ""
+    "471abd4490f73fdc08e438186d31bb6a"
    ],
    "K12F_s42": [
     true,
     "",
-    ""
+    "ba8eb95c6e748aa157ec9f0aae14f412"
    ],
    "K4Q_s42": [
     true,
     "",
-    ""
+    "8d33787375642865d8e3fb1ffacc2c3d"
    ]
   }
  }

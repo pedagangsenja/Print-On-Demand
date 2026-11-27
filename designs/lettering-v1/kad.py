@@ -323,7 +323,7 @@ KAD = {
             ("Putih satu warna atas hitam, tiada swash", False)]),
     "K9": dict(
         nama="Skrip melantun + sans bulat pekat + hati bertabur (putih atas hitam)", ref="IMG_5845",
-        snc="belum didaftar", versi="v1.0 (27 Nov 2026; belum diluluskan pengguna)",
+        snc="belum didaftar", versi="v1.0 (27 Nov 2026; diluluskan pengguna 27 Nov 2026)",
         kelas="F1", dakwat=1, ruang_tepi=4, tekstur="tiada", julat="4-7 perkataan",
         warna=dict(latar=("hitam", "#000000", "black"), dakwat=[("putih", "#ffffff", "white")]),
         medium="Playful hand-lettered quote poster, portrait.",
@@ -349,7 +349,7 @@ KAD = {
             ("Satu warna putih atas hitam", False)]),
     "K10": dict(
         nama="Lencana bulat: teks lengkung sans + skrip berus tengah + bintang (putih atas hitam)", ref="IMG_5846",
-        snc="belum didaftar", versi="v1.0 (27 Nov 2026; belum diluluskan pengguna)",
+        snc="belum didaftar", versi="v1.0 (27 Nov 2026; diluluskan pengguna 27 Nov 2026)",
         kelas="F1", dakwat=1, ruang_tepi=8, tekstur="tiada", julat="5-8 perkataan",
         warna=dict(latar=("hitam", "#000000", "black"), dakwat=[("putih", "#ffffff", "white")]),
         medium="Round badge typography design, portrait.",
@@ -377,7 +377,7 @@ KAD = {
             ("Satu warna putih atas hitam", False)]),
     "K11": dict(
         nama="Skrip berus tebal bertangga + swash ekor (putih atas hitam)", ref="IMG_5840",
-        snc="belum didaftar", versi="v1.0 (27 Nov 2026; belum diluluskan pengguna)",
+        snc="belum didaftar", versi="v1.0 (27 Nov 2026; diluluskan pengguna 27 Nov 2026)",
         kelas="F1", dakwat=1, ruang_tepi=11, tekstur="tiada", julat="2-4 perkataan",
         warna=dict(latar=("hitam", "#111111", "black"), dakwat=[("putih", "#ffffff", "white")]),
         medium="Hand-lettered script quote poster, portrait.",
@@ -402,7 +402,7 @@ KAD = {
             ("Satu warna putih atas hitam", False)]),
     "K12": dict(
         nama="Blok sans sempit pekat calar + satu perkataan gergasi (hitam atas koral)", ref="IMG_5793",
-        snc="belum didaftar", versi="v1.0 (27 Nov 2026; belum diluluskan pengguna)",
+        snc="belum didaftar", versi="v1.0 (27 Nov 2026; diluluskan pengguna 27 Nov 2026)",
         kelas="F2", dakwat=1, ruang_tepi=15, tekstur="calar dan bintik lusuh kuat", julat="4-8 perkataan",
         warna=dict(latar=("koral", "#e06455", "coral red"), dakwat=[("hitam", "#0a0a0a", "black")]),
         medium="Bold distressed typographic quote poster, portrait.",
