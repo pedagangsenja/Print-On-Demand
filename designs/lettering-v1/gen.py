@@ -13,6 +13,8 @@ from huggingface_hub import hf_hub_download, snapshot_download  # noqa: E402
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import kad  # noqa: E402
+import khas  # noqa: E402
+import pembina  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
 OUT = HERE / "out"
@@ -22,8 +24,11 @@ DEV = os.environ.get("GEN_DEVICE", "cpu")
 if os.environ.get("GEN_DTYPE") == "fp16":
     DT = torch.float16
 OUT = Path(os.environ.get("GEN_OUT", str(OUT)))
-SEEDS = [42, 7]
+SEEDS = [int(s) for s in os.environ.get("GEN_SEEDS", "42,7").split(",")]  # laluan 2: GEN_SEEDS=42,7,123
 W, H = 768, 1024
+# GEN_VARIAN=pembina: pembina ikut model v1.2 (pembina.py); khas: contoh tulisan tangan (khas.py);
+# lalai "kad" = rangka am, pembina v1.1.
+VARIAN = os.environ.get("GEN_VARIAN", "kad")
 PROFIL = {
     "klein4b": dict(repo="black-forest-labs/FLUX.2-klein-4B", pipe="Flux2KleinPipeline", tr="Flux2Transformer2DModel",
                     varian="bf16 asal", steps=4, guidance=1.0, max_tok=512,
@@ -52,6 +57,16 @@ PROFIL = {
 
 def fit(pipe_tok, kid, aid, max_tok):
     """Turutan potong v1 bila melebihi had token: buang ekor, ruang tepi, hiasan, hierarki, larangan (teks kekal)."""
+    if VARIAN == "khas":
+        return khas.PROMPT[NAMA[0]], khas.petikan(NAMA[0]), ["khas: tiada potong"]
+    if VARIAN == "pembina":  # 3.11: prompt yang gagal semakan atau melebihi had token TIDAK dijana (tiada potong)
+        p, q = pembina.bina(NAMA[0], kid, aid)
+        err = pembina.semak(NAMA[0], kid, aid, p)
+        if pipe_tok is not None and len(pipe_tok(p).input_ids) > max_tok:
+            err.append(f"melebihi had {max_tok} token")
+        if err:
+            raise SystemExit(f"{kid}{aid} {NAMA[0]}: gagal semakan 3.11: {err}")
+        return p, q, [f"pembina {pembina.VERSI}: tiada potong"]
     drop = []
     for part in [None, "tail", "margin", "hiasan", "hierarki", "larangan"]:
         if part:
@@ -60,6 +75,33 @@ def fit(pipe_tok, kid, aid, max_tok):
         if pipe_tok is None or len(pipe_tok(p).input_ids) <= max_tok:
             return p, q, drop
     return p, q, drop
+
+
+NAMA = [None]  # nama model semasa (untuk prompt khas)
+
+
+def pe_ernie(c, mentah):
+    """ERNIE (3.6): penambah prompt rasmi (PE) dijalankan sekali bagi setiap prompt mentah, berasingan (RAM).
+    mentah = {id: prompt mentah}. Pulang {id: (prompt dikembangkan atau None, catatan)}.
+    Varian pembina: hasil PE disemak (pembina.semak_pe); gagal -> seed 7, kemudian 123; masih gagal -> None."""
+    snapshot_download(c["repo"], allow_patterns=["*.json", "pe/*", "pe_tokenizer/*", "scheduler/*"])
+    p = getattr(diffusers, c["pipe"]).from_pretrained(c["repo"], transformer=None, vae=None, text_encoder=None,
+                                                      tokenizer=None, torch_dtype=DT).to(DEV)
+    hasil = {}
+    for key, prompt in mentah.items():
+        hasil[key] = (None, ["PE gagal semakan pada seed 42, 7, 123: PE dimatikan, rangka am dipakai"])
+        for seed in (42, 7, 123):
+            t0 = time.time()
+            torch.manual_seed(seed)
+            with torch.inference_mode():
+                out = p._enhance_prompt_with_pe(prompt, DEV, width=W, height=H)
+            err = pembina.semak_pe(out, key[:-1], key[-1]) if VARIAN == "pembina" else []
+            print("ernie PE", key, "seed", seed, round(time.time() - t0, 1), "s:", out, "| semak:", err or "lulus", flush=True)
+            if not err:
+                hasil[key] = (out, [f"{VARIAN}: PE daripada prompt mentah, seed PE {seed}", prompt])
+                break
+    del p; gc.collect()
+    return hasil
 
 
 def encode(name, pipe, prompt):
@@ -110,7 +152,8 @@ def base_row(name, c, kid, aid, seed, prompt, drop, sec):
                 varian=c["varian"], langkah=c["steps"], guidance=c["guidance"], lora=c.get("lora"),
                 penambah=c.get("penambah"), peranti=DEV if DEV == "cpu" else torch.cuda.get_device_name(0),
                 dtype=str(DT).replace("torch.", ""), seed=seed, w=W, h=H, saat=sec, prompt=prompt, potong=drop,
-                pembina=kad.VERSI_PEMBINA, versi=dict(torch=torch.__version__, diffusers=diffusers.__version__,
+                pembina={"kad": kad.VERSI_PEMBINA, "khas": khas.VERSI}.get(VARIAN, pembina.VERSI), varian_prompt=VARIAN,
+                rev=pembina.rev(name) if VARIAN != "kad" else None, versi=dict(torch=torch.__version__, diffusers=diffusers.__version__,
                                                       transformers=transformers.__version__),
                 masa=time.strftime("%Y-%m-%dT%H:%M:%S"))
 
@@ -132,12 +175,19 @@ def run_kandinsky(c, out, jobs):
 def main():
     name, only = sys.argv[1], set(sys.argv[2:])
     c = PROFIL[name]
+    NAMA[0] = name
+    pe_out = None
+    if VARIAN in ("khas", "pembina") and name == "ernie":
+        c = dict(c, penambah="hidup (PE rasmi, sekali bagi setiap prompt, untuk semua seed)")
     torch.set_num_threads(os.cpu_count() or 4)
     out, jobs = jobs_for(name, only)
     if not jobs:
         print(name, "tiada kerja"); return
     if name == "kandinsky":
         return run_kandinsky(c, out, jobs)
+    if VARIAN in ("khas", "pembina") and name == "ernie":
+        pe_out = pe_ernie(c, {f"{k}{a}": khas.PROMPT["ernie"] if VARIAN == "khas" else pembina.bina("ernie", k, a)[0]
+                              for k, a, _ in jobs})
     snapshot_download(c["repo"], allow_patterns=c.get("pat"))
     Pipe = getattr(diffusers, c["pipe"])
     noext = dict(c.get("noext", {}))
@@ -154,7 +204,12 @@ def main():
         for kid, aid, _ in jobs:
             key = f"{kid}{aid}"
             if key not in embs:
-                p, _, drop = fit(tok, kid, aid, c["max_tok"])
+                if pe_out and pe_out[key][0]:
+                    p, drop = pe_out[key]
+                elif pe_out:  # 3.6: PE gagal semakan tiga kali -> rangka am tanpa PE, direkod
+                    p, drop = kad.bina(kid, aid)[0], pe_out[key][1]
+                else:
+                    p, _, drop = fit(tok, kid, aid, c["max_tok"])
                 prompts[key] = (p, drop)
                 embs[key] = encode(name, pipe, p)
     print(name, "kod prompt", round(time.time() - t0, 1), "s", flush=True)

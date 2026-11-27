@@ -1,0 +1,133 @@
+{
+ "nota": "Daftar S/C daripada larian v1.2 pertama (arahan pengguna 27 Nov 2026: SNC, semua 24 imej lulus; FLUX 3 Klein tidak didaftar: lesen belum diterima). Pengguna memadam sendiri yang tidak mahu.",
+ "rekod": {
+  "S012": {
+   "imej": "moss/K3K_s42",
+   "blob": "b4dfda71eb40a4b8a7685c3de6abf823",
+   "kad": "K3"
+  },
+  "S013": {
+   "imej": "moss/K3K_s7",
+   "blob": "77174defaddf6b9beec4ea1d0e51de64",
+   "kad": "K3"
+  },
+  "S014": {
+   "imej": "moss/K3K_s123",
+   "blob": "1cf0bdbc85b40733d28c8ed1ee848b2f",
+   "kad": "K3"
+  },
+  "S015": {
+   "imej": "ernie/K3K_s42",
+   "blob": "b4e4fab60a02182808f43819efb83aba",
+   "kad": "K3"
+  },
+  "S016": {
+   "imej": "ernie/K3K_s123",
+   "blob": "ad12d112f06c148d789c6b9dd0c6bb34",
+   "kad": "K3"
+  },
+  "S017": {
+   "imej": "zturbo/K3K_s42",
+   "blob": "14b6da06d94aa1d33189e8e118baa83f",
+   "kad": "K3"
+  },
+  "S018": {
+   "imej": "zturbo/K3K_s7",
+   "blob": "6452c2215c893b050b0d735adcd0a517",
+   "kad": "K3"
+  },
+  "S019": {
+   "imej": "zturbo/K3K_s123",
+   "blob": "178c68a3fd883d248af31c9a155f0dcf",
+   "kad": "K3"
+  },
+  "S020": {
+   "imej": "klein4b/K3K_s42",
+   "blob": "500b56d877d0dd23dc7af3a80a5b650c",
+   "kad": "K3"
+  },
+  "S021": {
+   "imej": "klein4b/K3K_s7",
+   "blob": "3832099dde7166a060232a0486634547",
+   "kad": "K3"
+  },
+  "S022": {
+   "imej": "klein4b/K3K_s123",
+   "blob": "df44e5686b548965d34b501f0a4ebf30",
+   "kad": "K3"
+  },
+  "S023": {
+   "imej": "moss/K7M_s42",
+   "blob": "2ed2ab50e5438c485aba1ce1be7338d2",
+   "kad": "K7"
+  },
+  "S024": {
+   "imej": "moss/K7M_s7",
+   "blob": "b39e42ec388ef321d3bff056f0947862",
+   "kad": "K7"
+  },
+  "S025": {
+   "imej": "moss/K7M_s123",
+   "blob": "268d33571f89621643c9f63b59179ab8",
+   "kad": "K7"
+  },
+  "S026": {
+   "imej": "ernie/K7M_s42",
+   "blob": "ee6dc46ea1ff71b9ff96971db35ed282",
+   "kad": "K7"
+  },
+  "S027": {
+   "imej": "ernie/K7M_s7",
+   "blob": "f4271976edd0d4e8ed702478e325441e",
+   "kad": "K7"
+  },
+  "S028": {
+   "imej": "ernie/K7M_s123",
+   "blob": "3c83e6247a9d016d76fe026732f46f71",
+   "kad": "K7"
+  },
+  "S029": {
+   "imej": "zturbo/K7M_s123",
+   "blob": "d2a73e9c8e6eb14a1bf85419450abb04",
+   "kad": "K7"
+  },
+  "S030": {
+   "imej": "klein4b/K7M_s7",
+   "blob": "b07a168051fc9810c4dedb432f52b6b3",
+   "kad": "K7"
+  },
+  "S031": {
+   "imej": "klein4b/K7M_s123",
+   "blob": "851499a671e4834d0d17b870fd9a3dbb",
+   "kad": "K7"
+  },
+  "S032": {
+   "imej": "ernie/K8G_s42",
+   "blob": "c971963f53748c975dcf7cacb8c12093",
+   "kad": "K8"
+  },
+  "S033": {
+   "imej": "ernie/K8G_s7",
+   "blob": "996f4d0c950364315200ba931e60312e",
+   "kad": "K8"
+  },
+  "S034": {
+   "imej": "ernie/K8G_s123",
+   "blob": "91d4c75d45e6fcf89b83e3bf5850b379",
+   "kad": "K8"
+  },
+  "S035": {
+   "imej": "klein4b/K8G_s42",
+   "blob": "03eec35d2d39c040fb9cc20abbfb6779",
+   "kad": "K8"
+  },
+  "C009": {
+   "gaya": "S023",
+   "blob": "1b91fcb1328376608c5c40849d5bb859"
+  },
+  "C010": {
+   "gaya": "S035",
+   "blob": "568322a0c18658b8562d3d4700e1c2bb"
+  }
+ }
+}
