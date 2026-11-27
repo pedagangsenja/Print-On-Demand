@@ -201,6 +201,73 @@
     "G3: tanda petik penutup bersambung dengan kaki huruf N pada MOMENT",
     ""
    ]
+  },
+  "zturbo": {
+   "K9Q_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K9Q_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K9Q_s123": [
+    true,
+    "",
+    ""
+   ],
+   "K10F_s42": [
+    false,
+    "G1: 'FEWER' jadi 'FERER'",
+    ""
+   ],
+   "K10F_s7": [
+    false,
+    "G1: 'FEWER' jadi 'FENER'",
+    ""
+   ],
+   "K11R_s42": [
+    true,
+    "Huruf tegak, bukan italik (ciri teras 1 gagal)",
+    ""
+   ],
+   "K11R_s7": [
+    true,
+    "Huruf tegak, bukan italik (ciri teras 1 gagal)",
+    ""
+   ],
+   "K11R_s123": [
+    true,
+    "Huruf tegak, bukan italik (ciri teras 1 gagal)",
+    ""
+   ],
+   "K12O_s42": [
+    false,
+    "G2: titik selepas setiap perkataan (HOLD. LOOSELY. ...)",
+    ""
+   ],
+   "K12O_s7": [
+    false,
+    "G2: titik selepas setiap perkataan (HOLD. LOOSELY. ...)",
+    ""
+   ],
+   "K13V_s42": [
+    true,
+    "Tiada tanda petik (ciri teras 3 gagal)",
+    ""
+   ],
+   "K13V_s7": [
+    false,
+    "G2: tanda ' sebelum MAKE dan titik selepas MOMENT; tiada tanda petik besar",
+    ""
+   ],
+   "K13V_s123": [
+    true,
+    "Tiada tanda petik (ciri teras 3 gagal); anak panah satu sisi sahaja",
+    ""
+   ]
   }
  }
 }
