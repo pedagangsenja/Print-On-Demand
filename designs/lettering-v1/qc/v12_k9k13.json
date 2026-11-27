@@ -124,6 +124,48 @@
     "Ejaan betul; blok penuh",
     ""
    ]
+  },
+  "klein3": {
+   "K9R_s42": [
+    true,
+    "Ejaan betul; blok kecil di tengah (ruang tepi, SK02)",
+    ""
+   ],
+   "K9R_s7": [
+    true,
+    "Ejaan betul; blok kecil (ruang tepi, SK02)",
+    ""
+   ],
+   "K10Q_s42": [
+    true,
+    "Ejaan betul; huruf tebal lebar, bukan condensed (nota gaya)",
+    ""
+   ],
+   "K10Q_s7": [
+    true,
+    "Ejaan betul; huruf lebar (nota gaya)",
+    ""
+   ],
+   "K11A_s42": [
+    true,
+    "Ejaan betul; condong ada; jalur hazard + bar ucapan",
+    ""
+   ],
+   "K11A_s7": [
+    true,
+    "Ejaan betul; condong ada",
+    ""
+   ],
+   "K12T_s42": [
+    true,
+    "Ejaan betul; hiasan atas menyentuh huruf O (tempat salah); dakwat krim bertekstur (kelabu, SK04)",
+    ""
+   ],
+   "K12T_s7": [
+    true,
+    "Ejaan betul; hiasan atas menyentuh huruf O (tempat salah); dakwat krim (kelabu, SK04)",
+    ""
+   ]
   }
  }
 }
