@@ -1,0 +1,277 @@
+{
+ "nota": "Larian v1.2 pertama, 26 Nov 2026 (malam). Semakan mata Claude pada helaian semakan + potongan besar bagi imej meragukan. Tahap bukti lemah. ok = pintu G1 (ejaan, huruf besar / kecil, baris) dan G2 (tiada teks atau tanda rawak) lulus. Nilai ketiga = id aset dashboard (kosong: pengguna belum pilih A / SNC).",
+ "v12-cpu": {
+  "moss": {
+   "K3K_s42": [
+    true,
+    "Blok tidak condong (dibetulkan SK01)",
+    ""
+   ],
+   "K3K_s7": [
+    true,
+    "Blok tidak condong (dibetulkan SK01)",
+    ""
+   ],
+   "K3K_s123": [
+    true,
+    "Blok tidak condong (dibetulkan SK01)",
+    ""
+   ],
+   "K7M_s42": [
+    true,
+    "Blok tidak condong; blok di atas tengah (dibetulkan SK01, SK03)",
+    ""
+   ],
+   "K7M_s7": [
+    true,
+    "Blok tidak condong (dibetulkan SK01)",
+    ""
+   ],
+   "K7M_s123": [
+    true,
+    "Blok tidak condong (dibetulkan SK01)",
+    ""
+   ],
+   "K8G_s42": [
+    false,
+    "'ALMOST' jadi 'ALMIST'",
+    ""
+   ],
+   "K8G_s7": [
+    false,
+    "'ALMOST' jadi 'ALMIST'",
+    ""
+   ],
+   "K8G_s123": [
+    false,
+    "'ALMOST' jadi 'ALMiOST' (huruf i tambahan)",
+    ""
+   ]
+  },
+  "ernie": {
+   "K3K_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K3K_s7": [
+    false,
+    "Tanda petikan dan koma tambahan: 'KINDNESS', Words, FADE'",
+    ""
+   ],
+   "K3K_s123": [
+    true,
+    "",
+    ""
+   ],
+   "K7M_s42": [
+    true,
+    "Skrip berus kering, lebih nipis daripada rujukan",
+    ""
+   ],
+   "K7M_s7": [
+    true,
+    "Skrip berus kering, lebih nipis daripada rujukan",
+    ""
+   ],
+   "K7M_s123": [
+    true,
+    "Skrip berus kering, lebih nipis daripada rujukan",
+    ""
+   ],
+   "K8G_s42": [
+    true,
+    "Huruf berus nipis tinggi, bukan marker bulat tebal; bintang kecil",
+    ""
+   ],
+   "K8G_s7": [
+    true,
+    "Huruf berus nipis; latar kelabu bertekstur (dibersih SK04)",
+    ""
+   ],
+   "K8G_s123": [
+    true,
+    "Huruf berus nipis; latar kelabu bertekstur (dibersih SK04)",
+    ""
+   ]
+  },
+  "zturbo": {
+   "K3K_s42": [
+    true,
+    "Bintang tidak diminta; tiada percikan di sisi label; label kecil; tiada condong",
+    ""
+   ],
+   "K3K_s7": [
+    true,
+    "Bintang tidak diminta; tiada percikan di sisi label; label kecil",
+    ""
+   ],
+   "K3K_s123": [
+    true,
+    "Bintang tidak diminta; tiada percikan di sisi label; label kecil",
+    ""
+   ],
+   "K7M_s42": [
+    false,
+    "Titik tambahan selepas 'Room'",
+    ""
+   ],
+   "K7M_s7": [
+    false,
+    "Titik tambahan selepas 'Make' dan 'Wonder'",
+    ""
+   ],
+   "K7M_s123": [
+    true,
+    "",
+    ""
+   ],
+   "K8G_s42": [
+    false,
+    "5 baris (KEEP / GOING dipisah); bintik selepas 'THERE' dibaca sebagai noktah",
+    ""
+   ],
+   "K8G_s7": [
+    false,
+    "5 baris (KEEP / GOING dipisah); bintik selepas 'THERE' dibaca sebagai noktah",
+    ""
+   ],
+   "K8G_s123": [
+    false,
+    "'KEEP' rosak ('KEE=P'); 5 baris",
+    ""
+   ]
+  },
+  "klein4b": {
+   "K3K_s42": [
+    true,
+    "Percikan dilukis di dalam label",
+    ""
+   ],
+   "K3K_s7": [
+    true,
+    "Percikan dilukis di dalam label",
+    ""
+   ],
+   "K3K_s123": [
+    true,
+    "Percikan dilukis di dalam label",
+    ""
+   ],
+   "K7M_s42": [
+    false,
+    "Tanda rawak kecil sebelum 'Make'",
+    ""
+   ],
+   "K7M_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K7M_s123": [
+    true,
+    "",
+    ""
+   ],
+   "K8G_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K8G_s7": [
+    false,
+    "'KEEP' jadi 'KEPP'; 'you' jadi 'You'",
+    ""
+   ],
+   "K8G_s123": [
+    false,
+    "'ALMOST' jadi 'ALMOT'; 5 baris",
+    ""
+   ]
+  },
+  "klein3": {
+   "K3K_s42": [
+    true,
+    "Blok tidak condong (dibetulkan SK01)",
+    ""
+   ],
+   "K3K_s7": [
+    true,
+    "Percikan berbentuk anak panah; blok tidak condong",
+    ""
+   ],
+   "K3K_s123": [
+    true,
+    "Blok tidak condong (dibetulkan SK01)",
+    ""
+   ],
+   "K7M_s42": [
+    true,
+    "Lorekan kelabu pada huruf (dibersih SK04)",
+    ""
+   ],
+   "K7M_s7": [
+    true,
+    "Lorekan kelabu pada huruf (dibersih SK04)",
+    ""
+   ],
+   "K7M_s123": [
+    true,
+    "Lorekan kelabu pada huruf; latar tidak hitam tulen (dibersih SK04)",
+    ""
+   ],
+   "K8G_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K8G_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K8G_s123": [
+    true,
+    "",
+    ""
+   ]
+  }
+ },
+ "v12-cpu-p1": {
+  "nota": "Kitaran QC pusingan 1, 26 Nov 2026: satu ubahan setiap model, seed sama. Kedua-dua ubahan TIDAK berjaya.",
+  "moss": {
+   "K8J_s42": [
+    false,
+    "'ALMOST' jadi 'ALMiST' (peranan ditukar: tiada beza)",
+    ""
+   ],
+   "K8J_s7": [
+    false,
+    "'ALMOST' jadi 'ALMiST'",
+    ""
+   ],
+   "K8J_s123": [
+    false,
+    "'ALMOST' jadi 'ALMiST'",
+    ""
+   ]
+  },
+  "zturbo": {
+   "K8G_s42": [
+    false,
+    "Masih 5 baris (KEEP / GOING dipisah); bintik selepas 'THERE'",
+    ""
+   ],
+   "K8G_s7": [
+    false,
+    "Masih 5 baris; 'ALMOST' jadi 'ALWOST'; bintik selepas 'THERE'",
+    ""
+   ],
+   "K8G_s123": [
+    false,
+    "Masih 5 baris; bintik selepas 'THERE'",
+    ""
+   ]
+  }
+ }
+}

@@ -1,0 +1,362 @@
+[
+ {
+  "model": "klein4b",
+  "peranti": "cpu",
+  "id": "K6P_s42",
+  "ejaan": false,
+  "sebab": "'Begin' jadi 'Begon'",
+  "gaya": "swash atas+bawah, blok tegak, bintang, berus kering",
+  "kata_betul": false,
+  "disemak": "Claude, mata, helaian semakan, 25 Nov 2026"
+ },
+ {
+  "model": "klein4b",
+  "peranti": "cpu",
+  "id": "K6P_s7",
+  "ejaan": true,
+  "sebab": "",
+  "gaya": "swash atas+bawah, blok tegak, bintang",
+  "kata_betul": true,
+  "disemak": "Claude, mata, helaian semakan, 25 Nov 2026"
+ },
+ {
+  "model": "klein4b",
+  "peranti": "cpu",
+  "id": "K6D_s42",
+  "ejaan": true,
+  "sebab": "",
+  "gaya": "swash atas+bawah, blok tegak, bintang",
+  "kata_betul": true,
+  "disemak": "Claude, mata, helaian semakan, 25 Nov 2026"
+ },
+ {
+  "model": "klein4b",
+  "peranti": "cpu",
+  "id": "K6D_s7",
+  "ejaan": true,
+  "sebab": "",
+  "gaya": "swash atas+bawah, blok tegak, bintang",
+  "kata_betul": true,
+  "disemak": "Claude, mata, helaian semakan, 25 Nov 2026"
+ },
+ {
+  "model": "klein4b",
+  "peranti": "cpu",
+  "id": "K6L_s42",
+  "ejaan": false,
+  "sebab": "'Mornings' jadi 'Mornigs'",
+  "gaya": "blok tegak, swash bawah",
+  "kata_betul": false,
+  "disemak": "Claude, mata, helaian semakan, 25 Nov 2026"
+ },
+ {
+  "model": "klein4b",
+  "peranti": "cpu",
+  "id": "K6L_s7",
+  "ejaan": false,
+  "sebab": "'Kep', 'Days' berulang, 'Morrrnings'",
+  "gaya": "blok tegak, swash atas+bawah",
+  "kata_betul": false,
+  "disemak": "Claude, mata, helaian semakan, 25 Nov 2026"
+ },
+ {
+  "model": "zturbo",
+  "peranti": "cpu",
+  "id": "K6P_s42",
+  "ejaan": true,
+  "kata_betul": true,
+  "sebab": "",
+  "gaya": "swash, blok tegak, bintang, berus kering",
+  "disemak": "Claude, mata, helaian semakan, 25 Nov 2026"
+ },
+ {
+  "model": "zturbo",
+  "peranti": "cpu",
+  "id": "K6P_s7",
+  "ejaan": true,
+  "kata_betul": true,
+  "sebab": "",
+  "gaya": "swash, blok tegak, bintang",
+  "disemak": "Claude, mata, helaian semakan, 25 Nov 2026"
+ },
+ {
+  "model": "zturbo",
+  "peranti": "cpu",
+  "id": "K6D_s42",
+  "ejaan": false,
+  "kata_betul": true,
+  "sebab": "'Small' jadi 'small' (huruf kecil)",
+  "gaya": "swash banyak, blok tegak",
+  "disemak": "Claude, mata, helaian semakan, 25 Nov 2026"
+ },
+ {
+  "model": "zturbo",
+  "peranti": "cpu",
+  "id": "K6D_s7",
+  "ejaan": false,
+  "kata_betul": true,
+  "sebab": "'Small' jadi 'small' (huruf kecil)",
+  "gaya": "swash banyak, blok tegak",
+  "disemak": "Claude, mata, helaian semakan, 25 Nov 2026"
+ },
+ {
+  "model": "zturbo",
+  "peranti": "cpu",
+  "id": "K6L_s42",
+  "ejaan": false,
+  "kata_betul": true,
+  "sebab": "titik tambahan selepas 'Up'",
+  "gaya": "swash, blok tegak",
+  "disemak": "Claude, mata, helaian semakan, 25 Nov 2026"
+ },
+ {
+  "model": "zturbo",
+  "peranti": "cpu",
+  "id": "K6L_s7",
+  "ejaan": true,
+  "kata_betul": true,
+  "sebab": "",
+  "gaya": "swash, blok tegak, bintang; condong kurang",
+  "disemak": "Claude, mata, helaian semakan, 25 Nov 2026"
+ },
+ {
+  "model": "schnell",
+  "peranti": "cpu",
+  "id": "K6P_s42",
+  "ejaan": false,
+  "kata_betul": false,
+  "sebab": "'Hearts' dan 'Again' berulang",
+  "gaya": "tiada swash, tiada bintang",
+  "disemak": "Claude, mata, helaian semakan, 25 Nov 2026"
+ },
+ {
+  "model": "schnell",
+  "peranti": "cpu",
+  "id": "K6P_s7",
+  "ejaan": true,
+  "kata_betul": true,
+  "sebab": "",
+  "gaya": "tiada swash, tiada bintang (ciri teras gagal)",
+  "disemak": "Claude, mata, helaian semakan, 25 Nov 2026"
+ },
+ {
+  "model": "schnell",
+  "peranti": "cpu",
+  "id": "K6D_s42",
+  "ejaan": false,
+  "kata_betul": false,
+  "sebab": "'ma', 'build', 'Bolder' berulang, 'Step' hilang",
+  "gaya": "tiada swash",
+  "disemak": "Claude, mata, helaian semakan, 25 Nov 2026"
+ },
+ {
+  "model": "schnell",
+  "peranti": "cpu",
+  "id": "K6D_s7",
+  "ejaan": false,
+  "kata_betul": false,
+  "sebab": "'builds' dan 'Bolder' berulang",
+  "gaya": "tiada swash",
+  "disemak": "Claude, mata, helaian semakan, 25 Nov 2026"
+ },
+ {
+  "model": "schnell",
+  "peranti": "cpu",
+  "id": "K6L_s42",
+  "ejaan": false,
+  "kata_betul": false,
+  "sebab": "'On Hard days' berulang, huruf besar salah, titik tambahan",
+  "gaya": "tiada swash",
+  "disemak": "Claude, mata, helaian semakan, 25 Nov 2026"
+ },
+ {
+  "model": "schnell",
+  "peranti": "cpu",
+  "id": "K6L_s7",
+  "ejaan": false,
+  "kata_betul": false,
+  "sebab": "baris berulang, 'omornings'",
+  "gaya": "tiada swash",
+  "disemak": "Claude, mata, helaian semakan, 25 Nov 2026"
+ },
+ {
+  "model": "chroma_flash",
+  "peranti": "cpu",
+  "id": "K6P_s42",
+  "ejaan": false,
+  "kata_betul": false,
+  "sebab": "'Begin' huruf B rosak",
+  "gaya": "swash reben sangat kuat, bintang; padat, tiada ruang tepi",
+  "disemak": "Claude, mata, helaian semakan, 25 Nov 2026"
+ },
+ {
+  "model": "chroma_flash",
+  "peranti": "cpu",
+  "id": "K6P_s7",
+  "ejaan": false,
+  "kata_betul": false,
+  "sebab": "'Begin' jadi 'Bigin'",
+  "gaya": "swash reben, bintang; padat",
+  "disemak": "Claude, mata, helaian semakan, 25 Nov 2026"
+ },
+ {
+  "model": "chroma_flash",
+  "peranti": "cpu",
+  "id": "K6D_s42",
+  "ejaan": false,
+  "kata_betul": false,
+  "sebab": "'Small' berulang, 'Step' rosak, 'builds' berulang, 'You' rosak",
+  "gaya": "swash reben; padat",
+  "disemak": "Claude, mata, helaian semakan, 25 Nov 2026"
+ },
+ {
+  "model": "chroma_flash",
+  "peranti": "cpu",
+  "id": "K6D_s7",
+  "ejaan": false,
+  "kata_betul": false,
+  "sebab": "perkataan rosak dan tambahan",
+  "gaya": "kabur, padat",
+  "disemak": "Claude, mata, helaian semakan, 25 Nov 2026"
+ },
+ {
+  "model": "chroma_flash",
+  "peranti": "cpu",
+  "id": "K6L_s42",
+  "ejaan": false,
+  "kata_betul": false,
+  "sebab": "'On Hard Days' rosak, 'Betters', teks tandatangan di bucu",
+  "gaya": "swash reben; teks rawak (G2 gagal)",
+  "disemak": "Claude, mata, helaian semakan, 25 Nov 2026"
+ },
+ {
+  "model": "chroma_flash",
+  "peranti": "cpu",
+  "id": "K6L_s7",
+  "ejaan": false,
+  "kata_betul": false,
+  "sebab": "'on' tambahan, 'Days' rosak",
+  "gaya": "swash reben; padat",
+  "disemak": "Claude, mata, helaian semakan, 25 Nov 2026"
+ },
+ {
+  "model": "moss",
+  "peranti": "cpu",
+  "id": "K6P_s42",
+  "ejaan": true,
+  "kata_betul": true,
+  "sebab": "",
+  "gaya": "swash atas+bawah+celah, bintang, berus kering, blok tegak",
+  "disemak": "Claude, mata, helaian semakan, 25 Nov 2026"
+ },
+ {
+  "model": "moss",
+  "peranti": "cpu",
+  "id": "K6P_s7",
+  "ejaan": true,
+  "kata_betul": true,
+  "sebab": "",
+  "gaya": "swash atas+bawah+celah, bintang, berus kering, blok tegak",
+  "disemak": "Claude, mata, helaian semakan, 25 Nov 2026"
+ },
+ {
+  "model": "moss",
+  "peranti": "cpu",
+  "id": "K6D_s42",
+  "ejaan": true,
+  "kata_betul": true,
+  "sebab": "",
+  "gaya": "swash atas+bawah+celah, bintang, berus kering, blok tegak",
+  "disemak": "Claude, mata, helaian semakan, 25 Nov 2026"
+ },
+ {
+  "model": "moss",
+  "peranti": "cpu",
+  "id": "K6D_s7",
+  "ejaan": true,
+  "kata_betul": true,
+  "sebab": "",
+  "gaya": "swash atas+bawah+celah, bintang, berus kering, blok tegak",
+  "disemak": "Claude, mata, helaian semakan, 25 Nov 2026"
+ },
+ {
+  "model": "moss",
+  "peranti": "cpu",
+  "id": "K6L_s42",
+  "ejaan": true,
+  "kata_betul": true,
+  "sebab": "",
+  "gaya": "swash atas+bawah+celah, bintang, berus kering, blok tegak",
+  "disemak": "Claude, mata, helaian semakan, 25 Nov 2026"
+ },
+ {
+  "model": "moss",
+  "peranti": "cpu",
+  "id": "K6L_s7",
+  "ejaan": true,
+  "kata_betul": true,
+  "sebab": "",
+  "gaya": "swash atas+bawah+celah, bintang, berus kering, blok tegak",
+  "disemak": "Claude, mata, helaian semakan, 25 Nov 2026"
+ },
+ {
+  "model": "ernie",
+  "peranti": "cpu",
+  "id": "K6P_s42",
+  "ejaan": true,
+  "kata_betul": true,
+  "sebab": "",
+  "gaya": "swash, bintang, berus kering, blok tegak; bingkai kelabu di tepi (perlu dipotong)",
+  "disemak": "Claude, mata, helaian semakan, 25 Nov 2026"
+ },
+ {
+  "model": "ernie",
+  "peranti": "cpu",
+  "id": "K6P_s7",
+  "ejaan": true,
+  "kata_betul": true,
+  "sebab": "",
+  "gaya": "swash, bintang, berus kering, blok tegak; bingkai kelabu di tepi (perlu dipotong)",
+  "disemak": "Claude, mata, helaian semakan, 25 Nov 2026"
+ },
+ {
+  "model": "ernie",
+  "peranti": "cpu",
+  "id": "K6D_s42",
+  "ejaan": true,
+  "kata_betul": true,
+  "sebab": "",
+  "gaya": "swash, bintang, berus kering, blok tegak; bingkai kelabu di tepi (perlu dipotong)",
+  "disemak": "Claude, mata, helaian semakan, 25 Nov 2026"
+ },
+ {
+  "model": "ernie",
+  "peranti": "cpu",
+  "id": "K6D_s7",
+  "ejaan": true,
+  "kata_betul": true,
+  "sebab": "",
+  "gaya": "swash, bintang, berus kering, blok tegak; bingkai kelabu di tepi (perlu dipotong)",
+  "disemak": "Claude, mata, helaian semakan, 25 Nov 2026"
+ },
+ {
+  "model": "ernie",
+  "peranti": "cpu",
+  "id": "K6L_s7",
+  "ejaan": true,
+  "kata_betul": true,
+  "sebab": "",
+  "gaya": "swash, bintang, berus kering, blok tegak; bingkai kelabu di tepi (perlu dipotong)",
+  "disemak": "Claude, mata, helaian semakan, 25 Nov 2026"
+ },
+ {
+  "model": "ernie",
+  "peranti": "cpu",
+  "id": "K6L_s42",
+  "ejaan": false,
+  "kata_betul": false,
+  "sebab": "Mornings jadi Morrings",
+  "gaya": "swash, bintang; bingkai kelabu di tepi",
+  "disemak": "Claude, mata, helaian semakan, 25 Nov 2026"
+ }
+]
