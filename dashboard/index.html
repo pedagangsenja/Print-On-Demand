@@ -210,7 +210,6 @@
     <button type="button" class="pod-tab-btn" role="tab" id="btn-font" data-tab="tab-font" aria-controls="tab-font" aria-selected="false" tabindex="-1">Font</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-model2" data-tab="tab-model2" aria-controls="tab-model2" aria-selected="false" tabindex="-1">AI Image Test</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-lesen" data-tab="tab-lesen" aria-controls="tab-lesen" aria-selected="false" tabindex="-1">Lesen</button>
-    <button type="button" class="pod-tab-btn" role="tab" id="btn-sejarah" data-tab="tab-sejarah" aria-controls="tab-sejarah" aria-selected="false" tabindex="-1">Chat lepas</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-setup" data-tab="tab-setup" aria-controls="tab-setup" aria-selected="false" tabindex="-1">Setup</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-workflow" data-tab="tab-workflow" aria-controls="tab-workflow" aria-selected="false" tabindex="-1">Workflow</button>
     <button type="button" class="pod-tab-btn" role="tab" id="btn-aliran" data-tab="tab-aliran" aria-controls="tab-aliran" aria-selected="false" tabindex="-1">Aliran</button>
@@ -989,32 +988,6 @@
 
 </section>
 
-<section id="tab-sejarah" class="pod-tab" role="tabpanel" aria-labelledby="btn-sejarah" hidden>
-
-<div id="sj-intro" class="pod-section pod-first">
-  <p class="pod-lede">Rekod hasil setiap sesi chat lepas: apa dibuat, berapa imej dijana, berapa design lulus, dan pelajaran untuk sesi seterusnya.</p>
-</div>
-
-<section id="m-sejarah" class="pod-section">
-  <h2>Hasil chat lepas</h2>
-  <p class="pod-muted">Dikumpul semula dari sesi 22–23 Nov (cawangan eager-brahmagupta dan intelligent-bell).</p>
-  <div class="pod-table-wrap">
-    <table id="m-table-history" data-source="model_history" data-row-key="what">
-      <thead><tr>
-        <th data-field="date">Tarikh</th>
-        <th data-field="what">Apa dibuat</th>
-        <th class="pod-num" data-field="images">Imej</th>
-        <th class="pod-num" data-field="designs">Design lulus</th>
-        <th data-field="result">Hasil</th>
-        <th data-field="lesson">Pelajaran</th>
-      </tr></thead>
-      <tbody data-draw="m-history-body"></tbody>
-    </table>
-  </div>
-</section>
-
-</section>
-
 <section id="tab-setup" class="pod-tab" role="tabpanel" aria-labelledby="btn-setup" hidden>
 
 <div id="st-intro" class="pod-section pod-first">
@@ -1348,7 +1321,7 @@
 <div class="fc-subbar" role="tablist" aria-label="Sub tab FC">
   <button type="button" class="fc-sub-btn" role="tab" id="btn-fc-design" data-sub="fc-design" aria-controls="fc-design" aria-selected="true">Design v1.2</button>
 </div>
-<section id="fc-design" class="pod-section pod-first fc-sub" role="tabpanel" aria-labelledby="btn-fc-design"><p class="pod-muted">Memuatkan carta…</p></section>
+<section id="fc-design" class="pod-section pod-first fc-sub" role="tabpanel" aria-labelledby="btn-fc-design"><div class="fc-host" data-draw="fc-design">—</div></section>
 </section>
 <!-- FC:TAB END -->
 
@@ -2544,17 +2517,6 @@ dash.draw('st-ai-body', (tb) => {
   });
 });
 
-dash.calc('model_klein_stats', {
-  title: 'Hasil FLUX.2 klein 4B (batch 1–3)',
-  description: 'Jumlah imej dijana dan design lulus dalam batch 1–3, dan purata imej setiap design lulus.',
-  inputs: ['model_history'],
-  fn: (history) => {
-    const b = history.filter((r) => String(r.what).startsWith('Batch'));
-    const images = b.reduce((s, r) => s + Number(r.images || 0), 0);
-    const designs = b.reduce((s, r) => s + Number(r.designs || 0), 0);
-    return [{ images, designs, per_design: designs ? Math.round((images / designs) * 10) / 10 : null }];
-  }
-});
 dash.calc('model_counts', {
   title: 'Bilangan model calon dan ditolak',
   description: 'Model berkeputusan "UJI DAHULU" dan "Tolak" dalam jadual banding model.',
@@ -3063,13 +3025,16 @@ document.querySelectorAll('#f-filter-src').forEach((s) => s.addEventListener('ch
 document.querySelectorAll('#f-filter-w').forEach((s) => s.addEventListener('change', () => { POD.fw = s.value; dash.draw('f-master-body'); dash.draw('f-master-count'); }));
 document.querySelectorAll('#f-q').forEach((s) => s.addEventListener('input', () => { POD.fq = s.value.trim().toLowerCase(); dash.draw('f-master-body'); dash.draw('f-master-count'); }));
 
+POD.jsonv = (v, d) => { if (v == null || v === '') return d; if (typeof v !== 'string') return v; try { return JSON.parse(v); } catch (e) { return d; } };
+POD.fMoods = (r) => { const a = POD.jsonv(r.moods, []); return Array.isArray(a) ? a : String(a).split(/[;,]\s*/).filter(Boolean); };
+POD.fScore = (r) => { const s = POD.jsonv(r.score, {}); return s && typeof s === 'object' ? s : {}; };
 POD.fontRows = () => {
   const rows = POD.ok('fonts_master');
   if (!rows) return null;
-  return rows.filter((r) => (!POD.fm || (r.moods || []).includes(POD.fm)) && (!POD.fs || r.src === POD.fs)
+  return rows.filter((r) => (!POD.fm || POD.fMoods(r).includes(POD.fm)) && (!POD.fs || r.src === POD.fs)
     && (!POD.fq || String(r.name).toLowerCase().includes(POD.fq) || String(r.cat || '').toLowerCase().includes(POD.fq))
     && (!POD.fw || (POD.fw === '5' ? Number(r.nw) >= 5 : POD.fw === 'var' ? r.var : r.it)))
-    .sort((a, b) => (POD.fm ? ((b.score || {})[POD.fm] || 70) - ((a.score || {})[POD.fm] || 70) : 0) || (Number(b.q) || 0) - (Number(a.q) || 0) || String(a.name).localeCompare(String(b.name)));
+    .sort((a, b) => (POD.fm ? (POD.fScore(b)[POD.fm] || 70) - (POD.fScore(a)[POD.fm] || 70) : 0) || (Number(b.q) || 0) - (Number(a.q) || 0) || String(a.name).localeCompare(String(b.name)));
 };
 POD.FMAX = 150;
 dash.draw('f-master-count', (el) => {
@@ -3089,7 +3054,7 @@ dash.draw('f-master-body', (tb) => {
     const lt = document.createElement('td'); const la = POD.link(r.lic_url, r.lic); lt.appendChild(la || document.createTextNode(r.lic || '—'));
     if (r.risk === 'semak') { lt.appendChild(document.createTextNode(' ')); lt.appendChild(POD.pill('semak', null, 'warn')); }
     tr.appendChild(lt);
-    POD.cell(tr, (r.moods || []).map((x) => ml[x] || x).join(', '));
+    POD.cell(tr, POD.fMoods(r).map((x) => ml[x] || x).join(', '));
     POD.cell(tr, r.w + (r.it ? ' + italic' : ''));
     POD.cell(tr, r.q == null ? '—' : POD.int(r.q));
     POD.cell(tr, r.cat);
