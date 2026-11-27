@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Standard v1.2, langkah 4: jana ikut pembina (pembina.py) di CPU, satu enjin pada satu masa, dengan PERATURAN LANGKAU.
 # Guna: IDS="K3H" GEN_OUT=<folder hasil> bash run_v12.sh [enjin...]
-#   Lalai dan turutan enjin: moss ernie zturbo klein4b (turutan lulus QC, AI Image Test 2). Seed: GEN_SEEDS (lalai 42,7,123).
+#   Lalai dan turutan enjin: moss ernie klein3 zturbo klein4b (turutan lulus QC, AI Image Test 2; klein3 = FLUX 3 Image Klein,
+#   ditambah selepas MOSS dan ERNIE atas keputusan pengguna 27 Nov 2026, lesen diterima). Seed: GEN_SEEDS (lalai 42,7,123).
 # Peraturan langkau (standard, langkah 4): enjin DILANGKAU dan enjin seterusnya terus dijalankan apabila
 #   (a) masa enjin melebihi HAD_SAAT (lalai: 20 minit muat turun + 13 minit bagi setiap imej), atau
 #   (b) enjin gagal 3 cubaan berturut-turut (ralat muat turun, RAM, semakan 3.11).
@@ -18,7 +19,7 @@ HAD_SAAT="${HAD_SAAT:-$(( 1200 + 780 * NIMEJ ))}"
 mkdir -p "$GEN_OUT"
 rekod() { echo "{\"enjin\": \"$1\", \"rc\": $2, \"saat\": $3, \"peranti\": \"$GEN_DEVICE\", \"prompt\": \"pembina\", \"id\": \"$IDS\", \"masa\": \"$(date +%Y-%m-%dT%H:%M:%S)\"}" >> "$GEN_OUT/enjin_masa.jsonl"; }
 langkau() { echo "{\"enjin\": \"$1\", \"sebab\": \"$2\", \"saat\": $3, \"had_saat\": $HAD_SAAT, \"id\": \"$IDS\", \"masa\": \"$(date +%Y-%m-%dT%H:%M:%S)\"}" >> "$GEN_OUT/langkau.jsonl"; echo "== LANGKAU $1: $2"; }
-for e1 in ${@:-moss ernie zturbo klein4b}; do
+for e1 in ${@:-moss ernie klein3 zturbo klein4b}; do
   t0=$(date +%s); rc=1
   for cubaan in 1 2 3; do
     baki=$(( HAD_SAAT - ($(date +%s) - t0) )); [ $baki -le 0 ] && { rc=124; break; }

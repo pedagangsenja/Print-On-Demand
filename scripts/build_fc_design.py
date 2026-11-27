@@ -108,7 +108,7 @@ NODES = [
                   "Z-Image Turbo: huraian panjang seperti kapsyen; baris bernombor; had ditulis sebagai ayat positif",
                   "ERNIE Turbo: prompt mentah pendek + penambah prompt rasmi sekali (seed 42); hasil disemak sebelum jana",
                   "MOSS + LoRA: satu objek JSON; satu butir dan satu kotak piksel bagi setiap baris",
-                  "FLUX 3 Image Klein (r0, diuji di CPU: 9/9; lesen belum diterima): kapsyen penuh + jadual kotak JSON grid 0–1000; didaftar dalam standard sahaja, tidak dipakai untuk design jualan",
+                  "FLUX 3 Image Klein (r0, diuji di CPU: 9/9; lesen diterima 27 Nov 2026): kapsyen penuh + jadual kotak JSON grid 0–1000; boleh dipakai untuk design jualan ikut syarat lesen",
                   "Qwen-Image-2512 (r0, belum diuji): kurang 200 perkataan; setiap baris = kedudukan, perkataan dalam petikan, gaya",
                   "GLM-Image (r0, belum diuji): naratif bersambung tanpa senarai; setiap baris = kedudukan, fungsi, perkataan dalam petikan, gaya font"],
          alat=[("pembina.py (Python)", "prompt 7 model daripada 8 kad + semakan 3.11; larian pertama: 33/45 imej lulus ejaan", OK),

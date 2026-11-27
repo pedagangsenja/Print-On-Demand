@@ -203,7 +203,7 @@ Dipakai untuk model tanpa aturan sendiri, dan sebagai pembanding dalam ujian kel
 - **Tetapan:** checkpoint suling, 16 langkah, tanpa guidance (Space: mod "Distilled (16 steps)", `guidance_scale` 1.0), `prompt_upsampling` False, 768×1024, seed tetap.
 - **Tempat jalan:** CPU boleh (diukur 26 Nov 2026: 357 s setiap imej, 768×1024, 16 langkah, bf16; `gen_flux3.py`, pipeline modular diffusers, pengekod teks dan transformer dimuat berasingan; perlu torchvision). Space rasmi `black-forest-labs/flux-3-image-klein` (GPU, kuota harian) tidak dipakai.
 - **Lesen (rasmi):** FLUX Kommunity v1.0: hasil komersial dibenarkan untuk pengguna dengan hasil kasar di bawah US$5 juta setahun, tertakluk kepada syarat lesen. Berbeza daripada enam model lain (Apache 2.0 / MIT).
-- **Status pemakaian (keputusan pengguna 27 Nov 2026):** lesen BELUM diterima. Model ini hanya didaftar dalam standard bersama aturan promptnya; ia TIDAK dipakai untuk design jualan dan imejnya tidak didaftar dalam Daftar S/C. Ia tiada dalam turutan model lalai (`run_v12.sh`). Imej ujian 26 Nov disimpan dalam repo sebagai rekod sahaja.
+- **Status pemakaian (keputusan pengguna 27 Nov 2026, dikemas kini petang yang sama):** lesen DITERIMA oleh pengguna. Model boleh dipakai untuk design jualan dan imejnya boleh didaftar dalam Daftar S/C, tertakluk kepada syarat lesen (rasmi, fail LICENSE.md model): hasil kasar di bawah US$5 juta setahun; setiap imej disemak dahulu supaya tiada kandungan haram atau yang melanggar hak orang lain (QC + saringan trademark); imej dilabel buatan AI jika undang-undang mewajibkan; BFL boleh menarik balik lesen dengan notis. Sebelum keputusan ini lesen belum diterima, sebab itu 9 imej ujian 26 Nov tidak didaftar dalam Daftar S/C. Turutan model lalai (`run_v12.sh`, keputusan pengguna 27 Nov 2026): moss, ernie, klein3, zturbo, klein4b. 9 imej ujian 26 Nov tidak didaftar dalam Daftar S/C (keputusan pengguna 27 Nov 2026: sudah ada dalam AI Image Test). Akses repo berpagar Hugging Face: akaun pengguna sudah boleh memuat turun fail (disemak 27 Nov 2026).
 - **Cara jana prompt:** `python3 designs/lettering-v1/pembina.py <id> klein3` (contoh `K3K`); jana: `IDS="<id>" bash run_v12.sh klein3`.
 - **Borang 10 soalan (3.12 B), dijawab daripada kad model rasmi (dibaca 26 Nov 2026):**
 
@@ -217,7 +217,7 @@ Dipakai untuk model tanpa aturan sendiri, dan sebagai pembanding dalam ujian kel
 | 6 | Kotak disokong: tag `<id>` dalam kapsyen + senarai JSON; `bbox` = [atas, kiri, bawah, kanan] pada grid 0–1000. Kotak membimbing kedudukan dan saiz, bukan topeng keras. Gambar rujukan: hingga 10 |
 | 7 | 16 langkah, tiada guidance; lalai 1024×1024. Kita: 768×1024 |
 | 8 | Transformer 5.6B = 11.1 GB bf16; pengekod teks 8.3 GB; VAE 0.3 GB. CPU 15 GB boleh jika pengekod teks dan transformer dimuat berasingan; 357 s setiap imej (diukur). Perlu torchvision |
-| 9 | FLUX Kommunity v1.0; repo berpagar (perlu setuju syarat). Pengguna belum menerima lesen |
+| 9 | FLUX Kommunity v1.0; repo berpagar (perlu setuju syarat). Pengguna menerima lesen 27 Nov 2026 |
 | 10 | Rasmi: teks boleh tidak tepat; unsur boleh melepasi kotak; unsur kecil mungkin tidak muncul. Ujian kita: 9/9 ejaan betul |
 - **Cacat diketahui (ujian pertama, 26 Nov 2026, 9 imej, 3 kad):** blok tidak condong (kotak tegak; dibetulkan SK01); lorekan kelabu pada huruf K7 (dibersih SK04). Ejaan 9/9. Kad model: teks boleh tidak tepat; unsur kecil yang diminta mungkin tidak muncul; unsur boleh melepasi kotaknya.
 
@@ -374,7 +374,7 @@ Tempat menyimpan aturan model baharu yang ditulis ikut 3.12 (3.14.1, 3.14.2, …
 - Z-Image Turbo r1 (4/9): cuba `zturbo_had_positif` (teks dan tanda baca rawak, 4 imej, K7M dan K8G).
 - ERNIE Turbo r1 (8/9): cuba `ernie_frasa_bentuk` (skrip lebih nipis dan label lebih besar daripada kad, 6 imej lulus).
 - MOSS + LoRA r1 (6/9): 'ALMOST' salah pada 3/3 seed K8G; dua pilihan sudah dicuba atau tidak berkenaan → tukar model bagi ayat itu.
-- FLUX 3 Image Klein r0 (9/9): perlu jana rangka am pada kad, ayat dan seed yang sama untuk ujian kelayakan; lesen belum diterima.
+- FLUX 3 Image Klein r0 (9/9): perlu jana rangka am pada kad, ayat dan seed yang sama untuk ujian kelayakan; lesen diterima pengguna (27 Nov 2026).
 - Qwen-Image-2512 r0, GLM-Image r0: belum diuji.
 
 ## Langkah 4: Jana
@@ -623,7 +623,7 @@ Model baharu juga memerlukan aturan prompt sendiri sebelum dipakai untuk design 
 | Z-Image × K8 | Baris berbilang perkataan ditulis "as two words side by side on one line" | 0/3 → 0/3 (masih 5 baris; 'ALWOST' pada seed 7) | Tidak berjaya; dibuang |
 
 - **Model × kad selepas larian ini** (bukti lemah, satu ayat setiap kad): K8 = ERNIE, FLUX 3 Klein (lulus 3/3), klein 4B (1/3); MOSS dan Z-Image tidak sesuai untuk K8. K7 = MOSS, ERNIE, FLUX 3 Klein (3/3), klein 4B (2/3), Z-Image (1/3). K3 = semua lima model (ERNIE 2/3, lain 3/3).
-- **FLUX 3 Image Klein:** ujian pertama aturan 3.8 (kapsyen + jadual kotak, penambah prompt dibuang). 9/9 lulus G1–G2; kedudukan baris mengikut kotak. Pembanding rangka am belum dijalankan, jadi rev kekal r0 (syarat 3.12 F belum dipenuhi). Lesen FLUX Kommunity: hasil komersial bersyarat; pengguna belum memutuskan.
+- **FLUX 3 Image Klein:** ujian pertama aturan 3.8 (kapsyen + jadual kotak, penambah prompt dibuang). 9/9 lulus G1–G2; kedudukan baris mengikut kotak. Pembanding rangka am belum dijalankan, jadi rev kekal r0 (syarat 3.12 F belum dipenuhi). Lesen FLUX Kommunity: hasil komersial bersyarat; pengguna menerima lesen 27 Nov 2026 (lihat 3.8).
 - **5b:** 33 imej yang lulus dibetulkan (24 + 9 FLUX 3 Klein); angka di bawah untuk 24 yang pertama: imej dibetulkan (`designs/lettering-v1/betul/v12-cpu/`, `log_5b.jsonl`); 0 gagal semakan akhir. Dua pembaikan skrip semasa larian: SK05 v1.1 (bintik latar di tepi tidak lagi menggagalkan imej) dan SK02 v1.1 (ruang tepi sisi dan atas / bawah berasingan; K3: 13.6 / 15.5, K7: 6.2 / 11.3).
 - **Kemasan (SK06):** imej terbaik setiap design, pilihan Claude; pengguna memilih melalui Daftar S/C: K3K MOSS seed 42 (gaya S3, putih; warna kuning belum kerana SK07 belum dibina), K7M MOSS seed 42 (gaya S2, krim + butir), K8G klein 4B seed 42 (gaya S4, kapur). Fail: `designs/lettering-v1/final/v12-cpu/` (SVG induk + pratonton 18×24); gambar ringkas `qc/v12_cpu_akhir.jpg`.
 
@@ -646,7 +646,7 @@ Setiap ubahan aturan (3.4–3.10) direkod di sini, dan juga dalam `designs/lette
 - v1.2, sudah dibina (26 Nov): SK01–SK05 dan `betulkan.py`; SK06 (`finish.py`) dibawa ke cawangan ini.
 - v1.2, sudah dibina (27 Nov): belajar selepas setiap jana (`belajar.py`, 3.15). `gen_hf_space.py` (ujian K6 lama) belum mencatat `rev` dan `uji`.
 - v1.2, belum dibina: SK07 (warna ikut peranan), SK08 (bayang ikut kad); kemasan belum membaca palet, ruang tepi dan tekstur daripada kad; semakan ejaan automatik (kini mata sahaja).
-- v1.2, belum selesai: sudut rujukan K1 dan K6 belum diukur; pembanding rangka am untuk FLUX 3 Klein belum dijalankan; lesen FLUX 3 Klein belum diterima pengguna; Qwen-Image-2512 dan GLM-Image belum diuji (tidak muat di CPU).
+- v1.2, belum selesai: sudut rujukan K1 dan K6 belum diukur; pembanding rangka am untuk FLUX 3 Klein belum dijalankan; Qwen-Image-2512 dan GLM-Image belum diuji (tidak muat di CPU).
 - v1.2, bukti masih lemah: aturan 3.4–3.7 diuji pada satu kad (K3) dan satu ayat sahaja. Perlu diulang pada kad lain dan ayat pendek sebelum dianggap kukuh.
 - v1.2, belum diuji langsung: aturan 3.8–3.10 (FLUX 3 Image Klein, Qwen-Image-2512, GLM-Image). Perlu ujian kelayakan melalui Space (GPU, kuota harian); pengguna sebelum ini meminta CPU sahaja, jadi ujian ini menunggu kebenaran. `gen_hf_space.py` belum ada profil untuk tiga Space ini.
 - Calon v1.3, belum diuji: gambar rujukan sebagai input model (klein 4B dan Z-Image ada saluran input gambar dalam diffusers; ERNIE tiada).
