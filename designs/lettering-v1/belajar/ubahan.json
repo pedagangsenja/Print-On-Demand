@@ -132,5 +132,50 @@
   "selepas": "9/9",
   "keputusan": "menang",
   "nota": "Ujian kelayakan 3.12 F: rangka am (raw/v12-cpu-am) 6/9, gagal K8G 3/3 ('KEEP GOING' tanpa jarak); aturan 3.8 (raw/v12-cpu) 9/9; CPU; teks aturan tidak berubah"
+ },
+ {
+  "tarikh": "2026-11-27",
+  "model": "zturbo",
+  "rev_dari": "r1",
+  "rev_ke": "r2",
+  "ubahan": "had_positif",
+  "kelas": [
+   "rawak"
+  ],
+  "design": "K7M, K8G",
+  "sebelum": "0/4",
+  "selepas": "2/4",
+  "keputusan": "menang",
+  "nota": "Ayat had ditulis positif ('Every letter in the image belongs to these N words ... the rest of the canvas is plain empty background'), ganti 'The only text in the image is...'. K7M s42 / s7: titik tambahan hilang. K8G s42 / s7 masih gagal (5 baris, bintik dibaca noktah: kelas lain). raw/v12-cpu-uji, seed sama"
+ },
+ {
+  "tarikh": "2026-11-27",
+  "model": "klein4b",
+  "rev_dari": "r1",
+  "rev_ke": "r1",
+  "ubahan": "hiasan_kedudukan",
+  "kelas": [
+   "hiasan_tempat"
+  ],
+  "design": "K3K",
+  "sebelum": "3/3",
+  "selepas": "3/3",
+  "keputusan": "kalah",
+  "nota": "Percikan ditulis 'placed outside the label, one group on its left and one on its right'. Pada mata percikan kini di luar label 3/3 (sebelum di dalam), tetapi lulus G1+G2 seri 3/3 dan tiada ♥, jadi KALAH ikut peraturan 3.15 (seri dipecah oleh ♥ sahaja)"
+ },
+ {
+  "tarikh": "2026-11-27",
+  "model": "ernie",
+  "rev_dari": "r1",
+  "rev_ke": "r1",
+  "ubahan": "had_positif",
+  "kelas": [
+   "rawak"
+  ],
+  "design": "K11C, K3K",
+  "sebelum": "0/2",
+  "selepas": "1/2",
+  "keputusan": "kalah",
+  "nota": "'each written once and nothing else written' ganti 'no other text'. Tanda petikan hilang 2/2, tetapi K3K s7 dapat kelas cacat baharu: 'AFTER' berulang, garis dan bintang tambahan"
  }
 ]

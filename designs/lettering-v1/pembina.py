@@ -25,8 +25,8 @@ VERSI = "v1.2-p1"
 DAFTAR = {
     "klein4b": dict(nama="FLUX.2 klein 4B", bahagian="3.4", rev="r1", tarikh="2026-11-26",
                     status="diuji: K3H, CPU, 3 seed", sumber="kad model BFL (rasmi); panduan BFL (lemah)"),
-    "zturbo": dict(nama="Z-Image Turbo", bahagian="3.5", rev="r1", tarikh="2026-11-26",
-                   status="diuji: K3H, CPU, 3 seed", sumber="pasukan Z-Image di Hugging Face + pe.py (rasmi)"),
+    "zturbo": dict(nama="Z-Image Turbo", bahagian="3.5", rev="r2", tarikh="2026-11-27",
+                   status="diuji: K3H, CPU, 3 seed; r2 had_positif: K7M + K8G 0/4 -> 2/4", sumber="pasukan Z-Image di Hugging Face + pe.py (rasmi)"),
     "ernie": dict(nama="ERNIE-Image-Turbo", bahagian="3.6", rev="r1", tarikh="2026-11-26",
                   status="diuji: K3H, CPU, 3 seed", sumber="dokumen diffusers + kad model (rasmi)"),
     "moss": dict(nama="MOSS-Image SFT + LoRA 8 langkah", bahagian="3.7", rev="r1", tarikh="2026-11-26",
@@ -43,8 +43,8 @@ MODEL = list(REV)
 W, H = 768, 1024
 # Ubahan CALON kitaran QC (langkah 5): hanya hidup bila dinamakan dalam PEMBINA_UJI (dipisah koma). Ubahan yang
 # berjaya ditulis balik ke aturan (rev naik) dan dibuang dari sini; yang gagal dicatat dalam standard dan dibuang.
-# Calon semasa (TINDAKAN CUBA belajar.py, 27 Nov 2026; belum diuji): klein4b_hiasan_kedudukan, zturbo_had_positif,
-# ernie_had_positif. (26 Nov 2026: 'zturbo_satu_baris' diuji pada K8G, tidak berjaya, dibuang.)
+# Calon semasa: klein4b_dua_kata_sebaris (CUBA, 27 Nov 2026; belum diuji). 27 Nov 2026: zturbo_had_positif MENANG (aturan 3.5 r2); klein4b_hiasan_kedudukan dan
+# ernie_had_positif KALAH, dibuang. (26 Nov 2026: 'zturbo_satu_baris' diuji pada K8G, tidak berjaya, dibuang.)
 # Nama calon = <model>_<id pilihan> daripada belajar.py (KELAS), cth. zturbo_had_positif; belajar.py memutuskan menang / kalah (3.15).
 UJI = {u for u in os.environ.get("PEMBINA_UJI", "").split(",") if u}
 SATU = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"]
@@ -130,12 +130,12 @@ def klein4b(m):
             t = (f'{a} sits a {l["bekas"]}, and inside that {l["nama"]} the {l["kata"]} "{l["q"]}" {l["ialah"]} '
                  f'printed in {l["dalam"]}')
             if l is m["sisi"]:
-                t += (f', with {b["sisi"]["frasa"]} placed outside the {l["nama"]}, one group on its left and one '
-                      f'group on its right' if "klein4b_hiasan_kedudukan" in UJI else
-                      f', with {b["sisi"]["frasa"]} on each side of the {l["nama"]}')
+                t += f', with {b["sisi"]["frasa"]} on each side of the {l["nama"]}'
         else:
             t = (f'{a}, the {l["kata"]} "{l["q"]}" {l["ialah"]} written in '
                  f'{frasa(l, lambda d: " as the top line" if d == 0 else "")}')
+            if "klein4b_dua_kata_sebaris" in UJI and " " in l["q"]:   # calon CUBA 27 Nov 2026 (belajar 3.15, kelas baris)
+                t += f', as {SATU[len(l["q"].split()) - 1]} words side by side on one line'
         s.append(t + (", and it is the largest line of all." if l["tertinggi"] else "."))
     if b.get("sentuh"):
         s.append(f"The lines {b['sentuh']}.")
@@ -171,13 +171,10 @@ def zturbo(m):
             t = f'Line {SATU[l["i"]]}{p} reads "{l["q"]}" in {frasa(l, lambda d: f" as line {SATU[d]}")}'
         s.append(t + (", and it is the tallest line of the poster." if l["tertinggi"] else "."))
     s += tambahan(b)
-    if "zturbo_had_positif" in UJI:  # calon: had ditulis sebagai ayat positif, tiada 'only text'
-        s.append(f"Every letter in the image belongs to these {SATU[m['nw'] - 1]} words, and each word appears once; "
-                 f"the rest of the canvas is plain empty background. The image uses only pure white and pure black, "
-                 f"{b['ada']}.")
-    else:
-        s.append(f"The only text in the image is these {SATU[m['nw'] - 1]} words, each appearing once. The image uses "
-                 f"only pure white and pure black, {b['ada']}.")
+    # r2 (27 Nov 2026, belajar 3.15, ubahan had_positif MENANG): had ditulis sebagai ayat positif
+    s.append(f"Every letter in the image belongs to these {SATU[m['nw'] - 1]} words, and each word appears once; "
+             f"the rest of the canvas is plain empty background. The image uses only pure white and pure black, "
+             f"{b['ada']}.")
     return " ".join(s)
 
 
@@ -199,7 +196,7 @@ def ernie(m):
          (f" that {b['condong']}" if b.get("condong") else "") + ": " + "; ".join(butir) + "."]
     s += tambahan(b)
     s.append(f"Only these {SATU[m['nw'] - 1]} words, " +
-             ("each written once and nothing else written, " if "ernie_had_positif" in UJI else "no other text, ") +
+             "no other text, " +
              "pure black and white, "
              f"{', '.join('no ' + x for x in b['tiada'])}, {b['gaya']} style, {b['margin']}.")
     return " ".join(s)

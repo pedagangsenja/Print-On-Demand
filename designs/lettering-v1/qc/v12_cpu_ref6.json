@@ -125,8 +125,68 @@
    ],
    "K4Q_s42": [
     false,
-    "Baris salah: 'QUIET WORK' dipecah jadi dua baris",
+    "Baris salah: 'QUIET WORK' dipisah jadi dua baris",
     "17daaffb90469906e2295957eb13a802"
+   ],
+   "K9A_s7": [
+    true,
+    "Ruang tepi sempit (kerja SK02)",
+    ""
+   ],
+   "K9A_s123": [
+    true,
+    "Ruang tepi sempit (kerja SK02)",
+    ""
+   ],
+   "K10B_s7": [
+    true,
+    "Ruang tepi sempit (kerja SK02)",
+    ""
+   ],
+   "K10B_s123": [
+    true,
+    "Ruang tepi sempit (kerja SK02)",
+    ""
+   ],
+   "K11C_s7": [
+    true,
+    "Ruang tepi sempit (kerja SK02)",
+    ""
+   ],
+   "K11C_s123": [
+    true,
+    "Ruang tepi sempit (kerja SK02)",
+    ""
+   ],
+   "K2E_s7": [
+    true,
+    "Ruang tepi sempit (kerja SK02)",
+    ""
+   ],
+   "K2E_s123": [
+    true,
+    "Ruang tepi sempit (kerja SK02)",
+    ""
+   ],
+   "K12F_s7": [
+    true,
+    "Ruang tepi sempit (kerja SK02)",
+    ""
+   ],
+   "K12F_s123": [
+    true,
+    "Ruang tepi sempit (kerja SK02)",
+    ""
+   ],
+   "K4Q_s7": [
+    false,
+    "'LOUD' jadi 'LOOD'; bayang kelabu pada huruf",
+    ""
+   ],
+   "K4Q_s123": [
+    false,
+    "'LOUD' jadi 'LOOD'; 'QUIET WORK' dipisah jadi dua baris; bayang kelabu pada huruf",
+    ""
    ]
   },
   "klein4b": {
@@ -159,6 +219,66 @@
     true,
     "",
     "8d33787375642865d8e3fb1ffacc2c3d"
+   ],
+   "K9A_s7": [
+    true,
+    "Garis tambahan: bingkai nipis di tepi",
+    ""
+   ],
+   "K9A_s123": [
+    false,
+    "'Kids' berulang: 'Brave Kids Kids'",
+    ""
+   ],
+   "K10B_s7": [
+    true,
+    "Garis tambahan: bulatan kelabu penuh di belakang lencana (latar tidak hitam)",
+    ""
+   ],
+   "K10B_s123": [
+    false,
+    "'TEACHER' jadi 'TEACHIER' (huruf I tambahan)",
+    ""
+   ],
+   "K11C_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K11C_s123": [
+    true,
+    "",
+    ""
+   ],
+   "K2E_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K2E_s123": [
+    true,
+    "",
+    ""
+   ],
+   "K12F_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K12F_s123": [
+    true,
+    "",
+    ""
+   ],
+   "K4Q_s7": [
+    false,
+    "3 baris salah: 'QUIET WORK' dipisah jadi dua baris",
+    ""
+   ],
+   "K4Q_s123": [
+    false,
+    "'QUIET WORK' dipisah jadi dua baris",
+    ""
    ]
   }
  }

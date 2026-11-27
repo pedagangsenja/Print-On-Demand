@@ -129,7 +129,7 @@ Dipakai untuk model tanpa aturan sendiri, dan sebagai pembanding dalam ujian kel
 - **Tetapan:** bf16 asal, 4 langkah, guidance 1.0, tiada penambah prompt.
 - **Cacat diketahui (r1):** garis percikan dilukis di dalam label pada 2/3 imej. Ubahan pertama untuk dicuba: nyatakan `in the black space to the left and to the right of the label`.
 
-### 3.5 Aturan Z-Image Turbo (rev r1)
+### 3.5 Aturan Z-Image Turbo (rev r2: had positif, 27 Nov 2026)
 - **Sumber:** perbincangan rasmi pasukan Z-Image di Hugging Face dan templat penambah prompt mereka (`pe.py`): prompt panjang dan terperinci; teks tepat dalam petikan berganda; untuk poster, huraikan font dan susun atur; tiada negative prompt; had 512 token (rasmi). Julat 80–250 perkataan (pihak ketiga).
 - **Bentuk:** huraian objektif yang panjang, seperti kapsyen gambar. Ayat penyata ("The poster contains…", "Line two reads…"), bukan arahan ("make", "draw").
 - **Turutan ayat:**
@@ -701,6 +701,10 @@ Setiap ubahan aturan (3.4–3.10) direkod di sini, dan juga dalam `designs/lette
 
 | Tarikh | Model | Rev | Cacat dengan rangka am | Ubahan | Ejaan betul sebelum → selepas |
 |---|---|---|---|---|---|
+| 27 Nov 2026 | Z-Image Turbo | r1 → r2 | Titik / tanda rawak (K7M, K8G) | `had_positif` MENANG: ayat had akhir kini "Every letter in the image belongs to these N words, and each word appears once; the rest of the canvas is plain empty background" (ganti "The only text in the image is…") | G1+G2 0/4 → 2/4 (K7M 2/2 bersih; K8G masih 5 baris + bintik). Had: prompt K3L kini 254 perkataan (> 250), K3L tidak boleh dijana dengan Z-Image |
+| 27 Nov 2026 | klein 4B | r1 | Percikan di dalam label (K3K) | `hiasan_kedudukan` KALAH: percikan di luar label 3/3 pada mata, tetapi lulus seri 3/3 tanpa ♥ (peraturan 3.15) | 3/3 → 3/3 |
+| 27 Nov 2026 | ERNIE Turbo | r1 | Tanda petikan rawak (K11C, K3K) | `had_positif` KALAH: tanda petikan hilang 2/2, tetapi K3K s7 dapat 'AFTER' berulang + hiasan tambahan | 0/2 → 1/2 (kelas baharu) |
+| 27 Nov 2026 | klein 4B | r1 | 'QUIET WORK' dipisah jadi dua baris (K4Q s7, s123; Z-Image juga) | `dua_kata_sebaris` CUBA (calon dalam `pembina.py`, belum dijana) | – |
 | 26 Nov 2026 | klein 4B | r1 | Label tambahan di bawah; "WHAT" tiada kotak (3/3) | Prosa mengalir; gaya di dalam ayat baris; had satu ayat | 0/3 → 3/3 |
 | 26 Nov 2026 | Z-Image Turbo | r1 | Bintang dan garis lengkung yang tidak diminta | Huraian panjang, baris bernombor, had positif | 3/3 → 3/3 |
 | 26 Nov 2026 | ERNIE Turbo | r1 | "WHAT WHAT" (3/3) | Prompt mentah pendek + PE rasmi | 0/3 → 2/3 |

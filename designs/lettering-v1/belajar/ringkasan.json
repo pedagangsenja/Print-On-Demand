@@ -1,7 +1,7 @@
 {
  "versi": "b1.1 (27 Nov 2026)",
  "tarikh": "2026-11-27",
- "imej": 156,
+ "imej": 189,
  "suka": 0,
  "tolak": 0,
  "model": {
@@ -29,31 +29,55 @@
      "design": 1
     },
     "r1": {
-     "imej": 15,
-     "lulus": 11,
-     "pct": 73,
+     "imej": 27,
+     "lulus": 19,
+     "pct": 70,
      "suka": 0,
      "tolak": 0,
      "design": 9
     }
    },
    "semasa": {
-    "imej": 15,
-    "lulus": 11,
-    "pct": 73,
+    "imej": 27,
+    "lulus": 19,
+    "pct": 70,
     "suka": 0,
     "tolak": 0,
     "design": 9
    },
    "semua": {
-    "imej": 27,
-    "lulus": 17,
-    "pct": 63,
+    "imej": 42,
+    "lulus": 28,
+    "pct": 67,
     "suka": 0,
     "tolak": 0,
     "design": 13
    },
    "berulang": [
+    {
+     "kelas": "baris",
+     "nama": "Bilangan baris salah (baris dipisah)",
+     "imej": 3,
+     "gagal": 3,
+     "design": [
+      "K4Q",
+      "K8G"
+     ],
+     "cadangan": "dua_kata_sebaris",
+     "cadangan_teks": "Nyatakan dua perkataan sebaris (\"as two words side by side on one line\")"
+    },
+    {
+     "kelas": "hiasan_lebih",
+     "nama": "Hiasan yang tidak diminta",
+     "imej": 3,
+     "gagal": 1,
+     "design": [
+      "K10B",
+      "K9A"
+     ],
+     "cadangan": "hiasan_tepat",
+     "cadangan_teks": "Nyatakan hiasan yang dibenarkan dengan tepat, tambah \"clean empty background\""
+    },
     {
      "kelas": "hiasan_tempat",
      "nama": "Hiasan di tempat salah",
@@ -62,17 +86,17 @@
      "design": [
       "K3K"
      ],
-     "cadangan": "hiasan_kedudukan",
-     "cadangan_teks": "Nyatakan kedudukan hiasan (kiri dan kanan, di luar label)"
+     "cadangan": null,
+     "cadangan_teks": "Pilihan ubahan habis: tukar ke model seterusnya ikut jadual model × gaya, kemudian pendekkan ayat, kemudian lapor kepada pengguna"
     }
    ],
-   "ubahan_dicuba": 1,
+   "ubahan_dicuba": 2,
    "suka_imej": [],
    "tindakan": [
     {
      "jenis": "cuba",
-     "ubahan": "hiasan_kedudukan",
-     "teks": "Satu ubahan untuk jana seterusnya model ini: PEMBINA_UJI=klein4b_hiasan_kedudukan (Nyatakan kedudukan hiasan (kiri dan kanan, di luar label)) bagi cacat 'Hiasan di tempat salah' (imej lulus; ciri gaya kad) (3 imej, 1 design); jana bersama aturan semasa, seed sama"
+     "ubahan": "dua_kata_sebaris",
+     "teks": "Satu ubahan untuk jana seterusnya model ini: PEMBINA_UJI=klein4b_dua_kata_sebaris (Nyatakan dua perkataan sebaris (\"as two words side by side on one line\")) bagi cacat 'Bilangan baris salah (baris dipisah)' (3 imej, 2 design); jana bersama aturan semasa, seed sama"
     }
    ]
   },
@@ -80,8 +104,8 @@
    "model": "zturbo",
    "nama": "Z-Image Turbo",
    "bahagian": "3.5",
-   "rev": "r1",
-   "status": "diuji: K3H, CPU, 3 seed",
+   "rev": "r2",
+   "status": "diuji: K3H, CPU, 3 seed; r2 had_positif: K7M + K8G 0/4 -> 2/4",
    "ikut_rev": {
     "am": {
      "imej": 12,
@@ -100,95 +124,37 @@
      "design": 1
     },
     "r1": {
-     "imej": 15,
-     "lulus": 9,
-     "pct": 60,
+     "imej": 27,
+     "lulus": 19,
+     "pct": 70,
      "suka": 0,
      "tolak": 0,
      "design": 9
     }
    },
    "semasa": {
-    "imej": 15,
-    "lulus": 9,
-    "pct": 60,
+    "imej": 0,
+    "lulus": 0,
+    "pct": null,
     "suka": 0,
     "tolak": 0,
-    "design": 9
+    "design": 0
    },
    "semua": {
-    "imej": 33,
-    "lulus": 19,
-    "pct": 58,
+    "imej": 49,
+    "lulus": 31,
+    "pct": 63,
     "suka": 0,
     "tolak": 0,
     "design": 13
    },
-   "berulang": [
-    {
-     "kelas": "rawak",
-     "nama": "Teks rawak, label atau tanda baca tambahan",
-     "imej": 4,
-     "gagal": 4,
-     "design": [
-      "K7M",
-      "K8G"
-     ],
-     "cadangan": "had_positif",
-     "cadangan_teks": "Buang perkataan berisiko daripada ayat had (label, logo, signature, watermark); tulis had sebagai ayat positif"
-    },
-    {
-     "kelas": "baris",
-     "nama": "Bilangan baris salah (baris dipisah)",
-     "imej": 3,
-     "gagal": 3,
-     "design": [
-      "K8G"
-     ],
-     "cadangan": "frasa_hierarki",
-     "cadangan_teks": "Frasa hierarki atau nisbah baris dalam aturan model"
-    },
-    {
-     "kelas": "bentuk",
-     "nama": "Bentuk huruf atau saiz label lain daripada kad",
-     "imej": 3,
-     "gagal": 0,
-     "design": [
-      "K3K"
-     ],
-     "cadangan": "frasa_bentuk",
-     "cadangan_teks": "Frasa bentuk huruf dalam aturan model"
-    },
-    {
-     "kelas": "hiasan_lebih",
-     "nama": "Hiasan yang tidak diminta",
-     "imej": 3,
-     "gagal": 0,
-     "design": [
-      "K3K"
-     ],
-     "cadangan": "hiasan_tepat",
-     "cadangan_teks": "Nyatakan hiasan yang dibenarkan dengan tepat, tambah \"clean empty background\""
-    },
-    {
-     "kelas": "hiasan_tempat",
-     "nama": "Hiasan di tempat salah",
-     "imej": 3,
-     "gagal": 0,
-     "design": [
-      "K3K"
-     ],
-     "cadangan": "hiasan_kedudukan",
-     "cadangan_teks": "Nyatakan kedudukan hiasan (kiri dan kanan, di luar label)"
-    }
-   ],
-   "ubahan_dicuba": 2,
+   "berulang": [],
+   "ubahan_dicuba": 3,
    "suka_imej": [],
    "tindakan": [
     {
-     "jenis": "cuba",
-     "ubahan": "had_positif",
-     "teks": "Satu ubahan untuk jana seterusnya model ini: PEMBINA_UJI=zturbo_had_positif (Buang perkataan berisiko daripada ayat had (label, logo, signature, watermark); tulis had sebagai ayat positif) bagi cacat 'Teks rawak, label atau tanda baca tambahan' (4 imej, 2 design); jana bersama aturan semasa, seed sama"
+     "jenis": "tiada",
+     "teks": "Tiada tindakan: tiada cacat berulang pada aturan semasa"
     }
    ]
   },
@@ -233,9 +199,9 @@
     "design": 9
    },
    "semua": {
-    "imej": 27,
-    "lulus": 20,
-    "pct": 74,
+    "imej": 29,
+    "lulus": 21,
+    "pct": 72,
     "suka": 0,
     "tolak": 0,
     "design": 13
@@ -250,8 +216,8 @@
       "K11C",
       "K3K"
      ],
-     "cadangan": "had_positif",
-     "cadangan_teks": "Buang perkataan berisiko daripada ayat had (label, logo, signature, watermark); tulis had sebagai ayat positif"
+     "cadangan": null,
+     "cadangan_teks": "Pilihan ubahan habis: tukar ke model seterusnya ikut jadual model × gaya, kemudian pendekkan ayat, kemudian lapor kepada pengguna"
     },
     {
      "kelas": "bentuk",
@@ -279,13 +245,12 @@
      "cadangan_teks": "Nyatakan hiasan yang dibenarkan dengan tepat, tambah \"clean empty background\""
     }
    ],
-   "ubahan_dicuba": 1,
+   "ubahan_dicuba": 2,
    "suka_imej": [],
    "tindakan": [
     {
-     "jenis": "cuba",
-     "ubahan": "had_positif",
-     "teks": "Satu ubahan untuk jana seterusnya model ini: PEMBINA_UJI=ernie_had_positif (Buang perkataan berisiko daripada ayat had (label, logo, signature, watermark); tulis had sebagai ayat positif) bagi cacat 'Teks rawak, label atau tanda baca tambahan' (2 imej, 2 design); jana bersama aturan semasa, seed sama"
+     "jenis": "habis",
+     "teks": "Cacat 'Teks rawak, label atau tanda baca tambahan': Pilihan ubahan habis: tukar ke model seterusnya ikut jadual model × gaya, kemudian pendekkan ayat, kemudian lapor kepada pengguna"
     }
    ]
   },
