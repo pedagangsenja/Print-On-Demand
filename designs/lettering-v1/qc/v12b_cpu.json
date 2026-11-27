@@ -1,0 +1,85 @@
+{
+ "nota": "Larian v1.2 kedua (kad K9-K12 + K4), 27 Nov 2026. CPU sahaja, hitam putih, seed 42/7/123. Semakan mata Claude pada helaian semakan (tahap bukti lemah). ok = G1 (ejaan, huruf besar/kecil, baris) + G2 (tiada teks rawak) + G3 (tiada cacat) lulus dan ciri kad >=7/8. Nilai ketiga = id aset dashboard (kosong: pengguna belum pilih A / SNC).",
+ "v12b-cpu": {
+  "moss": {
+   "K9B_s42": [
+    true,
+    "G1-G3 lulus; skrip sukan + swash bawah; ciri 8/8; latar ada corak samar (SK04 bersihkan)",
+    ""
+   ],
+   "K10N_s42": [
+    true,
+    "G1-G3 lulus; 'build' huruf kecil dalam kapsul; doodle; ciri 8/8",
+    ""
+   ],
+   "K4F_s42": [
+    true,
+    "G1-G3 lulus; serif Victoria + hiasan; ciri 8/8",
+    ""
+   ],
+   "K12Y_s42": [
+    true,
+    "G1-G3 lulus; kurungan atas/bawah + anak panah; ciri 8/8; latar ada corak samar (SK04 bersihkan)",
+    ""
+   ],
+   "K9B_s7": [
+    true,
+    "G1-G3 lulus; skrip sukan + swash bawah; ciri 8/8",
+    ""
+   ],
+   "K10N_s7": [
+    true,
+    "G1-G3 lulus; 'build' huruf kecil dalam kapsul; doodle; ciri 8/8",
+    ""
+   ],
+   "K4F_s7": [
+    true,
+    "G1-G3 lulus; serif Victoria + hiasan; ciri 8/8",
+    ""
+   ],
+   "K12Y_s7": [
+    true,
+    "G1-G3 lulus; kurungan atas/bawah + anak panah; ciri 8/8",
+    ""
+   ],
+   "K9B_s123": [
+    true,
+    "G1-G3 lulus; skrip sukan + swash bawah; ciri 8/8",
+    ""
+   ],
+   "K10N_s123": [
+    true,
+    "G1-G3 lulus; 'build' huruf kecil dalam kapsul; doodle; ciri 8/8",
+    ""
+   ],
+   "K4F_s123": [
+    true,
+    "G1-G3 lulus; serif Victoria + hiasan; ciri 8/8",
+    ""
+   ],
+   "K12Y_s123": [
+    true,
+    "G1-G3 lulus; kurungan atas/bawah + anak panah; ciri 8/8",
+    ""
+   ],
+   "K11S_s42": [
+    false,
+    "G2 gagal: teks rawak 'capir', 'capitals', 'xpitals' di sisi STILL / FOR MY",
+    ""
+   ],
+   "K11S_s7": [
+    false,
+    "G2 gagal: 'capitals' x4 di sisi STILL / FOR MY",
+    ""
+   ],
+   "K11S_s123": [
+    false,
+    "G2 gagal: 'driving', 'capitals', 'alving', 'bypitals' di sisi",
+    ""
+   ]
+  },
+  "sebab_sistematik": {
+   "K11S moss": "kapsyen penyambung 'small hand-drawn capitals tucked tightly beside the big words' + kotak penuh lebar (sama_lebar) -> model isi sisi dengan perkataan 'capitals'. Kitaran QC pusingan 1: satu ubahan kapsyen penyambung K11, dijalankan selepas semua enjin pusingan 1 siap (supaya pusingan 1 sama untuk semua enjin)."
+  }
+ }
+}
