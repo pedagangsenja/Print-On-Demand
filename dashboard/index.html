@@ -192,11 +192,21 @@
 .mt-zoom-close { position: absolute; top: 12px; right: 12px; padding: 6px 12px; border-radius: 999px; border: 1px solid #fff; background: transparent; color: #fff; cursor: pointer; }
 @media print { .mt-zoom { display: none; } }
 @media print { .pod-tabbar, .pod-nav, .pod th { position: static; } .pod-scroll { max-height: none; overflow: visible; border: 0; } .pod-nav, .pod-tabbar { display: none; } .pod details { border: 0; } #tab-font, #tab-model, #tab-lesen, #tab-sejarah, #tab-setup, #tab-workflow, #tab-aliran, #tab-daftar, #tab-fc, #tab-model2 { break-before: page; } }
-.pod-kod { margin: var(--cds-gap-sm) 0 0; display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: var(--cds-font-size-caption); line-height: 1.45; }
+.pod-kod-pane { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-md); font-size: var(--cds-font-size-caption); line-height: 1.45; min-width: 0; }
+.pod-kod-pane h2 { margin: 0 0 6px; font-size: var(--cds-font-size-body); }
+.pod-kod { margin: 0; display: flex; flex-wrap: wrap; gap: 6px 14px; }
 .pod-kod > div { display: flex; gap: 6px; align-items: baseline; min-width: 0; }
-.pod-kod dt { margin: 0; font-weight: 700; min-width: 2.2em; text-align: center; padding: 0 5px; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background: var(--color-panel); color: var(--color-fg); }
+.pod-kod dt { margin: 0; flex: none; font-weight: 700; min-width: 2.2em; text-align: center; padding: 0 5px; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background: var(--color-bg); color: var(--color-fg); }
 .pod-kod dd { margin: 0; color: var(--color-fg-muted); }
-.pod-kod-eg { flex-basis: 100%; margin: 4px 0 0; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.pod-kod-eg { margin: 8px 0 0; color: var(--color-fg-muted); }
+@media (min-width: 1000px) {
+  .pod { grid-template-columns: minmax(0, 1fr) 230px; column-gap: var(--cds-gap-lg); row-gap: 0; }
+  .pod > * { grid-column: 1; }
+  .pod > * + * { margin-top: calc(var(--cds-gap-xl) * 1.5); }
+  .pod > .pod-kod-pane { grid-column: 2; grid-row: 1 / span 999; align-self: start; position: sticky; top: 8px; margin-top: 0; max-height: calc(100vh - 16px); overflow-y: auto; }
+  .pod-kod { flex-direction: column; gap: 6px; }
+}
+@media print { .pod-kod-pane { display: none; } }
 </style>
 <link rel="stylesheet" href="fc.css">
 <link rel="stylesheet" href="aliran.css">
@@ -209,7 +219,11 @@
 <header id="ringkasan" class="pod-section pod-first">
   <div class="pod-kicker">Riset untuk kedai typography di Pinterest</div>
   <h1>Riset POD Typography</h1>
-  <dl class="pod-kod" id="kod-pendek" aria-label="Maksud kod pendek">
+</header>
+
+<aside id="kod-pendek" class="pod-kod-pane" aria-labelledby="kod-pendek-h">
+  <h2 id="kod-pendek-h">Kod pendek</h2>
+  <dl class="pod-kod">
     <div><dt>A</dt><dd>Ayat: nombor ayat poster (A001)</dd></div>
     <div><dt>S</dt><dd>Style: gaya tipografi (S001), tab Daftar S/C</dd></div>
     <div><dt>C</dt><dd>Color: gabungan warna (C001), tab Daftar S/C</dd></div>
@@ -220,7 +234,7 @@
     <div><dt>♥</dt><dd>Gambar yang anda suka, tab ♥ Disukai</dd></div>
   </dl>
   <p class="pod-kod-eg">Contoh kod poster: <b>A001-S003-C002</b> = ayat 1, gaya 3, warna 2. Hitam putih tanpa C: <b>A001-S003</b>.</p>
-</header>
+</aside>
 
 <div class="pod-tabbar" role="tablist" aria-label="Tab dashboard">
     <button type="button" class="pod-tab-btn" role="tab" id="btn-poster" data-tab="tab-poster" aria-controls="tab-poster" aria-selected="true">Ujikaji</button>
