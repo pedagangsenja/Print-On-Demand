@@ -43,7 +43,8 @@ MODEL = list(REV)
 W, H = 768, 1024
 # Ubahan CALON kitaran QC (langkah 5): hanya hidup bila dinamakan dalam PEMBINA_UJI (dipisah koma). Ubahan yang
 # berjaya ditulis balik ke aturan (rev naik) dan dibuang dari sini; yang gagal dicatat dalam standard dan dibuang.
-# Tiada calon semasa. (26 Nov 2026: 'zturbo_satu_baris' diuji pada K8G, tidak berjaya, dibuang.)
+# Calon semasa (27 Nov 2026, TINDAKAN [cuba] belajar.py selepas larian v12b-cpu): zturbo_had_positif, klein4b_hiasan_kedudukan.
+# (26 Nov 2026: 'zturbo_satu_baris' diuji pada K8G, tidak berjaya, dibuang.)
 # Nama calon = <model>_<id pilihan> daripada belajar.py (KELAS), cth. zturbo_had_positif; belajar.py memutuskan menang / kalah (3.15).
 UJI = {u for u in os.environ.get("PEMBINA_UJI", "").split(",") if u}
 SATU = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"]
@@ -129,7 +130,9 @@ def klein4b(m):
             t = (f'{a} sits a {l["bekas"]}, and inside that {l["nama"]} the {l["kata"]} "{l["q"]}" {l["ialah"]} '
                  f'printed in {l["dalam"]}')
             if l is m["sisi"]:
-                t += f', with {b["sisi"]["frasa"]} on each side of the {l["nama"]}'
+                t += (f', with {b["sisi"]["frasa"]} outside the {l["nama"]}, one group to its left and one group '
+                      f'to its right' if "klein4b_hiasan_kedudukan" in UJI else
+                      f', with {b["sisi"]["frasa"]} on each side of the {l["nama"]}')
         else:
             t = (f'{a}, the {l["kata"]} "{l["q"]}" {l["ialah"]} written in '
                  f'{frasa(l, lambda d: " as the top line" if d == 0 else "")}')
@@ -168,8 +171,12 @@ def zturbo(m):
             t = f'Line {SATU[l["i"]]}{p} reads "{l["q"]}" in {frasa(l, lambda d: f" as line {SATU[d]}")}'
         s.append(t + (", and it is the tallest line of the poster." if l["tertinggi"] else "."))
     s += tambahan(b)
-    s.append(f"The only text in the image is these {SATU[m['nw'] - 1]} words, each appearing once. The image uses "
-             f"only pure white and pure black, {b['ada']}.")
+    if "zturbo_had_positif" in UJI:  # calon: had sebagai ayat positif sahaja, tanpa perkataan berisiko
+        s.append(f"Every letter in the image belongs to the {SATU[m['nw'] - 1]} quoted words, each written once, and "
+                 f"everywhere else is the empty {latar(b, 'surface')}. Pure white on pure black.")
+    else:
+        s.append(f"The only text in the image is these {SATU[m['nw'] - 1]} words, each appearing once. The image uses "
+                 f"only pure white and pure black, {b['ada']}.")
     return " ".join(s)
 
 

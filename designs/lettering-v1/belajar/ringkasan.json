@@ -1,7 +1,7 @@
 {
  "versi": "b1.1 (27 Nov 2026)",
  "tarikh": "2026-11-27",
- "imej": 126,
+ "imej": 186,
  "suka": 0,
  "tolak": 0,
  "model": {
@@ -100,29 +100,29 @@
      "design": 1
     },
     "r1": {
-     "imej": 9,
-     "lulus": 4,
-     "pct": 44,
+     "imej": 24,
+     "lulus": 13,
+     "pct": 54,
      "suka": 0,
      "tolak": 0,
-     "design": 3
+     "design": 8
     }
    },
    "semasa": {
-    "imej": 9,
-    "lulus": 4,
-    "pct": 44,
+    "imej": 24,
+    "lulus": 13,
+    "pct": 54,
     "suka": 0,
     "tolak": 0,
-    "design": 3
+    "design": 8
    },
    "semua": {
-    "imej": 27,
-    "lulus": 14,
-    "pct": 52,
+    "imej": 42,
+    "lulus": 23,
+    "pct": 55,
     "suka": 0,
     "tolak": 0,
-    "design": 7
+    "design": 12
    },
    "berulang": [
     {
@@ -147,6 +147,32 @@
      ],
      "cadangan": "frasa_hierarki",
      "cadangan_teks": "Frasa hierarki atau nisbah baris dalam aturan model"
+    },
+    {
+     "kelas": "berulang",
+     "nama": "Perkataan berulang atau tertinggal",
+     "imej": 3,
+     "gagal": 3,
+     "design": [
+      "K10N",
+      "K11S"
+     ],
+     "cadangan": "cara_baris",
+     "cadangan_teks": "Cara menulis baris teks ikut aturan model (klein: satu ayat prosa setiap baris; ERNIE: PE hidup)"
+    },
+    {
+     "kelas": "lain",
+     "nama": "Cacat lain (tiada kelas)",
+     "imej": 9,
+     "gagal": 0,
+     "design": [
+      "K10N",
+      "K11S",
+      "K12Y",
+      "K4F"
+     ],
+     "cadangan": null,
+     "cadangan_teks": "Tanya pengguna sebabnya; tambah ke kad sebagai ciri QC"
     },
     {
      "kelas": "bentuk",
@@ -216,31 +242,60 @@
      "design": 1
     },
     "r1": {
-     "imej": 9,
-     "lulus": 8,
-     "pct": 89,
+     "imej": 24,
+     "lulus": 20,
+     "pct": 83,
      "suka": 0,
      "tolak": 0,
-     "design": 3
+     "design": 8
     }
    },
    "semasa": {
-    "imej": 9,
-    "lulus": 8,
-    "pct": 89,
+    "imej": 24,
+    "lulus": 20,
+    "pct": 83,
     "suka": 0,
     "tolak": 0,
-    "design": 3
+    "design": 8
    },
    "semua": {
-    "imej": 21,
-    "lulus": 15,
-    "pct": 71,
+    "imej": 36,
+    "lulus": 27,
+    "pct": 75,
     "suka": 0,
     "tolak": 0,
-    "design": 7
+    "design": 12
    },
    "berulang": [
+    {
+     "kelas": "lain",
+     "nama": "Cacat lain (tiada kelas)",
+     "imej": 15,
+     "gagal": 3,
+     "design": [
+      "K10N",
+      "K11S",
+      "K12Y",
+      "K4F",
+      "K9B"
+     ],
+     "cadangan": null,
+     "cadangan_teks": "Tanya pengguna sebabnya; tambah ke kad sebagai ciri QC"
+    },
+    {
+     "kelas": "rawak",
+     "nama": "Teks rawak, label atau tanda baca tambahan",
+     "imej": 9,
+     "gagal": 3,
+     "design": [
+      "K11S",
+      "K12Y",
+      "K3K",
+      "K4F"
+     ],
+     "cadangan": "had_positif",
+     "cadangan_teks": "Buang perkataan berisiko daripada ayat had (label, logo, signature, watermark); tulis had sebagai ayat positif"
+    },
     {
      "kelas": "bentuk",
      "nama": "Bentuk huruf atau saiz label lain daripada kad",
@@ -258,9 +313,8 @@
    "suka_imej": [],
    "tindakan": [
     {
-     "jenis": "cuba",
-     "ubahan": "frasa_bentuk",
-     "teks": "Satu ubahan untuk jana seterusnya model ini: PEMBINA_UJI=ernie_frasa_bentuk (Frasa bentuk huruf dalam aturan model) bagi cacat 'Bentuk huruf atau saiz label lain daripada kad' (imej lulus; ciri gaya kad) (6 imej, 2 design); jana bersama aturan semasa, seed sama"
+     "jenis": "habis",
+     "teks": "Cacat 'Cacat lain (tiada kelas)': Tanya pengguna sebabnya; tambah ke kad sebagai ciri QC"
     }
    ]
   },
@@ -288,29 +342,29 @@
      "design": 1
     },
     "r1": {
-     "imej": 9,
-     "lulus": 6,
-     "pct": 67,
+     "imej": 24,
+     "lulus": 18,
+     "pct": 75,
      "suka": 0,
      "tolak": 0,
-     "design": 3
+     "design": 8
     }
    },
    "semasa": {
-    "imej": 9,
-    "lulus": 6,
-    "pct": 67,
-    "suka": 0,
-    "tolak": 0,
-    "design": 3
-   },
-   "semua": {
-    "imej": 27,
-    "lulus": 20,
-    "pct": 74,
+    "imej": 24,
+    "lulus": 18,
+    "pct": 75,
     "suka": 0,
     "tolak": 0,
     "design": 8
+   },
+   "semua": {
+    "imej": 42,
+    "lulus": 32,
+    "pct": 76,
+    "suka": 0,
+    "tolak": 0,
+    "design": 13
    },
    "berulang": [
     {
@@ -323,6 +377,42 @@
      ],
      "cadangan": null,
      "cadangan_teks": "Pilihan ubahan habis: tukar ke model seterusnya ikut jadual model × gaya, kemudian pendekkan ayat, kemudian lapor kepada pengguna"
+    },
+    {
+     "kelas": "rawak",
+     "nama": "Teks rawak, label atau tanda baca tambahan",
+     "imej": 3,
+     "gagal": 3,
+     "design": [
+      "K11S"
+     ],
+     "cadangan": "had_positif",
+     "cadangan_teks": "Buang perkataan berisiko daripada ayat had (label, logo, signature, watermark); tulis had sebagai ayat positif"
+    },
+    {
+     "kelas": "lain",
+     "nama": "Cacat lain (tiada kelas)",
+     "imej": 12,
+     "gagal": 0,
+     "design": [
+      "K10N",
+      "K12Y",
+      "K4F",
+      "K9B"
+     ],
+     "cadangan": null,
+     "cadangan_teks": "Tanya pengguna sebabnya; tambah ke kad sebagai ciri QC"
+    },
+    {
+     "kelas": "hiasan_tempat",
+     "nama": "Hiasan di tempat salah",
+     "imej": 3,
+     "gagal": 0,
+     "design": [
+      "K12Y"
+     ],
+     "cadangan": "hiasan_kedudukan",
+     "cadangan_teks": "Nyatakan kedudukan hiasan (kiri dan kanan, di luar label)"
     }
    ],
    "ubahan_dicuba": 3,
@@ -350,37 +440,65 @@
      "design": 3
     },
     "r1": {
-     "imej": 9,
-     "lulus": 9,
-     "pct": 100,
+     "imej": 24,
+     "lulus": 23,
+     "pct": 96,
      "suka": 0,
      "tolak": 0,
-     "design": 3
+     "design": 8
     }
    },
    "semasa": {
-    "imej": 9,
-    "lulus": 9,
-    "pct": 100,
+    "imej": 24,
+    "lulus": 23,
+    "pct": 96,
     "suka": 0,
     "tolak": 0,
-    "design": 3
+    "design": 8
    },
    "semua": {
-    "imej": 18,
-    "lulus": 15,
-    "pct": 83,
+    "imej": 33,
+    "lulus": 29,
+    "pct": 88,
     "suka": 0,
     "tolak": 0,
-    "design": 3
+    "design": 8
    },
-   "berulang": [],
+   "berulang": [
+    {
+     "kelas": "lain",
+     "nama": "Cacat lain (tiada kelas)",
+     "imej": 14,
+     "gagal": 0,
+     "design": [
+      "K10N",
+      "K11S",
+      "K12Y",
+      "K4F",
+      "K9B"
+     ],
+     "cadangan": null,
+     "cadangan_teks": "Tanya pengguna sebabnya; tambah ke kad sebagai ciri QC"
+    },
+    {
+     "kelas": "hiasan_tempat",
+     "nama": "Hiasan di tempat salah",
+     "imej": 4,
+     "gagal": 0,
+     "design": [
+      "K12Y",
+      "K3K"
+     ],
+     "cadangan": "hiasan_kedudukan",
+     "cadangan_teks": "Nyatakan kedudukan hiasan (kiri dan kanan, di luar label)"
+    }
+   ],
    "ubahan_dicuba": 2,
    "suka_imej": [],
    "tindakan": [
     {
-     "jenis": "tiada",
-     "teks": "Tiada tindakan: tiada cacat berulang pada aturan semasa"
+     "jenis": "habis",
+     "teks": "Cacat 'Cacat lain (tiada kelas)': Tanya pengguna sebabnya; tambah ke kad sebagai ciri QC"
     }
    ]
   },

@@ -64,17 +64,17 @@
    ],
    "K11S_s42": [
     false,
-    "G2 gagal: teks rawak 'capir', 'capitals', 'xpitals' di sisi STILL / FOR MY",
+    "G2 gagal: tanda rawak - teks 'capir', 'capitals', 'xpitals' di sisi STILL / FOR MY",
     ""
    ],
    "K11S_s7": [
     false,
-    "G2 gagal: 'capitals' x4 di sisi STILL / FOR MY",
+    "G2 gagal: tanda rawak - teks 'capitals' x4 di sisi STILL / FOR MY",
     ""
    ],
    "K11S_s123": [
     false,
-    "G2 gagal: 'driving', 'capitals', 'alving', 'bypitals' di sisi",
+    "G2 gagal: tanda rawak - teks 'driving', 'capitals', 'alving', 'bypitals' di sisi",
     ""
    ]
   },
@@ -116,17 +116,17 @@
    ],
    "K11S_s42": [
     false,
-    "G2 gagal: 'STILL' berulang ('still STILL'); bingkai segi empat tiada dalam kad",
+    "G2 gagal: STILL berulang ('still STILL'); bingkai segi empat tiada dalam kad",
     ""
    ],
    "K11S_s7": [
     false,
-    "G1 gagal: 'BRILLTANG' di atas, 'STIEL' menegak; latar putih di tepi",
+    "G1 gagal: BRILLIANT jadi 'BRILLTANG' di atas, tanda rawak 'STIEL' menegak; latar putih di tepi",
     ""
    ],
    "K11S_s123": [
     false,
-    "G2 gagal: teks rawak 'SGL'; bingkai putih di tepi kanvas",
+    "G2 gagal: tanda rawak 'SGL'; bingkai putih di tepi kanvas",
     ""
    ],
    "K4F_s42": [
@@ -228,7 +228,7 @@
    ],
    "K11S_s7": [
     false,
-    "G1 gagal: 'STIILL' (I berlebih)",
+    "G1 gagal: STILL jadi 'STIILL' (I berlebih)",
     ""
    ],
    "K11S_s123": [
@@ -240,17 +240,17 @@
   "zturbo": {
    "K9B_s42": [
     false,
-    "G1 gagal: 'Anyocy'; huruf sentuh tepi kanvas",
+    "G1 gagal: Anyway jadi 'Anyocy'; huruf sentuh tepi kanvas",
     ""
    ],
    "K9B_s7": [
     false,
-    "G1 gagal: 'Anyooy'",
+    "G1 gagal: Anyway jadi 'Anyooy'",
     ""
    ],
    "K9B_s123": [
     false,
-    "G1 gagal: 'Anyooy'; huruf sentuh tepi kanvas",
+    "G1 gagal: Anyway jadi 'Anyooy'; huruf sentuh tepi kanvas",
     ""
    ],
    "K10N_s42": [
@@ -260,7 +260,7 @@
    ],
    "K10N_s7": [
     false,
-    "G1 gagal: 'LITLE' (T hilang)",
+    "G1 gagal: LITTLE jadi 'LITLE' (T hilang)",
     ""
    ],
    "K10N_s123": [
@@ -275,12 +275,12 @@
    ],
    "K11S_s7": [
     false,
-    "G1 gagal: 'WAITNG' (I hilang)",
+    "G1 gagal: WAITING jadi 'WAITNG' (I hilang)",
     ""
    ],
    "K11S_s123": [
     false,
-    "G1 gagal: baris 'STILL' hilang",
+    "G1 gagal: baris STILL hilang",
     ""
    ],
    "K4F_s42": [
