@@ -158,6 +158,83 @@
     "G1-G3 lulus; kurungan jadi bucu bingkai (ciri 7/8); tekstur bintik dalam huruf",
     ""
    ]
+  },
+  "klein3": {
+   "K9B_s42": [
+    true,
+    "G1-G3 lulus; skrip sukan + swash; condong ringan",
+    ""
+   ],
+   "K10N_s42": [
+    true,
+    "G1-G3 lulus; 'build' dalam kapsul; doodle; ciri 8/8",
+    ""
+   ],
+   "K4F_s42": [
+    true,
+    "G1-G3 lulus; serif Victoria + hiasan; dakwat krim (SK04 jadikan putih)",
+    ""
+   ],
+   "K12Y_s42": [
+    true,
+    "G1-G3 lulus; garis kurungan atas/bawah + anak panah; ciri 7/8 (s42 garis lurus tanpa kaki)",
+    ""
+   ],
+   "K9B_s7": [
+    true,
+    "G1-G3 lulus; skrip sukan + swash; condong ringan",
+    ""
+   ],
+   "K10N_s7": [
+    true,
+    "G1-G3 lulus; 'build' dalam kapsul; doodle; ciri 8/8",
+    ""
+   ],
+   "K4F_s7": [
+    true,
+    "G1-G3 lulus; serif Victoria + hiasan; dakwat krim (SK04 jadikan putih)",
+    ""
+   ],
+   "K12Y_s7": [
+    true,
+    "G1-G3 lulus; kurungan + anak panah; ciri 8/8",
+    ""
+   ],
+   "K9B_s123": [
+    true,
+    "G1-G3 lulus; skrip sukan + swash; condong ringan",
+    ""
+   ],
+   "K10N_s123": [
+    true,
+    "G1-G3 lulus; 'build' dalam kapsul; doodle; ciri 8/8",
+    ""
+   ],
+   "K4F_s123": [
+    true,
+    "G1-G3 lulus; serif Victoria + hiasan; dakwat krim (SK04 jadikan putih)",
+    ""
+   ],
+   "K12Y_s123": [
+    true,
+    "G1-G3 lulus; kurungan + anak panah; ciri 8/8",
+    ""
+   ],
+   "K11S_s42": [
+    true,
+    "G1-G3 lulus; semua baris sama lebar; penyambung dijarakkan luas; ciri 8/8",
+    ""
+   ],
+   "K11S_s7": [
+    false,
+    "G1 gagal: 'STIILL' (I berlebih)",
+    ""
+   ],
+   "K11S_s123": [
+    true,
+    "G1-G3 lulus; ciri 8/8",
+    ""
+   ]
   }
  }
 }
