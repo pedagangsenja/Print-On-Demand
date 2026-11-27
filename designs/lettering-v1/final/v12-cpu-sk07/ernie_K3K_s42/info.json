@@ -1,4 +1,5 @@
 {
+ "versi": "SK06 v1 (27 Nov 2026)",
  "raw": "ernie_K3K_s42_bayang_warna.png",
  "style": "S3",
  "palet": "kad K3",
@@ -10,9 +11,9 @@
  ],
  "layers": 3,
  "ink_px": [
-  1227722,
-  455017,
-  251568
+  1190002,
+  478115,
+  266068
  ],
  "sizes": {
   "18x24": [

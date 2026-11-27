@@ -7,6 +7,7 @@ tanpa tanya; tiada jana imej baharu) dan lapor dalam jadual jawapan.
 Baca:
   betul/<batch>/<model>/log_5b.jsonl     SK01-SK04 (betulkan.py): ukuran sebelum / selepas lawan rujukan kad, gagal
   final/<larian>/peranan/log_6.jsonl     SK07, SK08: lulus, gagal, amaran
+  belajar/uji_sk/<SK>_<versi>/log_6.jsonl  log uji semula SK versi baharu pada imej sedia ada (imej tidak disimpan)
   final/<larian>/<imej>/info.json        SK06: vektor + saiz cetak siap
   belajar/pengguna.jsonl                 tolak pengguna langkah 7; bahagian sebab yang milik SK (condong, warna, bayang, ...)
   belajar/sk_pengguna.jsonl              keputusan pengguna pada imej siap: {"imej": "<batch>/<model>/<ID>_s<seed>[+Cxxx]",
@@ -124,8 +125,9 @@ def baris_log():
                 mine = [x for x, k in kel if KELAS.get((k or ["lain"])[0], {}).get("sk") == sid]
                 rows.append(dict(sk=sid, versi=r.get("versi", "?"), imej=kunci(r["imej"]), larian=f.split(os.sep)[-3],
                                  kad=r.get("kad", ""), jalan=bool(t.get("jalan", sid == "SK04")), gagal=mine, amaran=[]))
-    for f in sorted(glob.glob(os.path.join(HERE, "final", "*", "peranan", "log_6.jsonl"))):
-        larian, L = f.split(os.sep)[-3], baca_jsonl(f)
+    for f in sorted(glob.glob(os.path.join(HERE, "final", "*", "peranan", "log_6.jsonl"))
+                    + glob.glob(os.path.join(B, "uji_sk", "*", "log_6.jsonl"))):   # uji semula SK (log sahaja, tiada imej)
+        larian, L = f.split(os.sep)[-3] if f.split(os.sep)[-2] == "peranan" else "uji_sk/" + f.split(os.sep)[-2], baca_jsonl(f)
         asas = {r["nama"]: kunci(r["imej"]) for r in L if r.get("skrip") == "SK07"}
         for r in L:
             nama = r["nama"][:-7] if r["nama"].endswith("_bayang") else r["nama"]
@@ -242,7 +244,7 @@ def banding(a, b, kelas=None):
     pa = [r for r in a if r["imej"] in kb]
     pb = [kb[r["imej"]] for r in pa]
     baru = sorted({k for r in pa for k in r["cacat"]} - {k for r in pb for k in r["cacat"]})
-    sas = (lambda rs: sum(kelas in r["cacat"] or any(kelas in kelas_sk(t) for t in r["amaran"]) for r in rs)) if kelas else (lambda rs: 0)
+    sas = (lambda rs: sum(kelas in r["cacat"] for r in rs)) if kelas else (lambda rs: 0)   # cacat disahkan sahaja
     return sum(r["ok"] for r in pa), sum(r["ok"] for r in pb), len(pa), baru, sas(pa), sas(pb)
 
 

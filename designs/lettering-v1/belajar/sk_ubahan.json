@@ -1,1 +1,18 @@
-[]
+[
+ {
+  "sk": "SK07",
+  "ubahan": "belah_leher",
+  "kelas": "sambungan",
+  "dari": "SK07 v1 (27 Nov 2026)",
+  "ke": "SK07 v1.1 (27 Nov 2026)",
+  "imej": [
+   "v12-cpu/ernie/K3K_s42",
+   "v12-cpu/ernie/K3K_s123"
+  ],
+  "keputusan": "menang",
+  "tarikh": "2026-11-27",
+  "nota": "Huruf bertaut merentas baris: (a) komponen setinggi >= 1.6 x tinggi median huruf dikumpul ikut julat penuh; (b) dibelah pada leher paling sempit (watershed atas jarak ke tepi dakwat) antara dua baris berjiran tanpa label; sekitar label kekal cara v1. Sasaran: ernie K3K s42, s123 (semakan silap 27 Nov)",
+  "bukti": "15 imej K3K yang sama (14 + varian C001): tanpa cacat SK 13/15 -> 15/15; kelas sambungan 2 -> 0; tiada kelas cacat baharu; 12 imej lain sama piksel demi piksel; zturbo s7 kekal GAGAL dengan sebab betul (input rosak). Bukti lemah: satu batch, satu kad",
+  "hasil": "final/v12-cpu-sk07/ernie_K3K_s42 dijana semula; ernie_K3K_s123 kini siap (dahulu GAGAL)"
+ }
+]

@@ -1,4 +1,7 @@
-"""SK07 Warna C ikut peranan (Standard Lettering v1.2, langkah 6). Versi 1, 27 Nov 2026.
+"""SK07 Warna C ikut peranan (Standard Lettering v1.2, langkah 6). Versi 1.1, 27 Nov 2026.
+v1.1 (Belajar SK, ubahan belah_leher): huruf bertaut merentas baris dibelah pada leher paling sempit, bukan garis
+lurus; komponen berbilang baris dikumpul ikut julat penuhnya. Bukti: ernie K3K s42 (puncak S 'Stays' ikut kuning),
+ernie K3K s123 (baris salah dibelah).
 
 Tugas: imej hitam putih yang lulus QC + 5b -> peta peranan (setiap piksel dakwat = utama / sokongan / penyambung /
 hiasan) -> warna ikut peta warna kad, atau ikut warna C dalam Daftar S/C (varian warna tanpa jana semula).
@@ -11,8 +14,14 @@ Kaedah:
   2. Komponen bersambung. Komponen besar (tinggi >= 45% tinggi median huruf, luas >= 0.3% dakwat) dikumpul ikut
      julat teras menegak (persentil 20-80 piksel): julat teras bertindih = satu kumpulan. Lebih kumpulan daripada
      baris Spesifikasi Teks: gabung dua kumpulan berjiran yang paling rapat. Kurang (baris bertaut, cth. K3 yang
-     memang minta baris bersentuh): kumpulan paling tinggi dibelah pada garis mendatar yang paling sedikit dakwat;
-     komponen yang 75% atau lebih di satu jalur ikut jalur itu (ekor huruf), selebihnya dibelah ikut garis.
+     memang minta baris bersentuh): kumpulan paling tinggi dibelah pada garis mendatar yang paling sedikit dakwat.
+     v1.1: komponen setinggi >= 1.6 x tinggi median huruf (huruf bertaut merentas baris) dikumpul ikut julat penuh
+     y0-y1. Setiap komponen yang melintas garis potong: penanda = pikselnya dalam zon dalam setiap jalur (jauh 30%
+     tinggi jalur daripada garis potong). Penanda satu jalur sahaja = seluruh komponen ikut jalur itu (ekor huruf);
+     dua jalur atau lebih = dibelah pada leher paling sempit (watershed atas jarak ke tepi dakwat). Komponen yang
+     menyentuh baris berbekas (label: huruf ialah lubang, jadi tiada leher yang jelas): cara v1 di sekitar label
+     (75% di satu jalur ikut jalur itu, selebihnya garis lurus; ekor di luar label dipulangkan), leher hanya antara
+     dua baris berjiran tanpa bekas. Jalur kosong: cara v1 sepenuhnya.
   3. Baris ke-i = peranan baris ke-i dalam Spesifikasi Teks (kad.AYAT).
   4. Komponen kecil masuk baris terdekat; di luar julat mendatar perkataan baris itu = hiasan.
   5. Setiap komponen diwarna penuh. Huruf dalam bekas (label / kotak) ialah lubang pada bekas putih, jadi kekal
@@ -40,11 +49,11 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 import kad  # noqa: E402
 from SK05_ukur import condong, latar, muat, topeng  # noqa: E402
 
-ID, VERSI = "SK07", "SK07 v1 (27 Nov 2026)"
+ID, VERSI = "SK07", "SK07 v1.1 (27 Nov 2026)"
 KOD = dict(latar=0, utama=1, sokongan=2, penyambung=3, hiasan=4, bayang=5)
 NAMA = {v: k for k, v in KOD.items()}
 STOR = Path(__file__).resolve().parent.parent / "belajar" / "stor" / "data" / "warna" / "items"
-HAD = dict(besar_tinggi=0.45, besar_luas=0.003, segi_empat=0.75, bertaut=0.10, bertaut_gagal=0.30)
+HAD = dict(besar_tinggi=0.45, besar_luas=0.003, segi_empat=0.75, bertaut=0.10, bertaut_gagal=0.30, multi=1.6, zon=0.30)
 
 
 def hexa(c):
@@ -165,6 +174,39 @@ def _potong(y, c):
     return sorted(y0 + q + 0.5 for q in cuts)
 
 
+def _belah_leher(k, had_jalur, bentuk):
+    """v1.1: indeks jalur bagi setiap piksel komponen k. had_jalur = [y atas, potong..., y bawah] (koordinat lurus).
+    Penanda = piksel dalam zon dalam jalur (HAD['zon'] x tinggi jalur dari garis potong; jalur pertama / akhir terbuka
+    ke atas / bawah). Satu jalur bertanda: semua piksel ke jalur itu. Dua atau lebih: watershed atas -jarak ke tepi
+    dakwat, jadi sempadan jatuh pada leher paling sempit (titik sentuh), bukan garis lurus. Tiada penanda: None."""
+    from skimage.segmentation import watershed
+    c = len(had_jalur) - 1
+    pen = np.zeros(k["luas"], np.int32)
+    for j in range(c):
+        m = HAD["zon"] * (had_jalur[j + 1] - had_jalur[j])
+        lo = -np.inf if j == 0 else had_jalur[j] + m
+        hi = np.inf if j == c - 1 else had_jalur[j + 1] - m
+        pen[(k["y"] > lo) & (k["y"] < hi)] = j + 1
+    ada = np.unique(pen[pen > 0])
+    if not len(ada):
+        return None
+    if len(ada) == 1:
+        return np.full(k["luas"], ada[0] - 1)
+    oy, ox = k["py"].min(), k["px"].min()
+    h, w = k["py"].max() - oy + 3, k["px"].max() - ox + 3
+    topi = np.zeros((h, w), np.uint8)
+    topi[k["py"] - oy + 1, k["px"] - ox + 1] = 1
+    dt = cv2.distanceTransform(topi, cv2.DIST_L2, 3)
+    mk = np.zeros((h, w), np.int32)
+    mk[k["py"] - oy + 1, k["px"] - ox + 1] = pen
+    lab = watershed(-dt, mk, mask=topi.astype(bool), connectivity=2)   # 8 jiran, sama seperti komponen
+    jal = lab[k["py"] - oy + 1, k["px"] - ox + 1] - 1
+    sisa = jal < 0
+    if sisa.any():
+        jal[sisa] = np.clip(np.searchsorted(had_jalur[1:-1], k["y"][sisa]), 0, c - 1)
+    return jal
+
+
 def _baris(bahagian):
     y = np.concatenate([k["y"][m] for k, m in bahagian])
     x = np.concatenate([k["x"][m] for k, m in bahagian])
@@ -222,14 +264,17 @@ def baris_peranan(rgb_, kid, aid):
     t_med = float(np.median(tinggi)) if tinggi else 0
     for k in kom:
         k["besar"] = k["luas"] >= HAD["besar_luas"] * jumlah and k["y1"] - k["y0"] >= HAD["besar_tinggi"] * t_med
-    besar = sorted([k for k in kom if k["besar"]], key=lambda k: k["t20"])
+    for k in kom:   # v1.1: komponen berbilang baris (huruf bertaut merentas baris) dikumpul ikut julat penuh y0-y1
+        k["j0"], k["j1"] = ((k["y0"], k["y1"]) if k["y1"] - k["y0"] >= HAD["multi"] * t_med else (k["t20"], k["t80"]))
+    besar = sorted([k for k in kom if k["besar"]], key=lambda k: k["j0"])
     kump = []
-    for k in besar:   # julat teras bertindih = satu kumpulan
-        if kump and k["t20"] <= kump[-1]["t80"]:
+    for k in besar:   # julat bertindih (teras, atau penuh bagi komponen berbilang baris) = satu kumpulan
+        if kump and k["j0"] <= kump[-1]["j1"]:
             kump[-1]["ahli"].append(k)
             kump[-1]["t80"] = max(kump[-1]["t80"], k["t80"])
+            kump[-1]["j1"] = max(kump[-1]["j1"], k["j1"])
         else:
-            kump.append(dict(ahli=[k], t20=k["t20"], t80=k["t80"]))
+            kump.append(dict(ahli=[k], t20=k["t20"], t80=k["t80"], j1=k["j1"]))
     while len(kump) > n:   # gabung dua kumpulan berjiran yang paling rapat
         i = min(range(len(kump) - 1), key=lambda j: kump[j + 1]["t20"] - kump[j]["t80"])
         b = kump.pop(i + 1)
@@ -240,6 +285,7 @@ def baris_peranan(rgb_, kid, aid):
     if not kump:
         cat["gagal"].append("tiada huruf dikesan")
         return None, cat
+    huruf = kad.BLOK.get(kid, {}).get("huruf", {})
     # Baris bertaut (kad K3: baris bersentuh): kumpulan paling tinggi dibelah dahulu pada garis paling nipis.
     bil = [1] * len(kump)
     tg = [max(k["y1"] for k in g["ahli"]) - min(k["y0"] for k in g["ahli"]) for g in kump]
@@ -251,8 +297,34 @@ def baris_peranan(rgb_, kid, aid):
         if c == 1:
             garis.append(_baris([(k, np.ones(k["luas"], bool)) for k in g["ahli"]]))
             continue
-        cuts = _potong(np.concatenate([k["y"] for k in g["ahli"]]), c)
-        for ekor in (0.75, 1.01):   # cuba dahulu: ekor kecil ikut jalur terbesar; jika jalur kosong, belah semua
+        semua_y = np.concatenate([k["y"] for k in g["ahli"]])
+        cuts = _potong(semua_y, c)
+        had_jalur = [semua_y.min() - 1] + list(cuts) + [semua_y.max() + 1]
+        bekas = [isinstance(huruf.get(baris[len(garis) + j][1]), dict) and "bekas" in huruf[baris[len(garis) + j][1]]
+                 for j in range(c)]
+        bah, belah = [[] for _ in range(c)], 0   # v1.1: belah pada leher paling sempit
+        for k in g["ahli"]:
+            lurus = np.searchsorted(cuts, k["y"])
+            kira = np.bincount(lurus, minlength=c)
+            ws = _belah_leher(k, had_jalur, semua.shape)
+            if any(bekas[j] for j in np.nonzero(kira)[0]):   # sentuh baris berbekas (label): cara v1 di sekitar label
+                if kira.max() >= 0.75 * k["luas"]:
+                    jal = np.full(k["luas"], int(kira.argmax()))
+                elif ws is None:
+                    jal = lurus
+                else:   # leher dipakai hanya antara dua baris berjiran tanpa bekas; selebihnya garis lurus v1
+                    bk = np.array(bekas)
+                    jal = np.where(~bk[lurus] & ~bk[ws] & (np.abs(ws - lurus) <= 1), ws, lurus)
+            else:
+                jal = ws if ws is not None else np.full(k["luas"], int(kira.argmax()))
+            kira = np.bincount(jal, minlength=c)
+            if (kira > 0).sum() == 1:
+                bah[int(kira.argmax())].append((k, np.ones(k["luas"], bool)))
+            else:
+                belah += 1
+                for j in np.nonzero(kira)[0]:
+                    bah[j].append((k, jal == j))
+        for ekor in (() if all(bah) else (0.75, 1.01)):   # jalur kosong: cara v1 (ekor ikut jalur terbesar, kemudian belah semua)
             bah, belah = [[] for _ in range(c)], 0
             for k in g["ahli"]:
                 jal = np.searchsorted(cuts, k["y"])
@@ -271,11 +343,10 @@ def baris_peranan(rgb_, kid, aid):
             return None, cat
         garis += [_baris(b) for b in bah]
     if dibelah:
-        cat["amaran"].append(f"{dibelah} komponen bertaut dibelah pada garis potong mendatar: semak warna di sambungan")
+        cat["amaran"].append(f"{dibelah} komponen bertaut dibelah pada leher paling sempit: semak warna di sambungan")
     cat["baris_dikesan"] = len(garis)
     for g, (teks, r) in zip(garis, baris):
         g.update(teks=teks, peranan=r)
-    huruf = kad.BLOK.get(kid, {}).get("huruf", {})
     pulang = _bekas_sahaja(garis, huruf, semua.shape)
     if pulang:
         cat["amaran"].append(f"{pulang} piksel ekor huruf di luar segi empat label dipulangkan ke baris asal")

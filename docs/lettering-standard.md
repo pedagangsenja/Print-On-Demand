@@ -522,7 +522,7 @@ Skrip di sini ialah kerja SELEPAS jana (pembetulan 5b dan kemasan langkah 6). Al
 | SK04 | Hitam putih bersih (`SK04_hitam_putih.py`) | 5b | Tukar kelabu dan tepi kabur kepada hitam dan putih tulen | – | Dibina; diuji pada 12 imej K3H sedia ada |
 | SK05 | Ukuran (`SK05_ukur.py`) | 1, 5b | Ukur ruang tepi, kedudukan, sudut condong dan kelabu pada gambar upload atau imej mentah | – | Dibina; diuji pada 2 gambar upload (K3, K6) dan 24 imej K3H. Nisbah baris: anggaran sahaja (baris bertindih tidak dapat diasingkan) |
 | SK06 | Vektor + saiz cetak (`SK06_finish.py` + `styles.py`) | 6 | SVG induk, susun di tengah, PNG 300 DPI | ruang tepi, tekstur | Dibawa dari `claude/dazzling-cannon-5wzn6h`; diuji pada 1 imej K3H selepas 5b (SVG + 18×24). 27 Nov: parameter `--palet` ditambah (warna tepat SK07 / SK08, topeng setiap warna dilembutkan sebelum surih). Ruang tepi dan tekstur masih tetap S1–S6, belum dibaca daripada kad |
-| SK07 | Warna C ikut peranan (`SK07_warna.py`) | 6 | Peta peranan setiap piksel (utama, sokongan, penyambung, hiasan) ikut baris Spesifikasi Teks, kemudian warna kad atau warna C | `peta_warna`, `warna` (kad); `--warna Cxxx` (Daftar S/C) | Dibina 27 Nov 2026; diuji pada 14 imej K3K (12 lulus, 2 GAGAL dikesan betul) + K7M, K8G (satu dakwat, tidak rosak) + 1 varian C001 |
+| SK07 | Warna C ikut peranan (`SK07_warna.py`) | 6 | Peta peranan setiap piksel (utama, sokongan, penyambung, hiasan) ikut baris Spesifikasi Teks, kemudian warna kad atau warna C | `peta_warna`, `warna` (kad); `--warna Cxxx` (Daftar S/C) | Dibina 27 Nov 2026; diuji pada 14 imej K3K (12 lulus, 2 GAGAL dikesan betul) + K7M, K8G (satu dakwat, tidak rosak) + 1 varian C001. **v1.1 (27 Nov 2026, Belajar SK, ubahan `belah_leher`, MENANG):** huruf bertaut merentas baris dibelah pada leher paling sempit; 15 imej K3K: 15/15 tanpa cacat SK (v1: 13/15) |
 | SK08 | Bayang ikut kad (`SK08_bayang.py`) | 6 | Bayang 3D dalam huruf: bahagian bawah setiap strok peranan yang diminta jadi kelabu | `rujukan.bayang` (arah, nisbah, warna; diukur `--ukur` pada gambar upload) | Dibina 27 Nov 2026; diukur pada IMG_5775; diuji pada 12 imej K3K yang lulus SK07. Bayang lembut K1 belum (lihat bawah) |
 
 Semua skrip di `designs/lettering-v1/skrip/`. Jalan 5b penuh: `python3 skrip/betulkan.py <kad> <folder keluar> <imej…> [--condong D] [--tepi P]` (satu folder keluar bagi setiap model). Ukur gambar upload: `python3 skrip/SK05_ukur.py <gambar>`.
@@ -547,6 +547,7 @@ Empat skrip pembetulan (SK01–SK04) ialah set asas. Skrip lain ditambah hanya i
 
 **SK07 dan SK08 (dibina 27 Nov 2026, diluluskan pengguna: tanpa GIMP / Inkscape, Python sahaja):**
 - **SK07 kaedah:** sudut condong (SK05) → komponen bersambung dikumpul ikut julat teras menegak → kumpulan = baris Spesifikasi Teks (lebih: gabung yang paling rapat; kurang: kumpulan paling tinggi dibelah pada garis paling nipis) → komponen kecil di luar julat perkataan = hiasan → dalam baris berlabel, ekor huruf baris jiran di luar segi empat label dipulangkan → warna. Huruf dalam label = lubang, jadi kekal hitam. Tepi anti-alias imej 5b disimpan (`_alfa.png`) supaya tepi cetak licin.
+- **SK07 v1.1 (27 Nov 2026, Belajar SK):** komponen setinggi >= 1.6 x tinggi median huruf (huruf bertaut merentas baris) dikumpul ikut julat penuh; komponen yang melintas garis potong dibelah pada leher paling sempit (watershed atas jarak ke tepi dakwat) antara dua baris berjiran tanpa label; di sekitar label kekal cara v1 (label ialah bingkai berlubang, tiada leher yang jelas). Ujian pertama cuba leher di mana-mana: label AFTER terbelah dua warna pada 3 imej, jadi dihadkan.
 - **SK07 ujian (14 imej K3K selepas 5b, 5 model):** 12 lulus; 2 GAGAL dengan sebab betul (ernie s123: baris salah dibelah; zturbo s7: tiada label segi empat). Cacat yang masih nampak: ernie s42, puncak huruf S "Stays" yang bersentuh KINDNESS ikut kuning (amaran "dibelah" dicatat; pengguna semak di langkah 7). Kad satu dakwat K7M, K8G: tukar warna sahaja, tidak rosak. Varian C001 pada MOSS s42: lulus.
 - **SK08 ukuran IMG_5775 (salinan dashboard 236×354, satu gambar, anggaran):** bayang BUKAN di luar huruf. Bahagian bawah setiap strok skrip putih berwarna kelabu cerah (dua tona rata). Model: piksel dalam 40% larian strok yang paling hampir dengan arah 250° (relatif garis dasar, iaitu ke bawah dan sedikit ke kiri) = kelabu. Warna diukur #b2b3b5; putih #f1f1f3. Padanan model dengan gambar: IoU 0.389; kongsi kelabu dalam huruf 28.6% (model 35.3%). Kad K3 sebelum ini menulis "kelabu gelap #3a3a3a di bawah / kanan" tanpa ukuran; kad kini guna ukuran.
 - **SK08 ujian:** 12 imej K3K yang lulus SK07: kongsi bayang 33.6–36.5% setiap imej (rujukan model 35.3%), tiada amaran.
@@ -592,10 +593,15 @@ Empat skrip pembetulan (SK01–SK04) ialah set asas. Skrip lain ditambah hanya i
 - SK01–SK04 (5b v1.1): 0 cacat. UKUR: kad K6 tiada rujukan sudut dan ruang tepi (IMG_5734).
 - SK06 v1: tekstur kad belum dibaca (K6, K7, K8): PARAMETER seterusnya; ruang tepi kad menyusul.
 - SK07 v1: semakan Claude 10 imej: 2 `silap` (ernie K3K s42 dan s123: huruf bertaut merentas baris diwarna salah); zturbo K3K s7 = input rosak (tiada label); 7 amaran tidak merosakkan. TINDAKAN: BAIKI SK07 (kelas huruf bertaut dibelah).
+- **BAIKI SK07 dilaksana (diluluskan pengguna 27 Nov 2026): MENANG.** v1.1 `belah_leher`: 15 imej yang sama, tanpa cacat SK 13/15 → 15/15, kelas huruf bertaut 2 → 0, tiada kelas baharu; 12 imej lain sama piksel demi piksel. Kemasan ernie K3K s42 dijana semula; ernie K3K s123 kini siap. Log uji: `belajar/uji_sk/SK07_v1.1/log_6.jsonl`.
 - SK08 v1: 0 cacat.
 
 ### Catatan pembaikan SK
-Setiap ubahan SK direkod di sini dan dalam `designs/lettering-v1/belajar/sk_ubahan.json`. Belum ada ubahan (27 Nov 2026).
+Setiap ubahan SK direkod di sini dan dalam `designs/lettering-v1/belajar/sk_ubahan.json`.
+
+| Tarikh | SK | Ubahan | Kelas cacat | Versi | Keputusan | Bukti |
+|---|---|---|---|---|---|---|
+| 27 Nov 2026 | SK07 | `belah_leher`: komponen berbilang baris dikumpul ikut julat penuh; belah pada leher paling sempit antara baris tanpa label | huruf bertaut dibelah (sambungan) | v1 → v1.1 | MENANG | 15 imej K3K: 13/15 → 15/15; ernie s42 (puncak S kuning) dan s123 (baris salah dibelah) betul; 12 imej lain tidak berubah. Bukti lemah: satu batch, satu kad |
 
 ## Langkah 7: Pengguna lulus atau tolak
 - **Mata pengguna ialah pintu terakhir (v1.2).** Imej yang lulus semua QC tetapi nampak buruk di mata pengguna = gagal. Skor QC tidak mengatasi keputusan pengguna.
