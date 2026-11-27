@@ -79,7 +79,55 @@
    ]
   },
   "sebab_sistematik": {
-   "K11S moss": "kapsyen penyambung 'small hand-drawn capitals tucked tightly beside the big words' + kotak penuh lebar (sama_lebar) -> model isi sisi dengan perkataan 'capitals'. Kitaran QC pusingan 1: satu ubahan kapsyen penyambung K11, dijalankan selepas semua enjin pusingan 1 siap (supaya pusingan 1 sama untuk semua enjin)."
+   "K11S moss": "kapsyen penyambung 'small hand-drawn capitals tucked tightly beside the big words' + kotak penuh lebar (sama_lebar) -> model isi sisi dengan perkataan 'capitals'. Kitaran QC pusingan 1: satu ubahan kapsyen penyambung K11, dijalankan selepas semua enjin pusingan 1 siap (supaya pusingan 1 sama untuk semua enjin).",
+   "K11S ernie": "Sama seperti MOSS: penyambung pendek dalam kotak penuh lebar -> teks diulang / rawak di sisi. Disahkan masalah kad (2 enjin)."
+  },
+  "ernie": {
+   "K9B_s42": [
+    true,
+    "G1-G3 lulus; skrip sukan + swash; blok tegak (SK01 condongkan)",
+    ""
+   ],
+   "K10N_s42": [
+    true,
+    "G1-G3 lulus; 'build' dalam kapsul; doodle; ciri 8/8",
+    ""
+   ],
+   "K9B_s7": [
+    true,
+    "G1-G3 lulus; skrip sukan + swash; blok tegak (SK01 condongkan)",
+    ""
+   ],
+   "K10N_s7": [
+    true,
+    "G1-G3 lulus; 'build' dalam kapsul; doodle; ciri 8/8",
+    ""
+   ],
+   "K9B_s123": [
+    true,
+    "G1-G3 lulus; skrip sukan + swash; blok tegak (SK01 condongkan)",
+    ""
+   ],
+   "K10N_s123": [
+    true,
+    "G1-G3 lulus; 'build' dalam kapsul; doodle; ciri 8/8",
+    ""
+   ],
+   "K11S_s42": [
+    false,
+    "G2 gagal: 'STILL' berulang ('still STILL'); bingkai segi empat tiada dalam kad",
+    ""
+   ],
+   "K11S_s7": [
+    false,
+    "G1 gagal: 'BRILLTANG' di atas, 'STIEL' menegak; latar putih di tepi",
+    ""
+   ],
+   "K11S_s123": [
+    false,
+    "G2 gagal: teks rawak 'SGL'; bingkai putih di tepi kanvas",
+    ""
+   ]
   }
  }
 }
