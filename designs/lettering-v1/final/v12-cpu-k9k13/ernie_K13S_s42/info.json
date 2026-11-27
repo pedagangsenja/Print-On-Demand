@@ -1,0 +1,48 @@
+{
+ "versi": "SK06 v1.3 (27 Nov 2026)",
+ "raw": "ernie_K13S_s42_warna.png",
+ "style": "S1",
+ "palet": "kad K13",
+ "bg": "#0b0b0b",
+ "fills": [
+  "#f4f4f2"
+ ],
+ "layers": 1,
+ "ink_px": [
+  5174339
+ ],
+ "sizes": {
+  "18x24": [
+   5400,
+   7200
+  ]
+ },
+ "tekstur": {
+  "kad": "K13",
+  "teks": "butir semburan kasar",
+  "jenis": "none",
+  "kuat": 0.0,
+  "tidak_dibuat": [
+   "butir semburan kasar"
+  ]
+ },
+ "amaran": [
+  "tekstur kad 'butir semburan kasar' belum ada jenisnya dalam SK06: tidak dibuat"
+ ],
+ "tepi": {
+  "sasaran": {
+   "sisi": 11.7,
+   "atas_bawah": 2.0,
+   "sumber": "SK05 pada IMG_5791 (440x694)"
+  },
+  "hasil": {
+   "18x24": {
+    "kiri": 11.7,
+    "kanan": 11.7,
+    "atas": 5.4,
+    "bawah": 11.4
+   }
+  },
+  "dakwat_min_pct": 7.35
+ }
+}

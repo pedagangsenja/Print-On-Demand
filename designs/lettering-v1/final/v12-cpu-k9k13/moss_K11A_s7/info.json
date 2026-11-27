@@ -1,0 +1,44 @@
+{
+ "versi": "SK06 v1.3 (27 Nov 2026)",
+ "raw": "moss_K11A_s7_warna.png",
+ "style": "S1",
+ "palet": "kad K11",
+ "bg": "#010101",
+ "fills": [
+  "#fbfbfb"
+ ],
+ "layers": 1,
+ "ink_px": [
+  2752667
+ ],
+ "sizes": {
+  "18x24": [
+   5400,
+   7200
+  ]
+ },
+ "tekstur": {
+  "kad": "K11",
+  "teks": "lusuh grunge sederhana",
+  "jenis": "worn",
+  "kuat": 1.0,
+  "tidak_dibuat": []
+ },
+ "amaran": [],
+ "tepi": {
+  "sasaran": {
+   "sisi": 7.7,
+   "atas_bawah": 3.0,
+   "sumber": "SK05 pada IMG_5789 dipotong ke kad hitam (602x853)"
+  },
+  "hasil": {
+   "18x24": {
+    "kiri": 7.7,
+    "kanan": 7.7,
+    "atas": 23.6,
+    "bawah": 29.6
+   }
+  },
+  "dakwat_min_pct": 7.7
+ }
+}
