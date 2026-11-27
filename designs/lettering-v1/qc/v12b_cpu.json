@@ -127,6 +127,36 @@
     false,
     "G2 gagal: teks rawak 'SGL'; bingkai putih di tepi kanvas",
     ""
+   ],
+   "K4F_s42": [
+    true,
+    "G1-G3 lulus; serif Victoria + hiasan; bintik latar (SK04 bersihkan)",
+    ""
+   ],
+   "K12Y_s42": [
+    true,
+    "G1-G3 lulus; kurungan jadi bucu bingkai (ciri 7/8); tekstur bintik dalam huruf",
+    ""
+   ],
+   "K4F_s7": [
+    true,
+    "G1-G3 lulus; serif Victoria + hiasan; bintik latar (SK04 bersihkan)",
+    ""
+   ],
+   "K12Y_s7": [
+    true,
+    "G1-G3 lulus; kurungan jadi bucu bingkai (ciri 7/8); tekstur bintik dalam huruf",
+    ""
+   ],
+   "K4F_s123": [
+    true,
+    "G1-G3 lulus; serif Victoria + hiasan; bintik latar (SK04 bersihkan)",
+    ""
+   ],
+   "K12Y_s123": [
+    true,
+    "G1-G3 lulus; kurungan jadi bucu bingkai (ciri 7/8); tekstur bintik dalam huruf",
+    ""
    ]
   }
  }
