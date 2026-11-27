@@ -311,5 +311,54 @@
     ""
    ]
   }
+ },
+ "v12b-cpu-p1": {
+  "ernie": {
+   "K9B_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K9B_s7": [
+    true,
+    "Condong kurang (dibetulkan SK01)",
+    ""
+   ],
+   "K9B_s123": [
+    true,
+    "",
+    ""
+   ],
+   "K11N_s42": [
+    true,
+    "Kotak tambahan pada 'STEADY.' (hiasan di tempat salah)",
+    ""
+   ],
+   "K11N_s7": [
+    false,
+    "Tanda petikan tambahan pada 'BEGIN'; 'GROW' huruf berongga; bingkai kelabu",
+    ""
+   ],
+   "K11N_s123": [
+    true,
+    "Tiada kotak pada 'SHAKY.' (ciri kad)",
+    ""
+   ],
+   "K12Y_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K12Y_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K12Y_s123": [
+    true,
+    "",
+    ""
+   ]
+  }
  }
 }
