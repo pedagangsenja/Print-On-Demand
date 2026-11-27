@@ -1,7 +1,7 @@
 {
  "versi": "s1 (27 Nov 2026)",
  "tarikh": "2026-11-27",
- "baris": 205,
+ "baris": 221,
  "imej": 40,
  "kad_dipakai": [
   "K3",
@@ -177,7 +177,7 @@
    "nama": "finish",
    "fail": "SK06_finish.py",
    "langkah": "6",
-   "versi": "SK06 v1.1 (27 Nov 2026)",
+   "versi": "SK06 v1.2 (27 Nov 2026)",
    "ikut_versi": {
     "SK06 v1 (27 Nov 2026)": {
      "imej": 22,
@@ -194,11 +194,19 @@
      "input_rosak": 0,
      "belum": 0,
      "tolak": 0
+    },
+    "SK06 v1.2 (27 Nov 2026)": {
+     "imej": 16,
+     "lulus": 16,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
     }
    },
    "semasa": {
-    "imej": 3,
-    "lulus": 3,
+    "imej": 16,
+    "lulus": 16,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -206,12 +214,12 @@
    },
    "berulang": [],
    "calon": [],
-   "ubahan_dicuba": 1,
+   "ubahan_dicuba": 2,
    "tindakan": [
     {
      "jenis": "parameter",
-     "medan": "ruang_tepi",
-     "teks": "SK06 belum membaca ruang tepi kad (tetap 76% x 78%). Tambah parameter ruang tepi daripada kad (rujukan.tepi_pct atau ruang_tepi), uji pada imej sedia ada"
+     "medan": "tekstur_jenis",
+     "teks": "Tekstur kad belum ada jenisnya dalam SK06: K8 'tepi marker kering'; K8 'butir latar'. Tambah jenis tekstur prosedur (ukur pada gambar upload kad), uji pada imej sedia ada"
     }
    ]
   },

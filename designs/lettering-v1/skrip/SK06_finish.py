@@ -12,6 +12,11 @@
 # kad.KAD[Kx]["tekstur"] (bukan tetap ikut gaya S1-S6); bahagian tekstur kad yang belum ada jenisnya dicatat
 # sebagai amaran dalam info.json; jika ada gaya S1-S6 daripada gambar upload yang sama (cth. K8 dan S4: IMG_5735),
 # tekstur gaya itu dipakai sebagai ganti. Tanpa --kad: tekstur gaya seperti v1.
+# v1.2 (27 Nov 2026, Belajar SK, ubahan tepi_kad): dengan --kad, ruang tepi setiap saiz poster ikut kad, sama seperti
+# SK02 (asas.rujukan: rujukan.tepi_sisi_pct / tepi_atas_bawah_pct / tepi_pct daripada SK05 pada gambar upload, atau
+# ruang_tepi kad). Sisi yang mengehad = nilai kad; pusat optik 0.47 hanya jika ruang atas / bawah tidak kurang
+# daripada kad. Ruang tepi diukur pada blok tulisan (topeng SK05, bintik hiasan kecil tidak dikira), sama seperti
+# SK02 / SK05. Ruang tepi hasil dicatat dalam info.json. Tanpa --kad: 76% x 78% seperti v1.
 # Guna: python3 SK06_finish.py <imej> <S1..S6> <folder keluar> [--sizes 18x24,24x36] [--keep-color] [--palet <json>] [--kad Kx]
 """Siapkan imej lettering AI untuk cetak (CPU sahaja).
 
@@ -34,7 +39,7 @@ import cv2
 import numpy as np
 from PIL import Image
 
-VERSI = "SK06 v1.1 (27 Nov 2026)"
+VERSI = "SK06 v1.2 (27 Nov 2026)"
 from scipy.optimize import linear_sum_assignment
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -222,11 +227,27 @@ def map_palet(vec, palet):
     return palet["latar"], [palet["dakwat"][int(((ink - c) ** 2).sum(-1).argmin())] for c in lay]
 
 
-def compose_svg(vec, bg_hex, fills, W, H):
-    x0, y0, x1, y1 = vec["bbox"]
-    s = min(W * FIT_W / (x1 - x0), H * FIT_H / (y1 - y0))
+def letak(vec, W, H, tepi=None):
+    """Skala dan kedudukan lockup pada kanvas W x H. tepi = dict(sisi, atas_bawah) dalam % lebar / tinggi (v1.2, kad);
+    None = 76% x 78% (v1). Pulang (s, tx, ty, ruang tepi hasil dalam %)."""
+    x0, y0, x1, y1 = vec["bbox_blok"] if tepi and vec.get("bbox_blok") else vec["bbox"]
+    bw, bh = x1 - x0, y1 - y0
+    if tepi:
+        ts, ta = tepi["sisi"] / 100, tepi["atas_bawah"] / 100
+        s = min(W * (1 - 2 * ts) / bw, H * (1 - 2 * ta) / bh)
+        lo, hi = ta + s * bh / (2 * H), 1 - ta - s * bh / (2 * H)   # ruang atas / bawah tidak kurang daripada kad
+        cy = min(max(CENTER_Y, lo), hi) if lo <= hi else 0.5
+    else:
+        s, cy = min(W * FIT_W / bw, H * FIT_H / bh), CENTER_Y
     tx = W / 2 - s * (x0 + x1) / 2
-    ty = H * CENTER_Y - s * (y0 + y1) / 2
+    ty = H * cy - s * (y0 + y1) / 2
+    hasil = dict(kiri=round((tx + s * x0) / W * 100, 1), kanan=round((W - tx - s * x1) / W * 100, 1),
+                 atas=round((ty + s * y0) / H * 100, 1), bawah=round((H - ty - s * y1) / H * 100, 1))
+    return s, tx, ty, hasil
+
+
+def compose_svg(vec, bg_hex, fills, W, H, tepi=None):
+    s, tx, ty, _ = letak(vec, W, H, tepi)
     parts = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">',
              f'<rect width="{W}" height="{H}" fill="{bg_hex}"/>',
              f'<g transform="translate({tx:.2f},{ty:.2f}) scale({s:.5f})">']
@@ -286,6 +307,7 @@ def main():
     keep = False
     palet = None
     kid = None
+    tepi = None
     while args:
         a = args.pop(0)
         if a == "--sizes":
@@ -302,6 +324,10 @@ def main():
         sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
         import kad
         tk = dict(kad=kid, teks=kad.KAD[kid].get("tekstur", "tiada"), **tekstur_kad(kad.KAD[kid].get("tekstur")))
+        import asas
+        ruj = asas.rujukan(kid)   # sama seperti SK02 (5b)
+        tepi = dict(sisi=float(ruj.get("tepi_sisi_pct", ruj["tepi_pct"])), atas_bawah=float(ruj.get("tepi_atas_bawah_pct", ruj["tepi_pct"])),
+                    sumber=ruj.get("sumber", "kad"))
         ref = kad.KAD[kid].get("ref")
         sama = next((g for g, st in STYLES.items() if st.get("ref") == ref and st["texture"] != "none"), None)
         if tk["tidak_dibuat"] and tk["jenis"] == "none" and sama:   # ganti: gaya yang dibuat daripada gambar upload sama
@@ -309,17 +335,37 @@ def main():
     out.mkdir(parents=True, exist_ok=True)
     img = np.array(Image.open(raw).convert("RGB"))
     vec = vectorize(img, len(palet["dakwat"]) if palet else len(style["inks"]), palet)
+    if tepi:   # blok tulisan seperti SK05 / SK02 (bintik hiasan kecil di luar blok tidak dikira dalam ruang tepi)
+        from SK05_ukur import topeng
+        blok, _ = topeng(img)
+        ys, xs = np.nonzero(blok)
+        if len(ys):
+            vec["bbox_blok"] = [int(xs.min()) * UP, int(ys.min()) * UP, (int(xs.max()) + 1) * UP, (int(ys.max()) + 1) * UP]
     bg_hex, fills = map_palet(vec, palet) if palet else map_palette(vec, style, keep)
     info = {"versi": VERSI, "raw": raw.name, "style": sid, "palet": palet and palet.get("sumber"), "bg": bg_hex, "fills": fills, "layers": len(vec["layers"]),
             "ink_px": [l["area"] for l in vec["layers"]], "sizes": {},
             "tekstur": tk, "amaran": [f"tekstur kad '{b}' belum ada jenisnya dalam SK06: " + (f"diganti {tk['ganti']}" if tk.get("ganti") else "tidak dibuat")
                                       for b in tk["tidak_dibuat"]]}
-    master = compose_svg(vec, bg_hex, fills, 1800, 2400)
+    if tepi:
+        info["tepi"] = dict(sasaran=tepi, hasil={})
+    master = compose_svg(vec, bg_hex, fills, 1800, 2400, tepi)
     (out / "master.svg").write_text(master)
     for sz in sizes:
         wi, hi = SIZES[sz]
         W, H = wi * DPI, hi * DPI
-        png = cairosvg.svg2png(bytestring=compose_svg(vec, bg_hex, fills, W, H).encode(), output_width=W, output_height=H)
+        png = cairosvg.svg2png(bytestring=compose_svg(vec, bg_hex, fills, W, H, tepi).encode(), output_width=W, output_height=H)
+        if tepi:
+            h_ = letak(vec, W, H, tepi)[3]
+            info["tepi"]["hasil"][sz] = h_
+            had = min(abs(min(h_["kiri"], h_["kanan"]) - tepi["sisi"]), abs(min(h_["atas"], h_["bawah"]) - tepi["atas_bawah"]))
+            if had > 2.0:   # sisi yang mengehad mesti sama dengan kad (HAD tepi 5b = 2 mata)
+                info["amaran"].append(f"ruang tepi {sz} di luar had: beza {round(had, 1)} mata daripada kad")
+            s_, tx_, ty_, _ = letak(vec, W, H, tepi)   # semua dakwat (termasuk bintik hiasan) mesti dalam kanvas
+            x0, y0, x1, y1 = vec["bbox"]
+            luar = min(tx_ + s_ * x0, W - tx_ - s_ * x1, ty_ + s_ * y0, H - ty_ - s_ * y1)
+            info["tepi"]["dakwat_min_pct"] = round(float(luar) / min(W, H) * 100, 2)
+            if luar < 0.005 * min(W, H):
+                info["amaran"].append(f"dakwat menyentuh tepi kanvas {sz} (hiasan mungkin terpotong)")
         arr = np.array(Image.open(__import__("io").BytesIO(png)).convert("RGB"))
         arr = texture(arr, bg_hex, tk["jenis"], kuat=tk["kuat"] or 1.0)
         im = Image.fromarray(arr)

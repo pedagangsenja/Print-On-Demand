@@ -33,5 +33,24 @@
   "nota": "--kad Kx: jenis + kekuatan tekstur daripada kad.KAD[Kx]['tekstur'] (kapur=chalk, lusuh/grunge=worn, butir/grain=grain; 'halus' = kuat 0.6). Bahagian tanpa jenis = amaran; ganti dengan tekstur gaya S1-S6 daripada gambar upload yang sama jika ada (K8 -> S4, IMG_5735)",
   "bukti": "3 imej (K3K, K7M, K8G): tanpa cacat SK 3/3 -> 3/3; jurang 'SK06 belum baca tekstur kad' tertutup; K3K dan K8G sama piksel dengan v1 (beza 0.0); K7M kini butir halus ikut kad (disemak pada 300 DPI). Bukti lemah",
   "hasil": "final/v12-cpu-sk07/moss_K7M_s42 dan klein4b_K8G_s42 dijana semula dengan --kad"
+ },
+ {
+  "sk": "SK06",
+  "ubahan": "tepi_kad",
+  "jenis": "parameter",
+  "medan": "ruang_tepi",
+  "kelas": "ruang_tepi",
+  "dari": "SK06 v1.1 (27 Nov 2026)",
+  "ke": "SK06 v1.2 (27 Nov 2026)",
+  "imej": [
+   "v12-cpu/moss/K3K_s42",
+   "v12-cpu/moss/K7M_s42",
+   "v12-cpu/klein4b/K8G_s42"
+  ],
+  "keputusan": "menang",
+  "tarikh": "2026-11-27",
+  "nota": "--kad: ruang tepi setiap saiz poster ikut kad (asas.rujukan, sama seperti SK02); diukur pada blok tulisan (topeng SK05); pusat optik 0.47 hanya jika ruang atas / bawah tidak kurang daripada kad; amaran jika sisi mengehad beza > 2 mata atau dakwat sentuh tepi kanvas",
+  "bukti": "3 imej: 3/3 -> 3/3; ruang tepi sisi mengehad diukur SK05 pada pratonton = kad dalam 0.1 mata (K3K 13.6 / 15.5; K7M 6.2; K8G 12.2), v1.1 lari sehingga 5.8 mata (K7M 12.0 lawan 6.2); tiada dakwat sentuh tepi. Bukti lemah",
+  "hasil": "16 kemasan final/v12-cpu-sk07 dijana semula dengan SK06 v1.2; helaian qc/sk07_sk08_kemasan.jpg dijana semula"
  }
 ]
