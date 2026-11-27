@@ -4,12 +4,12 @@
   "moss": {
    "K9B_s42": [
     true,
-    "Condong 8-11 darjah, kurang daripada kad 15.5 (dibetulkan SK01); garis sengkang berus di kiri dan kanan 'it' (sambungan palang t)",
+    "Condong kurang daripada kad (dibetulkan SK01); garis tambahan di kiri dan kanan 'it'",
     ""
    ],
    "K10V_s42": [
     true,
-    "Bintik gelap halus dalam huruf (tekstur dijana; tekstur kad ditambah SK06)",
+    "Tekstur dalam huruf",
     ""
    ],
    "K11N_s42": [
@@ -24,12 +24,12 @@
    ],
    "K9B_s7": [
     true,
-    "Condong 8-11 darjah, kurang daripada kad 15.5 (dibetulkan SK01); garis sengkang berus di kiri dan kanan 'it' (sambungan palang t)",
+    "Condong kurang daripada kad (dibetulkan SK01); garis tambahan di kiri dan kanan 'it'",
     ""
    ],
    "K10V_s7": [
     true,
-    "Bintik gelap halus dalam huruf (tekstur dijana; tekstur kad ditambah SK06)",
+    "Tekstur dalam huruf",
     ""
    ],
    "K11N_s7": [
@@ -44,12 +44,12 @@
    ],
    "K9B_s123": [
     true,
-    "Condong 8-11 darjah, kurang daripada kad 15.5 (dibetulkan SK01); garis sengkang berus di kiri dan kanan 'it' (sambungan palang t)",
+    "Condong kurang daripada kad (dibetulkan SK01); garis tambahan di kiri dan kanan 'it'",
     ""
    ],
    "K10V_s123": [
     true,
-    "Bintik gelap halus dalam huruf (tekstur dijana; tekstur kad ditambah SK06)",
+    "Tekstur dalam huruf",
     ""
    ],
    "K11N_s123": [
@@ -81,7 +81,7 @@
    ],
    "K10V_s42": [
     true,
-    "PE lulus. Blok sama lebar, putih atas hitam, bersih",
+    "",
     ""
    ],
    "K10V_s7": [
@@ -128,69 +128,69 @@
   "klein3": {
    "K9B_s42": [
     true,
-    "Skrip berus tebal putih, garis sapuan berus di bawah 'Daily', bersih; condong 9.2 dibetulkan SK01 ke 15.2",
+    "Condong kurang (dibetulkan SK01)",
     ""
    ],
    "K9B_s7": [
     true,
-    "Skrip berus tebal putih, garis sapuan berus di bawah 'Daily', bersih; condong 11.3 dibetulkan SK01 ke 15.2",
+    "Condong kurang (dibetulkan SK01)",
     ""
    ],
    "K9B_s123": [
     true,
-    "Skrip berus tebal putih, garis sapuan berus di bawah 'Daily', bersih; SK01 putar 3.4 darjah tetapi ukuran naik 12.1 -> 13.4 sahaja (5b GAGAL condong; kelas SK)",
+    "Condong kurang; SK01 tidak cukup (12.1 -> 13.4)",
     ""
    ],
    "K10V_s42": [
     true,
-    "Blok sama lebar, tekstur bintik halus dalam huruf, bersih",
+    "Tekstur dalam huruf",
     ""
    ],
    "K10V_s7": [
     true,
-    "Blok sama lebar, tekstur bintik halus, bersih",
+    "Tekstur dalam huruf",
     ""
    ],
    "K10V_s123": [
     true,
-    "Blok sama lebar, tekstur bintik halus, bersih",
+    "Tekstur dalam huruf",
     ""
    ],
    "K11N_s42": [
     true,
-    "Kotak tepi berus kasar pada 'SHAKY.'; baris kecil dan sengkang berus betul",
+    "",
     ""
    ],
    "K11N_s7": [
     true,
-    "Kotak tepi berus kasar pada 'SHAKY.'; baris kecil dan sengkang berus betul",
+    "",
     ""
    ],
    "K11N_s123": [
     true,
-    "Kotak tepi berus kasar pada 'SHAKY.'; baris kecil dan sengkang berus betul",
+    "",
     ""
    ],
    "K12Y_s42": [
     true,
-    "Rata kiri; 'GROWTH' dalam kotak putih; noktah betul",
+    "",
     ""
    ],
    "K12Y_s7": [
     true,
-    "Rata kiri; 'GROWTH' dalam kotak putih; noktah betul",
+    "",
     ""
    ],
    "K12Y_s123": [
     true,
-    "Rata kiri; 'GROWTH' dalam kotak putih; noktah betul",
+    "",
     ""
    ]
   },
   "zturbo": {
    "K9B_s42": [
     true,
-    "Skrip berus putih, sapuan berus bawah; blok terlalu besar (ruang tepi 5%, SK02) dan condong 10 (SK01)",
+    "Ruang tepi sempit (SK02); condong kurang (SK01)",
     ""
    ],
    "K9B_s7": [
@@ -205,27 +205,27 @@
    ],
    "K10V_s42": [
     true,
-    "Bersih; blok terlalu lebar (SK02); baris tidak sama lebar sepenuhnya",
+    "Ruang tepi sempit (SK02); baris tidak sama lebar (bentuk)",
     ""
    ],
    "K10V_s7": [
     true,
-    "Bersih; baris tidak sama lebar sepenuhnya",
+    "Baris tidak sama lebar (bentuk)",
     ""
    ],
    "K10V_s123": [
     true,
-    "Bersih; 'BE' dan 'DO' kurang tinggi berbanding kad",
+    "Baris tidak sama lebar (bentuk)",
     ""
    ],
    "K11N_s42": [
     true,
-    "Kotak berus pada 'SHAKY.'; sengkang hanya di kanan baris kecil",
+    "Sengkang hanya di kanan baris kecil (hiasan di tempat salah)",
     ""
    ],
    "K11N_s7": [
     true,
-    "Kotak berus pada 'SHAKY.'; garis berus di bawah baris kecil, bukan sengkang kiri kanan",
+    "Garis tambahan di bawah baris kecil, bukan sengkang kiri kanan",
     ""
    ],
    "K11N_s123": [
@@ -235,7 +235,7 @@
    ],
    "K12Y_s42": [
     true,
-    "Rata kiri; 'GROWTH' dalam kotak; blok terlalu besar (SK02)",
+    "Ruang tepi sempit (SK02)",
     ""
    ],
    "K12Y_s7": [
@@ -245,7 +245,69 @@
    ],
    "K12Y_s123": [
     true,
-    "Rata kiri; 'GROWTH' dalam kotak",
+    "",
+    ""
+   ]
+  },
+  "klein4b": {
+   "K9B_s42": [
+    false,
+    "'Daily' jadi 'Daly' (ejaan; 3/3 seed)",
+    ""
+   ],
+   "K9B_s7": [
+    false,
+    "'Daily' jadi 'Daly' (ejaan; 3/3 seed)",
+    ""
+   ],
+   "K9B_s123": [
+    false,
+    "'Daily' jadi 'Daly' (ejaan; 3/3 seed)",
+    ""
+   ],
+   "K10V_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K10V_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K10V_s123": [
+    true,
+    "",
+    ""
+   ],
+   "K11N_s42": [
+    false,
+    "'SHAKY.' jadi 'SHAKY' tanpa noktah dan 'add' jadi 'adl', huruf kecil 'small' (ejaan)",
+    ""
+   ],
+   "K11N_s7": [
+    false,
+    "Huruf 'e' dalam 'steps' rosak (ejaan)",
+    ""
+   ],
+   "K11N_s123": [
+    true,
+    "",
+    ""
+   ],
+   "K12Y_s42": [
+    false,
+    "'HUMBLE.' jadi 'HUMBLE' tanpa noktah (ejaan; 3/3 seed); blok di tengah, bukan rata kiri",
+    ""
+   ],
+   "K12Y_s7": [
+    false,
+    "'HUMBLE.' jadi 'HUMBLE' tanpa noktah (ejaan; 3/3 seed); blok di tengah, bukan rata kiri",
+    ""
+   ],
+   "K12Y_s123": [
+    false,
+    "'HUMBLE.' jadi 'HUMBLE' tanpa noktah (ejaan; 3/3 seed); blok di tengah, bukan rata kiri",
     ""
    ]
   }
