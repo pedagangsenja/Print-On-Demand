@@ -1,5 +1,5 @@
 {
- "versi": "SK06 v1.3 (27 Nov 2026)",
+ "versi": "SK06 v1.4 (27 Nov 2026)",
  "raw": "ernie_K10F_s42_HP_warna.png",
  "style": "S3",
  "palet": "kad K10 HP",
@@ -20,15 +20,11 @@
  "tekstur": {
   "kad": "K10",
   "teks": "cetakan lusuh berbintik",
-  "jenis": "none",
-  "kuat": 0.0,
-  "tidak_dibuat": [
-   "cetakan lusuh berbintik"
-  ]
+  "jenis": "worn",
+  "kuat": 1.0,
+  "tidak_dibuat": []
  },
- "amaran": [
-  "tekstur kad 'cetakan lusuh berbintik' belum ada jenisnya dalam SK06: tidak dibuat"
- ],
+ "amaran": [],
  "tepi": {
   "sasaran": {
    "sisi": 10.8,

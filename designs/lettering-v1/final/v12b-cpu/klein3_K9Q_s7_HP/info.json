@@ -1,5 +1,5 @@
 {
- "versi": "SK06 v1.3 (27 Nov 2026)",
+ "versi": "SK06 v1.4 (27 Nov 2026)",
  "raw": "klein3_K9Q_s7_HP_warna.png",
  "style": "S3",
  "palet": "kad K9 HP",
@@ -20,15 +20,11 @@
  "tekstur": {
   "kad": "K9",
   "teks": "bintik lusuh grunge",
-  "jenis": "none",
-  "kuat": 0.0,
-  "tidak_dibuat": [
-   "bintik lusuh grunge"
-  ]
+  "jenis": "worn",
+  "kuat": 1.0,
+  "tidak_dibuat": []
  },
- "amaran": [
-  "tekstur kad 'bintik lusuh grunge' belum ada jenisnya dalam SK06: tidak dibuat"
- ],
+ "amaran": [],
  "tepi": {
   "sasaran": {
    "sisi": 3.2,

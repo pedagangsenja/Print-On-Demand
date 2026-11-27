@@ -328,6 +328,10 @@ KAD = {
         warna=dict(latar=("hitam", "#030302", "black"),
                    dakwat=[("putih pudar", "#f4f0ea", "white"), ("hijau limau", "#a6b71c", "lime green"),
                            ("hitam atas jalur", "#030302", "black")]),
+        # peta_warna (27 Nov 2026, TINDAKAN PARAMETER Belajar SK): rujukan berwarna ikut baris (WORK putih, jalur IN SILENCE
+        # hijau, SUCCESS hijau, jalur MAKE THE putih, NOISE hijau); anggaran ikut peranan: sans putih, skrip hijau, jalur
+        # putih (huruf hitam di dalamnya = lubang latar), percikan putih. Hanya untuk varian berwarna; HP tidak memakainya.
+        peta_warna=dict(utama=0, sokongan=1, penyambung=0, hiasan=0),
         medium="Bold distressed motivational typography poster, portrait.",
         latar="Solid black background.",
         susunan="All lines are stacked into one tight centered block; the lines sit close together.",
@@ -658,7 +662,8 @@ BLOK = {
                            ayat="One long rough white brush swoosh sweeps under the last line")],
         hiasan_baki="Short rough white brush dashes sit to the left and right of each small word.",
         tiada=["gray", "outline", "shadow"], ada="rough textured fills on a clean black background", sama_lebar=False),
-        # Tiada rujukan: SK05 gagal pada IMG_5761 (latar batu bertekstur, kotak = seluruh kanvas). 5b tidak dijalankan.
+        # Tiada rujukan: SK05 gagal pada IMG_5761 (latar batu bertekstur, kotak = seluruh kanvas; ambang 100-160 juga gagal,
+        # 27 Nov 2026). 5b memakai ruang_tepi kad (SK02 tanpa rujukan); ukuran tangan atau gambar latar rata diperlukan.
     "K12": dict(
         medium="hand-lettered quote poster", gaya="hand-drawn", latar_warna="solid black", latar_isi=None,
         tepi="flat solid white strokes", bentuk="one tight block", condong=None, sentuh="touch and interlock",

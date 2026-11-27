@@ -22,7 +22,7 @@ import SK02_ruang_tepi
 import SK03_kedudukan
 import SK04_hitam_putih
 
-VERSI = "5b v1.1"
+VERSI = "5b v1.2"
 
 
 def betulkan(rgb, ruj, had=asas.HAD):

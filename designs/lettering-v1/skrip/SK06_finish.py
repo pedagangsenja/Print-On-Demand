@@ -17,6 +17,8 @@
 # ruang_tepi kad). Sisi yang mengehad = nilai kad; pusat optik 0.47 hanya jika ruang atas / bawah tidak kurang
 # daripada kad. Ruang tepi diukur pada blok tulisan (topeng SK05, bintik hiasan kecil tidak dikira), sama seperti
 # SK02 / SK05. Ruang tepi hasil dicatat dalam info.json. Tanpa --kad: 76% x 78% seperti v1.
+# v1.4 (27 Nov 2026, Belajar SK, ubahan kata_tekstur, parameter): kata kad 'bintik' / 'berbintik' = jenis lusuh (worn);
+# 'tiada (rata)' = tiada tekstur. Kad K9, K10, K13 (bintik lusuh) kini bertekstur; K11 'retak kasar' masih tidak dibuat.
 # v1.3 (27 Nov 2026, Belajar SK, ubahan tekstur_marker): jenis tekstur 'marker' (tepi marker kering + butir latar)
 # dengan parameter yang diukur pada gambar upload kad (--ukur-tekstur; disimpan di kad.BLOK[k]['rujukan']['tekstur']).
 # Butir dijana pada skala rujukan (blok tulisan sama lebar), jadi rupa sama pada setiap saiz poster. Hasil diukur
@@ -44,7 +46,7 @@ import cv2
 import numpy as np
 from PIL import Image
 
-VERSI = "SK06 v1.3 (27 Nov 2026)"
+VERSI = "SK06 v1.4 (27 Nov 2026)"
 from scipy.optimize import linear_sum_assignment
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -57,9 +59,9 @@ FIT_W, FIT_H = 0.76, 0.78   # lockup muat dalam 76% lebar / 78% tinggi kanvas
 CENTER_Y = 0.47   # pusat optik sedikit di atas tengah
 
 # Tekstur kad (teks bebas dalam kad.py) -> jenis prosedur. Turutan = keutamaan. Kekuatan: "halus" 0.6, lain 1.0.
-TEKSTUR_KAD = [("kapur", "chalk"), ("lusuh", "worn"), ("grunge", "worn"), ("butir", "grain"), ("grain", "grain")]
+TEKSTUR_KAD = [("kapur", "chalk"), ("lusuh", "worn"), ("grunge", "worn"), ("bintik", "worn"), ("butir", "grain"), ("grain", "grain")]
 KUAT_KAD = {"halus": 0.6, "sederhana": 1.0}
-SOKONG = ("tiada", "kapur", "lusuh", "grunge", "butir", "grain", "halus", "sederhana", "cetakan", "berus kering")
+SOKONG = ("tiada", "kapur", "lusuh", "grunge", "berbintik", "bintik", "butir", "grain", "halus", "sederhana", "cetakan", "berus kering")
 
 
 def tekstur_kad(teks):
@@ -67,7 +69,7 @@ def tekstur_kad(teks):
     tanpa padanan jenis, atau tekstur pada latar (SK06 hanya menekstur dakwat), masuk tidak_dibuat supaya
     belajar_sk.py menandanya (cth. K8 'tepi marker kering', 'butir latar')."""
     t = (teks or "tiada").lower().strip()
-    if t == "tiada":
+    if t == "tiada" or t.startswith("tiada ("):  # v1.4: tiada (rata)
         return dict(jenis="none", kuat=0.0, tidak_dibuat=[])
     jenis, kuat, tak = None, 1.0, []
     for bah in [b.strip() for b in re.split(r"\s*\+\s*|,", t) if b.strip()]:
