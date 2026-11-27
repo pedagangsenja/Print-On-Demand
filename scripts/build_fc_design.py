@@ -167,7 +167,7 @@ NODES = [
     dict(id="5b", lorong=S, baris=12, tajuk="Pembetulan skrip (SK01–SK04)",
          butiran=["5b Pembetulan skrip (v1.2), selepas 3 pintu lulus: condong, ruang tepi, kedudukan, hitam putih bersih",
                   "5b hanya jalan bila ukuran tersasar daripada ukuran rujukan kad; ejaan dan bentuk huruf mesti jana semula",
-                  "Daftar skrip (26 Nov): SK01 condong, SK02 ruang tepi, SK03 kedudukan, SK04 hitam putih bersih, SK05 ukuran (dibina); SK06 finish.py (dibawa masuk); SK07 warna, SK08 bayang (belum)",
+                  "Daftar skrip: SK01 condong, SK02 ruang tepi, SK03 kedudukan, SK04 hitam putih bersih, SK05 ukuran (26 Nov); SK06 finish.py (dibawa masuk, --palet 27 Nov); SK07 warna ikut peranan, SK08 bayang (dibina 27 Nov)",
                   "Larian pertama: 33 imej dibetulkan (condong, ruang tepi, kedudukan, hitam putih), 0 gagal semakan akhir",
                   "Skrip baharu: bila gambar upload ada ciri yang tiada skrip → tulis, simpan di skrip/<ID>_<nama>.py, uji pada imej sedia ada, daftar, kemas kini standard + dashboard, beritahu anda"],
          alat=[("skrip/betulkan.py: SK01–SK04 (Python)", "ukur, betulkan, ukur semula; dipakai pada 33 imej larian pertama; had toleransi diluluskan 27 Nov", OK),
@@ -186,15 +186,19 @@ NODES = [
                   "Pilih warna C dan warna latar yang padan dengan jenis ayat, ikon dan gaya S (tab Aliran)"],
          alat=[]),
     dict(id="6b", lorong=S, baris=15, tajuk="Vektor + warna C + kemasan",
-         butiran=["Tukar design yang lulus kepada vektor, kemudian warnakan semula ikut C; dua atau tiga pilihan C ditunjuk sekali gus",
+         butiran=["Urutan (27 Nov): SK07 warna ikut peranan → SK08 bayang → SK06 vektor + tekstur + saiz cetak; satu arahan: skrip/kemasan.py",
+                  "SK07: setiap baris ikut peranan Spesifikasi Teks (utama, sokongan, label, hiasan); baris bertaut dibelah; GAGAL = kekal hitam putih",
+                  "SK08: bayang 3D dalam huruf ikut ukuran gambar upload (K3: bawah setiap strok skrip kelabu cerah, IMG_5775)",
                   "Parameter daripada kad: margin, tekstur, bilangan dakwat, butiran halus",
-                  "Warna C diletak oleh skrip ikut peranan: 1 imej → beberapa warna C",
+                  "Warna C diletak oleh skrip ikut peranan: 1 imej → beberapa warna C (--warna Cxxx)",
                   "Seed tekstur berbeza setiap design",
                   "Simpan SVG induk; PNG besar dijana semula bila perlu",
                   "F1 (v1): vektor rata · F2 (v1): rata + tekstur · F3: raster, ditangguh",
                   "Kunci 4: AI jana hitam putih; skrip letak warna, margin, tekstur selepas QC lulus"],
-         alat=[("skrip/SK06_finish.py", "F1 / F2; palet, margin dan tekstur masih tetap dalam skrip", PART),
-               ("Kemasan ikut kad (Python)", "baca warna, margin dan tekstur daripada kad", NO)]),
+         alat=[("skrip/SK07_warna.py", "warna ikut peranan kad atau warna C; 14 imej K3K: 12 lulus, 2 GAGAL dikesan", OK),
+               ("skrip/SK08_bayang.py", "bayang dalam huruf K3, diukur pada IMG_5775; bayang lembut K1 belum", PART),
+               ("skrip/SK06_finish.py", "F1 / F2; palet tepat dengan --palet; margin dan tekstur masih tetap dalam skrip", PART),
+               ("skrip/kemasan.py", "SK07 → SK08 → SK06 satu arahan", OK)]),
     dict(id="6c", lorong=C, baris=16, tajuk="QC kali kedua (berwarna)",
          butiran=["QC dua kali: imej mentah hitam putih, dan selepas warna + kemasan",
                   "Semak automatik: bilangan lapisan dan dakwat yang hilang"],
@@ -550,7 +554,7 @@ SECTION = """<!-- FC:TAB START -->
 <div class="fc-subbar" role="tablist" aria-label="Sub tab FC">
   <button type="button" class="fc-sub-btn" role="tab" id="btn-fc-design" data-sub="fc-design" aria-controls="fc-design" aria-selected="true">Design v1.2</button>
 </div>
-<section id="fc-design" class="pod-section pod-first fc-sub" role="tabpanel" aria-labelledby="btn-fc-design"><p class="pod-muted">Memuatkan carta…</p></section>
+<section id="fc-design" class="pod-section pod-first fc-sub" role="tabpanel" aria-labelledby="btn-fc-design"><div class="fc-host" data-draw="fc-design">—</div></section>
 </section>
 <!-- FC:TAB END -->"""
 
@@ -667,8 +671,8 @@ CSS = """#tab-fc { --fc-on: #fff; --fc-ok: var(--color-ok, #1a7f37); --fc-warn: 
 """
 
 JS = """(() => {
-  const box = document.getElementById('fc-design');
-  if (box) box.innerHTML = HTML;
+const setup = (box) => {
+  box.innerHTML = HTML;
   const btns = [...document.querySelectorAll('.fc-sub-btn')];
   const open = (id) => btns.forEach((b) => {
     const on = b.dataset.sub === id;
@@ -735,6 +739,8 @@ JS = """(() => {
   });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && sel) close(); });
   cv.addEventListener('click', (e) => { if (sel && !e.target.closest('.fd-n, .fd-pop')) close(); });
+};
+dash.draw('fc-design', { mount: (el) => { setup(el); }, update: () => {} });
 })();
 """
 
@@ -792,7 +798,8 @@ def main(path, out):
     os.makedirs(out, exist_ok=True)
     open(os.path.join(out, "fc.css"), "w", encoding="utf-8").write(CSS)
     open(os.path.join(out, "fc.js"), "w", encoding="utf-8").write(
-        "/* Dijana oleh scripts/build_fc_design.py; jangan ubah secara manual. */\n(() => {\nconst HTML = "
+        "/* Dijana oleh scripts/build_fc_design.py; jangan ubah secara manual. Dibungkus dalam dash.draw('fc-design') "
+        "(27 Nov 2026, disamakan dengan versi live). */\n(() => {\nconst HTML = "
         + json.dumps(content(), ensure_ascii=False) + ";\nconst DATA = " + json.dumps(data_json(), ensure_ascii=False)
         + ";\n" + JS.split("\n", 1)[1])
     print(f"ok: {path} ({len(s.encode())} bait), fc.css, fc.js; {len(NODES)} kotak, {len(EDGES)} garisan")
