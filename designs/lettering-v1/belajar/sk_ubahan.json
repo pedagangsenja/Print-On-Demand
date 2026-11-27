@@ -81,13 +81,27 @@
   "dari": "SK07 v1.1 (27 Nov 2026)",
   "ke": "SK07 v1.2 (27 Nov 2026)",
   "imej": [
+   "v12b-cpu/ernie/K12O_s42",
+   "v12b-cpu/ernie/K12O_s7",
+   "v12b-cpu/ernie/K13V_s123",
+   "v12b-cpu/ernie/K13V_s42",
+   "v12b-cpu/ernie/K13V_s7",
+   "v12b-cpu/klein3/K12O_s42",
+   "v12b-cpu/klein3/K12O_s7",
+   "v12b-cpu/klein3/K13V_s42",
+   "v12b-cpu/klein3/K13V_s7",
+   "v12b-cpu/klein4b/K13V_s123",
+   "v12b-cpu/klein4b/K13V_s42",
    "v12b-cpu/moss/K12O_s42",
    "v12b-cpu/moss/K12O_s7",
    "v12b-cpu/moss/K13V_s123",
-   "v12b-cpu/moss/K13V_s42"
+   "v12b-cpu/moss/K13V_s42",
+   "v12b-cpu/zturbo/K13V_s123",
+   "v12b-cpu/zturbo/K13V_s42"
   ],
-  "keputusan": "cuba",
+  "keputusan": "menang",
   "tarikh": "2026-11-27",
-  "nota": "Kad K12 dan K13: rujukan hitam atas putih (IMG_5762, IMG_5755; purata kecerahan 189 / 182), imej AI putih atas hitam. Pengguna minta hitam putih sahaja, jadi warna kuning mustard K13 tidak boleh dipakai. --warna HP: latar kad, semua peranan = dakwat pertama kad."
+  "nota": "Kad K12 dan K13: rujukan hitam atas putih (IMG_5762, IMG_5755; purata kecerahan 189 / 182), imej AI putih atas hitam. Pengguna minta hitam putih sahaja, jadi warna kuning mustard K13 tidak boleh dipakai. --warna HP: latar kad, semua peranan = dakwat pertama kad.",
+  "bukti": "17 imej K12O / K13V (5 model): 17/17 lulus SK07, hitam atas putih ikut rujukan, tiada kelas cacat baharu (amaran 'dua kumpulan digabung' sama seperti v1.1; peranan baris betul). Jurang 'kad berbilang dakwat tetapi poster hitam putih sahaja' tertutup. Semakan mata Claude, bukti lemah."
  }
 ]
