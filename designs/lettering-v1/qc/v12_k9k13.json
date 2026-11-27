@@ -222,6 +222,21 @@
     true,
     "Ejaan betul; hiasan atas menyentuh huruf O (tempat salah)",
     ""
+   ],
+   "K13S_s42": [
+    true,
+    "Ejaan betul; blok penuh tinggi, baris hampir sama lebar; hampir sentuh tepi atas (ruang tepi, SK02)",
+    ""
+   ],
+   "K13S_s7": [
+    true,
+    "Ejaan betul; blok penuh",
+    ""
+   ],
+   "K13S_s123": [
+    true,
+    "Ejaan betul; blok penuh",
+    ""
    ]
   }
  }
