@@ -134,6 +134,73 @@
     "Bingkai penuh kasar, anak panah, tekstur cop",
     ""
    ]
+  },
+  "klein3": {
+   "K9R_s42": [
+    true,
+    "Sinar atas, campuran caps inline + skrip; reben kecil sahaja pada AND / BIG",
+    ""
+   ],
+   "K9R_s7": [
+    true,
+    "Sama; DREAM inline tebal",
+    ""
+   ],
+   "K9R_s123": [
+    true,
+    "Sama; reben kecil",
+    ""
+   ],
+   "K10E_s42": [
+    true,
+    "Sans tebal bertindan, penuh lebar; paling hampir rujukan",
+    ""
+   ],
+   "K10E_s7": [
+    true,
+    "Sans tebal bertindan, penuh lebar",
+    ""
+   ],
+   "K10E_s123": [
+    true,
+    "Sans tebal bertindan, penuh lebar",
+    ""
+   ],
+   "K11C_s42": [
+    true,
+    "Tekstur kapur ada; blok kecil, tidak isi poster",
+    ""
+   ],
+   "K11C_s7": [
+    true,
+    "Tekstur kapur; blok kecil",
+    ""
+   ],
+   "K11C_s123": [
+    true,
+    "Tekstur kapur; blok kecil",
+    ""
+   ],
+   "K12S_s42": [
+    true,
+    "Huruf gelembung + titik / percikan",
+    ""
+   ],
+   "K12S_s7": [
+    true,
+    "Huruf gelembung + titik / percikan",
+    ""
+   ],
+   "K13U_s42": [
+    true,
+    "Bingkai penuh + tekstur cop; blok kecil, ruang kosong besar",
+    ""
+   ],
+   "K13U_s7": [
+    true,
+    "Bingkai penuh + tekstur cop; blok kecil",
+    ""
+   ]
   }
  }
 }
