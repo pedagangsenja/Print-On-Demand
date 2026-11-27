@@ -1,0 +1,72 @@
+{
+ "nota": "Larian v1.2 kedua, 27 Nov 2026: kad K9-K13 (baharu, daripada 5 gambar pengguna), CPU, hitam putih sahaja (langkah 6 warna tidak dibuat). Semakan mata Claude pada helaian semakan + potongan besar bagi imej meragukan. Tahap bukti lemah. ok = pintu G1 (ejaan, huruf besar / kecil, baris), G2 (tiada teks / tanda rawak) dan G3 (tiada cacat) lulus. Sebab = ciri kad yang gagal. Nilai ketiga = id aset dashboard (kosong: pengguna belum pilih A / SNC).",
+ "v12b-cpu": {
+  "moss": {
+   "K9Q_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K9Q_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K9Q_s123": [
+    true,
+    "",
+    ""
+   ],
+   "K10F_s42": [
+    true,
+    "Blok tidak condong naik ke kanan (SK01 5b)",
+    ""
+   ],
+   "K10F_s7": [
+    true,
+    "Blok tidak condong naik ke kanan (SK01 5b)",
+    ""
+   ],
+   "K11R_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K11R_s7": [
+    true,
+    "Sengkang hanya di sisi THE dan IS (bukan semua perkataan kecil; diterima)",
+    ""
+   ],
+   "K11R_s123": [
+    true,
+    "",
+    ""
+   ],
+   "K12O_s42": [
+    true,
+    "Huruf antara baris rapat tetapi tidak bertaut (ciri teras 3 lemah)",
+    ""
+   ],
+   "K12O_s7": [
+    true,
+    "Huruf antara baris rapat tetapi tidak bertaut (ciri teras 3 lemah)",
+    ""
+   ],
+   "K13V_s42": [
+    true,
+    "Tanda petik kelabu, bukan putih (SK04 5b)",
+    ""
+   ],
+   "K13V_s7": [
+    false,
+    "G3: tanda petik penutup bertindih batang huruf T pada MOMENT",
+    ""
+   ],
+   "K13V_s123": [
+    true,
+    "",
+    ""
+   ]
+  }
+ }
+}
