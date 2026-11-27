@@ -1,7 +1,7 @@
 {
  "versi": "b1.1 (27 Nov 2026)",
  "tarikh": "2026-11-27",
- "imej": 186,
+ "imej": 198,
  "suka": 0,
  "tolak": 0,
  "model": {
@@ -63,8 +63,8 @@
       "K12Y",
       "K9B"
      ],
-     "cadangan": "huruf_besar",
-     "cadangan_teks": "Huruf besar untuk baris itu jika kad membenarkan"
+     "cadangan": null,
+     "cadangan_teks": "Pilihan ubahan habis: tukar ke model seterusnya ikut jadual model × gaya, kemudian pendekkan ayat, kemudian lapor kepada pengguna"
     },
     {
      "kelas": "lain",
@@ -90,13 +90,12 @@
      "cadangan_teks": "Nyatakan kedudukan hiasan (kiri dan kanan, di luar label)"
     }
    ],
-   "ubahan_dicuba": 1,
+   "ubahan_dicuba": 3,
    "suka_imej": [],
    "tindakan": [
     {
-     "jenis": "cuba",
-     "ubahan": "huruf_besar",
-     "teks": "Satu ubahan untuk jana seterusnya model ini: PEMBINA_UJI=klein4b_huruf_besar (Huruf besar untuk baris itu jika kad membenarkan) bagi cacat 'Perkataan salah eja, rosak, atau huruf besar / kecil salah' (6 imej, 2 design); jana bersama aturan semasa, seed sama"
+     "jenis": "habis",
+     "teks": "Cacat 'Perkataan salah eja, rosak, atau huruf besar / kecil salah': Pilihan ubahan habis: tukar ke model seterusnya ikut jadual model × gaya, kemudian pendekkan ayat, kemudian lapor kepada pengguna"
     }
    ]
   },
@@ -141,9 +140,9 @@
     "design": 7
    },
    "semua": {
-    "imej": 39,
-    "lulus": 22,
-    "pct": 56,
+    "imej": 42,
+    "lulus": 23,
+    "pct": 55,
     "suka": 0,
     "tolak": 0,
     "design": 11
@@ -159,8 +158,8 @@
       "K8G",
       "K9B"
      ],
-     "cadangan": "had_positif",
-     "cadangan_teks": "Buang perkataan berisiko daripada ayat had (label, logo, signature, watermark); tulis had sebagai ayat positif"
+     "cadangan": null,
+     "cadangan_teks": "Pilihan ubahan habis: tukar ke model seterusnya ikut jadual model × gaya, kemudian pendekkan ayat, kemudian lapor kepada pengguna"
     },
     {
      "kelas": "baris",
@@ -233,13 +232,12 @@
      "cadangan_teks": "Nyatakan kedudukan hiasan (kiri dan kanan, di luar label)"
     }
    ],
-   "ubahan_dicuba": 2,
+   "ubahan_dicuba": 3,
    "suka_imej": [],
    "tindakan": [
     {
-     "jenis": "cuba",
-     "ubahan": "had_positif",
-     "teks": "Satu ubahan untuk jana seterusnya model ini: PEMBINA_UJI=zturbo_had_positif (Buang perkataan berisiko daripada ayat had (label, logo, signature, watermark); tulis had sebagai ayat positif) bagi cacat 'Teks rawak, label atau tanda baca tambahan' (6 imej, 3 design); jana bersama aturan semasa, seed sama"
+     "jenis": "habis",
+     "teks": "Cacat 'Teks rawak, label atau tanda baca tambahan': Pilihan ubahan habis: tukar ke model seterusnya ikut jadual model × gaya, kemudian pendekkan ayat, kemudian lapor kepada pengguna"
     }
    ]
   },
@@ -267,36 +265,48 @@
      "design": 1
     },
     "r1": {
-     "imej": 21,
-     "lulus": 20,
-     "pct": 95,
+     "imej": 30,
+     "lulus": 28,
+     "pct": 93,
      "suka": 0,
      "tolak": 0,
      "design": 7
     }
    },
    "semasa": {
-    "imej": 21,
-    "lulus": 20,
-    "pct": 95,
+    "imej": 30,
+    "lulus": 28,
+    "pct": 93,
     "suka": 0,
     "tolak": 0,
     "design": 7
    },
    "semua": {
-    "imej": 33,
-    "lulus": 27,
-    "pct": 82,
+    "imej": 42,
+    "lulus": 35,
+    "pct": 83,
     "suka": 0,
     "tolak": 0,
     "design": 11
    },
    "berulang": [
     {
+     "kelas": "rawak",
+     "nama": "Teks rawak, label atau tanda baca tambahan",
+     "imej": 2,
+     "gagal": 2,
+     "design": [
+      "K11N",
+      "K3K"
+     ],
+     "cadangan": "had_positif",
+     "cadangan_teks": "Buang perkataan berisiko daripada ayat had (label, logo, signature, watermark); tulis had sebagai ayat positif"
+    },
+    {
      "kelas": "lain",
      "nama": "Cacat lain (tiada kelas)",
-     "imej": 11,
-     "gagal": 0,
+     "imej": 13,
+     "gagal": 1,
      "design": [
       "K10V",
       "K11N",
@@ -321,9 +331,10 @@
     {
      "kelas": "luar_label",
      "nama": "Perkataan tidak di dalam label",
-     "imej": 2,
+     "imej": 3,
      "gagal": 0,
      "design": [
+      "K11N",
       "K12Y"
      ],
      "cadangan": "bekas_dahulu",
@@ -334,8 +345,9 @@
    "suka_imej": [],
    "tindakan": [
     {
-     "jenis": "habis",
-     "teks": "Cacat 'Cacat lain (tiada kelas)': Tanya pengguna sebabnya; tambah ke kad sebagai ciri QC"
+     "jenis": "cuba",
+     "ubahan": "had_positif",
+     "teks": "Satu ubahan untuk jana seterusnya model ini: PEMBINA_UJI=ernie_had_positif (Buang perkataan berisiko daripada ayat had (label, logo, signature, watermark); tulis had sebagai ayat positif) bagi cacat 'Teks rawak, label atau tanda baca tambahan' (2 imej, 2 design); jana bersama aturan semasa, seed sama"
     }
    ]
   },

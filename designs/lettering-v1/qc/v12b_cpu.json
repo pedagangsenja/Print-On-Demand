@@ -360,5 +360,24 @@
     ""
    ]
   }
+ },
+ "v12b-cpu-p1-uji": {
+  "zturbo": {
+   "K9B_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K9B_s7": [
+    false,
+    "Koma tambahan selepas 'Daily'; garis tambahan di kiri dan kanan 'it'",
+    ""
+   ],
+   "K9B_s123": [
+    false,
+    "Koma tambahan selepas 'Build'",
+    ""
+   ]
+  }
  }
 }
