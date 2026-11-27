@@ -656,7 +656,10 @@ BLOK = {
         hiasan=None, sisi=None, hiasan_kotak=[], tiada=["gray", "outline", "shadow", "icons"],
         ada="flat solid white letters on a clean black background", sama_lebar=True,
         rujukan=dict(condong_darjah=0.0, tepi_pct=5.7, tepi_sisi_pct=8.0, tepi_atas_bawah_pct=5.7,
-                     sumber="SK05 pada IMG_5793 dipotong ke poster karang (792x1114)")),
+                     sumber="SK05 pada IMG_5793 dipotong ke poster karang (792x1114)",
+                     tekstur=dict(jenis="calar", lubang_dakwat=0.0271, lebar_blok=664,
+                                  sumber="SK06 --ukur-tekstur --songsang pada IMG_5793_poster.png (v1.4)",
+                                  had=["calar diukur sebagai pecahan lubang sahaja; arah / panjang calar ditetapkan prosedur"]))),
     "K11": dict(
         medium="typographic quote poster", gaya="bold condensed", latar_warna="solid black", latar_isi=None,
         tepi="crisp clean edges", bentuk="one tight block",
@@ -711,7 +714,10 @@ BLOK = {
         hiasan=None, sisi=None, hiasan_kotak=[], tiada=["gray", "outline", "shadow", "icons"],
         ada="flat solid white letters on a clean black background", sama_lebar=True,
         rujukan=dict(condong_darjah=0.0, tepi_pct=2.0, tepi_sisi_pct=11.7, tepi_atas_bawah_pct=2.0,
-                     sumber="SK05 pada IMG_5791 (440x694)")),
+                     sumber="SK05 pada IMG_5791 (440x694)",
+                     tekstur=dict(jenis="semburan", lubang_dakwat=0.106, lebar_blok=333,
+                                  sumber="SK06 --ukur-tekstur --songsang pada IMG_5791.jpg (v1.4)",
+                                  had=["JPEG 440x694: bintik bawah 1 px tidak diukur"]))),
 }
 
 

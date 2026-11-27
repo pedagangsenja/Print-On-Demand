@@ -1,5 +1,5 @@
 {
- "versi": "SK06 v1.3 (27 Nov 2026)",
+ "versi": "SK06 v1.4 (27 Nov 2026)",
  "raw": "moss_K13S_s123_warna.png",
  "style": "S1",
  "palet": "kad K13",
@@ -20,15 +20,26 @@
  "tekstur": {
   "kad": "K13",
   "teks": "butir semburan kasar",
-  "jenis": "none",
-  "kuat": 0.0,
-  "tidak_dibuat": [
-   "butir semburan kasar"
-  ]
+  "jenis": "semburan",
+  "kuat": 1.0,
+  "tidak_dibuat": [],
+  "ukur": {
+   "jenis": "semburan",
+   "lubang_dakwat": 0.106,
+   "lebar_blok": 333,
+   "sumber": "SK06 --ukur-tekstur --songsang pada IMG_5791.jpg (v1.4)",
+   "had": [
+    "JPEG 440x694: bintik bawah 1 px tidak diukur"
+   ]
+  },
+  "hasil_ukur": {
+   "18x24": {
+    "lubang_dakwat": 0.1059,
+    "lebar_blok_lubang": 333
+   }
+  }
  },
- "amaran": [
-  "tekstur kad 'butir semburan kasar' belum ada jenisnya dalam SK06: tidak dibuat"
- ],
+ "amaran": [],
  "tepi": {
   "sasaran": {
    "sisi": 11.7,

@@ -1,13 +1,18 @@
 {
  "versi": "s1 (27 Nov 2026)",
  "tarikh": "2026-11-27",
- "baris": 224,
- "imej": 40,
+ "baris": 483,
+ "imej": 80,
  "kad_dipakai": [
+  "K10",
+  "K11",
+  "K12",
+  "K13",
   "K3",
   "K6",
   "K7",
-  "K8"
+  "K8",
+  "K9"
  ],
  "suka": 0,
  "sk": {
@@ -19,8 +24,8 @@
    "versi": "5b v1.1",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 28,
-     "lulus": 28,
+     "imej": 33,
+     "lulus": 33,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -28,8 +33,8 @@
     }
    },
    "semasa": {
-    "imej": 28,
-    "lulus": 28,
+    "imej": 33,
+    "lulus": 33,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -53,8 +58,8 @@
    "versi": "5b v1.1",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 19,
-     "lulus": 19,
+     "imej": 41,
+     "lulus": 41,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -62,8 +67,8 @@
     }
    },
    "semasa": {
-    "imej": 19,
-    "lulus": 19,
+    "imej": 41,
+    "lulus": 41,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -87,8 +92,8 @@
    "versi": "5b v1.1",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 17,
-     "lulus": 17,
+     "imej": 23,
+     "lulus": 23,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -96,8 +101,8 @@
     }
    },
    "semasa": {
-    "imej": 17,
-    "lulus": 17,
+    "imej": 23,
+    "lulus": 23,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -121,8 +126,8 @@
    "versi": "5b v1.1",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 32,
-     "lulus": 32,
+     "imej": 62,
+     "lulus": 62,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -130,8 +135,8 @@
     }
    },
    "semasa": {
-    "imej": 32,
-    "lulus": 32,
+    "imej": 62,
+    "lulus": 62,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -177,7 +182,7 @@
    "nama": "finish",
    "fail": "SK06_finish.py",
    "langkah": "6",
-   "versi": "SK06 v1.3 (27 Nov 2026)",
+   "versi": "SK06 v1.4 (27 Nov 2026)",
    "ikut_versi": {
     "SK06 v1 (27 Nov 2026)": {
      "imej": 22,
@@ -204,8 +209,16 @@
      "tolak": 0
     },
     "SK06 v1.3 (27 Nov 2026)": {
-     "imej": 3,
-     "lulus": 3,
+     "imej": 43,
+     "lulus": 43,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    },
+    "SK06 v1.4 (27 Nov 2026)": {
+     "imej": 19,
+     "lulus": 19,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -213,8 +226,8 @@
     }
    },
    "semasa": {
-    "imej": 3,
-    "lulus": 3,
+    "imej": 19,
+    "lulus": 19,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -222,8 +235,18 @@
    },
    "berulang": [],
    "calon": [],
-   "ubahan_dicuba": 3,
+   "ubahan_dicuba": 4,
    "tindakan": [
+    {
+     "jenis": "ukur",
+     "medan": "tekstur_had",
+     "teks": "Kad K10, had tekstur: calar diukur sebagai pecahan lubang sahaja; arah / panjang calar ditetapkan prosedur"
+    },
+    {
+     "jenis": "ukur",
+     "medan": "tekstur_had",
+     "teks": "Kad K13, had tekstur: JPEG 440x694: bintik bawah 1 px tidak diukur"
+    },
     {
      "jenis": "ukur",
      "medan": "tekstur_had",
@@ -247,8 +270,8 @@
      "tolak": 0
     },
     "SK07 v1.1 (27 Nov 2026)": {
-     "imej": 17,
-     "lulus": 17,
+     "imej": 57,
+     "lulus": 57,
      "cacat": 0,
      "input_rosak": 1,
      "belum": 0,
@@ -256,8 +279,8 @@
     }
    },
    "semasa": {
-    "imej": 17,
-    "lulus": 17,
+    "imej": 57,
+    "lulus": 57,
     "cacat": 0,
     "input_rosak": 1,
     "belum": 0,

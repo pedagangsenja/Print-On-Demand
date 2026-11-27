@@ -1,5 +1,5 @@
 {
- "versi": "SK06 v1.3 (27 Nov 2026)",
+ "versi": "SK06 v1.4 (27 Nov 2026)",
  "raw": "klein3_K10Q_s7_warna.png",
  "style": "S1",
  "palet": "kad K10",
@@ -20,15 +20,26 @@
  "tekstur": {
   "kad": "K10",
   "teks": "lusuh calar sederhana",
-  "jenis": "none",
-  "kuat": 0.0,
-  "tidak_dibuat": [
-   "lusuh calar sederhana"
-  ]
+  "jenis": "calar",
+  "kuat": 1.0,
+  "tidak_dibuat": [],
+  "ukur": {
+   "jenis": "calar",
+   "lubang_dakwat": 0.0271,
+   "lebar_blok": 664,
+   "sumber": "SK06 --ukur-tekstur --songsang pada IMG_5793_poster.png (v1.4)",
+   "had": [
+    "calar diukur sebagai pecahan lubang sahaja; arah / panjang calar ditetapkan prosedur"
+   ]
+  },
+  "hasil_ukur": {
+   "18x24": {
+    "lubang_dakwat": 0.0274,
+    "lebar_blok_lubang": 664
+   }
+  }
  },
- "amaran": [
-  "tekstur kad 'lusuh calar sederhana' belum ada jenisnya dalam SK06: tidak dibuat"
- ],
+ "amaran": [],
  "tepi": {
   "sasaran": {
    "sisi": 8.0,

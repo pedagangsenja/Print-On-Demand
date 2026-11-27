@@ -71,5 +71,39 @@
   "nota": "Jenis tekstur 'marker' (butir latar + butir dakwat) dengan parameter diukur pada IMG_5735 (--ukur-tekstur), dijana pada skala rujukan; hasil diukur semula. Cubaan pertama meniru butir bawah 1 px dan kekasaran tepi: tepi huruf bertakuk hitam (kesan JPEG kecil ditiru), jadi dibuang; tepi kekal ikut imej AI",
   "bukti": "3 imej: 3/3 -> 3/3; jurang 'tekstur K8 tiada jenis' tertutup; K8G diukur pada skala rujukan = IMG_5735 (latar 5.93 / 5.22, dakwat 4.68; v1.2 kapur 1.67 / 1.13); K3K dan K7M sama piksel. Had: butir < 1 px dan tepi marker kering tidak diukur (JPEG 600x449). Bukti lemah",
   "hasil": "final/v12-cpu-sk07/klein4b_K8G_s42 dijana semula"
+ },
+ {
+  "sk": "SK06",
+  "ubahan": "tekstur_calar_semburan",
+  "jenis": "parameter",
+  "medan": "tekstur_jenis",
+  "kelas": "tekstur",
+  "dari": "SK06 v1.3 (27 Nov 2026)",
+  "ke": "SK06 v1.4 (27 Nov 2026)",
+  "imej": [
+   "v12-cpu-k9k13/ernie/K10Q_s42",
+   "v12-cpu-k9k13/ernie/K10Q_s7",
+   "v12-cpu-k9k13/ernie/K13S_s123",
+   "v12-cpu-k9k13/ernie/K13S_s42",
+   "v12-cpu-k9k13/klein3/K10Q_s42",
+   "v12-cpu-k9k13/klein3/K10Q_s7",
+   "v12-cpu-k9k13/klein3/K13S_s123",
+   "v12-cpu-k9k13/klein3/K13S_s42",
+   "v12-cpu-k9k13/klein3/K13S_s7",
+   "v12-cpu-k9k13/moss/K10Q_s42",
+   "v12-cpu-k9k13/moss/K10Q_s7",
+   "v12-cpu-k9k13/moss/K13S_s123",
+   "v12-cpu-k9k13/moss/K13S_s42",
+   "v12-cpu-k9k13/moss/K13S_s7",
+   "v12-cpu-k9k13/zturbo/K10Q_s42",
+   "v12-cpu-k9k13/zturbo/K10Q_s7",
+   "v12-cpu-k9k13/zturbo/K13S_s123",
+   "v12-cpu-k9k13/zturbo/K13S_s42",
+   "v12-cpu-k9k13/zturbo/K13S_s7"
+  ],
+  "keputusan": "menang",
+  "tarikh": "2026-11-27",
+  "nota": "Jenis tekstur 'calar' (K10, IMG_5793) dan 'semburan' (K13, IMG_5791): pecahan lubang dalam dakwat diukur pada gambar upload (--ukur-tekstur --songsang), dijana pada skala rujukan, ditentukur dan diukur semula",
+  "bukti": "19 imej (K10Q 8, K13S 11): 19/19 -> 19/19 tanpa cacat SK; jurang 'tekstur K10 / K13 tiada jenis' tertutup; lubang dakwat diukur semula pada skala rujukan: K10 0.0252-0.0276 (rujukan 0.0271), K13 0.1039-0.1146 (rujukan 0.106), semua dalam 30%. Cubaan pertama: bintik petak piksel dan calar bertangga (dibesarkan dari skala rujukan), jadi bintik dilicinkan dan calar dilukis pada saiz akhir. Had: arah / panjang calar prosedur; bintik < 1 px tidak diukur (JPEG kecil). Semakan mata, bukti lemah."
  }
 ]
