@@ -323,7 +323,7 @@ KAD = {
     # 27 Nov 2026: lima kad baharu daripada upload pengguna (rujukan gaya sahaja; ayat dan susun atur tepat tidak
     # disalin). Gambar: designs/lettering-v1/rujukan/. Warna C diukur (k-means) daripada gambar; tidak masuk prompt.
     "K9": dict(
-        nama="Sans gergasi lusuh + jalur berus berlabel + skrip berus (putih atas hitam)", ref="IMG_5776", versi="v1.0 (27 Nov 2026; dibuat Claude daripada gambar, belum diluluskan pengguna)",
+        nama="Sans gergasi lusuh + jalur berus berlabel + skrip berus (putih atas hitam)", ref="IMG_5776", versi="v1.0 (27 Nov 2026; dibuat Claude daripada gambar; diluluskan pengguna 27 Nov 2026)",
         kelas="F2", dakwat=3, ruang_tepi=4, tekstur="bintik lusuh grunge", julat="4-7 perkataan",
         warna=dict(latar=("hitam", "#030302", "black"),
                    dakwat=[("putih pudar", "#f4f0ea", "white"), ("hijau limau", "#a6b71c", "lime green"),
@@ -351,7 +351,7 @@ KAD = {
             ("Ruang tepi sempit", False),
             ("Hanya putih atas hitam", False)]),
     "K10": dict(
-        nama="Sans pekat sempit lusuh bertindan (putih atas hitam)", ref="IMG_5777", versi="v1.0 (27 Nov 2026; dibuat Claude daripada gambar, belum diluluskan pengguna)",
+        nama="Sans pekat sempit lusuh bertindan (putih atas hitam)", ref="IMG_5777", versi="v1.0 (27 Nov 2026; dibuat Claude daripada gambar; diluluskan pengguna 27 Nov 2026)",
         kelas="F2", dakwat=3, ruang_tepi=10, tekstur="cetakan lusuh berbintik", julat="3-5 perkataan",
         warna=dict(latar=("hitam", "#030101", "black"),
                    dakwat=[("merah bata", "#cb4343", "brick red"), ("krim", "#dbc3a7", "cream"), ("hijau teal", "#496f6e", "teal")]),
@@ -377,7 +377,7 @@ KAD = {
             ("Ruang tepi sederhana", False),
             ("Hanya putih atas hitam", False)]),
     "K11": dict(
-        nama="Sans italik pekat bertekstur + sengkang berus + sapuan bawah (putih atas hitam)", ref="IMG_5761", versi="v1.0 (27 Nov 2026; dibuat Claude daripada gambar, belum diluluskan pengguna)",
+        nama="Sans italik pekat bertekstur + sengkang berus + sapuan bawah (putih atas hitam)", ref="IMG_5761", versi="v1.0 (27 Nov 2026; dibuat Claude daripada gambar; diluluskan pengguna 27 Nov 2026)",
         kelas="F2", dakwat=2, ruang_tepi=8, tekstur="grunge retak kasar", julat="4-7 perkataan",
         warna=dict(latar=("hitam arang", "#0a0605", "black"),
                    dakwat=[("putih kelabu", "#dbdbdb", "white"), ("oren", "#e15f09", "orange")]),
@@ -403,7 +403,7 @@ KAD = {
             ("Ruang tepi sederhana", False),
             ("Hanya putih atas hitam", False)]),
     "K12": dict(
-        nama="Huruf tangan gemuk melantun + kilat dalam huruf (hitam atas putih)", ref="IMG_5762", versi="v1.0 (27 Nov 2026; dibuat Claude daripada gambar, belum diluluskan pengguna)",
+        nama="Huruf tangan gemuk melantun + kilat dalam huruf (hitam atas putih)", ref="IMG_5762", versi="v1.0 (27 Nov 2026; dibuat Claude daripada gambar; diluluskan pengguna 27 Nov 2026)",
         kelas="F1", dakwat=1, ruang_tepi=18, tekstur="tiada (rata)", julat="3-5 perkataan",
         warna=dict(latar=("putih", "#fcfcfc", "white"), dakwat=[("hitam", "#1d1c1c", "black")]),
         medium="Hand-lettered quote poster, portrait.",
@@ -428,7 +428,7 @@ KAD = {
             ("Ruang tepi lebar", False),
             ("Satu dakwat rata, tiada tekstur", False)]),
     "K13": dict(
-        nama="Sans pekat sempit lusuh + tanda petik besar + anak panah (putih atas hitam)", ref="IMG_5755", versi="v1.0 (27 Nov 2026; dibuat Claude daripada gambar, belum diluluskan pengguna)",
+        nama="Sans pekat sempit lusuh + tanda petik besar + anak panah (putih atas hitam)", ref="IMG_5755", versi="v1.0 (27 Nov 2026; dibuat Claude daripada gambar; diluluskan pengguna 27 Nov 2026)",
         kelas="F2", dakwat=3, ruang_tepi=6, tekstur="bintik lusuh grunge", julat="5-8 perkataan",
         warna=dict(latar=("putih", "#fbfbf9", "white"),
                    dakwat=[("hitam", "#070605", "black"), ("kuning mustard", "#e1bb5c", "mustard yellow")]),
@@ -444,7 +444,7 @@ KAD = {
         margin="Moderate black margins.",
         larangan="Gritty speckled distressed texture on the white letters. White on black only, no outline, no shadow.",
         risiko=["tanda petik boleh dibaca sebagai teks", "bar anak panah boleh menutup perkataan kecil",
-                "jalur berus kuning di belakang perkataan utama rujukan TIDAK dijana (hitam putih); ditangguh"],
+                "jalur berus kuning di belakang perkataan utama rujukan TIDAK dijana (hitam putih; dipersetujui pengguna 27 Nov 2026)"],
         jangan_salin=["ayat Take the risk or lose the chance", "tera air Adobe Stock"],
         qc=[("Huruf besar sans pekat sempit", True),
             ("Perkataan kecil di antara dua bar anak panah", True),
