@@ -1,0 +1,67 @@
+{
+ "nota": "Larian v1.2 kedua, 27 Nov 2026. Empat kad baharu K9-K12, ayat B/V/N/Y, 3 seed, CPU, hitam putih. Semakan mata Claude pada helaian + potongan besar. Bukti lemah. ok = G1 (ejaan, huruf besar/kecil, baris, tanda baca) + G2 (tiada teks/tanda rawak). Nilai ketiga = id aset dashboard.",
+ "v12b-cpu": {
+  "moss": {
+   "K9B_s42": [
+    true,
+    "Blok tidak condong (dibetulkan SK01); garis sengkang berus di kiri dan kanan 'it' (sambungan palang t)",
+    ""
+   ],
+   "K10V_s42": [
+    true,
+    "Bintik gelap halus dalam huruf (tekstur dijana; tekstur kad ditambah SK06)",
+    ""
+   ],
+   "K11N_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K12Y_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K9B_s7": [
+    true,
+    "Blok tidak condong (dibetulkan SK01); garis sengkang berus di kiri dan kanan 'it' (sambungan palang t)",
+    ""
+   ],
+   "K10V_s7": [
+    true,
+    "Bintik gelap halus dalam huruf (tekstur dijana; tekstur kad ditambah SK06)",
+    ""
+   ],
+   "K11N_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K12Y_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K9B_s123": [
+    true,
+    "Blok tidak condong (dibetulkan SK01); garis sengkang berus di kiri dan kanan 'it' (sambungan palang t)",
+    ""
+   ],
+   "K10V_s123": [
+    true,
+    "Bintik gelap halus dalam huruf (tekstur dijana; tekstur kad ditambah SK06)",
+    ""
+   ],
+   "K11N_s123": [
+    true,
+    "",
+    ""
+   ],
+   "K12Y_s123": [
+    true,
+    "",
+    ""
+   ]
+  }
+ }
+}
