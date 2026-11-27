@@ -192,6 +192,11 @@
 .mt-zoom-close { position: absolute; top: 12px; right: 12px; padding: 6px 12px; border-radius: 999px; border: 1px solid #fff; background: transparent; color: #fff; cursor: pointer; }
 @media print { .mt-zoom { display: none; } }
 @media print { .pod-tabbar, .pod-nav, .pod th { position: static; } .pod-scroll { max-height: none; overflow: visible; border: 0; } .pod-nav, .pod-tabbar { display: none; } .pod details { border: 0; } #tab-font, #tab-model, #tab-lesen, #tab-sejarah, #tab-setup, #tab-workflow, #tab-aliran, #tab-daftar, #tab-fc, #tab-model2 { break-before: page; } }
+.pod-kod { margin: var(--cds-gap-sm) 0 0; display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: var(--cds-font-size-caption); line-height: 1.45; }
+.pod-kod > div { display: flex; gap: 6px; align-items: baseline; min-width: 0; }
+.pod-kod dt { margin: 0; font-weight: 700; min-width: 2.2em; text-align: center; padding: 0 5px; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background: var(--color-panel); color: var(--color-fg); }
+.pod-kod dd { margin: 0; color: var(--color-fg-muted); }
+.pod-kod-eg { flex-basis: 100%; margin: 4px 0 0; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
 </style>
 <link rel="stylesheet" href="fc.css">
 <link rel="stylesheet" href="aliran.css">
@@ -204,6 +209,17 @@
 <header id="ringkasan" class="pod-section pod-first">
   <div class="pod-kicker">Riset untuk kedai typography di Pinterest</div>
   <h1>Riset POD Typography</h1>
+  <dl class="pod-kod" id="kod-pendek" aria-label="Maksud kod pendek">
+    <div><dt>A</dt><dd>Ayat: nombor ayat poster (A001)</dd></div>
+    <div><dt>S</dt><dd>Style: gaya tipografi (S001), tab Daftar S/C</dd></div>
+    <div><dt>C</dt><dd>Color: gabungan warna (C001), tab Daftar S/C</dd></div>
+    <div><dt>K</dt><dd>Kad Gaya: ciri gaya + frasa prompt (K1–K8), tab FC</dd></div>
+    <div><dt>SK</dt><dd>Skrip pembetulan Python (SK01 condong, SK02 ruang tepi, SK03 kedudukan, SK04 hitam putih, SK05 ukur)</dd></div>
+    <div><dt>U</dt><dd>Ujian imej AI (U01–U10), tab AI Image Test</dd></div>
+    <div><dt>P</dt><dd>Riset poster (P1–P8), tab Ujikaji</dd></div>
+    <div><dt>♥</dt><dd>Gambar yang anda suka, tab ♥ Disukai</dd></div>
+  </dl>
+  <p class="pod-kod-eg">Contoh kod poster: <b>A001-S003-C002</b> = ayat 1, gaya 3, warna 2. Hitam putih tanpa C: <b>A001-S003</b>.</p>
 </header>
 
 <div class="pod-tabbar" role="tablist" aria-label="Tab dashboard">
@@ -757,6 +773,13 @@
 <th data-field="model_name">Model</th><th data-field="imej" class="pod-num">Imej</th><th data-field="diuji" class="pod-num">Diuji</th><th data-field="lulus" class="pod-num">Lulus</th><th data-field="pct_lulus" class="pod-num">% lulus</th><th data-field="pct_ejaan" class="pod-num">% ejaan betul</th><th data-field="saat_cpu" class="pod-num">Saat CPU</th><th data-field="saat_gpu" class="pod-num">Saat GPU</th><th data-field="ujian" class="pod-num">Ujian</th><th data-field="tarikh_akhir">Ujian terakhir</th>
 </tr></thead><tbody data-draw="t2-sum-body"></tbody></table></div>
 </div>
+<div id="t2-aturan" class="pod-section">
+<h2>Aturan prompt setiap model: belajar selepas setiap jana</h2>
+<p class="pod-muted">Claude mengemas kini jadual ini selepas setiap batch imej (standard lettering 3.15, <code>belajar.py</code>). Hasil QC, ♥ dan tolak anda menentukan satu ubahan seterusnya bagi setiap model; ubahan yang menang terus menaikkan rev. r0 = ditulis daripada sumber rasmi sahaja, belum diuji; r1 ke atas = sudah diuji pada imej. Bukti <span class="pod-pill" data-level="lemah">Lemah</span>: 3 seed setiap design.</p>
+<div class="pod-table-wrap"><table id="t2-aturan-tbl" data-source="aturan_belajar" data-row-key="model"><thead><tr>
+<th data-field="nama">Model</th><th data-field="rev">Rev</th><th data-field="imej_semasa" class="pod-num">Imej (rev ini)</th><th data-field="lulus_semasa" class="pod-num">Lulus</th><th data-field="pct_semasa" class="pod-num">% lulus</th><th data-field="suka" class="pod-num">♥</th><th data-field="tolak" class="pod-num">Tolak</th><th data-field="ubahan_dicuba" class="pod-num">Ubahan dicuba</th><th data-field="cacat_berulang">Cacat berulang</th><th data-field="tindakan">Tindakan seterusnya</th>
+</tr></thead><tbody data-draw="t2-aturan-body"></tbody></table></div>
+</div>
 <div id="t2-banding" class="pod-section">
 <h2>Banding gambar</h2>
 <p class="pod-muted">Satu kotak = satu ujian, terbaru di atas; tekan tajuk untuk buka. Kiri: rujukan, tarikh, ayat dan seed. Lajur = model. Bingkai hijau = lulus, merah = gagal, kelabu = design siap (tiada QC). Tekan gambar untuk besarkan. Rujukan ialah design orang lain: banding gaya sahaja.</p>
@@ -1200,7 +1223,7 @@
     <div class="pod-card al-phase" id="al-f2">
       <h3>B. Tipografi hitam putih</h3>
       <ol>
-        <li><b>6</b><span>Jana tipografi hitam putih sahaja: dakwat putih atas latar hitam (ikut Kad Gaya), tiada warna lain, tiada kelabu. Prompt ditulis ikut aturan model yang dipilih: klein 4B, Z-Image Turbo, ERNIE Turbo, MOSS (dipakai); FLUX 3 Image Klein (diuji di CPU, tetapi lesen belum diterima: didaftar dalam standard sahaja); Qwen-Image-2512, GLM-Image (belum diuji: tidak muat di CPU 15 GB). Model baharu yang belum ada aturan: Claude kaji sumber rasmi model itu dahulu (borang 10 soalan), tulis aturannya dan simpan untuk model itu sahaja. Jika satu model terlalu lama atau bermasalah, ia dilangkau, model seterusnya dijalankan (turutan MOSS, ERNIE, Z-Image, klein 4B), dan Claude beritahu anda dalam chat apa yang dilangkau. Peraturan Standard Lettering v1.2, 26 Nov 2026.</span></li>
+        <li><b>6</b><span>Jana tipografi hitam putih sahaja: dakwat putih atas latar hitam (ikut Kad Gaya), tiada warna lain, tiada kelabu. Prompt ditulis ikut aturan model yang dipilih: klein 4B, Z-Image Turbo, ERNIE Turbo, MOSS (dipakai); FLUX 3 Image Klein (diuji di CPU; lesen diterima 27 Nov 2026, boleh dipakai ikut syarat lesen); Qwen-Image-2512, GLM-Image (belum diuji: tidak muat di CPU 15 GB). Model baharu yang belum ada aturan: Claude kaji sumber rasmi model itu dahulu (borang 10 soalan), tulis aturannya dan simpan untuk model itu sahaja. Jika satu model terlalu lama atau bermasalah, ia dilangkau, model seterusnya dijalankan (turutan MOSS, ERNIE, Z-Image, klein 4B), dan Claude beritahu anda dalam chat apa yang dilangkau. Peraturan Standard Lettering v1.2, 26 Nov 2026.</span></li>
         <li><b>7</b><span>Semak pada imej hitam putih, ikut turutan: ejaan huruf demi huruf dengan ayat asal; ayat (baris, susunan perkataan, tanda baca); gaya (ciri Kad Gaya, lulus 7/8 atau lebih). Jika tidak lulus, ulang langkah 6: cacat pada satu seed = tukar seed; cacat sama pada 2 daripada 3 seed = reka semula prompt model itu (had 2 pusingan), kemudian tukar model, kemudian tanya anda. Ruang tepi, kedudukan, condong dan hitam putih bersih dibetulkan oleh empat skrip (SK01–SK04) bila tersasar daripada angka Kad Gaya, yang diukur daripada gambar upload oleh skrip SK05 (skrip dibina 26 Nov 2026, diuji pada 12 imej sedia ada; had toleransi sementara). Jika gambar upload ada ciri yang tiada skripnya, skrip baharu ditulis, disimpan, didaftar dalam Standard v1.2 dan dimasukkan ke dashboard ini.</span></li>
         <li><b>8</b><span>Design akhir hitam putih. <b class="al-wait">Tunggu kelulusan anda.</b></span></li>
       </ol>
