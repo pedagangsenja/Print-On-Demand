@@ -144,6 +144,9 @@ def stor_ids(*bah):
 
 
 UBAHAN = baca_json(os.path.join(B, "ubahan.json"), [])
+# Kenaikan rev tanpa ubahan teks (ujian kelayakan r0 -> r1): imej rev lama dikira pada rev baharu.
+ALIAS = {(u["model"], u["rev_dari"]): u["rev_ke"] for u in UBAHAN
+         if u.get("ubahan") == "kelayakan" and u.get("keputusan") == "menang"}
 
 
 def bina_log():
@@ -165,6 +168,7 @@ def bina_log():
         kod, b2 = snc.get(key, ("", ""))
         bl = r["blob"] or b2 or blob.get(key, "")
         rev = g.get("rev") or ("khas-v0" if str(g.get("pembina", "")).startswith("khas") else ("am" if g else "?"))
+        rev = ALIAS.get((r["model"], rev), rev)
         uji = sorted(u[len(r["model"]) + 1:] if u.startswith(r["model"] + "_") else u for u in (g.get("uji") or []))
         if not uji and re.search(r"-p\d+$", r["batch"]):  # pusingan kitaran QC lama (log tanpa 'uji'): ubahan daripada ubahan.json
             uji = [u["ubahan"] for u in UBAHAN if u["model"] == r["model"] and r["id"] in u.get("design", "")

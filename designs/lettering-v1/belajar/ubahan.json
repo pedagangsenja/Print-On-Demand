@@ -117,5 +117,20 @@
   "selepas": "9/9",
   "keputusan": "tiada pembanding",
   "nota": "Aturan 3.8 seperti ditulis; CPU; rangka am belum dijana untuk banding"
+ },
+ {
+  "tarikh": "2026-11-27",
+  "model": "klein3",
+  "rev_dari": "r0",
+  "rev_ke": "r1",
+  "ubahan": "kelayakan",
+  "kelas": [
+   "ejaan"
+  ],
+  "design": "K3K, K7M, K8G",
+  "sebelum": "6/9",
+  "selepas": "9/9",
+  "keputusan": "menang",
+  "nota": "Ujian kelayakan 3.12 F: rangka am (raw/v12-cpu-am) 6/9, gagal K8G 3/3 ('KEEP GOING' tanpa jarak); aturan 3.8 (raw/v12-cpu) 9/9; CPU; teks aturan tidak berubah"
  }
 ]
