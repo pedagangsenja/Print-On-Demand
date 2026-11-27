@@ -55,10 +55,15 @@
     });
     return b;
   };
-  // POD.likeOn(host, src, info): letak ♥ di penjuru kanan atas host.
+  // POD.likeOn(host, src, info): letak ♥ di penjuru kanan atas host, dan nama model (info.model) di kiri atas.
   POD.likeOn = (host, src, info) => {
     const b = POD.heart(src, info); if (!b || !host) return null;
-    host.classList.add('pod-likable'); host.appendChild(b); return b;
+    host.classList.add('pod-likable');
+    host.querySelectorAll(':scope > .pod-model-tag').forEach((x) => x.remove());
+    host.appendChild(b);
+    const m = info && info.model ? String(info.model).trim() : '';
+    if (m) { const t = document.createElement('span'); t.className = 'pod-model-tag'; t.textContent = m; t.title = m; host.appendChild(t); }
+    return b;
   };
 })();
 
@@ -87,7 +92,7 @@ dash.draw('suka-grid', (el) => {
     const box = document.createElement('div');
     const img = document.createElement('img'); img.src = r.src; img.loading = 'lazy'; img.alt = String(r.cap || 'Gambar disukai');
     box.appendChild(img); fig.appendChild(box);
-    POD.likeOn(box, r.src, { cap: r.cap });
+    POD.likeOn(box, r.src, { cap: r.cap, model: r.model });
     const cap = document.createElement('figcaption');
     const t = document.createElement('b'); t.textContent = String(r.cap || 'Gambar'); cap.appendChild(t);
     const meta = [r.model && `Model ${r.model}`, r.gaya && `Gaya ${r.gaya}`, r.warna && `Warna ${r.warna}`, r.teks && `"${r.teks}"`, r.seed !== undefined && `seed ${r.seed}`].filter(Boolean);
