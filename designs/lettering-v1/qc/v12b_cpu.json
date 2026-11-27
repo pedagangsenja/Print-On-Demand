@@ -186,6 +186,68 @@
     "Rata kiri; 'GROWTH' dalam kotak putih; noktah betul",
     ""
    ]
+  },
+  "zturbo": {
+   "K9B_s42": [
+    true,
+    "Skrip berus putih, sapuan berus bawah; blok terlalu besar (ruang tepi 5%, SK02) dan condong 10 (SK01)",
+    ""
+   ],
+   "K9B_s7": [
+    false,
+    "Koma tambahan selepas 'Daily' (tanda baca, G1); sengkang di kiri dan kanan 'it'",
+    ""
+   ],
+   "K9B_s123": [
+    false,
+    "Koma tambahan selepas 'Build' (tanda baca, G1)",
+    ""
+   ],
+   "K10V_s42": [
+    true,
+    "Bersih; blok terlalu lebar (SK02); baris tidak sama lebar sepenuhnya",
+    ""
+   ],
+   "K10V_s7": [
+    true,
+    "Bersih; baris tidak sama lebar sepenuhnya",
+    ""
+   ],
+   "K10V_s123": [
+    true,
+    "Bersih; 'BE' dan 'DO' kurang tinggi berbanding kad",
+    ""
+   ],
+   "K11N_s42": [
+    true,
+    "Kotak berus pada 'SHAKY.'; sengkang hanya di kanan baris kecil",
+    ""
+   ],
+   "K11N_s7": [
+    true,
+    "Kotak berus pada 'SHAKY.'; garis berus di bawah baris kecil, bukan sengkang kiri kanan",
+    ""
+   ],
+   "K11N_s123": [
+    false,
+    "Baris 'STEADY.' berulang dua kali (G1)",
+    ""
+   ],
+   "K12Y_s42": [
+    true,
+    "Rata kiri; 'GROWTH' dalam kotak; blok terlalu besar (SK02)",
+    ""
+   ],
+   "K12Y_s7": [
+    false,
+    "Baris 'LET YOUR' berulang, salinan kabur 'LETI YOUR' (G1/G2)",
+    ""
+   ],
+   "K12Y_s123": [
+    true,
+    "Rata kiri; 'GROWTH' dalam kotak",
+    ""
+   ]
   }
  }
 }
