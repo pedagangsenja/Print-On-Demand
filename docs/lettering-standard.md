@@ -11,6 +11,7 @@ Status: v1 dipersetujui pengguna 25 Nov 2026; v1.2 diluluskan pengguna sebagai s
 6. **Kaedah model baharu** (3.12, arahan pengguna 26 Nov 2026): model yang belum ada aturan dikaji dahulu ikut borang 10 soalan; aturannya ditulis dan disimpan untuk model itu sahaja, supaya setiap model ada standard prompt sendiri.
 7. **Daftar skrip dan kaedah skrip baharu** (selepas langkah 6, arahan pengguna 26 Nov 2026): empat skrip pembetulan + skrip kemasan didaftar; skrip baharu dibina bila gambar upload memerlukannya, kemudian disimpan, didaftar dan dimasukkan ke dashboard.
 8. **Peraturan langkau model** (langkah 4, arahan pengguna 26 Nov 2026): model yang terlalu lama atau bermasalah dilangkau, model seterusnya dijalankan, dan hal itu dilaporkan dalam chat.
+9. **Belajar selepas setiap jana** (3.15, keputusan pengguna 27 Nov 2026): `belajar.py` dijalankan selepas setiap batch; aturan prompt setiap model dikemas kini sendiri ikut QC, ♥ dan tolak pengguna.
 
 Yang kekal daripada v1: hitam putih dahulu dan warna oleh skrip; pintu G1–G3; seed tetap; Kad Gaya satu-satunya sumber gaya; 768×1024.
 Bukti, ukuran dan sebab setiap peraturan: `docs/lettering-standard-handover.md` (tahap bukti angka: lemah, kecuali lesen: rasmi). Carta 3 lajur: `docs/lettering-aliran.png` (`scripts/lettering_flowchart.py`).
@@ -65,6 +66,7 @@ Sebab (bukti lemah): AI Image Test 2, 150 imej: gaya satu dakwat (K1, K4) 40/60 
 - Pembina ialah kod: kad + Spesifikasi Teks + model yang sama mesti menghasilkan prompt yang sama.
 - Model yang ada aturan sendiri (3.4–3.10) WAJIB memakai aturan itu. Model tanpa aturan memakai rangka am (3.3) sehingga aturannya ditulis (3.12).
 - Tujuh model ada aturan: empat sudah diuji (3.4–3.7, rev r1) dan tiga ditulis daripada sumber rasmi sahaja, belum diuji (3.8–3.10, rev r0). Aturan r0 mesti lulus ujian kelayakan (3.12) sebelum dipakai untuk design sebenar.
+- Semua aturan belajar selepas setiap batch imej (3.15): hasil QC, ♥ dan tolak pengguna menentukan ubahan seterusnya; ubahan yang menang terus menaikkan rev.
 - Sebab (bukti lemah: kad K3 × ayat H "Patience Builds What Hurry Breaks", 3 seed, CPU, semakan mata, 26 Nov 2026). Imej ejaan betul:
 
 | Model | Rangka am (3.3) | Aturan model |
@@ -338,6 +340,43 @@ Sumber yang tidak dapat dibuka dicatat. Tiada jawapan rasmi = tulis "tiada sumbe
 ### 3.14 Aturan model tambahan
 Tempat menyimpan aturan model baharu yang ditulis ikut 3.12 (3.14.1, 3.14.2, …). Belum ada.
 
+### 3.15 Belajar selepas setiap jana: aturan prompt dikemas kini sendiri (keputusan pengguna 27 Nov 2026)
+**Tujuan:** aturan setiap model terus belajar daripada hasil sebenar. Aturan r0 datang daripada bacaan sumber rasmi sahaja; selepas itu setiap batch imej menambah bukti, dan aturan berubah ikut bukti itu, bukan tekaan.
+
+**Bila:** selepas SETIAP batch imej AI yang sudah di-QC (langkah 5), termasuk batch yang semua imejnya lulus. Tiada jana tambahan tanpa izin pengguna.
+
+**Langkah (Claude, dalam sesi yang sama, tanpa tanya):**
+1. Salin stor dashboard dengan ArtifactData `list` dan `out_dir=designs/lettering-v1/belajar/stor`: `data/likes/items` (♥), `data/gaya/items` dan `data/warna/items` (Daftar S/C). Folder `stor/` tidak disimpan dalam git.
+2. Rekod keputusan pengguna langkah 7 dalam `belajar/pengguna.jsonl`, satu baris setiap imej: `{"imej": "<batch>/<model>/<ID>_s<seed>", "keputusan": "lulus" atau "tolak", "sebab": "..."}`.
+3. Jalan `python3 belajar.py` (dalam `designs/lettering-v1/`). Hasil: `belajar/log.jsonl` (satu baris = satu imej), `belajar/ringkasan.json` (setiap model), `data/export/ai_tests/aturan_belajar.json` (dashboard), dan senarai TINDAKAN bagi setiap model.
+4. Laksana setiap TINDAKAN terus, kemudian lapor dalam jadual jawapan:
+   - **MENANG:** tulis ubahan ke fungsi aturan model dalam `pembina.py` dan ke bahagian aturannya (3.4–3.10); naikkan rev (cth. r1 → r2) dalam `DAFTAR` dan tajuk bahagian; buang calon daripada `UJI`; tambah baris dalam `belajar/ubahan.json` dan "Catatan pembaikan aturan model".
+   - **KALAH:** buang calon daripada `UJI`; catat dalam `ubahan.json` dan Catatan, supaya tidak diulang.
+   - **CUBA:** tulis ubahan calon dalam `pembina.py` (`UJI`, nama `<model>_<id>`, cth. `zturbo_had_positif`). Ia dipakai pada jana seterusnya model itu, bersama aturan semasa, pada kad, ayat dan seed yang sama.
+   - **KELAYAKAN / NAIK / TIDAK LAYAK:** ujian kelayakan aturan r0 (3.12 F). Lulus: r0 → r1.
+   - **HABIS:** semua pilihan ubahan sudah dicuba: tukar model ikut jadual model × gaya, kemudian pendekkan ayat, kemudian lapor.
+5. Muat naik `aturan_belajar.json` ke dashboard (dataset `aturan_belajar`, tab AI Image Test) dan simpan semua fail dalam git.
+
+**Peraturan belajar (kod: `belajar.py`, versi b1):**
+- **Isyarat:** QC G1–G2; ♥ pengguna; tolak pengguna (`pengguna.jsonl`, atau kod yang dipadam daripada Daftar S/C). Imej lulus = lulus QC dan tidak ditolak. Imej yang ditolak dikira cacat.
+- **Kelas cacat** ikut jadual kitaran QC (langkah 5): berulang, rawak, luar label, hiasan lebih, hiasan di tempat salah, baris, ejaan, bentuk, ditolak. Cacat "bukan prompt" (condong, ruang tepi, kedudukan, kelabu) diabaikan, kerana itu kerja skrip 5b.
+- **Cacat berulang** = kelas yang sama pada sekurang-kurangnya 2 imej, sama ada pada 2 design atau lebih, atau pada 2 seed atau lebih dalam satu design. Bagi ejaan: hanya jika PERKATAAN yang sama salah.
+- **Satu ubahan setiap kali** bagi setiap model. Cacat yang membuat imej gagal didahulukan; cacat gaya pada imej yang lulus kemudian.
+- **Tiada ulangan:** ubahan yang pernah dicuba (`ubahan.json`) tidak dicuba lagi. "Huruf besar" dilangkau jika perkataan yang salah sudah huruf besar.
+- **Menang** = lebih banyak imej lulus pada kad, ayat dan seed yang sama, tanpa kelas cacat baharu. Seri dipecahkan oleh bilangan ♥.
+- **Had 3.1 kekal:** ubahan hanya mengubah cara menulis; ia tidak boleh menambah atau membuang ciri gaya kad.
+- **Log jana** mencatat `rev` dan `uji` (ubahan calon) bagi setiap imej (`gen.py`). Pusingan kitaran QC lama (batch `-p1`) tanpa `uji` dipadankan dengan `ubahan.json`.
+
+**Had:** ini bukan AI yang belajar sendiri. Ia peraturan tetap yang dijalankan Claude selepas setiap batch. Bukti kecil (3 seed) mudah tersilap; sebab itu hanya satu ubahan setiap kali, dan banding pada seed yang sama.
+
+**Keputusan pertama (27 Nov 2026; 117 imej daripada 8 batch; ♥ 0; tolak 0; bukti lemah):**
+- klein 4B r1 (6/9 lulus): cuba `klein4b_hiasan_kedudukan` (percikan di dalam label, 3 imej K3K).
+- Z-Image Turbo r1 (4/9): cuba `zturbo_had_positif` (teks dan tanda baca rawak, 4 imej, K7M dan K8G).
+- ERNIE Turbo r1 (8/9): cuba `ernie_frasa_bentuk` (skrip lebih nipis dan label lebih besar daripada kad, 6 imej lulus).
+- MOSS + LoRA r1 (6/9): 'ALMOST' salah pada 3/3 seed K8G; dua pilihan sudah dicuba atau tidak berkenaan → tukar model bagi ayat itu.
+- FLUX 3 Image Klein r0 (9/9): perlu jana rangka am pada kad, ayat dan seed yang sama untuk ujian kelayakan; lesen belum diterima.
+- Qwen-Image-2512 r0, GLM-Image r0: belum diuji.
+
 ## Langkah 4: Jana
 - Text-to-image penuh, hitam putih sahaja (dakwat putih atas latar hitam), 768×1024 (laluan 1–2, F1 / F2). Enjin: diffusers; versi perpustakaan direkod.
 - Tetapan dikunci dalam profil model: model, varian fail, langkah, guidance, LoRA dan kekuatan, penambah prompt. Kelayakan sah untuk gabungan itu sahaja.
@@ -416,7 +455,7 @@ Sebab tiga yang dipilih:
 Turutan semakan setiap imej: pintu wajib G1–G3 → ukur dan betulkan (5b) → ciri kad → pengguna (langkah 7).
 
 1. **Pusingan 0:** jana seed ikut laluan (laluan 1: 42, 7; laluan 2: 42, 7, 123), dengan prompt ikut aturan model (langkah 3).
-2. **Ada imej lulus:** terus ke langkah 7. Kitaran tamat.
+2. **Ada imej lulus:** terus ke langkah 7. Kitaran tamat, tetapi belajar 3.15 tetap dijalankan (cacat pada imej lain dan ciri gaya masih dipelajari).
 3. **Tiada imej lulus:** kelaskan cacat.
    - **Cacat rawak** (cacat pada satu seed sahaja, atau cacat berbeza-beza): jana seed seterusnya dalam senarai tetap (123, kemudian 2024). Prompt TIDAK diubah.
    - **Cacat sistematik** (cacat yang SAMA pada sekurang-kurangnya 2 daripada 3 seed; laluan 1 menjana seed 123 dahulu untuk memutuskan): reka semula prompt model itu (butir 4).
@@ -433,7 +472,7 @@ Turutan semakan setiap imej: pintu wajib G1–G3 → ukur dan betulkan (5b) → 
 | Ruang tepi, kedudukan, condong, kelabu | Bukan prompt: skrip pembetulan (5b) |
 | Bentuk huruf hodoh atau nisbah baris salah | Frasa bentuk huruf atau hierarki dalam aturan model; jika masih gagal, tukar model |
 
-5. **Ubahan berjaya** (lebih banyak seed lulus daripada sebelumnya, tiada cacat baharu): ditulis balik ke aturan model itu (3.4–3.10), rev naik, dicatat dalam "Catatan pembaikan aturan model". Design seterusnya terus memakai aturan yang sudah dibaiki.
+5. **Ubahan berjaya** (lebih banyak seed lulus daripada sebelumnya, tiada cacat baharu): ditulis balik terus, tanpa tanya (3.15), ke aturan model itu (3.4–3.10), rev naik, dicatat dalam "Catatan pembaikan aturan model". Design seterusnya terus memakai aturan yang sudah dibaiki.
 6. **Ubahan tidak berjaya:** dibuang, dan dicatat juga supaya tidak diulang.
 7. **Selepas 2 pusingan masih tiada imej lulus:** tukar ke model seterusnya ikut jadual model × gaya; kemudian pendekkan ayat; kemudian lapor kepada pengguna.
 8. **Had imej:** paling banyak 10 imej bagi setiap model untuk satu design (4 seed + 2 pusingan × 3 seed).
@@ -589,7 +628,7 @@ Model baharu juga memerlukan aturan prompt sendiri sebelum dipakai untuk design 
 - **Kemasan (SK06):** imej terbaik setiap design, pilihan Claude; pengguna memilih melalui Daftar S/C: K3K MOSS seed 42 (gaya S3, putih; warna kuning belum kerana SK07 belum dibina), K7M MOSS seed 42 (gaya S2, krim + butir), K8G klein 4B seed 42 (gaya S4, kapur). Fail: `designs/lettering-v1/final/v12-cpu/` (SVG induk + pratonton 18×24); gambar ringkas `qc/v12_cpu_akhir.jpg`.
 
 ## Catatan pembaikan aturan model
-Setiap ubahan aturan (3.4–3.10) direkod di sini. Ujian pertama (26 Nov 2026, K3 × ayat H, seed 42, 7, 123, semakan mata, bukti lemah) mengubah beberapa perkara serentak, kerana dibuat sebelum peraturan "satu ubahan setiap pusingan".
+Setiap ubahan aturan (3.4–3.10) direkod di sini, dan juga dalam `designs/lettering-v1/belajar/ubahan.json` (dibaca oleh `belajar.py`, 3.15). Ujian pertama (26 Nov 2026, K3 × ayat H, seed 42, 7, 123, semakan mata, bukti lemah) mengubah beberapa perkara serentak, kerana dibuat sebelum peraturan "satu ubahan setiap pusingan".
 
 | Tarikh | Model | Rev | Cacat dengan rangka am | Ubahan | Ejaan betul sebelum → selepas |
 |---|---|---|---|---|---|
@@ -605,6 +644,7 @@ Setiap ubahan aturan (3.4–3.10) direkod di sini. Ujian pertama (26 Nov 2026, K
 - v1.2, sudah dibina (26 Nov): pembina kod bagi tujuh model + semakan 3.11 (`pembina.py`, 3.13).
 - v1.2, sudah ditulis (26 Nov): kaedah model baharu (3.12), daftar skrip + kaedah skrip baharu, peraturan langkau model (`run_v12.sh`).
 - v1.2, sudah dibina (26 Nov): SK01–SK05 dan `betulkan.py`; SK06 (`finish.py`) dibawa ke cawangan ini.
+- v1.2, sudah dibina (27 Nov): belajar selepas setiap jana (`belajar.py`, 3.15). `gen_hf_space.py` (ujian K6 lama) belum mencatat `rev` dan `uji`.
 - v1.2, belum dibina: SK07 (warna ikut peranan), SK08 (bayang ikut kad); kemasan belum membaca palet, ruang tepi dan tekstur daripada kad; semakan ejaan automatik (kini mata sahaja).
 - v1.2, belum selesai: sudut rujukan K1 dan K6 belum diukur; pembanding rangka am untuk FLUX 3 Klein belum dijalankan; lesen FLUX 3 Klein belum diterima pengguna; Qwen-Image-2512 dan GLM-Image belum diuji (tidak muat di CPU).
 - v1.2, bukti masih lemah: aturan 3.4–3.7 diuji pada satu kad (K3) dan satu ayat sahaja. Perlu diulang pada kad lain dan ayat pendek sebelum dianggap kukuh.

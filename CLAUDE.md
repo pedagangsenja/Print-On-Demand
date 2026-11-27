@@ -12,6 +12,7 @@ Fail ini dimuat dalam setiap chat; kekalkan ringkas. **SEMUA peraturan dalam fai
    **SNC** = daftar di tab **Daftar S/C**: gaya **S** (stor `data/gaya/items`) + warna **C** (stor `data/warna/items`).
    Pengguna padam sendiri yang tidak mahu dalam Daftar S/C. Tujuan: design bagus tidak hilang.
 6. **Like (♥) gambar (keputusan pengguna 27 Nov 2026):** setiap gambar dashboard ada butang ♥; like disimpan di stor `data/likes/items/<id blob>` (dataset `likes`, tab **♥ Disukai**; editor sahaja). SEBELUM jana imej AI, baca stor ini (ArtifactData list) dan utamakan model / gaya / warna / teks yang di-like. Gambar baharu mesti guna `POD.likeOn(host, src, info)` (`files/suka.js`).
+7. **Aturan prompt belajar selepas SETIAP jana (keputusan pengguna 27 Nov 2026):** selepas QC setiap batch imej AI, ikut `docs/lettering-standard.md` 3.15: salin stor ♥ + Daftar S/C ke `designs/lettering-v1/belajar/stor`, jalan `python3 designs/lettering-v1/belajar.py`, laksana TINDAKAN terus (ubahan menang = rev naik), lapor dalam jadual.
 
 ## Peraturan projek
 - Cawangan kerja: `claude/jolly-hamilton-sdopyz`; tiada PR kecuali diminta.

@@ -53,6 +53,15 @@ POD.mRows('t2-sum-body', 'ai_banding', 10, (tr, r) => {
   POD.cell(tr, r.pct_ejaan, 'pod-num'); POD.cell(tr, r.saat_cpu, 'pod-num'); POD.cell(tr, r.saat_gpu, 'pod-num');
   POD.cell(tr, r.ujian, 'pod-num'); POD.cell(tr, POD.t2Tarikh(r.tarikh_akhir));
 });
+POD.mRows('t2-aturan-body', 'aturan_belajar', 10, (tr, r) => {
+  tr.dataset.key = POD.enc(r.model);
+  POD.cell(tr, r.nama).style.fontWeight = '600';
+  POD.cell(tr, r.rev); POD.cell(tr, r.imej_semasa, 'pod-num'); POD.cell(tr, r.lulus_semasa, 'pod-num');
+  const p = POD.cell(tr, r.pct_semasa, 'pod-num'); p.style.fontWeight = '600';
+  if (r.pct_semasa != null) p.classList.add(r.pct_semasa >= 50 ? 'mt-ok' : 'mt-bad');
+  POD.cell(tr, r.suka, 'pod-num'); POD.cell(tr, r.tolak, 'pod-num'); POD.cell(tr, r.ubahan_dicuba, 'pod-num');
+  POD.cell(tr, r.cacat_berulang, 'pod-wide'); POD.cell(tr, r.tindakan, 'pod-wide');
+});
 POD.t2Pilih = (sel, opts, key) => {
   sel.replaceChildren(new Option('Semua', ''), ...opts.map(([v, t]) => new Option(t, v)));
   sel.value = POD.t2[key];

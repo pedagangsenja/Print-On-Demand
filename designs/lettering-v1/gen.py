@@ -153,7 +153,7 @@ def base_row(name, c, kid, aid, seed, prompt, drop, sec):
                 penambah=c.get("penambah"), peranti=DEV if DEV == "cpu" else torch.cuda.get_device_name(0),
                 dtype=str(DT).replace("torch.", ""), seed=seed, w=W, h=H, saat=sec, prompt=prompt, potong=drop,
                 pembina={"kad": kad.VERSI_PEMBINA, "khas": khas.VERSI}.get(VARIAN, pembina.VERSI), varian_prompt=VARIAN,
-                rev=pembina.rev(name) if VARIAN != "kad" else None, versi=dict(torch=torch.__version__, diffusers=diffusers.__version__,
+                rev=pembina.rev(name) if VARIAN != "kad" else None, uji=sorted(pembina.UJI) or None, versi=dict(torch=torch.__version__, diffusers=diffusers.__version__,
                                                       transformers=transformers.__version__),
                 masa=time.strftime("%Y-%m-%dT%H:%M:%S"))
 
