@@ -1,0 +1,165 @@
+{
+ "nota": "Ujian v1.2 enam gambar upload (IMG_5845, 5846, 5840, 5792, 5793, 5764), 27 Nov 2026. Kad baharu K9-K12 + kad sedia ada K2, K4; ayat A, B, C, E, F, Q dipilih Claude. Seed 42 sahaja, CPU container 4 teras. Semakan mata Claude. Tahap bukti lemah. ok = pintu G1 + G2. Nilai ketiga = id aset dashboard (kosong: pengguna belum pilih A / SNC).",
+ "v12-cpu-ref6": {
+  "moss": {
+   "K9A_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K10B_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K11C_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K2E_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K12F_s42": [
+    true,
+    "Baris tidak sama lebar; HABITS tidak gergasi (gaya separa)",
+    ""
+   ],
+   "K4Q_s42": [
+    true,
+    "",
+    ""
+   ]
+  },
+  "ernie": {
+   "K9A_s42": [
+    true,
+    "Garis tambahan: bingkai putih di tepi",
+    ""
+   ],
+   "K10B_s42": [
+    true,
+    "Garis tambahan: garis bulatan dilukis walaupun dilarang",
+    ""
+   ],
+   "K11C_s42": [
+    false,
+    "Tanda petikan rawak: 'Trust Your' Timing,",
+    ""
+   ],
+   "K2E_s42": [
+    true,
+    "DREAMS putih, tiada kotak putih penuh (hanya kurungan); ciri teras gagal",
+    ""
+   ],
+   "K12F_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K4Q_s42": [
+    true,
+    "",
+    ""
+   ]
+  },
+  "klein3": {
+   "K9A_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K10B_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K11C_s42": [
+    true,
+    "Tekstur kelabu pada huruf walaupun dilarang",
+    ""
+   ],
+   "K2E_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K12F_s42": [
+    true,
+    "HABITS tidak gergasi (gaya separa)",
+    ""
+   ],
+   "K4Q_s42": [
+    true,
+    "",
+    ""
+   ]
+  },
+  "zturbo": {
+   "K9A_s42": [
+    true,
+    "Ruang tepi sempit (kerja SK02)",
+    ""
+   ],
+   "K10B_s42": [
+    true,
+    "Ruang tepi sempit (kerja SK02)",
+    ""
+   ],
+   "K11C_s42": [
+    true,
+    "Ruang tepi sempit (kerja SK02)",
+    ""
+   ],
+   "K2E_s42": [
+    true,
+    "Ruang tepi sempit (kerja SK02)",
+    ""
+   ],
+   "K12F_s42": [
+    true,
+    "Ruang tepi sempit (kerja SK02)",
+    ""
+   ],
+   "K4Q_s42": [
+    false,
+    "Baris salah: 'QUIET WORK' dipecah jadi dua baris",
+    ""
+   ]
+  },
+  "klein4b": {
+   "K9A_s42": [
+    true,
+    "Perkataan sokongan bukan skrip (bentuk huruf tersasar)",
+    ""
+   ],
+   "K10B_s42": [
+    false,
+    "'DAY' jadi 'DIAY', 'Kindness' jadi 'Kindnesss', 'LIFE' jadi 'LIFFE'; garis tambahan: garis bulatan dilukis",
+    ""
+   ],
+   "K11C_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K2E_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K12F_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K4Q_s42": [
+    true,
+    "",
+    ""
+   ]
+  }
+ }
+}

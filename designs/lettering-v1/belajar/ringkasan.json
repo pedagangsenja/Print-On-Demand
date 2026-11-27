@@ -1,7 +1,7 @@
 {
  "versi": "b1.1 (27 Nov 2026)",
  "tarikh": "2026-11-27",
- "imej": 126,
+ "imej": 156,
  "suka": 0,
  "tolak": 0,
  "model": {
@@ -29,29 +29,29 @@
      "design": 1
     },
     "r1": {
-     "imej": 9,
-     "lulus": 6,
-     "pct": 67,
+     "imej": 15,
+     "lulus": 11,
+     "pct": 73,
      "suka": 0,
      "tolak": 0,
-     "design": 3
+     "design": 9
     }
    },
    "semasa": {
-    "imej": 9,
-    "lulus": 6,
-    "pct": 67,
+    "imej": 15,
+    "lulus": 11,
+    "pct": 73,
     "suka": 0,
     "tolak": 0,
-    "design": 3
+    "design": 9
    },
    "semua": {
-    "imej": 21,
-    "lulus": 12,
-    "pct": 57,
+    "imej": 27,
+    "lulus": 17,
+    "pct": 63,
     "suka": 0,
     "tolak": 0,
-    "design": 7
+    "design": 13
    },
    "berulang": [
     {
@@ -100,29 +100,29 @@
      "design": 1
     },
     "r1": {
-     "imej": 9,
-     "lulus": 4,
-     "pct": 44,
+     "imej": 15,
+     "lulus": 9,
+     "pct": 60,
      "suka": 0,
      "tolak": 0,
-     "design": 3
+     "design": 9
     }
    },
    "semasa": {
-    "imej": 9,
-    "lulus": 4,
-    "pct": 44,
+    "imej": 15,
+    "lulus": 9,
+    "pct": 60,
     "suka": 0,
     "tolak": 0,
-    "design": 3
+    "design": 9
    },
    "semua": {
-    "imej": 27,
-    "lulus": 14,
-    "pct": 52,
+    "imej": 33,
+    "lulus": 19,
+    "pct": 58,
     "suka": 0,
     "tolak": 0,
-    "design": 7
+    "design": 13
    },
    "berulang": [
     {
@@ -216,31 +216,43 @@
      "design": 1
     },
     "r1": {
-     "imej": 9,
-     "lulus": 8,
-     "pct": 89,
+     "imej": 15,
+     "lulus": 13,
+     "pct": 87,
      "suka": 0,
      "tolak": 0,
-     "design": 3
+     "design": 9
     }
    },
    "semasa": {
-    "imej": 9,
-    "lulus": 8,
-    "pct": 89,
+    "imej": 15,
+    "lulus": 13,
+    "pct": 87,
     "suka": 0,
     "tolak": 0,
-    "design": 3
+    "design": 9
    },
    "semua": {
-    "imej": 21,
-    "lulus": 15,
-    "pct": 71,
+    "imej": 27,
+    "lulus": 20,
+    "pct": 74,
     "suka": 0,
     "tolak": 0,
-    "design": 7
+    "design": 13
    },
    "berulang": [
+    {
+     "kelas": "rawak",
+     "nama": "Teks rawak, label atau tanda baca tambahan",
+     "imej": 2,
+     "gagal": 2,
+     "design": [
+      "K11C",
+      "K3K"
+     ],
+     "cadangan": "had_positif",
+     "cadangan_teks": "Buang perkataan berisiko daripada ayat had (label, logo, signature, watermark); tulis had sebagai ayat positif"
+    },
     {
      "kelas": "bentuk",
      "nama": "Bentuk huruf atau saiz label lain daripada kad",
@@ -252,6 +264,19 @@
      ],
      "cadangan": "frasa_bentuk",
      "cadangan_teks": "Frasa bentuk huruf dalam aturan model"
+    },
+    {
+     "kelas": "hiasan_lebih",
+     "nama": "Hiasan yang tidak diminta",
+     "imej": 3,
+     "gagal": 0,
+     "design": [
+      "K10B",
+      "K8G",
+      "K9A"
+     ],
+     "cadangan": "hiasan_tepat",
+     "cadangan_teks": "Nyatakan hiasan yang dibenarkan dengan tepat, tambah \"clean empty background\""
     }
    ],
    "ubahan_dicuba": 1,
@@ -259,8 +284,8 @@
    "tindakan": [
     {
      "jenis": "cuba",
-     "ubahan": "frasa_bentuk",
-     "teks": "Satu ubahan untuk jana seterusnya model ini: PEMBINA_UJI=ernie_frasa_bentuk (Frasa bentuk huruf dalam aturan model) bagi cacat 'Bentuk huruf atau saiz label lain daripada kad' (imej lulus; ciri gaya kad) (6 imej, 2 design); jana bersama aturan semasa, seed sama"
+     "ubahan": "had_positif",
+     "teks": "Satu ubahan untuk jana seterusnya model ini: PEMBINA_UJI=ernie_had_positif (Buang perkataan berisiko daripada ayat had (label, logo, signature, watermark); tulis had sebagai ayat positif) bagi cacat 'Teks rawak, label atau tanda baca tambahan' (2 imej, 2 design); jana bersama aturan semasa, seed sama"
     }
    ]
   },
@@ -288,29 +313,29 @@
      "design": 1
     },
     "r1": {
-     "imej": 9,
-     "lulus": 6,
-     "pct": 67,
+     "imej": 15,
+     "lulus": 12,
+     "pct": 80,
      "suka": 0,
      "tolak": 0,
-     "design": 3
+     "design": 9
     }
    },
    "semasa": {
-    "imej": 9,
-    "lulus": 6,
-    "pct": 67,
+    "imej": 15,
+    "lulus": 12,
+    "pct": 80,
     "suka": 0,
     "tolak": 0,
-    "design": 3
+    "design": 9
    },
    "semua": {
-    "imej": 27,
-    "lulus": 20,
-    "pct": 74,
+    "imej": 33,
+    "lulus": 26,
+    "pct": 79,
     "suka": 0,
     "tolak": 0,
-    "design": 8
+    "design": 14
    },
    "berulang": [
     {
@@ -350,29 +375,29 @@
      "design": 3
     },
     "r1": {
-     "imej": 9,
-     "lulus": 9,
+     "imej": 15,
+     "lulus": 15,
      "pct": 100,
      "suka": 0,
      "tolak": 0,
-     "design": 3
+     "design": 9
     }
    },
    "semasa": {
-    "imej": 9,
-    "lulus": 9,
+    "imej": 15,
+    "lulus": 15,
     "pct": 100,
     "suka": 0,
     "tolak": 0,
-    "design": 3
+    "design": 9
    },
    "semua": {
-    "imej": 18,
-    "lulus": 15,
-    "pct": 83,
+    "imej": 24,
+    "lulus": 21,
+    "pct": 88,
     "suka": 0,
     "tolak": 0,
-    "design": 3
+    "design": 9
    },
    "berulang": [],
    "ubahan_dicuba": 2,

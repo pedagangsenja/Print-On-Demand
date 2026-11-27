@@ -702,6 +702,13 @@ Setiap ubahan aturan (3.4–3.10) direkod di sini, dan juga dalam `designs/lette
 | 26 Nov 2026 | FLUX 3 Image Klein | r0 (ujian pertama) | Tiada pembanding rangka am | Aturan 3.8 seperti ditulis; CPU | 9/9 pada K3, K7, K8 |
 | 27 Nov 2026 | FLUX 3 Image Klein | r0 → r1 (ujian kelayakan, `belajar.py`) | K8 × ayat G: 'KEEP GOING' tanpa jarak antara perkataan (3/3) | Tiada ubahan teks; rangka am lawan aturan 3.8 pada kad, ayat dan seed yang sama | rangka am 6/9 → aturan 9/9 |
 
+## Larian v1.2: enam gambar upload, ayat baharu (27 Nov 2026, arahan pengguna)
+- Kad baharu v1.0 (belum diluluskan pengguna, langkah 1d): K9 (IMG_5845, skrip melantun + sans bulat + hati), K10 (IMG_5846, lencana bulat), K11 (IMG_5840, skrip berus bertangga), K12 (IMG_5793, blok sans sempit calar, hitam atas koral). IMG_5792 = K2 dan IMG_5764 = K4 (kad sedia ada, 1b). Ukuran rujukan SK05 dalam `kad.BLOK[...]["rujukan"]`. Gambar upload: `designs/lettering-v1/rujukan/`.
+- Ayat (Claude pilih): A "Strong Moms Raise Brave Kids" (K9), B "Every Single Day Spreading Kindness Teacher Life" (K10), C "Trust Your Timing" (K11), E "Comfort Zones Kill Dreams" (K2), F "Build Your Habits Not Your Excuses" (K12), Q "Quiet Work Builds Loud Results" (K4).
+- Jana: `run_v12.sh`, CPU container 4 teras, 5 enjin, seed 42 sahaja (bukan 2–4 seed; ujian pantas), pembina v1.2-p1, tiada enjin dilangkau. Imej: `raw/v12-cpu-ref6/`; QC: `qc/v12_cpu_ref6.json`, helaian `qc/v12_cpu_ref6_grid.jpg`.
+- G1 + G2 lulus (semakan mata Claude, bukti lemah): MOSS 6/6, FLUX 3 Klein 6/6, ERNIE 5/6 (K11C tanda petikan), Z-Image 5/6 (K4Q baris dipisah), klein 4B 5/6 (K10B ejaan). Jumlah 27/30. Masa jana: MOSS ~6 min, ERNIE ~7 min, FLUX 3 Klein ~7 min, Z-Image ~6 min, klein 4B ~2 min setiap imej.
+- Belajar 3.15: calon CUBA ditulis dalam `pembina.py` (`klein4b_hiasan_kedudukan`, `zturbo_had_positif`, `ernie_had_positif`); belum diuji (perlu izin jana).
+
 ## Belum selesai
 - v1.2, sudah dibina (26 Nov): pembina kod bagi tujuh model + semakan 3.11 (`pembina.py`, 3.13).
 - v1.2, sudah ditulis (26 Nov): kaedah model baharu (3.12), daftar skrip + kaedah skrip baharu, peraturan langkau model (`run_v12.sh`).
