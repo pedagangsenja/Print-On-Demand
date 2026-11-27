@@ -124,6 +124,68 @@
     "Ejaan betul; kotak putih pudar pada 'LET YOUR', bukan 'GROWTH' (hiasan di tempat salah); PE gagal semakan palsu ('SHAKY' bagi 'SHAKY.'); rangka am berpepijat hp (latar putih, dakwat hitam). Kedua-dua pepijat dibaiki 27 Nov; jana semula",
     ""
    ]
+  },
+  "klein3": {
+   "K9B_s42": [
+    true,
+    "Skrip berus tebal putih, garis sapuan berus di bawah 'Daily', bersih; condong 9.2 dibetulkan SK01 ke 15.2",
+    ""
+   ],
+   "K9B_s7": [
+    true,
+    "Skrip berus tebal putih, garis sapuan berus di bawah 'Daily', bersih; condong 11.3 dibetulkan SK01 ke 15.2",
+    ""
+   ],
+   "K9B_s123": [
+    true,
+    "Skrip berus tebal putih, garis sapuan berus di bawah 'Daily', bersih; SK01 putar 3.4 darjah tetapi ukuran naik 12.1 -> 13.4 sahaja (5b GAGAL condong; kelas SK)",
+    ""
+   ],
+   "K10V_s42": [
+    true,
+    "Blok sama lebar, tekstur bintik halus dalam huruf, bersih",
+    ""
+   ],
+   "K10V_s7": [
+    true,
+    "Blok sama lebar, tekstur bintik halus, bersih",
+    ""
+   ],
+   "K10V_s123": [
+    true,
+    "Blok sama lebar, tekstur bintik halus, bersih",
+    ""
+   ],
+   "K11N_s42": [
+    true,
+    "Kotak tepi berus kasar pada 'SHAKY.'; baris kecil dan sengkang berus betul",
+    ""
+   ],
+   "K11N_s7": [
+    true,
+    "Kotak tepi berus kasar pada 'SHAKY.'; baris kecil dan sengkang berus betul",
+    ""
+   ],
+   "K11N_s123": [
+    true,
+    "Kotak tepi berus kasar pada 'SHAKY.'; baris kecil dan sengkang berus betul",
+    ""
+   ],
+   "K12Y_s42": [
+    true,
+    "Rata kiri; 'GROWTH' dalam kotak putih; noktah betul",
+    ""
+   ],
+   "K12Y_s7": [
+    true,
+    "Rata kiri; 'GROWTH' dalam kotak putih; noktah betul",
+    ""
+   ],
+   "K12Y_s123": [
+    true,
+    "Rata kiri; 'GROWTH' dalam kotak putih; noktah betul",
+    ""
+   ]
   }
  }
 }
