@@ -15,8 +15,8 @@ Fail ini dimuat dalam setiap chat; kekalkan ringkas. **SEMUA peraturan dalam fai
 7. **Aturan prompt belajar selepas SETIAP jana (keputusan pengguna 27 Nov 2026):** selepas QC setiap batch imej AI, ikut `docs/lettering-standard.md` 3.15: salin stor ♥ + Daftar S/C ke `designs/lettering-v1/belajar/stor`, jalan `python3 designs/lettering-v1/belajar.py`, laksana TINDAKAN terus (ubahan menang = rev naik), lapor dalam jadual.
 
 ## Peraturan projek
-- Cawangan kerja: `claude/jolly-hamilton-sdopyz`; tiada PR kecuali diminta.
+- Cawangan kerja: `claude/gracious-ptolemy-f7pvjs`; tiada PR kecuali diminta.
 - **Dashboard:** artifact sedia ada https://claude.ai/artifact/EeAC4MqQijSGYGTWfZW3Sg (jenis Data); jangan cipta baharu. Baca semula `files/index.html` sebelum ubah; salinan di `dashboard/index.html`. Tab: Ujikaji · Font · AI Image Test · Lesen · Setup · Workflow · Aliran · Daftar S/C · FC · ♥ Disukai. Checklist Setup = stor `data/setup/checklist/<id>`; Claude semak dan kemas kini `status`, `checked_at`, `result` dengan ArtifactData (update + if_version).
-- Data dashboard dijana skrip: `scripts/poster_p1.py`…`poster_p7.py` → `data/export/posters/`; `scripts/build_prestasi.py` → `data/export/prestasi/`; `scripts/export_dashboard.py` → `data/export/`; `scripts/build_ai_tests.py` → `data/export/ai_tests/ai_all.json`. Jangan ubah fail dijana secara manual.
+- Data dashboard dijana skrip: `scripts/poster_p1.py`…`poster_p7.py` → `data/export/posters/`; `scripts/build_prestasi.py` → `data/export/prestasi/`; `scripts/export_dashboard.py` → `data/export/`; `scripts/build_ai_tests.py` → `data/export/ai_tests/ai_all.json`; `scripts/build_fc_design.py` → tab FC > Design v1.2 (`dashboard/fc.js`, `fc.css`; edit ikut ID kotak dalam NODES / EDGES). Jangan ubah fail dijana secara manual.
 - Angka mesti bersumber; tanda tahap bukti (rasmi / pihak ketiga / lemah); jangan reka data.
 - Jangan jana fail muat turun (PDF, Word, Excel dll.) tanpa kebenaran pengguna.
