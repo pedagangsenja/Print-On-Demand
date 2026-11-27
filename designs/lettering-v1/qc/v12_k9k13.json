@@ -296,5 +296,39 @@
     ""
    ]
   }
+ },
+ "v12-cpu-k9k13-p1": {
+  "ernie": {
+   "K11A_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K11A_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K11A_s123": [
+    true,
+    "",
+    ""
+   ],
+   "K13S_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K13S_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K13S_s123": [
+    false,
+    "G2: tanda petikan tambahan sebelum 'STEADY'",
+    ""
+   ]
+  }
  }
 }

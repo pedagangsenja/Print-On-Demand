@@ -147,5 +147,20 @@
   "selepas": "-",
   "keputusan": "tidak berkenaan",
   "nota": "Aturan 3.5 r1 sudah menulis had sebagai ayat positif ('The only text in the image is these N words...') dan tiada perkataan berisiko (label, logo, signature, watermark); calon sama dengan aturan semasa, jadi tidak dijana"
+ },
+ {
+  "tarikh": "2026-11-27",
+  "model": "ernie",
+  "rev_dari": "r1",
+  "rev_ke": "r1",
+  "ubahan": "hiasan_tepat",
+  "kelas": [
+   "hiasan_lebih"
+  ],
+  "design": "K11A, K13S",
+  "sebelum": "2/5",
+  "selepas": "4/5",
+  "keputusan": "kalah",
+  "nota": "Tambah 'These are the only decorations, on a clean empty background.' (K11A) / 'There are no decorations, only a clean empty background.' (K13S). Bingkai putih hilang 6/6, tetapi K13S s123 kini ada tanda petikan tambahan (kelas cacat baharu: rawak). Seed 42, 7 (+123 K11A baharu). Dibuang. Imej K11A pusingan ini lulus QC dan dipakai (kitaran QC tamat)"
  }
 ]

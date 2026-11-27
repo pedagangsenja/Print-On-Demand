@@ -1,7 +1,7 @@
 {
  "versi": "b1.1 (27 Nov 2026)",
  "tarikh": "2026-11-27",
- "imej": 181,
+ "imej": 187,
  "suka": 0,
  "tolak": 0,
  "model": {
@@ -267,9 +267,9 @@
     "design": 8
    },
    "semua": {
-    "imej": 32,
-    "lulus": 23,
-    "pct": 72,
+    "imej": 38,
+    "lulus": 28,
+    "pct": 74,
     "suka": 0,
     "tolak": 0,
     "design": 12
@@ -285,8 +285,8 @@
       "K13S",
       "K8G"
      ],
-     "cadangan": "hiasan_tepat",
-     "cadangan_teks": "Nyatakan hiasan yang dibenarkan dengan tepat, tambah \"clean empty background\""
+     "cadangan": null,
+     "cadangan_teks": "Pilihan ubahan habis: tukar ke model seterusnya ikut jadual model × gaya, kemudian pendekkan ayat, kemudian lapor kepada pengguna"
     },
     {
      "kelas": "bentuk",
@@ -312,13 +312,12 @@
      "cadangan_teks": "Tanya pengguna sebabnya; tambah ke kad sebagai ciri QC"
     }
    ],
-   "ubahan_dicuba": 1,
+   "ubahan_dicuba": 2,
    "suka_imej": [],
    "tindakan": [
     {
-     "jenis": "cuba",
-     "ubahan": "hiasan_tepat",
-     "teks": "Satu ubahan untuk jana seterusnya model ini: PEMBINA_UJI=ernie_hiasan_tepat (Nyatakan hiasan yang dibenarkan dengan tepat, tambah \"clean empty background\") bagi cacat 'Hiasan yang tidak diminta' (4 imej, 3 design); jana bersama aturan semasa, seed sama"
+     "jenis": "habis",
+     "teks": "Cacat 'Hiasan yang tidak diminta': Pilihan ubahan habis: tukar ke model seterusnya ikut jadual model × gaya, kemudian pendekkan ayat, kemudian lapor kepada pengguna"
     }
    ]
   },

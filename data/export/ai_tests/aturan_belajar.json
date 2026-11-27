@@ -39,15 +39,15 @@
   "bahagian": "3.6",
   "rev": "r1",
   "status": "diuji: K3H, CPU, 3 seed",
-  "imej": 32,
+  "imej": 38,
   "imej_semasa": 20,
   "lulus_semasa": 16,
   "pct_semasa": 80,
   "suka": 0,
   "tolak": 0,
   "cacat_berulang": "Hiasan yang tidak diminta (4 imej, 3 design); Bentuk huruf atau saiz label lain daripada kad (6 imej, 2 design); Cacat lain (tiada kelas) (2 imej, 1 design)",
-  "tindakan": "Satu ubahan untuk jana seterusnya model ini: PEMBINA_UJI=ernie_hiasan_tepat (Nyatakan hiasan yang dibenarkan dengan tepat, tambah \"clean empty background\") bagi cacat 'Hiasan yang tidak diminta' (4 imej, 3 design); jana bersama aturan semasa, seed sama",
-  "ubahan_dicuba": 1,
+  "tindakan": "Cacat 'Hiasan yang tidak diminta': Pilihan ubahan habis: tukar ke model seterusnya ikut jadual model × gaya, kemudian pendekkan ayat, kemudian lapor kepada pengguna",
+  "ubahan_dicuba": 2,
   "tarikh": "2026-11-27"
  },
  {
