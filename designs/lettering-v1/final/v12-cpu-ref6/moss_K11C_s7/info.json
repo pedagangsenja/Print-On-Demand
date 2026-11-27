@@ -1,0 +1,44 @@
+{
+ "versi": "SK06 v1.4 (27 Nov 2026)",
+ "raw": "moss_K11C_s7_warna.png",
+ "style": "S3",
+ "palet": "kad K11",
+ "bg": "#111111",
+ "fills": [
+  "#ffffff"
+ ],
+ "layers": 1,
+ "ink_px": [
+  1690111
+ ],
+ "sizes": {
+  "18x24": [
+   5400,
+   7200
+  ]
+ },
+ "tekstur": {
+  "kad": "K11",
+  "teks": "tiada",
+  "jenis": "none",
+  "kuat": 0.0,
+  "tidak_dibuat": []
+ },
+ "amaran": [],
+ "tepi": {
+  "sasaran": {
+   "sisi": 11.0,
+   "atas_bawah": 13.2,
+   "sumber": "SK05 pada IMG_5840 (736x981)"
+  },
+  "hasil": {
+   "18x24": {
+    "kiri": 11.0,
+    "kanan": 11.0,
+    "atas": 19.6,
+    "bawah": 25.6
+   }
+  },
+  "dakwat_min_pct": 11.0
+ }
+}

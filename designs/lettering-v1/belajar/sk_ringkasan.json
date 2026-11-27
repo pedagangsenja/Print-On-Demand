@@ -1,8 +1,8 @@
 {
  "versi": "s1 (27 Nov 2026)",
  "tarikh": "2026-11-27",
- "baris": 302,
- "imej": 52,
+ "baris": 446,
+ "imej": 76,
  "kad_dipakai": [
   "K10",
   "K11",
@@ -25,8 +25,8 @@
    "versi": "5b v1.1",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 30,
-     "lulus": 30,
+     "imej": 34,
+     "lulus": 34,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -34,8 +34,8 @@
     }
    },
    "semasa": {
-    "imej": 30,
-    "lulus": 30,
+    "imej": 34,
+    "lulus": 34,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -59,8 +59,8 @@
    "versi": "5b v1.1",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 25,
-     "lulus": 25,
+     "imej": 38,
+     "lulus": 38,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -68,8 +68,8 @@
     }
    },
    "semasa": {
-    "imej": 25,
-    "lulus": 25,
+    "imej": 38,
+    "lulus": 38,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -127,8 +127,8 @@
    "versi": "5b v1.1",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 40,
-     "lulus": 40,
+     "imej": 57,
+     "lulus": 57,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -136,8 +136,8 @@
     }
    },
    "semasa": {
-    "imej": 40,
-    "lulus": 40,
+    "imej": 57,
+    "lulus": 57,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -218,8 +218,8 @@
      "tolak": 0
     },
     "SK06 v1.4 (27 Nov 2026)": {
-     "imej": 6,
-     "lulus": 5,
+     "imej": 30,
+     "lulus": 29,
      "cacat": 1,
      "input_rosak": 0,
      "belum": 0,
@@ -227,8 +227,8 @@
     }
    },
    "semasa": {
-    "imej": 6,
-    "lulus": 5,
+    "imej": 30,
+    "lulus": 29,
     "cacat": 1,
     "input_rosak": 0,
     "belum": 0,
@@ -271,8 +271,8 @@
      "tolak": 0
     },
     "SK07 v1.1 (27 Nov 2026)": {
-     "imej": 29,
-     "lulus": 29,
+     "imej": 53,
+     "lulus": 53,
      "cacat": 0,
      "input_rosak": 1,
      "belum": 0,
@@ -280,8 +280,8 @@
     }
    },
    "semasa": {
-    "imej": 29,
-    "lulus": 29,
+    "imej": 53,
+    "lulus": 53,
     "cacat": 0,
     "input_rosak": 1,
     "belum": 0,

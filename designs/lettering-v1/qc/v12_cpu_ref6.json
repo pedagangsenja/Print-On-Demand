@@ -31,6 +31,66 @@
     true,
     "",
     "19fad4de361994528f322c9520784c65"
+   ],
+   "K9A_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K10B_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K11C_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K2E_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K4Q_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K12F_s7": [
+    true,
+    "HABITS tidak gergasi (gaya separa)",
+    ""
+   ],
+   "K9A_s123": [
+    true,
+    "",
+    ""
+   ],
+   "K10B_s123": [
+    true,
+    "",
+    ""
+   ],
+   "K11C_s123": [
+    true,
+    "",
+    ""
+   ],
+   "K2E_s123": [
+    true,
+    "",
+    ""
+   ],
+   "K4Q_s123": [
+    true,
+    "",
+    ""
+   ],
+   "K12F_s123": [
+    true,
+    "HABITS tidak gergasi (gaya separa)",
+    ""
    ]
   },
   "ernie": {
@@ -63,6 +123,66 @@
     true,
     "",
     "24a706a6d24a4c7c9168b3731fb9f66c"
+   ],
+   "K9A_s7": [
+    true,
+    "Garis tambahan: bingkai putih di tepi",
+    ""
+   ],
+   "K10B_s7": [
+    true,
+    "Garis tambahan: garis bulatan dilukis walaupun dilarang",
+    ""
+   ],
+   "K11C_s7": [
+    false,
+    "Tanda petikan rawak: 'Trust' 'Timing'",
+    ""
+   ],
+   "K2E_s7": [
+    true,
+    "DREAMS putih, tiada kotak putih penuh (hanya kurungan); ciri teras gagal",
+    ""
+   ],
+   "K12F_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K4Q_s7": [
+    true,
+    "Garis tambahan: bingkai di tepi; latar kelabu bertekstur (kerja SK04)",
+    ""
+   ],
+   "K9A_s123": [
+    true,
+    "Garis tambahan: bingkai putih di tepi",
+    ""
+   ],
+   "K10B_s123": [
+    true,
+    "Garis tambahan: garis bulatan dilukis walaupun dilarang",
+    ""
+   ],
+   "K11C_s123": [
+    false,
+    "Tanda petikan rawak: 'Trust' 'Timing'",
+    ""
+   ],
+   "K2E_s123": [
+    true,
+    "DREAMS putih, tiada kotak putih penuh (hanya kurungan); ciri teras gagal",
+    ""
+   ],
+   "K12F_s123": [
+    true,
+    "",
+    ""
+   ],
+   "K4Q_s123": [
+    true,
+    "Garis tambahan: bingkai di tepi; latar kelabu bertekstur (kerja SK04)",
+    ""
    ]
   },
   "klein3": {
@@ -95,6 +215,66 @@
     true,
     "",
     "d461e9a520e03662e29e43676189f59a"
+   ],
+   "K9A_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K10B_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K2E_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K11C_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K12F_s7": [
+    true,
+    "HABITS tidak gergasi (gaya separa)",
+    ""
+   ],
+   "K4Q_s7": [
+    true,
+    "Latar kelabu bertekstur (kerja SK04)",
+    ""
+   ],
+   "K9A_s123": [
+    true,
+    "",
+    ""
+   ],
+   "K10B_s123": [
+    true,
+    "",
+    ""
+   ],
+   "K2E_s123": [
+    true,
+    "",
+    ""
+   ],
+   "K11C_s123": [
+    true,
+    "Latar kelabu bertekstur (kerja SK04)",
+    ""
+   ],
+   "K12F_s123": [
+    true,
+    "HABITS tidak gergasi (gaya separa)",
+    ""
+   ],
+   "K4Q_s123": [
+    true,
+    "Latar kelabu bertekstur (kerja SK04)",
+    ""
    ]
   },
   "zturbo": {
