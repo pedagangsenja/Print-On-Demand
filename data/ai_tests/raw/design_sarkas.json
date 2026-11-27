@@ -1,0 +1,346 @@
+{
+ "rows": [
+  {
+   "no": 1,
+   "id": "lazy",
+   "quote": "I'm not lazy, I'm just on energy saving mode",
+   "img": "/_blob/1464086de102ce2099025b8d65ed796c",
+   "repaired": true,
+   "model": "FLUX.2 klein 4B",
+   "format": "1024x1024 SVG, hitam atas putih",
+   "file": "designs/svg-typo/out/batch4/final/lazy.png",
+   "theme": "Umum"
+  },
+  {
+   "no": 2,
+   "id": "disturbed",
+   "quote": "Do not disturb, already disturbed",
+   "img": "/_blob/207682403994cfa5150f74fbdb378e21",
+   "repaired": true,
+   "model": "FLUX.2 klein 4B",
+   "format": "1024x1024 SVG, hitam atas putih",
+   "file": "designs/svg-typo/out/batch4/final/disturbed.png",
+   "theme": "Umum"
+  },
+  {
+   "no": 3,
+   "id": "vacation",
+   "quote": "I need a six month vacation twice a year",
+   "img": "/_blob/774ba5d3b9fb96f0486ca9e260b00ad1",
+   "repaired": false,
+   "model": "FLUX.2 klein 4B",
+   "format": "1024x1024 SVG, hitam atas putih",
+   "file": "designs/svg-typo/out/batch4/final/vacation.png",
+   "theme": "Umum"
+  },
+  {
+   "no": 4,
+   "id": "nobody",
+   "quote": "Cool story bro, nobody asked",
+   "img": "/_blob/657aad52cb761c4370e5c12d79c18022",
+   "repaired": true,
+   "model": "FLUX.2 klein 4B",
+   "format": "1024x1024 SVG, hitam atas putih",
+   "file": "designs/svg-typo/out/batch4/final/nobody.png",
+   "theme": "Umum"
+  },
+  {
+   "no": 5,
+   "id": "adult",
+   "quote": "I can't adult today",
+   "img": "/_blob/78f262b45efdd040f26dc1a01cfeaa6a",
+   "repaired": false,
+   "model": "FLUX.2 klein 4B",
+   "format": "1024x1024 SVG, hitam atas putih",
+   "file": "designs/svg-typo/out/batch4/final/adult.png",
+   "theme": "Umum"
+  },
+  {
+   "no": 6,
+   "id": "funsize",
+   "quote": "I'm not short, I'm fun size",
+   "img": "/_blob/f2b74e524a7fff43cd6699df3f900ca6",
+   "repaired": false,
+   "model": "FLUX.2 klein 4B",
+   "format": "1024x1024 SVG, hitam atas putih",
+   "file": "designs/svg-typo/out/batch4/final/funsize.png",
+   "theme": "Umum"
+  },
+  {
+   "no": 7,
+   "id": "sideeye",
+   "quote": "Queen of the side eye",
+   "img": "/_blob/b138b9a050894309370ea6ad58e11dcc",
+   "repaired": false,
+   "model": "FLUX.2 klein 4B",
+   "format": "1024x1024 SVG, hitam atas putih",
+   "file": "designs/svg-typo/out/batch4/final/sideeye.png",
+   "theme": "Umum"
+  },
+  {
+   "no": 8,
+   "id": "judging",
+   "quote": "I'm silently judging you",
+   "img": "/_blob/00017e88ecd9a9a2992a968cc0aa2389",
+   "repaired": false,
+   "model": "FLUX.2 klein 4B",
+   "format": "1024x1024 SVG, hitam atas putih",
+   "file": "designs/svg-typo/out/batch4/final/judging.png",
+   "theme": "Umum"
+  },
+  {
+   "no": 9,
+   "id": "bed",
+   "quote": "My bed is calling and I must go",
+   "img": "/_blob/4e3e59b5ce961f809fa396157bd91c06",
+   "repaired": false,
+   "model": "FLUX.2 klein 4B",
+   "format": "1024x1024 SVG, hitam atas putih",
+   "file": "designs/svg-typo/out/batch4/final/bed.png",
+   "theme": "Umum"
+  },
+  {
+   "no": 10,
+   "id": "cats",
+   "quote": "Easily distracted by cats",
+   "img": "/_blob/5445bc8ac1f7148585822aa979edd3de",
+   "repaired": false,
+   "model": "FLUX.2 klein 4B",
+   "format": "1024x1024 SVG, hitam atas putih",
+   "file": "designs/svg-typo/out/batch4/final/cats.png",
+   "theme": "Umum"
+  },
+  {
+   "no": 11,
+   "id": "email",
+   "quote": "Per my last email",
+   "img": "/_blob/163add55f47ca3a838a9755ac11ddc0f",
+   "repaired": false,
+   "model": "FLUX.2 klein 4B",
+   "format": "1024x1024 SVG, hitam atas putih",
+   "file": "designs/svg-typo/out/batch4/final/email.png",
+   "theme": "Kerja"
+  },
+  {
+   "no": 12,
+   "id": "friday",
+   "quote": "Is it Friday yet?",
+   "img": "/_blob/c7041d61bf1f46554138d0710419d71a",
+   "repaired": false,
+   "model": "FLUX.2 klein 4B",
+   "format": "1024x1024 SVG, hitam atas putih",
+   "file": "designs/svg-typo/out/batch4/final/friday.png",
+   "theme": "Kerja"
+  },
+  {
+   "no": 13,
+   "id": "hardly",
+   "quote": "Working hard or hardly working",
+   "img": "/_blob/6faec3e1b8ac1ce412a044101ec2f5c7",
+   "repaired": false,
+   "model": "FLUX.2 klein 4B",
+   "format": "1024x1024 SVG, hitam atas putih",
+   "file": "designs/svg-typo/out/batch4/final/hardly.png",
+   "theme": "Kerja"
+  },
+  {
+   "no": 14,
+   "id": "patience",
+   "quote": "Out of office and out of patience",
+   "img": "/_blob/9c6bf1808e87bf4b1cb8268d9caf0e9b",
+   "repaired": false,
+   "model": "FLUX.2 klein 4B",
+   "format": "1024x1024 SVG, hitam atas putih",
+   "file": "designs/svg-typo/out/batch4/final/patience.png",
+   "theme": "Kerja"
+  },
+  {
+   "no": 15,
+   "id": "schedule",
+   "quote": "Let me check my schedule... nope",
+   "img": "/_blob/e11a825fc83795e4baa0cc9edbefb278",
+   "repaired": false,
+   "model": "FLUX.2 klein 4B",
+   "format": "1024x1024 SVG, hitam atas putih",
+   "file": "designs/svg-typo/out/batch4/final/schedule.png",
+   "theme": "Kerja"
+  },
+  {
+   "no": 16,
+   "id": "meeting",
+   "quote": "This meeting could have been an email",
+   "img": "/_blob/e713a5f16bb583134ec72992bd79bdd5",
+   "repaired": true,
+   "model": "FLUX.2 klein 4B",
+   "format": "1024x1024 SVG, hitam atas putih",
+   "file": "designs/svg-typo/out/batch4/final/meeting.png",
+   "theme": "Kerja"
+  },
+  {
+   "no": 17,
+   "id": "monday",
+   "quote": "Monday again? Really?",
+   "img": "/_blob/e0ebf83abdf2e7569c936fd328cae115",
+   "repaired": false,
+   "model": "FLUX.2 klein 4B",
+   "format": "1024x1024 SVG, hitam atas putih",
+   "file": "designs/svg-typo/out/batch4/final/monday.png",
+   "theme": "Kerja"
+  },
+  {
+   "no": 18,
+   "id": "coffeefirst",
+   "quote": "Coffee first, talk later",
+   "img": "/_blob/5386420a4ad2c059907095b3996cbf77",
+   "repaired": false,
+   "model": "FLUX.2 klein 4B",
+   "format": "1024x1024 SVG, hitam atas putih",
+   "file": "designs/svg-typo/out/batch4/final/coffeefirst.png",
+   "theme": "Kopi / introvert"
+  },
+  {
+   "no": 19,
+   "id": "decaf",
+   "quote": "Decaf? Never heard of her",
+   "img": "/_blob/e30d6a9ab2a12b7f44e00ed7e16c7386",
+   "repaired": false,
+   "model": "FLUX.2 klein 4B",
+   "format": "1024x1024 SVG, hitam atas putih",
+   "file": "designs/svg-typo/out/batch4/final/decaf.png",
+   "theme": "Kopi / introvert"
+  },
+  {
+   "no": 20,
+   "id": "bloodtype",
+   "quote": "My blood type is coffee",
+   "img": "/_blob/f335209deb7b1a8dc14600d98d02c7ca",
+   "repaired": true,
+   "model": "FLUX.2 klein 4B",
+   "format": "1024x1024 SVG, hitam atas putih",
+   "file": "designs/svg-typo/out/batch4/final/bloodtype.png",
+   "theme": "Kopi / introvert"
+  },
+  {
+   "no": 21,
+   "id": "stayin",
+   "quote": "Staying in is the new going out",
+   "img": "/_blob/471d3f79266368f767ca48c312f9a24d",
+   "repaired": false,
+   "model": "FLUX.2 klein 4B",
+   "format": "1024x1024 SVG, hitam atas putih",
+   "file": "designs/svg-typo/out/batch4/final/stayin.png",
+   "theme": "Kopi / introvert"
+  },
+  {
+   "no": 22,
+   "id": "peopling",
+   "quote": "Peopling is hard",
+   "img": "/_blob/eedcde045a195b4bb5c1db33bc0b0e3a",
+   "repaired": false,
+   "model": "FLUX.2 klein 4B",
+   "format": "1024x1024 SVG, hitam atas putih",
+   "file": "designs/svg-typo/out/batch4/final/peopling.png",
+   "theme": "Kopi / introvert"
+  },
+  {
+   "no": 23,
+   "id": "books",
+   "quote": "Introvert but willing to talk about books",
+   "img": "/_blob/02f587435764dd950b521c39b7d9aa97",
+   "repaired": true,
+   "model": "FLUX.2 klein 4B",
+   "format": "1024x1024 SVG, hitam atas putih",
+   "file": "designs/svg-typo/out/batch4/final/books.png",
+   "theme": "Kopi / introvert"
+  },
+  {
+   "no": 24,
+   "id": "wenthome",
+   "quote": "I came, I saw, I went home",
+   "img": "/_blob/8283bfd45f301327646b8dcf779e861d",
+   "repaired": true,
+   "model": "FLUX.2 klein 4B",
+   "format": "1024x1024 SVG, hitam atas putih",
+   "file": "designs/svg-typo/out/batch4/final/wenthome.png",
+   "theme": "Kopi / introvert"
+  },
+  {
+   "no": 25,
+   "id": "momvoice",
+   "quote": "I'm not yelling, this is my mom voice",
+   "img": "/_blob/7e4d79b391ee9637bee93696921d23b7",
+   "repaired": false,
+   "model": "FLUX.2 klein 4B",
+   "format": "1024x1024 SVG, hitam atas putih",
+   "file": "designs/svg-typo/out/batch4/final/momvoice.png",
+   "theme": "Ibu / keluarga"
+  },
+  {
+   "no": 26,
+   "id": "askdad",
+   "quote": "Ask your dad",
+   "img": "/_blob/0c2553fd7d269e07d6619b50cbe16b2e",
+   "repaired": false,
+   "model": "FLUX.2 klein 4B",
+   "format": "1024x1024 SVG, hitam atas putih",
+   "file": "designs/svg-typo/out/batch4/final/askdad.png",
+   "theme": "Ibu / keluarga"
+  },
+  {
+   "no": 27,
+   "id": "saidso",
+   "quote": "Because I said so",
+   "img": "/_blob/b1603060640880dc7b398284a83492ae",
+   "repaired": false,
+   "model": "FLUX.2 klein 4B",
+   "format": "1024x1024 SVG, hitam atas putih",
+   "file": "designs/svg-typo/out/batch4/final/saidso.png",
+   "theme": "Ibu / keluarga"
+  },
+  {
+   "no": 28,
+   "id": "tiredmom",
+   "quote": "Tired as a mother",
+   "img": "/_blob/3c49b67d5ac21a45beeb41e94b128c8c",
+   "repaired": false,
+   "model": "FLUX.2 klein 4B",
+   "format": "1024x1024 SVG, hitam atas putih",
+   "file": "designs/svg-typo/out/batch4/final/tiredmom.png",
+   "theme": "Ibu / keluarga"
+  },
+  {
+   "no": 29,
+   "id": "tinyhumans",
+   "quote": "Raising tiny humans, send coffee",
+   "img": "/_blob/8145ebc7b26a81a50812dd0bd7feca83",
+   "repaired": false,
+   "model": "FLUX.2 klein 4B",
+   "format": "1024x1024 SVG, hitam atas putih",
+   "file": "designs/svg-typo/out/batch4/final/tinyhumans.png",
+   "theme": "Ibu / keluarga"
+  },
+  {
+   "no": 30,
+   "id": "momhair",
+   "quote": "Mom hair don't care",
+   "img": "/_blob/0c891102fa222d1d018aa0e5e1886f29",
+   "repaired": true,
+   "model": "FLUX.2 klein 4B",
+   "format": "1024x1024 SVG, hitam atas putih",
+   "file": "designs/svg-typo/out/batch4/final/momhair.png",
+   "theme": "Ibu / keluarga"
+  }
+ ],
+ "meta": [
+  {
+   "label": "build_designs.py",
+   "value": "\"\"\"Build dashboard data for the Design tab.\nInput : designs/svg-typo/out/<set>/picks.json + FINAL_30.txt, data/export/designs/<name>_assets.json (blob urls after upload)\nOutput: data/export/designs/motiv_posters.json, data/export/designs/sarkas_designs.json  ({rows, meta})\n\"\"\"\nimport json, re, pathlib\nR = pathlib.Path(__file__).resolve().parents[1]\nCODE = pathlib.Path(__file__).read_text()\nTHEME = {\"lazy\": \"Umum\", \"email\": \"Kerja\", \"coffeefirst\": \"Kopi / introvert\", \"momvoice\": \"Ibu / keluarga\"}\n\ndef build(folder, assets_name, out_name, model_fmt, themes=None):\n    M = R / \"designs/svg-typo/out\" / folder\n    picks = json.load(open(M / \"picks.json\"))\n    assets = json.load(open(R / \"data/export/designs\" / assets_name))\n    quotes = {}\n    for line in open(M / \"FINAL_30.txt\"):\n        m = re.match(r\"(\\d+) (\\w+) - (.+?)(\\s{2,}\\(.*)?$\", line.rstrip())\n        if m: quotes[m.group(2)] = (int(m.group(1)), m.group(3).strip())\n    rows, theme = [], None\n    for k, src in picks.items():\n        no, q = quotes[k]\n        if themes and k in themes: theme = themes[k]\n        r = {\"no\": no, \"id\": k, \"quote\": q, \"img\": assets[k], \"repaired\": \"fix/\" in src,\n             \"model\": \"FLUX.2 klein 4B\", \"format\": model_fmt,\n             \"file\": f\"designs/svg-typo/out/{folder}/final/{k}.png\"}\n        if themes: r[\"theme\"] = theme\n        rows.append(r)\n    rows.sort(key=lambda r: r[\"no\"])\n    meta = [{\"label\": \"build_designs.py\", \"value\": CODE, \"type\": \"code\", \"lang\": \"python\"},\n            {\"label\": \"Input\", \"value\": f\"designs/svg-typo/out/{folder}/picks.json, FINAL_30.txt\"}]\n    p = R / \"data/export/designs\" / out_name\n    p.write_text(json.dumps({\"rows\": rows, \"meta\": meta}, ensure_ascii=False, indent=1))\n    print(len(rows), \"rows ->\", p.relative_to(R))\n\nbuild(\"motiv\", \"motiv_assets.json\", \"motiv_posters.json\", \"864x1152 (3:4), hitam atas putih\")\nbuild(\"batch4\", \"sarkas_assets.json\", \"sarkas_designs.json\", \"1024x1024 SVG, hitam atas putih\", THEME)\n",
+   "type": "code",
+   "lang": "python"
+  },
+  {
+   "label": "Input",
+   "value": "designs/svg-typo/out/batch4/picks.json, FINAL_30.txt"
+  }
+ ]
+}

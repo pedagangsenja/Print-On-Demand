@@ -5,15 +5,17 @@
 .pod h2 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-heading); margin: 0; text-wrap: balance; }
 .pod h3 { font-size: var(--cds-font-size-body); font-weight: var(--cds-font-weight-medium); margin: 0; }
 .pod p { margin: 0; max-width: 70ch; line-height: 1.55; }
-.pod-section { display: grid; gap: var(--cds-gap-md); min-width: 0; padding-top: var(--cds-pad-lg); border-top: 1px solid var(--color-border-line); }
+.pod-section { scroll-margin-top: calc(var(--pod-top-nav, 0px) + 16px); display: grid; gap: var(--cds-gap-md); min-width: 0; padding-top: var(--cds-pad-lg); border-top: 1px solid var(--color-border-line); }
 .pod-section.pod-first { border-top: 0; padding-top: 0; }
 .pod-kicker { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); letter-spacing: 0.04em; text-transform: uppercase; }
 .pod-muted { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); line-height: 1.5; }
 .pod-lede { font-size: var(--cds-font-size-body); }
 .pod-lede b { font-variant-numeric: tabular-nums; }
 .pod-how { margin: 0; padding-left: 1.2em; display: grid; gap: 4px; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); max-width: 70ch; }
-.pod-nav { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs) var(--cds-gap-sm); }
-.pod-nav a { color: var(--color-fg); text-decoration: none; border: 1px solid var(--color-border-line); border-radius: 999px; padding: 3px 12px; font-size: var(--cds-font-size-caption); }
+.pod-nav { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs) var(--cds-gap-sm); align-items: center; position: sticky; top: var(--pod-top-tabs, 0px); z-index: 20; background: var(--color-bg); padding: var(--cds-pad-sm) 0; margin-top: calc(var(--cds-pad-sm) * -1); border-bottom: 1px solid var(--color-border-line); }
+.pod-nav::before { content: "Seksyen"; color: var(--color-fg-muted); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; }
+.pod-nav a[aria-current="true"] { background: var(--color-fg); border-color: var(--color-fg); color: var(--color-bg); }
+.pod-nav a { color: var(--color-fg-muted); text-decoration: none; border: 1px solid var(--color-border-line); border-radius: 999px; padding: 3px 12px; font-size: var(--cds-font-size-caption); }
 .pod-nav a:hover, .pod-nav a:focus-visible { background: var(--color-panel); }
 .pod-answers { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--cds-gap-md); }
 .pod-card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); min-width: 0; display: grid; gap: var(--cds-gap-xs); align-content: start; }
@@ -51,6 +53,23 @@
 .pod-np-meta { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs) var(--cds-gap-sm); align-items: center; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
 .pod-table-wrap { overflow-x: auto; min-width: 0; }
 .pod-scroll { max-height: 460px; overflow: auto; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); }
+.al-engine { display: inline-block; align-self: start; padding: 1px 10px; border-radius: 999px; font-size: var(--cds-font-size-caption); font-weight: var(--cds-font-weight-medium); background: var(--color-fg); color: var(--color-bg); }
+.al-engine[data-none="1"] { background: transparent; color: var(--color-fg-muted); border: 1px dashed var(--color-border-line); font-weight: 400; }
+.ms-toggle { appearance: none; background: none; border: 0; padding: 0; font: inherit; font-weight: 600; color: var(--color-fg); cursor: pointer; text-align: left; display: inline-flex; gap: 5px; align-items: baseline; }
+.ms-toggle::before { content: '\25b8'; font-size: 9px; color: var(--color-fg-muted); }
+.ms-toggle[aria-expanded="true"]::before { content: '\25be'; }
+.ms-toggle:hover { text-decoration: underline; }
+.ms-detail > td { background: var(--color-panel); }
+.ms-dl { display: grid; grid-template-columns: max-content 1fr; gap: 3px 14px; margin: 0; }
+.ms-dl dt { color: var(--color-fg-muted); }
+.ms-dl dd { margin: 0; overflow-wrap: anywhere; }
+.pod-fit { min-width: 0; overflow-x: auto; }
+.pod-fit table { table-layout: fixed; width: 100%; font-size: 11px; line-height: 1.35; }
+.pod-fit th, .pod-fit td { padding: 5px 6px; white-space: normal; overflow-wrap: anywhere; }
+.pod-fit td.pod-wide, .pod-fit th.pod-wide { min-width: 0; }
+.pod-fit th { position: static; }
+.pod-fit .pod-pill { white-space: normal; padding: 0 6px; }
+@media (max-width: 820px) { .pod-fit table { table-layout: auto; min-width: 820px; } }
 .pod table { border-collapse: collapse; width: 100%; font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; }
 .pod th { position: sticky; top: 0; background: var(--color-bg); font-weight: var(--cds-font-weight-medium); color: var(--color-fg-muted); white-space: nowrap; z-index: 1; }
 .pod th, .pod td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--color-border-line); vertical-align: top; }
@@ -70,11 +89,12 @@
 .pod details { border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-sm) var(--cds-pad-md); }
 .pod details summary { cursor: pointer; font-weight: var(--cds-font-weight-medium); font-size: var(--cds-font-size-caption); }
 .pod details[open] > :not(summary) { margin-top: var(--cds-gap-sm); }
-.pod-tabbar { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs); border-bottom: 1px solid var(--color-border-line); }
+.pod-tabbar { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs); border-bottom: 1px solid var(--color-border-line); position: sticky; top: 0; z-index: 30; background: var(--color-bg); }
 .pod-tab-btn { appearance: none; background: none; border: 0; border-bottom: 2px solid transparent; margin-bottom: -1px; padding: var(--cds-pad-sm) var(--cds-pad-md); font: inherit; font-size: var(--cds-font-size-body); color: var(--color-fg-muted); cursor: pointer; }
-.pod-tab-btn[aria-selected="true"] { color: var(--color-fg); border-bottom-color: var(--color-fg); font-weight: var(--cds-font-weight-medium); }
+.pod-tab-btn[aria-selected="true"] { background: var(--color-panel); border-radius: var(--cds-radius) var(--cds-radius) 0 0; color: var(--color-fg); border-bottom-color: var(--color-fg); font-weight: var(--cds-font-weight-medium); }
 .pod-tab-btn:hover { color: var(--color-fg); }
 .pod-tab-btn:focus-visible { outline: 2px solid var(--color-fg); outline-offset: 2px; border-radius: var(--cds-radius); }
+@media (max-width: 620px) { .pod-tabbar { gap: 2px; } .pod-tab-btn { font-size: var(--cds-font-size-caption); padding: 6px 7px; } }
 .pod-tab { display: grid; gap: calc(var(--cds-gap-xl) * 1.5); min-width: 0; }
 .pod-tab[hidden] { display: none !important; }
 .pod-guide { gap: var(--cds-gap-md); }
@@ -127,22 +147,14 @@
 .pod-font-dl dd { margin: 0; min-width: 0; }
 .pod-font-filters { display: flex; flex-wrap: wrap; gap: var(--cds-gap-sm); align-items: center; }
 .pod-font-search { font: inherit; font-size: var(--cds-font-size-body); padding: 4px 8px; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background-color: var(--color-bg); color: var(--color-fg); min-width: 180px; max-width: 100%; }
-.pod-ig-form { display: grid; gap: var(--cds-gap-sm); grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); align-items: end; }
-.pod-ig-form label { display: grid; gap: 2px; min-width: 0; }
-.pod-ig-form .pod-ig-wide { grid-column: 1 / -1; }
-.pod-ig-form input[type="text"], .pod-ig-form input[type="url"], .pod-ig-form textarea { font: inherit; font-size: var(--cds-font-size-body); padding: 4px 8px; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background-color: var(--color-bg); color: var(--color-fg); min-width: 0; width: 100%; box-sizing: border-box; }
-.pod-ig-form textarea { min-height: 3.2em; resize: vertical; }
-.pod-ig-form .dash-select { width: 100%; }
-.pod-ig-btn { font: inherit; font-size: var(--cds-font-size-body); padding: 6px 14px; border-radius: var(--cds-radius); border: 1px solid var(--color-fg); background-color: var(--color-fg); color: var(--color-bg); cursor: pointer; justify-self: start; }
-.pod-ig-btn[disabled] { opacity: 0.5; cursor: default; }
-.pod-ig-del { font: inherit; font-size: var(--cds-font-size-caption); padding: 2px 10px; border-radius: var(--cds-radius); border: 1px solid var(--color-border-line); background: none; color: var(--color-fg-muted); cursor: pointer; justify-self: start; }
-.pod-ig-del[data-armed="1"] { color: var(--color-bad); border-color: currentColor; }
-.pod-ig-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: var(--cds-gap-md); min-height: 4em; }
-.pod-ig-card { display: grid; gap: var(--cds-gap-xs); align-content: start; padding: var(--cds-pad-md); }
-.pod-ig-card img { width: 100%; height: auto; display: block; border-radius: var(--cds-radius); border: 1px solid var(--color-border-line); background: var(--color-bg); }
-.pod-ig-card p { font-size: var(--cds-font-size-caption); line-height: 1.45; }
-.pod-ig-tags { display: flex; flex-wrap: wrap; gap: 4px; }
-.pod-ig-filters { display: flex; flex-wrap: wrap; gap: var(--cds-gap-sm); align-items: center; }
+.d-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 170px), 1fr)); gap: var(--cds-gap-md); min-height: 6em; }
+.d-card { display: grid; gap: var(--cds-gap-xs); align-content: start; margin: 0; min-width: 0; }
+.d-card button { padding: 0; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background: #fff; cursor: zoom-in; overflow: hidden; display: block; width: 100%; aspect-ratio: 3 / 4; }
+.d-card img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.d-card.d-sq button { aspect-ratio: 1 / 1; }
+.d-theme { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); display: block; }
+.d-card figcaption { font-size: var(--cds-font-size-caption); line-height: 1.45; }
+.d-card figcaption b { font-variant-numeric: tabular-nums; margin-right: 4px; }
 .mt-models { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--cds-gap-md); margin-bottom: var(--cds-gap-md); }
 .mt-models .pod-kpi { gap: 6px; }
 .mt-score { font-family: var(--font-anthropic-serif); font-size: 2.4rem; line-height: 1.1; font-variant-numeric: tabular-nums; }
@@ -152,14 +164,23 @@
 .mt-bad { color: var(--color-bad); }
 .mt-bar { height: 8px; border-radius: 4px; background: var(--color-border-line); overflow: hidden; }
 .mt-bar > span { display: block; height: 100%; background: var(--color-ok); }
+.p9-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--cds-gap-md); margin-top: var(--cds-gap-md); }
+.p9-card { margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+.p9-card img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--cds-radius); cursor: zoom-in; background: #000; }
+.p9-card figcaption { grid-column: 1 / -1; font-size: var(--cds-font-size-caption); }
 .mt-gallery { display: grid; gap: var(--cds-gap-md); margin-top: var(--cds-gap-md); }
 .mt-design { border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-md); background: var(--color-panel); display: grid; gap: var(--cds-gap-sm); min-width: 0; }
 .mt-head { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; }
-.mt-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--cds-gap-sm); }
+.mt-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--cds-gap-sm); }
+.mt-row.mt-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.mt-row.mt-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 820px; }
+@media (max-width: 640px) { .mt-row, .mt-row.mt-5, .mt-row.mt-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.mt-empty { display: grid; place-items: center; text-align: center; padding: 8px; border: 3px dashed var(--color-border-line); border-radius: 6px; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
 .mt-cell { display: grid; gap: 4px; align-content: start; min-width: 0; margin: 0; }
 .mt-cell button { padding: 0; border: 3px solid var(--color-border-line); border-radius: 6px; background: var(--color-bg); cursor: zoom-in; overflow: hidden; display: block; width: 100%; }
 .mt-cell[data-ok="1"] button { border-color: var(--color-ok); }
 .mt-cell[data-ok="0"] button { border-color: var(--color-bad); }
+.mt-cell[data-ok="ref"] button { border-style: dashed; border-color: var(--color-fg-muted); }
 .mt-cell img { display: block; width: 100%; height: auto; }
 .mt-cap { font-size: var(--cds-font-size-caption); line-height: 1.4; overflow-wrap: anywhere; }
 .mt-cap b { display: block; }
@@ -170,25 +191,35 @@
 .mt-zoom figcaption { color: #fff; font-size: 0.95rem; text-align: center; max-width: 720px; }
 .mt-zoom-close { position: absolute; top: 12px; right: 12px; padding: 6px 12px; border-radius: 999px; border: 1px solid #fff; background: transparent; color: #fff; cursor: pointer; }
 @media print { .mt-zoom { display: none; } }
-@media print { .pod-scroll { max-height: none; overflow: visible; border: 0; } .pod-nav, .pod-tabbar { display: none; } .pod details { border: 0; } #tab-inspirasi, #tab-setup, #tab-workflow, #tab-prestasi, #tab-font, #tab-model, #tab-utama { break-before: page; } }
+@media print { .pod-tabbar, .pod-nav, .pod th { position: static; } .pod-scroll { max-height: none; overflow: visible; border: 0; } .pod-nav, .pod-tabbar { display: none; } .pod details { border: 0; } #tab-font, #tab-model, #tab-lesen, #tab-sejarah, #tab-setup, #tab-workflow, #tab-aliran, #tab-daftar, #tab-fc, #tab-model2 { break-before: page; } }
 </style>
+<link rel="stylesheet" href="fc.css">
+<link rel="stylesheet" href="aliran.css">
+<link rel="stylesheet" href="t2.css">
+<link rel="stylesheet" href="cvg.css">
 
 <div class="pod">
 
 <header id="ringkasan" class="pod-section pod-first">
   <div class="pod-kicker">Riset untuk kedai typography di Pinterest</div>
   <h1>Riset POD Typography</h1>
-  <div class="pod-tabbar" role="tablist" aria-label="Tab dashboard">
-    <button type="button" class="pod-tab-btn" role="tab" id="btn-poster" data-tab="tab-poster" aria-controls="tab-poster" aria-selected="true">Poster</button>
-    <button type="button" class="pod-tab-btn" role="tab" id="btn-inspirasi" data-tab="tab-inspirasi" aria-controls="tab-inspirasi" aria-selected="false" tabindex="-1">Inspirasi</button>
-    <button type="button" class="pod-tab-btn" role="tab" id="btn-setup" data-tab="tab-setup" aria-controls="tab-setup" aria-selected="false" tabindex="-1">Setup</button>
-    <button type="button" class="pod-tab-btn" role="tab" id="btn-font" data-tab="tab-font" aria-controls="tab-font" aria-selected="false" tabindex="-1">Font</button>
-    <button type="button" class="pod-tab-btn" role="tab" id="btn-model" data-tab="tab-model" aria-controls="tab-model" aria-selected="false" tabindex="-1">Model AI</button>
-    <button type="button" class="pod-tab-btn" role="tab" id="btn-workflow" data-tab="tab-workflow" aria-controls="tab-workflow" aria-selected="false" tabindex="-1">Workflow</button>
-    <button type="button" class="pod-tab-btn" role="tab" id="btn-prestasi" data-tab="tab-prestasi" aria-controls="tab-prestasi" aria-selected="false" tabindex="-1">Prestasi</button>
-    <button type="button" class="pod-tab-btn" role="tab" id="btn-utama" data-tab="tab-utama" aria-controls="tab-utama" aria-selected="false" tabindex="-1">Semua produk</button>
-  </div>
 </header>
+
+<div class="pod-tabbar" role="tablist" aria-label="Tab dashboard">
+    <button type="button" class="pod-tab-btn" role="tab" id="btn-poster" data-tab="tab-poster" aria-controls="tab-poster" aria-selected="true">Ujikaji</button>
+    <button type="button" class="pod-tab-btn" role="tab" id="btn-font" data-tab="tab-font" aria-controls="tab-font" aria-selected="false" tabindex="-1">Font</button>
+    <button type="button" class="pod-tab-btn" role="tab" id="btn-model" data-tab="tab-model" aria-controls="tab-model" aria-selected="false" tabindex="-1">AI Image Test</button>
+    <button type="button" class="pod-tab-btn" role="tab" id="btn-model2" data-tab="tab-model2" aria-controls="tab-model2" aria-selected="false" tabindex="-1">AI Image Test 2</button>
+    <button type="button" class="pod-tab-btn" role="tab" id="btn-cvg" data-tab="tab-cvg" aria-controls="tab-cvg" aria-selected="false" tabindex="-1">CPU vs GPU</button>
+    <button type="button" class="pod-tab-btn" role="tab" id="btn-lesen" data-tab="tab-lesen" aria-controls="tab-lesen" aria-selected="false" tabindex="-1">Lesen</button>
+    <button type="button" class="pod-tab-btn" role="tab" id="btn-sejarah" data-tab="tab-sejarah" aria-controls="tab-sejarah" aria-selected="false" tabindex="-1">Chat lepas</button>
+    <button type="button" class="pod-tab-btn" role="tab" id="btn-setup" data-tab="tab-setup" aria-controls="tab-setup" aria-selected="false" tabindex="-1">Setup</button>
+    <button type="button" class="pod-tab-btn" role="tab" id="btn-workflow" data-tab="tab-workflow" aria-controls="tab-workflow" aria-selected="false" tabindex="-1">Workflow</button>
+    <button type="button" class="pod-tab-btn" role="tab" id="btn-aliran" data-tab="tab-aliran" aria-controls="tab-aliran" aria-selected="false" tabindex="-1">Aliran</button>
+    <button type="button" class="pod-tab-btn" role="tab" id="btn-daftar" data-tab="tab-daftar" aria-controls="tab-daftar" aria-selected="false" tabindex="-1">Daftar S/C</button>
+    <button type="button" class="pod-tab-btn" role="tab" id="btn-fc" data-tab="tab-fc" aria-controls="tab-fc" aria-selected="false" tabindex="-1">FC</button>
+  </div>
+
 
 <section id="tab-poster" class="pod-tab" role="tabpanel" aria-labelledby="btn-poster">
 
@@ -243,6 +274,8 @@
   </details>
   <nav class="pod-nav" aria-label="Bahagian poster">
     <a href="#p-untung">Untung</a>
+    <a href="#k-corong">Corong jualan</a>
+    <a href="#k-milestone">Milestone</a>
     <a href="#p-pelan">Pelan niche</a>
     <a href="#p-format">Produk</a>
     <a href="#p-katakunci">Kata kunci</a>
@@ -290,6 +323,46 @@
     <p class="pod-muted">Senario asas diskala ikut bilangan pelawat (model asas: 3,000 sebulan).</p>
   </div>
   <p class="pod-muted">Musim dan kadar pembelian ialah anggaran; kemas kini dengan jualan sebenar selepas 3 bulan.</p>
+</section>
+
+<div id="k-intro" class="pod-section">
+  <p class="pod-lede">Sasaran bulan ke-24: <b data-draw="k-sales" data-source="prestasi_funnel" data-field="sales_day" data-row="0">—</b> jualan sehari × <b data-draw="k-ppo" data-source="prestasi_funnel" data-field="ppo" data-row="0">—</b> = <b data-draw="k-profit" data-source="prestasi_funnel" data-field="profit_month" data-row="0">—</b> sebulan. Angka sebenar akan muncul bila Google Analytics, Pinterest dan WooCommerce disambung.</p>
+</div>
+
+<section id="k-corong" class="pod-section">
+  <h2>Corong jualan: sasaran sebulan</h2>
+  <p class="pod-muted">Setiap peringkat bergantung pada peringkat sebelumnya. Betulkan peringkat yang paling lemah dahulu.</p>
+  <div class="pod-funnel">
+    <div class="pod-kpi pod-step" id="k-step-tayangan">
+      <div class="pod-q">Tayangan Pinterest</div>
+      <div class="pod-mid" data-draw="k-f-impr" data-source="prestasi_funnel" data-field="impressions" data-row="0">—</div>
+      <div class="pod-muted">Sebenar: belum disambung</div>
+    </div>
+    <div class="pod-arrow"><span><span data-draw="k-f-ctr" data-source="prestasi_funnel" data-field="ctr" data-row="0">—</span>% klik →</span></div>
+    <div class="pod-kpi pod-step" id="k-step-pelawat">
+      <div class="pod-q">Pelawat</div>
+      <div class="pod-mid" data-draw="k-f-vis" data-source="prestasi_funnel" data-field="visitors" data-row="0">—</div>
+      <div class="pod-muted">Sebenar: belum disambung</div>
+    </div>
+    <div class="pod-arrow"><span><span data-draw="k-f-conv" data-source="prestasi_funnel" data-field="conv" data-row="0">—</span>% membeli →</span></div>
+    <div class="pod-kpi pod-step" id="k-step-pesanan">
+      <div class="pod-q">Pesanan</div>
+      <div class="pod-mid" data-draw="k-f-orders" data-source="prestasi_funnel" data-field="orders_month" data-row="0">—</div>
+      <div class="pod-muted">Sebenar: belum disambung</div>
+    </div>
+    <div class="pod-arrow"><span>× <span data-draw="k-f-ppo" data-source="prestasi_funnel" data-field="ppo" data-row="0">—</span> →</span></div>
+    <div class="pod-kpi pod-step pod-hl" id="k-step-untung">
+      <div class="pod-q">Untung</div>
+      <div class="pod-mid" data-draw="k-f-profit" data-source="prestasi_funnel" data-field="profit_month" data-row="0">—</div>
+      <div class="pod-muted">Sebenar: belum disambung</div>
+    </div>
+  </div>
+</section>
+
+<section id="k-milestone" class="pod-section">
+  <h2>Milestone ke 10 jualan sehari</h2>
+  <p class="pod-muted">Semak setiap bulan. Kalau di bawah sasaran, baiki peringkat corong yang paling lemah sebelum menambah pin.</p>
+  <div class="pod-kpis" id="k-ms" data-draw="k-milestones" data-source="prestasi_milestones"></div>
 </section>
 
 <section id="p-pelan" class="pod-section">
@@ -564,532 +637,24 @@
 
 </section>
 
-<section id="tab-inspirasi" class="pod-tab" role="tabpanel" aria-labelledby="btn-inspirasi" hidden>
-
-<div id="i-intro" class="pod-section pod-first">
-  <p class="pod-lede">Simpan gaya typography yang anda suka (screenshot dari Pinterest, Behance atau mana-mana), tanda gaya dan niche, kemudian rujuk semula masa design. Di bawah ada sumber inspirasi cadangan Claude.</p>
-  <p class="pod-muted">Gambar orang lain untuk rujukan gaya sahaja: jangan salin terus design, quote atau ilustrasi mereka ke poster jualan.</p>
-</div>
-
-<section id="i-upload" class="pod-section">
-  <h2>Upload gaya yang anda suka</h2>
-  <p id="i-noedit" class="pod-muted" hidden>Hanya editor dashboard boleh upload. Buka dashboard ini dengan akaun pemilik.</p>
-  <form id="i-form" class="pod-ig-form" hidden>
-    <label class="pod-ig-wide"><span class="pod-tool-label">Gambar (boleh pilih beberapa, maks 20 MB setiap satu)</span>
-      <input id="i-file" type="file" accept="image/*" multiple required></label>
-    <label><span class="pod-tool-label">Tajuk (pilihan)</span>
-      <input id="i-title" type="text" maxlength="120" placeholder="cth. Serif besar, warna krim"></label>
-    <label><span class="pod-tool-label">Gaya typography</span>
-      <select id="i-gaya" class="dash-select" aria-label="Gaya typography">
-        <option value="serif">Serif klasik / besar</option>
-        <option value="sans">Sans tebal</option>
-        <option value="script">Script / kursif</option>
-        <option value="hand">Hand-lettering / brush</option>
-        <option value="retro">Retro / groovy</option>
-        <option value="vintage">Vintage / papan tanda lama</option>
-        <option value="swiss">Minimal / Swiss grid</option>
-        <option value="playful">Ceria / playful</option>
-        <option value="eksperimen">Eksperimental / kolaj</option>
-        <option value="lain">Lain-lain</option>
-      </select></label>
-    <label><span class="pod-tool-label">Niche</span>
-      <select id="i-niche" class="dash-select" aria-label="Niche">
-        <option value="">Umum</option>
-        <option value="bridal">Bridal</option>
-        <option value="teacher">Cikgu</option>
-        <option value="nursery">Nursery</option>
-        <option value="funny_home">Tanda lucu rumah</option>
-        <option value="mama">Mama</option>
-        <option value="christmas">Krismas</option>
-        <option value="friendship">Kawan / Galentine</option>
-        <option value="bookish">Bookish</option>
-      </select></label>
-    <label><span class="pod-tool-label">Link sumber (pilihan)</span>
-      <input id="i-src" type="url" placeholder="https://pinterest.com/pin/…"></label>
-    <label class="pod-ig-wide"><span class="pod-tool-label">Nota: apa yang anda suka (pilihan)</span>
-      <textarea id="i-note" maxlength="500" placeholder="cth. jarak huruf luas, satu perkataan besar, warna terracotta"></textarea></label>
-    <button id="i-save" class="pod-ig-btn" type="submit">Upload dan simpan</button>
-  </form>
-  <p id="i-st-busy" class="pod-muted" hidden>Sedang upload…</p>
-  <p id="i-st-ok" class="pod-muted" hidden>Disimpan.</p>
-  <p id="i-st-err" class="pod-muted" hidden>Tidak berjaya disimpan. Cuba lagi.</p>
-  <p id="i-st-type" class="pod-muted" hidden>Hanya fail gambar bawah 20 MB diterima.</p>
-</section>
-
-<section id="i-galeri" class="pod-section">
-  <h2>Galeri gaya saya</h2>
-  <div class="pod-ig-filters">
-    <select id="i-f-gaya" class="dash-select" aria-label="Tapis gaya">
-      <option value="">Semua gaya</option>
-      <option value="serif">Serif klasik / besar</option>
-      <option value="sans">Sans tebal</option>
-      <option value="script">Script / kursif</option>
-      <option value="hand">Hand-lettering / brush</option>
-      <option value="retro">Retro / groovy</option>
-      <option value="vintage">Vintage / papan tanda lama</option>
-      <option value="swiss">Minimal / Swiss grid</option>
-      <option value="playful">Ceria / playful</option>
-      <option value="eksperimen">Eksperimental / kolaj</option>
-      <option value="lain">Lain-lain</option>
-    </select>
-    <select id="i-f-niche" class="dash-select" aria-label="Tapis niche">
-      <option value="">Semua niche</option>
-      <option value="umum">Umum</option>
-      <option value="bridal">Bridal</option>
-      <option value="teacher">Cikgu</option>
-      <option value="nursery">Nursery</option>
-      <option value="funny_home">Tanda lucu rumah</option>
-      <option value="mama">Mama</option>
-      <option value="christmas">Krismas</option>
-      <option value="friendship">Kawan / Galentine</option>
-      <option value="bookish">Bookish</option>
-    </select>
-  </div>
-  <div class="pod-ig-grid" data-draw="i-gallery" data-source="inspirasi_saya"></div>
-</section>
-
-<section id="i-sumber" class="pod-section">
-  <h2>Sumber inspirasi cadangan</h2>
-  <p class="pod-muted">Pinterest tidak papar jumlah carian atau simpanan secara tetap, jadi "high pins" diganti dengan Pinterest Trends (rasmi) dan carian terus ikut niche. Bukti: Rasmi = laman itu sendiri, Pihak ketiga = artikel bebas, Lemah = pautan sahaja.</p>
-  <div class="pod-ig-filters">
-    <select id="i-f-jenis" class="dash-select" aria-label="Tapis jenis sumber">
-      <option value="">Semua jenis</option>
-      <option value="Alat trend">Alat trend</option>
-      <option value="Laman kurasi">Laman kurasi</option>
-      <option value="Pereka">Pereka</option>
-      <option value="Carian Pinterest">Carian Pinterest</option>
-    </select>
-  </div>
-  <div class="pod-table-wrap">
-    <table id="i-table-sumber" data-source="inspirasi_sumber" data-row-key="id">
-      <thead><tr>
-        <th data-field="nama">Sumber</th>
-        <th data-field="jenis">Jenis</th>
-        <th data-field="kenapa">Kenapa</th>
-        <th data-field="guna">Guna untuk</th>
-        <th data-field="bukti">Bukti</th>
-        <th data-field="bukti_url">Rujukan</th>
-      </tr></thead>
-      <tbody data-draw="i-sumber-body"></tbody>
-    </table>
-  </div>
-</section>
-
-</section>
-
-<section id="tab-setup" class="pod-tab" role="tabpanel" aria-labelledby="btn-setup" hidden>
-
-<div id="st-intro" class="pod-section pod-first">
-  <p class="pod-lede"><b data-draw="st-done" data-source="setup_progress" data-field="done" data-row="0">—</b> daripada <b data-draw="st-total" data-source="setup_progress" data-field="total" data-row="0">—</b> langkah setup siap. Claude menyemak dan menanda setiap langkah; semakan terakhir <b data-draw="st-last" data-source="setup_progress" data-field="last_checked" data-row="0">—</b>.</p>
-  <div class="pod-progress" id="st-progress" aria-hidden="true"><div class="pod-progress-bar" data-draw="st-bar" data-source="setup_progress"></div></div>
-  <div class="pod-two">
-    <div>
-      <h3 id="st-tajuk-anda">Langkah seterusnya untuk anda</h3>
-      <ol class="pod-rules" id="st-next-user" data-draw="st-next-user" data-source="setup_checklist"></ol>
-    </div>
-    <div>
-      <h3 id="st-tajuk-claude">Claude akan buat seterusnya</h3>
-      <ol class="pod-rules" id="st-next-claude" data-draw="st-next-claude" data-source="setup_checklist"></ol>
-    </div>
-  </div>
-</div>
-
-<section id="st-senarai" class="pod-section">
-  <h2>Checklist ikut fasa</h2>
-  <p class="pod-muted">Status ditanda oleh Claude selepas menyemak. "Bersama" bermaksud Claude sediakan, anda klik atau tampal.</p>
-  <div class="pod-phases" id="st-phases" data-draw="st-phases" data-source="setup_checklist"></div>
-  <template id="tpl-st-phase">
-    <article class="pod-card pod-analysis">
-      <div class="pod-guide-head">
-        <h3 class="st-p-title"></h3>
-        <span class="pod-pill st-p-count"></span>
-      </div>
-      <div class="pod-table-wrap">
-        <table data-source="setup_checklist" data-row-key="id">
-          <thead><tr>
-            <th data-field="status">Status</th>
-            <th data-field="step">Langkah</th>
-            <th data-field="who">Siapa</th>
-            <th data-field="connect">Sambung</th>
-            <th data-field="result">Hasil semakan</th>
-          </tr></thead>
-          <tbody class="st-p-body"></tbody>
-        </table>
-      </div>
-    </article>
-  </template>
-  <details id="st-cara">
-    <summary>Cara Claude menyemak setiap langkah</summary>
-    <div class="pod-table-wrap pod-scroll">
-      <table id="st-table-cara" data-source="setup_checklist" data-row-key="id">
-        <thead><tr>
-          <th class="pod-num" data-field="no">#</th>
-          <th data-field="step">Langkah</th>
-          <th data-field="how_check">Cara semak</th>
-          <th data-field="checked_at">Disemak</th>
-        </tr></thead>
-        <tbody data-draw="st-cara-body"></tbody>
-      </table>
-    </div>
-  </details>
-</section>
-
-<section id="st-ai" class="pod-section">
-  <h2>Alat AI di komputer awan</h2>
-  <p class="pod-muted">Komputer awan = container sesi Claude Code: 4 teras CPU, 15 GB RAM, tiada GPU. Container dipadam bila sesi tamat, jadi alat perlu dipasang semula setiap sesi baharu. Semua alat di bawah percuma; lesen disemak 22 Nov 2026.</p>
-  <div class="pod-table-wrap pod-scroll">
-    <table id="st-table-ai" data-source="setup_ai_tools" data-row-key="tool">
-      <thead><tr>
-        <th data-field="job">Kerja</th>
-        <th data-field="tool">Alat</th>
-        <th data-field="license">Lesen</th>
-        <th data-field="free">Percuma</th>
-        <th data-field="fits">Muat dalam container</th>
-        <th data-field="status">Status</th>
-        <th data-field="note">Nota</th>
-        <th data-field="source">Sumber</th>
-      </tr></thead>
-      <tbody data-draw="st-ai-body"></tbody>
-    </table>
-  </div>
-</section>
-
-</section>
-
-<section id="tab-model" class="pod-tab" role="tabpanel" aria-labelledby="btn-model" hidden>
-
-<div id="m-intro" class="pod-section pod-first">
-  <p class="pod-lede">Sekarang kita guna <b>FLUX.2 klein 4B</b>: <b data-draw="m-designs" data-source="model_klein_stats" data-field="designs" data-row="0">—</b> design lulus daripada <b data-draw="m-images" data-source="model_klein_stats" data-field="images" data-row="0">—</b> imej. Calon yang lebih kuat menulis huruf: <b>Z-Image-Turbo</b> untuk ayat pendek dan <b>ERNIE-Image-Turbo</b> untuk ayat panjang dan berwarna. Untuk poster berlatar gambar, cara paling selamat ialah hibrid: AI lukis latar, tulisan guna font berlesen. Semua model yang dicadang percuma dan berlesen komersial. Hasil ujian sebenar 3 model (dengan gambar) ada di bahagian pertama di bawah.</p>
-  <div class="pod-kpis" id="m-kpis">
-    <div class="pod-kpi" id="m-kpi-now">
-      <div class="pod-q">Model sekarang</div>
-      <div class="pod-big">klein 4B</div>
-      <div class="pod-muted">Apache 2.0, paling laju</div>
-    </div>
-    <div class="pod-kpi" id="m-kpi-per">
-      <div class="pod-q">Imej setiap design lulus</div>
-      <div class="pod-big" data-draw="m-per" data-source="model_klein_stats" data-field="per_design" data-row="0">—</div>
-      <div class="pod-muted">batch 1–3, kerana salah eja</div>
-    </div>
-    <div class="pod-kpi pod-hl" id="m-kpi-uji">
-      <div class="pod-q">Ejaan betul terbaik (ujian 23 Nov)</div>
-      <div class="pod-big" data-draw="m-best-score" data-source="model_test_summary" data-field="score" data-row="0">—</div>
-      <div class="pod-muted" data-draw="m-best-name" data-source="model_test_summary" data-field="model_name" data-row="0">—</div>
-    </div>
-    <div class="pod-kpi" id="m-kpi-tolak">
-      <div class="pod-q">Model ditolak</div>
-      <div class="pod-big" data-draw="m-rej" data-source="model_counts" data-field="rejected" data-row="0">—</div>
-      <div class="pod-muted">lesen atau terlalu besar</div>
-    </div>
-  </div>
-</div>
-
-<section id="m-ujian" class="pod-section">
-  <h2>Ujian sebenar: 3 model, 10 design yang sama</h2>
-  <p class="pod-muted">23 Nov 2026 di komputer awan (4 CPU, tiada GPU). Prompt dan seed sama (42), satu cubaan setiap design; ejaan disemak dengan mata. Ketiga-tiga model berlesen Apache 2.0 (hasil boleh dijual). Bukti <span class="pod-pill" data-level="lemah">Lemah</span>: ujian kecil, perlu ulang dengan lebih banyak seed.</p>
-  <div class="mt-models" data-draw="mt-models" data-source="model_test_summary"></div>
-  <div class="pod-table-wrap">
-    <table id="mt-table" data-source="model_test_summary" data-row-key="model">
-      <thead><tr>
-        <th data-field="model_name">Model</th>
-        <th data-field="score">Ejaan betul</th>
-        <th data-field="score_a">Gaya SVG Inggeris</th>
-        <th data-field="score_b">Lettering Melayu</th>
-        <th data-field="avg_s">Purata masa / imej</th>
-        <th data-field="per_ok_s">Masa untuk 1 imej betul</th>
-        <th data-field="strength">Kekuatan</th>
-        <th data-field="weakness">Kelemahan</th>
-        <th data-field="license">Lesen</th>
-      </tr></thead>
-      <tbody data-draw="mt-body"></tbody>
-    </table>
-  </div>
-  <h3>Hasil gambar</h3>
-  <p class="pod-muted">Bingkai hijau = ejaan betul, merah = ada salah eja. Tekan gambar untuk besarkan.</p>
-  <div class="pod-select-row">
-    <label for="mt-set" class="pod-muted">Tunjuk</label>
-    <select id="mt-set" class="dash-select" aria-label="Tapis jenis design">
-      <option value="">Semua 10 design</option>
-      <option value="A">Gaya SVG Inggeris (1–5)</option>
-      <option value="B">Lettering vintage Melayu (6–10)</option>
-    </select>
-    <label class="pod-muted"><input type="checkbox" id="mt-bad-only"> Hanya design yang ada salah eja</label>
-  </div>
-  <div class="mt-gallery" data-draw="mt-gallery" data-source="model_test"></div>
-  <div class="mt-zoom" id="mt-zoom" hidden role="dialog" aria-modal="true" aria-label="Gambar besar">
-    <figure><img id="mt-zoom-img" alt=""><figcaption id="mt-zoom-cap"></figcaption></figure>
-    <button type="button" class="mt-zoom-close" id="mt-zoom-close">Tutup ✕</button>
-  </div>
-</section>
-
-<section id="m-cadangan" class="pod-section">
-  <h2>Model ikut jenis poster</h2>
-  <p class="pod-muted">Cadangan sementara sehingga ujian sebenar (langkah di bawah) siap.</p>
-  <div class="pod-table-wrap">
-    <table id="m-table-use" data-source="model_usecase" data-row-key="kind">
-      <thead><tr>
-        <th data-field="kind">Jenis poster</th>
-        <th data-field="main">Model utama</th>
-        <th data-field="backup">Sandaran</th>
-        <th data-field="process">Proses</th>
-        <th data-field="why">Sebab</th>
-      </tr></thead>
-      <tbody data-draw="m-use-body"></tbody>
-    </table>
-  </div>
-</section>
-
-<section id="m-banding" class="pod-section">
-  <h2>Banding model</h2>
-  <p class="pod-muted">Skor OneIG/LongText dari kad model ERNIE-Image (lebih tinggi lebih baik, maks 1.0). "Container" = komputer awan sesi Claude: 4 CPU, 15 GB RAM, tiada GPU. "Space percuma" = Hugging Face ZeroGPU, kuota beberapa minit sehari.</p>
-  <div class="pod-table-wrap pod-scroll">
-    <table id="m-table-compare" data-source="model_compare" data-row-key="model">
-      <thead><tr>
-        <th data-field="model">Model</th>
-        <th data-field="license">Lesen</th>
-        <th data-field="commercial">Boleh jual?</th>
-        <th data-field="run">Jalan di mana</th>
-        <th data-field="ram">RAM / saiz</th>
-        <th data-field="steps">Langkah</th>
-        <th data-field="text_short">Tulisan pendek</th>
-        <th data-field="text_long">Tulisan panjang</th>
-        <th data-field="bw">Hitam-putih</th>
-        <th data-field="color">Berwarna</th>
-        <th data-field="bg">Latar gambar</th>
-        <th data-field="speed">Kelajuan</th>
-        <th data-field="community">Forum / blog</th>
-        <th data-field="verdict">Keputusan</th>
-        <th data-field="level">Bukti</th>
-        <th data-field="source">Sumber</th>
-      </tr></thead>
-      <tbody data-draw="m-compare-body"></tbody>
-    </table>
-  </div>
-</section>
-
-<section id="m-sejarah" class="pod-section">
-  <h2>Hasil chat lepas</h2>
-  <p class="pod-muted">Dikumpul semula dari sesi 22–23 Nov (cawangan eager-brahmagupta dan intelligent-bell).</p>
-  <div class="pod-table-wrap">
-    <table id="m-table-history" data-source="model_history" data-row-key="what">
-      <thead><tr>
-        <th data-field="date">Tarikh</th>
-        <th data-field="what">Apa dibuat</th>
-        <th class="pod-num" data-field="images">Imej</th>
-        <th class="pod-num" data-field="designs">Design lulus</th>
-        <th data-field="result">Hasil</th>
-        <th data-field="lesson">Pelajaran</th>
-      </tr></thead>
-      <tbody data-draw="m-history-body"></tbody>
-    </table>
-  </div>
-</section>
-
-<section id="m-langkah" class="pod-section">
-  <h2>Workflow pilih model</h2>
-  <p class="pod-muted">Ujian yang sama untuk semua model supaya boleh dibanding adil.</p>
-  <div class="pod-table-wrap">
-    <table id="m-table-workflow" data-source="model_workflow" data-row-key="no">
-      <thead><tr>
-        <th class="pod-num" data-field="no">#</th>
-        <th data-field="who">Siapa</th>
-        <th data-field="step">Langkah</th>
-        <th data-field="detail">Butiran</th>
-        <th data-field="status">Status</th>
-      </tr></thead>
-      <tbody data-draw="m-workflow-body"></tbody>
-    </table>
-  </div>
-</section>
-
-<section id="m-sumber" class="pod-section">
-  <h2>Sumber riset</h2>
-  <p class="pod-muted">Reddit, arxiv.org dan leaderboard Artificial Analysis tidak boleh dibaca dari sesi ini; forum diganti dengan perbincangan Hugging Face.</p>
-  <div class="pod-table-wrap pod-scroll">
-    <table id="m-table-sources" data-source="model_sources" data-row-key="source">
-      <thead><tr>
-        <th data-field="source">Sumber</th>
-        <th data-field="kind">Jenis</th>
-        <th data-field="used_for">Untuk</th>
-        <th data-field="level">Bukti</th>
-        <th data-field="url">Pautan</th>
-      </tr></thead>
-      <tbody data-draw="m-sources-body"></tbody>
-    </table>
-  </div>
-</section>
-
-</section>
-
-<section id="tab-workflow" class="pod-tab" role="tabpanel" aria-labelledby="btn-workflow" hidden>
-
-<div id="wf-intro" class="pod-section pod-first">
-  <p class="pod-lede">Claude buat kerja berulang secara automatik; anda hanya luluskan dan semak. Automasi bermula selepas laman web, Printify dan Pinterest disambung (tab Setup).</p>
-  <div class="pod-kpis" id="wf-masa">
-    <div class="pod-kpi" id="wf-masa-harian">
-      <div class="pod-q">Masa anda sehari</div>
-      <div class="pod-big"><span data-draw="wf-t-h" data-source="workflow_time" data-field="user_min" data-where="frequency=Harian">—</span> min</div>
-    </div>
-    <div class="pod-kpi" id="wf-masa-mingguan">
-      <div class="pod-q">Masa anda seminggu (tambahan)</div>
-      <div class="pod-big"><span data-draw="wf-t-m" data-source="workflow_time" data-field="user_min" data-where="frequency=Mingguan">—</span> min</div>
-    </div>
-    <div class="pod-kpi" id="wf-masa-bulanan">
-      <div class="pod-q">Masa anda sebulan (tambahan)</div>
-      <div class="pod-big"><span data-draw="wf-t-b" data-source="workflow_time" data-field="user_min" data-where="frequency=Bulanan">—</span> min</div>
-    </div>
-  </div>
-  <nav class="pod-nav" aria-label="Bahagian workflow">
-    <a href="#wf-harian">Harian</a>
-    <a href="#wf-mingguan">Mingguan</a>
-    <a href="#wf-bulanan">Bulanan</a>
-  </nav>
-</div>
-
-<section id="wf-harian" class="pod-section">
-  <h2>Harian</h2>
-  <div class="pod-two">
-    <div><h3 id="wf-h-tajuk-anda">Anda</h3><ul class="pod-wf" data-draw="wf-h-anda" data-source="workflow"></ul></div>
-    <div><h3 id="wf-h-tajuk-claude">Claude (automatik)</h3><ul class="pod-wf" data-draw="wf-h-claude" data-source="workflow"></ul></div>
-  </div>
-</section>
-
-<section id="wf-mingguan" class="pod-section">
-  <h2>Mingguan</h2>
-  <div class="pod-two">
-    <div><h3 id="wf-m-tajuk-anda">Anda</h3><ul class="pod-wf" data-draw="wf-m-anda" data-source="workflow"></ul></div>
-    <div><h3 id="wf-m-tajuk-claude">Claude (automatik)</h3><ul class="pod-wf" data-draw="wf-m-claude" data-source="workflow"></ul></div>
-  </div>
-</section>
-
-<section id="wf-bulanan" class="pod-section">
-  <h2>Bulanan</h2>
-  <div class="pod-two">
-    <div><h3 id="wf-b-tajuk-anda">Anda</h3><ul class="pod-wf" data-draw="wf-b-anda" data-source="workflow"></ul></div>
-    <div><h3 id="wf-b-tajuk-claude">Claude (automatik)</h3><ul class="pod-wf" data-draw="wf-b-claude" data-source="workflow"></ul></div>
-  </div>
-</section>
-
-</section>
-
-<section id="tab-prestasi" class="pod-tab" role="tabpanel" aria-labelledby="btn-prestasi" hidden>
-
-<div id="k-intro" class="pod-section pod-first">
-  <p class="pod-lede">Sasaran bulan ke-24: <b data-draw="k-sales" data-source="prestasi_funnel" data-field="sales_day" data-row="0">—</b> jualan sehari × <b data-draw="k-ppo" data-source="prestasi_funnel" data-field="ppo" data-row="0">—</b> = <b data-draw="k-profit" data-source="prestasi_funnel" data-field="profit_month" data-row="0">—</b> sebulan. Angka sebenar akan muncul bila Google Analytics, Pinterest dan WooCommerce disambung.</p>
-  <nav class="pod-nav" aria-label="Bahagian prestasi">
-    <a href="#k-corong">Corong jualan</a>
-    <a href="#k-milestone">Milestone</a>
-    <a href="#k-analisa">5 analisa</a>
-    <a href="#k-alat">Alat data</a>
-  </nav>
-</div>
-
-<section id="k-corong" class="pod-section">
-  <h2>Corong jualan: sasaran sebulan</h2>
-  <p class="pod-muted">Setiap peringkat bergantung pada peringkat sebelumnya. Betulkan peringkat yang paling lemah dahulu.</p>
-  <div class="pod-funnel">
-    <div class="pod-kpi pod-step" id="k-step-tayangan">
-      <div class="pod-q">Tayangan Pinterest</div>
-      <div class="pod-mid" data-draw="k-f-impr" data-source="prestasi_funnel" data-field="impressions" data-row="0">—</div>
-      <div class="pod-muted">Sebenar: belum disambung</div>
-    </div>
-    <div class="pod-arrow"><span><span data-draw="k-f-ctr" data-source="prestasi_funnel" data-field="ctr" data-row="0">—</span>% klik →</span></div>
-    <div class="pod-kpi pod-step" id="k-step-pelawat">
-      <div class="pod-q">Pelawat</div>
-      <div class="pod-mid" data-draw="k-f-vis" data-source="prestasi_funnel" data-field="visitors" data-row="0">—</div>
-      <div class="pod-muted">Sebenar: belum disambung</div>
-    </div>
-    <div class="pod-arrow"><span><span data-draw="k-f-conv" data-source="prestasi_funnel" data-field="conv" data-row="0">—</span>% membeli →</span></div>
-    <div class="pod-kpi pod-step" id="k-step-pesanan">
-      <div class="pod-q">Pesanan</div>
-      <div class="pod-mid" data-draw="k-f-orders" data-source="prestasi_funnel" data-field="orders_month" data-row="0">—</div>
-      <div class="pod-muted">Sebenar: belum disambung</div>
-    </div>
-    <div class="pod-arrow"><span>× <span data-draw="k-f-ppo" data-source="prestasi_funnel" data-field="ppo" data-row="0">—</span> →</span></div>
-    <div class="pod-kpi pod-step pod-hl" id="k-step-untung">
-      <div class="pod-q">Untung</div>
-      <div class="pod-mid" data-draw="k-f-profit" data-source="prestasi_funnel" data-field="profit_month" data-row="0">—</div>
-      <div class="pod-muted">Sebenar: belum disambung</div>
-    </div>
-  </div>
-</section>
-
-<section id="k-milestone" class="pod-section">
-  <h2>Milestone ke 10 jualan sehari</h2>
-  <p class="pod-muted">Semak setiap bulan. Kalau di bawah sasaran, baiki peringkat corong yang paling lemah sebelum menambah pin.</p>
-  <div class="pod-kpis" id="k-ms" data-draw="k-milestones" data-source="prestasi_milestones"></div>
-</section>
-
-<section id="k-analisa" class="pod-section">
-  <h2>Lima analisa</h2>
-  <p class="pod-muted">Sasaran setiap metrik. Kolum "Sebenar" akan diisi bila data disambung.</p>
-  <div class="pod-analyses" id="k-analyses" data-draw="k-analyses" data-source="prestasi_kpi"></div>
-  <template id="tpl-k-analysis">
-    <article class="pod-card pod-analysis">
-      <div class="pod-guide-head">
-        <h3 class="k-a-title"></h3>
-        <span class="pod-pill" data-tone="warn">Belum disambung</span>
-      </div>
-      <div class="pod-muted k-a-q"></div>
-      <div class="pod-table-wrap">
-        <table class="pod-mini" data-source="prestasi_kpi" data-row-key="id">
-          <thead><tr>
-            <th data-field="metric">Metrik</th>
-            <th data-field="target">Sasaran</th>
-            <th data-field="actual_status">Sebenar</th>
-          </tr></thead>
-          <tbody class="k-a-body"></tbody>
-        </table>
-      </div>
-      <details class="pod-more">
-        <summary>Kalau rendah, buat apa?</summary>
-        <ul class="pod-rules k-a-actions"></ul>
-      </details>
-    </article>
-  </template>
-</section>
-
-<section id="k-alat" class="pod-section">
-  <h2>Alat data yang perlu disambung</h2>
-  <p class="pod-muted">Semuanya percuma. Setiap satu diperlukan untuk mengisi kolum "Sebenar".</p>
-  <div class="pod-table-wrap">
-    <table id="k-table-tools" data-source="prestasi_tools" data-row-key="tool">
-      <thead><tr>
-        <th data-field="tool">Alat</th>
-        <th data-field="analysis">Untuk analisa</th>
-        <th data-field="gives">Data yang diberi</th>
-        <th data-field="how">Cara sambung</th>
-        <th data-field="status">Status</th>
-      </tr></thead>
-      <tbody data-draw="k-tools-body"></tbody>
-    </table>
-  </div>
-</section>
-
-</section>
-
 <section id="tab-font" class="pod-tab" role="tabpanel" aria-labelledby="btn-font" hidden>
 
 <div id="f-intro" class="pod-section pod-first">
-  <p class="pod-lede">Font Generator: upload satu contoh poster typography, AI cadang 10 font Google Fonts yang serupa (lesen OFL / Apache 2.0, boleh guna komersial), jana mockup dari font pilihan, dan simpan yang terbaik sebagai master sheet untuk semua poster.</p>
-  <p><a href="https://claude.ai/artifact/K6uL4Xy8EssqEVpd7FzzS7" target="_blank" rel="noopener noreferrer">Buka Font Generator ↗</a></p>
-  <ol>
-    <li>Upload contoh design dan tekan Decode design.</li>
-    <li>Tandakan font (cadangan 5) dan tekan Jana mockup.</li>
-    <li>Pilih satu mockup dan simpan sebagai master sheet. Tandakan master yang Aktif.</li>
-  </ol>
+  <p class="pod-lede">Senarai induk fon yang lesennya membenarkan poster dan fail digital dijual, laman sumber fon, jenis lesen yang selamat, dan fon yang ditolak kerana lesennya berisiko.</p>
 </div>
+
+<nav class="pod-nav" aria-label="Bahagian fon">
+    <a href="#f-induk">Senarai induk</a>
+    <a href="#f-cari">Cari fon</a>
+    <a href="#f-laman">Laman sumber</a>
+    <a href="#f-lesen">Jenis lesen</a>
+    <a href="#f-tolak">Fon ditolak</a>
+  </nav>
 
 <section id="f-induk" class="pod-section">
   <h2>Senarai induk fon (bebas untuk jualan)</h2>
   <p class="pod-lede"><b data-draw="f-total" data-source="fonts_summary" data-field="total" data-row="0">—</b> fon yang lesennya membenarkan poster dan fail digital dijual: <b data-draw="f-n-google" data-source="fonts_summary" data-field="google" data-row="0">—</b> dari Google Fonts, <b data-draw="f-n-fontshare" data-source="fonts_summary" data-field="fontshare" data-row="0">—</b> dari Fontshare dan <b data-draw="f-n-fq" data-source="fonts_summary" data-field="fontsquirrel" data-row="0">—</b> dari Font Squirrel. <b data-draw="f-n-rej" data-source="fonts_summary" data-field="rejected" data-row="0">—</b> fon Font Squirrel ditolak kerana lesennya berisiko, dan <b data-draw="f-n-unchk" data-source="fonts_meta" data-field="fq_unchecked" data-row="0">—</b> lagi tidak dimasukkan kerana lesennya tidak dapat dibaca (muat turun disekat).</p>
   <p class="pod-muted">Setiap fon dilabel ikut mood poster. Google: dari tag rasmi Google Fonts (skor 0–100). Fontshare dan Font Squirrel: dari kategori laman itu, ditambah semakan rupa oleh Claude (bukti lemah). Kualiti = purata skor lukisan dan jarak huruf dari tag Google.</p>
-</section>
-
-<section id="f-mood" class="pod-section">
-  <h2>Pilih fon ikut mood poster</h2>
-  <p class="pod-muted">Mood dahulu, fon kemudian: fon lucu untuk poster motivasi akan mengelirukan pembeli. Setiap kad ada niche yang sesuai, fon teks pasangan, apa yang perlu dielak dan 12 fon terbaik. Tekan gambar untuk saiz penuh.</p>
-  <div class="pod-font-moods" id="f-mood-cards" data-draw="f-moods" data-source="fonts_moods fonts_specimens"></div>
 </section>
 
 <section id="f-cari" class="pod-section">
@@ -1180,351 +745,894 @@
 
 </section>
 
-<section id="tab-utama" class="pod-tab" role="tabpanel" aria-labelledby="btn-utama" hidden>
+<section id="tab-model" class="pod-tab" role="tabpanel" aria-labelledby="btn-model" hidden>
 
-<div id="utama-intro" class="pod-section pod-first">
-  <p class="pod-lede">Semua produk (baju, mug, poster dan lain-lain): untung dijangka <b data-draw="lede-steady" data-source="scenarios" data-field="steady_profit" data-where="scenario=Asas">—</b> setahun bila matang. Niche <b data-draw="lede-top" data-source="niche_profit" data-field="niche" data-row="0">—</b> paling banyak menyumbang (<b data-draw="lede-share" data-source="niche_profit" data-field="share" data-row="0">—</b>%).</p>
-  <div class="pod-kpis" id="u-kpis">
-    <div class="pod-kpi" id="ans-untung">
-      <div class="pod-q">Untung setahun</div>
-      <div class="pod-big" data-draw="kpi-steady" data-source="scenarios" data-field="steady_profit" data-where="scenario=Asas">—</div>
-      <div class="pod-muted">bila matang</div>
+<div id="m-intro" class="pod-section pod-first">
+  <p class="pod-lede">Sekarang kita guna <b>FLUX.2 klein 4B</b>: <b data-draw="m-designs" data-source="model_klein_stats" data-field="designs" data-row="0">—</b> design lulus daripada <b data-draw="m-images" data-source="model_klein_stats" data-field="images" data-row="0">—</b> imej. Calon yang lebih kuat menulis huruf: <b>Z-Image-Turbo</b> untuk ayat pendek dan <b>ERNIE-Image-Turbo</b> untuk ayat panjang dan berwarna. Untuk poster berlatar gambar, cara paling selamat ialah hibrid: AI lukis latar, tulisan guna font berlesen. Semua model yang dicadang percuma dan berlesen komersial. Hasil ujian sebenar 3 model (dengan gambar) ada di bahagian pertama di bawah.</p>
+  <div class="pod-kpis" id="m-kpis">
+    <div class="pod-kpi" id="m-kpi-now">
+      <div class="pod-q">Model sekarang</div>
+      <div class="pod-big">klein 4B</div>
+      <div class="pod-muted">Apache 2.0, paling laju</div>
     </div>
-    <div class="pod-kpi" id="u-kpi-tahun1">
-      <div class="pod-q">Tahun pertama</div>
-      <div class="pod-big" data-draw="kpi-y1" data-source="scenarios" data-field="year1_profit" data-where="scenario=Asas">—</div>
-      <div class="pod-muted">2027, trafik masih naik</div>
+    <div class="pod-kpi" id="m-kpi-per">
+      <div class="pod-q">Imej setiap design lulus</div>
+      <div class="pod-big" data-draw="m-per" data-source="model_klein_stats" data-field="per_design" data-row="0">—</div>
+      <div class="pod-muted">batch 1–3, kerana salah eja</div>
     </div>
-    <div class="pod-kpi" id="u-kpi-bulan">
-      <div class="pod-q">Purata sebulan</div>
-      <div class="pod-big" data-draw="kpi-avg" data-source="monthly_stats" data-field="avg" data-row="0">—</div>
-      <div class="pod-muted">bila matang</div>
+    <div class="pod-kpi pod-hl" id="m-kpi-uji">
+      <div class="pod-q">Ejaan betul terbaik (ujian 23 Nov)</div>
+      <div class="pod-big" data-draw="m-best-score" data-source="model_test_summary" data-field="score" data-row="0">—</div>
+      <div class="pod-muted" data-draw="m-best-name" data-source="model_test_summary" data-field="model_name" data-row="0">—</div>
     </div>
-    <div class="pod-kpi" id="u-kpi-pesanan">
-      <div class="pod-q">Pesanan setahun</div>
-      <div class="pod-big" data-draw="u-kpi-orders" data-source="scenarios" data-field="steady_orders" data-where="scenario=Asas">—</div>
-      <div class="pod-muted">bila matang</div>
-    </div>
-  </div>
-  <div class="pod-bests" id="u-terbaik">
-    <div class="pod-best" id="ans-niche">
-      <div class="pod-q">Niche paling untung</div>
-      <div class="pod-best-v" data-draw="ans-niche" data-source="niche_profit" data-field="niche" data-row="0">—</div>
-      <div class="pod-muted"><span data-draw="ans-niche-profit" data-source="niche_profit" data-field="profit" data-row="0">—</span> setahun</div>
-    </div>
-    <div class="pod-best" id="ans-produk">
-      <div class="pod-q">Produk paling untung seunit</div>
-      <div class="pod-best-v" data-draw="ans-product" data-source="top_product" data-field="product" data-row="0">—</div>
-      <div class="pod-muted"><span data-draw="ans-product-profit" data-source="top_product" data-field="profit_usd" data-row="0">—</span> seunit</div>
-    </div>
-    <div class="pod-best" id="ans-katakunci">
-      <div class="pod-q">Kata kunci paling berpeluang</div>
-      <div class="pod-best-v" data-draw="ans-keyword" data-source="top_keyword" data-field="keyword" data-row="0">—</div>
-      <div class="pod-muted">peluang <span data-draw="ans-keyword-opp" data-source="top_keyword" data-field="opportunity" data-row="0">—</span></div>
+    <div class="pod-kpi" id="m-kpi-tolak">
+      <div class="pod-q">Model ditolak</div>
+      <div class="pod-big" data-draw="m-rej" data-source="model_counts" data-field="rejected" data-row="0">—</div>
+      <div class="pod-muted">lesen atau terlalu besar</div>
     </div>
   </div>
-  <details id="istilah">
-    <summary>Maksud istilah dalam dashboard ini</summary>
-    <dl class="pod-gloss">
-      <div><dt>Matang</dt><dd>Selepas akaun Pinterest stabil dan membawa ~3,000 pelawat sebulan ke kedai.</dd></div>
-      <div><dt>Tahun pertama</dt><dd>2027. Trafik bermula perlahan (5% pada Januari) dan penuh pada Ogos.</dd></div>
-      <div><dt>Senario</dt><dd>Pesimis, asas dan optimis: tiga andaian trafik dan kadar pembelian.</dd></div>
-      <div><dt>Untung seunit</dt><dd>Harga jual tolak kos Printify dan fee bayaran. Pembeli bayar shipping.</dd></div>
-      <div><dt>Peluang</dt><dd>Carian sebulan bagi setiap 1,000 produk pesaing di Etsy. Lebih tinggi = lebih mudah menonjol.</dd></div>
-      <div><dt>Produk utama / tambahan</dt><dd>Utama: jual dahulu. Tambahan: produk sampingan untuk menaikkan nilai pesanan.</dd></div>
-      <div><dt>Tahap bukti</dt><dd>Rasmi (platform asal), pihak ketiga (tool atau blog), lemah (satu sumber atau anekdot).</dd></div>
-    </dl>
-  </details>
-  <nav class="pod-nav" aria-label="Bahagian semua produk">
-    <a href="#untung">Untung</a>
-    <a href="#niche">Pelan niche</a>
-    <a href="#produk">Produk</a>
-    <a href="#katakunci">Kata kunci</a>
-    <a href="#kalendar">Bila jual</a>
-    <a href="#persona">Pembeli</a>
-    <a href="#pin">Pin</a>
-    <a href="#sumber">Sumber</a>
-  </nav>
 </div>
 
-<section id="untung" class="pod-section">
-  <h2>Untung setiap bulan</h2>
-  <p class="pod-muted">Bulan paling lemah (<b data-draw="kpi-min-month" data-source="monthly_stats" data-field="min_month" data-row="0">—</b>) masih <b data-draw="u-low-high" data-source="monthly_stats" data-field="low_vs_high" data-row="0">—</b>% daripada bulan terbaik (<b data-draw="kpi-max-month" data-source="monthly_stats" data-field="max_month" data-row="0">—</b>).</p>
-  <ul class="pod-legend" id="legend-monthly">
-    <li><span class="pod-sw" id="sw-matang"></span>Bila matang</li>
-    <li><span class="pod-sw pod-line"></span>Tahun pertama (2027)</li>
-  </ul>
-  <div class="pod-chart" id="chart-monthly" data-draw="monthly" data-source="model_monthly"></div>
-  <h3 id="tajuk-senario">Tiga senario setahun</h3>
-  <div class="pod-scen" id="u-senario">
-    <div class="pod-kpi" id="u-scen-pesimis">
-      <div class="pod-q">Pesimis</div>
-      <div class="pod-mid" data-draw="u-scen-lo" data-source="scenarios" data-field="steady_profit" data-where="scenario=Pesimis">—</div>
-      <div class="pod-muted">Tahun 1: <span data-draw="u-scen-lo-y1" data-source="scenarios" data-field="year1_profit" data-where="scenario=Pesimis">—</span></div>
-      <div class="pod-muted" data-draw="u-scen-lo-a" data-source="scenarios" data-field="assumption" data-where="scenario=Pesimis">—</div>
-    </div>
-    <div class="pod-kpi pod-hl" id="u-scen-asas">
-      <div class="pod-q">Asas</div>
-      <div class="pod-mid" data-draw="u-scen-mid" data-source="scenarios" data-field="steady_profit" data-where="scenario=Asas">—</div>
-      <div class="pod-muted">Tahun 1: <span data-draw="u-scen-mid-y1" data-source="scenarios" data-field="year1_profit" data-where="scenario=Asas">—</span></div>
-      <div class="pod-muted" data-draw="u-scen-mid-a" data-source="scenarios" data-field="assumption" data-where="scenario=Asas">—</div>
-    </div>
-    <div class="pod-kpi" id="u-scen-optimis">
-      <div class="pod-q">Optimis</div>
-      <div class="pod-mid" data-draw="u-scen-hi" data-source="scenarios" data-field="steady_profit" data-where="scenario=Optimis">—</div>
-      <div class="pod-muted">Tahun 1: <span data-draw="u-scen-hi-y1" data-source="scenarios" data-field="year1_profit" data-where="scenario=Optimis">—</span></div>
-      <div class="pod-muted" data-draw="u-scen-hi-a" data-source="scenarios" data-field="assumption" data-where="scenario=Optimis">—</div>
-    </div>
-  </div>
-  <p class="pod-muted">Musim dan kadar pembelian ialah anggaran; kemas kini dengan jualan sebenar selepas 3 bulan.</p>
-</section>
+<nav class="pod-nav" aria-label="Bahagian model AI">
+    <a href="#im-enjin">Daftar imej</a>
+    <a href="#im-log">Semua imej</a>
+    <a href="#m-lettering-p9">Lettering P9</a>
+    <a href="#m-ujian">Ujian 3 model</a>
+    <a href="#m-lettering">Ujian lettering</a>
+    <a href="#m-lettering-v2">ERNIE v2</a>
+    <a href="#m-lettering-v3">QC v3</a>
+    <a href="#m-cadangan">Model ikut poster</a>
+    <a href="#m-langkah">Pilih model</a>
+    <a href="#m-sumber">Sumber</a>
+    <a href="#d-intro">Design</a>
+    <a href="#d-motiv">Poster motivasi</a>
+    <a href="#d-sarkas">Sarkastik SVG</a>
+    <a href="#d-sarkas-warna">Sarkastik warna</a>
+  </nav>
 
-<section id="niche" class="pod-section">
-  <h2>Pelan niche: mana nak buat dahulu</h2>
-  <p class="pod-muted">Niche Gelombang 1, disusun ikut untung setahun. Klik satu baris untuk melihat produk yang sesuai di bawah.</p>
-  <div class="pod-table-wrap">
-    <table id="table-plan" data-source="niche_plan" data-row-key="id">
+<section id="im-enjin" class="pod-section">
+  <h2>Daftar ujian imej: ringkasan ikut enjin</h2>
+  <p class="pod-muted"><b data-draw="im-total" data-source="image_stats" data-field="total" data-row="0">&mdash;</b> imej AI dijana dalam repo ini sepanjang fasa ujian; <b data-draw="im-pass" data-source="image_stats" data-field="pass" data-row="0">&mdash;</b> lulus (<b data-draw="im-rate" data-source="image_stats" data-field="rate" data-row="0">&mdash;</b>), jumlah masa jana <b data-draw="im-hours" data-source="image_stats" data-field="hours" data-row="0">&mdash;</b> jam.</p>
+  <div class="pod-fit">
+    <table id="im-table-enjin" data-source="image_by_engine" data-row-key="engine">
+      <colgroup><col style="width:28%"><col style="width:14%"><col style="width:14%"><col style="width:14%"><col style="width:15%"><col style="width:15%"></colgroup>
       <thead><tr>
-        <th data-field="niche">Niche</th>
-        <th data-field="profit">Untung setahun</th>
-        <th data-field="peak_months">Puncak jualan</th>
-        <th data-field="pin_window">Mula pin</th>
+        <th data-field="engine">Enjin</th>
+        <th class="pod-num" data-field="images">Imej</th>
+        <th class="pod-num" data-field="pass">Lulus</th>
+        <th class="pod-num" data-field="rate">% lulus</th>
+        <th class="pod-num" data-field="avg_s">Purata saat</th>
+        <th class="pod-num" data-field="total_min">Jumlah minit</th>
       </tr></thead>
-      <tbody data-draw="u-plan-body"></tbody>
+      <tbody data-draw="im-enjin-body"></tbody>
     </table>
   </div>
-  <details id="pecahan-skor">
-    <summary>Lihat semua 16 niche yang dikaji dan skornya</summary>
-    <div class="pod-table-wrap pod-scroll">
-      <table id="table-scores" data-source="niches" data-row-key="id">
-        <thead><tr>
-          <th class="pod-num" data-field="rank">#</th>
-          <th data-field="niche">Niche</th>
-          <th class="pod-num" data-field="total">Skor /30</th>
-          <th data-field="wave">Keputusan</th>
-          <th class="pod-num" data-field="demand">Permintaan</th>
-          <th class="pod-num" data-field="competition">Saingan rendah</th>
-          <th class="pod-num" data-field="typography_fit">Typography</th>
-          <th class="pod-num" data-field="pinterest_fit">Pinterest</th>
-          <th class="pod-num" data-field="order_value">Nilai pesanan</th>
-          <th class="pod-num" data-field="automation">Automasi</th>
-        </tr></thead>
-        <tbody data-draw="scores-body"></tbody>
-      </table>
-    </div>
-    <p class="pod-muted">Skor 1–5 setiap kriteria ialah penilaian Claude berdasarkan bukti, bukan data rasmi.</p>
-  </details>
-  <details id="bukti-niche">
-    <summary>Lihat bukti utama setiap niche</summary>
-    <div class="pod-table-wrap pod-scroll">
-      <table id="table-niches" data-source="niches" data-row-key="id">
-        <thead><tr>
-          <th class="pod-num" data-field="rank">#</th>
-          <th data-field="niche">Niche</th>
-          <th class="pod-num" data-field="total">Skor /30</th>
-          <th data-field="season">Musim</th>
-          <th data-field="wave">Keputusan</th>
-          <th data-field="key_evidence">Bukti utama</th>
-          <th data-field="evidence_level">Tahap bukti</th>
-        </tr></thead>
-        <tbody data-draw="niches-body"></tbody>
-      </table>
-    </div>
-  </details>
 </section>
 
-<section id="produk" class="pod-section">
-  <h2>Produk untuk setiap niche</h2>
-  <p class="pod-muted">Untung anggaran seunit atau setiap set (pelan Printify Free, pembeli bayar shipping).</p>
-  <div class="pod-select-row" id="produk-niche">
-    <label class="pod-muted" for="np-niche">Niche</label>
-    <select id="np-niche" class="dash-select" data-draw="np-filter" data-source="niche_products" aria-label="Pilih niche"></select>
+<section id="im-log" class="pod-section">
+  <h2>Semua imej yang pernah dijana</h2>
+  <p class="pod-muted">Setiap imej direkod: tarikh, enjin, variasi prompt, tempat jalan, tujuan, ayat, seed, saiz, saat, lulus atau tolak dan sebab. Imej baharu ditambah selepas setiap pusingan jana &mdash; Claude tanya dahulu sama ada hendak dimasukkan. Dijana oleh scripts/build_image_log.py.</p>
+  <div class="pod-fit">
+    <table id="im-table-log" data-source="image_log" data-row-key="id">
+      <colgroup>
+        <col style="width:7%"><col style="width:11%"><col style="width:8%"><col style="width:9%">
+        <col style="width:13%"><col style="width:16%"><col style="width:4%"><col style="width:7%">
+        <col style="width:5%"><col style="width:6%"><col style="width:9%"><col style="width:5%">
+      </colgroup>
+      <thead><tr>
+        <th data-field="date">Tarikh</th>
+        <th data-field="engine">Enjin</th>
+        <th data-field="variant">Variasi</th>
+        <th data-field="where">Tempat</th>
+        <th data-field="purpose">Tujuan</th>
+        <th data-field="text">Ayat</th>
+        <th class="pod-num" data-field="seed">Seed</th>
+        <th data-field="size">Saiz</th>
+        <th class="pod-num" data-field="seconds">Saat</th>
+        <th data-field="result">Keputusan</th>
+        <th data-field="wrong">Sebab</th>
+        <th data-field="img">Gambar</th>
+      </tr></thead>
+      <tbody data-draw="im-log-body"></tbody>
+    </table>
   </div>
+</section>
+
+<section id="m-lettering-p9" class="pod-section">
+  <h2>Lettering P9 (23–24 Nov): pelan percuma + ujian 6 gaya, 3 enjin</h2>
+  <p class="pod-lede">Pelan terkini: quote Inggeris pendek (3–7 perkataan) + langkah siap cetak vektor. Hasil ujian: <b data-draw="p9-sum" data-source="lettering_p9_test">—</b>. Pelan penuh: <code>docs/research/posters/08-lettering.md</code>.</p>
+  <p class="pod-muted">Kenapa cubaan lepas belum capai standard: model kecil di CPU (768×1024), ayat Melayu panjang (92–96% perkataan betul), tiada langkah siap cetak, Space Qwen hanya 1 imej/hari (minta 240 s, kuota percuma 300 s), Kaggle tiada GPU kerana telefon belum disahkan.</p>
+  <h3>Banding 3 enjin: quote, prompt dan seed sama (24 Nov)</h3>
+  <p class="pod-muted">Quote "Small steps every day", 6 gaya × seed 42 dan 7, 768×1024, CPU container 4 teras. "Betul" = tiada salah eja dan tiada teks rawak. "Siap cetak" = imej pilihan yang dilalukan finish.py. Semakan mata Claude; tahap bukti lemah.</p>
+  <div class="pod-table-wrap">
+    <table id="p9-engines" data-source="lettering_p9_engines" data-row-key="engine">
+      <thead><tr><th data-field="engine_name">Enjin</th><th data-field="ok">Imej betul</th><th data-field="styles_ok">Gaya ada imej betul</th><th data-field="avg_seconds">Purata masa</th><th data-field="finish">Siap cetak</th><th data-field="strength">Kekuatan</th><th data-field="weakness">Kelemahan</th></tr></thead>
+      <tbody data-draw="p9-engines-body"></tbody>
+    </table>
+  </div>
+  <h3>6 gaya: AI mentah (kiri) vs siap cetak 18×24 in, 300 DPI (kanan)</h3>
+  <p class="pod-muted">Quote ujian "Small steps every day" di CPU, dikumpul ikut enjin. FLUX.2 klein S3 dan S6: tiada seed betul, hanya imej mentah ditunjuk. Tekan gambar untuk besarkan. Semakan mata Claude; tahap bukti lemah.</p>
+  <div class="p9-grid" data-draw="p9-gallery" data-source="lettering_p9_test"></div>
+  <h3>Alat (semua percuma, hasil boleh dijual)</h3>
+  <div class="pod-table-wrap">
+    <table id="p9-tools" data-source="lettering_p9_tools" data-row-key="job">
+      <thead><tr><th data-field="job">Kerja</th><th data-field="tool">Alat</th><th data-field="license">Lesen</th><th data-field="where">Di mana</th><th data-field="status">Status</th></tr></thead>
+      <tbody data-draw="p9-tools-body"></tbody>
+    </table>
+  </div>
+  <h3>Langkah workflow</h3>
+  <div class="pod-table-wrap">
+    <table id="p9-steps" data-source="lettering_p9_steps" data-row-key="no">
+      <thead><tr><th data-field="no">#</th><th data-field="phase">Bila</th><th data-field="who">Siapa</th><th data-field="step">Langkah</th><th data-field="status">Status</th></tr></thead>
+      <tbody data-draw="p9-steps-body"></tbody>
+    </table>
+  </div>
+  <h3>Setiap imej ujian</h3>
+  <div class="pod-table-wrap">
+    <table id="p9-test" data-source="lettering_p9_test" data-row-key="id">
+      <thead><tr><th data-field="engine_name">Enjin</th><th data-field="style">Gaya</th><th data-field="seed">Seed</th><th data-field="wrong_n">Ejaan</th><th data-field="seconds">Masa</th><th data-field="pick">Pilihan</th><th data-field="note">Catatan</th></tr></thead>
+      <tbody data-draw="p9-test-body"></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="m-ujian" class="pod-section">
+  <h2>Ujian sebenar: 3 model, 10 design yang sama</h2>
+  <p class="pod-muted">23 Nov 2026 di komputer awan (4 CPU, tiada GPU). Prompt dan seed sama (42), satu cubaan setiap design; ejaan disemak dengan mata. Ketiga-tiga model berlesen Apache 2.0 (hasil boleh dijual). Bukti <span class="pod-pill" data-level="lemah">Lemah</span>: ujian kecil, perlu ulang dengan lebih banyak seed.</p>
+  <div class="mt-models" data-draw="mt-models" data-source="model_test_summary"></div>
+  <div class="pod-table-wrap">
+    <table id="mt-table" data-source="model_test_summary" data-row-key="model">
+      <thead><tr>
+        <th data-field="model_name">Model</th>
+        <th data-field="score">Ejaan betul</th>
+        <th data-field="score_a">Gaya SVG Inggeris</th>
+        <th data-field="score_b">Lettering Melayu</th>
+        <th data-field="avg_s">Purata masa / imej</th>
+        <th data-field="per_ok_s">Masa untuk 1 imej betul</th>
+        <th data-field="strength">Kekuatan</th>
+        <th data-field="weakness">Kelemahan</th>
+        <th data-field="license">Lesen</th>
+      </tr></thead>
+      <tbody data-draw="mt-body"></tbody>
+    </table>
+  </div>
+  <h3>Hasil gambar</h3>
+  <p class="pod-muted">Kiri sekali = <b>rujukan anda</b> (bingkai putus-putus), diikuti 3 model. Bingkai hijau = ejaan betul, merah = ada salah eja. Tekan gambar untuk besarkan; tekan rujukan untuk lihat gambar penuh yang anda upload. Rujukan ialah design orang lain: untuk banding gaya sahaja, jangan tiru atau jual.</p>
+  <div class="pod-select-row">
+    <label for="mt-set" class="pod-muted">Tunjuk</label>
+    <select id="mt-set" class="dash-select" aria-label="Tapis jenis design">
+      <option value="">Semua 10 design</option>
+      <option value="A">Gaya SVG Inggeris (1–5)</option>
+      <option value="B">Lettering vintage Melayu (6–10)</option>
+    </select>
+    <label class="pod-muted"><input type="checkbox" id="mt-bad-only"> Hanya design yang ada salah eja</label>
+  </div>
+  <div class="mt-gallery" data-draw="mt-gallery" data-source="model_test model_test_refs"></div>
+  <div class="mt-zoom" id="mt-zoom" hidden role="dialog" aria-modal="true" aria-label="Gambar besar">
+    <figure><img id="mt-zoom-img" alt=""><figcaption id="mt-zoom-cap"></figcaption></figure>
+    <button type="button" class="mt-zoom-close" id="mt-zoom-close">Tutup ✕</button>
+  </div>
+</section>
+
+<section id="m-lettering" class="pod-section">
+  <h2>Ujian lettering: ayat panjang macam rujukan anda</h2>
+  <p class="pod-muted">5 design lettering Melayu baharu, 11–14 perkataan setiap satu. Prompt terperinci: susun padat penuh kanvas, 5 gaya huruf, ekor huruf berhias, bayang 3D dan tekstur. Seed 42, satu cubaan setiap design; ejaan disemak dengan mata. Bukti <span class="pod-pill" data-level="lemah">Lemah</span>: ujian kecil.</p>
+  <div class="mt-models" data-draw="lt-models" data-source="lettering_summary"></div>
+  <div class="pod-table-wrap">
+    <table id="lt-table" data-source="lettering_summary" data-row-key="model">
+      <thead><tr>
+        <th data-field="model_name">Model</th>
+        <th data-field="score">Design betul semua</th>
+        <th data-field="words_pct">Perkataan betul</th>
+        <th data-field="avg_s">Purata masa / imej</th>
+        <th data-field="how">Cara jana</th>
+        <th data-field="strength">Kekuatan</th>
+        <th data-field="weakness">Kelemahan</th>
+        <th data-field="license">Lesen</th>
+      </tr></thead>
+      <tbody data-draw="lt-body"></tbody>
+    </table>
+  </div>
+  <h3>Apa yang masih kurang berbanding rujukan</h3>
+  <div class="pod-table-wrap">
+    <table id="lt-gaps" data-source="lettering_gaps" data-row-key="gap">
+      <thead><tr>
+        <th data-field="gap">Perkara</th>
+        <th data-field="ref">Rujukan anda</th>
+        <th data-field="ai">Hasil AI</th>
+        <th data-field="closest">Paling dekat</th>
+        <th data-field="fix">Cara baiki</th>
+      </tr></thead>
+      <tbody data-draw="lt-gaps-body"></tbody>
+    </table>
+  </div>
+  <h3>Hasil gambar lettering</h3>
+  <p class="pod-muted">Kiri sekali = rujukan anda, diikuti 4 cara jana. Bingkai hijau = semua perkataan betul, merah = ada salah. Tekan gambar untuk besarkan.</p>
+  <div class="mt-gallery" data-draw="lt-gallery" data-source="lettering_test lettering_test_refs lettering_test_models"></div>
+</section>
+
+<section id="m-lettering-v2" class="pod-section">
+  <h2>Ujian ERNIE v2: ayat baharu, prompt ikut rujukan</h2>
+  <p class="pod-muted">5 ayat Melayu baharu. Prompt ditulis semula ikut ciri 5 poster rujukan anda: perkataan utama sangat besar, perkataan kecil dalam reben, satu tiang teks di tengah, tekstur dan tanda baca. ERNIE + penambah prompt, 2 seed (42 dan 7) setiap design. Ejaan disemak dengan mata. Bukti <span class="pod-pill" data-level="lemah">Lemah</span>: ujian kecil.</p>
+  <p><b data-draw="lt2-sum" data-source="lettering_v2_summary" data-field="ok"></b></p>
+  <h3>Ikut standard rujukan?</h3>
+  <div class="pod-table-wrap">
+    <table id="lt-std" data-source="lettering_standard" data-row-key="criterion">
+      <thead><tr>
+        <th data-field="criterion">Ciri</th>
+        <th data-field="ref">Rujukan anda</th>
+        <th data-field="v1">ERNIE v1 (ujian lepas)</th>
+        <th data-field="v1_pass">v1 ikut?</th>
+        <th data-field="v2">ERNIE v2</th>
+        <th data-field="v2_pass">v2 ikut?</th>
+      </tr></thead>
+      <tbody data-draw="lt-std-body"></tbody>
+    </table>
+  </div>
+  <h3>Hasil gambar v2</h3>
+  <p class="pod-muted">Kiri sekali = rujukan anda, diikuti seed 42 dan seed 7. Bingkai hijau = semua perkataan betul, merah = ada silap. Tekan gambar untuk besarkan.</p>
+  <div class="mt-gallery" data-draw="lt2-gallery" data-source="lettering_v2 lettering_v2_refs lettering_v2_models"></div>
+</section>
+
+<section id="m-lettering-v3" class="pod-section">
+  <h2>Pusingan QC v3: redo sehingga ikut standard rujukan</h2>
+  <p class="pod-muted">10 design baharu (2 setiap rujukan: satu gaya huruf macam rujukan, satu font lain). Setiap imej disemak: 3 pintu wajib (ejaan 100%, tiada teks rawak, tiada cacat) + 8 unsur gaya rujukan (lulus jika 7/8). Gagal = jana semula (seed baharu; prompt dibaiki jika unsur gaya gagal), maksimum 4 cubaan. Hanya imej lulus jadi final. SOP penuh: tab Workflow. Semakan mata oleh Claude; bukti <span class="pod-pill" data-level="lemah">Lemah</span>.</p>
+  <p><b data-draw="lt3-sum" data-source="lettering_v3_summary" data-field="passed"></b></p>
+  <h3>Kajian 5 rujukan anda: unsur yang digunakan</h3>
+  <div class="pod-table-wrap">
+    <table id="lt-deep" data-source="lettering_ref_elements" data-row-key="ref">
+      <thead><tr>
+        <th data-field="name">Rujukan</th>
+        <th data-field="words_lines">Perkataan / baris</th>
+        <th data-field="layout">Susun atur</th>
+        <th data-field="hierarchy">Hierarki saiz</th>
+        <th data-field="fonts">Gaya huruf</th>
+        <th data-field="ornaments">Hiasan</th>
+        <th data-field="texture">Tekstur / kedalaman</th>
+        <th data-field="palette">Warna</th>
+        <th data-field="extra">Lain-lain</th>
+      </tr></thead>
+      <tbody data-draw="lt-deep-body"></tbody>
+    </table>
+  </div>
+  <h3>Gambar final (lulus QC sahaja)</h3>
+  <p class="pod-muted">Kiri = rujukan anda, tengah = final. Kotak kosong = belum lulus selepas cubaan setakat ini.</p>
+  <div class="mt-gallery" data-draw="lt3-final" data-source="lettering_v3_final lettering_v3_refs lettering_v3_final_models"></div>
+  <h3>Rekod QC setiap cubaan</h3>
+  <div class="pod-table-wrap">
+    <table id="lt3-qc" data-source="lettering_v3" data-row-key="id">
+      <thead><tr>
+        <th data-field="id">Design</th>
+        <th data-field="attempt">Cubaan</th>
+        <th data-field="seed">Seed</th>
+        <th data-field="wrong_n">Ejaan</th>
+        <th data-field="style_score">Gaya</th>
+        <th data-field="verdict_text">Keputusan QC</th>
+        <th data-field="action">Tindakan</th>
+      </tr></thead>
+      <tbody data-draw="lt3-qc-body"></tbody>
+    </table>
+  </div>
+  <h3>Semua cubaan</h3>
+  <p class="pod-muted">Kiri = rujukan anda, diikuti cubaan 1-4. Bingkai hijau = lulus QC, merah = gagal.</p>
+  <div class="mt-gallery" data-draw="lt3-gallery" data-source="lettering_v3 lettering_v3_refs lettering_v3_models"></div>
+</section>
+
+<section id="m-cadangan" class="pod-section">
+  <h2>Model ikut jenis poster</h2>
+  <p class="pod-muted">Cadangan sementara sehingga ujian sebenar (langkah di bawah) siap.</p>
+  <div class="pod-table-wrap">
+    <table id="m-table-use" data-source="model_usecase" data-row-key="kind">
+      <thead><tr>
+        <th data-field="kind">Jenis poster</th>
+        <th data-field="main">Model utama</th>
+        <th data-field="backup">Sandaran</th>
+        <th data-field="process">Proses</th>
+        <th data-field="why">Sebab</th>
+      </tr></thead>
+      <tbody data-draw="m-use-body"></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="m-langkah" class="pod-section">
+  <h2>Workflow pilih model</h2>
+  <p class="pod-muted">Ujian yang sama untuk semua model supaya boleh dibanding adil.</p>
+  <div class="pod-table-wrap">
+    <table id="m-table-workflow" data-source="model_workflow" data-row-key="no">
+      <thead><tr>
+        <th class="pod-num" data-field="no">#</th>
+        <th data-field="who">Siapa</th>
+        <th data-field="step">Langkah</th>
+        <th data-field="detail">Butiran</th>
+        <th data-field="status">Status</th>
+      </tr></thead>
+      <tbody data-draw="m-workflow-body"></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="m-sumber" class="pod-section">
+  <h2>Sumber riset</h2>
+  <p class="pod-muted">Reddit, arxiv.org dan leaderboard Artificial Analysis tidak boleh dibaca dari sesi ini; forum diganti dengan perbincangan Hugging Face.</p>
+  <div class="pod-table-wrap pod-scroll">
+    <table id="m-table-sources" data-source="model_sources" data-row-key="source">
+      <thead><tr>
+        <th data-field="source">Sumber</th>
+        <th data-field="kind">Jenis</th>
+        <th data-field="used_for">Untuk</th>
+        <th data-field="level">Bukti</th>
+        <th data-field="url">Pautan</th>
+      </tr></thead>
+      <tbody data-draw="m-sources-body"></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="d-intro" class="pod-section">
+  <h2>Design</h2>
+  <p class="pod-lede">Design yang sudah siap untuk dijual: poster motivasi (3:4, cetak 18×24 in) dan design sarkastik SVG (persegi, untuk baju, mug dan pelekat). Semua hitam atas putih, dijana dengan FLUX.2 klein 4B; ejaan disemak dan dibaiki.</p>
+</section>
+
+<section id="d-motiv" class="pod-section">
+  <h2>Poster motivasi</h2>
+  <p class="pod-muted">Tekan gambar untuk besarkan. Fail asal PNG dan SVG dalam repo: designs/svg-typo/out/motiv/final/.</p>
+  <div class="d-grid" data-draw="d-gallery" data-source="design_motiv"></div>
+  <div class="mt-zoom" id="d-zoom" hidden role="dialog" aria-modal="true" aria-label="Gambar besar">
+    <figure><img id="d-zoom-img" alt=""><figcaption id="d-zoom-cap"></figcaption></figure>
+    <button type="button" class="mt-zoom-close" id="d-zoom-close">Tutup ✕</button>
+  </div>
+</section>
+
+<section id="d-sarkas" class="pod-section">
+  <h2>Design sarkastik SVG</h2>
+  <p class="pod-muted">Gaya bundle Etsy, ayat baharu: umum, kerja, kopi / introvert, ibu / keluarga. Tekan gambar untuk besarkan. Fail asal PNG dan SVG dalam repo: designs/svg-typo/out/batch4/final/.</p>
+  <div class="d-grid" data-draw="d-gallery-s" data-source="design_sarkas"></div>
+</section>
+
+<section id="d-sarkas-warna" class="pod-section">
+  <h2>Design sarkastik berwarna</h2>
+  <p class="pod-muted">30 design yang sama, latar gelap dan warna ikut 5 palet contoh Pinterest (oren, kuning, hijau, merah, biru; 6 design setiap palet). Palet hijau dan merah bertekstur kasar. Tekan gambar untuk besarkan. Fail PNG 2048 px dalam repo: designs/svg-typo/out/batch4/color/.</p>
+  <div class="d-grid" data-draw="d-gallery-w" data-source="design_sarkas_warna"></div>
+</section>
+
+</section>
+
+<section id="tab-cvg" class="pod-tab" role="tabpanel" aria-labelledby="btn-cvg" hidden>
+<section id="cvg-ringkas" class="pod-section">
+  <h2>CPU lawan GPU: berapa laju, dan adakah hasilnya sama?</h2>
+  <p class="pod-lede">Pada imej yang sama, GPU <b data-draw="cvg-kali" data-source="cvg_enjin">&mdash;</b> lebih laju daripada CPU. Ejaan betul: CPU <b data-draw="cvg-ok-cpu" data-source="cvg_enjin">&mdash;</b> imej, GPU <b data-draw="cvg-ok-gpu" data-source="cvg_enjin">&mdash;</b> imej.</p>
+  <div class="cvg-legend">
+    <div><b>CPU</b> = pemproses biasa: komputer awan Claude, 4 teras. Percuma tetapi lambat.</div>
+    <div><b>GPU</b> = kad grafik: Space Hugging Face, kuota percuma 5 minit sehari. Sangat laju.</div>
+    <div class="pod-muted">Ujian adil: gaya K6, ayat, tetapan dan seed 42 sama di kedua-dua. Ejaan disemak dengan mata oleh Claude. Bukti <span class="pod-pill" data-level="lemah">Lemah</span>: 3 imej setiap enjin.</div>
+  </div>
+  <div class="cvg-cards" data-draw="cvg-cards" data-source="cvg_enjin"></div>
+</section>
+<section id="cvg-gambar" class="pod-section">
+  <h2>Gambar sebelah-menyebelah: CPU (kiri), GPU (kanan)</h2>
+  <p class="pod-muted">Ayat dan seed sama. Tekan gambar untuk besarkan.</p>
+  <div class="cvg-pairs" data-draw="cvg-pairs" data-source="cvg_banding"></div>
+</section>
+<section id="cvg-kaggle" class="pod-section">
+  <h2>GPU Kaggle (T4)</h2>
+  <p class="pod-muted">Status: <b data-draw="cvg-kaggle" data-source="cvg_peranti" data-field="status" data-where="peranti=GPU">&mdash;</b>. Bila ia berjalan, hasilnya ditambah di bahagian atas.</p>
+</section>
+<section id="cvg-cpu" class="pod-section">
+  <h2>Semua 6 enjin di CPU (6 imej setiap enjin)</h2>
+  <p class="pod-muted">"Ejaan betul" ikut peraturan ketat V1: huruf, huruf besar / kecil dan tanda baca sama dengan ayat.</p>
+  <div class="pod-fit">
+    <table id="cvg-table-enjin" data-source="cvg_enjin" data-row-key="enjin">
+      <thead><tr>
+        <th data-field="enjin">Enjin</th>
+        <th class="pod-num" data-field="cpu_ejaan">Ejaan betul</th>
+        <th class="pod-num" data-field="cpu_saat">Masa 1 imej</th>
+        <th class="pod-wide" data-field="gaya_cpu">Gaya</th>
+      </tr></thead>
+      <tbody data-draw="cvg-enjin-body"></tbody>
+    </table>
+  </div>
+  <details><summary>Lihat 36 gambar CPU</summary>
+    <div class="p9-grid" data-draw="cvg-galeri" data-source="cvg_imej cvg_peranti"></div>
+  </details>
+</section>
+<details id="cvg-butiran" class="pod-section"><summary>Butiran setiap imej (36)</summary>
+  <div class="pod-fit">
+    <table id="cvg-table-imej" data-source="cvg_imej" data-row-key="kunci">
+      <thead><tr>
+        <th data-field="enjin">Enjin</th>
+        <th data-field="ayat">Ayat</th>
+        <th class="pod-num" data-field="seed">Seed</th>
+        <th class="pod-num" data-field="cpu_saat">Masa CPU</th>
+        <th data-field="cpu_ejaan">Ejaan CPU</th>
+        <th class="pod-wide" data-field="cpu_sebab">Sebab gagal CPU</th>
+        <th class="pod-num" data-field="hf_saat">Masa GPU</th>
+        <th data-field="hf_ejaan">Ejaan GPU</th>
+        <th class="pod-wide" data-field="hf_sebab">Sebab gagal GPU</th>
+      </tr></thead>
+      <tbody data-draw="cvg-imej-body"></tbody>
+    </table>
+  </div>
+</details>
+</section>
+
+<section id="tab-model2" class="pod-tab" role="tabpanel" aria-labelledby="btn-model2" hidden>
+<div id="t2-intro" class="pod-section pod-first">
+<h2>AI Image Test: semua ujian dan generation</h2>
+<p class="pod-lede"><b data-draw="t2-n" data-source="ai_ringkas" data-field="imej" data-row="0">—</b> imej AI daripada <b data-draw="t2-u" data-source="ai_ringkas" data-field="ujian" data-row="0">—</b> ujian dan generation (<span data-draw="t2-dari" data-source="ai_ringkas" data-field="dari" data-row="0">—</span> hingga <span data-draw="t2-hingga" data-source="ai_ringkas" data-field="hingga" data-row="0">—</span>). % lulus tertinggi: <b data-draw="t2-best" data-source="ai_ringkas" data-field="terbaik" data-row="0">—</b> (<b data-draw="t2-best-p" data-source="ai_ringkas" data-field="terbaik_p" data-row="0">—</b>%, sekurang-kurangnya 20 imej diuji).</p>
+<p class="pod-muted">Satu tempat untuk semua imej AI. Lulus ikut syarat ujian itu sendiri (lajur Standard dalam butiran). Bukti <span class="pod-pill" data-level="lemah">Lemah</span>: semakan mata Claude, satu cubaan.</p>
+</div>
+<div id="t2-models" class="pod-section">
+<h2>Banding model: semua ujian</h2>
+<p class="pod-muted">Dikira terus daripada senarai imej, jadi berubah sendiri bila ujian baharu ditambah. Diuji = imej yang ada keputusan Lulus/Gagal (design siap tidak dikira). Saat = purata saat jana satu imej, hanya bila tempat jana dicatat.</p>
+<div class="pod-table-wrap"><table id="t2-sum" data-source="ai_banding" data-row-key="model"><thead><tr>
+<th data-field="model_name">Model</th><th data-field="imej" class="pod-num">Imej</th><th data-field="diuji" class="pod-num">Diuji</th><th data-field="lulus" class="pod-num">Lulus</th><th data-field="pct_lulus" class="pod-num">% lulus</th><th data-field="pct_ejaan" class="pod-num">% ejaan betul</th><th data-field="saat_cpu" class="pod-num">Saat CPU</th><th data-field="saat_gpu" class="pod-num">Saat GPU</th><th data-field="ujian" class="pod-num">Ujian</th><th data-field="tarikh_akhir">Ujian terakhir</th>
+</tr></thead><tbody data-draw="t2-sum-body"></tbody></table></div>
+</div>
+<div id="t2-banding" class="pod-section">
+<h2>Banding gambar</h2>
+<p class="pod-muted">Satu kotak = satu ujian, terbaru di atas; tekan tajuk untuk buka. Kiri: rujukan, tarikh, ayat dan seed. Lajur = model. Bingkai hijau = lulus, merah = gagal, kelabu = design siap (tiada QC). Tekan gambar untuk besarkan. Rujukan ialah design orang lain: banding gaya sahaja.</p>
+<div class="pod-select-row"><label for="t2-f-ujian" class="pod-muted">Ujian</label><select id="t2-f-ujian" class="dash-select" data-draw="t2-f-ujian" data-source="ai_all" aria-label="Tapis ujian"></select>
+<label for="t2-f-model" class="pod-muted">Model</label><select id="t2-f-model" class="dash-select" data-draw="t2-f-model" data-source="ai_all" aria-label="Tapis model"></select>
+<label for="t2-f-hasil" class="pod-muted">Hasil</label><select id="t2-f-hasil" class="dash-select" aria-label="Tapis hasil"><option value="">Semua</option><option value="1">Lulus</option><option value="0">Gagal</option><option value="na">Design siap</option></select></div>
+<div class="t2-tests" data-draw="t2-galeri" data-source="ai_all"></div>
+<div class="mt-zoom" id="t2-zoom" hidden role="dialog" aria-modal="true" aria-label="Gambar besar"><figure data-draw="t2-zoom"></figure><button type="button" class="mt-zoom-close" id="t2-zoom-close">Tutup ✕</button></div>
+</div>
+<div id="t2-butiran" class="pod-section">
+<h2>Butiran setiap imej</h2>
+<p class="pod-muted">Ikut penapis di atas. Ejaan dan Gaya "—" = tidak disemak dalam ujian itu.</p>
+<div class="pod-scroll"><table id="t2-detail" data-source="ai_all" data-row-key="key"><thead><tr>
+<th data-field="tarikh">Tarikh</th><th data-field="ujian_nama">Ujian</th><th data-field="label">Model</th><th data-field="tempat">Tempat</th><th data-field="baris">Ayat / design</th><th data-field="ejaan">Ejaan</th><th data-field="gaya" class="pod-num">Gaya</th><th data-field="lulus">Hasil</th><th data-field="sebab">Sebab / nota</th><th data-field="saat" class="pod-num">Saat</th><th data-field="standard">Standard</th>
+</tr></thead><tbody data-draw="t2-detail-body"></tbody></table></div>
+</div>
+</section>
+
+<section id="tab-lesen" class="pod-tab" role="tabpanel" aria-labelledby="btn-lesen" hidden>
+
+<div id="l-intro" class="pod-section pod-first">
+  <p class="pod-lede">Satu jadual induk untuk semua model jana imej: lesen komersial, kuota GPU percuma, VRAM, dan hasil ujian tulisan kita. Klik nama model untuk buka semua butiran.</p>
+  <p class="pod-muted">Semakan 24 Nov 2026 daripada fail lesen, model card dan kod Space di Hugging Face, digabung dengan ujian sendiri 22&ndash;23 Nov. Kuota GPU percuma (ZeroGPU): akaun Free <b data-draw="ml-free" data-source="hf_zerogpu_quota" data-field="minutes" data-where="tier=Free">&mdash;</b> minit sehari, PRO <b data-draw="ml-pro" data-source="hf_zerogpu_quota" data-field="minutes" data-where="tier=PRO">&mdash;</b> minit. Lajur Komersial?: hijau = bebas komersial, kuning = boleh dengan syarat, merah = bukan komersial. Darjah tulisan: Kuat / Sederhana / Lemah ikut skor dalam kad model atau ujian kita; "Skor sahaja" bermaksud ada nombor tetapi tiada darjah &mdash; buka butiran.</p>
+</div>
+
+<nav class="pod-nav" aria-label="Bahagian lesen dan ujian">
+    <a href="#m-master">Jadual induk model</a>
+    <a href="#m-nota">Ditolak &amp; tambahan</a>
+    <a href="#st-ai">Alat AI di komputer awan</a>
+  </nav>
+
+<section id="m-master" class="pod-section">
+  <h2>Jadual induk: lesen, kuota GPU, VRAM dan ujian tulisan</h2>
+  <p class="pod-muted">40 model &mdash; 34 daripada semakan lesen Hugging Face, 6 lagi hanya ada hasil ujian (lesen belum disemak). Klik nama model untuk butiran penuh: syarat lesen, Space, langkah, hitam-putih, warna, latar, kelajuan dan forum.</p>
+  <div class="pod-fit">
+    <table id="ms-table" data-source="master_models" data-row-key="model">
+      <colgroup>
+        <col style="width:16%"><col style="width:9%"><col style="width:7%"><col style="width:9%">
+        <col style="width:5%"><col style="width:7%"><col style="width:6%"><col style="width:8%">
+        <col style="width:8%"><col style="width:13%"><col style="width:6%"><col style="width:6%">
+      </colgroup>
+      <thead><tr>
+        <th data-field="model">Model</th>
+        <th data-field="group">Kumpulan</th>
+        <th data-field="commercial">Komersial?</th>
+        <th data-field="license">Lesen</th>
+        <th data-field="size">Saiz</th>
+        <th data-field="vram">VRAM</th>
+        <th class="pod-num" data-field="img_free">Gambar/hari</th>
+        <th data-field="short">Tulisan pendek</th>
+        <th data-field="long">Tulisan panjang</th>
+        <th data-field="verdict">Cadangan</th>
+        <th data-field="level">Bukti</th>
+        <th data-field="source">Sumber</th>
+      </tr></thead>
+      <tbody data-draw="ms-body"></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="m-nota" class="pod-section">
+  <h2>Model ditolak dan tambahan</h2>
+  <p class="pod-muted">Baris riset yang bukan satu model tunggal: kumpulan model yang ditolak awal, dan tambahan gaya (LoRA).</p>
+  <div class="pod-fit">
+    <table id="mn-table" data-source="model_notes" data-row-key="item">
+      <colgroup><col style="width:10%"><col style="width:30%"><col style="width:10%"><col style="width:34%"><col style="width:8%"><col style="width:8%"></colgroup>
+      <thead><tr>
+        <th data-field="kind">Jenis</th>
+        <th data-field="item">Model</th>
+        <th data-field="stage">Peringkat</th>
+        <th data-field="why">Sebab</th>
+        <th data-field="level">Bukti</th>
+        <th data-field="source">Sumber</th>
+      </tr></thead>
+      <tbody data-draw="mn-body"></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="st-ai" class="pod-section">
+  <h2>Alat AI di komputer awan</h2>
+  <p class="pod-muted">Komputer awan = container sesi Claude Code: 4 teras CPU, 15 GB RAM, tiada GPU. Container dipadam bila sesi tamat, jadi alat perlu dipasang semula setiap sesi baharu. Semua alat di bawah percuma; lesen disemak 22 Nov 2026.</p>
+  <div class="pod-table-wrap pod-scroll">
+    <table id="st-table-ai" data-source="setup_ai_tools" data-row-key="tool">
+      <thead><tr>
+        <th data-field="job">Kerja</th>
+        <th data-field="tool">Alat</th>
+        <th data-field="license">Lesen</th>
+        <th data-field="free">Percuma</th>
+        <th data-field="fits">Muat dalam container</th>
+        <th data-field="status">Status</th>
+        <th data-field="note">Nota</th>
+        <th data-field="source">Sumber</th>
+      </tr></thead>
+      <tbody data-draw="st-ai-body"></tbody>
+    </table>
+  </div>
+</section>
+
+</section>
+
+<section id="tab-sejarah" class="pod-tab" role="tabpanel" aria-labelledby="btn-sejarah" hidden>
+
+<div id="sj-intro" class="pod-section pod-first">
+  <p class="pod-lede">Rekod hasil setiap sesi chat lepas: apa dibuat, berapa imej dijana, berapa design lulus, dan pelajaran untuk sesi seterusnya.</p>
+</div>
+
+<section id="m-sejarah" class="pod-section">
+  <h2>Hasil chat lepas</h2>
+  <p class="pod-muted">Dikumpul semula dari sesi 22–23 Nov (cawangan eager-brahmagupta dan intelligent-bell).</p>
+  <div class="pod-table-wrap">
+    <table id="m-table-history" data-source="model_history" data-row-key="what">
+      <thead><tr>
+        <th data-field="date">Tarikh</th>
+        <th data-field="what">Apa dibuat</th>
+        <th class="pod-num" data-field="images">Imej</th>
+        <th class="pod-num" data-field="designs">Design lulus</th>
+        <th data-field="result">Hasil</th>
+        <th data-field="lesson">Pelajaran</th>
+      </tr></thead>
+      <tbody data-draw="m-history-body"></tbody>
+    </table>
+  </div>
+</section>
+
+</section>
+
+<section id="tab-setup" class="pod-tab" role="tabpanel" aria-labelledby="btn-setup" hidden>
+
+<div id="st-intro" class="pod-section pod-first">
+  <p class="pod-lede"><b data-draw="st-done" data-source="setup_progress" data-field="done" data-row="0">—</b> daripada <b data-draw="st-total" data-source="setup_progress" data-field="total" data-row="0">—</b> langkah setup siap. Claude menyemak dan menanda setiap langkah; semakan terakhir <b data-draw="st-last" data-source="setup_progress" data-field="last_checked" data-row="0">—</b>.</p>
+  <div class="pod-progress" id="st-progress" aria-hidden="true"><div class="pod-progress-bar" data-draw="st-bar" data-source="setup_progress"></div></div>
   <div class="pod-two">
     <div>
-      <h3 id="tajuk-utama">Utama: jual dahulu</h3>
-      <ul class="pod-np" id="np-main" data-draw="np-main" data-source="niche_products"></ul>
+      <h3 id="st-tajuk-anda">Langkah seterusnya untuk anda</h3>
+      <ol class="pod-rules" id="st-next-user" data-draw="st-next-user" data-source="setup_checklist"></ol>
     </div>
     <div>
-      <h3 id="tajuk-tambahan">Tambahan: naikkan nilai pesanan</h3>
-      <ul class="pod-np" id="np-addon" data-draw="np-addon" data-source="niche_products"></ul>
+      <h3 id="st-tajuk-claude">Claude akan buat seterusnya</h3>
+      <ol class="pod-rules" id="st-next-claude" data-draw="st-next-claude" data-source="setup_checklist"></ol>
     </div>
   </div>
-  <template id="tpl-np">
-    <li class="pod-np-item">
-      <span class="pod-np-name"></span>
-      <span class="pod-np-profit">Untung ~<b class="pod-np-profit-v"></b></span>
-      <span class="pod-np-meta"><span class="pod-pill pod-np-cat"></span><span>Harga jual <span class="pod-np-price"></span></span><span class="pod-np-note"></span><span class="pod-np-link"></span></span>
-    </li>
+</div>
+
+<nav class="pod-nav" aria-label="Bahagian setup">
+    <a href="#st-senarai">Checklist setup</a>
+    <a href="#k-analisa">5 analisa</a>
+    <a href="#k-alat">Alat data</a>
+  </nav>
+
+<section id="st-senarai" class="pod-section">
+  <h2>Checklist ikut fasa</h2>
+  <p class="pod-muted">Status ditanda oleh Claude selepas menyemak. "Bersama" bermaksud Claude sediakan, anda klik atau tampal.</p>
+  <div class="pod-phases" id="st-phases" data-draw="st-phases" data-source="setup_checklist"></div>
+  <template id="tpl-st-phase">
+    <article class="pod-card pod-analysis">
+      <div class="pod-guide-head">
+        <h3 class="st-p-title"></h3>
+        <span class="pod-pill st-p-count"></span>
+      </div>
+      <div class="pod-table-wrap">
+        <table data-source="setup_checklist" data-row-key="id">
+          <thead><tr>
+            <th data-field="status">Status</th>
+            <th data-field="step">Langkah</th>
+            <th data-field="who">Siapa</th>
+            <th data-field="connect">Sambung</th>
+            <th data-field="result">Hasil semakan</th>
+          </tr></thead>
+          <tbody class="st-p-body"></tbody>
+        </table>
+      </div>
+    </article>
   </template>
-  <details id="katalog">
-    <summary>Lihat semua 36 produk Printify yang dikaji</summary>
-    <div class="pod-select-row">
-      <label class="pod-muted" for="cat-filter">Kategori</label>
-      <select id="cat-filter" class="dash-select" data-draw="cat-filter" data-source="products" aria-label="Tapis kategori"></select>
-    </div>
+  <details id="st-cara">
+    <summary>Cara Claude menyemak setiap langkah</summary>
     <div class="pod-table-wrap pod-scroll">
-      <table id="table-catalog" data-source="products" data-row-key="id">
+      <table id="st-table-cara" data-source="setup_checklist" data-row-key="id">
         <thead><tr>
-          <th data-field="product">Produk</th>
-          <th data-field="category">Kategori</th>
-          <th class="pod-num" data-field="base_usd">Kos Printify</th>
-          <th class="pod-num" data-field="price_usd">Harga jual</th>
-          <th class="pod-num" data-field="profit_usd">Untung</th>
-          <th data-field="status">Cadangan</th>
-          <th data-field="cost_note">Nota kos</th>
-          <th data-field="level">Tahap bukti</th>
-          <th data-field="source">Printify</th>
+          <th class="pod-num" data-field="no">#</th>
+          <th data-field="step">Langkah</th>
+          <th data-field="how_check">Cara semak</th>
+          <th data-field="checked_at">Disemak</th>
         </tr></thead>
-        <tbody data-draw="catalog-body"></tbody>
-      </table>
-    </div>
-    <p class="pod-muted">"—" pada untung bermaksud kos USD belum dijumpai. Sahkan kos dalam editor Printify sebelum menetapkan harga.</p>
-  </details>
-</section>
-
-<section id="katakunci" class="pod-section">
-  <h2>Kata kunci paling berpeluang</h2>
-  <p class="pod-muted">10 teratas: carian sebulan bagi setiap 1,000 produk pesaing di Etsy.</p>
-  <div class="pod-select-row">
-    <label class="pod-muted" for="kw-niche">Niche</label>
-    <select id="kw-niche" class="dash-select" data-draw="kw-filter" data-source="keywords" aria-label="Tapis niche kata kunci"></select>
-  </div>
-  <div class="pod-chart pod-short" id="chart-opportunity" data-draw="opportunity" data-source="keywords"></div>
-  <details id="jadual-katakunci">
-    <summary>Lihat semua kata kunci dan jumlah carian</summary>
-    <div class="pod-table-wrap pod-scroll">
-      <table id="table-keywords" data-source="keywords" data-row-key="keyword">
-        <thead><tr>
-          <th data-field="niche">Niche</th>
-          <th data-field="keyword">Kata kunci</th>
-          <th class="pod-num" data-field="google_monthly">Carian / bulan</th>
-          <th data-field="volume_type">Jenis</th>
-          <th class="pod-num" data-field="etsy_listings">Produk pesaing Etsy</th>
-          <th class="pod-num" data-field="opportunity">Peluang</th>
-          <th data-field="note">Nota</th>
-          <th data-field="source">Sumber</th>
-        </tr></thead>
-        <tbody data-draw="kw-body"></tbody>
+        <tbody data-draw="st-cara-body"></tbody>
       </table>
     </div>
   </details>
 </section>
 
-<section id="kalendar" class="pod-section">
-  <h2>Bila jualan tinggi</h2>
-  <p class="pod-muted">Warna pekat = bulan jualan tinggi (100 = bulan biasa). Mula pin 45–90 hari sebelum puncak.</p>
-  <div class="pod-table-wrap">
-    <div class="pod-chart" id="chart-heatmap" data-draw="heatmap" data-source="seasonality"></div>
-  </div>
-</section>
-
-<section id="persona" class="pod-section">
-  <h2>Siapa pembeli</h2>
-  <p class="pod-muted">"Bulk" = satu pesanan untuk ramai orang; "satu-satu" = satu item setiap pesanan.</p>
-  <div class="pod-personas" id="persona-cards" data-draw="personas" data-source="personas"></div>
-  <template id="tpl-persona">
-    <article class="pod-card">
-      <h3 class="pod-p-name"></h3>
-      <div><span class="pod-pill pod-p-niche"></span></div>
-      <dl class="pod-dl">
-        <dt>Bila</dt><dd data-f="when"></dd>
-        <dt>Cara beli</dt><dd data-f="how"></dd>
-      </dl>
+<section id="k-analisa" class="pod-section">
+  <h2>Lima analisa</h2>
+  <p class="pod-muted">Sasaran setiap metrik. Kolum "Sebenar" akan diisi bila data disambung.</p>
+  <div class="pod-analyses" id="k-analyses" data-draw="k-analyses" data-source="prestasi_kpi"></div>
+  <template id="tpl-k-analysis">
+    <article class="pod-card pod-analysis">
+      <div class="pod-guide-head">
+        <h3 class="k-a-title"></h3>
+        <span class="pod-pill" data-tone="warn">Belum disambung</span>
+      </div>
+      <div class="pod-muted k-a-q"></div>
+      <div class="pod-table-wrap">
+        <table class="pod-mini" data-source="prestasi_kpi" data-row-key="id">
+          <thead><tr>
+            <th data-field="metric">Metrik</th>
+            <th data-field="target">Sasaran</th>
+            <th data-field="actual_status">Sebenar</th>
+          </tr></thead>
+          <tbody class="k-a-body"></tbody>
+        </table>
+      </div>
       <details class="pod-more">
-        <summary>Butiran</summary>
-        <dl class="pod-dl">
-          <dt>Siapa</dt><dd data-f="who"></dd>
-          <dt>Produk</dt><dd data-f="products"></dd>
-          <dt>Kekerapan</dt><dd data-f="frequency"></dd>
-          <dt>Belanja</dt><dd data-f="spend"></dd>
-          <dt>Saiz pasaran</dt><dd data-f="market_size"></dd>
-          <dt>Emosi</dt><dd data-f="emotion"></dd>
-          <dt>Sumber</dt><dd data-f="source"></dd>
-        </dl>
+        <summary>Kalau rendah, buat apa?</summary>
+        <ul class="pod-rules k-a-actions"></ul>
       </details>
     </article>
   </template>
 </section>
 
-<section id="pin" class="pod-section">
-  <h2>Cara buat pin</h2>
-  <p class="pod-muted">Setiap design dijadikan 3–5 pin berbeza ikut campuran templat ini.</p>
+<section id="k-alat" class="pod-section">
+  <h2>Alat data yang perlu disambung</h2>
+  <p class="pod-muted">Semuanya percuma. Setiap satu diperlukan untuk mengisi kolum "Sebenar".</p>
+  <div class="pod-table-wrap">
+    <table id="k-table-tools" data-source="prestasi_tools" data-row-key="tool">
+      <thead><tr>
+        <th data-field="tool">Alat</th>
+        <th data-field="analysis">Untuk analisa</th>
+        <th data-field="gives">Data yang diberi</th>
+        <th data-field="how">Cara sambung</th>
+        <th data-field="status">Status</th>
+      </tr></thead>
+      <tbody data-draw="k-tools-body"></tbody>
+    </table>
+  </div>
+</section>
+
+</section>
+
+<section id="tab-workflow" class="pod-tab" role="tabpanel" aria-labelledby="btn-workflow" hidden>
+
+<div id="wf-intro" class="pod-section pod-first">
+  <p class="pod-lede">Claude buat kerja berulang secara automatik; anda hanya luluskan dan semak. Automasi bermula selepas laman web, Printify dan Pinterest disambung (tab Setup).</p>
+  <div class="pod-kpis" id="wf-masa">
+    <div class="pod-kpi" id="wf-masa-harian">
+      <div class="pod-q">Masa anda sehari</div>
+      <div class="pod-big"><span data-draw="wf-t-h" data-source="workflow_time" data-field="user_min" data-where="frequency=Harian">—</span> min</div>
+    </div>
+    <div class="pod-kpi" id="wf-masa-mingguan">
+      <div class="pod-q">Masa anda seminggu (tambahan)</div>
+      <div class="pod-big"><span data-draw="wf-t-m" data-source="workflow_time" data-field="user_min" data-where="frequency=Mingguan">—</span> min</div>
+    </div>
+    <div class="pod-kpi" id="wf-masa-bulanan">
+      <div class="pod-q">Masa anda sebulan (tambahan)</div>
+      <div class="pod-big"><span data-draw="wf-t-b" data-source="workflow_time" data-field="user_min" data-where="frequency=Bulanan">—</span> min</div>
+    </div>
+  </div>
+</div>
+
+<nav class="pod-nav" aria-label="Bahagian workflow">
+    <a href="#wf-harian">Harian</a>
+    <a href="#wf-mingguan">Mingguan</a>
+    <a href="#wf-bulanan">Bulanan</a>
+    <a href="#wf-sop">SOP lettering + QC</a>
+  </nav>
+
+<section id="wf-harian" class="pod-section">
+  <h2>Harian</h2>
   <div class="pod-two">
-    <div>
-      <h3 id="tajuk-templat">Campuran templat (% pin)</h3>
-      <div class="pod-chart pod-short" id="chart-templates" data-draw="templates" data-source="pin_playbook"></div>
-    </div>
-    <div>
-      <h3 id="tajuk-format">Peraturan format pin</h3>
-      <ul class="pod-rules" id="u-rules" data-draw="u-rules" data-source="pin_playbook"></ul>
-    </div>
+    <div><h3 id="wf-h-tajuk-anda">Anda</h3><ul class="pod-wf" data-draw="wf-h-anda" data-source="workflow"></ul></div>
+    <div><h3 id="wf-h-tajuk-claude">Claude (automatik)</h3><ul class="pod-wf" data-draw="wf-h-claude" data-source="workflow"></ul></div>
   </div>
-  <details id="jadual-pin">
-    <summary>Lihat trend visual dan typography 2026</summary>
-    <div class="pod-table-wrap">
-      <table id="table-pins" data-source="pin_playbook" data-row-key="item">
-        <thead><tr>
-          <th data-field="kind">Jenis</th>
-          <th data-field="item">Dapatan</th>
-          <th data-field="level">Tahap bukti</th>
-          <th data-field="source">Sumber</th>
-        </tr></thead>
-        <tbody data-draw="pins-body"></tbody>
-      </table>
-    </div>
-  </details>
 </section>
 
-<section id="sumber" class="pod-section">
-  <h2>Sumber</h2>
-  <p class="pod-muted">Dikumpul 21 November 2026 melalui indeks carian; halaman asal belum dibuka terus.</p>
-  <div class="pod-kpis">
-    <div class="pod-kpi" id="src-rasmi">
-      <div class="pod-q">Sumber rasmi</div>
-      <div class="pod-mid" data-draw="src-rasmi" data-source="source_counts" data-field="count" data-where="level=rasmi">—</div>
+<section id="wf-mingguan" class="pod-section">
+  <h2>Mingguan</h2>
+  <div class="pod-two">
+    <div><h3 id="wf-m-tajuk-anda">Anda</h3><ul class="pod-wf" data-draw="wf-m-anda" data-source="workflow"></ul></div>
+    <div><h3 id="wf-m-tajuk-claude">Claude (automatik)</h3><ul class="pod-wf" data-draw="wf-m-claude" data-source="workflow"></ul></div>
+  </div>
+</section>
+
+<section id="wf-bulanan" class="pod-section">
+  <h2>Bulanan</h2>
+  <div class="pod-two">
+    <div><h3 id="wf-b-tajuk-anda">Anda</h3><ul class="pod-wf" data-draw="wf-b-anda" data-source="workflow"></ul></div>
+    <div><h3 id="wf-b-tajuk-claude">Claude (automatik)</h3><ul class="pod-wf" data-draw="wf-b-claude" data-source="workflow"></ul></div>
+  </div>
+</section>
+
+<section id="wf-sop" class="pod-section">
+  <h2>SOP: poster lettering + quality check</h2>
+  <p class="pod-muted">Cara standard untuk jana poster lettering yang ikut kualiti rujukan anda. Final hanya imej yang lulus semua pintu wajib dan 7/8 unsur gaya. Hasil pusingan terkini: tab Model AI, bahagian "Pusingan QC v3". Salinan teks: docs/sop-lettering-qc.md.</p>
+  <h3>Langkah</h3>
+  <div class="pod-table-wrap">
+    <table id="wf-sop-t" data-source="lettering_sop" data-row-key="no">
+      <thead><tr><th data-field="no">No</th><th data-field="step">Langkah</th><th data-field="who">Siapa</th><th data-field="detail">Cara</th><th data-field="check">Syarat siap</th></tr></thead>
+      <tbody data-draw="wf-sop-body"></tbody>
+    </table>
+  </div>
+  <h3>Senarai semak QC</h3>
+  <p class="pod-muted">Wajib = semua mesti lulus. Gaya = 8 unsur bagi setiap rujukan; lulus jika 7 atau lebih.</p>
+  <div class="pod-table-wrap pod-scroll">
+    <table id="wf-qc-t" data-source="lettering_qc_rubric" data-row-key="code">
+      <thead><tr><th data-field="ref">Gaya</th><th data-field="kind">Jenis</th><th data-field="code">Kod</th><th data-field="check">Semak</th></tr></thead>
+      <tbody data-draw="wf-qc-body"></tbody>
+    </table>
+  </div>
+</section>
+
+
+
+
+</section>
+
+<section id="tab-aliran" class="pod-tab" role="tabpanel" aria-labelledby="btn-aliran" hidden>
+
+<div id="al-intro" class="pod-section pod-first">
+  <p class="pod-lede">Aliran 12 langkah daripada senarai ayat hingga fail siap cetak. Setiap gaya tipografi didaftar sebagai S (contoh S001) dan setiap gabungan warna sebagai C (contoh C001), supaya setiap poster boleh dijejak.</p>
+</div>
+
+<section id="al-langkah" class="pod-section">
+  <h2>Aliran 12 langkah</h2>
+  <p class="pod-muted">Dua titik kelulusan anda: langkah 8 (hitam putih) dan langkah 11 (berwarna). Warna dibuat dengan mewarnakan semula design yang sudah lulus, bukan menjana semula, supaya ejaan dan susunan tidak berubah.</p>
+  <div class="al-phases">
+    <div class="pod-card al-phase" id="al-f1">
+      <h3>A. Kaji ayat</h3>
+      <ol>
+        <li><b>1</b><span>Senarai ayat diberi.</span></li>
+        <li><b>2</b><span>Kenal jenis ayat: motivasi, lucu, sarkastik dan lain-lain.</span></li>
+        <li><b>3</b><span>Kira bilangan perkataan (ayat pendek atau panjang).</span></li>
+        <li><b>4</b><span>Kenal ikon dan hiasan yang sesuai (logo, swash, buih, bintang) serta perkataan yang perlu ditonjolkan.</span></li>
+        <li><b>5</b><span>Pilih gaya <b>S</b> yang padan dengan langkah 2, 3 dan 4.</span></li>
+      </ol>
     </div>
-    <div class="pod-kpi" id="src-pihak">
-      <div class="pod-q">Pihak ketiga</div>
-      <div class="pod-mid" data-draw="src-pihak" data-source="source_counts" data-field="count" data-where="level=pihak_ketiga">—</div>
+    <div class="pod-card al-phase" id="al-f2">
+      <h3>B. Tipografi hitam putih</h3>
+      <ol>
+        <li><b>6</b><span>Jana tipografi hitam putih sahaja: dakwat putih atas latar hitam (ikut Kad Gaya), tiada warna lain, tiada kelabu. Prompt ditulis ikut aturan model yang dipilih: klein 4B, Z-Image Turbo, ERNIE Turbo, MOSS (dipakai); FLUX 3 Image Klein (diuji di CPU, tetapi lesen belum diterima: didaftar dalam standard sahaja); Qwen-Image-2512, GLM-Image (belum diuji: tidak muat di CPU 15 GB). Model baharu yang belum ada aturan: Claude kaji sumber rasmi model itu dahulu (borang 10 soalan), tulis aturannya dan simpan untuk model itu sahaja. Jika satu model terlalu lama atau bermasalah, ia dilangkau, model seterusnya dijalankan (turutan MOSS, ERNIE, Z-Image, klein 4B), dan Claude beritahu anda dalam chat apa yang dilangkau. Peraturan Standard Lettering v1.2, 26 Nov 2026.</span></li>
+        <li><b>7</b><span>Semak pada imej hitam putih, ikut turutan: ejaan huruf demi huruf dengan ayat asal; ayat (baris, susunan perkataan, tanda baca); gaya (ciri Kad Gaya, lulus 7/8 atau lebih). Jika tidak lulus, ulang langkah 6: cacat pada satu seed = tukar seed; cacat sama pada 2 daripada 3 seed = reka semula prompt model itu (had 2 pusingan), kemudian tukar model, kemudian tanya anda. Ruang tepi, kedudukan, condong dan hitam putih bersih dibetulkan oleh empat skrip (SK01–SK04) bila tersasar daripada angka Kad Gaya, yang diukur daripada gambar upload oleh skrip SK05 (skrip dibina 26 Nov 2026, diuji pada 12 imej sedia ada; had toleransi sementara). Jika gambar upload ada ciri yang tiada skripnya, skrip baharu ditulis, disimpan, didaftar dalam Standard v1.2 dan dimasukkan ke dashboard ini.</span></li>
+        <li><b>8</b><span>Design akhir hitam putih. <b class="al-wait">Tunggu kelulusan anda.</b></span></li>
+      </ol>
     </div>
-    <div class="pod-kpi" id="src-lemah">
-      <div class="pod-q">Bukti lemah</div>
-      <div class="pod-mid" data-draw="src-lemah" data-source="source_counts" data-field="count" data-where="level=lemah">—</div>
+    <div class="pod-card al-phase" id="al-f3">
+      <h3>C. Warna dan latar</h3>
+      <ol>
+        <li><b>9</b><span>Pilih warna <b>C</b> dan warna latar yang padan dengan jenis ayat (2), ikon (4) dan gaya S (5).</span></li>
+        <li><b>10</b><span>Tukar design yang lulus kepada vektor, kemudian warnakan semula ikut C. Dua atau tiga pilihan C ditunjuk sekali gus.</span></li>
+        <li><b>11</b><span>Design akhir berwarna. <b class="al-wait">Tunggu kelulusan anda.</b></span></li>
+      </ol>
+    </div>
+    <div class="pod-card al-phase" id="al-f4">
+      <h3>D. Jana fail</h3>
+      <ol>
+        <li><b>12</b><span>Siap cetak: letak di tengah kanvas 18 × 24 in, tambah tekstur jika gaya memerlukannya (grain, lusuh, kapur), simpan PNG 300 DPI (5400 × 7200 px) dan fail SVG induk.</span></li>
+      </ol>
     </div>
   </div>
-  <details id="percanggahan">
-    <summary>Angka yang bercanggah dan pilihan dibuat</summary>
-    <div class="pod-table-wrap">
-      <table id="table-conflicts" data-source="conflicts" data-row-key="topic">
-        <thead><tr>
-          <th data-field="topic">Topik</th>
-          <th data-field="values">Nilai bercanggah</th>
-          <th data-field="resolution">Keputusan</th>
-        </tr></thead>
-        <tbody data-draw="conflicts-body"></tbody>
-      </table>
-    </div>
-  </details>
-  <details id="daftar-sumber">
-    <summary>Daftar semua sumber</summary>
-    <div class="pod-table-wrap pod-scroll">
-      <table id="table-sources" data-source="sources" data-row-key="id">
-        <thead><tr>
-          <th data-field="id">ID</th>
-          <th data-field="domain">Domain</th>
-          <th data-field="level">Tahap</th>
-          <th data-field="stages">Peringkat</th>
-          <th data-field="claim">Dakwaan</th>
-          <th data-field="url">Pautan</th>
-        </tr></thead>
-        <tbody data-draw="sources-body"></tbody>
-      </table>
-    </div>
-  </details>
 </section>
 
 </section>
+
+<section id="tab-daftar" class="pod-tab" role="tabpanel" aria-labelledby="btn-daftar" hidden>
+
+<div id="dsc-intro" class="pod-section pod-first">
+  <p class="pod-lede">Daftar rujukan setiap design: gaya tipografi bertanda S (contoh S001), gabungan warna bertanda C (contoh C001), dan kod design menggabungkan kedua-duanya supaya setiap poster boleh dijejak dan diulang.</p>
+</div>
+
+<nav class="pod-nav" aria-label="Bahagian daftar S dan C">
+    <a href="#al-gaya">Daftar gaya (S)</a>
+    <a href="#al-warna">Daftar warna (C)</a>
+    <a href="#al-kod">Kod design</a>
+  </nav>
+
+<section id="al-gaya" class="pod-section">
+  <h2>Daftar gaya (S)</h2>
+  <p class="pod-muted">Setiap gaya tipografi didaftar sekali dengan contoh gambar hitam putih. Kod S diberi secara automatik mengikut turutan. Ayat pendek: hingga 6 perkataan; ayat panjang: 7 perkataan ke atas.</p>
+  <form class="al-form pod-card" id="al-gaya-form" aria-label="Daftar gaya baharu">
+    <label>Nama gaya<input type="text" name="nama" required maxlength="80" placeholder="Contoh: Serif tebal bertingkat"></label>
+    <label>Jenis ayat
+      <select class="dash-select" name="jenis">
+        <option>Motivasi</option><option>Lucu</option><option>Sarkastik</option><option>Keluarga</option><option>Semua jenis</option><option>Lain-lain</option>
+      </select>
+    </label>
+    <label>Panjang ayat
+      <select class="dash-select" name="panjang">
+        <option>Pendek</option><option>Panjang</option><option>Pendek dan panjang</option>
+      </select>
+    </label>
+    <label>Ikon / hiasan dibenarkan<input type="text" name="ikon" maxlength="200" placeholder="Contoh: swash, bintang"></label>
+    <label>Enjin yang jana<input type="text" name="enjin" maxlength="60" placeholder="Contoh: MOSS-Image SFT" list="al-enjin-list"></label>
+    <datalist id="al-enjin-list">
+      <option value="MOSS-Image SFT"></option><option value="ERNIE-Image-Turbo"></option><option value="Z-Image-Turbo"></option>
+      <option value="Qwen-Image-2512"></option><option value="FLUX.2 klein 4B"></option><option value="Font + kod (bukan AI)"></option>
+    </datalist>
+    <label>Gambar contoh hitam putih (PNG, JPG, WebP)<input type="file" name="gambar" accept="image/png,image/jpeg,image/webp" required></label>
+    <label>Gambar asal / rujukan (pilihan)<input type="file" name="asal" accept="image/png,image/jpeg,image/webp"></label>
+    <label>Link sumber rujukan<input type="url" name="sumber" maxlength="500" placeholder="https://"></label>
+    <label class="al-wide">Nota<input type="text" name="nota" maxlength="400"></label>
+    <label class="al-wide">Prompt yang digunakan (pilihan)<textarea name="prompt" rows="3" maxlength="3000"></textarea></label>
+    <button type="submit" class="al-btn">Daftar gaya</button>
+    <p class="pod-muted al-wide" data-al-msg="busy" hidden>Sedang menyimpan…</p>
+    <p class="pod-muted al-wide" data-al-msg="ok" hidden>Gaya disimpan.</p>
+    <p class="pod-muted al-wide" data-al-msg="fail" hidden>Tidak disimpan. Semak nama dan gambar (PNG, JPG atau WebP). Hanya editor dashboard boleh mendaftar.</p>
+  </form>
+  <p class="pod-msg" data-al-empty="gaya_daftar" hidden>Belum ada gaya didaftar. Isi borang di atas dan muat naik satu contoh gambar untuk mendaftar S001.</p>
+  <div class="al-list" data-draw="al-gaya-list" data-source="gaya_daftar"></div>
+</section>
+
+<section id="al-warna" class="pod-section">
+  <h2>Daftar warna (C)</h2>
+  <p class="pod-muted">Muat naik gambar yang warnanya anda mahu tiru: warna latar dan warna huruf dibaca daripada gambar itu dan diisi ke dalam borang; anda boleh betulkan sebelum mendaftar. Hanya palet warna yang ditiru, bukan huruf atau lukisan asal.</p>
+  <form class="al-form pod-card" id="al-warna-form" aria-label="Daftar warna baharu">
+    <label>Gambar contoh warna (PNG, JPG, WebP)<input type="file" name="gambar" accept="image/png,image/jpeg,image/webp"></label>
+    <label>Gambar asal / rujukan (pilihan)<input type="file" name="asal" accept="image/png,image/jpeg,image/webp"></label>
+    <label>Nama warna<input type="text" name="nama" required maxlength="80" placeholder="Contoh: Oren retro atas gelap"></label>
+    <label>Warna latar<input type="color" name="latar" value="#1a1a1a"></label>
+    <label>Warna huruf (1 hingga 4 kod hex, asing dengan koma)<input type="text" name="huruf" required maxlength="60" placeholder="#f4a300, #ffffff"></label>
+    <label>Jenis ayat
+      <select class="dash-select" name="jenis">
+        <option>Motivasi</option><option>Lucu</option><option>Sarkastik</option><option>Keluarga</option><option>Semua jenis</option><option>Lain-lain</option>
+      </select>
+    </label>
+    <label>Gaya S yang serasi<input type="text" name="gaya" maxlength="120" placeholder="Contoh: S001, S003"></label>
+    <label>Enjin yang jana<input type="text" name="enjin" maxlength="60" placeholder="Contoh: MOSS-Image SFT" list="al-enjin-list"></label>
+    <label>Link sumber rujukan<input type="url" name="sumber" maxlength="500" placeholder="https://"></label>
+    <label class="al-wide">Nota<input type="text" name="nota" maxlength="400"></label>
+    <label class="al-wide">Prompt yang digunakan (pilihan)<textarea name="prompt" rows="3" maxlength="3000"></textarea></label>
+    <button type="submit" class="al-btn">Daftar warna</button>
+    <p class="pod-muted al-wide" data-al-msg="busy" hidden>Sedang menyimpan…</p>
+    <p class="pod-muted al-wide" data-al-msg="ok" hidden>Warna disimpan.</p>
+    <p class="pod-muted al-wide" data-al-msg="fail" hidden>Tidak disimpan. Semak nama dan kod hex (contoh #f4a300). Hanya editor dashboard boleh mendaftar.</p>
+  </form>
+  <p class="pod-msg" data-al-empty="warna_daftar" hidden>Belum ada warna didaftar. Muat naik satu gambar contoh di atas untuk mendaftar C001.</p>
+  <div class="al-list" data-draw="al-warna-list" data-source="warna_daftar"></div>
+  <div class="mt-zoom" id="al-zoom" hidden role="dialog" aria-modal="true" aria-label="Gambar besar">
+    <figure data-draw="al-zoom-fig"></figure>
+    <button type="button" class="mt-zoom-close" id="al-zoom-close">Tutup ✕</button>
+  </div>
+</section>
+
+<section id="al-kod" class="pod-section">
+  <h2>Kod design</h2>
+  <p class="al-kod">A001-S003-C002</p>
+  <p class="pod-muted">Setiap poster mendapat satu kod: nombor ayat (A), gaya (S) dan warna (C). Versi hitam putih ditulis tanpa C, contoh A001-S003. Kod ini dipakai pada nama fail dan dalam tab Prestasi, supaya jelas gaya dan warna mana yang laku.</p>
+</section>
+
+</section>
+
+
+
+
+
+
+
+
+<!-- FC:TAB START -->
+<section id="tab-fc" class="pod-tab" role="tabpanel" aria-labelledby="btn-fc" hidden>
+<div class="fc-subbar" role="tablist" aria-label="Sub tab FC">
+  <button type="button" class="fc-sub-btn" role="tab" id="btn-fc-design" data-sub="fc-design" aria-controls="fc-design" aria-selected="true">Design v1.2</button>
+</div>
+<section id="fc-design" class="pod-section pod-first fc-sub" role="tabpanel" aria-labelledby="btn-fc-design"><p class="pod-muted">Memuatkan carta…</p></section>
+</section>
+<!-- FC:TAB END -->
+
 </div>
 
 <script>
@@ -1993,6 +2101,68 @@ dash.draw('sources-body', (tb) => {
 </script>
 
 <script>
+POD.dZoom = (src, cap) => {
+  const z = document.getElementById('d-zoom'); if (!z) return;
+  document.getElementById('d-zoom-img').src = src; document.getElementById('d-zoom-cap').textContent = cap; z.hidden = false;
+  document.getElementById('d-zoom-close').focus();
+};
+POD.dUnzoom = () => { const z = document.getElementById('d-zoom'); if (z && !z.hidden) { z.hidden = true; document.getElementById('d-zoom-img').removeAttribute('src'); } };
+(() => {
+  const z = document.getElementById('d-zoom');
+  if (z) {
+    z.addEventListener('click', (e) => { if (e.target === z || e.target.id === 'd-zoom-close') POD.dUnzoom(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') POD.dUnzoom(); });
+  }
+})();
+dash.draw('d-gallery', (el) => {
+  const rows = POD.ok('design_motiv'); el.replaceChildren();
+  if (!rows) { const p = document.createElement('p'); p.className = 'pod-msg'; p.textContent = POD.statusMsg('design_motiv'); el.appendChild(p); return; }
+  const blob = (u) => (typeof u === 'string' && /^\/_blob\/[0-9a-f]+$/.test(u) ? u : null);
+  [...rows].sort((a, b) => a.no - b.no).forEach((r) => {
+    const fig = document.createElement('figure'); fig.className = 'd-card';
+    const src = blob(r.img);
+    if (src) {
+      const btn = document.createElement('button'); btn.type = 'button';
+      btn.setAttribute('aria-label', `Besarkan poster ${r.no}: ${r.quote}`);
+      const img = document.createElement('img'); img.src = src; img.loading = 'lazy'; img.alt = String(r.quote); img.width = 864; img.height = 1152;
+      btn.appendChild(img);
+      btn.addEventListener('click', () => POD.dZoom(src, `${r.no}. ${r.quote}`));
+      fig.appendChild(btn);
+    }
+    const cap = document.createElement('figcaption');
+    const n = document.createElement('b'); n.textContent = `${r.no}.`;
+    cap.append(n, document.createTextNode(String(r.quote)));
+    fig.appendChild(cap); el.appendChild(fig);
+  });
+});
+POD.sGallery = (el) => {
+  const ds = el.dataset.source || 'design_sarkas';
+  const rows = POD.ok(ds); el.replaceChildren();
+  if (!rows) { const p = document.createElement('p'); p.className = 'pod-msg'; p.textContent = POD.statusMsg(ds); el.appendChild(p); return; }
+  const blob = (u) => (typeof u === 'string' && /^\/_blob\/[0-9a-f]+$/.test(u) ? u : null);
+  [...rows].sort((a, b) => a.no - b.no).forEach((r) => {
+    const fig = document.createElement('figure'); fig.className = 'd-card d-sq';
+    const src = blob(r.img);
+    if (src) {
+      const btn = document.createElement('button'); btn.type = 'button';
+      btn.setAttribute('aria-label', `Besarkan design ${r.no}: ${r.quote}`);
+      const img = document.createElement('img'); img.src = src; img.loading = 'lazy'; img.alt = String(r.quote); img.width = 768; img.height = 768;
+      btn.appendChild(img);
+      btn.addEventListener('click', () => POD.dZoom(src, `${r.no}. ${r.quote}`));
+      fig.appendChild(btn);
+    }
+    const cap = document.createElement('figcaption');
+    const n = document.createElement('b'); n.textContent = `${r.no}.`;
+    cap.append(n, document.createTextNode(String(r.quote)));
+    if (r.theme) { const th = document.createElement('span'); th.className = 'd-theme'; th.textContent = String(r.theme); cap.appendChild(th); }
+    fig.appendChild(cap); el.appendChild(fig);
+  });
+};
+dash.draw('d-gallery-s', POD.sGallery);
+dash.draw('d-gallery-w', POD.sGallery);
+</script>
+
+<script>
 (() => {
   const tabs = () => [...document.querySelectorAll('.pod-tab')];
   const btns = () => [...document.querySelectorAll('.pod-tab-btn')];
@@ -2002,6 +2172,7 @@ dash.draw('sources-body', (tb) => {
     all.forEach((t) => { t.hidden = t.id !== id; });
     btns().forEach((b) => { const on = b.dataset.tab === id; b.setAttribute('aria-selected', on ? 'true' : 'false'); b.tabIndex = on ? 0 : -1; });
     if (link) dash.setLink(id);
+    if (POD.stickyTops) requestAnimationFrame(() => { POD.stickyTops(); if (POD.spy) POD.spy(); });
     return true;
   };
   btns().forEach((b, i, list) => {
@@ -2012,6 +2183,42 @@ dash.draw('sources-body', (tb) => {
       if (next) { POD.openTab(next.dataset.tab, true); next.focus(); }
     });
   });
+
+  const bar = document.querySelector('.pod-tabbar');
+  POD.stickyTops = () => {
+    if (!bar) return;
+    const root = document.documentElement;
+    const barH = Math.round(bar.getBoundingClientRect().height);
+    root.style.setProperty('--pod-top-tabs', barH + 'px');
+    const open = document.querySelector('.pod-tab:not([hidden]) .pod-nav');
+    const navH = open ? Math.round(open.getBoundingClientRect().height) : 0;
+    root.style.setProperty('--pod-top-nav', (barH + navH) + 'px');
+  };
+  POD.stickyTops();
+  if (window.ResizeObserver && bar) new ResizeObserver(() => POD.stickyTops()).observe(bar);
+  window.addEventListener('resize', POD.stickyTops);
+
+
+  POD.spy = () => {
+    const nav = document.querySelector('.pod-tab:not([hidden]) .pod-nav');
+    if (!nav) return;
+    const top = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--pod-top-nav')) || 0;
+    const links = [...nav.querySelectorAll('a')];
+    let cur = null;
+    links.forEach((a) => {
+      const el = document.getElementById(decodeURIComponent(a.getAttribute('href').slice(1)));
+      if (el && el.getBoundingClientRect().top <= top + 28) cur = a;
+    });
+    links.forEach((a) => a.setAttribute('aria-current', a === cur ? 'true' : 'false'));
+  };
+  let spying = false;
+  window.addEventListener('scroll', () => {
+    if (spying) return;
+    spying = true;
+    requestAnimationFrame(() => { spying = false; POD.spy(); });
+  }, { passive: true });
+  POD.spy();
+
   const fromHash = () => {
     let h = '';
     try { h = decodeURIComponent((location.hash || '').slice(1)); } catch (e) { h = ''; }
@@ -2706,39 +2913,71 @@ POD.mtUnzoom = () => { const z = document.getElementById('mt-zoom'); if (z && !z
   const bad = document.getElementById('mt-bad-only');
   if (bad) bad.addEventListener('change', () => { POD.mtBadOnly = bad.checked; dash.draw('mt-gallery'); });
 })();
-dash.draw('mt-gallery', (el) => {
-  const rows = POD.ok('model_test'); el.replaceChildren();
-  if (!rows) { const p = document.createElement('p'); p.className = 'pod-msg'; p.textContent = POD.statusMsg('model_test'); el.appendChild(p); return; }
+POD.blob = (u) => (typeof u === 'string' && /^\/_blob\/[0-9a-f]+$/.test(u) ? u : null);
+POD.mtGallery = (testId, refsId, modelsId, opts) => (el) => {
+  const rows = POD.ok(testId); el.replaceChildren();
+  if (!rows) { const p = document.createElement('p'); p.className = 'pod-msg'; p.textContent = POD.statusMsg(testId); el.appendChild(p); return; }
+  const refs = new Map((POD.ok(refsId) || []).map((x) => [x.id, x]));
+  const models = modelsId ? (POD.ok(modelsId) || []).slice().sort((a, b) => a.model_order - b.model_order) : [];
+  const blob = POD.blob;
   const designs = new Map();
   rows.forEach((r, i) => { if (!designs.has(r.id)) designs.set(r.id, []); designs.get(r.id).push({ r, i }); });
   let shown = 0;
   [...designs.values()].sort((a, b) => a[0].r.no - b[0].r.no).forEach((list) => {
     const d = list[0].r;
-    if (POD.mtSet && d.set !== POD.mtSet) return;
-    if (POD.mtBadOnly && list.every((x) => x.r.ok)) return;
+    if (opts.set && opts.set() && d.set !== opts.set()) return;
+    if (opts.bad && opts.bad() && list.every((x) => x.r.ok)) return;
     shown += 1;
     const box = document.createElement('div'); box.className = 'mt-design';
     const head = document.createElement('div'); head.className = 'mt-head';
     const title = document.createElement('b'); title.textContent = `${d.no}. ${d.type}`;
     const txt = document.createElement('span'); txt.className = 'pod-muted'; txt.textContent = `Teks: ${d.text}`;
-    head.append(title, txt, POD.pill(d.set_name));
-    const row = document.createElement('div'); row.className = 'mt-row';
-    list.sort((a, b) => a.r.model_order - b.r.model_order).forEach(({ r, i }) => {
-      const fig = document.createElement('figure'); fig.className = 'mt-cell'; fig.dataset.ok = r.ok ? '1' : '0';
+    head.append(title, txt);
+    if (d.set_name) head.appendChild(POD.pill(d.set_name));
+    if (d.words) head.appendChild(POD.pill(`${d.words} perkataan`));
+    const row = document.createElement('div'); row.className = 'mt-row' + (opts.cols === 5 ? ' mt-5' : opts.cols === 3 ? ' mt-3' : '');
+    const ref = refs.get(d.id);
+    if (ref && blob(ref.ref_img)) {
+      const fig = document.createElement('figure'); fig.className = 'mt-cell'; fig.dataset.ok = 'ref';
+      const btn = document.createElement('button'); btn.type = 'button';
+      btn.setAttribute('aria-label', `Lihat rujukan penuh: design ${d.no}`);
+      const img = document.createElement('img'); img.src = ref.ref_img; img.loading = 'lazy'; img.alt = `Rujukan: ${ref.ref_from}`;
+      img.style.aspectRatio = `${d.w} / ${d.h}`; img.style.objectFit = 'contain';
+      btn.appendChild(img);
+      const full = blob(ref.ref_full) || ref.ref_img;
+      btn.addEventListener('click', () => POD.mtZoom(full, `Rujukan anda · ${ref.ref_from}${ref.cropped ? ' (gambar penuh; design ini dipotong daripadanya)' : ''} · design orang lain, rujukan gaya sahaja`));
       const cap = document.createElement('figcaption'); cap.className = 'mt-cap';
-      const name = document.createElement('b'); name.textContent = r.model_name;
+      const name = document.createElement('b'); name.textContent = 'Rujukan anda';
+      const from = document.createElement('span'); from.className = 'pod-muted'; from.textContent = ref.ref_from;
+      cap.append(name, from); fig.append(btn, cap); row.appendChild(fig);
+    }
+    const byModel = new Map(list.map((x) => [x.r.model, x]));
+    const order = models.length ? models.map((m) => m.model) : list.sort((a, b) => a.r.model_order - b.r.model_order).map((x) => x.r.model);
+    order.forEach((mk) => {
+      const x = byModel.get(mk); const fig = document.createElement('figure'); fig.className = 'mt-cell';
+      const cap = document.createElement('figcaption'); cap.className = 'mt-cap';
+      const name = document.createElement('b');
+      if (!x) {
+        const m = models.find((mm) => mm.model === mk) || {};
+        name.textContent = m.model_name || mk;
+        const ph = document.createElement('div'); ph.className = 'mt-empty'; ph.style.aspectRatio = `${d.w} / ${d.h}`; ph.textContent = m.missing_note || 'Tidak dijana';
+        cap.appendChild(name); fig.append(ph, cap); row.appendChild(fig); return;
+      }
+      const r = x.r; fig.dataset.ok = r.ok ? '1' : '0';
+      name.textContent = r.model_name;
       const verdict = document.createElement('span'); verdict.className = r.ok ? 'mt-ok' : 'mt-bad';
-      verdict.textContent = r.ok ? '✓ Betul' : `✗ Salah: ${r.wrong}`;
+      const wc = r.words ? ` (${r.words - (r.wrong_n || 0)}/${r.words} perkataan betul)` : '';
+      verdict.textContent = r.verdict_text || (r.ok ? `✓ Betul${wc}` : `✗ ${r.words ? 'Ada silap' : 'Salah'}${wc}: ${r.wrong}`);
       const sec = document.createElement('span'); sec.className = 'pod-muted'; sec.textContent = ` · ${r.seconds} s`;
       cap.append(name, verdict, sec);
-      const src = typeof r.img === 'string' && /^\/_blob\/[0-9a-f]+$/.test(r.img) ? r.img : null;
+      const src = blob(r.img);
       if (src) {
         const btn = document.createElement('button'); btn.type = 'button';
         btn.setAttribute('aria-label', `Besarkan: ${r.model_name}, design ${r.no}`);
         const img = document.createElement('img'); img.src = src; img.loading = 'lazy'; img.alt = `${r.model_name}: ${r.text}`;
         img.width = r.w; img.height = r.h;
         btn.appendChild(img);
-        btn.addEventListener('click', () => POD.mtZoom(src, `${r.model_name} · ${d.no}. ${d.type} · ${r.ok ? 'Ejaan betul' : 'Salah: ' + r.wrong} · ${r.seconds} s`));
+        btn.addEventListener('click', () => POD.mtZoom(src, `${r.model_name} · ${d.no}. ${d.type} · ${r.verdict_text || (r.ok ? 'Ejaan betul' : 'Salah: ' + r.wrong)} · ${r.seconds} s`));
         fig.appendChild(btn);
       }
       fig.appendChild(cap); row.appendChild(fig);
@@ -2746,21 +2985,181 @@ dash.draw('mt-gallery', (el) => {
     box.append(head, row); el.appendChild(box);
   });
   if (!shown) { const p = document.createElement('p'); p.className = 'pod-msg'; p.textContent = 'Tiada design untuk pilihan ini.'; el.appendChild(p); }
+};
+dash.draw('mt-gallery', POD.mtGallery('model_test', 'model_test_refs', null, { set: () => POD.mtSet, bad: () => POD.mtBadOnly, cols: 4 }));
+dash.calc('lettering_summary', {
+  title: 'Ringkasan ujian lettering (ayat panjang)',
+  description: 'Bagi setiap cara jana: design yang semua perkataannya betul, peratus perkataan betul (jumlah perkataan tolak perkataan salah), dan purata saat setiap imej. Disusun ikut design betul, kemudian peratus perkataan.',
+  inputs: ['lettering_test', 'lettering_test_models'],
+  fn: (images, models) => models.map((m) => {
+    const mine = images.filter((r) => r.model === m.model);
+    const ok = mine.filter((r) => r.ok).length;
+    const words = mine.reduce((s, r) => s + Number(r.words || 0), 0);
+    const bad = mine.reduce((s, r) => s + Number(r.wrong_n || 0), 0);
+    const total = mine.reduce((s, r) => s + Number(r.seconds || 0), 0);
+    return { model: m.model, model_name: m.model_name, ok, images: mine.length, score: mine.length ? `${ok}/${mine.length}` : '—',
+      words_pct: words ? Math.round((100 * (words - bad)) / words) : null, avg_s: mine.length ? Math.round(total / mine.length) : null,
+      how: m.how, strength: m.strength, weakness: m.weakness, license: m.license, source: m.source, missing_note: m.missing_note || '' };
+  }).sort((a, b) => b.ok - a.ok || (b.words_pct || 0) - (a.words_pct || 0))
+});
+dash.draw('lt-models', (el) => {
+  const rows = POD.ok('lettering_summary'); el.replaceChildren();
+  if (!rows) { const p = document.createElement('p'); p.className = 'pod-msg'; p.textContent = POD.statusMsg('lettering_summary'); el.appendChild(p); return; }
+  rows.forEach((r, i) => {
+    const card = document.createElement('div'); card.className = 'pod-kpi' + (i === 0 && r.images ? ' pod-hl' : '');
+    const q = document.createElement('div'); q.className = 'pod-q'; q.textContent = r.model_name;
+    const big = document.createElement('div'); big.className = 'mt-score ' + (r.images && r.ok === r.images ? 'mt-ok' : r.images && r.ok * 2 < r.images ? 'mt-bad' : '');
+    big.textContent = r.score; big.dataset.source = 'lettering_summary'; big.dataset.field = 'score'; big.dataset.row = String(i);
+    const lab = document.createElement('div'); lab.className = 'pod-muted'; lab.textContent = 'design semua perkataan betul';
+    card.append(q, big, lab);
+    if (r.images) {
+      const bar = document.createElement('div'); bar.className = 'mt-bar'; const fill = document.createElement('span');
+      fill.style.width = `${r.words_pct || 0}%`; bar.appendChild(fill);
+      const w = document.createElement('div'); w.className = 'pod-muted'; w.textContent = `Perkataan betul: ${r.words_pct}%`;
+      const t = document.createElement('div'); t.className = 'pod-muted'; t.textContent = `Purata ${POD.mtTime(r.avg_s)} setiap imej`;
+      card.append(bar, w, t);
+    } else {
+      const n = document.createElement('div'); n.className = 'pod-muted'; n.textContent = r.missing_note || 'Tiada imej'; card.appendChild(n);
+    }
+    if (i === 0 && r.images) card.appendChild(POD.pill('Terbaik dalam ujian ini', null, 'ok'));
+    el.appendChild(card);
+  });
+});
+POD.mRows('lt-body', 'lettering_summary', 8, (tr, r) => {
+  tr.dataset.key = POD.enc(r.model);
+  const m = POD.cell(tr, r.model_name); m.style.fontWeight = '600'; m.style.whiteSpace = 'nowrap';
+  const s = POD.cell(tr, r.score, 'pod-num'); s.style.fontWeight = '600';
+  POD.cell(tr, r.words_pct == null ? '—' : `${r.words_pct}%`, 'pod-num'); POD.cell(tr, POD.mtTime(r.avg_s));
+  POD.cell(tr, r.how, 'pod-wide'); POD.cell(tr, r.strength, 'pod-wide'); POD.cell(tr, r.weakness, 'pod-wide');
+  POD.linkCell(tr, r.source, r.license);
+});
+POD.mRows('lt-gaps-body', 'lettering_gaps', 5, (tr, r) => {
+  tr.dataset.key = POD.enc(r.gap);
+  const g = POD.cell(tr, r.gap); g.style.fontWeight = '600';
+  POD.cell(tr, r.ref, 'pod-wide'); POD.cell(tr, r.ai, 'pod-wide'); POD.cell(tr, r.closest); POD.cell(tr, r.fix, 'pod-wide');
+});
+dash.draw('lt-gallery', POD.mtGallery('lettering_test', 'lettering_test_refs', 'lettering_test_models', { cols: 5 }));
+dash.calc('lettering_v2_summary', {
+  title: 'Ringkasan ujian ERNIE v2',
+  description: 'Jumlah imej v2, imej yang semua perkataannya betul tanpa huruf rawak, peratus perkataan betul dan purata saat setiap imej.',
+  inputs: ['lettering_v2'],
+  fn: (rows) => {
+    const words = rows.reduce((s, r) => s + Number(r.words || 0), 0);
+    const bad = rows.reduce((s, r) => s + Number(r.wrong_n || 0), 0);
+    const total = rows.reduce((s, r) => s + Number(r.seconds || 0), 0);
+    return [{ images: rows.length, ok: rows.filter((r) => r.ok).length,
+      words_pct: words ? Math.round((100 * (words - bad)) / words) : null, avg_s: rows.length ? Math.round(total / rows.length) : null }];
+  },
+});
+POD.text('lt2-sum', 'lettering_v2_summary', (rows) => rows[0],
+  (r) => `Hasil v2: ${r.ok}/${r.images} imej betul semua · ${r.words_pct}% perkataan betul · purata ${POD.mtTime(r.avg_s)} setiap imej`);
+POD.stdPill = (tr, v) => {
+  const t = { ya: ['Ya', 'ok'], sebahagian: ['Sebahagian', 'warn'], tidak: ['Tidak', 'bad'] }[v];
+  const td = document.createElement('td'); if (t) td.appendChild(POD.pill(t[0], null, t[1])); else td.textContent = '—';
+  tr.appendChild(td); return td;
+};
+POD.mRows('lt-std-body', 'lettering_standard', 6, (tr, r) => {
+  tr.dataset.key = POD.enc(r.criterion);
+  const c = POD.cell(tr, r.criterion); c.style.fontWeight = '600';
+  POD.cell(tr, r.ref, 'pod-wide'); POD.cell(tr, r.v1, 'pod-wide'); POD.stdPill(tr, r.v1_pass);
+  POD.cell(tr, r.v2, 'pod-wide'); POD.stdPill(tr, r.v2_pass);
+});
+dash.draw('lt2-gallery', POD.mtGallery('lettering_v2', 'lettering_v2_refs', 'lettering_v2_models', { cols: 3 }));
+dash.calc('lettering_v3_summary', {
+  title: 'Ringkasan pusingan QC v3',
+  description: 'Bilangan design yang lulus QC (ejaan 100%, tiada teks rawak, tiada cacat, gaya 7/8 atau lebih), jumlah cubaan dan purata cubaan sehingga lulus.',
+  inputs: ['lettering_v3', 'lettering_v3_refs'],
+  fn: (rows, refs) => {
+    const passed = new Map();
+    rows.forEach((r) => { if (r.ok && (!passed.has(r.id) || r.attempt < passed.get(r.id))) passed.set(r.id, r.attempt); });
+    const tries = [...passed.values()];
+    return [{ designs: refs.length, passed: passed.size, attempts: rows.length,
+      avg_tries: tries.length ? Math.round((10 * tries.reduce((a, b) => a + b, 0)) / tries.length) / 10 : null }];
+  },
+});
+POD.text('lt3-sum', 'lettering_v3_summary', (rows) => rows[0],
+  (r) => `Lulus QC: ${r.passed}/${r.designs} design · ${r.attempts} imej dijana · purata ${r.avg_tries == null ? '—' : r.avg_tries} cubaan sehingga lulus`);
+POD.mRows('lt-deep-body', 'lettering_ref_elements', 9, (tr, r) => {
+  tr.dataset.key = POD.enc(r.ref);
+  const c = POD.cell(tr, `${r.ref} · ${r.name}`); c.style.fontWeight = '600';
+  ['words_lines', 'layout', 'hierarchy', 'fonts', 'ornaments', 'texture', 'palette', 'extra'].forEach((k) => POD.cell(tr, r[k], 'pod-wide'));
+});
+POD.mRows('lt3-qc-body', 'lettering_v3', 7, (tr, r) => {
+  tr.dataset.key = POD.enc(r.id);
+  const c = POD.cell(tr, `${r.id} · ${r.type}`); c.style.fontWeight = '600';
+  POD.cell(tr, r.attempt, 'pod-num'); POD.cell(tr, r.seed, 'pod-num');
+  POD.cell(tr, `${r.words - r.wrong_n}/${r.words}`, 'pod-num'); POD.cell(tr, `${r.style_score}/${r.style_max}`, 'pod-num');
+  const v = POD.cell(tr, r.verdict_text, 'pod-wide'); v.className += r.ok ? ' mt-ok' : ' mt-bad';
+  POD.cell(tr, r.action, 'pod-wide');
+});
+dash.draw('lt3-final', POD.mtGallery('lettering_v3_final', 'lettering_v3_refs', 'lettering_v3_final_models', { cols: 3 }));
+dash.draw('lt3-gallery', POD.mtGallery('lettering_v3', 'lettering_v3_refs', 'lettering_v3_models', { cols: 5 }));
+POD.text('p9-sum', 'lettering_p9_test', (rows) => ({ parts: ['moss', 'ernie', 'klein4b'].map((e) => {
+  const rs = rows.filter((r) => (r.engine || 'moss') === e); if (!rs.length) return null;
+  const ok = rs.filter((r) => r.wrong_n === 0 && !r.extra_n).length;
+  const min = Math.round(rs.reduce((s, r) => s + r.seconds, 0) / rs.length / 6) / 10;
+  return `${rs[0].engine_name || 'MOSS-Image SFT'} ${ok}/${rs.length} betul, ${min} min/imej`;
+}).filter(Boolean) }), (r) => r.parts.join(' · '));
+dash.draw('p9-gallery', (el) => {
+  const rows = POD.ok('lettering_p9_test'); el.replaceChildren();
+  if (!rows) { el.textContent = POD.statusMsg('lettering_p9_test'); return; }
+  let last = null;
+  rows.filter((r) => r.gallery ?? r.pick).forEach((r) => {
+    const eng = r.engine_name || 'MOSS-Image SFT (8 langkah)';
+    if (eng !== last) { last = eng; const h = document.createElement('h4'); h.textContent = eng; h.style.gridColumn = '1 / -1'; h.style.margin = 'var(--cds-gap-md) 0 0'; el.appendChild(h); }
+    const fig = document.createElement('figure'); fig.className = 'p9-card';
+    [['raw_img', 'AI mentah'], ['final_img', 'Siap cetak']].forEach(([k, lab]) => {
+      const src = POD.blob(r[k]); if (!src) return;
+      const img = document.createElement('img'); img.src = src; img.loading = 'lazy'; img.alt = `${r.style} ${lab}: ${r.text}`;
+      img.addEventListener('click', () => POD.mtZoom(src, `${r.style} · ${r.style_name} · ${lab}`));
+      fig.appendChild(img);
+    });
+    const cap = document.createElement('figcaption'); cap.className = 'pod-muted';
+    cap.textContent = `${r.style} · ${r.style_name} (seed ${r.seed})${r.pick ? '' : ' · TIDAK LULUS'}: ${r.note}`;
+    fig.appendChild(cap); el.appendChild(fig);
+  });
+});
+POD.mRows('p9-tools-body', 'lettering_p9_tools', 5, (tr, r) => {
+  tr.dataset.key = POD.enc(r.job);
+  const c = POD.cell(tr, r.job); c.style.fontWeight = '600';
+  POD.cell(tr, r.tool, 'pod-wide'); POD.cell(tr, r.license); POD.cell(tr, r.where); POD.cell(tr, r.status, 'pod-wide');
+});
+POD.mRows('p9-steps-body', 'lettering_p9_steps', 5, (tr, r) => {
+  tr.dataset.key = POD.enc(String(r.no));
+  POD.cell(tr, r.no, 'pod-num'); POD.cell(tr, r.phase); POD.cell(tr, r.who); POD.cell(tr, r.step, 'pod-wide'); POD.cell(tr, r.status);
+});
+POD.mRows('p9-engines-body', 'lettering_p9_engines', 7, (tr, r) => {
+  tr.dataset.key = POD.enc(r.engine);
+  const c = POD.cell(tr, r.engine_name); c.style.fontWeight = '600';
+  const o = POD.cell(tr, `${r.ok}/${r.images}`, 'pod-num'); o.className += r.ok === r.images ? ' mt-ok' : ' mt-bad';
+  POD.cell(tr, `${r.styles_ok}/${r.styles}`, 'pod-num'); POD.cell(tr, POD.mtTime(r.avg_seconds));
+  POD.cell(tr, `${r.finish}/${r.styles}`, 'pod-num'); POD.cell(tr, r.strength, 'pod-wide'); POD.cell(tr, r.weakness, 'pod-wide');
+});
+POD.mRows('p9-test-body', 'lettering_p9_test', 7, (tr, r) => {
+  tr.dataset.key = POD.enc(r.id);
+  POD.cell(tr, r.engine_name || 'MOSS-Image SFT (8 langkah)');
+  const c = POD.cell(tr, `${r.style} · ${r.style_name}`); c.style.fontWeight = '600';
+  POD.cell(tr, r.seed, 'pod-num');
+  const bad = r.wrong_n > 0 || r.extra_n > 0;
+  const e = POD.cell(tr, `${r.words - r.wrong_n}/${r.words}${r.extra_n ? ' +' + r.extra_n + ' rawak' : ''}`, 'pod-num'); e.className += bad ? ' mt-bad' : ' mt-ok';
+  POD.cell(tr, POD.mtTime(r.seconds)); POD.cell(tr, r.pick ? 'Ya' : '–'); POD.cell(tr, r.note, 'pod-wide');
+});
+POD.mRows('wf-sop-body', 'lettering_sop', 5, (tr, r) => {
+  tr.dataset.key = POD.enc(r.no);
+  POD.cell(tr, r.no, 'pod-num'); const s = POD.cell(tr, r.step); s.style.fontWeight = '600';
+  POD.cell(tr, r.who); POD.cell(tr, r.detail, 'pod-wide'); POD.cell(tr, r.check, 'pod-wide');
+});
+POD.mRows('wf-qc-body', 'lettering_qc_rubric', 4, (tr, r) => {
+  tr.dataset.key = POD.enc(`${r.ref}-${r.code}`);
+  POD.cell(tr, r.ref === 'Semua' ? 'Semua gaya' : `${r.ref} · ${r.ref_name}`);
+  const k = document.createElement('td'); k.appendChild(POD.pill(r.kind, null, r.kind === 'Wajib' ? 'bad' : null)); tr.appendChild(k);
+  POD.cell(tr, r.code); POD.cell(tr, r.check, 'pod-wide');
 });
 POD.text('m-rej', 'model_counts', (r) => r[0].rejected, POD.int);
 POD.mRows('m-use-body', 'model_usecase', 5, (tr, r) => {
   tr.dataset.key = POD.enc(r.kind);
   const k = POD.cell(tr, r.kind); k.style.fontWeight = '600';
   POD.cell(tr, r.main); POD.cell(tr, r.backup); POD.cell(tr, r.process, 'pod-wide'); POD.cell(tr, r.why, 'pod-wide');
-});
-POD.mRows('m-compare-body', 'model_compare', 16, (tr, r) => {
-  tr.dataset.key = POD.enc(r.model);
-  const m = POD.cell(tr, r.model); m.style.fontWeight = '600';
-  POD.cell(tr, r.license); POD.cell(tr, r.commercial); POD.cell(tr, r.run); POD.cell(tr, r.ram); POD.cell(tr, r.steps);
-  POD.cell(tr, r.text_short, 'pod-wide'); POD.cell(tr, r.text_long, 'pod-wide'); POD.cell(tr, r.bw); POD.cell(tr, r.color); POD.cell(tr, r.bg);
-  POD.cell(tr, r.speed, 'pod-wide'); POD.cell(tr, r.community, 'pod-wide');
-  const v = document.createElement('td'); v.appendChild(POD.pill(r.verdict, null, r.tone || 'warn')); tr.appendChild(v);
-  POD.pillCell(tr, r.level); POD.linkCell(tr, r.source, 'sumber');
 });
 POD.mRows('m-history-body', 'model_history', 6, (tr, r) => {
   tr.dataset.key = POD.enc(r.what);
@@ -2777,6 +3176,119 @@ POD.mRows('m-sources-body', 'model_sources', 5, (tr, r) => {
   tr.dataset.key = POD.enc(r.source);
   POD.cell(tr, r.source, 'pod-wide'); POD.cell(tr, r.kind); POD.cell(tr, r.used_for); POD.pillCell(tr, r.level); POD.linkCell(tr, r.url, 'buka');
 });
+POD.msLabels = [
+  ['terms', 'Had / syarat lesen'], ['use', 'Kegunaan'], ['space', 'Space'], ['gpu', 'GPU / gambar'],
+  ['checked', 'Lesen disemak'], ['t_run', 'Jalan di mana'], ['t_ram', 'RAM / saiz fail'], ['t_steps', 'Langkah'],
+  ['t_short', 'Tulisan pendek (penuh)'], ['t_long', 'Tulisan panjang (penuh)'], ['t_bw', 'Hitam-putih'],
+  ['t_color', 'Berwarna'], ['t_bg', 'Latar gambar'], ['t_speed', 'Kelajuan'], ['t_community', 'Forum / blog'],
+  ['t_verdict', 'Keputusan ujian'], ['t_source', 'Sumber ujian'],
+];
+POD.msDetail = (r) => {
+  const dl = document.createElement('dl'); dl.className = 'ms-dl';
+  POD.msLabels.forEach(([k, label]) => {
+    const v = r[k];
+    if (v == null || v === '' || v === '-' || v === '\u2013') return;
+    const dt = document.createElement('dt'); dt.textContent = label;
+    const dd = document.createElement('dd');
+    if (String(v).startsWith('http')) { const a = POD.link(v, 'buka'); if (a) dd.appendChild(a); else dd.textContent = v; }
+    else dd.textContent = String(v);
+    dl.appendChild(dt); dl.appendChild(dd);
+  });
+  if (!dl.children.length) { const dd = document.createElement('dd'); dd.textContent = 'Tiada butiran lain.'; dl.appendChild(dd); }
+  return dl;
+};
+dash.draw('ms-body', (tb) => {
+  const rows = POD.ok('master_models'); tb.replaceChildren();
+  if (!rows) { POD.emptyRow(tb, 12, POD.statusMsg('master_models')); return; }
+  rows.forEach((r) => {
+    const tr = document.createElement('tr');
+    tr.dataset.key = POD.enc(r.model);
+    const td = document.createElement('td');
+    const btn = document.createElement('button');
+    btn.type = 'button'; btn.className = 'ms-toggle'; btn.textContent = r.model;
+    btn.setAttribute('aria-expanded', 'false');
+    td.appendChild(btn); tr.appendChild(td);
+    POD.cell(tr, r.group);
+    const c = document.createElement('td'); c.appendChild(POD.pill(r.commercial, null, r.commercial_tone)); tr.appendChild(c);
+    POD.cell(tr, r.license); POD.cell(tr, r.size); POD.cell(tr, r.vram);
+    POD.cell(tr, r.img_free == null ? '\u2014' : POD.int(r.img_free), 'pod-num');
+    const s = document.createElement('td'); s.appendChild(POD.pill(r.short, null, r.short_tone)); tr.appendChild(s);
+    const l = document.createElement('td'); l.appendChild(POD.pill(r.long, null, r.long_tone)); tr.appendChild(l);
+    const v = document.createElement('td'); v.appendChild(POD.pill(r.verdict, null, r.tone || null)); tr.appendChild(v);
+    POD.pillCell(tr, r.level); POD.linkCell(tr, r.source, 'buka');
+    const det = document.createElement('tr'); det.className = 'ms-detail'; det.hidden = true;
+    const dtd = document.createElement('td'); dtd.colSpan = 12; dtd.appendChild(POD.msDetail(r)); det.appendChild(dtd);
+    btn.addEventListener('click', () => {
+      det.hidden = !det.hidden;
+      btn.setAttribute('aria-expanded', det.hidden ? 'false' : 'true');
+    });
+    tb.appendChild(tr); tb.appendChild(det);
+  });
+});
+POD.mRows('mn-body', 'model_notes', 6, (tr, r) => {
+  tr.dataset.key = POD.enc(r.item);
+  const k = document.createElement('td'); k.appendChild(POD.pill(r.kind, null, r.kind === 'Ditolak' ? 'bad' : 'warn')); tr.appendChild(k);
+  const m = POD.cell(tr, r.item); m.style.fontWeight = '600';
+  POD.cell(tr, r.stage); POD.cell(tr, r.why);
+  POD.pillCell(tr, r.level); POD.linkCell(tr, r.source, 'buka');
+});
+dash.calc('image_stats', {
+  title: 'Ringkasan daftar ujian imej',
+  description: 'Jumlah imej dijana, bilangan lulus, peratus lulus dan jumlah jam masa jana, dikira daripada daftar ujian imej.',
+  inputs: ['image_log'],
+  fn: (rows) => {
+    const pass = rows.filter((r) => r.result === 'Lulus').length;
+    const secs = rows.reduce((s, r) => s + (Number(r.seconds) || 0), 0);
+    return [{ total: rows.length, pass, rate: rows.length ? Math.round((pass / rows.length) * 100) + '%' : '—',
+              hours: Math.round((secs / 3600) * 10) / 10 }];
+  }
+});
+dash.calc('image_by_engine', {
+  title: 'Ujian imej ikut enjin',
+  description: 'Bagi setiap enjin: bilangan imej, bilangan lulus, peratus lulus, purata saat setiap imej dan jumlah minit.',
+  inputs: ['image_log'],
+  fn: (rows) => {
+    const by = new Map();
+    rows.forEach((r) => {
+      const k = r.engine || '—';
+      const v = by.get(k) || { engine: k, images: 0, pass: 0, secs: 0 };
+      v.images += 1; if (r.result === 'Lulus') v.pass += 1; v.secs += Number(r.seconds) || 0;
+      by.set(k, v);
+    });
+    return [...by.values()].map((v) => ({
+      engine: v.engine, images: v.images, pass: v.pass,
+      rate: Math.round((v.pass / v.images) * 100) + '%',
+      avg_s: Math.round(v.secs / v.images), total_min: Math.round(v.secs / 60),
+    })).sort((a, b) => b.images - a.images);
+  }
+});
+POD.text('im-total', 'image_stats', (r) => r[0].total, POD.int);
+POD.text('im-pass', 'image_stats', (r) => r[0].pass, POD.int);
+POD.text('im-rate', 'image_stats', (r) => r[0].rate);
+POD.text('im-hours', 'image_stats', (r) => r[0].hours, (v) => String(v));
+POD.mRows('im-enjin-body', 'image_by_engine', 6, (tr, r) => {
+  tr.dataset.key = POD.enc(r.engine);
+  const m = POD.cell(tr, r.engine); m.style.fontWeight = '600';
+  POD.cell(tr, POD.int(r.images), 'pod-num'); POD.cell(tr, POD.int(r.pass), 'pod-num');
+  POD.cell(tr, r.rate, 'pod-num'); POD.cell(tr, POD.int(r.avg_s), 'pod-num'); POD.cell(tr, POD.int(r.total_min), 'pod-num');
+});
+POD.mRows('im-log-body', 'image_log', 12, (tr, r) => {
+  tr.dataset.key = POD.enc(r.id);
+  POD.cell(tr, POD.tarikh ? POD.tarikh(r.date) : r.date);
+  const m = POD.cell(tr, r.engine); m.style.fontWeight = '600';
+  POD.cell(tr, r.variant || '—'); POD.cell(tr, r.where); POD.cell(tr, r.purpose);
+  POD.cell(tr, r.text); POD.cell(tr, r.seed == null ? '—' : String(r.seed), 'pod-num');
+  POD.cell(tr, r.size); POD.cell(tr, r.seconds == null ? '—' : POD.int(r.seconds), 'pod-num');
+  const v = document.createElement('td'); v.appendChild(POD.pill(r.result, null, r.tone)); tr.appendChild(v);
+  POD.cell(tr, r.wrong || '—');
+  POD.linkCell(tr, r.img ? '/_blob/' + r.img : '', 'buka');
+});
+POD.mlQuota = (tier) => (el) => {
+  const rows = POD.ok('hf_zerogpu_quota'); const q = rows ? rows.find((x) => x.tier === tier) : null;
+  el.textContent = q ? POD.int(q.minutes) : '—';
+};
+dash.draw('ml-free', POD.mlQuota('Free'));
+dash.draw('ml-pro', POD.mlQuota('PRO'));
 
 POD.BULAN = ['Jan', 'Feb', 'Mac', 'Apr', 'Mei', 'Jun', 'Jul', 'Ogos', 'Sep', 'Okt', 'Nov', 'Dis'];
 POD.tarikh = (s) => { const d = d3.utcParse('%Y-%m-%d')(String(s || '')); return d ? d.getUTCDate() + ' ' + POD.BULAN[d.getUTCMonth()] + ' ' + d.getUTCFullYear() : '—'; };
@@ -2905,29 +3417,6 @@ dash.calc('fonts_summary', {
 
 POD.text('f-n-unchk', 'fonts_meta', (r) => r[0].fq_unchecked, POD.int);
 
-dash.draw('f-moods', (el) => {
-  const moods = POD.ok('fonts_moods');
-  el.replaceChildren();
-  if (!moods) { const p = document.createElement('p'); p.className = 'pod-msg'; p.textContent = POD.statusMsg('fonts_moods'); el.appendChild(p); return; }
-  const imgs = {};
-  (POD.ok('fonts_specimens') || []).forEach((r) => { if (typeof r.url === 'string' && r.url.startsWith('/_blob/')) imgs[r.mood] = r.url; });
-  moods.forEach((m) => {
-    const card = document.createElement('article'); card.className = 'pod-card pod-font-card'; card.id = 'f-mood-' + m.id;
-    const h = document.createElement('h3'); h.textContent = m.label; card.appendChild(h);
-    const d = document.createElement('p'); d.className = 'pod-muted'; d.textContent = m.desc + ' · ' + POD.int(m.count) + ' fon'; card.appendChild(d);
-    if (imgs[m.id]) {
-      const a = document.createElement('a'); a.href = imgs[m.id]; a.target = '_blank'; a.rel = 'noopener noreferrer';
-      const im = document.createElement('img'); im.src = imgs[m.id]; im.alt = 'Contoh 12 fon mood ' + m.label; im.loading = 'lazy'; im.className = 'pod-font-img';
-      a.appendChild(im); card.appendChild(a);
-    }
-    const dl = document.createElement('dl'); dl.className = 'pod-font-dl';
-    [['Niche', (m.niche_names || m.niches || []).join(', ')], ['Teks pasangan', m.pair], ['Elak', m.elak], ['Fon terbaik', (m.top || []).join(', ')], ['Lebih unik (luar Google)', (m.other || []).join(', ')]].forEach(([k, v]) => {
-      const dt = document.createElement('dt'); dt.textContent = k; const dd = document.createElement('dd'); dd.textContent = v || '—'; dl.append(dt, dd);
-    });
-    card.appendChild(dl);
-    el.appendChild(card);
-  });
-});
 
 dash.draw('f-mood-filter', (sel) => {
   const moods = POD.ok('fonts_moods') || [];
@@ -3012,101 +3501,10 @@ dash.draw('f-rej-body', (tb) => {
   });
 });
 </script>
+<script src="aliran.js"></script>
+<!-- FC:JS START -->
+<script src="fc.js"></script>
+<!-- FC:JS END -->
 
-<script>
-POD.ig = { gaya: '', niche: '', jenis: '', assets: null, db: null, armed: '' };
-POD.IG_GAYA = { serif: 'Serif klasik / besar', sans: 'Sans tebal', script: 'Script / kursif', hand: 'Hand-lettering / brush', retro: 'Retro / groovy', vintage: 'Vintage / papan tanda lama', swiss: 'Minimal / Swiss grid', playful: 'Ceria / playful', eksperimen: 'Eksperimental / kolaj', lain: 'Lain-lain' };
-POD.IG_NICHE = { bridal: 'Bridal', teacher: 'Cikgu', nursery: 'Nursery', funny_home: 'Tanda lucu rumah', mama: 'Mama', christmas: 'Krismas', friendship: 'Kawan / Galentine', bookish: 'Bookish' };
-POD.igStatus = (k) => { ['busy', 'ok', 'err', 'type'].forEach((s) => document.querySelectorAll('#i-st-' + s).forEach((p) => { p.hidden = s !== k; })); };
-
-dash.draw('i-gallery', (el) => {
-  const d = dash.data('inspirasi_saya');
-  el.replaceChildren();
-  const msg = (t) => { const p = document.createElement('p'); p.className = 'pod-msg'; p.textContent = t; el.appendChild(p); };
-  if (d.status !== 'ok') { msg(POD.statusMsg('inspirasi_saya')); return; }
-  const all = (Array.isArray(d.data) ? d.data : []).filter((r) => typeof r.url === 'string' && r.url.startsWith('/_blob/'));
-  const rows = all
-    .filter((r) => !POD.ig.gaya || r.gaya === POD.ig.gaya)
-    .filter((r) => !POD.ig.niche || (POD.ig.niche === 'umum' ? !r.niche : r.niche === POD.ig.niche))
-    .sort((a, b) => String(b.added_at || '').localeCompare(String(a.added_at || '')));
-  if (!rows.length) { msg(all.length ? 'Tiada gambar untuk tapisan ini.' : 'Belum ada gambar. Upload gaya typography pertama anda di atas.'); return; }
-  rows.forEach((r) => {
-    const card = document.createElement('article'); card.className = 'pod-card pod-ig-card'; card.id = 'i-item-' + r.id;
-    const a = document.createElement('a'); a.href = r.url; a.target = '_blank'; a.rel = 'noopener noreferrer';
-    const img = document.createElement('img'); img.src = r.url; img.loading = 'lazy'; img.alt = r.title || 'Gaya typography';
-    a.appendChild(img); card.appendChild(a);
-    if (r.title) { const h = document.createElement('h3'); h.textContent = r.title; card.appendChild(h); }
-    const tags = document.createElement('div'); tags.className = 'pod-ig-tags';
-    tags.appendChild(POD.pill(POD.IG_GAYA[r.gaya] || 'Lain-lain'));
-    tags.appendChild(POD.pill(POD.IG_NICHE[r.niche] || 'Umum'));
-    card.appendChild(tags);
-    if (r.note) { const p = document.createElement('p'); p.textContent = r.note; card.appendChild(p); }
-    const src = POD.link(r.source_url, 'Sumber ↗'); if (src) card.appendChild(src);
-    if (POD.ig.db) {
-      const del = document.createElement('button'); del.type = 'button'; del.className = 'pod-ig-del';
-      const armed = POD.ig.armed === r.id; del.dataset.armed = armed ? '1' : '0';
-      del.textContent = armed ? 'Tekan lagi untuk padam' : 'Padam';
-      del.addEventListener('click', async () => {
-        if (POD.ig.armed !== r.id) { POD.ig.armed = r.id; dash.draw('i-gallery'); return; }
-        POD.ig.armed = ''; del.disabled = true;
-        try {
-          await POD.ig.db.doc('data/inspirasi/items/' + r.id).delete();
-          if (POD.ig.assets && r.asset_id) { try { await POD.ig.assets.delete(r.asset_id); } catch (e) { /* fail kekal; rekod sudah dipadam */ } }
-        } catch (e) { del.disabled = false; del.textContent = 'Gagal padam'; }
-      });
-      card.appendChild(del);
-    }
-    el.appendChild(card);
-  });
-});
-
-dash.draw('i-sumber-body', (tb) => {
-  const rows = POD.ok('inspirasi_sumber'); tb.replaceChildren();
-  if (!rows) { POD.emptyRow(tb, 6, POD.statusMsg('inspirasi_sumber')); return; }
-  const list = rows.filter((r) => !POD.ig.jenis || r.jenis === POD.ig.jenis);
-  if (!list.length) { POD.emptyRow(tb, 6, 'Tiada sumber untuk tapisan ini.'); return; }
-  list.forEach((r) => {
-    const tr = document.createElement('tr'); tr.dataset.key = POD.enc(r.id);
-    POD.linkCell(tr, r.url, r.nama); POD.cell(tr, r.jenis); POD.cell(tr, r.kenapa, 'pod-wide'); POD.cell(tr, r.guna);
-    POD.pillCell(tr, r.bukti); POD.linkCell(tr, r.bukti_url, 'buka');
-    tb.appendChild(tr);
-  });
-});
-
-[['#i-f-gaya', 'gaya', 'i-gallery'], ['#i-f-niche', 'niche', 'i-gallery'], ['#i-f-jenis', 'jenis', 'i-sumber-body']].forEach(([sel, key, draw]) => {
-  document.querySelectorAll(sel).forEach((s) => s.addEventListener('change', () => { POD.ig[key] = s.value; dash.draw(draw); }));
-});
-
-(async () => {
-  let assets = null, db = null;
-  try { [assets, db] = await Promise.all([claude.use('assets'), claude.use('db')]); } catch (e) { assets = null; }
-  const can = !!(assets && db);
-  document.querySelectorAll('#i-form').forEach((f) => { f.hidden = !can; });
-  document.querySelectorAll('#i-noedit').forEach((p) => { p.hidden = can; });
-  if (!can) return;
-  POD.ig.assets = assets; POD.ig.db = db;
-  dash.draw('i-gallery');
-  document.querySelectorAll('#i-form').forEach((form) => form.addEventListener('submit', async (ev) => {
-    ev.preventDefault();
-    const val = (id) => { const e = form.querySelector('#' + id); return e ? String(e.value || '').trim() : ''; };
-    const fileEl = form.querySelector('#i-file');
-    const files = fileEl && fileEl.files ? [...fileEl.files] : [];
-    if (!files.length || files.some((f) => !/^image\//.test(f.type) || f.size > 20 * 1024 * 1024)) { POD.igStatus('type'); return; }
-    const btn = form.querySelector('#i-save'); if (btn) btn.disabled = true;
-    POD.igStatus('busy');
-    const title = val('i-title'), gaya = val('i-gaya') || 'lain', niche = val('i-niche'), note = val('i-note');
-    const src = POD.safeUrl(val('i-src')) || '';
-    try {
-      for (const f of files) {
-        const up = await assets.upload(f);
-        await db.collection('data/inspirasi/items').add({
-          asset_id: up.id, url: up.url, title: title || f.name.replace(/\.[^.]+$/, '').slice(0, 120),
-          gaya, niche, source_url: src, note, added_at: new Date().toISOString()
-        });
-      }
-      form.reset(); POD.igStatus('ok');
-    } catch (e) { POD.igStatus('err'); }
-    if (btn) btn.disabled = false;
-  }));
-})();
-</script>
+<script src="t2.js"></script>
+<script src="cvg.js"></script>

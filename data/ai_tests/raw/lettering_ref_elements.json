@@ -1,0 +1,72 @@
+[
+ {
+  "ref": "B4",
+  "name": "Hiasan krim + emas atas hitam",
+  "words_lines": "15 perkataan, 9 baris; ayat nasihat panjang",
+  "layout": "Satu tiang tinggi (~70% lebar) di tengah, ruang hitam di tepi; baris bertaut rapat, huruf satu baris masuk ke celah baris lain",
+  "hierarchy": "5 perkataan utama sangat besar (HIDUP, Lebih Baik, PADAHAL, Lebih Sulit, MENGELUH); 4 baris kecil",
+  "fonts": "Serif Tuscan/Victorian berduri (sempit), skrip berus bergelung dengan huruf besar berlingkar, huruf kecil berjarak dengan titik, 'IA' dalam bulatan",
+  "ornaments": "Skrol daun acanthus emas di belakang huruf mengisi semua ruang; tag reben emas (MUNGKIN SAJA); titik sebagai penanda",
+  "texture": "Vektor bersih, rata; tiada bayang",
+  "palette": "Krim + emas antik atas hitam (2 warna)",
+  "extra": "Baris pertama melengkung (arch); tandatangan artis di bawah kanan (jangan tiru)",
+  "level": "lemah",
+  "by": "Kajian mata Claude daripada gambar yang anda upload 23 Nov"
+ },
+ {
+  "ref": "B5",
+  "name": "Papan kapur + reben",
+  "words_lines": "10 perkataan, 7 baris; ayat cakap-cakap dengan soalan",
+  "layout": "Tiang di tengah dengan ruang tepi; baris tersusun rapat",
+  "hierarchy": "2 perkataan utama sangat besar (Dimanfaatin, BERMANFAAT); baris lain sederhana atau kecil",
+  "fonts": "Skrip copperplate dengan garis inline, serif Victorian berbayang, huruf kecil berjarak (BERARTI), huruf kecil dalam reben",
+  "ornaments": "Reben kapur berlipat; pembahagi fleuron/daun; bintang kecil, titik, swash",
+  "texture": "Butir kapur dalam setiap garisan; sapuan papan; bayang 3D lembut",
+  "palette": "Putih/kelabu atas papan gelap (1 warna)",
+  "extra": "Tanda baca: koma dan tanda soal",
+  "level": "lemah",
+  "by": "Kajian mata Claude daripada gambar yang anda upload 23 Nov"
+ },
+ {
+  "ref": "B3",
+  "name": "Berus berwarna, grunge",
+  "words_lines": "16 perkataan, 12 baris; ayat panjang",
+  "layout": "Format tinggi (1:2.2), penuh tepi ke tepi; baris condong",
+  "hierarchy": "7 perkataan utama besar (SELALU, PERCAYA, YANG, MEMBUKTIKAN, TIDAK, BISA, DIPERCAYA); kecil dalam reben/label",
+  "fonts": "Huruf besar berus kering, skrip berus laju (Saya, Orang Itu), huruf condong berbingkai",
+  "ornaments": "Reben dan label kertas berwarna; anak panah, bintang, pusaran, coretan, percikan",
+  "texture": "Grunge berat, berus kering, bayang gelap, garis luar",
+  "palette": "Oren, teal, krim, kuning atas coklat gelap (4 warna)",
+  "extra": "Watermark 'desain kata' di bawah (jangan tiru)",
+  "level": "lemah",
+  "by": "Kajian mata Claude daripada gambar yang anda upload 23 Nov"
+ },
+ {
+  "ref": "B2",
+  "name": "Lencana hitam-putih",
+  "words_lines": "4 perkataan + 'NYA' kecil; 4 baris",
+  "layout": "Lencana tinggi atas melengkung, sisi berukir, latar luar putih (stiker)",
+  "hierarchy": "Setiap perkataan sangat besar, penuh lebar lencana; 'NYA' kecil menegak di sisi",
+  "fonts": "Huruf berus condong dengan garis inline dan bayang 3D; garis dasar melantun; ekor swash",
+  "ornaments": "Sinar matahari di bawah, duri/sinar di atas, daun, titik, pusaran, percikan dakwat di tepi",
+  "texture": "Dakwat berus kasar buatan tangan",
+  "palette": "Hitam + putih sahaja",
+  "extra": "Sesuai untuk stiker / baju",
+  "level": "lemah",
+  "by": "Kajian mata Claude daripada gambar yang anda upload 23 Nov"
+ },
+ {
+  "ref": "B1",
+  "name": "Ilustrasi + lettering",
+  "words_lines": "11 perkataan, 8 baris",
+  "layout": "Tiang dengan ruang tepi; teks membalut ilustrasi tangan memegang cawan",
+  "hierarchy": "4 perkataan utama (JANGAN, DINGIN, HANGAT, Abaikan); kecil dalam reben (SALAHKAN, DIA)",
+  "fonts": "Serif Victorian sempit berukir dengan bayang, skrip swash (Abaikan), huruf kecil",
+  "ornaments": "Reben berpusing di belakang tangan; perkataan KOPIMU ditulis atas cawan; skrol, titik, sinar",
+  "texture": "Ukiran scratchboard (garis silang), cetakan lusuh",
+  "palette": "Krim atas hitam (1 warna)",
+  "extra": "Tandatangan artis (jangan tiru)",
+  "level": "lemah",
+  "by": "Kajian mata Claude daripada gambar yang anda upload 23 Nov"
+ }
+]
