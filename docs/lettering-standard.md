@@ -84,7 +84,7 @@ Guna: `python3 skrip/SK09_decode.py <gambar> [--semak]`; `python3 skrip/SK10_ban
 - Cawangan induk kini `claude/intelligent-shannon-xkg48z`. Ia mengandungi: enam cawangan sesi lettering (digabung dahulu oleh sesi hab di `claude/nifty-lovelace-i32bdx`, dengan kad dinombor semula K9–K12, K14–K18, K20–K23, K30–K33, K40–K44, K50–K54), commit terakhir `lucid-galileo` (U28), cawangan Etsy (`jolly-hamilton`), dan kerja audit v1.2 (SK09, SK10, K24, K25, SK01 v1.1, carta hitam putih sahaja).
 - Diselaraskan semasa gabung: ayat ujian audit ditukar `T` → `t` (K24t), kerana hab memakai `T` untuk ayat lain; 5b kini v1.5 = v1.4 hab + SK01 v1.1; salinan rekod `cawangan/intelligent-shannon` dibuang (rekod asalnya sudah ada).
 - Semakan selepas gabung: `kad.py` dimuat (38 kad); dataset AI Image Test dijana semula = 1080 baris, sama dengan dashboard; 5b dijalankan semula pada 10 imej K24t dan fail lulus tidak berubah.
-- **Kad pendua (belum diselesaikan):** IMG_5840 ada tiga kad daripada tiga sesi: K22, K50 dan K24. Sesi baharu mesti menyemak `kad.py` cawangan induk sebelum membuat kad atau huruf ayat baharu.
+- **Kad pendua (belum diselesaikan):** tiga gambar rujukan ada lebih daripada satu kad daripada sesi berlainan: IMG_5840 (K22, K50, K24; K25 ialah gaya terbitan), IMG_5793 (K23, K51), IMG_5743 (K18, K33). Dikira daripada medan `ref` dalam `kad.py` (38 kad, 32 gambar rujukan). Sesi baharu mesti menyemak `kad.py` cawangan induk sebelum membuat kad atau huruf ayat baharu.
 - Butiran "Kerja lettering masih di 7 cawangan" dalam "Belum selesai" tidak lagi benar.
 
 ## Urutan tetap: hitam putih dahulu, warna akhir sekali (keputusan pengguna 26 Nov 2026)
