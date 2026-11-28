@@ -14,7 +14,7 @@
   "cacat_berulang": "Bentuk huruf atau saiz label lain daripada kad (5 imej, 2 design); Hiasan di tempat salah (3 imej, 1 design)",
   "tindakan": "Satu ubahan untuk jana seterusnya model ini: PEMBINA_UJI=klein4b_frasa_bentuk (Frasa bentuk huruf dalam aturan model) bagi cacat 'Bentuk huruf atau saiz label lain daripada kad' (imej lulus; ciri gaya kad) (5 imej, 2 design); jana bersama aturan semasa, seed sama",
   "ubahan_dicuba": 1,
-  "tarikh": "2026-11-27"
+  "tarikh": "2026-11-28"
  },
  {
   "model": "zturbo",
@@ -31,7 +31,7 @@
   "cacat_berulang": "Teks rawak, label atau tanda baca tambahan (5 imej, 3 design); Bilangan baris salah (baris dipisah) (3 imej, 1 design); Bentuk huruf atau saiz label lain daripada kad (7 imej, 3 design); Hiasan yang tidak diminta (3 imej, 1 design); Hiasan di tempat salah (3 imej, 1 design)",
   "tindakan": "Satu ubahan untuk jana seterusnya model ini: PEMBINA_UJI=zturbo_had_positif (Buang perkataan berisiko daripada ayat had (label, logo, signature, watermark); tulis had sebagai ayat positif) bagi cacat 'Teks rawak, label atau tanda baca tambahan' (5 imej, 3 design); jana bersama aturan semasa, seed sama",
   "ubahan_dicuba": 2,
-  "tarikh": "2026-11-27"
+  "tarikh": "2026-11-28"
  },
  {
   "model": "ernie",
@@ -48,7 +48,7 @@
   "cacat_berulang": "Hiasan yang tidak diminta (2 imej, 2 design); Bentuk huruf atau saiz label lain daripada kad (6 imej, 2 design)",
   "tindakan": "Satu ubahan untuk jana seterusnya model ini: PEMBINA_UJI=ernie_hiasan_tepat (Nyatakan hiasan yang dibenarkan dengan tepat, tambah \"clean empty background\") bagi cacat 'Hiasan yang tidak diminta' (2 imej, 2 design); jana bersama aturan semasa, seed sama",
   "ubahan_dicuba": 1,
-  "tarikh": "2026-11-27"
+  "tarikh": "2026-11-28"
  },
  {
   "model": "moss",
@@ -65,7 +65,7 @@
   "cacat_berulang": "Perkataan salah eja, rosak, atau huruf besar / kecil salah (3 imej, 1 design); Bentuk huruf atau saiz label lain daripada kad (6 imej, 3 design); Hiasan di tempat salah (2 imej, 1 design)",
   "tindakan": "Cacat 'Perkataan salah eja, rosak, atau huruf besar / kecil salah': Pilihan ubahan habis: tukar ke model seterusnya ikut jadual model × gaya, kemudian pendekkan ayat, kemudian lapor kepada pengguna",
   "ubahan_dicuba": 3,
-  "tarikh": "2026-11-27"
+  "tarikh": "2026-11-28"
  },
  {
   "model": "klein3",
@@ -82,7 +82,7 @@
   "cacat_berulang": "Hiasan di tempat salah (4 imej, 2 design)",
   "tindakan": "Satu ubahan untuk jana seterusnya model ini: PEMBINA_UJI=klein3_hiasan_kedudukan (Nyatakan kedudukan hiasan (kiri dan kanan, di luar label)) bagi cacat 'Hiasan di tempat salah' (imej lulus; ciri gaya kad) (4 imej, 2 design); jana bersama aturan semasa, seed sama",
   "ubahan_dicuba": 2,
-  "tarikh": "2026-11-27"
+  "tarikh": "2026-11-28"
  },
  {
   "model": "qwen",
@@ -99,7 +99,7 @@
   "cacat_berulang": "-",
   "tindakan": "Belum diuji: ujian kelayakan (rangka am lawan aturan r0; kad sama; seed 42, 7, 123; perlu izin jana)",
   "ubahan_dicuba": 0,
-  "tarikh": "2026-11-27"
+  "tarikh": "2026-11-28"
  },
  {
   "model": "glm",
@@ -116,6 +116,6 @@
   "cacat_berulang": "-",
   "tindakan": "Belum diuji: ujian kelayakan (rangka am lawan aturan r0; kad sama; seed 42, 7, 123; perlu izin jana)",
   "ubahan_dicuba": 0,
-  "tarikh": "2026-11-27"
+  "tarikh": "2026-11-28"
  }
 ]

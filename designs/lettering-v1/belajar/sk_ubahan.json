@@ -79,14 +79,14 @@
   "dari": "5b v1.1",
   "ke": "5b v1.2",
   "imej": [
-   "v12-cpu-k9/klein4b/K9R_s42",
-   "v12-cpu-k9/zturbo/K9R_s42",
-   "v12-cpu-k9/zturbo/K9R_s7"
+   "v12-cpu-k14/klein4b/K14X_s42",
+   "v12-cpu-k14/zturbo/K14X_s42",
+   "v12-cpu-k14/zturbo/K14X_s7"
   ],
   "keputusan": "menang",
   "tarikh": "2026-11-27",
   "nota": "betulkan.py: had bintik ukur (SK05 min_bahagian) didarab luas matriks selepas setiap pembetulan, supaya bahagian kecil (sinar K9) yang sama dikira sebelum dan selepas skala. Cubaan pertama (hiasan rapat dalam SK05 sendiri) dibatalkan: 35/158 kotak berubah termasuk 3 rujukan upload",
-  "bukti": "56 imej lulus QC larian K9-K13: lulus 5b 53/56 -> 56/56; 51 imej sama piksel demi piksel; 5 imej K9R berubah (3 sasaran + moss s7, s123 kini dipusat), ejaan tidak berubah (semakan mata). Bukti lemah: satu batch, satu kad",
-  "hasil": "betul/v12-cpu-k9 dijana semula dengan 5b v1.2"
+  "bukti": "56 imej lulus QC larian K14-K18: lulus 5b 53/56 -> 56/56; 51 imej sama piksel demi piksel; 5 imej K14X berubah (3 sasaran + moss s7, s123 kini dipusat), ejaan tidak berubah (semakan mata). Bukti lemah: satu batch, satu kad",
+  "hasil": "betul/v12-cpu-k14 dijana semula dengan 5b v1.2"
  }
 ]

@@ -1,18 +1,18 @@
 {
  "versi": "s1 (27 Nov 2026)",
- "tarikh": "2026-11-27",
+ "tarikh": "2026-11-28",
  "baris": 672,
  "imej": 96,
  "kad_dipakai": [
-  "K10",
-  "K11",
-  "K12",
-  "K13",
+  "K14",
+  "K15",
+  "K16",
+  "K17",
+  "K18",
   "K3",
   "K6",
   "K7",
-  "K8",
-  "K9"
+  "K8"
  ],
  "suka": 0,
  "sk": {
@@ -269,7 +269,7 @@
     {
      "jenis": "parameter",
      "medan": "tekstur_jenis",
-     "teks": "Tekstur kad belum ada jenisnya dalam SK06: K10 'tiada (vektor rata)'; K11 'kapur kering'; K11 'percikan latar'; K12 'tiada (vektor rata)'; K13 'cop getah lusuh'; K13 'butir kertas'; K9 'tiada (vektor rata)'. Tambah jenis tekstur prosedur (ukur pada gambar upload kad), uji pada imej sedia ada"
+     "teks": "Tekstur kad belum ada jenisnya dalam SK06: K14 'tiada (vektor rata)'; K15 'tiada (vektor rata)'; K16 'kapur kering'; K16 'percikan latar'; K17 'tiada (vektor rata)'; K18 'cop getah lusuh'; K18 'butir kertas'. Tambah jenis tekstur prosedur (ukur pada gambar upload kad), uji pada imej sedia ada"
     }
    ]
   },
@@ -311,7 +311,7 @@
    "tindakan": [
     {
      "jenis": "parameter",
-     "teks": "Kad K10 ada 4 dakwat tetapi tiada peta_warna: tulis peta peranan -> dakwat ikut IMG_5817"
+     "teks": "Kad K14 ada 3 dakwat tetapi tiada peta_warna: tulis peta peranan -> dakwat ikut IMG_5838"
     }
    ]
   },

@@ -51,11 +51,11 @@ AYAT = {
     "J": dict(nama="sederhana", laluan=2, ayat="Keep Going You Are Almost There",
               baris=[("Keep Going", "sokongan"), ("You Are", "penyambung"), ("Almost", "sokongan"), ("There", "utama")]),
     # 27 Nov 2026 (petang): lima ayat baharu untuk lima gambar upload (IMG_5838, 5817, 5819, 5745, 5743); dipilih
-    # Claude (pengguna serah pilihan). Setiap ayat dijana dengan SATU kad sahaja: R (K9, K9R), E (K10, K10E),
-    # C (K11, K11C), S (K12, K12S), U (K13, K13U). Saringan 2a: ayat am, bukan lirik / petikan terkenal / jenama
+    # Claude (pengguna serah pilihan). Setiap ayat dijana dengan SATU kad sahaja: X (K14, K14X), E (K15, K15E),
+    # C (K16, K16C), Z (K17, K17Z), U (K18, K18U). Saringan 2a: ayat am, bukan lirik / petikan terkenal / jenama
     # (semakan Claude, bukan pengesahan undang-undang). Kesukaran ditulis pada setiap baris.
-    # R: 5 perkataan, 0 perkataan 7+ huruf, tiada ulangan. 'Big' penyambung kerana kad meletak perkataan akhir dalam reben.
-    "R": dict(nama="sederhana", laluan=2, ayat="Rest Well and Dream Big",
+    # X: 5 perkataan, 0 perkataan 7+ huruf, tiada ulangan. 'Big' penyambung kerana kad meletak perkataan akhir dalam reben.
+    "X": dict(nama="sederhana", laluan=2, ayat="Rest Well and Dream Big",
               baris=[("Rest", "utama"), ("Well", "sokongan"), ("and", "penyambung"), ("Dream", "utama"),
                      ("Big", "penyambung")]),
     # E: 8 perkataan (had laluan 2), 3 perkataan 7+ huruf (Explore, Curious), 'Be' berulang 2x (berisiko, dicatat).
@@ -65,10 +65,10 @@ AYAT = {
     # C: 5 perkataan, 0 perkataan 7+ huruf; 'Coffee' ada huruf berganda (ff, ee): berisiko.
     "C": dict(nama="sederhana", laluan=2, ayat="Some Days Need Extra Coffee",
               baris=[("Some Days", "sokongan"), ("Need", "penyambung"), ("Extra", "utama"), ("Coffee", "utama")]),
-    # S: 4 perkataan, laluan 1 (2 seed), tiada ulangan.
-    "S": dict(nama="pendek", laluan=1, ayat="Small Wins Still Count",
+    # Z: 4 perkataan, laluan 1 (2 seed), tiada ulangan.
+    "Z": dict(nama="pendek", laluan=1, ayat="Small Wins Still Count",
               baris=[("Small", "sokongan"), ("Wins", "utama"), ("Still", "sokongan"), ("Count", "utama")]),
-    # U: 3 perkataan, laluan 1, satu tanda baca '!' (kad K13 memerlukannya); 1 perkataan 7 huruf (Sundays).
+    # U: 3 perkataan, laluan 1, satu tanda baca '!' (kad K18 memerlukannya); 1 perkataan 7 huruf (Sundays).
     # Calon pertama 'Chase the Sun!' gagal semakan 3.11 MOSS ('the' muncul dalam prosa kapsyen), jadi ditukar.
     "U": dict(nama="pendek", laluan=1, ayat="Sundays Feel Good!",
               baris=[("Sundays", "utama"), ("Feel", "penyambung"), ("Good!", "utama")]),
@@ -327,9 +327,9 @@ KAD = {
             ("Bintik putih kecil bertabur di latar", False),
             ("Tepi huruf sedikit kasar (marker kering)", False),
             ("Putih satu warna atas hitam, tiada swash", False)]),
-    # 27 Nov 2026 (petang): K9-K13 dibuat Claude daripada lima gambar upload (arahan pengguna: jana semula gaya, ayat
+    # 27 Nov 2026 (petang): K14-K18 (asalnya K9-K13; ditukar 28 Nov 2026 kerana sesi lain memakai K9-K13) dibuat Claude daripada lima gambar upload (arahan pengguna: jana semula gaya, ayat
     # baharu, hitam putih sahaja, semua model CPU). Belum diluluskan pengguna (1d); jana dibenarkan pengguna.
-    "K9": dict(
+    "K14": dict(
         nama="Campuran caps inline + skrip berus + reben label + sinar (krim atas hijau gelap)", ref="IMG_5838",
         snc="belum didaftar", versi="v1.0 (27 Nov 2026; diluluskan pengguna 28 Nov 2026)",
         kelas="F1", dakwat=3, ruang_tepi=9, tekstur="tiada (vektor rata)", julat="4-6 perkataan",
@@ -356,7 +356,7 @@ KAD = {
             ("Blok tegak di tengah, tiada condong", False),
             ("Tepi rata bersih (vektor)", False),
             ("Satu dakwat putih atas hitam", False)]),
-    "K10": dict(
+    "K15": dict(
         nama="Senarai sans pekat bertindan, setiap baris sama lebar (pelbagai warna atas hitam)", ref="IMG_5817",
         snc="belum didaftar", versi="v1.0 (27 Nov 2026; diluluskan pengguna 28 Nov 2026)",
         kelas="F1", dakwat=4, ruang_tepi=9, tekstur="tiada (vektor rata)", julat="5-8 perkataan, satu idea setiap baris",
@@ -384,7 +384,7 @@ KAD = {
             ("Tiada condong atau lengkung", False),
             ("Tiada hiasan", False),
             ("Satu dakwat putih atas hitam (warna oleh skrip)", False)]),
-    "K11": dict(
+    "K16": dict(
         nama="Huruf tangan pelik tebal bertaut + bintik latar (oren-merah jambu atas merah wain)", ref="IMG_5819",
         snc="belum didaftar", versi="v1.0 (27 Nov 2026; diluluskan pengguna 28 Nov 2026)",
         kelas="F2", dakwat=2, ruang_tepi=9, tekstur="kapur kering + percikan latar", julat="4-8 perkataan",
@@ -411,7 +411,7 @@ KAD = {
             ("Garis dasar beralun, tiada condong blok", False),
             ("Tiada hiasan", False),
             ("Satu dakwat putih atas hitam", False)]),
-    "K12": dict(
+    "K17": dict(
         nama="Huruf belon kartun tebal + kilat + titik percikan (kuning, garis biru gelap)", ref="IMG_5745",
         snc="belum didaftar", versi="v1.0 (27 Nov 2026; diluluskan pengguna 28 Nov 2026)",
         kelas="F1", dakwat=3, ruang_tepi=7, tekstur="tiada (vektor rata)", julat="2-5 perkataan",
@@ -438,7 +438,7 @@ KAD = {
             ("Setiap baris hampir sama lebar", False),
             ("Tiada condong blok", False),
             ("Satu dakwat putih atas hitam", False)]),
-    "K13": dict(
+    "K18": dict(
         nama="Huruf cop lusuh dalam bingkai terbuka + anak panah (hijau gelap atas biru air)", ref="IMG_5743",
         snc="belum didaftar", versi="v1.0 (27 Nov 2026; diluluskan pengguna 28 Nov 2026)",
         kelas="F2", dakwat=1, ruang_tepi=15, tekstur="cop getah lusuh + butir kertas", julat="2-4 perkataan",
@@ -626,10 +626,10 @@ BLOK = {
                                   g_sederhana=5.72, g_kasar=4.75, g_dakwat=5.28, sumber="SK06 --ukur-tekstur pada IMG_5735",
                                   had=["butir bawah 1 px dan tepi marker kering tidak ditiru: pada JPEG 600x449 itu kesan "
                                        "mampatan; perlu gambar upload lebih besar"]))),
-    # K9-K13 (27 Nov 2026 petang). rujukan: SK05 pada gambar upload (rujukan/), satu gambar setiap kad. Sudut condong
+    # K14-K18 (asalnya K9-K13; ditukar 28 Nov 2026 kerana sesi lain memakai K9-K13) (27 Nov 2026 petang). rujukan: SK05 pada gambar upload (rujukan/), satu gambar setiap kad. Sudut condong
     # TIDAK dipakai (condong=None): kad tegak, dan SK05 tidak dapat mengasingkan baris pada gambar ini (baris=[100]),
-    # jadi sudut yang diukur (K11 5.0, K12 -2.7, K13 4.8) tidak boleh dipercayai; disimpan sebagai rekod sahaja.
-    "K9": dict(
+    # jadi sudut yang diukur (K16 5.0, K17 -2.7, K18 4.8) tidak boleh dipercayai; disimpan sebagai rekod sahaja.
+    "K14": dict(
         medium="hand-lettering quote poster", gaya="flat vector", latar_warna="solid black", latar_isi=None,
         tepi="crisp clean vector edges", bentuk="one tall upright centered block", condong=None,
         sentuh="sit close together", margin="moderate black margins",
@@ -647,7 +647,7 @@ BLOK = {
         sama_lebar=False,
         rujukan=dict(condong_darjah=None, tepi_pct=9.3, tepi_sisi_pct=15.7, tepi_atas_bawah_pct=9.2,
                      sumber="SK05 pada IMG_5838 (600x793)")),
-    "K10": dict(
+    "K15": dict(
         medium="typographic list poster", gaya="bold flat", latar_warna="solid black", latar_isi=None,
         tepi="crisp clean vector edges",
         bentuk="one tight justified block in which every line is stretched to the same full width",
@@ -661,7 +661,7 @@ BLOK = {
         sama_lebar=True,
         rujukan=dict(condong_darjah=None, tepi_pct=8.8, tepi_sisi_pct=8.8, tepi_atas_bawah_pct=8.4,
                      sumber="SK05 pada IMG_5817 (736x1137); bawah 13.5 termasuk kredit laman, tidak dipakai")),
-    "K11": dict(
+    "K16": dict(
         medium="quirky lettering quote poster", gaya="hand-drawn", latar_warna="solid black",
         latar_isi="small scattered white specks", tepi="a dry chalky texture",
         bentuk="one tall tight block that fills the poster", condong=None, sentuh="interlock",
@@ -678,7 +678,7 @@ BLOK = {
         sama_lebar=False,
         rujukan=dict(condong_darjah=None, tepi_pct=8.5, tepi_sisi_pct=10.9, tepi_atas_bawah_pct=7.8,
                      condong_ukur=5.0, sumber="SK05 pada IMG_5819 (1200x1500, latar bertekstur)")),
-    "K12": dict(
+    "K17": dict(
         medium="cartoon lettering quote poster", gaya="flat vector cartoon", latar_warna="solid black",
         latar_isi=None, tepi="crisp clean vector edges", bentuk="one tight centered block", condong=None,
         sentuh="touch and squeeze together", margin="moderate black margins",
@@ -694,7 +694,7 @@ BLOK = {
         sama_lebar=True,
         rujukan=dict(condong_darjah=None, tepi_pct=7.5, tepi_sisi_pct=8.1, tepi_atas_bawah_pct=6.0,
                      condong_ukur=-2.7, sumber="SK05 pada IMG_5745 (581x765, latar cerah)")),
-    "K13": dict(
+    "K18": dict(
         medium="rubber stamp lettering quote poster", gaya="hand-printed", latar_warna="solid black", latar_isi=None,
         tepi="a worn rubber-stamp texture with small speckled gaps", bentuk="one compact upright block",
         condong=None, sentuh="sit close together", margin="wide empty black margins",
