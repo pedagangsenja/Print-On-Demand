@@ -1,8 +1,8 @@
 {
  "versi": "s1 (27 Nov 2026)",
  "tarikh": "2026-11-28",
- "baris": 500,
- "imej": 110,
+ "baris": 3172,
+ "imej": 484,
  "kad_dipakai": [
   "K10",
   "K11",
@@ -23,31 +23,41 @@
    "versi": "5b v1.2",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 42,
-     "lulus": 40,
-     "cacat": 2,
+     "imej": 74,
+     "lulus": 68,
+     "cacat": 6,
      "input_rosak": 0,
-     "belum": 0,
+     "belum": 3,
      "tolak": 0
     },
     "5b v1.2": {
-     "imej": 2,
-     "lulus": 2,
-     "cacat": 0,
+     "imej": 16,
+     "lulus": 15,
+     "cacat": 1,
      "input_rosak": 0,
      "belum": 0,
      "tolak": 0
     }
    },
    "semasa": {
-    "imej": 2,
-    "lulus": 2,
-    "cacat": 0,
+    "imej": 16,
+    "lulus": 15,
+    "cacat": 1,
     "input_rosak": 0,
     "belum": 0,
     "tolak": 0
    },
-   "berulang": [],
+   "berulang": [
+    {
+     "kelas": "condong",
+     "nama": "Sudut condong lain daripada kad",
+     "imej": [
+      "focused-allen:v12b-cpu/ernie/K9B_s7"
+     ],
+     "n": 1,
+     "kalah": []
+    }
+   ],
    "calon": [],
    "ubahan_dicuba": 1,
    "tindakan": [
@@ -65,33 +75,33 @@
    "versi": "5b v1.2",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 54,
-     "lulus": 54,
-     "cacat": 0,
+     "imej": 275,
+     "lulus": 263,
+     "cacat": 12,
      "input_rosak": 0,
-     "belum": 0,
+     "belum": 5,
      "tolak": 0
     },
     "5b v1.2": {
-     "imej": 1,
-     "lulus": 1,
+     "imej": 149,
+     "lulus": 149,
      "cacat": 0,
-     "input_rosak": 0,
+     "input_rosak": 1,
      "belum": 0,
      "tolak": 0
     }
    },
    "semasa": {
-    "imej": 1,
-    "lulus": 1,
+    "imej": 149,
+    "lulus": 149,
     "cacat": 0,
-    "input_rosak": 0,
+    "input_rosak": 1,
     "belum": 0,
     "tolak": 0
    },
    "berulang": [],
    "calon": [],
-   "ubahan_dicuba": 0,
+   "ubahan_dicuba": 3,
    "tindakan": [
     {
      "jenis": "tiada",
@@ -107,16 +117,16 @@
    "versi": "5b v1.2",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 21,
-     "lulus": 21,
+     "imej": 62,
+     "lulus": 62,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
      "tolak": 0
     },
     "5b v1.2": {
-     "imej": 1,
-     "lulus": 1,
+     "imej": 32,
+     "lulus": 32,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -124,8 +134,8 @@
     }
    },
    "semasa": {
-    "imej": 1,
-    "lulus": 1,
+    "imej": 32,
+    "lulus": 32,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -149,16 +159,16 @@
    "versi": "5b v1.2",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 75,
-     "lulus": 75,
-     "cacat": 0,
+     "imej": 334,
+     "lulus": 333,
+     "cacat": 1,
      "input_rosak": 0,
      "belum": 0,
      "tolak": 0
     },
     "5b v1.2": {
-     "imej": 2,
-     "lulus": 2,
+     "imej": 169,
+     "lulus": 169,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -166,8 +176,8 @@
     }
    },
    "semasa": {
-    "imej": 2,
-    "lulus": 2,
+    "imej": 169,
+    "lulus": 169,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -240,8 +250,40 @@
      "tolak": 0
     },
     "SK06 v1.3 (27 Nov 2026)": {
-     "imej": 7,
-     "lulus": 7,
+     "imej": 34,
+     "lulus": 34,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    },
+    "SK06 v1.4 (27 Nov 2026)": {
+     "imej": 152,
+     "lulus": 148,
+     "cacat": 4,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    },
+    "SK06 v1.5 (27 Nov 2026)": {
+     "imej": 5,
+     "lulus": 5,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    },
+    "SK06 v1.5 (28 Nov 2026)": {
+     "imej": 1,
+     "lulus": 1,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    },
+    "SK06 v1.6 (27 Nov 2026)": {
+     "imej": 2,
+     "lulus": 2,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -249,8 +291,8 @@
     }
    },
    "semasa": {
-    "imej": 7,
-    "lulus": 7,
+    "imej": 34,
+    "lulus": 34,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -258,7 +300,7 @@
    },
    "berulang": [],
    "calon": [],
-   "ubahan_dicuba": 3,
+   "ubahan_dicuba": 25,
    "tindakan": [
     {
      "jenis": "ukur",
@@ -283,25 +325,33 @@
      "tolak": 0
     },
     "SK07 v1.1 (27 Nov 2026)": {
-     "imej": 17,
-     "lulus": 17,
+     "imej": 153,
+     "lulus": 153,
      "cacat": 0,
-     "input_rosak": 1,
+     "input_rosak": 3,
+     "belum": 0,
+     "tolak": 0
+    },
+    "SK07 v1.3 (27 Nov 2026)": {
+     "imej": 53,
+     "lulus": 53,
+     "cacat": 0,
+     "input_rosak": 0,
      "belum": 0,
      "tolak": 0
     }
    },
    "semasa": {
-    "imej": 17,
-    "lulus": 17,
+    "imej": 153,
+    "lulus": 153,
     "cacat": 0,
-    "input_rosak": 1,
+    "input_rosak": 3,
     "belum": 0,
     "tolak": 0
    },
    "berulang": [],
    "calon": [],
-   "ubahan_dicuba": 1,
+   "ubahan_dicuba": 8,
    "tindakan": [
     {
      "jenis": "tiada",

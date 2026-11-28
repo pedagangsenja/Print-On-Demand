@@ -26,6 +26,7 @@ from collections import Counter, defaultdict
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
+import akar  # noqa: E402
 import pembina  # noqa: E402
 import belajar_sk  # noqa: E402
 
@@ -47,7 +48,7 @@ KELAS = {
                    [("bekas_dahulu", "Tulis bekas dahulu, perkataan kemudian (\"a small white label, and inside that label the word ...\")")]),
     "hiasan_lebih": ("Hiasan yang tidak diminta", r"bintang|garis lengkung|garis tambahan",
                      [("hiasan_tepat", "Nyatakan hiasan yang dibenarkan dengan tepat, tambah \"clean empty background\"")]),
-    "hiasan_tempat": ("Hiasan di tempat salah", r"percikan dilukis di dalam|percikan hanya|tiada percikan|anak panah",
+    "hiasan_tempat": ("Hiasan di tempat salah", r"percikan dilukis di dalam|percikan hanya|tiada percikan|anak panah|tempat salah|bukan di sudut",
                       [("hiasan_kedudukan", "Nyatakan kedudukan hiasan (kiri dan kanan, di luar label)")]),
     "baris": ("Bilangan baris salah (baris dipisah)", r"\b\d baris|dipisah",
               [("dua_kata_sebaris", "Nyatakan dua perkataan sebaris (\"as two words side by side on one line\")"),
@@ -56,7 +57,7 @@ KELAS = {
               r"jadi|rosak|meragukan|huruf besar|huruf kecil|Morrrnings|omornings|Betters",
               [("huruf_besar", "Huruf besar untuk baris itu jika kad membenarkan"),
                ("tukar_peranan", "Tukar peranan perkataan itu")]),
-    "bentuk": ("Bentuk huruf atau saiz label lain daripada kad", r"nipis|label (lebih )?besar|label kecil",
+    "bentuk": ("Bentuk huruf atau saiz label lain daripada kad", r"nipis|label (lebih )?besar|label kecil|huruf lebar|bukan sempit|tidak gergasi|tidak bertaut",
                [("frasa_bentuk", "Frasa bentuk huruf dalam aturan model")]),
     "ditolak": ("Ditolak pengguna tanpa sebab", r"^dipadam|^ditolak", []),
 }
@@ -87,8 +88,9 @@ def baca_json(p, lalai):
 
 def muat_log():
     L = {}
-    for f in glob.glob(os.path.join(HERE, "raw", "*", "*", "log.jsonl")):
-        batch = f.split(os.sep)[-3]
+    for t, d in akar.akar():  # cawangan ini + cawangan sesi lain (gabung_cawangan.py, 28 Nov 2026)
+      for f in glob.glob(os.path.join(d, "raw", "*", "*", "log.jsonl")):
+        batch = akar.tanda(t, f.split(os.sep)[-3])
         for line in open(f):
             if line.strip():
                 r = json.loads(line)
@@ -98,26 +100,26 @@ def muat_log():
 
 def muat_qc(L):
     rows, blob, snc = [], {}, {}
-    for f in sorted(glob.glob(os.path.join(HERE, "qc", "*.json"))):
+    for t, f in [(t, f) for t, a in akar.akar() for f in sorted(glob.glob(os.path.join(a, "qc", "*.json")))]:
         d, stem = json.load(open(f)), os.path.basename(f)[:-5]
         if stem.endswith("_blobs"):
             base = stem.split("_")[0]
             for k, v in d.items():
                 m = re.match(r"(cpu|hf)_(.+)_(K\w+?)_s(\d+)$", k)
                 if m:
-                    blob[(base + PERANTI[m[1]], m[2], m[3], int(m[4]))] = str(v).rsplit("/", 1)[-1]
+                    blob[(akar.tanda(t, base + PERANTI[m[1]]), m[2], m[3], int(m[4]))] = str(v).rsplit("/", 1)[-1]
             continue
         if stem.endswith("_snc"):
-            batch = stem[:-4].replace("_", "-")
+            batch = akar.tanda(t, stem[:-4].replace("_", "-"))
             for kod, r in d.get("rekod", {}).items():
                 if "imej" not in r:  # kod warna C merujuk kod gaya S (warna oleh skrip, bukan prompt)
                     continue
-                model, nama = r["imej"].split("/")
-                i, s = nama.rsplit("_s", 1)
-                snc[(batch, model, i, int(s))] = (kod, r.get("blob", ""))
+                m = re.match(r"([\w.-]+?)[/_](K\w+?)_s(\d+)", r["imej"])  # 'model/ID_sN' (atau format sesi lain)
+                if m:
+                    snc[(batch, m[1], m[2], int(m[3]))] = (kod, r.get("blob", ""))
             continue
         if isinstance(d, list):
-            batch = stem.replace("_", "-")
+            batch = akar.tanda(t, stem.replace("_", "-"))
             for r in d:
                 i, s = r["id"].rsplit("_s", 1)
                 rows.append(dict(batch=batch, model=r["model"], id=i, seed=int(s), ok=bool(r.get("ejaan")),
@@ -126,6 +128,7 @@ def muat_qc(L):
         for batch, v in d.items():
             if not isinstance(v, dict):
                 continue
+            batch = akar.tanda(t, batch)
             for model, x in v.items():
                 if not isinstance(x, dict):
                     continue
@@ -146,6 +149,11 @@ def stor_ids(*bah):
 
 
 UBAHAN = baca_json(os.path.join(B, "ubahan.json"), [])
+for _t, _d in akar.akar()[1:]:  # keputusan cawangan sesi lain: hanya menang / kalah / tidak berkenaan; design ditanda
+    for _u in baca_json(os.path.join(_d, "belajar", "ubahan.json"), []):
+        _u = dict(_u, design=", ".join(akar.tanda(_t, x.strip()) for x in str(_u.get("design", "")).split(",") if x.strip()))
+        if _u.get("keputusan") in ("menang", "kalah", "tidak berkenaan") and _u not in UBAHAN:
+            UBAHAN.append(_u)
 # Kenaikan rev tanpa ubahan teks (ujian kelayakan r0 -> r1): imej rev lama dikira pada rev baharu.
 ALIAS = {(u["model"], u["rev_dari"]): u["rev_ke"] for u in UBAHAN
          if u.get("ubahan") == "kelayakan" and u.get("keputusan") == "menang"}
@@ -157,12 +165,13 @@ def bina_log():
     suka = stor_ids("likes", "items") or set()
     ada = {"S": stor_ids("gaya", "items"), "C": stor_ids("warna", "items")}
     pengguna = {}
-    pp = os.path.join(B, "pengguna.jsonl")
-    if os.path.exists(pp):
-        for line in open(pp):
-            if line.strip():
-                r = json.loads(line)
-                pengguna[r["imej"]] = r
+    for t, d in akar.akar():
+        pp = os.path.join(d, "belajar", "pengguna.jsonl")
+        if os.path.exists(pp):
+            for line in open(pp):
+                if line.strip():
+                    r = json.loads(line)
+                    pengguna[akar.tanda(t, r["imej"])] = dict(r, imej=akar.tanda(t, r["imej"]))
     out = []
     for r in rows:
         key = (r["batch"], r["model"], r["id"], r["seed"])
@@ -173,7 +182,9 @@ def bina_log():
         rev = ALIAS.get((r["model"], rev), rev)
         uji = sorted(u[len(r["model"]) + 1:] if u.startswith(r["model"] + "_") else u for u in (g.get("uji") or []))
         if not uji and re.search(r"-p\d+$", r["batch"]):  # pusingan kitaran QC lama (log tanpa 'uji'): ubahan daripada ubahan.json
-            uji = [u["ubahan"] for u in UBAHAN if u["model"] == r["model"] and r["id"] in u.get("design", "")
+            uji = [u["ubahan"] for u in UBAHAN if u["model"] == r["model"]
+                   and akar.tanda(r["batch"].split(":")[0] if ":" in r["batch"] else "", r["id"])
+                   in [x.strip() for x in u.get("design", "").split(",")]
                    and u.get("keputusan") in ("menang", "kalah")][-1:]
         m = re.match(r"(K\d+)(\w+)", r["id"] or "")
         nama = f"{r['batch']}/{r['model']}/{r['id']}_s{r['seed']}"
@@ -184,10 +195,13 @@ def bina_log():
             u = pengguna[nama]
             tolak = u.get("keputusan") == "tolak"
             sebab_tolak = (u.get("sebab") or "ditolak pengguna") if tolak else ""
+        if r["ok"] and re.match(r"G1-G3 lulus", r["sebab"] or ""):  # nota perihal (format sesi lain), bukan cacat
+            r = dict(r, sebab="")
         k = kelas(r["sebab"])
         if tolak:
             k = sorted(set(k) | set(kelas(sebab_tolak) or ["ditolak"]))
-        out.append(dict(imej=nama, batch=r["batch"], model=r["model"], kad=g.get("kad") or (m[1] if m else ""),
+        tg = r["batch"].split(":")[0] if ":" in r["batch"] else ""
+        out.append(dict(imej=nama, batch=r["batch"], model=r["model"], kad=akar.tanda(tg, g.get("kad") or (m[1] if m else "")),
                         ayat=g.get("ayat") or (m[2] if m else ""), seed=r["seed"], rev=rev, pembina=g.get("pembina"),
                         uji=uji, ok=r["ok"], suka=bool(bl) and bl in suka, tolak=tolak, lulus=r["ok"] and not tolak,
                         kelas=k, sebab="; ".join(x for x in (r["sebab"], sebab_tolak) if x), blob=bl, snc=kod))
@@ -230,13 +244,14 @@ def ulasan(model, rows, ubahan):
     # 1. Ubahan calon (PEMBINA_UJI) lawan aturan semasa pada kad, ayat, seed yang sama.
     kump = defaultdict(list)
     for r in rows:
-        if r["uji"]:
-            kump["+".join(r["uji"])].append(r)
-    for nama, a in sorted(kump.items()):
+        if r["uji"]:  # dikumpul ikut cawangan juga: ujian sesi lain dinilai berasingan (gabung_cawangan.py)
+            kump[(r["batch"].split(":")[0] if ":" in r["batch"] else "", "+".join(r["uji"]))].append(r)
+    for (tg, nama), a in sorted(kump.items()):
         asas = [r for r in rows if not r["uji"] and r["rev"] == a[0]["rev"]]
         sa, sb, n, baru = banding(a, asas)
         design = ", ".join(sorted({r["kad"] + r["ayat"] for r in a}))
-        if any(u["ubahan"] == nama and all(x in u.get("design", "") for x in design.split(", ")) for u in dicuba):
+        if any(u["ubahan"] == nama and set(design.split(", ")) <= {x.strip() for x in u.get("design", "").split(",")}
+               for u in dicuba):
             continue
         if not n:
             tindakan.append(dict(jenis="uji", teks=f"Ubahan '{nama}' ({design}) tiada pembanding: jana aturan semasa pada kad, ayat dan seed yang sama"))

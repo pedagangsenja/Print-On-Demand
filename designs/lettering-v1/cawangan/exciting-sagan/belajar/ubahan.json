@@ -1,0 +1,226 @@
+[
+ {
+  "tarikh": "2026-11-26",
+  "model": "klein4b",
+  "rev_dari": "am",
+  "rev_ke": "r1",
+  "ubahan": "aturan_awal",
+  "kelas": [
+   "rawak",
+   "luar_label"
+  ],
+  "design": "K3H",
+  "sebelum": "0/3",
+  "selepas": "3/3",
+  "keputusan": "menang",
+  "nota": "Ujian pertama, beberapa ubahan serentak: prosa mengalir; gaya di dalam ayat baris; had satu ayat"
+ },
+ {
+  "tarikh": "2026-11-26",
+  "model": "zturbo",
+  "rev_dari": "am",
+  "rev_ke": "r1",
+  "ubahan": "aturan_awal",
+  "kelas": [
+   "hiasan_lebih"
+  ],
+  "design": "K3H",
+  "sebelum": "3/3",
+  "selepas": "3/3",
+  "keputusan": "menang",
+  "nota": "Ujian pertama: huraian panjang, baris bernombor, had positif"
+ },
+ {
+  "tarikh": "2026-11-26",
+  "model": "ernie",
+  "rev_dari": "am",
+  "rev_ke": "r1",
+  "ubahan": "aturan_awal",
+  "kelas": [
+   "berulang"
+  ],
+  "design": "K3H",
+  "sebelum": "0/3",
+  "selepas": "2/3",
+  "keputusan": "menang",
+  "nota": "Ujian pertama: prompt mentah pendek + PE rasmi"
+ },
+ {
+  "tarikh": "2026-11-26",
+  "model": "moss",
+  "rev_dari": "am",
+  "rev_ke": "r1",
+  "ubahan": "aturan_awal",
+  "kelas": [
+   "hiasan_lebih"
+  ],
+  "design": "K3H",
+  "sebelum": "3/3",
+  "selepas": "3/3",
+  "keputusan": "menang",
+  "nota": "Ujian pertama: susun atur JSON dengan kotak setiap baris"
+ },
+ {
+  "tarikh": "2026-11-26",
+  "model": "moss",
+  "rev_dari": "r1",
+  "rev_ke": "r1",
+  "ubahan": "huruf_besar",
+  "kelas": [
+   "ejaan"
+  ],
+  "design": "K8G",
+  "sebelum": "0/3",
+  "selepas": "-",
+  "keputusan": "tidak berkenaan",
+  "nota": "'ALMOST' sudah huruf besar dalam kad K8; pilihan pertama tidak boleh dipakai"
+ },
+ {
+  "tarikh": "2026-11-26",
+  "model": "moss",
+  "rev_dari": "r1",
+  "rev_ke": "r1",
+  "ubahan": "tukar_peranan",
+  "kelas": [
+   "ejaan"
+  ],
+  "design": "K8G -> K8J",
+  "sebelum": "0/3",
+  "selepas": "0/3",
+  "keputusan": "kalah",
+  "nota": "Kitaran QC pusingan 1: 'ALMOST' jadi 'ALMIST' / 'ALMiST'; peranan ditukar, tiada beza"
+ },
+ {
+  "tarikh": "2026-11-26",
+  "model": "zturbo",
+  "rev_dari": "r1",
+  "rev_ke": "r1",
+  "ubahan": "dua_kata_sebaris",
+  "kelas": [
+   "baris"
+  ],
+  "design": "K8G",
+  "sebelum": "0/3",
+  "selepas": "0/3",
+  "keputusan": "kalah",
+  "nota": "Kitaran QC pusingan 1 (nama lama PEMBINA_UJI: zturbo_satu_baris): baris dua perkataan masih dipisah"
+ },
+ {
+  "tarikh": "2026-11-26",
+  "model": "klein3",
+  "rev_dari": "r0",
+  "rev_ke": "r0",
+  "ubahan": "aturan_awal",
+  "kelas": [],
+  "design": "K3K, K7M, K8G",
+  "sebelum": "-",
+  "selepas": "9/9",
+  "keputusan": "tiada pembanding",
+  "nota": "Aturan 3.8 seperti ditulis; CPU; rangka am belum dijana untuk banding"
+ },
+ {
+  "tarikh": "2026-11-27",
+  "model": "klein3",
+  "rev_dari": "r0",
+  "rev_ke": "r1",
+  "ubahan": "kelayakan",
+  "kelas": [
+   "ejaan"
+  ],
+  "design": "K3K, K7M, K8G",
+  "sebelum": "6/9",
+  "selepas": "9/9",
+  "keputusan": "menang",
+  "nota": "Ujian kelayakan 3.12 F: rangka am (raw/v12-cpu-am) 6/9, gagal K8G 3/3 ('KEEP GOING' tanpa jarak); aturan 3.8 (raw/v12-cpu) 9/9; CPU; teks aturan tidak berubah"
+ },
+ {
+  "tarikh": "2026-11-27",
+  "rev_dari": "r1",
+  "rev_ke": "r1",
+  "model": "zturbo",
+  "ubahan": "tukar_peranan",
+  "kelas": [
+   "ejaan"
+  ],
+  "design": "K10F",
+  "sebelum": "0/3",
+  "selepas": "0/3",
+  "keputusan": "kalah",
+  "nota": "Kitaran QC pusingan 1 (larian v1.2 kedua, raw/v12b-cpu-p1): FEWER utama -> sokongan, EXCUSES sokongan -> utama. 'FEWER' tetap jadi FERER / FENER / FEHER (sama seperti pusingan 0). Dibuang"
+ },
+ {
+  "tarikh": "2026-11-27",
+  "rev_dari": "r1",
+  "rev_ke": "r1",
+  "model": "zturbo",
+  "ubahan": "had_positif",
+  "kelas": [
+   "rawak"
+  ],
+  "design": "K12O",
+  "sebelum": "0/3",
+  "selepas": "0/3",
+  "keputusan": "kalah",
+  "nota": "Kitaran QC pusingan 1: tambah 'Each word ends cleanly with its last letter, followed only by empty black space.' Titik selepas setiap perkataan masih 3/3. Dibuang"
+ },
+ {
+  "tarikh": "2026-11-27",
+  "rev_dari": "r1",
+  "rev_ke": "r1",
+  "model": "zturbo",
+  "ubahan": "huruf_besar",
+  "kelas": [
+   "ejaan"
+  ],
+  "design": "K10F",
+  "sebelum": "-",
+  "selepas": "-",
+  "keputusan": "tidak berkenaan",
+  "nota": "Baris FEWER sudah huruf besar dalam kad K10; tiada ubahan untuk dicuba"
+ },
+ {
+  "tarikh": "2026-11-27",
+  "rev_dari": "r1",
+  "rev_ke": "r1",
+  "model": "klein4b",
+  "ubahan": "huruf_besar",
+  "kelas": [
+   "ejaan"
+  ],
+  "design": "K9Q, K10F, K12O",
+  "sebelum": "-",
+  "selepas": "-",
+  "keputusan": "tidak berkenaan",
+  "nota": "Baris yang salah eja (BUILDS, FEWER, BIGGER, LOOSELY) sudah huruf besar dalam kad K9, K10, K12; pilihan kedua (tukar_peranan) diuji"
+ },
+ {
+  "tarikh": "2026-11-27",
+  "model": "klein4b",
+  "rev_dari": "r1",
+  "rev_ke": "r2",
+  "ubahan": "tukar_peranan",
+  "kelas": [
+   "ejaan"
+  ],
+  "design": "K10F, K12O",
+  "sebelum": "0/6",
+  "selepas": "2/6",
+  "keputusan": "menang",
+  "nota": "Kitaran QC pusingan 1 (raw/v12b-cpu-p1). K12O: LOOSELY utama -> sokongan, HOLD sokongan -> utama: 0/3 -> 2/3 (s7, s123 dieja betul; s42 'LOSELY'). K10F: FEWER utama -> sokongan: 0/3 -> 0/3 (FEVER / BIGIER). Ditulis balik bagi K12O sahaja (pembina.TUKAR, aturan 3.4 r2); K10F tidak. Bukti lemah: satu design, 3 seed"
+ },
+ {
+  "tarikh": "2026-11-28",
+  "model": "ernie",
+  "rev_dari": "r1",
+  "rev_ke": "r1",
+  "ubahan": "frasa_bentuk",
+  "kelas": [
+   "bentuk"
+  ],
+  "design": "K12O, K7M",
+  "sebelum": "5/5",
+  "selepas": "5/5",
+  "keputusan": "kalah",
+  "nota": "Ayat 'Letter shapes: ...' (bentuk huruf setiap peranan disebut semula) ditambah; izin jana pengguna 28 Nov 2026 (raw/v12b-cpu-p2). Ejaan 6/6 betul. K12O: huruf sedikit tebal tetapi tidak bertaut, garis lengkung tambahan 2/3. K7M: swash bawah baris akhir hilang 3/3 (ciri kad). Tidak lebih baik, ada cacat baharu. Dibuang"
+ }
+]
