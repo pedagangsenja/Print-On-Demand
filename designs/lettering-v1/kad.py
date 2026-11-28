@@ -67,6 +67,19 @@ AYAT = {
               baris=[("Build Your", "sokongan"), ("Habits", "utama"), ("Not Your", "sokongan"), ("Excuses", "sokongan")]),
     "q": dict(nama="sederhana", laluan=2, ayat="Quiet Work Builds Loud Results",
               baris=[("Quiet Work", "sokongan"), ("Builds", "penyambung"), ("Loud", "utama"), ("Results", "utama")]),
+    # 27 Nov 2026 (larian v1.2 kedua): empat gambar upload baharu (IMG_5810, IMG_5804, IMG_5796, IMG_5797), ayat
+    # dipilih Claude (pengguna serah pilihan). Setiap ayat dijana dengan SATU kad: B (K9, id K9B), V (K10, id K10V),
+    # N (K11, id K11N), Y (K12, id K12Y). Perkataan 7+ huruf: tiada (Steady 6). Tiada perkataan berulang dalam ayat.
+    "B": dict(nama="pendek", laluan=1, ayat="Build It Daily",
+              baris=[("Build", "utama"), ("It", "penyambung"), ("Daily", "utama")]),
+    "V": dict(nama="pendek", laluan=1, ayat="Be Brave Do Good",
+              baris=[("Be", "utama"), ("Brave", "sokongan"), ("Do", "utama"), ("Good", "sokongan")]),
+    "N": dict(nama="sederhana", laluan=2, ayat="Begin Shaky. Grow Steady. Small steps add up.",
+              baris=[("Begin", "utama"), ("Shaky.", "sokongan"), ("Grow", "utama"), ("Steady.", "utama"),
+                     ("Small steps add up.", "penyambung")]),
+    "Y": dict(nama="sederhana", laluan=2, ayat="Stay Humble. Let Your Growth Show.",
+              baris=[("Stay", "utama"), ("Humble.", "utama"), ("Let Your", "penyambung"), ("Growth", "sokongan"),
+                     ("Show.", "utama")]),
 }
 
 # Langkah 1: Kad Gaya. huruf[peranan] = (kes, frasa bentuk huruf, nama warna untuk prompt)
@@ -426,6 +439,125 @@ KAD = {
             ("Tiada condong", False),
             ("Ruang tepi lebar", False),
             ("Satu dakwat atas latar rata", False)]),
+    # 27 Nov 2026: empat kad baharu daripada upload pengguna (larian v1.2 kedua). Dibuat Claude daripada gambar; pengguna
+    # membenarkan jana tanpa menunggu kelulusan kad; keempat-empat diluluskan pengguna 28 Nov 2026. Semakan S&C (1b): tiada gaya sedia ada daripada gambar yang sama;
+    # paling hampir S008 / K2 (blok sans pekat lusuh) tetapi K2 ada jalur atas + kotak penuh lebar, jadi kad baharu.
+    # Kanvas rujukan 9:16 (IMG_5810, IMG_5804) dan 2:3 (IMG_5796, IMG_5797) -> potret 3:4: blok dikekalkan nisbahnya dan
+    # dimuat dengan ruang tepi rujukan sebagai had paling kecil (ruang tepi sisi / atas-bawah ditukar ikut kanvas 3:4).
+    "K9": dict(
+        nama="Skrip berus tebal condong + garis bawah berus (putih atas hitam)", ref="IMG_5810",
+        versi="v1.0 (27 Nov 2026; diluluskan pengguna 28 Nov 2026)",
+        kelas="F1", dakwat=1, ruang_tepi=20, tekstur="tiada", julat="2-4 perkataan",
+        warna=dict(latar=("teal", "#027588", "teal"), dakwat=[("oren", "#f7901e", "orange")]),
+        medium="Hand-lettered brush script quote poster, portrait.",
+        latar="Solid teal background.",
+        susunan=("Three lines stacked in one tight centered block that rises clearly to the right; the lines nest "
+                 "closely and overlap slightly."),
+        huruf={"utama": ("title", "very large heavy connected brush script with thick strokes and a big looping capital", "orange"),
+               "sokongan": ("lower", "large heavy connected brush script", "orange"),
+               "penyambung": ("lower", "smaller heavy brush script", "orange")},
+        hierarki="The two main words are large; the small word sits between them.",
+        hiasan="One long tapered brush swash underlines the last line.",
+        margin="Wide empty teal margins.",
+        larangan="Flat solid orange strokes with a soft dark drop shadow. Only orange and teal, no outline.",
+        risiko=["skrip bersambung: huruf boleh tertinggal atau bertambah", "garis bawah boleh dibaca sebagai huruf",
+                "perkataan kecil boleh hilang"],
+        jangan_salin=["ayat Make it happen", "garis silang huruf t yang dipanjangkan (ciri ayat rujukan)"],
+        bayang="bayang lembut di luar huruf (drop shadow): TIDAK dijana (hitam putih); SK08 belum boleh (jenis luar)",
+        qc=[("Skrip berus tebal bersambung, strok tebal hampir sekata", True),
+            ("Seluruh blok condong naik ke kanan (kira-kira 15 darjah)", True),
+            ("Satu garis bawah berus panjang tirus di bawah baris akhir", True),
+            ("Huruf awal besar berlingkar pada perkataan pertama", False),
+            ("Perkataan kecil di tengah lebih kecil daripada dua perkataan utama", False),
+            ("Baris rapat dan sedikit bertindih", False),
+            ("Tepi strok tajam, isi rata", False),
+            ("Satu dakwat cerah atas latar gelap", False)]),
+    "K10": dict(
+        nama="Blok sans pekat sempit sama lebar + tekstur grunge (putih atas hitam)", ref="IMG_5804",
+        versi="v1.0 (27 Nov 2026; diluluskan pengguna 28 Nov 2026)",
+        kelas="F2", dakwat=1, ruang_tepi=28, tekstur="grunge lusuh sederhana", julat="3-5 perkataan",
+        warna=dict(latar=("hitam batu", "#121212", "black"), dakwat=[("kuning limau", "#d8e021", "lime yellow")]),
+        medium="Bold distressed typographic quote poster, portrait.",
+        latar="Solid black background.",
+        susunan=("Four lines stacked in one tall narrow justified block in the center; every line is stretched to "
+                 "exactly the same width, with tight even gaps."),
+        huruf={"utama": ("upper", "huge heavy condensed bold sans-serif capitals", "lime yellow"),
+               "sokongan": ("upper", "heavy condensed bold sans-serif capitals", "lime yellow"),
+               "penyambung": ("upper", "heavy condensed bold sans-serif capitals", "lime yellow")},
+        hierarki="All lines share the same width, so the short words are much taller than the long words.",
+        hiasan="No icons, no illustrations.",
+        margin="Wide empty black margins on the left and right.",
+        larangan="Gritty grunge texture inside the letters. Only lime yellow and black. No outline, no shadow.",
+        risiko=["perkataan pendek boleh dilebarkan sehingga huruf herot", "tekstur grunge boleh jadi bintik rawak",
+                "baris boleh tidak sama lebar"],
+        jangan_salin=["ayat Be more do more", "latar batu retak"],
+        qc=[("Semua huruf besar sans pekat sempit", True),
+            ("Setiap baris sama lebar (blok rata kiri-kanan)", True),
+            ("Perkataan pendek jauh lebih tinggi daripada perkataan panjang", True),
+            ("Blok sempit tinggi di tengah, ruang sisi lebar", False),
+            ("Jarak baris rapat dan sekata", False),
+            ("Tiada condong atau lengkung", False),
+            ("Tiada panel atau kotak putih di sekeliling blok", True),  # ditambah 28 Nov 2026 (pengguna): ERNIE K10V s7, s123
+            ("Tekstur lusuh grunge dalam huruf (oleh skrip)", False),
+            ("Satu dakwat cerah atas latar gelap", False)]),
+    "K11": dict(
+        nama="Sans pekat besar + satu kata dalam kotak berus + baris kecil (hitam atas krim)", ref="IMG_5796",
+        versi="v1.0 (27 Nov 2026; diluluskan pengguna 28 Nov 2026)",
+        kelas="F1", dakwat=3, ruang_tepi=8, tekstur="tiada", julat="5-9 perkataan",
+        peta_warna=dict(utama=0, sokongan=1, penyambung=0, hiasan=1),
+        warna=dict(latar=("krim", "#f5f1e6", "cream"),
+                   dakwat=[("hitam", "#141414", "black"), ("oren", "#f55f0a", "orange"), ("krim atas oren", "#f5f1e6", "cream")]),
+        medium="Bold typographic quote poster, portrait.",
+        latar="Solid cream background.",
+        susunan=("Four huge lines stacked in one tight centered block that fills almost the full width, with a small "
+                 "line of text centered below the block."),
+        huruf={"utama": ("upper", "huge heavy bold sans-serif capitals", "black"),
+               "sokongan": ("upper", "huge heavy bold cream sans-serif capitals inside a solid orange box with rough brush-painted edges", "cream"),
+               "penyambung": ("asal", "small bold sans-serif letters in sentence case", "black")},
+        hierarki="The four big lines are all the same height; the bottom line is very small.",
+        hiasan="A short orange brush dash sits on each side of the small bottom line.",
+        margin="Narrow cream margins.",
+        larangan="Flat solid fills, crisp edges. Only black, orange and cream. No outline, no shadow, no texture.",
+        risiko=["noktah boleh hilang atau bertambah", "baris kecil boleh salah eja (huruf kecil)",
+                "perkataan dalam kotak boleh jadi warna salah"],
+        jangan_salin=["ayat Start messy. Finish proud.", "baris kecil Your first draft counts."],
+        qc=[("Huruf besar sans pekat sangat besar memenuhi lebar", True),
+            ("Satu perkataan dalam kotak tepi berus kasar, huruf terbalik warna", True),
+            ("Baris kecil di bawah blok dengan sengkang berus di kiri dan kanan", True),
+            ("Noktah ikut Spesifikasi Teks", False),
+            ("Empat baris besar sama tinggi, rapat", False),
+            ("Tiada condong atau lengkung", False),
+            ("Isi rata, tepi tajam", False),
+            ("Hanya hitam, oren dan krim", False)]),
+    "K12": dict(
+        nama="Sans pekat sempit rata kiri + satu kata dalam kotak penuh (hitam atas putih)", ref="IMG_5797",
+        versi="v1.0 (27 Nov 2026; diluluskan pengguna 28 Nov 2026)",
+        kelas="F1", dakwat=2, ruang_tepi=8, tekstur="tiada", julat="5-8 perkataan",
+        peta_warna=dict(utama=0, sokongan=1, penyambung=0, hiasan=1),
+        warna=dict(latar=("putih", "#f7f5f8", "white"),
+                   dakwat=[("hitam", "#0a0a0a", "black"), ("kuning", "#f7ee0a", "yellow")]),
+        medium="Bold typographic quote poster, portrait.",
+        latar="Solid white background.",
+        susunan=("Five lines stacked in one tight block, every line aligned flush left on the same left edge, with "
+                 "ragged right ends."),
+        huruf={"utama": ("upper", "heavy condensed bold sans-serif capitals", "black"),
+               "sokongan": ("upper", "heavy condensed bold black sans-serif capitals inside a solid yellow rectangular box", "black"),
+               "penyambung": ("upper", "heavy condensed bold sans-serif capitals", "black")},
+        hierarki="Every line has the same letter height.",
+        hiasan="No icons, no illustrations.",
+        margin="Narrow white margins on the left and right.",
+        larangan="Flat solid fills, crisp edges. Only black, yellow and white. No outline, no shadow, no texture.",
+        risiko=["baris boleh dipusatkan, bukan rata kiri", "noktah boleh hilang",
+                "kotak boleh terlalu lebar atau terlalu sempit"],
+        jangan_salin=["ayat Work in silence. Let your results speak."],
+        qc=[("Semua huruf besar sans pekat sempit, tinggi huruf sama", True),
+            ("Semua baris rata kiri pada tepi yang sama", True),
+            ("Satu perkataan dalam kotak segi empat penuh, huruf gelap dalam kotak", True),
+            ("Hujung kanan baris tidak sama (ragged)", False),
+            ("Noktah ikut Spesifikasi Teks", False),
+            ("Jarak baris rapat dan sekata", False),
+            ("Tiada condong atau lengkung", False),
+            ("Isi rata, tepi tajam", False)]),
 }
 
 
@@ -667,11 +799,79 @@ BLOK = {
                      tekstur=dict(jenis="calar", lubang_pct=2.08, calar_pct=24.9, calar_panjang=21.5, lebar_blok=664,
                                   g_bil_calar=800, g_ambang_bintik=3.4, g_panjang=20,
                                   sumber="SK06 ukur_calar pada panel koral IMG_5793"))),
+    "K9": dict(
+        medium="brush script quote poster", gaya="hand-lettered", latar_warna="solid black", latar_isi=None,
+        tepi="crisp clean edges", bentuk="one tight block", condong="rises clearly toward the right",
+        sentuh="nest closely and overlap slightly", margin="wide empty black margins",
+        huruf={"utama": dict(penuh="very large heavy connected brush script with thick strokes and a big looping capital",
+                             ringkas="heavy connected brush script"),
+               "sokongan": dict(penuh="large heavy connected brush script", ringkas="heavy connected brush script"),
+               "penyambung": dict(penuh="smaller heavy brush script", ringkas="heavy brush script")},
+        tertinggi=None, hierarki="The two main words are large, and the small word sits between them.",
+        hiasan="One long tapered brush swash underlines the last line.", sisi=None,
+        hiasan_kotak=[dict(pada="bawah", nama="swash", frasa="a long tapered brush swash underline",
+                           ayat="One long tapered brush swash underlines the last line")],
+        tiada=["other colors", "outline", "shadow"], ada="solid white strokes on a clean black background",
+        sama_lebar=False,
+        # Diukur SK05 daripada IMG_5810 (736x1308, 9:16), 27 Nov 2026. Satu gambar. Bayang lembut termasuk dalam kotak
+        # blok (anggaran). Ruang tepi ditukar ke 3:4 (blok dikekalkan nisbah): asal sisi 9.4 / atas-bawah 17.2.
+        rujukan=dict(condong_darjah=15.5, tepi_pct=17.2, tepi_sisi_pct=19.6, tepi_atas_bawah_pct=17.2,
+                     sumber="SK05 pada IMG_5810")),
+    "K10": dict(
+        medium="typographic quote poster", gaya="bold distressed", latar_warna="solid black", latar_isi=None,
+        tepi="a gritty grunge texture",
+        bentuk="one tall narrow justified block in which every line is stretched to exactly the same width",
+        condong=None, sentuh=None, margin="wide empty black margins on the left and right",
+        huruf={"utama": dict(penuh="huge heavy condensed bold sans-serif capitals", ringkas="heavy condensed sans-serif capitals"),
+               "sokongan": _SANS, "penyambung": _SANS},
+        tertinggi=None, hierarki="All lines share the same width, so the short words are much taller than the long words.",
+        hiasan=None, sisi=None, hiasan_kotak=[], tiada=["gray", "outline", "shadow"],
+        ada="solid white letters on a clean black background", sama_lebar=True,
+        # Diukur 27 Nov 2026 daripada IMG_5804 (736x1308): SK05 + unjuran baris (baris tidak condong, boleh diasingkan).
+        # Baris (px asal): BE 393, MORE 164, DO 369, MORE 164; lebar blok 432. Skala 0.783 ke 3:4.
+        ukuran=dict(utama=(336, 296), sokongan=(336, 128), penyambung=(336, 128), sisi=(72, 64)),
+        rujukan=dict(condong_darjah=0.0, tepi_pct=7.0, tepi_sisi_pct=28.0, tepi_atas_bawah_pct=7.0,
+                     sumber="SK05 pada IMG_5804 (asal sisi 20.6 / atas-bawah 7.0)")),
+    "K11": dict(
+        medium="typographic quote poster", gaya="bold flat", latar_warna="solid black", latar_isi=None,
+        tepi="crisp clean edges", bentuk="one tight block of four huge lines that fills almost the full width",
+        condong=None, sentuh=None, margin="narrow black margins",
+        huruf={"utama": dict(penuh="huge heavy bold sans-serif capitals", ringkas="heavy bold sans-serif capitals"),
+               "sokongan": dict(bekas="solid white box with rough brush-painted edges", nama="box",
+                                dalam="huge heavy bold black sans-serif capitals"),
+               "penyambung": dict(penuh="small bold sans-serif letters in sentence case",
+                                  ringkas="small bold sans-serif letters")},
+        tertinggi=None, hierarki="The four big lines are all the same height, and the bottom line is very small.",
+        hiasan="A short white brush dash sits on each side of the small bottom line.", sisi=None, hiasan_kotak=[],
+        tiada=["gray", "outline", "shadow", "texture"], ada="flat fills, sharp edges, and a clean empty background",
+        sama_lebar=False,
+        # Diukur 27 Nov 2026 daripada IMG_5796 (1024x1536): SK05 + unjuran baris. Baris (px asal): 319, kotak 350, 315,
+        # 317, baris kecil 37; lebar 898-972. Skala 0.663 ke 3:4. Baris kecil 25 px dinaikkan ke 40 px (had boleh dibaca
+        # AI pada 768x1024; bukan ukuran rujukan).
+        ukuran=dict(utama=(616, 208), sokongan=(648, 232), penyambung=(352, 40), sisi=(72, 64)),
+        rujukan=dict(condong_darjah=0.0, tepi_pct=4.6, tepi_sisi_pct=7.7, tepi_atas_bawah_pct=4.6,
+                     sumber="SK05 pada IMG_5796 (asal sisi 2.2 / atas-bawah 4.6)")),
+    "K12": dict(
+        medium="typographic quote poster", gaya="bold flat", latar_warna="solid black", latar_isi=None,
+        tepi="crisp clean edges",
+        bentuk="one tight block in which every line is aligned flush left on the same left edge, with ragged right ends",
+        condong=None, sentuh=None, margin="narrow black margins",
+        huruf={"utama": _SANS, "penyambung": _SANS,
+               "sokongan": dict(bekas="solid white rectangular box", nama="box",
+                                dalam="heavy condensed bold black sans-serif capitals")},
+        tertinggi=None, hierarki="Every line has the same letter height.", hiasan=None, sisi=None, hiasan_kotak=[],
+        tiada=["gray", "outline", "shadow", "texture"], ada="flat fills, sharp edges, and a clean empty background",
+        sama_lebar=False,
+        # Diukur 27 Nov 2026 daripada IMG_5797 (1024x1536): SK05 + unjuran baris. Baris (px asal): 241, 223, 212, kotak
+        # 267, 232; baris terpanjang 951. Skala 0.665 ke 3:4. Kotak pembina dipusatkan; rata kiri ditulis dalam frasa.
+        ukuran=dict(utama=(640, 152), sokongan=(640, 176), penyambung=(640, 144), sisi=(72, 64)),
+        rujukan=dict(condong_darjah=0.0, tepi_pct=8.3, tepi_sisi_pct=8.3, tepi_atas_bawah_pct=10.2,
+                     sumber="SK05 pada IMG_5797 (asal sisi 3.0 / atas-bawah 10.2)")),
 }
 
 
 def kes(teks, k):
-    return {"upper": teks.upper(), "lower": teks.lower(), "title": teks.title()}[k]
+    return {"upper": teks.upper(), "lower": teks.lower(), "title": teks.title(), "asal": teks}[k]
 
 
 ORD = ["first", "second", "third", "fourth", "fifth", "sixth"]
@@ -683,13 +883,33 @@ WARNA_LAIN = re.compile(r"\b(?:(?:golden|mustard|dark|light|pale|warm|deep|brigh
                         r"teal|purple|brown|tan|silver)\b", re.I)
 
 
+def terang(k):
+    """Latar kad cerah (luminans > 128)? Kad begini ditukar polariti dalam mod hp: latar hitam, dakwat putih."""
+    h = k["warna"]["latar"][1].lstrip("#")
+    r, g, b = (int(h[i:i + 2], 16) for i in (0, 2, 4))
+    return 0.299 * r + 0.587 * g + 0.114 * b > 128
+
+
+def kotak_hp(f):
+    """Peranan dalam kotak (mod hp, kad latar cerah): huruf hitam di dalam kotak putih (standard, langkah 1)."""
+    i = f.find(" inside ")
+    return f if i < 0 else re.sub(r"\bwhite\b", "black", f[:i]) + re.sub(r"\bblack\b", "white", f[i:])
+
+
 def hitam_putih(teks, k):
     """Tukar frasa kad kepada hitam putih: semua dakwat = white, latar = black, tiada kelabu, tiada bayang."""
-    teks = re.sub(r",? with an? [a-z ]*\b(?:gray|grey)\b[a-z ]*shadow", "", teks)
+    teks = re.sub(r",? with an? [a-z ]*\b(?:gray|grey|dark)\b[a-z ]*shadow", "", teks)
     teks = re.sub(r"Only [^.]*\.\s*", "", teks)
     nama = {w[2] for w in k["warna"]["dakwat"]} | {k["warna"]["latar"][2]}
+    if terang(k):  # kad latar cerah (K9, K11, K12; 27 Nov 2026): latar -> black, dakwat -> white (polariti hp tetap)
+        lat = k["warna"]["latar"][2]
+        tukar = {lat: "black", "black": "white", "white": "black"}
+        pola = "|".join(sorted(map(re.escape, tukar), key=len, reverse=True))
+        teks = re.sub(rf"\b({pola})\b", lambda m: (lambda g: g.capitalize() if m.group(1)[0].isupper() else g)(
+            tukar[m.group(1).lower()]), teks, flags=re.I)
+        nama = nama - {lat}
     for n in sorted(nama - {"white", "black"}, key=len, reverse=True):
-        ganti = "black" if "black" in n else "white"
+        ganti = "black" if "black" in n or n == k["warna"]["latar"][2] else "white"   # latar sentiasa hitam
         teks = teks.replace(n, ganti).replace(n.capitalize(), ganti.capitalize())
     teks = WARNA_LAIN.sub("white", teks)
     return re.sub(r"\b(white|black)(?:,? (?:and )?\1\b)+", r"\1", teks, flags=re.I)
@@ -700,8 +920,15 @@ def bina(kid, aid, drop=(), mod="hp"):
     mod="hp" (lalai): hitam putih sahaja. mod="warna": nama warna kad masuk prompt (pembina v1.0, ujian lama)."""
     k, a = KAD[kid], AYAT[aid]
     if mod == "hp":
-        k = dict(k, huruf={r: (kes_, hitam_putih(f, k), "black" if w == "black" else "white")
-                           for r, (kes_, f, w) in k["huruf"].items()},
+        if terang(k):
+            hh = {}
+            for r, (kes_, f, w) in k["huruf"].items():
+                f2 = kotak_hp(hitam_putih(f, k))
+                hh[r] = (kes_, f2, "black" if " inside " in f2 else "white")
+        else:
+            hh = {r: (kes_, hitam_putih(f, k), "black" if w == "black" else "white")
+                  for r, (kes_, f, w) in k["huruf"].items()}
+        k = dict(k, huruf=hh,
                  **{f: hitam_putih(k[f], k) for f in ("medium", "latar", "susunan", "hierarki", "hiasan", "margin",
                                                       "larangan")})
         if "on black only" not in k["larangan"].lower():  # kad satu dakwat sudah ada had ini; prompt kekal seperti diuji

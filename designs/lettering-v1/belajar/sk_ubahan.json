@@ -105,5 +105,23 @@
   "tarikh": "2026-11-28",
   "nota": "Tala semula per imej (laras bilangan calar dan ambang bintik ikut nisbah ukuran, maks 4 cubaan). lubang_pct kini sama (2.07-2.09), tetapi calar_pct turun ke 9.5-12.1 (rujukan 24.9) dan bintik hilang (ambang naik ke 5.0): rupa garis lurus sahaja, lebih jauh daripada IMG_5793. moss K23f s42 sama piksel.",
   "bukti": "4 imej: tanpa cacat SK 0/4 -> 0/4 (semakan mata: silap, corak calar); kod dipulangkan ke v1.4"
+ },
+ {
+  "sk": "SK01",
+  "ubahan": "ukur_semula",
+  "jenis": "baiki",
+  "medan": "betulkan.betulkan (langkah SK01)",
+  "kelas": "condong",
+  "dari": "5b v1.1",
+  "ke": "5b v1.2 (28 Nov 2026)",
+  "imej": [
+   "v12b-cpu/klein3/K9B_s123",
+   "v12c-uji-bentuk/ernie/K7M_s123"
+  ],
+  "keputusan": "menang",
+  "tarikh": "2026-11-28",
+  "nota": "Selepas SK01 memutar, blok diukur semula dan baki sudut dibetulkan, paling banyak 2 kali lagi. Sebab: ukuran sudut pertama boleh tersasar (skrip berswash; nilai di had julat SK05)",
+  "bukti": "2 imej: 0/2 -> 2/2 lulus semakan akhir (K9B 13.4 -> 15.2, rujukan 15.x; K7M 0.0 -> 13.6, rujukan 12.4); semakan mata: kedua-dua condong naik ke kanan. Bukti lemah",
+  "hasil": "betul/v12b-cpu/klein3/K9B_s123 dan betul/v12c-uji-bentuk/ernie/K7M_s123 dijana semula"
  }
 ]

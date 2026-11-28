@@ -1,0 +1,44 @@
+{
+ "versi": "SK06 v1.6 (27 Nov 2026)",
+ "raw": "moss_K9B_s7_C003_warna.png",
+ "style": "S3",
+ "palet": "C003",
+ "bg": "#0b0b0b",
+ "fills": [
+  "#fefefe"
+ ],
+ "layers": 1,
+ "ink_px": [
+  1177599
+ ],
+ "sizes": {
+  "18x24": [
+   5400,
+   7200
+  ]
+ },
+ "tekstur": {
+  "kad": "K9",
+  "teks": "tiada (vektor rata)",
+  "jenis": "none",
+  "kuat": 0.0,
+  "tidak_dibuat": []
+ },
+ "amaran": [],
+ "tepi": {
+  "sasaran": {
+   "sisi": 12.3,
+   "atas_bawah": 9.4,
+   "sumber": "SK05 pada IMG_5852"
+  },
+  "hasil": {
+   "18x24": {
+    "kiri": 12.3,
+    "kanan": 12.3,
+    "atas": 27.7,
+    "bawah": 33.7
+   }
+  },
+  "dakwat_min_pct": 12.3
+ }
+}
