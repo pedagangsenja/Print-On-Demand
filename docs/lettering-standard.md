@@ -75,10 +75,17 @@ Bahagian ini mengatasi mana-mana ayat lain dalam fail ini yang bercanggah dengan
 
 - **Simpan (pilihan pengguna A, 28 Nov 2026):** 10 imej K24t disimpan di tab AI Image Test sebagai U29 (`data/ai_tests/rows/U29.json`); imej 4 bertanda ★ Final dengan gambar siap selepas diluruskan. 10 baris itu ditambah terus pada dataset live (1070 → 1080 baris) supaya baris sesi lain (U13–U28) tidak ditimpa; eksport `data/export/ai_tests/ai_all.json` di cawangan ini hanya ada baris cawangan ini.
 - **Kad K25 (keputusan pengguna 28 Nov 2026):** gaya berus kering daripada imej 4 dijadikan kad berasingan. Frasa = kad K24 v1.0 + garis bawah berus; ukuran daripada rekod decode imej itu (`decode/K24t_ernie_s7.json`). Belum diuji dengan jana baharu. K24 kekal gaya tepi licin (v1.1).
-- **Pendua yang terlepas:** IMG_5840 sudah ada kad K22 dan K9 di cawangan sesi lain (37 imej dalam AI Image Test). Langkah 1b (semak pendua) hanya melihat Daftar S/C, jadi tidak menangkapnya. Sehingga cawangan digabung, semak pendua juga pada lajur rujukan dataset `ai_all`.
+- **Pendua yang terlepas:** IMG_5840 sudah ada kad K22 dan K50 di cawangan sesi lain (K9 pada ketika itu, sebelum dinombor semula; 37 imej dalam AI Image Test). Langkah 1b (semak pendua) hanya melihat Daftar S/C, jadi tidak menangkapnya. Sehingga cawangan digabung, semak pendua juga pada lajur rujukan dataset `ai_all`.
 - Kad K24 dan K25 mempunyai `ukuran` untuk ayat 3–4 baris; gabungan dengan ayat 5 baris gagal semakan 3.11 (di luar julat kad), jadi `python3 pembina.py` kini melaporkan 16 gabungan gagal yang memang tidak dipakai.
 
 Guna: `python3 skrip/SK09_decode.py <gambar> [--semak]`; `python3 skrip/SK10_banding.py --gambar <upload> <imej jana…>` atau dengan dua rekod JSON.
+
+## Gabungan cawangan (28 Nov 2026, keputusan pengguna)
+- Cawangan induk kini `claude/intelligent-shannon-xkg48z`. Ia mengandungi: enam cawangan sesi lettering (digabung dahulu oleh sesi hab di `claude/nifty-lovelace-i32bdx`, dengan kad dinombor semula K9–K12, K14–K18, K20–K23, K30–K33, K40–K44, K50–K54), commit terakhir `lucid-galileo` (U28), cawangan Etsy (`jolly-hamilton`), dan kerja audit v1.2 (SK09, SK10, K24, K25, SK01 v1.1, carta hitam putih sahaja).
+- Diselaraskan semasa gabung: ayat ujian audit ditukar `T` → `t` (K24t), kerana hab memakai `T` untuk ayat lain; 5b kini v1.5 = v1.4 hab + SK01 v1.1; salinan rekod `cawangan/intelligent-shannon` dibuang (rekod asalnya sudah ada).
+- Semakan selepas gabung: `kad.py` dimuat (38 kad); dataset AI Image Test dijana semula = 1080 baris, sama dengan dashboard; 5b dijalankan semula pada 10 imej K24t dan fail lulus tidak berubah.
+- **Kad pendua (belum diselesaikan):** IMG_5840 ada tiga kad daripada tiga sesi: K22, K50 dan K24. Sesi baharu mesti menyemak `kad.py` cawangan induk sebelum membuat kad atau huruf ayat baharu.
+- Butiran "Kerja lettering masih di 7 cawangan" dalam "Belum selesai" tidak lagi benar.
 
 ## Urutan tetap: hitam putih dahulu, warna akhir sekali (keputusan pengguna 26 Nov 2026)
 1. AI menjana hitam putih sahaja: dakwat putih atas latar hitam; tiada warna lain, tiada kelabu.
