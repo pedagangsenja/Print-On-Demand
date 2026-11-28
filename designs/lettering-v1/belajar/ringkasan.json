@@ -1,7 +1,7 @@
 {
  "versi": "b1.1 (27 Nov 2026)",
- "tarikh": "2026-11-27",
- "imej": 207,
+ "tarikh": "2026-11-28",
+ "imej": 213,
  "suka": 0,
  "tolak": 0,
  "model": {
@@ -245,9 +245,9 @@
     "design": 8
    },
    "semua": {
-    "imej": 34,
-    "lulus": 28,
-    "pct": 82,
+    "imej": 40,
+    "lulus": 34,
+    "pct": 85,
     "suka": 0,
     "tolak": 0,
     "design": 12
@@ -262,8 +262,8 @@
       "K7M",
       "K8G"
      ],
-     "cadangan": "frasa_bentuk",
-     "cadangan_teks": "Frasa bentuk huruf dalam aturan model"
+     "cadangan": null,
+     "cadangan_teks": "Pilihan ubahan habis: tukar ke model seterusnya ikut jadual model × gaya, kemudian pendekkan ayat, kemudian lapor kepada pengguna"
     },
     {
      "kelas": "lain",
@@ -289,13 +289,12 @@
      "cadangan_teks": "Nyatakan kedudukan hiasan (kiri dan kanan, di luar label)"
     }
    ],
-   "ubahan_dicuba": 1,
+   "ubahan_dicuba": 2,
    "suka_imej": [],
    "tindakan": [
     {
-     "jenis": "cuba",
-     "ubahan": "frasa_bentuk",
-     "teks": "Satu ubahan untuk jana seterusnya model ini: PEMBINA_UJI=ernie_frasa_bentuk (Frasa bentuk huruf dalam aturan model) bagi cacat 'Bentuk huruf atau saiz label lain daripada kad' (imej lulus; ciri gaya kad) (6 imej, 2 design); jana bersama aturan semasa, seed sama"
+     "jenis": "habis",
+     "teks": "Cacat 'Bentuk huruf atau saiz label lain daripada kad': Pilihan ubahan habis: tukar ke model seterusnya ikut jadual model × gaya, kemudian pendekkan ayat, kemudian lapor kepada pengguna"
     }
    ]
   },

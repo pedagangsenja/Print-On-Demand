@@ -747,6 +747,7 @@ Setiap ubahan aturan (3.4–3.10) direkod di sini, dan juga dalam `designs/lette
 | 27 Nov 2026 | Z-Image Turbo | r1 (tiada perubahan) | K10F: 'FEWER' jadi 'FERER' / 'FENER' / 'FEHER' (3/3) | Tukar peranan (FEWER utama → sokongan). TIDAK berjaya, dibuang | 0/3 → 0/3 |
 | 27 Nov 2026 | Z-Image Turbo | r1 (tiada perubahan) | K12O: titik selepas setiap perkataan (3/3) | Had positif: "Each word ends cleanly with its last letter, followed only by empty black space." TIDAK berjaya, dibuang | 0/3 → 0/3 |
 | 27 Nov 2026 | FLUX.2 klein 4B | r1 → r2 | K12O: 'LOOSELY' jadi 'LOSELY' (3/3); K10F: 'FEWER' jadi 'FEVER' (3/3) | Tukar peranan perkataan itu (`belajar.py`: MENANG 0/6 → 2/6). Ditulis bagi K12O sahaja | K12O 0/3 → 2/3; K10F 0/3 → 0/3 |
+| 28 Nov 2026 | ERNIE Turbo | r1 (tiada perubahan) | Bentuk huruf lain daripada kad (K7M, K8G; K12O tidak gemuk / bertaut) | `frasa_bentuk`: bentuk huruf setiap peranan disebut semula sekali (izin jana pengguna). TIDAK berjaya, dibuang: K12O tetap tidak bertaut + garis lengkung tambahan 2/3; K7M swash hilang 3/3 | ejaan 5/5 → 5/5 (+1 seed baharu) |
 
 ## Belum selesai
 - v1.2, sudah dibina (26 Nov): pembina kod bagi tujuh model + semakan 3.11 (`pembina.py`, 3.13).

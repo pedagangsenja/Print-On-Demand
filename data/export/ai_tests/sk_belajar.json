@@ -4,6 +4,40 @@
   "nama": "condong",
   "langkah": "5b",
   "versi": "5b v1.2",
+  "imej": 7,
+  "lulus": 7,
+  "cacat_sk": 0,
+  "input_rosak": 0,
+  "belum_semak": 0,
+  "tolak": 0,
+  "suka": 0,
+  "cacat_berulang": "-",
+  "tindakan": "Tiada tindakan: tiada cacat berulang",
+  "ubahan_dicuba": 0,
+  "tarikh": "2026-11-28"
+ },
+ {
+  "sk": "SK02",
+  "nama": "ruang tepi",
+  "langkah": "5b",
+  "versi": "5b v1.2",
+  "imej": 38,
+  "lulus": 38,
+  "cacat_sk": 0,
+  "input_rosak": 1,
+  "belum_semak": 0,
+  "tolak": 0,
+  "suka": 0,
+  "cacat_berulang": "-",
+  "tindakan": "Kad K11 tiada rujukan ruang tepi: ukur SK05 pada IMG_5761 | Kad K5 tiada rujukan ruang tepi: ukur SK05 pada IMG_5730",
+  "ubahan_dicuba": 1,
+  "tarikh": "2026-11-28"
+ },
+ {
+  "sk": "SK03",
+  "nama": "kedudukan",
+  "langkah": "5b",
+  "versi": "5b v1.2",
   "imej": 6,
   "lulus": 6,
   "cacat_sk": 0,
@@ -14,49 +48,15 @@
   "cacat_berulang": "-",
   "tindakan": "Tiada tindakan: tiada cacat berulang",
   "ubahan_dicuba": 0,
-  "tarikh": "2026-11-27"
- },
- {
-  "sk": "SK02",
-  "nama": "ruang tepi",
-  "langkah": "5b",
-  "versi": "5b v1.2",
-  "imej": 32,
-  "lulus": 32,
-  "cacat_sk": 0,
-  "input_rosak": 1,
-  "belum_semak": 0,
-  "tolak": 0,
-  "suka": 0,
-  "cacat_berulang": "-",
-  "tindakan": "Kad K11 tiada rujukan ruang tepi: ukur SK05 pada IMG_5761 | Kad K5 tiada rujukan ruang tepi: ukur SK05 pada IMG_5730",
-  "ubahan_dicuba": 1,
-  "tarikh": "2026-11-27"
- },
- {
-  "sk": "SK03",
-  "nama": "kedudukan",
-  "langkah": "5b",
-  "versi": "5b v1.2",
-  "imej": 5,
-  "lulus": 5,
-  "cacat_sk": 0,
-  "input_rosak": 0,
-  "belum_semak": 0,
-  "tolak": 0,
-  "suka": 0,
-  "cacat_berulang": "-",
-  "tindakan": "Tiada tindakan: tiada cacat berulang",
-  "ubahan_dicuba": 0,
-  "tarikh": "2026-11-27"
+  "tarikh": "2026-11-28"
  },
  {
   "sk": "SK04",
   "nama": "hitam putih",
   "langkah": "5b",
   "versi": "5b v1.2",
-  "imej": 38,
-  "lulus": 38,
+  "imej": 44,
+  "lulus": 44,
   "cacat_sk": 0,
   "input_rosak": 0,
   "belum_semak": 0,
@@ -65,7 +65,7 @@
   "cacat_berulang": "-",
   "tindakan": "Tiada tindakan: tiada cacat berulang",
   "ubahan_dicuba": 0,
-  "tarikh": "2026-11-27"
+  "tarikh": "2026-11-28"
  },
  {
   "sk": "SK05",
@@ -82,7 +82,7 @@
   "cacat_berulang": "-",
   "tindakan": "Tiada tindakan: tiada cacat berulang",
   "ubahan_dicuba": 0,
-  "tarikh": "2026-11-27"
+  "tarikh": "2026-11-28"
  },
  {
   "sk": "SK06",
@@ -99,7 +99,7 @@
   "cacat_berulang": "-",
   "tindakan": "Kad K8, had tekstur: butir bawah 1 px dan tepi marker kering tidak ditiru: pada JPEG 600x449 itu kesan mampatan; perlu gambar upload lebih besar | Tekstur kad belum ada jenisnya dalam SK06: K11 'grunge retak kasar'. Tambah jenis tekstur prosedur (ukur pada gambar upload kad), uji pada imej sedia ada",
   "ubahan_dicuba": 4,
-  "tarikh": "2026-11-27"
+  "tarikh": "2026-11-28"
  },
  {
   "sk": "SK07",
@@ -116,7 +116,7 @@
   "cacat_berulang": "-",
   "tindakan": "Tiada tindakan: tiada cacat berulang",
   "ubahan_dicuba": 3,
-  "tarikh": "2026-11-27"
+  "tarikh": "2026-11-28"
  },
  {
   "sk": "SK08",
@@ -133,6 +133,6 @@
   "cacat_berulang": "-",
   "tindakan": "Tiada tindakan: tiada cacat berulang",
   "ubahan_dicuba": 0,
-  "tarikh": "2026-11-27"
+  "tarikh": "2026-11-28"
  }
 ]

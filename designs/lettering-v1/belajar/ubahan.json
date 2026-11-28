@@ -207,5 +207,20 @@
   "selepas": "2/6",
   "keputusan": "menang",
   "nota": "Kitaran QC pusingan 1 (raw/v12b-cpu-p1). K12O: LOOSELY utama -> sokongan, HOLD sokongan -> utama: 0/3 -> 2/3 (s7, s123 dieja betul; s42 'LOSELY'). K10F: FEWER utama -> sokongan: 0/3 -> 0/3 (FEVER / BIGIER). Ditulis balik bagi K12O sahaja (pembina.TUKAR, aturan 3.4 r2); K10F tidak. Bukti lemah: satu design, 3 seed"
+ },
+ {
+  "tarikh": "2026-11-28",
+  "model": "ernie",
+  "rev_dari": "r1",
+  "rev_ke": "r1",
+  "ubahan": "frasa_bentuk",
+  "kelas": [
+   "bentuk"
+  ],
+  "design": "K12O, K7M",
+  "sebelum": "5/5",
+  "selepas": "5/5",
+  "keputusan": "kalah",
+  "nota": "Ayat 'Letter shapes: ...' (bentuk huruf setiap peranan disebut semula) ditambah; izin jana pengguna 28 Nov 2026 (raw/v12b-cpu-p2). Ejaan 6/6 betul. K12O: huruf sedikit tebal tetapi tidak bertaut, garis lengkung tambahan 2/3. K7M: swash bawah baris akhir hilang 3/3 (ciri kad). Tidak lebih baik, ada cacat baharu. Dibuang"
  }
 ]

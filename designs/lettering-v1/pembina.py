@@ -46,7 +46,7 @@ W, H = 768, 1024
 # (26 Nov 2026: 'zturbo_satu_baris' diuji pada K8G, tidak berjaya, dibuang.)
 # Calon semasa (27 Nov 2026, larian v1.2 kedua, kitaran QC pusingan 1):
 #   <model>_tukar_peranan: perkataan yang salah eja berulang bertukar peranan dengan baris jiran (TUKAR_UJI); ayat sama.
-#   ernie_frasa_bentuk: bentuk huruf setiap peranan disebut semula sekali (TINDAKAN CUBA belajar.py; belum dijana).
+#   (ernie_frasa_bentuk K12O + K7M: KALAH 5/5 -> 5/5, swash K7 hilang 3/3; dibuang 28 Nov 2026.)
 #   (zturbo_tukar_peranan K10F dan zturbo_had_positif K12O: KALAH 0/3 -> 0/3, dibuang 27 Nov 2026.)
 #   (klein4b_tukar_peranan: MENANG 0/6 -> 2/6 kerana K12O 0/3 -> 2/3; ditulis balik sebagai aturan klein 4B r2 bagi K12O
 #    sahaja, dalam TUKAR; K10F 0/3 -> 0/3 tidak ditulis.)
@@ -206,9 +206,6 @@ def ernie(m):
          f"{cap(latar(b))}, white lettering.",
          f"{cap(SATU[m['n'] - 1])} stacked lines in {b['bentuk']} in the center" +
          (f" that {b['condong']}" if b.get("condong") else "") + ": " + "; ".join(butir) + "."]
-    if "ernie_frasa_bentuk" in UJI:  # calon 3.15 (27 Nov 2026): bentuk huruf setiap peranan disebut semula, sekali
-        bentuk = {l["peranan"]: l["penuh"] for l in L if l["penuh"]}
-        s.append("Letter shapes: " + "; ".join(f"{FUNGSI[r]} in {p}" for r, p in bentuk.items()) + ".")
     s += tambahan(b)
     s.append(f"Only these {SATU[m['nw'] - 1]} words, no other text, pure black and white, "
              f"{', '.join('no ' + x for x in b['tiada'])}, {b['gaya']} style, {b['margin']}.")

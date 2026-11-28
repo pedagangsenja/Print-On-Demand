@@ -422,5 +422,39 @@
     "baris tidak bertaut (ciri teras 3 lemah); sengkang sisi di sisi LOOSELY dan LOVE"
    ]
   }
+ },
+ "v12b-cpu-p2": {
+  "ernie": {
+   "K12O_s42": [
+    true,
+    "",
+    "huruf sedikit lebih tebal; bintik kilat lebih banyak; baris tidak bertaut (ciri teras 3 gagal)"
+   ],
+   "K12O_s7": [
+    true,
+    "",
+    "garis lengkung tambahan di bawah HOLD dan LOOSELY; baris tidak bertaut (ciri teras 3 gagal)"
+   ],
+   "K12O_s123": [
+    true,
+    "",
+    "garis lengkung tambahan di bawah LOOSELY; baris tidak bertaut (ciri teras 3 gagal)"
+   ],
+   "K7M_s42": [
+    true,
+    "",
+    "tiada swash di bawah baris akhir (ciri kad K7 hilang)"
+   ],
+   "K7M_s7": [
+    true,
+    "",
+    "tiada swash di bawah baris akhir (ciri kad K7 hilang)"
+   ],
+   "K7M_s123": [
+    true,
+    "",
+    "tiada swash di bawah baris akhir (ciri kad K7 hilang)"
+   ]
+  }
  }
 }
