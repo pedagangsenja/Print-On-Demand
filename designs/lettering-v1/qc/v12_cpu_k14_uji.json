@@ -1,0 +1,115 @@
+{
+ "nota": "Uji 4 calon prompt (belajar.py b1.2) pada kad K14-K18, seed sama dengan v12-cpu-k14; QC visual 28 Nov 2026, banding imej asal. Hitam putih.",
+ "v12-cpu-k14-uji": {
+  "zturbo": {
+   "K16C_s42": [
+    true,
+    "",
+    "",
+    "NEED kecil di antara baris, ejaan betul"
+   ],
+   "K16C_s7": [
+    false,
+    "G1: NEED rosak (NEEZ); titik tambahan selepas DAYS / COFFEE",
+    "",
+    ""
+   ],
+   "K16C_s123": [
+    false,
+    "G1: NEED rosak (EED); titik tambahan selepas DAYS / COFFEE",
+    "",
+    ""
+   ],
+   "K17Z_s42": [
+    true,
+    "bentuk huruf kurang 3D",
+    "",
+    "Huruf bulat tebal + titik"
+   ],
+   "K17Z_s7": [
+    false,
+    "G1: huruf kecil i dalam WiNS / STiLL",
+    "",
+    ""
+   ]
+  },
+  "ernie": {
+   "K14X_s42": [
+    true,
+    "",
+    "",
+    "Sinar atas, reben bertakuk, campuran caps inline + skrip; tiada garis tepi"
+   ],
+   "K14X_s7": [
+    true,
+    "",
+    "",
+    "Sinar atas, reben bertakuk, campuran caps inline + skrip; tiada garis tepi"
+   ],
+   "K14X_s123": [
+    true,
+    "",
+    "",
+    "Sinar atas, reben bertakuk, campuran caps inline + skrip; tiada garis tepi"
+   ]
+  },
+  "klein3": {
+   "K14X_s42": [
+    true,
+    "",
+    "",
+    "Sinar atas, campuran caps inline + skrip; reben penuh lebar pada AND / BIG"
+   ],
+   "K14X_s7": [
+    true,
+    "",
+    "",
+    "Sinar atas, campuran caps inline + skrip; reben penuh lebar pada AND / BIG"
+   ],
+   "K14X_s123": [
+    true,
+    "",
+    "",
+    "Sinar atas, campuran caps inline + skrip; reben penuh lebar pada AND / BIG"
+   ]
+  },
+  "klein4b": {
+   "K15E_s42": [
+    true,
+    "lebar baris tidak sama (sama_lebar gagal)",
+    "",
+    "Sans tebal"
+   ],
+   "K15E_s7": [
+    true,
+    "lebar baris tidak sama (sama_lebar gagal)",
+    "",
+    "Sans tebal"
+   ],
+   "K15E_s123": [
+    true,
+    "lebar baris tidak sama (sama_lebar gagal)",
+    "",
+    "Sans tebal"
+   ],
+   "K16C_s42": [
+    true,
+    "bentuk huruf kurang kasar",
+    "",
+    "Huruf tangan + bintik"
+   ],
+   "K16C_s7": [
+    true,
+    "bentuk huruf kurang kasar",
+    "",
+    "Huruf tangan + bintik"
+   ],
+   "K16C_s123": [
+    true,
+    "",
+    "",
+    "Huruf tangan + bintik, isi poster"
+   ]
+  }
+ }
+}

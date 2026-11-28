@@ -29,7 +29,7 @@ sys.path.insert(0, HERE)
 import pembina  # noqa: E402
 import belajar_sk  # noqa: E402
 
-VERSI = "b1.2 (27 Nov 2026)"
+VERSI = "b1.3 (28 Nov 2026)"
 B = os.path.join(HERE, "belajar")
 STOR = os.path.join(B, "stor", "data")
 EXPORT = os.path.normpath(os.path.join(HERE, "..", "..", "data", "export", "ai_tests", "aturan_belajar.json"))
@@ -202,7 +202,8 @@ def stat(rows):
 
 
 def skor(rows):
-    return (sum(r["lulus"] for r in rows), sum(r["suka"] for r in rows))
+    # (lulus, lulus tanpa kelas cacat, ♥). Lulus sama -> imej bersih lebih banyak menang (b1.3).
+    return (sum(r["lulus"] for r in rows), sum(r["lulus"] and not r["kelas"] for r in rows), sum(r["suka"] for r in rows))
 
 
 def banding(a, b):
@@ -215,7 +216,7 @@ def banding(a, b):
 
 
 def nisbah(s, n):
-    return f"{s[0]}/{n}" + (f" (♥ {s[1]})" if s[1] else "")
+    return f"{s[0]}/{n}" + (f", bersih {s[1]}" if s[1] != s[0] else "") + (f" (♥ {s[2]})" if s[2] else "")
 
 
 def ulasan(model, rows, ubahan):

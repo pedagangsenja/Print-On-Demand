@@ -25,14 +25,14 @@ VERSI = "v1.2-p1"
 DAFTAR = {
     "klein4b": dict(nama="FLUX.2 klein 4B", bahagian="3.4", rev="r1", tarikh="2026-11-26",
                     status="diuji: K3H, CPU, 3 seed", sumber="kad model BFL (rasmi); panduan BFL (lemah)"),
-    "zturbo": dict(nama="Z-Image Turbo", bahagian="3.5", rev="r1", tarikh="2026-11-26",
-                   status="diuji: K3H, CPU, 3 seed", sumber="pasukan Z-Image di Hugging Face + pe.py (rasmi)"),
-    "ernie": dict(nama="ERNIE-Image-Turbo", bahagian="3.6", rev="r1", tarikh="2026-11-26",
-                  status="diuji: K3H, CPU, 3 seed", sumber="dokumen diffusers + kad model (rasmi)"),
+    "zturbo": dict(nama="Z-Image Turbo", bahagian="3.5", rev="r2", tarikh="2026-11-28",
+                   status="diuji: K3H, CPU, 3 seed; r2 had_positif menang K16C / K17Z", sumber="pasukan Z-Image di Hugging Face + pe.py (rasmi)"),
+    "ernie": dict(nama="ERNIE-Image-Turbo", bahagian="3.6", rev="r2", tarikh="2026-11-28",
+                  status="diuji: K3H, CPU, 3 seed; r2 hiasan_tepat menang K14X", sumber="dokumen diffusers + kad model (rasmi)"),
     "moss": dict(nama="MOSS-Image SFT + LoRA 8 langkah", bahagian="3.7", rev="r1", tarikh="2026-11-26",
                  status="diuji: K3H, CPU, 3 seed", sumber="kad model + panduan MOSS (rasmi); kad LoRA (pihak ketiga)"),
-    "klein3": dict(nama="FLUX 3 Image Klein", bahagian="3.8", rev="r1", tarikh="2026-11-27",
-                   status="lulus kelayakan: 9/9 lawan rangka am 6/9, CPU; lesen diterima 27 Nov 2026", sumber="kad model + system_prompts.json (rasmi)"),
+    "klein3": dict(nama="FLUX 3 Image Klein", bahagian="3.8", rev="r2", tarikh="2026-11-28",
+                   status="lulus kelayakan: 9/9 lawan rangka am 6/9, CPU; lesen diterima 27 Nov 2026; r2 hiasan_kedudukan menang K14X", sumber="kad model + system_prompts.json (rasmi)"),
     "qwen": dict(nama="Qwen-Image-2512", bahagian="3.9", rev="r0", tarikh="2026-11-26",
                  status="belum diuji", sumber="kad model + prompt_utils.py (rasmi)"),
     "glm": dict(nama="GLM-Image", bahagian="3.10", rev="r0", tarikh="2026-11-26",
@@ -43,8 +43,8 @@ MODEL = list(REV)
 W, H = 768, 1024
 # Ubahan CALON kitaran QC (langkah 5): hanya hidup bila dinamakan dalam PEMBINA_UJI (dipisah koma). Ubahan yang
 # berjaya ditulis balik ke aturan (rev naik) dan dibuang dari sini; yang gagal dicatat dalam standard dan dibuang.
-# Calon semasa (belajar.py b1.2, 27 Nov 2026, larian K14-K18): zturbo_had_positif, ernie_hiasan_tepat,
-# klein3_hiasan_kedudukan, klein4b_frasa_bentuk. (26 Nov 2026: 'zturbo_satu_baris' diuji pada K8G, tidak berjaya, dibuang.)
+# Calon semasa: tiada. (28 Nov 2026, larian K14-K18: zturbo_had_positif, ernie_hiasan_tepat, klein3_hiasan_kedudukan
+# menang -> r2; klein4b_frasa_bentuk kalah, dibuang. 26 Nov 2026: 'zturbo_satu_baris' pada K8G kalah, dibuang.)
 # Nama calon = <model>_<id pilihan> daripada belajar.py (KELAS), cth. zturbo_had_positif; belajar.py memutuskan menang / kalah (3.15).
 UJI = {u for u in os.environ.get("PEMBINA_UJI", "").split(",") if u}
 SATU = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"]
@@ -137,9 +137,6 @@ def klein4b(m):
         s.append(t + (", and it is the largest line of all." if l["tertinggi"] else "."))
     if b.get("sentuh"):
         s.append(f"The lines {b['sentuh']}.")
-    if "klein4b_frasa_bentuk" in UJI:  # calon 3.15: frasa bentuk huruf
-        s.append(f"Every line uses the same {b['gaya']} letterforms" +
-                 (", and each line is stretched to exactly the same width." if b.get("sama_lebar") else "."))
     s += tambahan(b)
     ekor = "no other lettering below the last line" if bawah_ada_hiasan(b) else "nothing below the last line"
     s.append(f"The poster shows only these {SATU[m['nw'] - 1]} words, each of them once, in pure white and black "
@@ -172,13 +169,10 @@ def zturbo(m):
             t = f'Line {SATU[l["i"]]}{p} reads "{l["q"]}" in {frasa(l, lambda d: f" as line {SATU[d]}")}'
         s.append(t + (", and it is the tallest line of the poster." if l["tertinggi"] else "."))
     s += tambahan(b)
-    if "zturbo_had_positif" in UJI:  # calon 3.15: had sebagai ayat positif, tanpa perkataan berisiko
-        s.append(f"The image shows exactly these {SATU[m['nw'] - 1]} words, each appearing once and spelled exactly as "
-                 f"quoted, in pure white on pure black, and every other area is plain empty black" +
-                 (f" apart from {b['latar_isi']}." if b.get("latar_isi") else "."))
-    else:
-        s.append(f"The only text in the image is these {SATU[m['nw'] - 1]} words, each appearing once. The image uses "
-                 f"only pure white and pure black, {b['ada']}.")
+    # r2 (28 Nov 2026, 3.15 had_positif menang K16C / K17Z 1/5 -> 2/5): had sebagai ayat positif, tanpa perkataan berisiko
+    s.append(f"The image shows exactly these {SATU[m['nw'] - 1]} words, each appearing once and spelled exactly as "
+             f"quoted, in pure white on pure black, and every other area is plain empty black" +
+             (f" apart from {b['latar_isi']}." if b.get("latar_isi") else "."))
     return " ".join(s)
 
 
@@ -199,9 +193,9 @@ def ernie(m):
          f"{cap(SATU[m['n'] - 1])} stacked lines in {b['bentuk']} in the center" +
          (f" that {b['condong']}" if b.get("condong") else "") + ": " + "; ".join(butir) + "."]
     s += tambahan(b)
-    if "ernie_hiasan_tepat" in UJI:  # calon 3.15: hiasan dibenarkan dinyatakan tepat
-        s.append("Clean empty background" + (f" apart from {b['latar_isi']}" if b.get("latar_isi") else "") +
-                 ", no other shapes, lines or borders than those described.")
+    # r2 (28 Nov 2026, 3.15 hiasan_tepat menang K14X 2/3 -> 3/3): hiasan dibenarkan dinyatakan tepat
+    s.append("Clean empty background" + (f" apart from {b['latar_isi']}" if b.get("latar_isi") else "") +
+             ", no other shapes, lines or borders than those described.")
     s.append(f"Only these {SATU[m['nw'] - 1]} words, no other text, pure black and white, "
              f"{', '.join('no ' + x for x in b['tiada'])}, {b['gaya']} style, {b['margin']}.")
     return " ".join(s)
@@ -335,7 +329,7 @@ def klein3_bahagian(m):
         if l["bekas"]:
             a = "In the center" if l["tengah"] else a
             t = f"{a}, a {l['bekas']} <{i}>"
-            if "klein3_hiasan_kedudukan" in UJI:  # calon 3.15: kedudukan / lebar hiasan dinyatakan
+            if "small" not in l["bekas"]:  # r2 (28 Nov 2026, 3.15 hiasan_kedudukan menang K14X: bersih 0/3 -> 3/3)
                 t += " spanning the full width of the block"
             if "sisi" in x:
                 kiri, kanan = idbaru(b["sisi"]["nama"]), idbaru(b["sisi"]["nama"])
