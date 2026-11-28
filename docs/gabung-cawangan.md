@@ -25,3 +25,11 @@ IMG_5840 dan IMG_5793 dipakai oleh dua sesi (sesi ini dan focused-faraday) denga
 2. Satu nombor kad dan satu huruf ayat yang unik bagi setiap sesi (huruf ayat satu aksara: `pembina` membaca `id[:-1]`, `id[-1]`), dan satu nama folder batch bagi setiap sesi.
 3. Gabung kod SK / belajar satu demi satu dengan nombor versi baharu; jalankan semula belajar.py dan belajar_sk.py selepas gabung.
 4. Dashboard: `ai_all` sekarang last-writer-wins. Bina semula daripada semua `data/ai_tests/rows/*.json` selepas gabung.
+
+## Kemajuan gabung (28 Nov 2026, sesi hab nifty-lovelace)
+- Digabung penuh (git, kod + rekod): sleepy-edison (K9–K12, ayat B V N Y), lucid-galileo (K14–K18, ayat X E C Z U), sesi ini (K20–K23, ayat a b c e f q). Aturan: klein4b r3, zturbo r2 (ayat lucid-galileo), ERNIE r3 (sleepy r2 + hiasan_tepat galileo, belum diuji bersama), klein3 r2, MOSS r1. belajar.py b1.4.
+- Rekod sahaja (`cawangan/<sesi>/`): exciting-sagan, focused-allen, focused-faraday dan 5 cawangan lama.
+- Belum boleh digabung kod:
+  - focused-allen: kad K14R, K15T, K16S, K17O (IMG_5852, IMG_5751, ...) bertembung dengan K14–K18 lucid-galileo; definisi kad itu hilang daripada kad.py cawangan itu selepas gabung sleepy-edison (ada dalam commit 99990ad).
+  - exciting-sagan dan focused-faraday: K9–K13 bertembung dengan K9–K12 sleepy-edison; huruf ayat Q, R, V bertembung.
+- Cadangan nombor baharu: focused-allen K30–K33, exciting-sagan K40–K44, focused-faraday K50–K54; huruf ayat ditukar ke huruf yang belum dipakai.
