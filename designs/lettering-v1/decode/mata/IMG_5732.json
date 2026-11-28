@@ -18,5 +18,51 @@
   "susun atur tepat",
   "tandatangan / logo jika ada"
  ],
- "nota": "Sudut blok yang diukur skrip (24 darjah) tidak pasti kerana baris bertindih."
+ "nota": "Sudut blok yang diukur skrip (24 darjah) tidak pasti kerana baris bertindih.",
+ "kata": [
+  {
+   "teks": "Stop",
+   "kotak": [
+    25,
+    8,
+    75,
+    30
+   ],
+   "peranan": "utama",
+   "kelas": "skrip berus"
+  },
+  {
+   "teks": "thinking",
+   "kotak": [
+    12,
+    27,
+    90,
+    50
+   ],
+   "peranan": "utama",
+   "kelas": "skrip berus"
+  },
+  {
+   "teks": "Start",
+   "kotak": [
+    22,
+    44,
+    70,
+    66
+   ],
+   "peranan": "utama",
+   "kelas": "skrip berus"
+  },
+  {
+   "teks": "Doing",
+   "kotak": [
+    22,
+    62,
+    85,
+    90
+   ],
+   "peranan": "utama",
+   "kelas": "skrip berus"
+  }
+ ]
 }

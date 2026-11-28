@@ -16,6 +16,7 @@ Had: 'had' setiap medan ialah cadangan Claude 28 Nov 2026, BELUM ditentukur dari
      bahagian A.
 
 Guna: python3 SK10_banding.py <rujukan.json> <jana.json> [...] [--mod hp|warna] [--keluar fail.json]
+      biasa:  python3 SK10_banding.py decode/<upload>.json <imej jana.png> [...] --kad K24T
       atau dengan gambar terus:  python3 SK10_banding.py --gambar <upload> <imej jana> [...]
                                  [--teks-rujukan "ayat pada upload"] [--teks-jana "ayat pada imej jana"]
 """
@@ -26,7 +27,7 @@ from pathlib import Path
 
 import numpy as np
 
-VERSI = "SK10 v1.1"
+VERSI = "SK10 v1.2"
 
 # medan: (kumpulan, berat, had, jenis, tindakan jika beza)
 #   jenis: 'mutlak' = beza nilai; 'nisbah' = beza peratus; 'kategori' = sama / tidak
@@ -68,6 +69,16 @@ MEDAN_SELURUH = [
     ("seluruh: gelung setiap huruf", "huruf", 2, 0.25, "mutlak",   "prompt: bentuk huruf ikut peranan"),
     ("seluruh: tepi kasar (%)",    "huruf",   2, 8.0,  "mutlak",   "prompt: tekstur dan kelas kemasan"),
     ("bintik / percikan",          "elemen",  1, None, "kategori", "prompt: hiasan"),
+]
+# ciri setiap kata ikut peranan (rekod yang ada kumpulan 'kata': kotak mata pada upload, baris = spesifikasi pada jana)
+MEDAN_KATA = [
+    ("kata utama: indeks tebal",          "huruf", 3, 0.12, "nisbah", "prompt: bentuk huruf ikut peranan (utama)"),
+    ("kata utama: condong huruf (darjah)", "huruf", 3, 6.0, "mutlak", "prompt: bentuk huruf ikut peranan (utama)"),
+    ("kata utama: lebar setiap huruf",    "huruf", 2, 0.25, "nisbah", "prompt: bentuk huruf ikut peranan (utama)"),
+    ("kata sokongan: indeks tebal",       "huruf", 2, 0.12, "nisbah", "prompt: bentuk huruf ikut peranan (sokongan)"),
+    ("kata sokongan: condong huruf (darjah)", "huruf", 2, 6.0, "mutlak", "prompt: bentuk huruf ikut peranan (sokongan)"),
+    ("kata sokongan / utama: nisbah tinggi", "huruf", 2, 0.2, "nisbah", "prompt: hierarki saiz"),
+    ("kata penyambung / utama: nisbah tinggi", "huruf", 2, 0.25, "nisbah", "prompt: hierarki saiz"),
 ]
 MEDAN_WARNA = [
     ("bilangan dakwat",            "warna",   3, 0.0,  "mutlak",   "warna C: bilangan dakwat"),
@@ -143,6 +154,20 @@ def tanda(r):
         "seluruh: tepi kasar (%)": g.get("tepi_kasar_pct"),
         "bintik / percikan": None if not g else ("banyak" if g["komponen_kecil"] >= 10 else "sedikit / tiada"),
     })
+    kt = [k for k in r.get("kata") or [] if k.get("tinggi_px")]
+    def pur(per, kunci):
+        v = [(k[kunci], k["tinggi_px"]) for k in kt if k.get("peranan") == per and k.get(kunci) is not None]
+        return round(float(np.average([x for x, _ in v], weights=[y for _, y in v])), 3) if v else None
+    tu, ts, tp = pur("utama", "tinggi_px"), pur("sokongan", "tinggi_px"), pur("penyambung", "tinggi_px")
+    t.update({
+        "kata utama: indeks tebal": pur("utama", "indeks_tebal"),
+        "kata utama: condong huruf (darjah)": pur("utama", "condong_huruf_darjah"),
+        "kata utama: lebar setiap huruf": pur("utama", "lebar_setiap_huruf"),
+        "kata sokongan: indeks tebal": pur("sokongan", "indeks_tebal"),
+        "kata sokongan: condong huruf (darjah)": pur("sokongan", "condong_huruf_darjah"),
+        "kata sokongan / utama: nisbah tinggi": round(ts / tu, 2) if tu and ts else None,
+        "kata penyambung / utama: nisbah tinggi": round(tp / tu, 2) if tu and tp else None,
+    })
     return t
 
 
@@ -153,7 +178,12 @@ def banding(ruj, jana, mod="hp"):
         medan = [m for m in MEDAN if not (m[0].startswith(("utama:", "baris kecil:")) or m[0] in PERLU_BARIS)]
         medan = medan + MEDAN_SELURUH
     else:
-        medan = MEDAN
+        medan = list(MEDAN)
+    if ruj.get("kata") and jana.get("kata"):
+        medan = medan + MEDAN_KATA
+    if mod == "hp":
+        # v1.2 hitam putih: tekstur ditambah oleh skrip kemudian (Cetak v1), jadi ditunjuk sebagai maklumat sahaja
+        medan = [(n, k, 0 if n in ("tekstur huruf", "tekstur latar") else b, h, j, t) for n, k, b, h, j, t in medan]
     if mod == "warna":
         de = lambda x, y: None if not (x and y) else round(float(np.linalg.norm(_lab(x) - _lab(y))), 1)
         a["warna latar (beza Delta E)"], b["warna latar (beza Delta E)"] = 0.0, de(a["_latar"], b["_latar"])
@@ -201,18 +231,21 @@ if __name__ == "__main__":
     a = sys.argv[1:]
     mod = a[a.index("--mod") + 1] if "--mod" in a else "hp"
     keluar = a[a.index("--keluar") + 1] if "--keluar" in a else None
-    langkau = {i + 1 for i, x in enumerate(a) if x in ("--mod", "--keluar", "--teks-jana", "--teks-rujukan")}
+    langkau = {i + 1 for i, x in enumerate(a) if x in ("--mod", "--keluar", "--teks-jana", "--teks-rujukan", "--kad")}
     tj = a[a.index("--teks-jana") + 1] if "--teks-jana" in a else None
     tr = a[a.index("--teks-rujukan") + 1] if "--teks-rujukan" in a else None
     fail = [x for i, x in enumerate(a) if not x.startswith("--") and i not in langkau]
     if len(fail) < 2:
         sys.exit(__doc__)
-    if "--gambar" in a:
-        sys.path.insert(0, str(Path(__file__).resolve().parent))
-        from SK09_decode import decode
-        rekod = [decode(f, None, tr if i == 0 else tj) for i, f in enumerate(fail)]
-    else:
-        rekod = [json.loads(Path(f).read_text()) for f in fail]
+    # setiap hujah: rekod .json (dibaca terus) atau gambar (di-decode di sini). Imej jana dengan --kad K24T:
+    # ayat dan peranan baris daripada kad.AYAT, supaya kumpulan 'kata' diisi sendiri.
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from SK09_decode import decode, spec_kad
+    spec = None
+    if "--kad" in a:
+        tj, spec = spec_kad(a[a.index("--kad") + 1])
+    rekod = [json.loads(Path(f).read_text()) if f.endswith(".json")
+             else decode(f, None, tr if i == 0 else tj, None, None if i == 0 else spec) for i, f in enumerate(fail)]
     hasil = [banding(rekod[0], r, mod) for r in rekod[1:]]
     if keluar:
         Path(keluar).write_text(json.dumps(hasil, ensure_ascii=False, indent=1) + "\n")

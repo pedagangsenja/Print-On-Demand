@@ -1,5 +1,5 @@
 {
- "versi": "SK09 v1.1",
+ "versi": "SK09 v1.2",
  "fail": "IMG_5838.jpg",
  "sha1": "89550c9fb3bf",
  "tarikh": "2026-11-28",
@@ -64,6 +64,118 @@
   "indeks_tebal": 0.297,
   "gelung_setiap_huruf": 1.08
  },
+ "kata": [
+  {
+   "teks": "CHOOSE",
+   "peranan": "utama",
+   "kelas_mata": "sans berhias garis dalam",
+   "kotak": [
+    16,
+    19,
+    84,
+    39
+   ],
+   "tinggi_pct": 24.6,
+   "tinggi_px": 159,
+   "lebar_px": 383,
+   "indeks_tebal": 0.295,
+   "tebal_strok_pct": 12.6,
+   "kontras_strok": 1.06,
+   "condong_huruf_darjah": 1.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.4,
+   "tepi_kasar_pct": 0.8,
+   "ukuran_kasar": false
+  },
+  {
+   "teks": "People",
+   "peranan": "utama",
+   "kelas_mata": "skrip tebal",
+   "kotak": [
+    18,
+    36,
+    84,
+    60
+   ],
+   "tinggi_pct": 29.4,
+   "tinggi_px": 190,
+   "lebar_px": 396,
+   "indeks_tebal": 0.264,
+   "tebal_strok_pct": 10.3,
+   "kontras_strok": 11.65,
+   "condong_huruf_darjah": 14.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.35,
+   "tepi_kasar_pct": 20.5,
+   "ukuran_kasar": false
+  },
+  {
+   "teks": "WHO",
+   "peranan": "penyambung",
+   "kelas_mata": "sans dalam reben",
+   "kotak": [
+    20,
+    58,
+    48,
+    67
+   ],
+   "tinggi_pct": 10.7,
+   "tinggi_px": 69,
+   "lebar_px": 161,
+   "indeks_tebal": 0.346,
+   "tebal_strok_pct": 20.3,
+   "kontras_strok": 4.2,
+   "condong_huruf_darjah": 1.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.78,
+   "tepi_kasar_pct": 2.7,
+   "ukuran_kasar": false
+  },
+  {
+   "teks": "CHOOSE",
+   "peranan": "utama",
+   "kelas_mata": "huruf besar garis berkembar",
+   "kotak": [
+    16,
+    62,
+    84,
+    91
+   ],
+   "tinggi_pct": 35.4,
+   "tinggi_px": 229,
+   "lebar_px": 385,
+   "indeks_tebal": 0.135,
+   "tebal_strok_pct": 4.4,
+   "kontras_strok": 1.35,
+   "condong_huruf_darjah": 0.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.28,
+   "tepi_kasar_pct": 73.5,
+   "ukuran_kasar": false
+  },
+  {
+   "teks": "YOU",
+   "peranan": "penyambung",
+   "kelas_mata": "sans dalam label",
+   "kotak": [
+    50,
+    82,
+    84,
+    90
+   ],
+   "tinggi_pct": 9.8,
+   "tinggi_px": 63,
+   "lebar_px": 165,
+   "indeks_tebal": 0.286,
+   "tebal_strok_pct": 22.2,
+   "kontras_strok": 4.63,
+   "condong_huruf_darjah": -16.5,
+   "bersambung": true,
+   "lebar_setiap_huruf": 0.87,
+   "tepi_kasar_pct": 2.8,
+   "ukuran_kasar": false
+  }
+ ],
  "baris": [
   {
    "n": 1,
@@ -381,6 +493,63 @@
    "tandatangan / logo jika ada"
   ],
   "nota": "Tiga warna dakwat; dalam v1.2 semuanya putih.",
+  "kata": [
+   {
+    "teks": "CHOOSE",
+    "kotak": [
+     16,
+     19,
+     84,
+     39
+    ],
+    "peranan": "utama",
+    "kelas": "sans berhias garis dalam"
+   },
+   {
+    "teks": "People",
+    "kotak": [
+     18,
+     36,
+     84,
+     60
+    ],
+    "peranan": "utama",
+    "kelas": "skrip tebal"
+   },
+   {
+    "teks": "WHO",
+    "kotak": [
+     20,
+     58,
+     48,
+     67
+    ],
+    "peranan": "penyambung",
+    "kelas": "sans dalam reben"
+   },
+   {
+    "teks": "CHOOSE",
+    "kotak": [
+     16,
+     62,
+     84,
+     91
+    ],
+    "peranan": "utama",
+    "kelas": "huruf besar garis berkembar"
+   },
+   {
+    "teks": "YOU",
+    "kotak": [
+     50,
+     82,
+     84,
+     90
+    ],
+    "peranan": "penyambung",
+    "kelas": "sans dalam label"
+   }
+  ],
   "sumber": "mata Claude"
  }
 }

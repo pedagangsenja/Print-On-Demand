@@ -1,5 +1,5 @@
 {
- "versi": "SK09 v1.1",
+ "versi": "SK09 v1.2",
  "fail": "IMG_5804.jpeg",
  "sha1": "414f2fe94295",
  "tarikh": "2026-11-28",
@@ -60,6 +60,8 @@
   "indeks_tebal": 0.499,
   "gelung_setiap_huruf": 0.5
  },
+ "kata": [],
+ "kata_sumber": null,
  "baris": [
   {
    "n": 1,

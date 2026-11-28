@@ -4,6 +4,10 @@ v1.1: design LETTERING (huruf bertaut, baris bertindih, ekor huruf merentas bari
       (1) kumpulan 'seluruh' = ciri huruf diukur pada SELURUH blok, tidak bergantung pada pecahan baris;
       (2) 'jenis_susunan' = "baris lurus" atau "lettering bertaut"; bila bertaut, medan 'baris' hanya anggaran;
       (3) hiasan warna lain mesti kecil (dahulu perkataan warna kedua tersilap dikira hiasan).
+v1.2: kumpulan 'kata'. Claude menanda kotak setiap kata dengan mata (mata/<nama>.json, medan "kata": teks,
+      kotak [x0, y0, x1, y1] dalam % gambar, peranan); skrip mengukur ciri huruf DI DALAM kotak itu. Untuk
+      lettering bertaut, di mana skrip tidak boleh mengasingkan kata sendiri. Kotak boleh bertindih; bahagian
+      kata jiran yang kecil dibuang, tetapi ukuran kata yang bertaut rapat tetap anggaran.
 
 Tugas: baca SATU gambar dan tulis SATU rekod decode (JSON) dengan lima kumpulan: susunan, baris (huruf), elemen,
        warna, tekstur. Rekod ini disimpan SEBELUM prompt ditulis; Kad Gaya diisi daripada rekod, bukan ditaip tangan.
@@ -20,6 +24,7 @@ Had: latar mesti hampir satu warna. Baris yang bertindih rapat boleh tergabung (
 Guna: python3 SK09_decode.py <gambar> [...] [--keluar DIR] [--semak] [--teks "ayat pada gambar"]
       --keluar DIR  folder rekod (lalai: ../decode);  --semak = simpan gambar semakan (kotak baris dan elemen)
       --teks        ayat pada gambar (untuk imej jana); gambar upload: diambil daripada mata/<nama>.json
+      --kad K24T    imej jana: ayat dan peranan setiap baris daripada kad.AYAT (kumpulan 'kata' diisi sendiri)
 """
 import hashlib
 import json
@@ -34,7 +39,7 @@ from PIL import Image
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from SK05_ukur import _skor  # noqa: E402
 
-VERSI = "SK09 v1.1"
+VERSI = "SK09 v1.2"
 HERE = Path(__file__).resolve().parent
 KELUAR = HERE.parent / "decode"
 
@@ -309,7 +314,62 @@ def ukur_seluruh(mr, n_huruf=None):
     return r
 
 
-def decode(path, semak=None, teks=None):
+def ukur_kata(m, kata, sudut, blok_h):
+    """Ukur ciri huruf dalam setiap kotak kata yang ditanda dengan mata. m = topeng dakwat gambar asal."""
+    h, w = m.shape
+    M = cv2.getRotationMatrix2D((w / 2, h / 2), -sudut, 1)
+    mr = cv2.warpAffine(m, M, (w, h), flags=cv2.INTER_NEAREST)
+    n, lb, st, _ = cv2.connectedComponentsWithStats(mr, 8)
+    keluar = []
+    for k in kata:
+        x0, y0, x1, y1 = [v / 100 for v in k["kotak"]]
+        bucu = np.float32([[x0 * w, y0 * h], [x1 * w, y0 * h], [x1 * w, y1 * h], [x0 * w, y1 * h]])
+        pb = cv2.transform(bucu[None], M)[0]                       # kotak dalam bingkai yang sudah diluruskan
+        a0, b0 = np.clip(pb.min(axis=0), 0, [w - 1, h - 1]).astype(int)
+        a1, b1 = np.clip(pb.max(axis=0), 1, [w, h]).astype(int)
+        poli = np.zeros((h, w), np.uint8)
+        cv2.fillConvexPoly(poli, pb.astype(np.int32), 1)
+        dalam = (mr > 0) & (poli > 0)
+        jum = max(1, int(dalam.sum()))
+        t = np.zeros((h, w), np.uint8)
+        for i in np.unique(lb[dalam]):
+            if i == 0:
+                continue
+            bah = dalam & (lb == i)
+            # simpan bentuk yang kebanyakannya di dalam kotak, atau yang menjadi sebahagian besar dakwat kotak
+            if bah.sum() >= 0.5 * st[i, cv2.CC_STAT_AREA] or bah.sum() >= 0.15 * jum:
+                t[bah] = 1
+        c = t[b0:b1, a0:a1]
+        u = ukur_baris(c, 1, 1, 0) if c.sum() >= 20 else None
+        r = dict(teks=k["teks"], peranan=k.get("peranan"), kelas_mata=k.get("kelas"), kotak=k["kotak"])
+        if u:
+            ys, xs = np.nonzero(c)
+            cc = np.ascontiguousarray(c[ys.min():ys.max() + 1, xs.min():xs.max() + 1])
+            nh = sum(ch.isalnum() for ch in k["teks"]) or 1
+            dtk = cv2.distanceTransform(cc, cv2.DIST_L2, 5)
+            rb = dtk[(dtk >= cv2.dilate(dtk, np.ones((3, 3), np.uint8)) - 1e-6) & (dtk >= 1.0)]
+            tebal = float(2 * np.percentile(rb, 75)) if len(rb) else 0.0
+            r.update(tinggi_pct=round(u["tinggi_px"] / blok_h * 100, 1), tinggi_px=u["tinggi_px"],
+                     lebar_px=u["lebar_px"], indeks_tebal=round(tebal / float(np.sqrt(cc.sum() / nh)), 3),
+                     tebal_strok_pct=round(tebal / u["tinggi_px"] * 100, 1), kontras_strok=u["kontras_strok"],
+                     condong_huruf_darjah=condong_strok(cc), bersambung=u["bersambung"],
+                     lebar_setiap_huruf=round(u["lebar_px"] / nh / u["tinggi_px"], 2),
+                     tepi_kasar_pct=u["tepi_kasar_pct"], ukuran_kasar=u["ukuran_kasar"])
+        keluar.append(r)
+    return keluar
+
+
+def spec_kad(kod):
+    """'K24T' -> (ayat penuh, [(teks baris, peranan), ...]) daripada kad.AYAT: Spesifikasi Teks imej jana."""
+    sys.path.insert(0, str(HERE.parent))
+    import kad
+    a = kad.AYAT[kod[-1]]
+    return a["ayat"], [(t, r) for t, r in a["baris"]]
+
+
+def decode(path, semak=None, teks=None, kata=None, spec=None):
+    """spec = [(teks baris, peranan)] untuk IMEJ JANA: jika bilangan baris yang dikesan sama dengan Spesifikasi
+    Teks, setiap baris dijadikan satu 'kata' dengan peranannya (tiada kotak mata diperlukan)."""
     rgb = muat(path)
     h, w = rgb.shape[:2]
     L = lab(rgb)
@@ -434,6 +494,21 @@ def decode(path, semak=None, teks=None):
         rekod["_x"] = [int(ax0), int(ax1)]
         baris.append(rekod)
 
+    kata_mata = bool(kata)
+    if not kata and spec and len(baris) == len(spec):
+        # kotak baris (bingkai diluruskan) -> kotak dalam gambar asal, dalam peratus
+        Mi = cv2.invertAffineTransform(cv2.getRotationMatrix2D((w / 2, h / 2), -sudut, 1))
+        kata = []
+        for r, (tk, per) in zip(baris, spec):
+            bucu = np.float32([[r["_x"][0], r["_y"][0]], [r["_x"][1], r["_y"][0]], [r["_x"][1], r["_y"][1]],
+                               [r["_x"][0], r["_y"][1]]])
+            q = cv2.transform(bucu[None], Mi)[0]
+            kata.append(dict(teks=tk, peranan=per, kelas=None,
+                             kotak=[round(float(np.clip(q[:, 0].min() / w * 100, 0, 100)), 1),
+                                    round(float(np.clip(q[:, 1].min() / h * 100, 0, 100)), 1),
+                                    round(float(np.clip(q[:, 0].max() / w * 100, 0, 100)), 1),
+                                    round(float(np.clip(q[:, 1].max() / h * 100, 0, 100)), 1)]))
+
     # ---- hierarki, jarak, penjajaran
     tg = [r["tinggi_pct"] for r in baris]
     utama = [r for r in baris if r["tinggi_pct"] >= 0.6 * max(tg)] if baris else []
@@ -539,6 +614,8 @@ def decode(path, semak=None, teks=None):
             hierarki_nisbah=round(max(tg) / min(tg), 2) if tg else None,
             baris_tertinggi=int(np.argmax(tg)) + 1 if tg else None, ambang_dakwat=amb),
         seluruh=seluruh,
+        kata=ukur_kata(m, kata, sudut, bh) if kata else [],
+        kata_sumber=("kotak mata Claude" if kata_mata else "baris dikesan = Spesifikasi Teks" if kata else None),
         baris=[{k: v for k, v in r.items() if not k.startswith("_")} for r in baris],
         elemen=elemen,
         warna=dict(latar=hexa(lab_ke_rgb(bg)), bil_dakwat=bil_dakwat, dakwat=kump, palet=pal),
@@ -586,15 +663,19 @@ if __name__ == "__main__":
     a = sys.argv[1:]
     keluar = Path(a[a.index("--keluar") + 1]) if "--keluar" in a else KELUAR
     semak = "--semak" in a
-    fail = [x for i, x in enumerate(a) if not x.startswith("--") and (i == 0 or a[i - 1] not in ("--keluar", "--teks"))]
+    fail = [x for i, x in enumerate(a) if not x.startswith("--") and (i == 0 or a[i - 1] not in ("--keluar", "--teks", "--kad"))]
     if not fail:
         sys.exit(__doc__)
     keluar.mkdir(parents=True, exist_ok=True)
     teks_cli = a[a.index("--teks") + 1] if "--teks" in a else None
+    spec = None
+    if "--kad" in a:                                   # imej jana: Spesifikasi Teks daripada kad.AYAT
+        teks_cli, spec = spec_kad(a[a.index("--kad") + 1])
     for f in fail:
         mf = keluar / "mata" / (Path(f).stem + ".json")
-        teks = teks_cli or (" ".join(json.loads(mf.read_text()).get("teks_rujukan", [])) if mf.exists() else None)
-        r = decode(f, keluar / "semak" / (Path(f).stem + ".jpg") if semak else None, teks)
+        mt = json.loads(mf.read_text()) if mf.exists() else {}
+        teks = teks_cli or (" ".join(mt["teks_rujukan"]) if mt.get("teks_rujukan") else None)
+        r = decode(f, keluar / "semak" / (Path(f).stem + ".jpg") if semak else None, teks, mt.get("kata"), spec)
         r = gabung_mata(r, keluar)
         (keluar / (Path(f).stem + ".json")).write_text(json.dumps(r, ensure_ascii=False, indent=1) + "\n")
         s = r.get("susunan", {})

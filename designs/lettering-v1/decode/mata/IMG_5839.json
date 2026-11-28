@@ -18,5 +18,51 @@
   "susun atur tepat",
   "tandatangan / logo jika ada"
  ],
- "nota": ""
+ "nota": "",
+ "kata": [
+  {
+   "teks": "You're",
+   "kotak": [
+    22,
+    9,
+    84,
+    35
+   ],
+   "peranan": "utama",
+   "kelas": "skrip monoline"
+  },
+  {
+   "teks": "one",
+   "kotak": [
+    20,
+    30,
+    62,
+    50
+   ],
+   "peranan": "sokongan",
+   "kelas": "skrip monoline"
+  },
+  {
+   "teks": "in a",
+   "kotak": [
+    30,
+    42,
+    70,
+    58
+   ],
+   "peranan": "penyambung",
+   "kelas": "skrip monoline"
+  },
+  {
+   "teks": "Million",
+   "kotak": [
+    16,
+    52,
+    82,
+    76
+   ],
+   "peranan": "utama",
+   "kelas": "skrip monoline"
+  }
+ ]
 }

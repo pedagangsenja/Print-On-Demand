@@ -1,5 +1,5 @@
 {
- "versi": "SK09 v1.1",
+ "versi": "SK09 v1.2",
  "fail": "IMG_5735.jpg",
  "sha1": "10da9ec2b9d8",
  "tarikh": "2026-11-28",
@@ -61,6 +61,96 @@
   "indeks_tebal": 0.349,
   "gelung_setiap_huruf": 0.36
  },
+ "kata": [
+  {
+   "teks": "We'll",
+   "peranan": "sokongan",
+   "kelas_mata": "marker tebal",
+   "kotak": [
+    29,
+    13,
+    68,
+    36
+   ],
+   "tinggi_pct": 26.2,
+   "tinggi_px": 110,
+   "lebar_px": 235,
+   "indeks_tebal": 0.305,
+   "tebal_strok_pct": 13.8,
+   "kontras_strok": 1.35,
+   "condong_huruf_darjah": 21.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.53,
+   "tepi_kasar_pct": 5.4,
+   "ukuran_kasar": false
+  },
+  {
+   "teks": "make this",
+   "peranan": "sokongan",
+   "kelas_mata": "marker tebal",
+   "kotak": [
+    20,
+    30,
+    76,
+    53
+   ],
+   "tinggi_pct": 25.5,
+   "tinggi_px": 107,
+   "lebar_px": 343,
+   "indeks_tebal": 0.323,
+   "tebal_strok_pct": 13.1,
+   "kontras_strok": 1.48,
+   "condong_huruf_darjah": 19.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.4,
+   "tepi_kasar_pct": 6.3,
+   "ukuran_kasar": false
+  },
+  {
+   "teks": "Dream",
+   "peranan": "utama",
+   "kelas_mata": "marker tebal",
+   "kotak": [
+    28,
+    47,
+    82,
+    73
+   ],
+   "tinggi_pct": 28.3,
+   "tinggi_px": 119,
+   "lebar_px": 329,
+   "indeks_tebal": 0.311,
+   "tebal_strok_pct": 15.8,
+   "kontras_strok": 1.54,
+   "condong_huruf_darjah": 19.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.55,
+   "tepi_kasar_pct": 6.6,
+   "ukuran_kasar": false
+  },
+  {
+   "teks": "come true",
+   "peranan": "sokongan",
+   "kelas_mata": "marker tebal",
+   "kotak": [
+    21,
+    68,
+    79,
+    88
+   ],
+   "tinggi_pct": 18.6,
+   "tinggi_px": 78,
+   "lebar_px": 350,
+   "indeks_tebal": 0.353,
+   "tebal_strok_pct": 17.9,
+   "kontras_strok": 1.39,
+   "condong_huruf_darjah": 19.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.56,
+   "tepi_kasar_pct": 6.2,
+   "ukuran_kasar": false
+  }
+ ],
  "baris": [
   {
    "n": 1,
@@ -260,6 +350,52 @@
    "tandatangan / logo jika ada"
   ],
   "nota": "",
+  "kata": [
+   {
+    "teks": "We'll",
+    "kotak": [
+     29,
+     13,
+     68,
+     36
+    ],
+    "peranan": "sokongan",
+    "kelas": "marker tebal"
+   },
+   {
+    "teks": "make this",
+    "kotak": [
+     20,
+     30,
+     76,
+     53
+    ],
+    "peranan": "sokongan",
+    "kelas": "marker tebal"
+   },
+   {
+    "teks": "Dream",
+    "kotak": [
+     28,
+     47,
+     82,
+     73
+    ],
+    "peranan": "utama",
+    "kelas": "marker tebal"
+   },
+   {
+    "teks": "come true",
+    "kotak": [
+     21,
+     68,
+     79,
+     88
+    ],
+    "peranan": "sokongan",
+    "kelas": "marker tebal"
+   }
+  ],
   "sumber": "mata Claude"
  }
 }

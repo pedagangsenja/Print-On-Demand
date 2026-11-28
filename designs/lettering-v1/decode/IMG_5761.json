@@ -1,5 +1,5 @@
 {
- "versi": "SK09 v1.1",
+ "versi": "SK09 v1.2",
  "fail": "IMG_5761.jpg",
  "sha1": "7f8673628414",
  "tarikh": "2026-11-28",
@@ -67,6 +67,140 @@
   "indeks_tebal": 0.341,
   "gelung_setiap_huruf": 0.13
  },
+ "kata": [
+  {
+   "teks": "THE",
+   "peranan": "penyambung",
+   "kelas_mata": "sans italik",
+   "kotak": [
+    38,
+    11,
+    60,
+    19
+   ],
+   "tinggi_pct": 7.1,
+   "tinggi_px": 93,
+   "lebar_px": 148,
+   "indeks_tebal": 0.368,
+   "tebal_strok_pct": 19.4,
+   "kontras_strok": 1.37,
+   "condong_huruf_darjah": 15.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.53,
+   "tepi_kasar_pct": 3.1,
+   "ukuran_kasar": false
+  },
+  {
+   "teks": "BEST",
+   "peranan": "utama",
+   "kelas_mata": "sans italik pekat",
+   "kotak": [
+    18,
+    16,
+    86,
+    36
+   ],
+   "tinggi_pct": 17.0,
+   "tinggi_px": 222,
+   "lebar_px": 526,
+   "indeks_tebal": 0.312,
+   "tebal_strok_pct": 18.9,
+   "kontras_strok": 3.48,
+   "condong_huruf_darjah": 15.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.59,
+   "tepi_kasar_pct": 22.7,
+   "ukuran_kasar": false
+  },
+  {
+   "teks": "REVENGE",
+   "peranan": "utama",
+   "kelas_mata": "sans italik pekat",
+   "kotak": [
+    6,
+    33,
+    95,
+    52
+   ],
+   "tinggi_pct": 18.1,
+   "tinggi_px": 237,
+   "lebar_px": 677,
+   "indeks_tebal": 0.329,
+   "tebal_strok_pct": 15.3,
+   "kontras_strok": 1.19,
+   "condong_huruf_darjah": 13.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.41,
+   "tepi_kasar_pct": 7.2,
+   "ukuran_kasar": false
+  },
+  {
+   "teks": "IS",
+   "peranan": "penyambung",
+   "kelas_mata": "sans italik",
+   "kotak": [
+    42,
+    50,
+    58,
+    57
+   ],
+   "tinggi_pct": 7.3,
+   "tinggi_px": 95,
+   "lebar_px": 104,
+   "indeks_tebal": 0.402,
+   "tebal_strok_pct": 18.9,
+   "kontras_strok": 1.25,
+   "condong_huruf_darjah": 15.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.55,
+   "tepi_kasar_pct": 2.8,
+   "ukuran_kasar": false
+  },
+  {
+   "teks": "MASSIVE",
+   "peranan": "utama",
+   "kelas_mata": "sans italik pekat",
+   "kotak": [
+    10,
+    54,
+    92,
+    72
+   ],
+   "tinggi_pct": 13.8,
+   "tinggi_px": 181,
+   "lebar_px": 624,
+   "indeks_tebal": 0.336,
+   "tebal_strok_pct": 18.5,
+   "kontras_strok": 5.57,
+   "condong_huruf_darjah": 12.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.49,
+   "tepi_kasar_pct": 20.5,
+   "ukuran_kasar": false
+  },
+  {
+   "teks": "SUCCESS",
+   "peranan": "utama",
+   "kelas_mata": "sans italik pekat",
+   "kotak": [
+    4,
+    68,
+    96,
+    89
+   ],
+   "tinggi_pct": 21.7,
+   "tinggi_px": 284,
+   "lebar_px": 678,
+   "indeks_tebal": 0.31,
+   "tebal_strok_pct": 13.1,
+   "kontras_strok": 9.87,
+   "condong_huruf_darjah": 11.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.34,
+   "tepi_kasar_pct": 19.4,
+   "ukuran_kasar": false
+  }
+ ],
  "baris": [
   {
    "n": 1,
@@ -574,6 +708,74 @@
    "tandatangan / logo jika ada"
   ],
   "nota": "Latar bercahaya mengganggu ukuran skrip (bucu dikira dakwat).",
+  "kata": [
+   {
+    "teks": "THE",
+    "kotak": [
+     38,
+     11,
+     60,
+     19
+    ],
+    "peranan": "penyambung",
+    "kelas": "sans italik"
+   },
+   {
+    "teks": "BEST",
+    "kotak": [
+     18,
+     16,
+     86,
+     36
+    ],
+    "peranan": "utama",
+    "kelas": "sans italik pekat"
+   },
+   {
+    "teks": "REVENGE",
+    "kotak": [
+     6,
+     33,
+     95,
+     52
+    ],
+    "peranan": "utama",
+    "kelas": "sans italik pekat"
+   },
+   {
+    "teks": "IS",
+    "kotak": [
+     42,
+     50,
+     58,
+     57
+    ],
+    "peranan": "penyambung",
+    "kelas": "sans italik"
+   },
+   {
+    "teks": "MASSIVE",
+    "kotak": [
+     10,
+     54,
+     92,
+     72
+    ],
+    "peranan": "utama",
+    "kelas": "sans italik pekat"
+   },
+   {
+    "teks": "SUCCESS",
+    "kotak": [
+     4,
+     68,
+     96,
+     89
+    ],
+    "peranan": "utama",
+    "kelas": "sans italik pekat"
+   }
+  ],
   "sumber": "mata Claude"
  }
 }

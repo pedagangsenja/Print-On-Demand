@@ -17,5 +17,51 @@
   "susun atur tepat",
   "tandatangan / logo jika ada"
  ],
- "nota": ""
+ "nota": "",
+ "kata": [
+  {
+   "teks": "We'll",
+   "kotak": [
+    29,
+    13,
+    68,
+    36
+   ],
+   "peranan": "sokongan",
+   "kelas": "marker tebal"
+  },
+  {
+   "teks": "make this",
+   "kotak": [
+    20,
+    30,
+    76,
+    53
+   ],
+   "peranan": "sokongan",
+   "kelas": "marker tebal"
+  },
+  {
+   "teks": "Dream",
+   "kotak": [
+    28,
+    47,
+    82,
+    73
+   ],
+   "peranan": "utama",
+   "kelas": "marker tebal"
+  },
+  {
+   "teks": "come true",
+   "kotak": [
+    21,
+    68,
+    79,
+    88
+   ],
+   "peranan": "sokongan",
+   "kelas": "marker tebal"
+  }
+ ]
 }

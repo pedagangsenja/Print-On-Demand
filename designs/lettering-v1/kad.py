@@ -50,6 +50,9 @@ AYAT = {
     # Keputusan: TIDAK berjaya ('ALMiST' 3/3). Disimpan sebagai rekod imej raw/v12-cpu-p1/moss sahaja.
     "J": dict(nama="sederhana", laluan=2, ayat="Keep Going You Are Almost There",
               baris=[("Keep Going", "sokongan"), ("You Are", "penyambung"), ("Almost", "sokongan"), ("There", "utama")]),
+    # 28 Nov 2026: ayat ujian aliran v1.2 baharu (decode dahulu, QC banding). Saringan trademark belum dibuat.
+    "T": dict(nama="pendek", laluan=1, ayat="Trust Your Pace",
+              baris=[("Trust", "utama"), ("Your", "sokongan"), ("Pace", "utama")]),
 }
 
 # Langkah 1: Kad Gaya. huruf[peranan] = (kes, frasa bentuk huruf, nama warna untuk prompt)
@@ -305,6 +308,39 @@ KAD = {
             ("Bintik putih kecil bertabur di latar", False),
             ("Tepi huruf sedikit kasar (marker kering)", False),
             ("Putih satu warna atas hitam, tiada swash", False)]),
+    # K24 (28 Nov 2026): kad PERTAMA yang diisi daripada rekod decode (decode/IMG_5840.json, SK09 v1.2) + medan mata
+    # Claude. Nombor K24 dipilih supaya tidak bertembung dengan K9-K23 di cawangan sesi lain. Belum diluluskan pengguna.
+    "K24": dict(
+        nama="Skrip berus tebal licin, baris rapat, huruf condong (putih atas hitam)", ref="IMG_5840",
+        versi="v1.0 (28 Nov 2026; daripada rekod decode; belum diluluskan pengguna)",
+        kelas="F1", dakwat=1, ruang_tepi=11, tekstur="tiada", julat="2-4 perkataan",
+        warna=dict(latar=("hitam", "#101010", "black"), dakwat=[("putih", "#fcfcfc", "white")]),
+        medium="Hand-lettered brush script quote poster, portrait.",
+        latar="Solid black background.",
+        susunan=("Three lines stacked in one tight centered block; the lines sit close together and overlap "
+                 "slightly, the baselines are almost level, and the letters lean to the right."),
+        huruf={"utama": ("title", "very large heavy connected brush script with thick smooth strokes and a big capital", "white"),
+               "sokongan": ("lower", "very large heavy connected brush script with thick smooth strokes", "white"),
+               "penyambung": ("lower", "smaller heavy brush script", "white")},
+        hierarki="All the words are about the same size.",
+        hiasan="The last letter of each line ends in a long flat horizontal swash.",
+        margin="Wide empty black margins.",
+        larangan="Flat solid white strokes with crisp clean edges. White on black only, no outline, no shadow.",
+        risiko=["skrip bersambung: huruf boleh tertinggal atau bertambah", "ekor mendatar boleh dibaca sebagai huruf",
+                "baris bertindih boleh menggabung perkataan"],
+        jangan_salin=["ayat Know your worth", "susunan baris tepat rujukan"],
+        decode=dict(rekod="decode/IMG_5840.json", versi="SK09 v1.2", jenis_susunan="lettering bertaut",
+                    condong_blok=1.8, condong_huruf=23.5, indeks_tebal=0.24, kontras_strok=2.17, strok_nipis_pct=6.3,
+                    kongsi_bentuk_terbesar=0.39, gelung_setiap_huruf=0.77, bentuk_blok="segi empat",
+                    kepadatan_blok_pct=41.0, tepi_pct=dict(kiri=11.4, kanan=10.6, atas=13.6, bawah=12.7)),
+        qc=[("Skrip berus tebal bersambung, strok licin", True),
+            ("Huruf condong ke kanan, garis dasar hampir mendatar", True),
+            ("Baris rapat dan sedikit bertindih, satu blok tengah", True),
+            ("Semua perkataan hampir sama besar", False),
+            ("Ekor mendatar panjang pada huruf akhir baris", False),
+            ("Huruf awal besar pada perkataan pertama", False),
+            ("Tepi strok tajam, isi rata", False),
+            ("Putih satu warna atas hitam, tiada hiasan lain", False)]),
 }
 
 
@@ -466,6 +502,26 @@ BLOK = {
                                   g_sederhana=5.72, g_kasar=4.75, g_dakwat=5.28, sumber="SK06 --ukur-tekstur pada IMG_5735",
                                   had=["butir bawah 1 px dan tepi marker kering tidak ditiru: pada JPEG 600x449 itu kesan "
                                        "mampatan; perlu gambar upload lebih besar"]))),
+    "K24": dict(
+        medium="brush script quote poster", gaya="hand-lettered", latar_warna="solid black", latar_isi=None,
+        tepi="crisp clean edges", bentuk="one tight block", condong=None,
+        sentuh="sit close together and overlap slightly", margin="wide empty black margins",
+        huruf={"utama": dict(penuh="very large heavy connected brush script with thick smooth strokes, leaning to the right, with a big capital",
+                             ringkas="heavy connected brush script"),
+               "sokongan": dict(penuh="very large heavy connected brush script with thick smooth strokes, leaning to the right",
+                                ringkas="heavy connected brush script"),
+               "penyambung": dict(penuh="smaller heavy brush script", ringkas="heavy brush script")},
+        tertinggi=None, hierarki="All the words are about the same size.",
+        hiasan="The last letter of each line ends in a long flat horizontal swash.", sisi=None, hiasan_kotak=[],
+        tiada=["other colors", "outline", "shadow"], ada="solid white strokes on a clean black background",
+        sama_lebar=False,
+        # Kotak baris (piksel, kanvas 768x1024) daripada kotak kata rekod decode: lebar kata 78% / 60% lebar gambar,
+        # tinggi blok 74% kanvas dibahagi tiga baris (baris bertindih dalam rujukan; kotak tidak bertindih).
+        ukuran=dict(utama=(592, 248), sokongan=(464, 248), penyambung=(296, 120)),
+        # Diukur SK09 v1.2 daripada IMG_5840 (736x981, 3:4), 28 Nov 2026. Satu gambar. Blok tidak condong (1.8 darjah,
+        # dalam had), jadi SK01 tidak dijalankan; condong ialah condong HURUF (23.5 darjah), urusan prompt.
+        rujukan=dict(condong_darjah=None, tepi_pct=10.6, tepi_sisi_pct=10.6, tepi_atas_bawah_pct=12.7,
+                     sumber="SK09 v1.2 pada IMG_5840 (decode/IMG_5840.json)")),
 }
 
 

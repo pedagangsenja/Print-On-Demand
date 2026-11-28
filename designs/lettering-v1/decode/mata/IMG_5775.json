@@ -19,5 +19,62 @@
   "susun atur tepat",
   "tandatangan / logo jika ada"
  ],
- "nota": "Fail ini kecil (236 x 354 piksel): ukuran kasar."
+ "nota": "Fail ini kecil (236 x 354 piksel): ukuran kasar.",
+ "kata": [
+  {
+   "teks": "SUCCESS",
+   "kotak": [
+    16,
+    14,
+    86,
+    33
+   ],
+   "peranan": "utama",
+   "kelas": "sans pekat sempit"
+  },
+  {
+   "teks": "Grows",
+   "kotak": [
+    18,
+    29,
+    86,
+    49
+   ],
+   "peranan": "sokongan",
+   "kelas": "skrip berus"
+  },
+  {
+   "teks": "WHERE",
+   "kotak": [
+    34,
+    42,
+    74,
+    52
+   ],
+   "peranan": "penyambung",
+   "kelas": "sans dalam label"
+  },
+  {
+   "teks": "Excuses",
+   "kotak": [
+    14,
+    49,
+    86,
+    72
+   ],
+   "peranan": "sokongan",
+   "kelas": "skrip berus"
+  },
+  {
+   "teks": "END",
+   "kotak": [
+    28,
+    66,
+    76,
+    84
+   ],
+   "peranan": "utama",
+   "kelas": "sans pekat sempit"
+  }
+ ]
 }

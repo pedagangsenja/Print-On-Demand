@@ -20,5 +20,62 @@
   "susun atur tepat",
   "tandatangan / logo jika ada"
  ],
- "nota": "Tiga warna dakwat; dalam v1.2 semuanya putih."
+ "nota": "Tiga warna dakwat; dalam v1.2 semuanya putih.",
+ "kata": [
+  {
+   "teks": "CHOOSE",
+   "kotak": [
+    16,
+    19,
+    84,
+    39
+   ],
+   "peranan": "utama",
+   "kelas": "sans berhias garis dalam"
+  },
+  {
+   "teks": "People",
+   "kotak": [
+    18,
+    36,
+    84,
+    60
+   ],
+   "peranan": "utama",
+   "kelas": "skrip tebal"
+  },
+  {
+   "teks": "WHO",
+   "kotak": [
+    20,
+    58,
+    48,
+    67
+   ],
+   "peranan": "penyambung",
+   "kelas": "sans dalam reben"
+  },
+  {
+   "teks": "CHOOSE",
+   "kotak": [
+    16,
+    62,
+    84,
+    91
+   ],
+   "peranan": "utama",
+   "kelas": "huruf besar garis berkembar"
+  },
+  {
+   "teks": "YOU",
+   "kotak": [
+    50,
+    82,
+    84,
+    90
+   ],
+   "peranan": "penyambung",
+   "kelas": "sans dalam label"
+  }
+ ]
 }

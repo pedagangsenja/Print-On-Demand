@@ -1,5 +1,5 @@
 {
- "versi": "SK09 v1.1",
+ "versi": "SK09 v1.2",
  "fail": "IMG_5840.jpg",
  "sha1": "2b3dc9e5b21b",
  "tarikh": "2026-11-28",
@@ -63,6 +63,74 @@
   "indeks_tebal": 0.24,
   "gelung_setiap_huruf": 0.77
  },
+ "kata": [
+  {
+   "teks": "Know",
+   "peranan": "utama",
+   "kelas_mata": "skrip berus tebal",
+   "kotak": [
+    12,
+    13,
+    90,
+    43
+   ],
+   "tinggi_pct": 39.8,
+   "tinggi_px": 286,
+   "lebar_px": 549,
+   "indeks_tebal": 0.252,
+   "tebal_strok_pct": 10.2,
+   "kontras_strok": 1.9,
+   "condong_huruf_darjah": 12.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.48,
+   "tepi_kasar_pct": 5.6,
+   "ukuran_kasar": false
+  },
+  {
+   "teks": "your",
+   "peranan": "utama",
+   "kelas_mata": "skrip berus tebal",
+   "kotak": [
+    16,
+    38,
+    76,
+    66
+   ],
+   "tinggi_pct": 38.2,
+   "tinggi_px": 274,
+   "lebar_px": 447,
+   "indeks_tebal": 0.232,
+   "tebal_strok_pct": 9.0,
+   "kontras_strok": 2.11,
+   "condong_huruf_darjah": 19.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.41,
+   "tepi_kasar_pct": 5.6,
+   "ukuran_kasar": false
+  },
+  {
+   "teks": "Worth",
+   "peranan": "utama",
+   "kelas_mata": "skrip berus tebal",
+   "kotak": [
+    12,
+    60,
+    90,
+    90
+   ],
+   "tinggi_pct": 36.4,
+   "tinggi_px": 261,
+   "lebar_px": 566,
+   "indeks_tebal": 0.233,
+   "tebal_strok_pct": 9.2,
+   "kontras_strok": 1.86,
+   "condong_huruf_darjah": 24.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.43,
+   "tepi_kasar_pct": 4.2,
+   "ukuran_kasar": false
+  }
+ ],
  "baris": [
   {
    "n": 1,
@@ -298,6 +366,41 @@
    "tandatangan / logo jika ada"
   ],
   "nota": "",
+  "kata": [
+   {
+    "teks": "Know",
+    "kotak": [
+     12,
+     13,
+     90,
+     43
+    ],
+    "peranan": "utama",
+    "kelas": "skrip berus tebal"
+   },
+   {
+    "teks": "your",
+    "kotak": [
+     16,
+     38,
+     76,
+     66
+    ],
+    "peranan": "utama",
+    "kelas": "skrip berus tebal"
+   },
+   {
+    "teks": "Worth",
+    "kotak": [
+     12,
+     60,
+     90,
+     90
+    ],
+    "peranan": "utama",
+    "kelas": "skrip berus tebal"
+   }
+  ],
   "sumber": "mata Claude"
  }
 }

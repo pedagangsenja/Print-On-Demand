@@ -1,5 +1,5 @@
 {
- "versi": "SK09 v1.1",
+ "versi": "SK09 v1.2",
  "fail": "IMG_5818.jpg",
  "sha1": "fb03e036b163",
  "tarikh": "2026-11-28",
@@ -59,6 +59,184 @@
   "indeks_tebal": 0.264,
   "gelung_setiap_huruf": 1.0
  },
+ "kata": [
+  {
+   "teks": "The",
+   "peranan": "penyambung",
+   "kelas_mata": "skrip berpusar",
+   "kotak": [
+    38,
+    17,
+    62,
+    34
+   ],
+   "tinggi_pct": 25.5,
+   "tinggi_px": 128,
+   "lebar_px": 166,
+   "indeks_tebal": 0.226,
+   "tebal_strok_pct": 10.0,
+   "kontras_strok": 2.12,
+   "condong_huruf_darjah": 40.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.43,
+   "tepi_kasar_pct": 10.3,
+   "ukuran_kasar": false
+  },
+  {
+   "teks": "smarter",
+   "peranan": "utama",
+   "kelas_mata": "skrip berpusar",
+   "kotak": [
+    26,
+    28,
+    80,
+    44
+   ],
+   "tinggi_pct": 33.5,
+   "tinggi_px": 168,
+   "lebar_px": 307,
+   "indeks_tebal": 0.251,
+   "tebal_strok_pct": 7.8,
+   "kontras_strok": 2.11,
+   "condong_huruf_darjah": 40.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.26,
+   "tepi_kasar_pct": 16.0,
+   "ukuran_kasar": false
+  },
+  {
+   "teks": "You",
+   "peranan": "utama",
+   "kelas_mata": "skrip berpusar",
+   "kotak": [
+    22,
+    40,
+    48,
+    57
+   ],
+   "tinggi_pct": 27.5,
+   "tinggi_px": 138,
+   "lebar_px": 177,
+   "indeks_tebal": 0.222,
+   "tebal_strok_pct": 9.3,
+   "kontras_strok": 4.64,
+   "condong_huruf_darjah": 40.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.43,
+   "tepi_kasar_pct": 24.3,
+   "ukuran_kasar": false
+  },
+  {
+   "teks": "get",
+   "peranan": "sokongan",
+   "kelas_mata": "skrip berpusar",
+   "kotak": [
+    46,
+    40,
+    74,
+    52
+   ],
+   "tinggi_pct": 24.0,
+   "tinggi_px": 120,
+   "lebar_px": 166,
+   "indeks_tebal": 0.245,
+   "tebal_strok_pct": 9.7,
+   "kontras_strok": 2.13,
+   "condong_huruf_darjah": 32.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.46,
+   "tepi_kasar_pct": 8.9,
+   "ukuran_kasar": false
+  },
+  {
+   "teks": "The",
+   "peranan": "penyambung",
+   "kelas_mata": "skrip berpusar",
+   "kotak": [
+    44,
+    54,
+    58,
+    63
+   ],
+   "tinggi_pct": 14.2,
+   "tinggi_px": 71,
+   "lebar_px": 94,
+   "indeks_tebal": 0.258,
+   "tebal_strok_pct": 10.1,
+   "kontras_strok": 2.27,
+   "condong_huruf_darjah": 13.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.44,
+   "tepi_kasar_pct": 24.9,
+   "ukuran_kasar": false
+  },
+  {
+   "teks": "Less",
+   "peranan": "utama",
+   "kelas_mata": "skrip berpusar",
+   "kotak": [
+    18,
+    57,
+    48,
+    72
+   ],
+   "tinggi_pct": 28.3,
+   "tinggi_px": 142,
+   "lebar_px": 193,
+   "indeks_tebal": 0.233,
+   "tebal_strok_pct": 8.2,
+   "kontras_strok": 1.95,
+   "condong_huruf_darjah": 14.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.34,
+   "tepi_kasar_pct": 25.9,
+   "ukuran_kasar": false
+  },
+  {
+   "teks": "You",
+   "peranan": "utama",
+   "kelas_mata": "skrip berpusar",
+   "kotak": [
+    56,
+    52,
+    82,
+    66
+   ],
+   "tinggi_pct": 25.3,
+   "tinggi_px": 127,
+   "lebar_px": 168,
+   "indeks_tebal": 0.232,
+   "tebal_strok_pct": 10.1,
+   "kontras_strok": 1.98,
+   "condong_huruf_darjah": 37.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.44,
+   "tepi_kasar_pct": 12.0,
+   "ukuran_kasar": false
+  },
+  {
+   "teks": "Speak",
+   "peranan": "utama",
+   "kelas_mata": "skrip berpusar",
+   "kotak": [
+    28,
+    66,
+    78,
+    90
+   ],
+   "tinggi_pct": 39.5,
+   "tinggi_px": 198,
+   "lebar_px": 322,
+   "indeks_tebal": 0.197,
+   "tebal_strok_pct": 7.1,
+   "kontras_strok": 2.63,
+   "condong_huruf_darjah": 31.5,
+   "bersambung": true,
+   "lebar_setiap_huruf": 0.33,
+   "tepi_kasar_pct": 19.3,
+   "ukuran_kasar": false
+  }
+ ],
  "baris": [
   {
    "n": 1,
@@ -168,6 +346,96 @@
    "tandatangan / logo jika ada"
   ],
   "nota": "Bayang tindih dan tekstur bukan untuk jana hitam putih; urusan Warna v1 / Cetak v1.",
+  "kata": [
+   {
+    "teks": "The",
+    "kotak": [
+     38,
+     17,
+     62,
+     34
+    ],
+    "peranan": "penyambung",
+    "kelas": "skrip berpusar"
+   },
+   {
+    "teks": "smarter",
+    "kotak": [
+     26,
+     28,
+     80,
+     44
+    ],
+    "peranan": "utama",
+    "kelas": "skrip berpusar"
+   },
+   {
+    "teks": "You",
+    "kotak": [
+     22,
+     40,
+     48,
+     57
+    ],
+    "peranan": "utama",
+    "kelas": "skrip berpusar"
+   },
+   {
+    "teks": "get",
+    "kotak": [
+     46,
+     40,
+     74,
+     52
+    ],
+    "peranan": "sokongan",
+    "kelas": "skrip berpusar"
+   },
+   {
+    "teks": "The",
+    "kotak": [
+     44,
+     54,
+     58,
+     63
+    ],
+    "peranan": "penyambung",
+    "kelas": "skrip berpusar"
+   },
+   {
+    "teks": "Less",
+    "kotak": [
+     18,
+     57,
+     48,
+     72
+    ],
+    "peranan": "utama",
+    "kelas": "skrip berpusar"
+   },
+   {
+    "teks": "You",
+    "kotak": [
+     56,
+     52,
+     82,
+     66
+    ],
+    "peranan": "utama",
+    "kelas": "skrip berpusar"
+   },
+   {
+    "teks": "Speak",
+    "kotak": [
+     28,
+     66,
+     78,
+     90
+    ],
+    "peranan": "utama",
+    "kelas": "skrip berpusar"
+   }
+  ],
   "sumber": "mata Claude"
  }
 }

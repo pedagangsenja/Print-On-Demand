@@ -1,5 +1,5 @@
 {
- "versi": "SK09 v1.1",
+ "versi": "SK09 v1.2",
  "fail": "IMG_5732.jpg",
  "sha1": "b5e10b57244b",
  "tarikh": "2026-11-28",
@@ -60,6 +60,96 @@
   "indeks_tebal": 0.254,
   "gelung_setiap_huruf": 1.14
  },
+ "kata": [
+  {
+   "teks": "Stop",
+   "peranan": "utama",
+   "kelas_mata": "skrip berus",
+   "kotak": [
+    25,
+    8,
+    75,
+    30
+   ],
+   "tinggi_pct": 37.0,
+   "tinggi_px": 298,
+   "lebar_px": 407,
+   "indeks_tebal": 0.16,
+   "tebal_strok_pct": 5.2,
+   "kontras_strok": 11.2,
+   "condong_huruf_darjah": 39.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.34,
+   "tepi_kasar_pct": 80.1,
+   "ukuran_kasar": false
+  },
+  {
+   "teks": "thinking",
+   "peranan": "utama",
+   "kelas_mata": "skrip berus",
+   "kotak": [
+    12,
+    27,
+    90,
+    50
+   ],
+   "tinggi_pct": 48.5,
+   "tinggi_px": 391,
+   "lebar_px": 607,
+   "indeks_tebal": 0.207,
+   "tebal_strok_pct": 4.9,
+   "kontras_strok": 12.6,
+   "condong_huruf_darjah": 34.5,
+   "bersambung": true,
+   "lebar_setiap_huruf": 0.19,
+   "tepi_kasar_pct": 55.1,
+   "ukuran_kasar": false
+  },
+  {
+   "teks": "Start",
+   "peranan": "utama",
+   "kelas_mata": "skrip berus",
+   "kotak": [
+    22,
+    44,
+    70,
+    66
+   ],
+   "tinggi_pct": 38.7,
+   "tinggi_px": 312,
+   "lebar_px": 408,
+   "indeks_tebal": 0.197,
+   "tebal_strok_pct": 5.8,
+   "kontras_strok": 12.6,
+   "condong_huruf_darjah": 38.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.26,
+   "tepi_kasar_pct": 49.4,
+   "ukuran_kasar": false
+  },
+  {
+   "teks": "Doing",
+   "peranan": "utama",
+   "kelas_mata": "skrip berus",
+   "kotak": [
+    22,
+    62,
+    85,
+    90
+   ],
+   "tinggi_pct": 38.7,
+   "tinggi_px": 312,
+   "lebar_px": 504,
+   "indeks_tebal": 0.187,
+   "tebal_strok_pct": 6.0,
+   "kontras_strok": 12.99,
+   "condong_huruf_darjah": 37.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.32,
+   "tepi_kasar_pct": 57.8,
+   "ukuran_kasar": false
+  }
+ ],
  "baris": [
   {
    "n": 1,
@@ -235,6 +325,52 @@
    "tandatangan / logo jika ada"
   ],
   "nota": "Sudut blok yang diukur skrip (24 darjah) tidak pasti kerana baris bertindih.",
+  "kata": [
+   {
+    "teks": "Stop",
+    "kotak": [
+     25,
+     8,
+     75,
+     30
+    ],
+    "peranan": "utama",
+    "kelas": "skrip berus"
+   },
+   {
+    "teks": "thinking",
+    "kotak": [
+     12,
+     27,
+     90,
+     50
+    ],
+    "peranan": "utama",
+    "kelas": "skrip berus"
+   },
+   {
+    "teks": "Start",
+    "kotak": [
+     22,
+     44,
+     70,
+     66
+    ],
+    "peranan": "utama",
+    "kelas": "skrip berus"
+   },
+   {
+    "teks": "Doing",
+    "kotak": [
+     22,
+     62,
+     85,
+     90
+    ],
+    "peranan": "utama",
+    "kelas": "skrip berus"
+   }
+  ],
   "sumber": "mata Claude"
  }
 }

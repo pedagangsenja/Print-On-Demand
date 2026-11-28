@@ -21,5 +21,106 @@
   "susun atur tepat",
   "tandatangan / logo jika ada"
  ],
- "nota": "Tiga warna dakwat berselang baris."
+ "nota": "Tiga warna dakwat berselang baris.",
+ "kata": [
+  {
+   "teks": "LIFE",
+   "kotak": [
+    18,
+    6,
+    60,
+    25
+   ],
+   "peranan": "utama",
+   "kelas": "blok gemuk membulat"
+  },
+  {
+   "teks": "IS",
+   "kotak": [
+    66,
+    8,
+    76,
+    24
+   ],
+   "peranan": "penyambung",
+   "kelas": "dalam kapsul"
+  },
+  {
+   "teks": "A",
+   "kotak": [
+    19,
+    26,
+    29,
+    38
+   ],
+   "peranan": "penyambung",
+   "kelas": "dalam kapsul"
+  },
+  {
+   "teks": "SERIES",
+   "kotak": [
+    30,
+    25,
+    80,
+    39
+   ],
+   "peranan": "utama",
+   "kelas": "blok gemuk membulat"
+  },
+  {
+   "teks": "OF",
+   "kotak": [
+    18,
+    40,
+    25,
+    53
+   ],
+   "peranan": "penyambung",
+   "kelas": "dalam kapsul"
+  },
+  {
+   "teks": "OBSTACLES",
+   "kotak": [
+    25,
+    39,
+    81,
+    54
+   ],
+   "peranan": "utama",
+   "kelas": "blok gemuk membulat"
+  },
+  {
+   "teks": "PREVENTING",
+   "kotak": [
+    17,
+    54,
+    81,
+    70
+   ],
+   "peranan": "utama",
+   "kelas": "blok gemuk membulat"
+  },
+  {
+   "teks": "ME FROM",
+   "kotak": [
+    17,
+    70,
+    81,
+    81
+   ],
+   "peranan": "sokongan",
+   "kelas": "blok gemuk membulat"
+  },
+  {
+   "teks": "CRAFTING",
+   "kotak": [
+    17,
+    80,
+    82,
+    94
+   ],
+   "peranan": "utama",
+   "kelas": "blok gemuk membulat"
+  }
+ ]
 }

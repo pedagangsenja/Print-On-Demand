@@ -1,5 +1,5 @@
 {
- "versi": "SK09 v1.1",
+ "versi": "SK09 v1.2",
  "fail": "IMG_5775.jpg",
  "sha1": "5d707ccb05db",
  "tarikh": "2026-11-28",
@@ -64,6 +64,118 @@
   "indeks_tebal": 0.369,
   "gelung_setiap_huruf": 0.41
  },
+ "kata": [
+  {
+   "teks": "SUCCESS",
+   "peranan": "utama",
+   "kelas_mata": "sans pekat sempit",
+   "kotak": [
+    16,
+    14,
+    86,
+    33
+   ],
+   "tinggi_pct": 26.1,
+   "tinggi_px": 62,
+   "lebar_px": 166,
+   "indeks_tebal": 0.372,
+   "tebal_strok_pct": 16.1,
+   "kontras_strok": 1.3,
+   "condong_huruf_darjah": 2.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.38,
+   "tepi_kasar_pct": 4.4,
+   "ukuran_kasar": false
+  },
+  {
+   "teks": "Grows",
+   "peranan": "sokongan",
+   "kelas_mata": "skrip berus",
+   "kotak": [
+    18,
+    29,
+    86,
+    49
+   ],
+   "tinggi_pct": 33.2,
+   "tinggi_px": 79,
+   "lebar_px": 162,
+   "indeks_tebal": 0.219,
+   "tebal_strok_pct": 9.1,
+   "kontras_strok": 2.2,
+   "condong_huruf_darjah": 27.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.41,
+   "tepi_kasar_pct": 9.5,
+   "ukuran_kasar": false
+  },
+  {
+   "teks": "WHERE",
+   "peranan": "penyambung",
+   "kelas_mata": "sans dalam label",
+   "kotak": [
+    34,
+    42,
+    74,
+    52
+   ],
+   "tinggi_pct": 13.4,
+   "tinggi_px": 32,
+   "lebar_px": 95,
+   "indeks_tebal": 0.327,
+   "tebal_strok_pct": 18.8,
+   "kontras_strok": 1.8,
+   "condong_huruf_darjah": 2.5,
+   "bersambung": true,
+   "lebar_setiap_huruf": 0.59,
+   "tepi_kasar_pct": 8.1,
+   "ukuran_kasar": true
+  },
+  {
+   "teks": "Excuses",
+   "peranan": "sokongan",
+   "kelas_mata": "skrip berus",
+   "kotak": [
+    14,
+    49,
+    86,
+    72
+   ],
+   "tinggi_pct": 32.4,
+   "tinggi_px": 77,
+   "lebar_px": 172,
+   "indeks_tebal": 0.313,
+   "tebal_strok_pct": 10.4,
+   "kontras_strok": 2.27,
+   "condong_huruf_darjah": 28.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.32,
+   "tepi_kasar_pct": 7.0,
+   "ukuran_kasar": false
+  },
+  {
+   "teks": "END",
+   "peranan": "utama",
+   "kelas_mata": "sans pekat sempit",
+   "kotak": [
+    28,
+    66,
+    76,
+    84
+   ],
+   "tinggi_pct": 23.9,
+   "tinggi_px": 57,
+   "lebar_px": 120,
+   "indeks_tebal": 0.363,
+   "tebal_strok_pct": 24.6,
+   "kontras_strok": 1.21,
+   "condong_huruf_darjah": 2.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.7,
+   "tepi_kasar_pct": 3.4,
+   "ukuran_kasar": false
+  }
+ ],
  "baris": [
   {
    "n": 1,
@@ -439,6 +551,63 @@
    "tandatangan / logo jika ada"
   ],
   "nota": "Fail ini kecil (236 x 354 piksel): ukuran kasar.",
+  "kata": [
+   {
+    "teks": "SUCCESS",
+    "kotak": [
+     16,
+     14,
+     86,
+     33
+    ],
+    "peranan": "utama",
+    "kelas": "sans pekat sempit"
+   },
+   {
+    "teks": "Grows",
+    "kotak": [
+     18,
+     29,
+     86,
+     49
+    ],
+    "peranan": "sokongan",
+    "kelas": "skrip berus"
+   },
+   {
+    "teks": "WHERE",
+    "kotak": [
+     34,
+     42,
+     74,
+     52
+    ],
+    "peranan": "penyambung",
+    "kelas": "sans dalam label"
+   },
+   {
+    "teks": "Excuses",
+    "kotak": [
+     14,
+     49,
+     86,
+     72
+    ],
+    "peranan": "sokongan",
+    "kelas": "skrip berus"
+   },
+   {
+    "teks": "END",
+    "kotak": [
+     28,
+     66,
+     76,
+     84
+    ],
+    "peranan": "utama",
+    "kelas": "sans pekat sempit"
+   }
+  ],
   "sumber": "mata Claude"
  }
 }

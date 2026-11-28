@@ -1,5 +1,5 @@
 {
- "versi": "SK09 v1.1",
+ "versi": "SK09 v1.2",
  "fail": "IMG_5781.jpg",
  "sha1": "e4b0c89f37ed",
  "tarikh": "2026-11-28",
@@ -63,6 +63,96 @@
   "indeks_tebal": 0.362,
   "gelung_setiap_huruf": 0.35
  },
+ "kata": [
+  {
+   "teks": "EXCUSES",
+   "peranan": "utama",
+   "kelas_mata": "huruf besar lukisan tangan",
+   "kotak": [
+    12,
+    8,
+    88,
+    38
+   ],
+   "tinggi_pct": 31.4,
+   "tinggi_px": 187,
+   "lebar_px": 473,
+   "indeks_tebal": 0.364,
+   "tebal_strok_pct": 15.9,
+   "kontras_strok": 1.56,
+   "condong_huruf_darjah": -0.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.36,
+   "tepi_kasar_pct": 1.2,
+   "ukuran_kasar": false
+  },
+  {
+   "teks": "DON'T",
+   "peranan": "utama",
+   "kelas_mata": "huruf besar lukisan tangan",
+   "kotak": [
+    12,
+    39,
+    50,
+    66
+   ],
+   "tinggi_pct": 27.5,
+   "tinggi_px": 164,
+   "lebar_px": 233,
+   "indeks_tebal": 0.36,
+   "tebal_strok_pct": 15.1,
+   "kontras_strok": 1.67,
+   "condong_huruf_darjah": 16.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.36,
+   "tepi_kasar_pct": 2.0,
+   "ukuran_kasar": false
+  },
+  {
+   "teks": "BURN",
+   "peranan": "utama",
+   "kelas_mata": "huruf besar lukisan tangan",
+   "kotak": [
+    47,
+    39,
+    90,
+    66
+   ],
+   "tinggi_pct": 27.7,
+   "tinggi_px": 165,
+   "lebar_px": 262,
+   "indeks_tebal": 0.376,
+   "tebal_strok_pct": 18.2,
+   "kontras_strok": 1.58,
+   "condong_huruf_darjah": 1.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.4,
+   "tepi_kasar_pct": 4.8,
+   "ukuran_kasar": false
+  },
+  {
+   "teks": "CALORIES",
+   "peranan": "utama",
+   "kelas_mata": "huruf besar lukisan tangan",
+   "kotak": [
+    10,
+    63,
+    88,
+    94
+   ],
+   "tinggi_pct": 31.2,
+   "tinggi_px": 186,
+   "lebar_px": 480,
+   "indeks_tebal": 0.366,
+   "tebal_strok_pct": 15.1,
+   "kontras_strok": 1.51,
+   "condong_huruf_darjah": 0.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.32,
+   "tepi_kasar_pct": 1.6,
+   "ukuran_kasar": false
+  }
+ ],
  "baris": [
   {
    "n": 1,
@@ -424,6 +514,52 @@
    "tandatangan / logo jika ada"
   ],
   "nota": "Satu baris dua warna (kata demi kata).",
+  "kata": [
+   {
+    "teks": "EXCUSES",
+    "kotak": [
+     12,
+     8,
+     88,
+     38
+    ],
+    "peranan": "utama",
+    "kelas": "huruf besar lukisan tangan"
+   },
+   {
+    "teks": "DON'T",
+    "kotak": [
+     12,
+     39,
+     50,
+     66
+    ],
+    "peranan": "utama",
+    "kelas": "huruf besar lukisan tangan"
+   },
+   {
+    "teks": "BURN",
+    "kotak": [
+     47,
+     39,
+     90,
+     66
+    ],
+    "peranan": "utama",
+    "kelas": "huruf besar lukisan tangan"
+   },
+   {
+    "teks": "CALORIES",
+    "kotak": [
+     10,
+     63,
+     88,
+     94
+    ],
+    "peranan": "utama",
+    "kelas": "huruf besar lukisan tangan"
+   }
+  ],
   "sumber": "mata Claude"
  }
 }

@@ -1,5 +1,5 @@
 {
- "versi": "SK09 v1.1",
+ "versi": "SK09 v1.2",
  "fail": "IMG_5839.jpg",
  "sha1": "701faab03ce6",
  "tarikh": "2026-11-28",
@@ -63,6 +63,96 @@
   "indeks_tebal": 0.225,
   "gelung_setiap_huruf": 0.28
  },
+ "kata": [
+  {
+   "teks": "You're",
+   "peranan": "utama",
+   "kelas_mata": "skrip monoline",
+   "kotak": [
+    22,
+    9,
+    84,
+    35
+   ],
+   "tinggi_pct": 42.7,
+   "tinggi_px": 184,
+   "lebar_px": 361,
+   "indeks_tebal": 0.207,
+   "tebal_strok_pct": 6.9,
+   "kontras_strok": 1.32,
+   "condong_huruf_darjah": 34.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.39,
+   "tepi_kasar_pct": 11.5,
+   "ukuran_kasar": false
+  },
+  {
+   "teks": "one",
+   "peranan": "sokongan",
+   "kelas_mata": "skrip monoline",
+   "kotak": [
+    20,
+    30,
+    62,
+    50
+   ],
+   "tinggi_pct": 36.4,
+   "tinggi_px": 157,
+   "lebar_px": 241,
+   "indeks_tebal": 0.196,
+   "tebal_strok_pct": 8.1,
+   "kontras_strok": 1.28,
+   "condong_huruf_darjah": 42.5,
+   "bersambung": false,
+   "lebar_setiap_huruf": 0.51,
+   "tepi_kasar_pct": 14.4,
+   "ukuran_kasar": false
+  },
+  {
+   "teks": "in a",
+   "peranan": "penyambung",
+   "kelas_mata": "skrip monoline",
+   "kotak": [
+    30,
+    42,
+    70,
+    58
+   ],
+   "tinggi_pct": 32.3,
+   "tinggi_px": 139,
+   "lebar_px": 231,
+   "indeks_tebal": 0.232,
+   "tebal_strok_pct": 9.2,
+   "kontras_strok": 1.44,
+   "condong_huruf_darjah": 40.5,
+   "bersambung": true,
+   "lebar_setiap_huruf": 0.55,
+   "tepi_kasar_pct": 14.2,
+   "ukuran_kasar": false
+  },
+  {
+   "teks": "Million",
+   "peranan": "utama",
+   "kelas_mata": "skrip monoline",
+   "kotak": [
+    16,
+    52,
+    82,
+    76
+   ],
+   "tinggi_pct": 30.4,
+   "tinggi_px": 131,
+   "lebar_px": 344,
+   "indeks_tebal": 0.266,
+   "tebal_strok_pct": 10.1,
+   "kontras_strok": 1.48,
+   "condong_huruf_darjah": 33.5,
+   "bersambung": true,
+   "lebar_setiap_huruf": 0.38,
+   "tepi_kasar_pct": 10.8,
+   "ukuran_kasar": false
+  }
+ ],
  "baris": [
   {
    "n": 1,
@@ -290,6 +380,52 @@
    "tandatangan / logo jika ada"
   ],
   "nota": "",
+  "kata": [
+   {
+    "teks": "You're",
+    "kotak": [
+     22,
+     9,
+     84,
+     35
+    ],
+    "peranan": "utama",
+    "kelas": "skrip monoline"
+   },
+   {
+    "teks": "one",
+    "kotak": [
+     20,
+     30,
+     62,
+     50
+    ],
+    "peranan": "sokongan",
+    "kelas": "skrip monoline"
+   },
+   {
+    "teks": "in a",
+    "kotak": [
+     30,
+     42,
+     70,
+     58
+    ],
+    "peranan": "penyambung",
+    "kelas": "skrip monoline"
+   },
+   {
+    "teks": "Million",
+    "kotak": [
+     16,
+     52,
+     82,
+     76
+    ],
+    "peranan": "utama",
+    "kelas": "skrip monoline"
+   }
+  ],
   "sumber": "mata Claude"
  }
 }

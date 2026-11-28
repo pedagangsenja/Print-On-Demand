@@ -20,5 +20,95 @@
   "susun atur tepat",
   "tandatangan / logo jika ada"
  ],
- "nota": "Bayang tindih dan tekstur bukan untuk jana hitam putih; urusan Warna v1 / Cetak v1."
+ "nota": "Bayang tindih dan tekstur bukan untuk jana hitam putih; urusan Warna v1 / Cetak v1.",
+ "kata": [
+  {
+   "teks": "The",
+   "kotak": [
+    38,
+    17,
+    62,
+    34
+   ],
+   "peranan": "penyambung",
+   "kelas": "skrip berpusar"
+  },
+  {
+   "teks": "smarter",
+   "kotak": [
+    26,
+    28,
+    80,
+    44
+   ],
+   "peranan": "utama",
+   "kelas": "skrip berpusar"
+  },
+  {
+   "teks": "You",
+   "kotak": [
+    22,
+    40,
+    48,
+    57
+   ],
+   "peranan": "utama",
+   "kelas": "skrip berpusar"
+  },
+  {
+   "teks": "get",
+   "kotak": [
+    46,
+    40,
+    74,
+    52
+   ],
+   "peranan": "sokongan",
+   "kelas": "skrip berpusar"
+  },
+  {
+   "teks": "The",
+   "kotak": [
+    44,
+    54,
+    58,
+    63
+   ],
+   "peranan": "penyambung",
+   "kelas": "skrip berpusar"
+  },
+  {
+   "teks": "Less",
+   "kotak": [
+    18,
+    57,
+    48,
+    72
+   ],
+   "peranan": "utama",
+   "kelas": "skrip berpusar"
+  },
+  {
+   "teks": "You",
+   "kotak": [
+    56,
+    52,
+    82,
+    66
+   ],
+   "peranan": "utama",
+   "kelas": "skrip berpusar"
+  },
+  {
+   "teks": "Speak",
+   "kotak": [
+    28,
+    66,
+    78,
+    90
+   ],
+   "peranan": "utama",
+   "kelas": "skrip berpusar"
+  }
+ ]
 }

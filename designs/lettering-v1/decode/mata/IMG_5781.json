@@ -15,5 +15,51 @@
   "susun atur tepat",
   "tandatangan / logo jika ada"
  ],
- "nota": "Satu baris dua warna (kata demi kata)."
+ "nota": "Satu baris dua warna (kata demi kata).",
+ "kata": [
+  {
+   "teks": "EXCUSES",
+   "kotak": [
+    12,
+    8,
+    88,
+    38
+   ],
+   "peranan": "utama",
+   "kelas": "huruf besar lukisan tangan"
+  },
+  {
+   "teks": "DON'T",
+   "kotak": [
+    12,
+    39,
+    50,
+    66
+   ],
+   "peranan": "utama",
+   "kelas": "huruf besar lukisan tangan"
+  },
+  {
+   "teks": "BURN",
+   "kotak": [
+    47,
+    39,
+    90,
+    66
+   ],
+   "peranan": "utama",
+   "kelas": "huruf besar lukisan tangan"
+  },
+  {
+   "teks": "CALORIES",
+   "kotak": [
+    10,
+    63,
+    88,
+    94
+   ],
+   "peranan": "utama",
+   "kelas": "huruf besar lukisan tangan"
+  }
+ ]
 }

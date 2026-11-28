@@ -16,5 +16,40 @@
   "susun atur tepat",
   "tandatangan / logo jika ada"
  ],
- "nota": ""
+ "nota": "",
+ "kata": [
+  {
+   "teks": "Know",
+   "kotak": [
+    12,
+    13,
+    90,
+    43
+   ],
+   "peranan": "utama",
+   "kelas": "skrip berus tebal"
+  },
+  {
+   "teks": "your",
+   "kotak": [
+    16,
+    38,
+    76,
+    66
+   ],
+   "peranan": "utama",
+   "kelas": "skrip berus tebal"
+  },
+  {
+   "teks": "Worth",
+   "kotak": [
+    12,
+    60,
+    90,
+    90
+   ],
+   "peranan": "utama",
+   "kelas": "skrip berus tebal"
+  }
+ ]
 }

@@ -23,5 +23,84 @@
   "susun atur tepat",
   "tandatangan / logo jika ada"
  ],
- "nota": ""
+ "nota": "",
+ "kata": [
+  {
+   "teks": "WORK",
+   "kotak": [
+    8,
+    4,
+    88,
+    28
+   ],
+   "peranan": "utama",
+   "kelas": "sans pekat"
+  },
+  {
+   "teks": "IN SILENCE",
+   "kotak": [
+    20,
+    24,
+    90,
+    39
+   ],
+   "peranan": "sokongan",
+   "kelas": "sans pekat dalam sepanduk"
+  },
+  {
+   "teks": "LET YOUR",
+   "kotak": [
+    28,
+    36,
+    74,
+    45
+   ],
+   "peranan": "penyambung",
+   "kelas": "sans pekat"
+  },
+  {
+   "teks": "SUCCESS",
+   "kotak": [
+    8,
+    40,
+    92,
+    62
+   ],
+   "peranan": "sokongan",
+   "kelas": "skrip berus"
+  },
+  {
+   "teks": "MAKE THE",
+   "kotak": [
+    26,
+    59,
+    82,
+    69
+   ],
+   "peranan": "sokongan",
+   "kelas": "sans pekat dalam sepanduk"
+  },
+  {
+   "teks": "NOISE",
+   "kotak": [
+    14,
+    67,
+    90,
+    91
+   ],
+   "peranan": "utama",
+   "kelas": "sans pekat"
+  },
+  {
+   "teks": "FOCUS BELIEVE ACHIEVE",
+   "kotak": [
+    18,
+    92,
+    82,
+    97
+   ],
+   "peranan": "penyambung",
+   "kelas": "sans kecil"
+  }
+ ]
 }
