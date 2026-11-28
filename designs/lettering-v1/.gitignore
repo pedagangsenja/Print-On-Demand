@@ -6,3 +6,4 @@ out_gpu/
 out_gpu_hf/
 raw/*/run.log
 raw/*/jana.log
+raw/*/run_*.log
