@@ -30,7 +30,7 @@
   "suka": 0,
   "cacat_berulang": "-",
   "tindakan": "Tiada tindakan: tiada cacat berulang",
-  "ubahan_dicuba": 1,
+  "ubahan_dicuba": 3,
   "tarikh": "2026-11-28"
  },
  {
@@ -98,7 +98,7 @@
   "suka": 0,
   "cacat_berulang": "-",
   "tindakan": "Tiada tindakan: tiada cacat berulang",
-  "ubahan_dicuba": 6,
+  "ubahan_dicuba": 22,
   "tarikh": "2026-11-28"
  },
  {
@@ -106,16 +106,16 @@
   "nama": "warna",
   "langkah": "6",
   "versi": "SK07 v1.1 (27 Nov 2026)",
-  "imej": 33,
-  "lulus": 33,
+  "imej": 161,
+  "lulus": 161,
   "cacat_sk": 0,
-  "input_rosak": 1,
+  "input_rosak": 3,
   "belum_semak": 0,
   "tolak": 0,
   "suka": 0,
   "cacat_berulang": "-",
   "tindakan": "Tiada tindakan: tiada cacat berulang",
-  "ubahan_dicuba": 1,
+  "ubahan_dicuba": 7,
   "tarikh": "2026-11-28"
  },
  {

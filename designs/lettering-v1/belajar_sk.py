@@ -34,6 +34,7 @@ from collections import Counter, defaultdict
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
+import akar  # noqa: E402
 
 VERSI = "s1 (27 Nov 2026)"
 B = os.path.join(HERE, "belajar")
@@ -107,28 +108,35 @@ def daftar_sk():
     return out
 
 
-def kunci(path):
+def _kunci(path):
     """'raw/v12-cpu/moss/K3K_s42.png' atau '../betul/v12-cpu/moss/K3K_s42.png' -> 'v12-cpu/moss/K3K_s42'."""
     p = path.replace("\\", "/").split("/")
     return "/".join(p[-3:])[:-4] if len(p) >= 3 else path
 
 
 def baris_log():
-    """Baris sejarah daripada log SK semasa: satu baris = satu imej x SK x versi."""
+    """Baris sejarah semua akar: cawangan ini + rekod cawangan sesi lain (gabung_cawangan.py, 28 Nov 2026)."""
+    return [r for t, d in akar.akar() for r in _baris_log(d, t)]
+
+
+def _baris_log(ROOT, tg):
+    """Baris sejarah daripada log SK semasa: satu baris = satu imej x SK x versi. Imej / larian ditanda dengan tag tg."""
     rows = []
-    for f in sorted(glob.glob(os.path.join(HERE, "betul", "*", "*", "log_5b.jsonl"))):
+    kunci = lambda p: akar.tanda(tg, _kunci(p))  # noqa: E731
+    for f in sorted(glob.glob(os.path.join(ROOT, "betul", "*", "*", "log_5b.jsonl"))):
         for r in baca_jsonl(f):
             g = r.get("gagal") or []
             kel = [(x, kelas_sk(x)) for x in g]
             for sid in SK_5B:
                 t = r.get("tindakan", {}).get(sid, {})
                 mine = [x for x, k in kel if KELAS.get((k or ["lain"])[0], {}).get("sk") == sid]
-                rows.append(dict(sk=sid, versi=r.get("versi", "?"), imej=kunci(r["imej"]), larian=f.split(os.sep)[-3],
+                rows.append(dict(sk=sid, versi=r.get("versi", "?"), imej=kunci(r["imej"]), larian=akar.tanda(tg, f.split(os.sep)[-3]),
                                  kad=r.get("kad", ""), jalan=bool(t.get("jalan", sid == "SK04")), gagal=mine, amaran=[]))
     semua_asas = {}
-    for f in sorted(glob.glob(os.path.join(HERE, "final", "*", "peranan", "log_6.jsonl"))
-                    + glob.glob(os.path.join(B, "uji_sk", "*", "log_6.jsonl"))):   # uji semula SK (log sahaja, tiada imej)
+    for f in sorted(glob.glob(os.path.join(ROOT, "final", "*", "peranan", "log_6.jsonl"))
+                    + (glob.glob(os.path.join(B, "uji_sk", "*", "log_6.jsonl")) if not tg else [])):   # uji semula SK (log sahaja, tiada imej)
         larian, L = f.split(os.sep)[-3] if f.split(os.sep)[-2] == "peranan" else "uji_sk/" + f.split(os.sep)[-2], baca_jsonl(f)
+        larian = akar.tanda(tg, larian)
         asas = {r["nama"]: kunci(r["imej"]) for r in L if r.get("skrip") == "SK07"}
         for r in L:
             nama = r["nama"][:-7] if r["nama"].endswith("_bayang") else r["nama"]
@@ -140,10 +148,10 @@ def baris_log():
             rows.append(dict(sk=r.get("skrip", "?"), versi=r.get("versi", "?"), imej=key, larian=larian, kad=r.get("kad", ""),
                              jalan=True, gagal=list(r.get("gagal") or []), amaran=list(r.get("amaran") or [])))
         semua_asas.update(asas)
-    for g in sorted(glob.glob(os.path.join(HERE, "final", "*", "*", "info.json"))
-                    + glob.glob(os.path.join(B, "uji_sk", "*", "*", "info.json"))):   # SK06 (final, atau uji semula)
+    for g in sorted(glob.glob(os.path.join(ROOT, "final", "*", "*", "info.json"))
+                    + (glob.glob(os.path.join(B, "uji_sk", "*", "*", "info.json")) if not tg else [])):   # SK06 (final, atau uji semula)
         p = g.split(os.sep)
-        larian = p[-3] if "uji_sk" not in p else "uji_sk/" + p[-3]
+        larian = akar.tanda(tg, p[-3] if "uji_sk" not in p else "uji_sk/" + p[-3])
         nama = p[-2]
         m = re.match(r"(.+?)_(C\d+)$", nama)
         key = semua_asas.get(m[1] if m else nama, f"{larian}/{nama}") + ("+" + m[2] if m else "")
@@ -170,17 +178,19 @@ def gabung_sejarah(baru):
 def isyarat_pengguna():
     """Tolak / lulus pengguna pada imej siap, dan kod C yang dipadam daripada Daftar S/C. Pulang {imej: [(keputusan, sebab, sk)]}."""
     out = defaultdict(list)
-    for r in baca_jsonl(os.path.join(B, "pengguna.jsonl")):  # langkah 7 (3.15): hanya bahagian sebab yang milik SK
-        if r.get("keputusan") == "tolak" and kelas_sk(r.get("sebab", "")):
-            out[r["imej"]].append(("tolak", r.get("sebab", ""), None, "pengguna.jsonl"))
-    for r in baca_jsonl(os.path.join(B, "sk_pengguna.jsonl")):
-        out[r["imej"]].append((r.get("keputusan", "tolak"), r.get("sebab", ""), r.get("sk"), "sk_pengguna.jsonl"))
+    for t, d in akar.akar():
+        for r in baca_jsonl(os.path.join(d, "belajar", "pengguna.jsonl")):  # langkah 7 (3.15): sebab yang milik SK
+            if r.get("keputusan") == "tolak" and kelas_sk(r.get("sebab", "")):
+                out[akar.tanda(t, r["imej"])].append(("tolak", r.get("sebab", ""), None, "pengguna.jsonl"))
+        for r in baca_jsonl(os.path.join(d, "belajar", "sk_pengguna.jsonl")):
+            out[akar.tanda(t, r["imej"])].append((r.get("keputusan", "tolak"), r.get("sebab", ""), r.get("sk"),
+                                                  "sk_pengguna.jsonl"))
     warna = os.path.join(STOR, "warna", "items")
     ada = {os.path.basename(f)[:-5] for f in glob.glob(os.path.join(warna, "*.json"))} if os.path.isdir(warna) else None
     suka_blob = {os.path.basename(f)[:-5] for f in glob.glob(os.path.join(STOR, "likes", "items", "*.json"))}
     suka = set()
-    for f in glob.glob(os.path.join(HERE, "qc", "*_snc.json")):
-        batch = os.path.basename(f)[:-9].replace("_", "-")
+    for t, f in [(t, f) for t, d in akar.akar() for f in glob.glob(os.path.join(d, "qc", "*_snc.json"))]:
+        batch = akar.tanda(t, os.path.basename(f)[:-9].replace("_", "-"))
         rek = baca_json(f, {}).get("rekod", {})
         s_imej = {k: f"{batch}/{v['imej']}" for k, v in rek.items() if "imej" in v}
         for kod, v in rek.items():
@@ -196,8 +206,9 @@ def isyarat_pengguna():
 
 def semakan():
     d = defaultdict(list)
-    for r in baca_jsonl(os.path.join(B, "sk_semakan.jsonl")):
-        d[(r["imej"], r["sk"])].append(r)
+    for t, a in akar.akar():
+        for r in baca_jsonl(os.path.join(a, "belajar", "sk_semakan.jsonl")):
+            d[(akar.tanda(t, r["imej"]), r["sk"])].append(dict(r, imej=akar.tanda(t, r["imej"])))
     return d
 
 
@@ -258,7 +269,8 @@ def liputan_kad(daf):
     """Ciri kad (kad yang pernah dipakai dalam jana) yang perlu SK: pulang senarai tindakan ikut SK, dan calon SK baharu."""
     import kad
     import belajar
-    pakai = sorted({r.get("kad") for r in belajar.muat_log().values() if r.get("kad") in kad.KAD})
+    pakai = sorted({r.get("kad") for k, r in belajar.muat_log().items()   # cawangan ini sahaja (kad.py milik cawangan ini)
+                    if ":" not in k[0] and r.get("kad") in kad.KAD})
     tind, calon = defaultdict(list), []
     baca = lambda sid, medan: bool(re.search(r"""\[\s*["']%s["']\s*\]|get\(\s*["']%s["']""" % (medan, medan), daf.get(sid, {}).get("src", "")))
     tekstur = [k for k in pakai if kad.KAD[k].get("tekstur", "tiada") != "tiada"]
@@ -382,6 +394,11 @@ def main():
     user, suka = isyarat_pengguna()
     rows = nilai(gabung_sejarah(baris_log()), semakan(), user)
     ubahan = baca_json(os.path.join(B, "sk_ubahan.json"), [])
+    for t, a in akar.akar()[1:]:  # keputusan SK cawangan sesi lain: menang / kalah sahaja; imej ditanda
+        for u in baca_json(os.path.join(a, "belajar", "sk_ubahan.json"), []):
+            u = dict(u, imej=[akar.tanda(t, x) for x in u.get("imej", [])])
+            if u.get("keputusan") in ("menang", "kalah") and u not in ubahan:
+                ubahan.append(u)
     pakai, tind_kad, calon_kad = liputan_kad(daf)
     per = defaultdict(list)
     for r in rows:

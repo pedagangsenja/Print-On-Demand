@@ -138,7 +138,7 @@
    ],
    "K9B_s123": [
     true,
-    "Condong kurang; SK01 tidak cukup (12.1 -> 13.4)",
+    "Condong kurang; SK01 condong tidak cukup (12.1 -> 13.4, dibaiki 5b v1.2: 15.2)",
     "13c2f6bd8554a2c59b8cc68ea420a9b3"
    ],
    "K10V_s42": [
@@ -413,32 +413,32 @@
    "K11N_s42": [
     true,
     "",
-    ""
+    "a1e6f1c6312a2ac7df904efc9a4afb23"
    ],
    "K11N_s7": [
     false,
     "Tanda petikan tambahan pada 'BEGIN'",
-    ""
+    "c41ff4a6f35d4ae436499b916330de40"
    ],
    "K11N_s123": [
     true,
     "",
-    ""
+    "b1f7916bb2323e0cff1075043ab80d38"
    ],
    "K12Y_s42": [
     true,
     "Kotak 'GROWTH' hanya garis luar, bukan kotak putih penuh (ciri kad); garis tambahan di hujung 'LET YOUR'",
-    ""
+    "b79b8670c77e02b4d624a58b29124cdb"
    ],
    "K12Y_s7": [
     true,
     "Kotak 'GROWTH' hanya garis luar, bukan kotak putih penuh (ciri kad)",
-    ""
+    "d486350fd09c71dc4933bc26cbab8a64"
    ],
    "K12Y_s123": [
     true,
     "Kotak 'GROWTH' hanya garis luar, bukan kotak putih penuh (ciri kad)",
-    ""
+    "f606a83bd5edabb3fa952b0fce9d30e2"
    ]
   }
  },
@@ -447,32 +447,32 @@
    "K7M_s42": [
     true,
     "",
-    ""
+    "739deda0cc615153e83745d580139bc1"
    ],
    "K7M_s7": [
     true,
     "",
-    ""
+    "29b9f5893d6d76202a70b7230ac4b584"
    ],
    "K7M_s123": [
     true,
     "",
-    ""
+    "2c8ba8c88a888c3a7671f883ff80432a"
    ],
    "K8G_s42": [
     true,
     "",
-    ""
+    "0d4965532cfdaf92c5c41af5e1b96af2"
    ],
    "K8G_s7": [
     true,
     "",
-    ""
+    "acbb0f7a686ae7913ef97f097245a1e7"
    ],
    "K8G_s123": [
     true,
     "",
-    ""
+    "2690a5fed9304cee6813b0507324c16d"
    ]
   }
  }

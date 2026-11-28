@@ -1,7 +1,7 @@
 {
  "versi": "b1.1 (27 Nov 2026)",
  "tarikh": "2026-11-28",
- "imej": 289,
+ "imej": 766,
  "suka": 0,
  "tolak": 0,
  "model": {
@@ -12,6 +12,14 @@
    "rev": "r1",
    "status": "diuji: K3H, CPU, 3 seed",
    "ikut_rev": {
+    "?": {
+     "imej": 30,
+     "lulus": 0,
+     "pct": 0,
+     "suka": 0,
+     "tolak": 0,
+     "design": 15
+    },
     "am": {
      "imej": 9,
      "lulus": 3,
@@ -29,68 +37,100 @@
      "design": 1
     },
     "r1": {
-     "imej": 36,
-     "lulus": 18,
-     "pct": 50,
+     "imej": 93,
+     "lulus": 56,
+     "pct": 60,
      "suka": 0,
      "tolak": 0,
-     "design": 12
+     "design": 33
     }
    },
    "semasa": {
-    "imej": 36,
-    "lulus": 18,
-    "pct": 50,
+    "imej": 93,
+    "lulus": 56,
+    "pct": 60,
     "suka": 0,
     "tolak": 0,
-    "design": 12
+    "design": 33
    },
    "semua": {
-    "imej": 48,
-    "lulus": 24,
-    "pct": 50,
+    "imej": 144,
+    "lulus": 67,
+    "pct": 47,
     "suka": 0,
     "tolak": 0,
-    "design": 16
+    "design": 53
    },
    "berulang": [
     {
-     "kelas": "lain",
-     "nama": "Cacat lain (tiada kelas)",
-     "imej": 14,
-     "gagal": 6,
-     "design": [
-      "K12Y",
-      "K15T",
-      "K17O",
-      "K4F",
-      "K9B"
-     ],
-     "cadangan": null,
-     "cadangan_teks": "Tanya pengguna sebabnya; tambah ke kad sebagai ciri QC"
-    },
-    {
      "kelas": "ejaan",
      "nama": "Perkataan salah eja, rosak, atau huruf besar / kecil salah",
-     "imej": 6,
-     "gagal": 6,
+     "imej": 14,
+     "gagal": 14,
      "design": [
       "K12Y",
-      "K9B"
+      "K9B",
+      "exciting-sagan:K10F",
+      "exciting-sagan:K12O",
+      "exciting-sagan:K9Q"
      ],
      "cadangan": null,
      "cadangan_teks": "Pilihan ubahan habis: tukar ke model seterusnya ikut jadual model × gaya, kemudian pendekkan ayat, kemudian lapor kepada pengguna"
     },
     {
+     "kelas": "lain",
+     "nama": "Cacat lain (tiada kelas)",
+     "imej": 16,
+     "gagal": 7,
+     "design": [
+      "K12Y",
+      "K9B",
+      "exciting-sagan:K11R",
+      "exciting-sagan:K13V",
+      "lucid-galileo:K15E",
+      "lucid-galileo:K16C",
+      "nifty-lovelace:K20a"
+     ],
+     "cadangan": null,
+     "cadangan_teks": "Tanya pengguna sebabnya; tambah ke kad sebagai ciri QC"
+    },
+    {
      "kelas": "berulang",
      "nama": "Perkataan berulang atau tertinggal",
-     "imej": 2,
-     "gagal": 2,
+     "imej": 4,
+     "gagal": 4,
      "design": [
-      "K16S"
+      "K16S",
+      "focused-faraday:K13S",
+      "nifty-lovelace:K20a"
      ],
      "cadangan": "cara_baris",
      "cadangan_teks": "Cara menulis baris teks ikut aturan model (klein: satu ayat prosa setiap baris; ERNIE: PE hidup)"
+    },
+    {
+     "kelas": "baris",
+     "nama": "Bilangan baris salah (baris dipisah)",
+     "imej": 3,
+     "gagal": 3,
+     "design": [
+      "K8G",
+      "nifty-lovelace:K4q"
+     ],
+     "cadangan": "dua_kata_sebaris",
+     "cadangan_teks": "Nyatakan dua perkataan sebaris (\"as two words side by side on one line\")"
+    },
+    {
+     "kelas": "hiasan_lebih",
+     "nama": "Hiasan yang tidak diminta",
+     "imej": 5,
+     "gagal": 2,
+     "design": [
+      "focused-faraday:K12T",
+      "nifty-lovelace:K20a",
+      "nifty-lovelace:K21b"
+     ],
+     "cadangan": "hiasan_tepat",
+     "cadangan_teks": "Nyatakan hiasan yang dibenarkan dengan tepat, tambah \"clean empty background\""
     },
     {
      "kelas": "rawak",
@@ -107,22 +147,36 @@
     {
      "kelas": "hiasan_tempat",
      "nama": "Hiasan di tempat salah",
-     "imej": 6,
+     "imej": 7,
      "gagal": 1,
      "design": [
       "K17O",
-      "K3K"
+      "K3K",
+      "exciting-sagan:K13V",
+      "focused-faraday:K11A"
      ],
-     "cadangan": "hiasan_kedudukan",
-     "cadangan_teks": "Nyatakan kedudukan hiasan (kiri dan kanan, di luar label)"
+     "cadangan": null,
+     "cadangan_teks": "Pilihan ubahan habis: tukar ke model seterusnya ikut jadual model × gaya, kemudian pendekkan ayat, kemudian lapor kepada pengguna"
+    },
+    {
+     "kelas": "bentuk",
+     "nama": "Bentuk huruf atau saiz label lain daripada kad",
+     "imej": 2,
+     "gagal": 0,
+     "design": [
+      "focused-faraday:K12T",
+      "nifty-lovelace:K20a"
+     ],
+     "cadangan": "frasa_bentuk",
+     "cadangan_teks": "Frasa bentuk huruf dalam aturan model"
     }
    ],
-   "ubahan_dicuba": 3,
+   "ubahan_dicuba": 9,
    "suka_imej": [],
    "tindakan": [
     {
      "jenis": "habis",
-     "teks": "Cacat 'Cacat lain (tiada kelas)': Tanya pengguna sebabnya; tambah ke kad sebagai ciri QC"
+     "teks": "Cacat 'Perkataan salah eja, rosak, atau huruf besar / kecil salah': Pilihan ubahan habis: tukar ke model seterusnya ikut jadual model × gaya, kemudian pendekkan ayat, kemudian lapor kepada pengguna"
     }
    ]
   },
@@ -133,6 +187,14 @@
    "rev": "r1",
    "status": "diuji: K3H, CPU, 3 seed",
    "ikut_rev": {
+    "?": {
+     "imej": 33,
+     "lulus": 0,
+     "pct": 0,
+     "suka": 0,
+     "tolak": 0,
+     "design": 16
+    },
     "am": {
      "imej": 12,
      "lulus": 7,
@@ -150,40 +212,43 @@
      "design": 1
     },
     "r1": {
-     "imej": 36,
-     "lulus": 21,
-     "pct": 58,
+     "imej": 93,
+     "lulus": 63,
+     "pct": 68,
      "suka": 0,
      "tolak": 0,
-     "design": 12
+     "design": 33
     }
    },
    "semasa": {
-    "imej": 36,
-    "lulus": 21,
-    "pct": 58,
+    "imej": 93,
+    "lulus": 63,
+    "pct": 68,
     "suka": 0,
     "tolak": 0,
-    "design": 12
+    "design": 33
    },
    "semua": {
-    "imej": 57,
-    "lulus": 32,
-    "pct": 56,
+    "imej": 157,
+    "lulus": 76,
+    "pct": 48,
     "suka": 0,
     "tolak": 0,
-    "design": 16
+    "design": 55
    },
    "berulang": [
     {
      "kelas": "rawak",
      "nama": "Teks rawak, label atau tanda baca tambahan",
-     "imej": 6,
-     "gagal": 6,
+     "imej": 11,
+     "gagal": 11,
      "design": [
       "K7M",
       "K8G",
-      "K9B"
+      "K9B",
+      "exciting-sagan:K12O",
+      "focused-faraday:K11A",
+      "lucid-galileo:K16C"
      ],
      "cadangan": null,
      "cadangan_teks": "Pilihan ubahan habis: tukar ke model seterusnya ikut jadual model × gaya, kemudian pendekkan ayat, kemudian lapor kepada pengguna"
@@ -191,13 +256,14 @@
     {
      "kelas": "berulang",
      "nama": "Perkataan berulang atau tertinggal",
-     "imej": 5,
-     "gagal": 5,
+     "imej": 6,
+     "gagal": 6,
      "design": [
       "K11N",
       "K12Y",
       "K15T",
-      "K16S"
+      "K16S",
+      "lucid-galileo:K16C"
      ],
      "cadangan": "cara_baris",
      "cadangan_teks": "Cara menulis baris teks ikut aturan model (klein: satu ayat prosa setiap baris; ERNIE: PE hidup)"
@@ -205,30 +271,59 @@
     {
      "kelas": "baris",
      "nama": "Bilangan baris salah (baris dipisah)",
-     "imej": 3,
-     "gagal": 3,
+     "imej": 5,
+     "gagal": 5,
      "design": [
-      "K8G"
+      "K8G",
+      "nifty-lovelace:K4q"
      ],
      "cadangan": "frasa_hierarki",
      "cadangan_teks": "Frasa hierarki atau nisbah baris dalam aturan model"
     },
     {
+     "kelas": "ejaan",
+     "nama": "Perkataan salah eja, rosak, atau huruf besar / kecil salah",
+     "imej": 5,
+     "gagal": 5,
+     "design": [
+      "exciting-sagan:K10F",
+      "nifty-lovelace:K4q"
+     ],
+     "cadangan": null,
+     "cadangan_teks": "Pilihan ubahan habis: tukar ke model seterusnya ikut jadual model × gaya, kemudian pendekkan ayat, kemudian lapor kepada pengguna"
+    },
+    {
      "kelas": "lain",
      "nama": "Cacat lain (tiada kelas)",
-     "imej": 14,
-     "gagal": 1,
+     "imej": 16,
+     "gagal": 4,
      "design": [
       "K10V",
-      "K11N",
-      "K15T",
-      "K16S",
-      "K17O",
-      "K4F",
-      "K9B"
+      "K9B",
+      "exciting-sagan:K11R",
+      "exciting-sagan:K12O",
+      "exciting-sagan:K13V",
+      "focused-faraday:K11A",
+      "lucid-galileo:K14X",
+      "lucid-galileo:K17Z"
      ],
      "cadangan": null,
      "cadangan_teks": "Tanya pengguna sebabnya; tambah ke kad sebagai ciri QC"
+    },
+    {
+     "kelas": "hiasan_tempat",
+     "nama": "Hiasan di tempat salah",
+     "imej": 8,
+     "gagal": 0,
+     "design": [
+      "K11N",
+      "K3K",
+      "exciting-sagan:K13V",
+      "focused-faraday:K11A",
+      "focused-faraday:K12T"
+     ],
+     "cadangan": "hiasan_kedudukan",
+     "cadangan_teks": "Nyatakan kedudukan hiasan (kiri dan kanan, di luar label)"
     },
     {
      "kelas": "hiasan_lebih",
@@ -252,20 +347,9 @@
      ],
      "cadangan": "frasa_bentuk",
      "cadangan_teks": "Frasa bentuk huruf dalam aturan model"
-    },
-    {
-     "kelas": "hiasan_tempat",
-     "nama": "Hiasan di tempat salah",
-     "imej": 3,
-     "gagal": 0,
-     "design": [
-      "K3K"
-     ],
-     "cadangan": "hiasan_kedudukan",
-     "cadangan_teks": "Nyatakan kedudukan hiasan (kiri dan kanan, di luar label)"
     }
    ],
-   "ubahan_dicuba": 3,
+   "ubahan_dicuba": 14,
    "suka_imej": [],
    "tindakan": [
     {
@@ -281,13 +365,21 @@
    "rev": "r2",
    "status": "diuji: K3H, CPU, 3 seed; r2: K7M + K8G, CPU, 3 seed",
    "ikut_rev": {
-    "am": {
-     "imej": 9,
-     "lulus": 5,
-     "pct": 56,
+    "?": {
+     "imej": 31,
+     "lulus": 0,
+     "pct": 0,
      "suka": 0,
      "tolak": 0,
-     "design": 4
+     "design": 16
+    },
+    "am": {
+     "imej": 11,
+     "lulus": 5,
+     "pct": 45,
+     "suka": 0,
+     "tolak": 0,
+     "design": 5
     },
     "khas-v0": {
      "imej": 3,
@@ -298,12 +390,12 @@
      "design": 1
     },
     "r1": {
-     "imej": 39,
-     "lulus": 35,
-     "pct": 90,
+     "imej": 94,
+     "lulus": 82,
+     "pct": 87,
      "suka": 0,
      "tolak": 0,
-     "design": 12
+     "design": 33
     }
    },
    "semasa": {
@@ -315,15 +407,15 @@
     "design": 0
    },
    "semua": {
-    "imej": 73,
-    "lulus": 61,
-    "pct": 84,
+    "imej": 175,
+    "lulus": 120,
+    "pct": 69,
     "suka": 0,
     "tolak": 0,
-    "design": 16
+    "design": 55
    },
    "berulang": [],
-   "ubahan_dicuba": 4,
+   "ubahan_dicuba": 10,
    "suka_imej": [],
    "tindakan": [
     {
@@ -339,13 +431,21 @@
    "rev": "r1",
    "status": "diuji: K3H, CPU, 3 seed",
    "ikut_rev": {
-    "am": {
-     "imej": 12,
-     "lulus": 11,
-     "pct": 92,
+    "?": {
+     "imej": 30,
+     "lulus": 0,
+     "pct": 0,
      "suka": 0,
      "tolak": 0,
-     "design": 4
+     "design": 15
+    },
+    "am": {
+     "imej": 15,
+     "lulus": 11,
+     "pct": 73,
+     "suka": 0,
+     "tolak": 0,
+     "design": 5
     },
     "khas-v0": {
      "imej": 3,
@@ -356,38 +456,39 @@
      "design": 1
     },
     "r1": {
-     "imej": 36,
-     "lulus": 30,
-     "pct": 83,
+     "imej": 94,
+     "lulus": 84,
+     "pct": 89,
      "suka": 0,
      "tolak": 0,
-     "design": 12
+     "design": 34
     }
    },
    "semasa": {
-    "imej": 36,
-    "lulus": 30,
-    "pct": 83,
+    "imej": 94,
+    "lulus": 84,
+    "pct": 89,
     "suka": 0,
     "tolak": 0,
-    "design": 12
+    "design": 34
    },
    "semua": {
-    "imej": 54,
-    "lulus": 44,
-    "pct": 81,
+    "imej": 142,
+    "lulus": 98,
+    "pct": 69,
     "suka": 0,
     "tolak": 0,
-    "design": 17
+    "design": 54
    },
    "berulang": [
     {
      "kelas": "ejaan",
      "nama": "Perkataan salah eja, rosak, atau huruf besar / kecil salah",
-     "imej": 3,
-     "gagal": 3,
+     "imej": 6,
+     "gagal": 6,
      "design": [
-      "K8G"
+      "K8G",
+      "K8J"
      ],
      "cadangan": null,
      "cadangan_teks": "Pilihan ubahan habis: tukar ke model seterusnya ikut jadual model × gaya, kemudian pendekkan ayat, kemudian lapor kepada pengguna"
@@ -406,16 +507,33 @@
     {
      "kelas": "lain",
      "nama": "Cacat lain (tiada kelas)",
-     "imej": 12,
-     "gagal": 0,
+     "imej": 16,
+     "gagal": 1,
      "design": [
-      "K14R",
-      "K15T",
-      "K17O",
-      "K4F"
+      "exciting-sagan:K11R",
+      "exciting-sagan:K13V",
+      "focused-faraday:K10Q",
+      "focused-faraday:K13S",
+      "lucid-galileo:K14X",
+      "lucid-galileo:K15E",
+      "lucid-galileo:K16C",
+      "lucid-galileo:K18U",
+      "nifty-lovelace:K23f"
      ],
      "cadangan": null,
      "cadangan_teks": "Tanya pengguna sebabnya; tambah ke kad sebagai ciri QC"
+    },
+    {
+     "kelas": "bentuk",
+     "nama": "Bentuk huruf atau saiz label lain daripada kad",
+     "imej": 5,
+     "gagal": 0,
+     "design": [
+      "exciting-sagan:K12O",
+      "nifty-lovelace:K23f"
+     ],
+     "cadangan": "frasa_bentuk",
+     "cadangan_teks": "Frasa bentuk huruf dalam aturan model"
     },
     {
      "kelas": "hiasan_lebih",
@@ -427,20 +545,9 @@
      ],
      "cadangan": "hiasan_tepat",
      "cadangan_teks": "Nyatakan hiasan yang dibenarkan dengan tepat, tambah \"clean empty background\""
-    },
-    {
-     "kelas": "hiasan_tempat",
-     "nama": "Hiasan di tempat salah",
-     "imej": 3,
-     "gagal": 0,
-     "design": [
-      "K17O"
-     ],
-     "cadangan": "hiasan_kedudukan",
-     "cadangan_teks": "Nyatakan kedudukan hiasan (kiri dan kanan, di luar label)"
     }
    ],
-   "ubahan_dicuba": 3,
+   "ubahan_dicuba": 12,
    "suka_imej": [],
    "tindakan": [
     {
@@ -465,43 +572,53 @@
      "design": 3
     },
     "r1": {
-     "imej": 36,
-     "lulus": 35,
-     "pct": 97,
+     "imej": 91,
+     "lulus": 84,
+     "pct": 92,
      "suka": 0,
      "tolak": 0,
-     "design": 12
+     "design": 33
     }
    },
    "semasa": {
-    "imej": 36,
-    "lulus": 35,
-    "pct": 97,
+    "imej": 91,
+    "lulus": 84,
+    "pct": 92,
     "suka": 0,
     "tolak": 0,
-    "design": 12
+    "design": 33
    },
    "semua": {
-    "imej": 45,
-    "lulus": 41,
-    "pct": 91,
+    "imej": 106,
+    "lulus": 90,
+    "pct": 85,
     "suka": 0,
     "tolak": 0,
-    "design": 12
+    "design": 33
    },
    "berulang": [
     {
+     "kelas": "bentuk",
+     "nama": "Bentuk huruf atau saiz label lain daripada kad",
+     "imej": 10,
+     "gagal": 5,
+     "design": [
+      "exciting-sagan:K12O",
+      "focused-faraday:K10Q",
+      "focused-faraday:K13S",
+      "nifty-lovelace:K23f"
+     ],
+     "cadangan": null,
+     "cadangan_teks": "Pilihan ubahan habis: tukar ke model seterusnya ikut jadual model × gaya, kemudian pendekkan ayat, kemudian lapor kepada pengguna"
+    },
+    {
      "kelas": "lain",
      "nama": "Cacat lain (tiada kelas)",
-     "imej": 15,
-     "gagal": 0,
+     "imej": 4,
+     "gagal": 1,
      "design": [
-      "K14R",
-      "K15T",
-      "K16S",
-      "K17O",
-      "K4F",
-      "K9B"
+      "exciting-sagan:K13V",
+      "lucid-galileo:K14X"
      ],
      "cadangan": null,
      "cadangan_teks": "Tanya pengguna sebabnya; tambah ke kad sebagai ciri QC"
@@ -512,19 +629,20 @@
      "imej": 4,
      "gagal": 0,
      "design": [
-      "K17O",
-      "K3K"
+      "K3K",
+      "exciting-sagan:K13V",
+      "focused-faraday:K12T"
      ],
      "cadangan": "hiasan_kedudukan",
      "cadangan_teks": "Nyatakan kedudukan hiasan (kiri dan kanan, di luar label)"
     }
    ],
-   "ubahan_dicuba": 2,
+   "ubahan_dicuba": 6,
    "suka_imej": [],
    "tindakan": [
     {
      "jenis": "habis",
-     "teks": "Cacat 'Cacat lain (tiada kelas)': Tanya pengguna sebabnya; tambah ke kad sebagai ciri QC"
+     "teks": "Cacat 'Bentuk huruf atau saiz label lain daripada kad': Pilihan ubahan habis: tukar ke model seterusnya ikut jadual model × gaya, kemudian pendekkan ayat, kemudian lapor kepada pengguna"
     }
    ]
   },
@@ -656,6 +774,14 @@
    "rev": "am",
    "status": "tiada aturan sendiri (rangka am)",
    "ikut_rev": {
+    "?": {
+     "imej": 30,
+     "lulus": 0,
+     "pct": 0,
+     "suka": 0,
+     "tolak": 0,
+     "design": 15
+    },
     "am": {
      "imej": 6,
      "lulus": 1,
@@ -674,12 +800,12 @@
     "design": 3
    },
    "semua": {
-    "imej": 6,
+    "imej": 36,
     "lulus": 1,
-    "pct": 17,
+    "pct": 3,
     "suka": 0,
     "tolak": 0,
-    "design": 3
+    "design": 18
    },
    "berulang": [
     {
