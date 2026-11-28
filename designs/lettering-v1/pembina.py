@@ -48,6 +48,8 @@ W, H = 768, 1024
 # Calon semasa: tiada. ('ernie_frasa_bentuk' 28 Nov: MENANG, ditulis ke aturan ERNIE r2.) ('ernie_kotak_positif' 28 Nov: K11N kotak 0/3 -> 3/3 tetapi K12Y 3/3 -> 0/3, kalah, dibuang.) (27 Nov 2026: 'zturbo_had_positif' pada K9B 1/3 -> 1/3 dan 'ernie_had_positif' pada K11N 2/3 -> 2/3, kalah, dibuang.) (26 Nov 2026: 'zturbo_satu_baris' diuji pada K8G, tidak berjaya, dibuang.)
 # Calon semasa: tiada. (28 Nov 2026, larian K14-K18: zturbo_had_positif, ernie_hiasan_tepat, klein3_hiasan_kedudukan
 # menang -> r2; klein4b_frasa_bentuk kalah, dibuang. 26 Nov 2026: 'zturbo_satu_baris' pada K8G kalah, dibuang.)
+# Sesi focused-allen: calon klein4b_cara_baris (belum diuji); klein4b_hiasan_kedudukan versi focused-allen digantikan oleh versi
+# nifty-lovelace yang sudah MENANG (3.4 r2).
 # Nama calon = <model>_<id pilihan> daripada belajar.py (KELAS), cth. zturbo_had_positif; belajar.py memutuskan menang / kalah (3.15).
 UJI = {u for u in os.environ.get("PEMBINA_UJI", "").split(",") if u}
 SATU = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"]
@@ -141,6 +143,10 @@ def klein4b(m):
                  f'{frasa(l, lambda d: " as the top line" if d == 0 else "")}')
             if " " in l["q"]:   # r3 (28 Nov 2026, belajar 3.15, ubahan dua_kata_sebaris MENANG, kelas baris)
                 t += f', as {SATU[len(l["q"].split()) - 1]} words side by side on one line'
+        if "klein4b_cara_baris" in UJI:  # calon: kata panjang (>= 7 huruf) diberi bilangan huruf dalam ayat baris itu
+            n = [len(w) for w in l["q"].split() if 7 <= len(w) <= len(SATU) and w.isalpha()]
+            t += (f', a word spelled out in full with all {SATU[n[0] - 1]} of its letters' if len(n) == 1 and
+                  l["kata"] == "word" else "")
         s.append(t + (", and it is the largest line of all." if l["tertinggi"] else "."))
     if b.get("sentuh"):
         s.append(f"The lines {b['sentuh']}.")

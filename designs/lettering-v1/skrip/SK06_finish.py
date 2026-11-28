@@ -47,7 +47,14 @@ import cv2
 import numpy as np
 from PIL import Image
 
-VERSI = "SK06 v1.4 (27 Nov 2026)"
+VERSI = "SK06 v1.7 (28 Nov 2026)"
+# v1.7 (28 Nov 2026, sesi hab): gabung v1.4 nifty-lovelace (tekstur_calar, K23) + v1.4-v1.6 focused-allen (titik_halus,
+# lusuh_saring_cop, nota_kurungan). Nombor versi focused-allen v1.4-v1.6 dikekalkan dalam sejarah di bawah.
+# v1.6 (Belajar SK, ubahan nota_kurungan): nota dalam kurungan pada teks tekstur kad diabaikan (K14 'tiada (vektor rata)' = tiada).
+# v1.5 (Belajar SK, ubahan lusuh_saring_cop): K16 'lusuh cetakan saring' dan K17 'lusuh cop kering' dipadan ke jenis worn.
+# v1.4 (Belajar SK, ubahan titik_halus): komponen dakwat < AREA_MIN px (skala imej asal) dibuang; dahulu 30 px membuang
+# garis titik dan bintik latar kad K4 (titik 8-30 px). 4 px masih membuang hingar 1-3 px.
+AREA_MIN = 4
 from scipy.optimize import linear_sum_assignment
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -62,14 +69,15 @@ CENTER_Y = 0.47   # pusat optik sedikit di atas tengah
 # Tekstur kad (teks bebas dalam kad.py) -> jenis prosedur. Turutan = keutamaan. Kekuatan: "halus" 0.6, lain 1.0.
 TEKSTUR_KAD = [("kapur", "chalk"), ("lusuh", "worn"), ("grunge", "worn"), ("butir", "grain"), ("grain", "grain")]
 KUAT_KAD = {"halus": 0.6, "sederhana": 1.0}
-SOKONG = ("tiada", "kapur", "lusuh", "grunge", "butir", "grain", "halus", "sederhana", "cetakan", "berus kering")
+SOKONG = ("tiada", "kapur", "lusuh", "grunge", "butir", "grain", "halus", "sederhana", "cetakan", "berus kering",
+          "saring", "cop kering")   # v1.5: lusuh cetakan saring (K11), lusuh cop kering (K12) = jenis worn
 
 
 def tekstur_kad(teks):
     """Pulang dict(jenis, kuat, tidak_dibuat) daripada teks tekstur kad, ikut bahagian (pisah '+' atau ','). Bahagian
     tanpa padanan jenis, atau tekstur pada latar (SK06 hanya menekstur dakwat), masuk tidak_dibuat supaya
     belajar_sk.py menandanya (cth. K8 'tepi marker kering', 'butir latar')."""
-    t = (teks or "tiada").lower().strip()
+    t = re.sub(r"\s*\([^)]*\)", "", (teks or "tiada").lower()).strip()   # v1.6: nota dalam kurungan diabaikan
     if t == "tiada":
         return dict(jenis="none", kuat=0.0, tidak_dibuat=[])
     jenis, kuat, tak = None, 1.0, []
@@ -189,7 +197,7 @@ def potrace_paths(mask, tmp):
 def vectorize(img, n_ink, palet=None):
     labels, centers, bg_rgb = segment_palet(img, palet) if palet else segment(img, n_ink)
     H, W = labels.shape
-    masks = {i: clean(labels == i, area_min=int(30 * UP * UP)) for i in range(len(centers))}
+    masks = {i: clean(labels == i, area_min=int(AREA_MIN * UP * UP)) for i in range(len(centers))}
     masks = {i: m for i, m in masks.items() if m.any()}
     union = np.zeros(labels.shape, bool)
     for m in masks.values():
