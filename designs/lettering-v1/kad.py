@@ -309,10 +309,10 @@ KAD = {
             ("Tepi huruf sedikit kasar (marker kering)", False),
             ("Putih satu warna atas hitam, tiada swash", False)]),
     # K24 (28 Nov 2026): kad PERTAMA yang diisi daripada rekod decode (decode/IMG_5840.json, SK09 v1.2) + medan mata
-    # Claude. Nombor K24 dipilih supaya tidak bertembung dengan K9-K23 di cawangan sesi lain. Belum diluluskan pengguna.
+    # Claude. Nombor K24 dipilih supaya tidak bertembung dengan K9-K23 di cawangan sesi lain. Kad diluluskan pengguna 28 Nov 2026.
     "K24": dict(
         nama="Skrip berus tebal licin, baris rapat, huruf condong (putih atas hitam)", ref="IMG_5840",
-        versi=("v1.1 (28 Nov 2026; daripada rekod decode; belum diluluskan pengguna). v1.1 = pusingan 1: kata 'brush' "
+        versi=("v1.1 (28 Nov 2026; daripada rekod decode; DILULUSKAN pengguna 28 Nov 2026). v1.1 = pusingan 1: kata 'brush' "
                "dibuang dan tepi licin diminta, kerana QC B (SK10) menunjuk tepi kasar 26-57% lawan 4.1% pada upload"),
         kelas="F1", dakwat=1, ruang_tepi=11, tekstur="tiada", julat="2-4 perkataan",
         warna=dict(latar=("hitam", "#101010", "black"), dakwat=[("putih", "#fcfcfc", "white")]),
@@ -519,9 +519,10 @@ BLOK = {
         # Kotak baris (piksel, kanvas 768x1024) daripada kotak kata rekod decode: lebar kata 78% / 60% lebar gambar,
         # tinggi blok 74% kanvas dibahagi tiga baris (baris bertindih dalam rujukan; kotak tidak bertindih).
         ukuran=dict(utama=(592, 248), sokongan=(464, 248), penyambung=(296, 120)),
-        # Diukur SK09 v1.2 daripada IMG_5840 (736x981, 3:4), 28 Nov 2026. Satu gambar. Blok tidak condong (1.8 darjah,
-        # dalam had), jadi SK01 tidak dijalankan; condong ialah condong HURUF (23.5 darjah), urusan prompt.
-        rujukan=dict(condong_darjah=None, tepi_pct=10.6, tepi_sisi_pct=10.6, tepi_atas_bawah_pct=12.7,
+        # Diukur SK09 v1.2 daripada IMG_5840 (736x981, 3:4), 28 Nov 2026. Satu gambar. Blok hampir mendatar (1.8 darjah):
+        # SK01 v1.1 meluruskan imej jana ke sudut ini (keputusan pengguna 28 Nov 2026). Condong HURUF (23.5 darjah)
+        # ialah urusan prompt, bukan SK01.
+        rujukan=dict(condong_darjah=1.8, tepi_pct=10.6, tepi_sisi_pct=10.6, tepi_atas_bawah_pct=12.7,
                      sumber="SK09 v1.2 pada IMG_5840 (decode/IMG_5840.json)")),
 }
 

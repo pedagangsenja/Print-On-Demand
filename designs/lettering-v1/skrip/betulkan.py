@@ -22,7 +22,7 @@ import SK02_ruang_tepi
 import SK03_kedudukan
 import SK04_hitam_putih
 
-VERSI = "5b v1.1"
+VERSI = "5b v1.2"
 
 
 def betulkan(rgb, ruj, had=asas.HAD):
@@ -42,9 +42,10 @@ def betulkan(rgb, ruj, had=asas.HAD):
         gagal.append("dakwat menyentuh tepi kanvas (huruf mungkin terpotong)")
     if abs(SK02_ruang_tepi.beza_tepi(selepas, ruj)[0]) > had["tepi"]:
         gagal.append(f"ruang tepi masih di luar had: beza {SK02_ruang_tepi.beza_tepi(selepas, ruj)[0]} mata")
-    if ruj["kad_condong"] and ruj["condong_darjah"] is not None and \
-            abs(selepas["condong_darjah"] - ruj["condong_darjah"]) > had["condong"]:
-        gagal.append(f"condong {selepas['condong_darjah']} masih di luar had (rujukan {ruj['condong_darjah']})")
+    if ruj["condong_darjah"] is not None:
+        sasaran, h = (ruj["condong_darjah"], had["condong"]) if ruj["kad_condong"] else (0.0, SK01_condong.HAD_LURUS)
+        if abs(selepas["condong_darjah"] - sasaran) > h:
+            gagal.append(f"condong {selepas['condong_darjah']} masih di luar had (sasaran {sasaran})")
     return hasil, dict(versi=VERSI, rujukan=ruj, had=had, sebelum=sebelum, tindakan=tindakan, selepas=selepas,
                        lulus=not gagal, gagal=gagal)
 

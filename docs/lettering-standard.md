@@ -68,7 +68,9 @@ Bahagian ini mengatasi mana-mana ayat lain dalam fail ini yang bercanggah dengan
 - Pusingan 1 (kad v1.1, SATU ubahan: kata "brush" dibuang, tepi licin diminta; MOSS dan ERNIE, seed sama) = 4 imej. QC A: 4/4 lulus. Medan sasaran: tepi kasar turun ke 2.4–6.9% (sasaran 4.1%) pada 4/4 imej. Ubahan kekal dalam kad.
 - Skor keseluruhan TIDAK selari dengan mata: ERNIE naik (79.3 → 80.6, 74.9 → 90.4) tetapi MOSS turun (85.2 → 78.9, 85.6 → 78.9) walaupun pada mata Claude keempat-empat imej pusingan 1 lebih hampir dengan upload. Sebab yang dikesan: MOSS menambah sapuan berasingan di bawah setiap baris (medan "garis / sapuan"), dan indeks tebal ditarik oleh ekor panjang. Jadi: guna medan sasaran untuk menilai satu ubahan; skor keseluruhan belum boleh dipakai untuk menyusun imej sehingga had dan berat ditentukur.
 - Masa di CPU: MOSS 307–340 s, ERNIE 425–433 s setiap imej; satu enjin (muat turun + 2 imej) 21–31 minit.
-- Jurang yang ditemui: kad "tiada condong" tidak pernah diputar oleh SK01, jadi imej yang condong 6–8 darjah (ERNIE, FLUX 3 Klein) tidak dibetulkan walaupun rujukan hampir mendatar (1.8 darjah).
+- Jurang yang ditemui: kad "tiada condong" tidak pernah diputar oleh SK01, jadi imej yang condong 6–8 darjah (ERNIE, FLUX 3 Klein) tidak dibetulkan walaupun rujukan hampir mendatar (1.8 darjah). **Ditutup 28 Nov 2026 (keputusan pengguna), SK01 v1.1 / 5b v1.2:** kad tiada condong yang ADA sudut rujukan terukur diluruskan ke 0 darjah bila imej condong lebih 3 darjah. Ini mengatasi ayat "kad yang menyatakan tiada condong tidak pernah diputar" dalam Langkah 5b. Had 3 darjah kerana ukuran sudut pada skrip tidak stabil: percubaan pertama (kejar 1.8 darjah, had 1.5) menggagalkan 4 daripada 10 imej. Dengan peraturan akhir: 9 daripada 10 imej lulus semakan akhir; 1 gagal tipis (ERNIE seed 42 pusingan 0: 2.5 → 3.5 darjah selepas dipusatkan).
+- Selepas pelurusan, skor dikira semula: pusingan 0 MOSS 85.2, 85.6; ERNIE 79.3, 84.6; FLUX 3 Klein 77.8, 81.5. Pusingan 1 MOSS 88.3, 78.9; ERNIE 78.9, 90.4. Skor masih bercampur (dua naik, dua turun) walaupun medan sasaran berjaya pada 4/4: kesimpulan di atas kekal.
+- **Kelulusan pengguna 28 Nov 2026:** Kad K24 (v1.1) diluluskan. Design hitam putih yang dipilih: imej 4 = ERNIE seed 7 pusingan 0 (`lulus/K24T_ernie_s7.png`, rekod `lulus/K24T.json`). Catatan: imej itu dijana dengan kad v1.0 (tepi berus kering), bukan v1.1; pilihan pengguna mengatasi cadangan Claude (imej 10). Direkod dalam `belajar/pengguna.jsonl`.
 - `belajar.py` dan `belajar_sk.py` dijalankan selepas batch: tiada ubahan aturan model; ubahan masuk kad K24 (ciri gaya, bukan cara menulis prompt). Hasil eksport TIDAK dimuat naik ke dashboard dari cawangan ini, kerana cawangan ini tiada batch sesi lain dan akan menimpa data yang lebih baharu.
 
 Guna: `python3 skrip/SK09_decode.py <gambar> [--semak]`; `python3 skrip/SK10_banding.py --gambar <upload> <imej jana…>` atau dengan dua rekod JSON.
@@ -574,7 +576,7 @@ Skrip di sini ialah kerja SELEPAS jana (pembetulan 5b dan kemasan langkah 6). Al
 
 | ID | Skrip | Langkah | Tugas | Parameter daripada kad | Status (26 Nov 2026) |
 |---|---|---|---|---|---|
-| SK01 | Condong (`SK01_condong.py`) | 5b | Putar blok ke sudut rujukan kad | sudut condong | Dibina; diuji pada 12 imej K3H sedia ada |
+| SK01 | Condong (`SK01_condong.py`) | 5b | Putar blok ke sudut rujukan kad | sudut condong | Dibina; diuji pada 12 imej K3H sedia ada | v1.1 (28 Nov 2026): kad tiada condong dengan sudut rujukan terukur diluruskan ke 0 bila condong lebih 3 darjah |
 | SK02 | Ruang tepi (`SK02_ruang_tepi.py`) | 5b | Skala blok supaya ruang tepi sama dengan kad | ruang tepi (%) | Dibina; diuji pada 12 imej K3H sedia ada |
 | SK03 | Kedudukan (`SK03_kedudukan.py`) | 5b | Pusatkan blok pada kanvas | – | Dibina; diuji pada 12 imej K3H sedia ada |
 | SK04 | Hitam putih bersih (`SK04_hitam_putih.py`) | 5b | Tukar kelabu dan tepi kabur kepada hitam dan putih tulen | – | Dibina; diuji pada 12 imej K3H sedia ada |

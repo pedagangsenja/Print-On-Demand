@@ -1,5 +1,5 @@
 {
- "nota": "Larian v1.2 dengan aliran baharu (decode dahulu, QC A + QC B), 28 Nov 2026. Kad K24 (daripada rekod decode IMG_5840), ayat T 'Trust Your Pace', seed 42 dan 7, CPU, hitam putih. QC A = semakan mata Claude pada helaian (bukti lemah): ok = G1 ejaan + G2 tiada teks rawak + G3 tiada cacat. Nilai ketiga = id aset dashboard (kosong: belum dimuat naik, menunggu pilihan A atau SNC). QC B (skor persamaan SK10) dalam banding/v12d_decode_sk10.json. Pusingan 1 (v12d-decode-p1): kad K24 v1.1, satu ubahan = kata 'brush' dibuang dan tepi licin diminta; seed sama.",
+ "nota": "Larian v1.2 dengan aliran baharu (decode dahulu, QC A + QC B), 28 Nov 2026. Kad K24 (daripada rekod decode IMG_5840), ayat T 'Trust Your Pace', seed 42 dan 7, CPU, hitam putih. QC A = semakan mata Claude pada helaian (bukti lemah): ok = G1 ejaan + G2 tiada teks rawak + G3 tiada cacat. Nilai ketiga = id aset dashboard (kosong: belum dimuat naik, menunggu pilihan A atau SNC). QC B (skor persamaan SK10) dalam banding/v12d_decode_sk10.json. Pusingan 1 (v12d-decode-p1): kad K24 v1.1, satu ubahan = kata 'brush' dibuang dan tepi licin diminta; seed sama. Skor dikira semula 28 Nov selepas 5b v1.2 (SK01 v1.1 meluruskan blok).",
  "v12d-decode": {
   "moss": {
    "K24T_s42": [
@@ -21,19 +21,19 @@
    ],
    "K24T_s7": [
     true,
-    "Garis bawah berasingan di bawah 'Pace'; blok condong kira-kira 7 darjah (rujukan hampir mendatar); tepi berus kering; skor persamaan SK10 74.9",
+    "Garis bawah berasingan di bawah 'Pace'; blok condong kira-kira 7 darjah (rujukan hampir mendatar); tepi berus kering; skor persamaan SK10 84.6; DIPILIH pengguna sebagai design hitam putih (langkah 7, 28 Nov 2026); diluruskan SK01 v1.1 (6.8 -> 0 darjah)",
     ""
    ]
   },
   "klein3": {
    "K24T_s42": [
     true,
-    "Sapuan berasingan di bawah setiap baris; tekstur berus paling kuat; blok condong kira-kira 6 darjah; skor persamaan SK10 72.3",
+    "Sapuan berasingan di bawah setiap baris; tekstur berus paling kuat; blok condong kira-kira 6 darjah; skor persamaan SK10 77.8",
     ""
    ],
    "K24T_s7": [
     true,
-    "Sapuan berasingan di bawah setiap baris; tekstur berus paling kuat; blok condong kira-kira 7 darjah; skor persamaan SK10 76.1",
+    "Sapuan berasingan di bawah setiap baris; tekstur berus paling kuat; blok condong kira-kira 7 darjah; skor persamaan SK10 81.5",
     ""
    ]
   }
@@ -42,7 +42,7 @@
   "moss": {
    "K24T_s42": [
     true,
-    "Tepi strok licin (ubahan berjaya); sapuan berasingan di bawah setiap baris (rujukan: ekor bersambung dengan huruf); blok condong sedikit ke kiri (-4 darjah); skor persamaan SK10 78.9",
+    "Tepi strok licin (ubahan berjaya); sapuan berasingan di bawah setiap baris (rujukan: ekor bersambung dengan huruf); blok condong sedikit ke kiri (-4 darjah); skor persamaan SK10 88.3",
     ""
    ],
    "K24T_s7": [
@@ -54,7 +54,7 @@
   "ernie": {
    "K24T_s42": [
     true,
-    "Tepi strok licin (ubahan berjaya); ekor bersambung dengan huruf seperti rujukan; blok condong kira-kira 8 darjah (rujukan hampir mendatar); skor persamaan SK10 80.6",
+    "Tepi strok licin (ubahan berjaya); ekor bersambung dengan huruf seperti rujukan; blok condong kira-kira 8 darjah (rujukan hampir mendatar); skor persamaan SK10 78.9",
     ""
    ],
    "K24T_s7": [

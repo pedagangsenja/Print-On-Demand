@@ -66,7 +66,7 @@ NODES = [
     dict(id="1c", lorong=C, baris=2, tajuk="Isi Kad Gaya daripada rekod decode",
          butiran=["1c Kad Gaya diisi daripada rekod decode (1u), bukan ditaip daripada ingatan",
                   "Claude menambah medan 'mata' yang skrip tidak boleh ukur: nama gaya, kelas huruf (sans / serif / skrip), hiasan, senarai jangan salin",
-                  "Kad pertama daripada rekod decode: K24 (IMG_5840), 28 Nov 2026; belum diluluskan anda",
+                  "Kad pertama daripada rekod decode: K24 (IMG_5840); diluluskan anda 28 Nov 2026",
                   "Kad 16 medan; setiap medan = semakan QC (ya / tidak) + frasa prompt",
                   "2–3 ciri teras wajib lulus; unsur berisiko; julat panjang ayat",
                   "Kunci 1: Kad Gaya satu-satunya sumber gaya"],
@@ -181,6 +181,7 @@ NODES = [
     dict(id="5b", lorong=S, baris=12, tajuk="Pembetulan skrip (SK01–SK04)",
          butiran=["5b Pembetulan skrip (v1.2), selepas pintu wajib lulus: condong, ruang tepi, kedudukan, hitam putih bersih",
                   "5b hanya jalan bila ukuran tersasar daripada ukuran rujukan kad; ejaan dan bentuk huruf mesti jana semula",
+                  "SK01 v1.1 (28 Nov, keputusan anda): kad 'tiada condong' yang ada sudut rujukan terukur diluruskan ke 0 darjah bila imej condong lebih 3 darjah; larian K24T: 9 daripada 10 imej lulus semakan akhir",
                   "Daftar skrip: SK01 condong, SK02 ruang tepi, SK03 kedudukan, SK04 hitam putih bersih, SK05 ukuran (26 Nov); SK09 decode, SK10 banding (28 Nov). SK06 kemasan, SK07 warna dan SK08 bayang bukan lagi dalam v1.2: pindah ke Cetak v1 dan Warna v1",
                   "Larian pertama: 33 imej dibetulkan (condong, ruang tepi, kedudukan, hitam putih), 0 gagal semakan akhir",
                   "Skrip baharu: bila gambar upload ada ciri yang tiada skrip → tulis, simpan di skrip/<ID>_<nama>.py, uji pada imej sedia ada, daftar, kemas kini standard + dashboard, beritahu anda"],
@@ -207,7 +208,8 @@ NODES = [
                   "Papar upload, imej sauh dan hasil sebelah-menyebelah + skor persamaan (5e); anda pilih daripada satu helaian",
                   "Sebab tolak daripada senarai tetap; disalur balik ke kad, aturan model, jadual model × gaya atau ulangan",
                   "Had bilangan imej setiap helaian",
-                  "Titik kelulusan 2 daripada 2 dalam v1.2; v1.2 tamat di sini (hitam putih sahaja)"],
+                  "Titik kelulusan 2 daripada 2 dalam v1.2; v1.2 tamat di sini (hitam putih sahaja)",
+                  "Design pertama yang lulus aliran baharu: K24T 'Trust Your Pace', ERNIE seed 7 (28 Nov 2026), fail lulus/K24T_ernie_s7.png"],
          alat=[("Paparan sebelah-menyebelah", "upload, imej sauh, hasil + skor persamaan", NO)]),
 
     # ---------- 6. Simpan ----------

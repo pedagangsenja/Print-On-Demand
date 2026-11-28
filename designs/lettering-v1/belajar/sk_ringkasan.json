@@ -1,7 +1,7 @@
 {
  "versi": "s1 (27 Nov 2026)",
  "tarikh": "2026-11-28",
- "baris": 264,
+ "baris": 304,
  "imej": 50,
  "kad_dipakai": [
   "K24",
@@ -17,7 +17,7 @@
    "nama": "condong",
    "fail": "SK01_condong.py",
    "langkah": "5b",
-   "versi": "5b v1.1",
+   "versi": "5b v1.2",
    "ikut_versi": {
     "5b v1.1": {
      "imej": 28,
@@ -26,11 +26,19 @@
      "input_rosak": 0,
      "belum": 0,
      "tolak": 0
+    },
+    "5b v1.2": {
+     "imej": 5,
+     "lulus": 5,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
     }
    },
    "semasa": {
-    "imej": 28,
-    "lulus": 28,
+    "imej": 5,
+    "lulus": 5,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -51,7 +59,7 @@
    "nama": "ruang tepi",
    "fail": "SK02_ruang_tepi.py",
    "langkah": "5b",
-   "versi": "5b v1.1",
+   "versi": "5b v1.2",
    "ikut_versi": {
     "5b v1.1": {
      "imej": 20,
@@ -60,11 +68,19 @@
      "input_rosak": 0,
      "belum": 0,
      "tolak": 0
+    },
+    "5b v1.2": {
+     "imej": 4,
+     "lulus": 4,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
     }
    },
    "semasa": {
-    "imej": 20,
-    "lulus": 20,
+    "imej": 4,
+    "lulus": 4,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -85,7 +101,7 @@
    "nama": "kedudukan",
    "fail": "SK03_kedudukan.py",
    "langkah": "5b",
-   "versi": "5b v1.1",
+   "versi": "5b v1.2",
    "ikut_versi": {
     "5b v1.1": {
      "imej": 20,
@@ -94,11 +110,19 @@
      "input_rosak": 0,
      "belum": 0,
      "tolak": 0
+    },
+    "5b v1.2": {
+     "imej": 5,
+     "lulus": 5,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
     }
    },
    "semasa": {
-    "imej": 20,
-    "lulus": 20,
+    "imej": 5,
+    "lulus": 5,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -119,7 +143,7 @@
    "nama": "hitam putih",
    "fail": "SK04_hitam_putih.py",
    "langkah": "5b",
-   "versi": "5b v1.1",
+   "versi": "5b v1.2",
    "ikut_versi": {
     "5b v1.1": {
      "imej": 37,
@@ -128,11 +152,19 @@
      "input_rosak": 0,
      "belum": 0,
      "tolak": 0
+    },
+    "5b v1.2": {
+     "imej": 7,
+     "lulus": 7,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
     }
    },
    "semasa": {
-    "imej": 37,
-    "lulus": 37,
+    "imej": 7,
+    "lulus": 7,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
