@@ -56,18 +56,20 @@ MEDAN = [
     ("tekstur huruf",              "tekstur", 2, None, "kategori", "prompt: tekstur dan kelas kemasan"),
     ("tekstur latar",              "tekstur", 1, None, "kategori", "prompt: tekstur dan kelas kemasan"),
 ]
+# Berat (larian K24T, 28 Nov 2026): indeks tebal 2 (ditarik oleh ekor panjang, kurang dipercayai); tepi kasar 3
+# (beza paling jelas di mata: berus kering lawan strok licin). Pertimbangan Claude, belum ditentukur.
 # medan yang bergantung pada pecahan baris: hanya untuk "baris lurus"
 PERLU_BARIS = {"penjajaran", "serakan penjajaran (%)", "sela antara baris (%)", "hierarki (tertinggi / terendah)"}
 MEDAN_SELURUH = [
     ("bentuk blok",                "susunan", 2, None, "kategori", "prompt: bentuk susunan"),
     ("kepadatan blok (%)",         "susunan", 2, 8.0,  "mutlak",   "prompt: jarak dan hubungan baris"),
-    ("seluruh: indeks tebal",      "huruf",   4, 0.12, "nisbah",   "prompt: bentuk huruf ikut peranan"),
+    ("seluruh: indeks tebal",      "huruf",   2, 0.12, "nisbah",   "prompt: bentuk huruf ikut peranan"),
     ("seluruh: kontras strok",     "huruf",   2, 0.6,  "mutlak",   "prompt: butiran garisan"),
     ("seluruh: strok nipis (%)",   "huruf",   2, 8.0,  "mutlak",   "prompt: hiasan (ekor dan sapuan nipis)"),
     ("seluruh: condong huruf (darjah)", "huruf", 3, 6.0, "mutlak", "prompt: garis dasar dan condong"),
     ("seluruh: bersambung (kongsi bentuk terbesar)", "huruf", 3, 0.2, "mutlak", "prompt: jarak dan hubungan baris"),
     ("seluruh: gelung setiap huruf", "huruf", 2, 0.25, "mutlak",   "prompt: bentuk huruf ikut peranan"),
-    ("seluruh: tepi kasar (%)",    "huruf",   2, 8.0,  "mutlak",   "prompt: tekstur dan kelas kemasan"),
+    ("seluruh: tepi kasar (%)",    "huruf",   3, 8.0,  "mutlak",   "prompt: bentuk huruf (tepi strok licin atau kasar)"),
     ("bintik / percikan",          "elemen",  1, None, "kategori", "prompt: hiasan"),
 ]
 # ciri setiap kata ikut peranan (rekod yang ada kumpulan 'kata': kotak mata pada upload, baris = spesifikasi pada jana)
