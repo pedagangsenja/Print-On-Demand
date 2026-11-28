@@ -1,0 +1,44 @@
+{
+ "versi": "SK06 v1.4 (27 Nov 2026)",
+ "raw": "moss_K9Q_s7_HP_warna.png",
+ "style": "S3",
+ "palet": "kad K9 HP",
+ "bg": "#030302",
+ "fills": [
+  "#f4f0ea"
+ ],
+ "layers": 1,
+ "ink_px": [
+  3164221
+ ],
+ "sizes": {
+  "18x24": [
+   5400,
+   7200
+  ]
+ },
+ "tekstur": {
+  "kad": "K9",
+  "teks": "bintik lusuh grunge",
+  "jenis": "worn",
+  "kuat": 1.0,
+  "tidak_dibuat": []
+ },
+ "amaran": [],
+ "tepi": {
+  "sasaran": {
+   "sisi": 3.2,
+   "atas_bawah": 2.0,
+   "sumber": "SK05 pada IMG_5776"
+  },
+  "hasil": {
+   "18x24": {
+    "kiri": 3.2,
+    "kanan": 3.2,
+    "atas": 18.6,
+    "bawah": 24.6
+   }
+  },
+  "dakwat_min_pct": 3.23
+ }
+}
