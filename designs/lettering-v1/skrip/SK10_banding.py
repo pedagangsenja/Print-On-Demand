@@ -89,6 +89,35 @@ MEDAN_WARNA = [
 ]
 
 
+# Jadual asal (cadangan Claude, sebelum tentukur) disimpan untuk skrip/tentukur_sk10.py.
+MEDAN_ASAL, MEDAN_SELURUH_ASAL, MEDAN_KATA_ASAL = list(MEDAN), list(MEDAN_SELURUH), list(MEDAN_KATA)
+TENTUKUR = None
+
+
+def _muat_tentukur():
+    """Jika skrip/sk10_had.json ada (hasil tentukur_sk10.py), had dan berat setiap medan diambil daripadanya.
+    SK10_ASAL=1 dalam persekitaran = guna jadual asal."""
+    global MEDAN, MEDAN_SELURUH, MEDAN_KATA, TENTUKUR
+    import os
+    f = Path(__file__).resolve().parent / "sk10_had.json"
+    if os.environ.get("SK10_ASAL") or not f.exists():
+        return
+    d = json.loads(f.read_text())
+    TENTUKUR = d.get("sumber")
+    def tukar(jadual):
+        keluar = []
+        for nama, kump, berat, had, jenis, tindakan in jadual:
+            m = d["medan"].get(nama)
+            if m and berat != 0:
+                berat, had = m["berat"], (m["had"] if m["had"] is not None else had)
+            keluar.append((nama, kump, berat, had, jenis, tindakan))
+        return keluar
+    MEDAN, MEDAN_SELURUH, MEDAN_KATA = tukar(MEDAN_ASAL), tukar(MEDAN_SELURUH_ASAL), tukar(MEDAN_KATA_ASAL)
+
+
+_muat_tentukur()
+
+
 def _purata(baris, kunci):
     v = [(r[kunci], r["tinggi_pct"]) for r in baris if r.get(kunci) is not None]
     return round(float(np.average([a for a, _ in v], weights=[b for _, b in v])), 2) if v else None
@@ -216,7 +245,7 @@ def banding(ruj, jana, mod="hp"):
     beza = sorted([r for r in baris if r.get("rugi")], key=lambda r: -r["rugi"])
     prompt = [r for r in beza if not r["tindakan"].startswith("skrip")]
     return dict(
-        versi=VERSI, mod=mod, profil="lettering bertaut (ciri seluruh blok)" if bertaut else "baris lurus (ciri baris)",
+        versi=VERSI, tentukur=TENTUKUR or "tiada (jadual asal)", mod=mod, profil="lettering bertaut (ciri seluruh blok)" if bertaut else "baris lurus (ciri baris)",
         rujukan=ruj["fail"], jana=jana["fail"],
         skor=round(dapat / jum * 100, 1) if jum else None,
         sama=sum(r["hasil"] == "sama" for r in baris), hampir=sum(r["hasil"] == "hampir" for r in baris),

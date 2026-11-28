@@ -1,0 +1,508 @@
+{
+ "versi": "tentukur_sk10 v1.0",
+ "tarikh": "2026-11-28",
+ "bil_imej": 384,
+ "bil_rujukan": 26,
+ "bil_kad": 30,
+ "nota": "Padan = imej dengan rujukan kadnya; tak padan = imej dengan rujukan kad lain. Had baharu = persentil ke-75 beza pasangan padan; berat ikut AUC. Ujian dua lipatan ikut kad: tetapan dikira pada separuh kad, diuji pada separuh lagi. 'Padan' bukan bermaksud serupa pada mata.",
+ "ujian_dua_lipatan": [
+  {
+   "lipatan": 0,
+   "kad_uji": [
+    "K12",
+    "K16",
+    "K17",
+    "K21",
+    "K22",
+    "K23",
+    "K24",
+    "K32",
+    "K40",
+    "K43",
+    "K44",
+    "K50",
+    "K51",
+    "K53",
+    "K54",
+    "K9"
+   ],
+   "lama": {
+    "n": 182,
+    "top1_pct": 31.9,
+    "kedudukan_purata": 8.08,
+    "bil_rujukan": 26,
+    "beza_skor_sendiri_lawan_lain": 12.8
+   },
+   "baharu": {
+    "n": 182,
+    "top1_pct": 17.0,
+    "kedudukan_purata": 8.69,
+    "bil_rujukan": 26,
+    "beza_skor_sendiri_lawan_lain": 10.7
+   }
+  },
+  {
+   "lipatan": 1,
+   "kad_uji": [
+    "K10",
+    "K11",
+    "K14",
+    "K15",
+    "K18",
+    "K2",
+    "K20",
+    "K30",
+    "K31",
+    "K33",
+    "K4",
+    "K41",
+    "K42",
+    "K52"
+   ],
+   "lama": {
+    "n": 202,
+    "top1_pct": 16.8,
+    "kedudukan_purata": 6.46,
+    "bil_rujukan": 26,
+    "beza_skor_sendiri_lawan_lain": 13.3
+   },
+   "baharu": {
+    "n": 202,
+    "top1_pct": 21.3,
+    "kedudukan_purata": 8.24,
+    "bil_rujukan": 26,
+    "beza_skor_sendiri_lawan_lain": 12.5
+   }
+  }
+ ],
+ "ujian_pada_kad_tidak_dilihat": {
+  "tetapan_asal": {
+   "n": 384,
+   "top1_pct": 24.0,
+   "kedudukan_purata": 7.23
+  },
+  "tetapan_baharu": {
+   "n": 384,
+   "top1_pct": 19.3,
+   "kedudukan_purata": 8.45
+  },
+  "rawak": {
+   "top1_pct": 3.8,
+   "kedudukan_purata": 13.5
+  }
+ },
+ "keputusan": "Tetapan baharu TIDAK menang pada kad yang tidak dilihat: jadual asal SK10 dikekalkan",
+ "semua_data": {
+  "lama": {
+   "n": 384,
+   "top1_pct": 24.0,
+   "kedudukan_purata": 7.23,
+   "bil_rujukan": 26,
+   "beza_skor_sendiri_lawan_lain": 13.1
+  },
+  "baharu": {
+   "n": 384,
+   "top1_pct": 26.8,
+   "kedudukan_purata": 5.88,
+   "bil_rujukan": 26,
+   "beza_skor_sendiri_lawan_lain": 15.4
+  }
+ },
+ "medan": [
+  {
+   "medan": "kata utama: condong huruf (darjah)",
+   "berat_lama": 3,
+   "had_lama": 6.0,
+   "berat_baharu": 3,
+   "had_baharu": 7.997,
+   "auc": 0.749,
+   "n_padan": 55
+  },
+  {
+   "medan": "serakan penjajaran (%)",
+   "berat_lama": 1,
+   "had_lama": 3.0,
+   "berat_baharu": 3,
+   "had_baharu": 0.3,
+   "auc": 0.708,
+   "n_padan": 106
+  },
+  {
+   "medan": "isian blok (%)",
+   "berat_lama": 1,
+   "had_lama": 6.0,
+   "berat_baharu": 2,
+   "had_baharu": 11.725,
+   "auc": 0.695,
+   "n_padan": 384
+  },
+  {
+   "medan": "utama: condong huruf (darjah)",
+   "berat_lama": 2,
+   "had_lama": 5.0,
+   "berat_baharu": 2,
+   "had_baharu": 0.001,
+   "auc": 0.691,
+   "n_padan": 106
+  },
+  {
+   "medan": "baris kecil: kelas huruf",
+   "berat_lama": 2,
+   "had_lama": null,
+   "berat_baharu": 2,
+   "had_baharu": null,
+   "auc": 0.691,
+   "n_padan": 44
+  },
+  {
+   "medan": "penjajaran",
+   "berat_lama": 3,
+   "had_lama": null,
+   "berat_baharu": 2,
+   "had_baharu": null,
+   "auc": 0.67,
+   "n_padan": 106
+  },
+  {
+   "medan": "seluruh: condong huruf (darjah)",
+   "berat_lama": 3,
+   "had_lama": 6.0,
+   "berat_baharu": 2,
+   "had_baharu": 8.0,
+   "auc": 0.668,
+   "n_padan": 278
+  },
+  {
+   "medan": "hierarki (tertinggi / terendah)",
+   "berat_lama": 1,
+   "had_lama": 0.35,
+   "berat_baharu": 2,
+   "had_baharu": 0.648,
+   "auc": 0.66,
+   "n_padan": 106
+  },
+  {
+   "medan": "utama: kelas huruf",
+   "berat_lama": 4,
+   "had_lama": null,
+   "berat_baharu": 2,
+   "had_baharu": null,
+   "auc": 0.65,
+   "n_padan": 106
+  },
+  {
+   "medan": "kepadatan blok (%)",
+   "berat_lama": 2,
+   "had_lama": 8.0,
+   "berat_baharu": 2,
+   "had_baharu": 14.875,
+   "auc": 0.642,
+   "n_padan": 278
+  },
+  {
+   "medan": "utama: tebal strok (%)",
+   "berat_lama": 4,
+   "had_lama": 3.0,
+   "berat_baharu": 2,
+   "had_baharu": 6.087,
+   "auc": 0.642,
+   "n_padan": 106
+  },
+  {
+   "medan": "kata utama: indeks tebal",
+   "berat_lama": 3,
+   "had_lama": 0.12,
+   "berat_baharu": 2,
+   "had_baharu": 0.341,
+   "auc": 0.64,
+   "n_padan": 55
+  },
+  {
+   "medan": "utama: lebar huruf (nisbah)",
+   "berat_lama": 2,
+   "had_lama": 0.08,
+   "berat_baharu": 2,
+   "had_baharu": 0.13,
+   "auc": 0.63,
+   "n_padan": 106
+  },
+  {
+   "medan": "kata sokongan / utama: nisbah tinggi",
+   "berat_lama": 2,
+   "had_lama": 0.2,
+   "berat_baharu": 2,
+   "had_baharu": 0.189,
+   "auc": 0.622,
+   "n_padan": 25
+  },
+  {
+   "medan": "utama: tepi kasar (%)",
+   "berat_lama": 2,
+   "had_lama": 6.0,
+   "berat_baharu": 1,
+   "had_baharu": 14.375,
+   "auc": 0.616,
+   "n_padan": 106
+  },
+  {
+   "medan": "kata utama: lebar setiap huruf",
+   "berat_lama": 2,
+   "had_lama": 0.25,
+   "berat_baharu": 1,
+   "had_baharu": 0.568,
+   "auc": 0.613,
+   "n_padan": 55
+  },
+  {
+   "medan": "utama: kontras strok",
+   "berat_lama": 1,
+   "had_lama": 0.5,
+   "berat_baharu": 1,
+   "had_baharu": 1.938,
+   "auc": 0.612,
+   "n_padan": 106
+  },
+  {
+   "medan": "condong blok (darjah)",
+   "berat_lama": 2,
+   "had_lama": 1.5,
+   "berat_baharu": 1,
+   "had_baharu": 4.8,
+   "auc": 0.599,
+   "n_padan": 384
+  },
+  {
+   "medan": "garis / sapuan: ada",
+   "berat_lama": 2,
+   "had_lama": null,
+   "berat_baharu": 1,
+   "had_baharu": null,
+   "auc": 0.588,
+   "n_padan": 384
+  },
+  {
+   "medan": "seluruh: strok nipis (%)",
+   "berat_lama": 2,
+   "had_lama": 8.0,
+   "berat_baharu": 1,
+   "had_baharu": 15.75,
+   "auc": 0.583,
+   "n_padan": 278
+  },
+  {
+   "medan": "kata sokongan: indeks tebal",
+   "berat_lama": 2,
+   "had_lama": 0.12,
+   "berat_baharu": 1,
+   "had_baharu": 0.423,
+   "auc": 0.582,
+   "n_padan": 25
+  },
+  {
+   "medan": "bentuk blok",
+   "berat_lama": 2,
+   "had_lama": null,
+   "berat_baharu": 1,
+   "had_baharu": null,
+   "auc": 0.576,
+   "n_padan": 278
+  },
+  {
+   "medan": "nisbah blok (lebar / tinggi)",
+   "berat_lama": 1,
+   "had_lama": 0.15,
+   "berat_baharu": 1,
+   "had_baharu": 0.326,
+   "auc": 0.573,
+   "n_padan": 384
+  },
+  {
+   "medan": "bekas (kotak / label)",
+   "berat_lama": 4,
+   "had_lama": null,
+   "berat_baharu": 1,
+   "had_baharu": null,
+   "auc": 0.566,
+   "n_padan": 384
+  },
+  {
+   "medan": "kata penyambung / utama: nisbah tinggi",
+   "berat_lama": 2,
+   "had_lama": 0.25,
+   "berat_baharu": 1,
+   "had_baharu": 0.566,
+   "auc": 0.559,
+   "n_padan": 39
+  },
+  {
+   "medan": "seluruh: gelung setiap huruf",
+   "berat_lama": 2,
+   "had_lama": 0.25,
+   "berat_baharu": 1,
+   "had_baharu": 0.52,
+   "auc": 0.555,
+   "n_padan": 278
+  },
+  {
+   "medan": "sela antara baris (%)",
+   "berat_lama": 2,
+   "had_lama": 1.5,
+   "berat_baharu": 0,
+   "had_baharu": 1.7,
+   "auc": 0.546,
+   "n_padan": 106
+  },
+  {
+   "medan": "tekstur latar",
+   "berat_lama": 0,
+   "had_lama": null,
+   "berat_baharu": 0,
+   "had_baharu": null,
+   "auc": 0.545,
+   "n_padan": 384
+  },
+  {
+   "medan": "seluruh: kontras strok",
+   "berat_lama": 2,
+   "had_lama": 0.6,
+   "berat_baharu": 0,
+   "had_baharu": 4.085,
+   "auc": 0.543,
+   "n_padan": 278
+  },
+  {
+   "medan": "bintik / percikan",
+   "berat_lama": 1,
+   "had_lama": null,
+   "berat_baharu": 0,
+   "had_baharu": null,
+   "auc": 0.543,
+   "n_padan": 278
+  },
+  {
+   "medan": "seluruh: indeks tebal",
+   "berat_lama": 2,
+   "had_lama": 0.12,
+   "berat_baharu": 0,
+   "had_baharu": 0.466,
+   "auc": 0.54,
+   "n_padan": 278
+  },
+  {
+   "medan": "seluruh: bersambung (kongsi bentuk terbesar)",
+   "berat_lama": 3,
+   "had_lama": 0.2,
+   "berat_baharu": 0,
+   "had_baharu": 0.348,
+   "auc": 0.537,
+   "n_padan": 278
+  },
+  {
+   "medan": "utama: huruf besar / campur",
+   "berat_lama": 3,
+   "had_lama": null,
+   "berat_baharu": 0,
+   "had_baharu": null,
+   "auc": 0.534,
+   "n_padan": 106
+  },
+  {
+   "medan": "ruang tepi paling sempit (%)",
+   "berat_lama": 0,
+   "had_lama": 2.0,
+   "berat_baharu": 0,
+   "had_baharu": 8.65,
+   "auc": 0.532,
+   "n_padan": 384
+  },
+  {
+   "medan": "tekstur huruf",
+   "berat_lama": 0,
+   "had_lama": null,
+   "berat_baharu": 0,
+   "had_baharu": null,
+   "auc": 0.522,
+   "n_padan": 384
+  },
+  {
+   "medan": "kata sokongan: condong huruf (darjah)",
+   "berat_lama": 2,
+   "had_lama": 6.0,
+   "berat_baharu": 0,
+   "had_baharu": 19.043,
+   "auc": 0.51,
+   "n_padan": 25
+  },
+  {
+   "medan": "hiasan lain: ada",
+   "berat_lama": 1,
+   "had_lama": null,
+   "berat_baharu": 0,
+   "had_baharu": null,
+   "auc": 0.496,
+   "n_padan": 384
+  },
+  {
+   "medan": "seluruh: tepi kasar (%)",
+   "berat_lama": 3,
+   "had_lama": 8.0,
+   "berat_baharu": 0,
+   "had_baharu": 35.675,
+   "auc": 0.471,
+   "n_padan": 278
+  },
+  {
+   "medan": "baris kecil: ada",
+   "berat_lama": 2,
+   "had_lama": null,
+   "berat_baharu": 0,
+   "had_baharu": null,
+   "auc": 0.468,
+   "n_padan": 106
+  }
+ ],
+ "kad_pendua": [
+  {
+   "rujukan": "IMG_5743",
+   "kad": "K18",
+   "imej": 9,
+   "skor_purata": 63.6
+  },
+  {
+   "rujukan": "IMG_5743",
+   "kad": "K33",
+   "imej": 14,
+   "skor_purata": 74.8
+  },
+  {
+   "rujukan": "IMG_5793",
+   "kad": "K23",
+   "imej": 15,
+   "skor_purata": 45.9
+  },
+  {
+   "rujukan": "IMG_5793",
+   "kad": "K51",
+   "imej": 8,
+   "skor_purata": 45.5
+  },
+  {
+   "rujukan": "IMG_5840",
+   "kad": "K22",
+   "imej": 12,
+   "skor_purata": 77.4
+  },
+  {
+   "rujukan": "IMG_5840",
+   "kad": "K24",
+   "imej": 10,
+   "skor_purata": 83.1
+  },
+  {
+   "rujukan": "IMG_5840",
+   "kad": "K50",
+   "imej": 10,
+   "skor_purata": 81.9
+  }
+ ]
+}

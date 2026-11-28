@@ -87,6 +87,31 @@ Guna: `python3 skrip/SK09_decode.py <gambar> [--semak]`; `python3 skrip/SK10_ban
 - **Kad pendua (belum diselesaikan):** tiga gambar rujukan ada lebih daripada satu kad daripada sesi berlainan: IMG_5840 (K22, K50, K24; K25 ialah gaya terbitan), IMG_5793 (K23, K51), IMG_5743 (K18, K33). Dikira daripada medan `ref` dalam `kad.py` (38 kad, 32 gambar rujukan). Sesi baharu mesti menyemak `kad.py` cawangan induk sebelum membuat kad atau huruf ayat baharu.
 - Butiran "Kerja lettering masih di 7 cawangan" dalam "Belum selesai" tidak lagi benar.
 
+## Tentukur SK10 dan kad pendua (28 Nov 2026, tanpa jana baharu)
+Skrip: `skrip/tentukur_sk10.py`; hasil penuh: `banding/tentukur_sk10.json`. Data: 384 imej `betul/` sedia ada, 26 gambar rujukan, 30 kad. Tahap bukti: sederhana (ratusan imej, satu ukuran).
+
+**Ujian.** Setiap imej jana ada satu rujukan yang betul (rujukan kadnya). Skor yang baik memberi markah tertinggi kepada rujukan sendiri berbanding 25 rujukan lain.
+- Tetapan asal SK10 (cadangan Claude): rujukan sendiri mendapat skor tertinggi pada 24.0% imej; kedudukan purata 7.23 daripada 26. Tekaan rawak: 3.8% dan 13.5. Jadi skor itu membawa isyarat gaya, tetapi lemah: ia TIDAK boleh menyusun imej terbaik, dan tidak boleh meluluskan.
+- Had dan berat baharu yang dikira daripada data (had = persentil ke-75 beza pasangan padan; berat ikut kuasa beza) diuji pada kad yang tidak dilihat (dua lipatan): 19.3% dan kedudukan 8.45. Lebih buruk daripada tetapan asal, jadi **tetapan asal dikekalkan** dan `sk10_had.json` tidak ditulis. (Pada data yang sama ia nampak lebih baik, 26.3% dan 5.89: itu terlebih padan.)
+- Medan yang paling membezakan gaya (AUC, 0.5 = tidak berguna): condong huruf kata utama 0.75; serakan penjajaran 0.71; isian blok 0.70; condong huruf baris utama 0.69; kelas huruf baris kecil 0.69; penjajaran 0.67; condong huruf seluruh blok 0.67.
+- Medan yang hampir tidak membezakan (AUC 0.47–0.54): tepi kasar seluruh blok, baris kecil ada / tiada, hiasan lain, huruf besar / campur, bersambung, indeks tebal seluruh blok, bintik, kontras strok seluruh blok, tekstur.
+- Had kaedah: "padan" bermaksud kad yang sama, bukan serupa pada mata; imej yang gagal gaya tetap dikira padan. Hanya 16 rujukan ada teks dan kotak kata, jadi medan kata diuji pada 25–55 pasangan sahaja.
+- Kesimpulan untuk QC B: guna SK10 untuk (a) mencari beza terbesar bagi SATU imej lawan rujukannya dan (b) menyemak sama ada satu ubahan menggerakkan medan sasarannya. Jangan guna skor keseluruhan untuk memilih imej. Medan "tepi kasar" berguna dalam satu kad (K24t) walaupun tidak membezakan antara kad.
+
+**Kad pendua: cadangan (belum diputuskan pengguna).** Semua kad di bawah pernah diluluskan pengguna dalam sesi masing-masing. Lulus = QC A dalam dataset `ai_all`; skor = purata SK10 (tetapan asal) lawan rujukan yang sama, sebagai maklumat sahaja.
+
+| Rujukan | Kad | Imej lulus QC A | Skor purata | Cadangan |
+|---|---|---|---|---|
+| IMG_5840 | K22 | 13 / 16 | 77.4 | pendua |
+| IMG_5840 | K50 | 10 / 10 | 81.9 | pendua |
+| IMG_5840 | K24 | 10 / 10 | 83.1 | kekal (diisi daripada rekod decode; ada design lulus K24t) |
+| IMG_5793 | K23 | 15 / 15 | 45.9 | kekal |
+| IMG_5793 | K51 | 8 / 13 | 45.5 | pendua |
+| IMG_5743 | K18 | 9 / 10 | 63.6 | pendua |
+| IMG_5743 | K33 | 14 / 15 | 74.8 | kekal |
+
+"Pendua" = ditanda tidak dipakai untuk jana baharu; kad, imej dan rekodnya tidak dipadam. K25 ialah gaya terbitan (berus kering), bukan pendua. Kedua-dua kad IMG_5793 berskor rendah (46): gayanya masih jauh daripada upload.
+
 ## Urutan tetap: hitam putih dahulu, warna akhir sekali (keputusan pengguna 26 Nov 2026)
 1. AI menjana hitam putih sahaja: dakwat putih atas latar hitam; tiada warna lain, tiada kelabu.
 2. QC pada imej hitam putih, ikut turutan: ejaan, ayat (baris, susunan, tanda baca ikut Spesifikasi Teks), gaya (ciri kad). Gagal = ulang (langkah 5).
