@@ -38,7 +38,7 @@ if __name__ == "__main__":
     for f in map(Path, a[4:]):
         stem = f"{f.parent.name}_{f.stem}" + (f"_{pil['warna']}" if pil.get("warna") else "")   # folder = model
         im = muat(f)
-        peta, cat = sk07.peranan(im, kid, aid)
+        peta, cat = sk07.peranan(im, kid, aid, pil.get("warna"))
         a_ = sk07.alfa(im)
         if not sk07.tulis(folder, stem, peta, pal, dict(imej=str(f), kad=kid, ayat=aid, **cat), a_):
             print(stem, "| SK07 GAGAL:", "; ".join(cat["gagal"]), "-> dilangkau")

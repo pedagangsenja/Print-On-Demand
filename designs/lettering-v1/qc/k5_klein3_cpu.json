@@ -1,0 +1,113 @@
+{
+ "nota": "Ujian K5 pada FLUX 3 Image Klein, CPU container, aturan v1.2 bahagian 3.8 (kapsyen + jadual kotak, penambah prompt dibuang), 3 ayat x 2 seed, 768x1024, 16 langkah. Masa: 289-344 s setiap imej; larian penuh 2763 s termasuk pasang (470 s) dan muat turun (418 s). Kad K5 belum ada ukuran rujukan, jadi kotak baris memakai lalai ruang tepi dan tidak bertindih.",
+ "imej": [
+  {
+   "model": "klein3",
+   "peranti": "cpu",
+   "id": "K5P_s42",
+   "ayat": "pendek",
+   "seed": 42,
+   "g1_ejaan": true,
+   "g2_teks_rawak": false,
+   "g3_cacat": false,
+   "teras": {
+    "huruf_tangan_tebal_garis_dasar_melantun": false,
+    "blok_rapat_sama_lebar": true,
+    "baris_bertaut": false
+   },
+   "lulus": false,
+   "sebab": "Ejaan betul dan nampak tulisan tangan (kapur), tetapi garis dasar hampir rata dan baris tidak bertaut (ada ruang antara baris)",
+   "disemak": "Claude, mata, helaian semakan 6 imej, 27 Nov 2026; QC 8 ciri penuh belum dibuat"
+  },
+  {
+   "model": "klein3",
+   "peranti": "cpu",
+   "id": "K5P_s7",
+   "ayat": "pendek",
+   "seed": 7,
+   "g1_ejaan": true,
+   "g2_teks_rawak": false,
+   "g3_cacat": false,
+   "teras": {
+    "huruf_tangan_tebal_garis_dasar_melantun": false,
+    "blok_rapat_sama_lebar": true,
+    "baris_bertaut": false
+   },
+   "lulus": false,
+   "sebab": "Ejaan betul dan nampak tulisan tangan (kapur), tetapi garis dasar hampir rata dan baris tidak bertaut (ada ruang antara baris)",
+   "disemak": "Claude, mata, helaian semakan 6 imej, 27 Nov 2026; QC 8 ciri penuh belum dibuat"
+  },
+  {
+   "model": "klein3",
+   "peranti": "cpu",
+   "id": "K5D_s42",
+   "ayat": "sederhana",
+   "seed": 42,
+   "g1_ejaan": true,
+   "g2_teks_rawak": false,
+   "g3_cacat": false,
+   "teras": {
+    "huruf_tangan_tebal_garis_dasar_melantun": false,
+    "blok_rapat_sama_lebar": true,
+    "baris_bertaut": false
+   },
+   "lulus": false,
+   "sebab": "Ejaan betul dan nampak tulisan tangan (kapur), tetapi garis dasar hampir rata dan baris tidak bertaut (ada ruang antara baris)",
+   "disemak": "Claude, mata, helaian semakan 6 imej, 27 Nov 2026; QC 8 ciri penuh belum dibuat"
+  },
+  {
+   "model": "klein3",
+   "peranti": "cpu",
+   "id": "K5D_s7",
+   "ayat": "sederhana",
+   "seed": 7,
+   "g1_ejaan": true,
+   "g2_teks_rawak": false,
+   "g3_cacat": false,
+   "teras": {
+    "huruf_tangan_tebal_garis_dasar_melantun": false,
+    "blok_rapat_sama_lebar": true,
+    "baris_bertaut": false
+   },
+   "lulus": false,
+   "sebab": "Ejaan betul dan nampak tulisan tangan (kapur), tetapi garis dasar hampir rata dan baris tidak bertaut (ada ruang antara baris)",
+   "disemak": "Claude, mata, helaian semakan 6 imej, 27 Nov 2026; QC 8 ciri penuh belum dibuat"
+  },
+  {
+   "model": "klein3",
+   "peranti": "cpu",
+   "id": "K5L_s42",
+   "ayat": "panjang",
+   "seed": 42,
+   "g1_ejaan": true,
+   "g2_teks_rawak": false,
+   "g3_cacat": false,
+   "teras": {
+    "huruf_tangan_tebal_garis_dasar_melantun": false,
+    "blok_rapat_sama_lebar": true,
+    "baris_bertaut": false
+   },
+   "lulus": false,
+   "sebab": "Ejaan betul dan nampak tulisan tangan (kapur), tetapi garis dasar hampir rata dan baris tidak bertaut (ada ruang antara baris)",
+   "disemak": "Claude, mata, helaian semakan 6 imej, 27 Nov 2026; QC 8 ciri penuh belum dibuat"
+  },
+  {
+   "model": "klein3",
+   "peranti": "cpu",
+   "id": "K5L_s7",
+   "ayat": "panjang",
+   "seed": 7,
+   "g1_ejaan": true,
+   "g2_teks_rawak": false,
+   "g3_cacat": false,
+   "teras": {
+    "huruf_tangan_tebal_garis_dasar_melantun": false,
+    "blok_rapat_sama_lebar": true,
+    "baris_bertaut": false
+   },
+   "lulus": false,
+   "sebab": "Ejaan betul dan nampak tulisan tangan (kapur), tetapi garis dasar hampir rata dan baris tidak bertaut (ada ruang antara baris)",
+   "disemak": "Claude, mata, helaian semakan 6 imej, 27 Nov 2026; QC 8 ciri penuh belum dibuat"
+  }
+ ]
+}

@@ -1,0 +1,48 @@
+{
+ "versi": "SK06 v1.4 (27 Nov 2026)",
+ "raw": "zturbo_K42h_s7_HP_warna.png",
+ "style": "S3",
+ "palet": "kad K11 HP",
+ "bg": "#0a0605",
+ "fills": [
+  "#dbdbdb"
+ ],
+ "layers": 1,
+ "ink_px": [
+  3313973
+ ],
+ "sizes": {
+  "18x24": [
+   5400,
+   7200
+  ]
+ },
+ "tekstur": {
+  "kad": "K42",
+  "teks": "grunge retak kasar",
+  "jenis": "none",
+  "kuat": 0.0,
+  "tidak_dibuat": [
+   "grunge retak kasar"
+  ]
+ },
+ "amaran": [
+  "tekstur kad 'grunge retak kasar' belum ada jenisnya dalam SK06: tidak dibuat"
+ ],
+ "tepi": {
+  "sasaran": {
+   "sisi": 8.0,
+   "atas_bawah": 8.0,
+   "sumber": "kad"
+  },
+  "hasil": {
+   "18x24": {
+    "kiri": 12.8,
+    "kanan": 12.8,
+    "atas": 8.0,
+    "bawah": 8.0
+   }
+  },
+  "dakwat_min_pct": 10.67
+ }
+}

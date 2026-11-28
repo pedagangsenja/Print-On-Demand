@@ -388,5 +388,95 @@
   "selepas": "5/15",
   "keputusan": "menang",
   "nota": "Nama calon sama, tiga ayat berlainan dalam tiga sesi. Dinilai ikut ayat (28 Nov 2026, sesi hab): versi lucid-galileo ('The image shows exactly these N words ... every other area is plain empty black') K16C/K17Z 1/5 -> 2/5 tiada kelas baharu = MENANG, kini aturan 3.5 r2; versi nifty-lovelace K7M/K8G 0 -> 2 tiada kelas baharu; versi sleepy-edison K9B 1/3 -> 1/3 + hiasan_lebih = kalah. Gabungan nama sahaja (2/15 -> 5/15 + hiasan_lebih) tidak sah kerana ayat berbeza."
+ },
+ {
+  "tarikh": "2026-11-27",
+  "rev_dari": "r1",
+  "rev_ke": "r1",
+  "model": "zturbo",
+  "ubahan": "tukar_peranan",
+  "kelas": [
+   "ejaan"
+  ],
+  "design": "K41g",
+  "sebelum": "0/3",
+  "selepas": "0/3",
+  "keputusan": "kalah",
+  "nota": "Kitaran QC pusingan 1 (larian v1.2 kedua, raw/v12e-cpu-p1): FEWER utama -> sokongan, EXCUSES sokongan -> utama. 'FEWER' tetap jadi FERER / FENER / FEHER (sama seperti pusingan 0). Dibuang"
+ },
+ {
+  "tarikh": "2026-11-27",
+  "rev_dari": "r1",
+  "rev_ke": "r1",
+  "model": "zturbo",
+  "ubahan": "had_positif",
+  "kelas": [
+   "rawak"
+  ],
+  "design": "K43i",
+  "sebelum": "0/3",
+  "selepas": "0/3",
+  "keputusan": "kalah",
+  "nota": "Kitaran QC pusingan 1: tambah 'Each word ends cleanly with its last letter, followed only by empty black space.' Titik selepas setiap perkataan masih 3/3. Dibuang"
+ },
+ {
+  "tarikh": "2026-11-27",
+  "rev_dari": "r1",
+  "rev_ke": "r1",
+  "model": "zturbo",
+  "ubahan": "huruf_besar",
+  "kelas": [
+   "ejaan"
+  ],
+  "design": "K41g",
+  "sebelum": "-",
+  "selepas": "-",
+  "keputusan": "tidak berkenaan",
+  "nota": "Baris FEWER sudah huruf besar dalam kad K10; tiada ubahan untuk dicuba"
+ },
+ {
+  "tarikh": "2026-11-27",
+  "rev_dari": "r1",
+  "rev_ke": "r1",
+  "model": "klein4b",
+  "ubahan": "huruf_besar",
+  "kelas": [
+   "ejaan"
+  ],
+  "design": "K40Q, K41g, K43i",
+  "sebelum": "-",
+  "selepas": "-",
+  "keputusan": "tidak berkenaan",
+  "nota": "Baris yang salah eja (BUILDS, FEWER, BIGGER, LOOSELY) sudah huruf besar dalam kad K9, K10, K12; pilihan kedua (tukar_peranan) diuji"
+ },
+ {
+  "tarikh": "2026-11-27",
+  "model": "klein4b",
+  "rev_dari": "r1",
+  "rev_ke": "r2",
+  "ubahan": "tukar_peranan",
+  "kelas": [
+   "ejaan"
+  ],
+  "design": "K41g, K43i",
+  "sebelum": "0/6",
+  "selepas": "2/6",
+  "keputusan": "menang",
+  "nota": "Kitaran QC pusingan 1 (raw/v12e-cpu-p1). K43i: LOOSELY utama -> sokongan, HOLD sokongan -> utama: 0/3 -> 2/3 (s7, s123 dieja betul; s42 'LOSELY'). K41g: FEWER utama -> sokongan: 0/3 -> 0/3 (FEVER / BIGIER). Ditulis balik bagi K43i sahaja (pembina.TUKAR, aturan 3.4 r2); K41g tidak. Bukti lemah: satu design, 3 seed"
+ },
+ {
+  "tarikh": "2026-11-28",
+  "model": "ernie",
+  "rev_dari": "r1",
+  "rev_ke": "r1",
+  "ubahan": "frasa_bentuk",
+  "kelas": [
+   "bentuk"
+  ],
+  "design": "K43i, K7M",
+  "sebelum": "5/5",
+  "selepas": "5/5",
+  "keputusan": "kalah",
+  "nota": "Ayat 'Letter shapes: ...' (bentuk huruf setiap peranan disebut semula) ditambah; izin jana pengguna 28 Nov 2026 (raw/v12e-cpu-p2). Ejaan 6/6 betul. K43i: huruf sedikit tebal tetapi tidak bertaut, garis lengkung tambahan 2/3. K7M: swash bawah baris akhir hilang 3/3 (ciri kad). Tidak lebih baik, ada cacat baharu. Dibuang"
  }
 ]

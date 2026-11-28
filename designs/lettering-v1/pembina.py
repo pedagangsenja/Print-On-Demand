@@ -23,8 +23,8 @@ VERSI = "v1.2-p1"
 # baris + fungsi + bahagian. Model yang belum ada baris memakai rangka am (kad.bina) dan ditanda "am".
 # rev r0 = ditulis daripada sumber sahaja, belum diuji; r1+ = sudah diuji pada imej.
 DAFTAR = {
-    "klein4b": dict(nama="FLUX.2 klein 4B", bahagian="3.4", rev="r3", tarikh="2026-11-28",
-                    status="diuji: K3H, CPU, 3 seed; r2 hiasan_kedudukan (K3K); r3 dua_kata_sebaris: K4q + K8G 2/6 -> 3/6", sumber="kad model BFL (rasmi); panduan BFL (lemah)"),
+    "klein4b": dict(nama="FLUX.2 klein 4B", bahagian="3.4", rev="r4", tarikh="2026-11-28",
+                    status="diuji: K3H, CPU, 3 seed; r2 hiasan_kedudukan (K3K); r3 dua_kata_sebaris: K4q + K8G 2/6 -> 3/6; r4 = r3 + TUKAR K43i (exciting-sagan tukar_peranan 0/3 -> 2/3)", sumber="kad model BFL (rasmi); panduan BFL (lemah)"),
     "zturbo": dict(nama="Z-Image Turbo", bahagian="3.5", rev="r2", tarikh="2026-11-28",
                    status="diuji: K3H, CPU, 3 seed; r2 had_positif menang K16C / K17Z", sumber="pasukan Z-Image di Hugging Face + pe.py (rasmi)"),
     "ernie": dict(nama="ERNIE-Image-Turbo", bahagian="3.6", rev="r3", tarikh="2026-11-28",
@@ -50,6 +50,17 @@ W, H = 768, 1024
 # menang -> r2; klein4b_frasa_bentuk kalah, dibuang. 26 Nov 2026: 'zturbo_satu_baris' pada K8G kalah, dibuang.)
 # Sesi focused-allen: calon klein4b_cara_baris (belum diuji); klein4b_hiasan_kedudukan versi focused-allen digantikan oleh versi
 # nifty-lovelace yang sudah MENANG (3.4 r2).
+# Sesi exciting-sagan:
+# (26 Nov 2026: 'zturbo_satu_baris' diuji pada K8G, tidak berjaya, dibuang.)
+# Calon semasa (27 Nov 2026, larian v1.2 kedua, kitaran QC pusingan 1):
+#   <model>_tukar_peranan: perkataan yang salah eja berulang bertukar peranan dengan baris jiran (TUKAR_UJI); ayat sama.
+#   (ernie_frasa_bentuk K43i + K7M: KALAH 5/5 -> 5/5, swash K7 hilang 3/3; dibuang 28 Nov 2026.)
+#   (zturbo_tukar_peranan K41g dan zturbo_had_positif K43i: KALAH 0/3 -> 0/3, dibuang 27 Nov 2026.)
+#   (klein4b_tukar_peranan: MENANG 0/6 -> 2/6 kerana K43i 0/3 -> 2/3; ditulis balik sebagai aturan klein 4B r2 bagi K43i
+#    sahaja, dalam TUKAR; K41g 0/3 -> 0/3 tidak ditulis.)
+# Tukar peranan yang sudah menjadi aturan model (3.15 MENANG): model -> {(kad, ayat): perkataan}.
+TUKAR = {"klein4b": {("K43", "i"): "Loosely"}}
+TUKAR_UJI = {}  # calon: {(kad, ayat): perkataan}, hidup dengan PEMBINA_UJI=<model>_tukar_peranan
 # Nama calon = <model>_<id pilihan> daripada belajar.py (KELAS), cth. zturbo_had_positif; belajar.py memutuskan menang / kalah (3.15).
 UJI = {u for u in os.environ.get("PEMBINA_UJI", "").split(",") if u}
 SATU = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"]
@@ -64,9 +75,17 @@ def cap(s):
     return s[:1].upper() + s[1:]
 
 
-def bahan(kid, aid):
+def bahan(kid, aid, model=None):
     """Lapan blok isi (3.2) bagi satu kad x satu ayat: frasa kad + baris teks dengan peranan."""
-    b, a, k = kad.BLOK[kid], kad.AYAT[aid], kad.KAD[kid]
+    b, a, k = kad.BLOK[kid], dict(kad.AYAT[aid]), kad.KAD[kid]
+    kata = TUKAR.get(model, {}).get((kid, aid)) or (
+        TUKAR_UJI.get((kid, aid)) if f"{model}_tukar_peranan" in UJI else None)
+    if kata:
+        x = [list(t) for t in a["baris"]]
+        i = next(j for j, t in enumerate(x) if t[0] == kata)
+        j = next(j for j in sorted(range(len(x)), key=lambda j: abs(j - i)) if x[j][1] != x[i][1])
+        x[i][1], x[j][1] = x[j][1], x[i][1]
+        a["baris"] = [tuple(t) for t in x]
     n, nampak, baris = len(a["baris"]), {}, []
     utama = [i for i, (_, r) in enumerate(a["baris"]) if r == "utama"]
     for i, (t, r) in enumerate(a["baris"]):
@@ -440,7 +459,7 @@ def bina(model, kid, aid):
     Model tanpa aturan sendiri (tiada dalam DAFTAR): rangka am 3.3 (kad.bina), sehingga aturannya ditulis (3.12)."""
     if model not in ATURAN:
         return kad.bina(kid, aid)
-    m = bahan(kid, aid)
+    m = bahan(kid, aid, model)
     return ATURAN[model](m), m["petikan"]
 
 
@@ -472,7 +491,7 @@ def semak(model, kid, aid, prompt=None):
     if model not in ATURAN:  # rangka am: semakan pembina v1.1
         pr, q = kad.bina(kid, aid)
         return kad.semak(prompt if prompt is not None else pr, q, kad.AYAT[aid]["ayat"])
-    m = bahan(kid, aid)
+    m = bahan(kid, aid, model)
     spec, err = m["petikan"], []
     p = prompt if prompt is not None else ATURAN[model](m)
     if model == "moss":

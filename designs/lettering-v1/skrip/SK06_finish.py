@@ -17,6 +17,8 @@
 # ruang_tepi kad). Sisi yang mengehad = nilai kad; pusat optik 0.47 hanya jika ruang atas / bawah tidak kurang
 # daripada kad. Ruang tepi diukur pada blok tulisan (topeng SK05, bintik hiasan kecil tidak dikira), sama seperti
 # SK02 / SK05. Ruang tepi hasil dicatat dalam info.json. Tanpa --kad: 76% x 78% seperti v1.
+# v1.4 (27 Nov 2026, Belajar SK, ubahan kata_tekstur, parameter): kata kad 'bintik' / 'berbintik' = jenis lusuh (worn);
+# 'tiada (rata)' = tiada tekstur. Kad K9, K10, K13 (bintik lusuh) kini bertekstur; K11 'retak kasar' masih tidak dibuat.
 # v1.3 (27 Nov 2026, Belajar SK, ubahan tekstur_marker): jenis tekstur 'marker' (tepi marker kering + butir latar)
 # dengan parameter yang diukur pada gambar upload kad (--ukur-tekstur; disimpan di kad.BLOK[k]['rujukan']['tekstur']).
 # Butir dijana pada skala rujukan (blok tulisan sama lebar), jadi rupa sama pada setiap saiz poster. Hasil diukur
@@ -47,7 +49,8 @@ import cv2
 import numpy as np
 from PIL import Image
 
-VERSI = "SK06 v1.7 (28 Nov 2026)"
+VERSI = "SK06 v1.8 (28 Nov 2026)"
+# v1.8 (28 Nov 2026, sesi hab): v1.7 + kata tekstur exciting-sagan ("berbintik", "bintik", "tiada (rata)").
 # v1.7 (28 Nov 2026, sesi hab): gabung v1.4 nifty-lovelace (tekstur_calar, K23) + v1.4-v1.6 focused-allen (titik_halus,
 # lusuh_saring_cop, nota_kurungan). Nombor versi focused-allen v1.4-v1.6 dikekalkan dalam sejarah di bawah.
 # v1.6 (Belajar SK, ubahan nota_kurungan): nota dalam kurungan pada teks tekstur kad diabaikan (K14 'tiada (vektor rata)' = tiada).
@@ -67,10 +70,10 @@ FIT_W, FIT_H = 0.76, 0.78   # lockup muat dalam 76% lebar / 78% tinggi kanvas
 CENTER_Y = 0.47   # pusat optik sedikit di atas tengah
 
 # Tekstur kad (teks bebas dalam kad.py) -> jenis prosedur. Turutan = keutamaan. Kekuatan: "halus" 0.6, lain 1.0.
-TEKSTUR_KAD = [("kapur", "chalk"), ("lusuh", "worn"), ("grunge", "worn"), ("butir", "grain"), ("grain", "grain")]
+TEKSTUR_KAD = [("kapur", "chalk"), ("lusuh", "worn"), ("grunge", "worn"), ("bintik", "worn"), ("butir", "grain"), ("grain", "grain")]
 KUAT_KAD = {"halus": 0.6, "sederhana": 1.0}
 SOKONG = ("tiada", "kapur", "lusuh", "grunge", "butir", "grain", "halus", "sederhana", "cetakan", "berus kering",
-          "saring", "cop kering")   # v1.5: lusuh cetakan saring (K11), lusuh cop kering (K12) = jenis worn
+          "saring", "cop kering", "berbintik", "bintik")   # v1.5: lusuh cetakan saring (K11), lusuh cop kering (K12) = jenis worn
 
 
 def tekstur_kad(teks):
