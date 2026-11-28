@@ -1,0 +1,205 @@
+{
+ "Anton": {
+  "src": "google",
+  "lic": "OFL-1.1",
+  "risk": "selamat",
+  "url": "https://fonts.google.com/specimen/Anton",
+  "lic_url": "https://github.com/google/fonts/tree/main/ofl/anton"
+ },
+ "League Gothic": {
+  "src": "google",
+  "lic": "OFL-1.1",
+  "risk": "selamat",
+  "url": "https://fonts.google.com/specimen/League+Gothic",
+  "lic_url": "https://github.com/google/fonts/tree/main/ofl/leaguegothic"
+ },
+ "Bebas Neue": {
+  "src": "google",
+  "lic": "OFL-1.1",
+  "risk": "selamat",
+  "url": "https://fonts.google.com/specimen/Bebas+Neue",
+  "lic_url": "https://github.com/google/fonts/tree/main/ofl/bebasneue"
+ },
+ "Archivo Black": {
+  "src": "google",
+  "lic": "OFL-1.1",
+  "risk": "selamat",
+  "url": "https://fonts.google.com/specimen/Archivo+Black",
+  "lic_url": "https://github.com/google/fonts/tree/main/ofl/archivoblack"
+ },
+ "Dela Gothic One": {
+  "src": "google",
+  "lic": "OFL-1.1",
+  "risk": "selamat",
+  "url": "https://fonts.google.com/specimen/Dela+Gothic+One",
+  "lic_url": "https://github.com/google/fonts/tree/main/ofl/delagothicone"
+ },
+ "Bowlby One": {
+  "src": "google",
+  "lic": "OFL-1.1",
+  "risk": "selamat",
+  "url": "https://fonts.google.com/specimen/Bowlby+One",
+  "lic_url": "https://github.com/google/fonts/tree/main/ofl/bowlbyone"
+ },
+ "Titan One": {
+  "src": "google",
+  "lic": "OFL-1.1",
+  "risk": "selamat",
+  "url": "https://fonts.google.com/specimen/Titan+One",
+  "lic_url": "https://github.com/google/fonts/tree/main/ofl/titanone"
+ },
+ "Oswald": {
+  "src": "google",
+  "lic": "OFL-1.1",
+  "risk": "selamat",
+  "url": "https://fonts.google.com/specimen/Oswald",
+  "lic_url": "https://github.com/google/fonts/tree/main/ofl/oswald"
+ },
+ "Alfa Slab One": {
+  "src": "google",
+  "lic": "OFL-1.1",
+  "risk": "selamat",
+  "url": "https://fonts.google.com/specimen/Alfa+Slab+One",
+  "lic_url": "https://github.com/google/fonts/tree/main/ofl/alfaslabone"
+ },
+ "Bevan": {
+  "src": "google",
+  "lic": "OFL-1.1",
+  "risk": "selamat",
+  "url": "https://fonts.google.com/specimen/Bevan",
+  "lic_url": "https://github.com/google/fonts/tree/main/ofl/bevan"
+ },
+ "Graduate": {
+  "src": "google",
+  "lic": "OFL-1.1",
+  "risk": "selamat",
+  "url": "https://fonts.google.com/specimen/Graduate",
+  "lic_url": "https://github.com/google/fonts/tree/main/ofl/graduate"
+ },
+ "Bungee Inline": {
+  "src": "google",
+  "lic": "OFL-1.1",
+  "risk": "selamat",
+  "url": "https://fonts.google.com/specimen/Bungee+Inline",
+  "lic_url": "https://github.com/google/fonts/tree/main/ofl/bungeeinline"
+ },
+ "Pacifico": {
+  "src": "google",
+  "lic": "OFL-1.1",
+  "risk": "selamat",
+  "url": "https://fonts.google.com/specimen/Pacifico",
+  "lic_url": "https://github.com/google/fonts/tree/main/ofl/pacifico"
+ },
+ "Lobster": {
+  "src": "google",
+  "lic": "OFL-1.1",
+  "risk": "selamat",
+  "url": "https://fonts.google.com/specimen/Lobster",
+  "lic_url": "https://github.com/google/fonts/tree/main/ofl/lobster"
+ },
+ "Kaushan Script": {
+  "src": "google",
+  "lic": "OFL-1.1",
+  "risk": "selamat",
+  "url": "https://fonts.google.com/specimen/Kaushan+Script",
+  "lic_url": "https://github.com/google/fonts/tree/main/ofl/kaushanscript"
+ },
+ "Dancing Script": {
+  "src": "google",
+  "lic": "OFL-1.1",
+  "risk": "selamat",
+  "url": "https://fonts.google.com/specimen/Dancing+Script",
+  "lic_url": "https://github.com/google/fonts/tree/main/ofl/dancingscript"
+ },
+ "Satisfy": {
+  "src": "google",
+  "lic": "Apache-2.0",
+  "risk": "selamat",
+  "url": "https://fonts.google.com/specimen/Satisfy",
+  "lic_url": "https://github.com/google/fonts/tree/main/apache/satisfy"
+ },
+ "Sacramento": {
+  "src": "google",
+  "lic": "OFL-1.1",
+  "risk": "selamat",
+  "url": "https://fonts.google.com/specimen/Sacramento",
+  "lic_url": "https://github.com/google/fonts/tree/main/ofl/sacramento"
+ },
+ "Knewave": {
+  "src": "google",
+  "lic": "OFL-1.1",
+  "risk": "selamat",
+  "url": "https://fonts.google.com/specimen/Knewave",
+  "lic_url": "https://github.com/google/fonts/tree/main/ofl/knewave"
+ },
+ "Permanent Marker": {
+  "src": "google",
+  "lic": "Apache-2.0",
+  "risk": "selamat",
+  "url": "https://fonts.google.com/specimen/Permanent+Marker",
+  "lic_url": "https://github.com/google/fonts/tree/main/apache/permanentmarker"
+ },
+ "Rock Salt": {
+  "src": "google",
+  "lic": "Apache-2.0",
+  "risk": "selamat",
+  "url": "https://fonts.google.com/specimen/Rock+Salt",
+  "lic_url": "https://github.com/google/fonts/tree/main/apache/rocksalt"
+ },
+ "Chewy": {
+  "src": "google",
+  "lic": "Apache-2.0",
+  "risk": "selamat",
+  "url": "https://fonts.google.com/specimen/Chewy",
+  "lic_url": "https://github.com/google/fonts/tree/main/apache/chewy"
+ },
+ "Amatic SC": {
+  "src": "google",
+  "lic": "OFL-1.1",
+  "risk": "selamat",
+  "url": "https://fonts.google.com/specimen/Amatic+SC",
+  "lic_url": "https://github.com/google/fonts/tree/main/ofl/amaticsc"
+ },
+ "Rubik Dirt": {
+  "src": "google",
+  "lic": "OFL-1.1",
+  "risk": "selamat",
+  "url": "https://fonts.google.com/specimen/Rubik+Dirt",
+  "lic_url": "https://github.com/google/fonts/tree/main/ofl/rubikdirt"
+ },
+ "Rye": {
+  "src": "google",
+  "lic": "OFL-1.1",
+  "risk": "selamat",
+  "url": "https://fonts.google.com/specimen/Rye",
+  "lic_url": "https://github.com/google/fonts/tree/main/ofl/rye"
+ },
+ "Sancreek": {
+  "src": "google",
+  "lic": "OFL-1.1",
+  "risk": "selamat",
+  "url": "https://fonts.google.com/specimen/Sancreek",
+  "lic_url": "https://github.com/google/fonts/tree/main/ofl/sancreek"
+ },
+ "Roboto Slab": {
+  "src": "google",
+  "lic": "Apache-2.0",
+  "risk": "selamat",
+  "url": "https://fonts.google.com/specimen/Roboto+Slab",
+  "lic_url": "https://github.com/google/fonts/tree/main/apache/robotoslab"
+ },
+ "Berkshire Swash": {
+  "src": "google",
+  "lic": "OFL-1.1",
+  "risk": "selamat",
+  "url": "https://fonts.google.com/specimen/Berkshire+Swash",
+  "lic_url": "https://github.com/google/fonts/tree/main/ofl/berkshireswash"
+ },
+ "Playball": {
+  "src": "google",
+  "lic": "OFL-1.1",
+  "risk": "selamat",
+  "url": "https://fonts.google.com/specimen/Playball",
+  "lic_url": "https://github.com/google/fonts/tree/main/ofl/playball"
+ }
+}

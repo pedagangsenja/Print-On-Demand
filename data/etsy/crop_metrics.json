@@ -1,0 +1,2342 @@
+[
+ {
+  "id": "1-01",
+  "gambar": 1,
+  "fail_asal": "IMG_5856.jpg",
+  "baris": 1,
+  "lajur": 1,
+  "crop": "etsy-1-01.jpg",
+  "kotak": [
+   0,
+   23,
+   252,
+   305
+  ],
+  "lebar_px": 231,
+  "tinggi_px": 258,
+  "nisbah": 0.9,
+  "dakwat_pct": 35.1
+ },
+ {
+  "id": "1-02",
+  "gambar": 1,
+  "fail_asal": "IMG_5856.jpg",
+  "baris": 1,
+  "lajur": 2,
+  "crop": "etsy-1-02.jpg",
+  "kotak": [
+   290,
+   19,
+   562,
+   309
+  ],
+  "lebar_px": 248,
+  "tinggi_px": 266,
+  "nisbah": 0.93,
+  "dakwat_pct": 47.9
+ },
+ {
+  "id": "1-03",
+  "gambar": 1,
+  "fail_asal": "IMG_5856.jpg",
+  "baris": 1,
+  "lajur": 3,
+  "crop": "etsy-1-03.jpg",
+  "kotak": [
+   588,
+   27,
+   860,
+   301
+  ],
+  "lebar_px": 248,
+  "tinggi_px": 250,
+  "nisbah": 0.99,
+  "dakwat_pct": 43.2
+ },
+ {
+  "id": "1-04",
+  "gambar": 1,
+  "fail_asal": "IMG_5856.jpg",
+  "baris": 1,
+  "lajur": 4,
+  "crop": "etsy-1-04.jpg",
+  "kotak": [
+   894,
+   20,
+   1155,
+   308
+  ],
+  "lebar_px": 237,
+  "tinggi_px": 264,
+  "nisbah": 0.9,
+  "dakwat_pct": 49.0
+ },
+ {
+  "id": "1-05",
+  "gambar": 1,
+  "fail_asal": "IMG_5856.jpg",
+  "baris": 2,
+  "lajur": 1,
+  "crop": "etsy-1-05.jpg",
+  "kotak": [
+   0,
+   358,
+   256,
+   650
+  ],
+  "lebar_px": 238,
+  "tinggi_px": 268,
+  "nisbah": 0.89,
+  "dakwat_pct": 39.2
+ },
+ {
+  "id": "1-06",
+  "gambar": 1,
+  "fail_asal": "IMG_5856.jpg",
+  "baris": 2,
+  "lajur": 2,
+  "crop": "etsy-1-06.jpg",
+  "kotak": [
+   301,
+   356,
+   550,
+   651
+  ],
+  "lebar_px": 225,
+  "tinggi_px": 271,
+  "nisbah": 0.83,
+  "dakwat_pct": 44.3
+ },
+ {
+  "id": "1-07",
+  "gambar": 1,
+  "fail_asal": "IMG_5856.jpg",
+  "baris": 2,
+  "lajur": 3,
+  "crop": "etsy-1-07.jpg",
+  "kotak": [
+   586,
+   352,
+   863,
+   654
+  ],
+  "lebar_px": 253,
+  "tinggi_px": 278,
+  "nisbah": 0.91,
+  "dakwat_pct": 36.5
+ },
+ {
+  "id": "1-08",
+  "gambar": 1,
+  "fail_asal": "IMG_5856.jpg",
+  "baris": 2,
+  "lajur": 4,
+  "crop": "etsy-1-08.jpg",
+  "kotak": [
+   899,
+   352,
+   1150,
+   655
+  ],
+  "lebar_px": 227,
+  "tinggi_px": 279,
+  "nisbah": 0.81,
+  "dakwat_pct": 40.9
+ },
+ {
+  "id": "1-09",
+  "gambar": 1,
+  "fail_asal": "IMG_5856.jpg",
+  "baris": 3,
+  "lajur": 1,
+  "crop": "etsy-1-09.jpg",
+  "kotak": [
+   0,
+   694,
+   269,
+   982
+  ],
+  "lebar_px": 257,
+  "tinggi_px": 264,
+  "nisbah": 0.97,
+  "dakwat_pct": 37.4
+ },
+ {
+  "id": "1-10",
+  "gambar": 1,
+  "fail_asal": "IMG_5856.jpg",
+  "baris": 3,
+  "lajur": 2,
+  "crop": "etsy-1-10.jpg",
+  "kotak": [
+   296,
+   678,
+   556,
+   998
+  ],
+  "lebar_px": 236,
+  "tinggi_px": 296,
+  "nisbah": 0.8,
+  "dakwat_pct": 37.9
+ },
+ {
+  "id": "1-11",
+  "gambar": 1,
+  "fail_asal": "IMG_5856.jpg",
+  "baris": 3,
+  "lajur": 3,
+  "crop": "etsy-1-11.jpg",
+  "kotak": [
+   599,
+   684,
+   849,
+   992
+  ],
+  "lebar_px": 226,
+  "tinggi_px": 284,
+  "nisbah": 0.8,
+  "dakwat_pct": 37.9
+ },
+ {
+  "id": "1-12",
+  "gambar": 1,
+  "fail_asal": "IMG_5856.jpg",
+  "baris": 3,
+  "lajur": 4,
+  "crop": "etsy-1-12.jpg",
+  "kotak": [
+   896,
+   685,
+   1153,
+   991
+  ],
+  "lebar_px": 233,
+  "tinggi_px": 282,
+  "nisbah": 0.83,
+  "dakwat_pct": 41.5
+ },
+ {
+  "id": "1-13",
+  "gambar": 1,
+  "fail_asal": "IMG_5856.jpg",
+  "baris": 4,
+  "lajur": 1,
+  "crop": "etsy-1-13.jpg",
+  "kotak": [
+   0,
+   1038,
+   258,
+   1300
+  ],
+  "lebar_px": 243,
+  "tinggi_px": 238,
+  "nisbah": 1.02,
+  "dakwat_pct": 46.2
+ },
+ {
+  "id": "1-14",
+  "gambar": 1,
+  "fail_asal": "IMG_5856.jpg",
+  "baris": 4,
+  "lajur": 2,
+  "crop": "etsy-1-14.jpg",
+  "kotak": [
+   299,
+   1020,
+   552,
+   1319
+  ],
+  "lebar_px": 229,
+  "tinggi_px": 275,
+  "nisbah": 0.83,
+  "dakwat_pct": 36.1
+ },
+ {
+  "id": "1-15",
+  "gambar": 1,
+  "fail_asal": "IMG_5856.jpg",
+  "baris": 4,
+  "lajur": 3,
+  "crop": "etsy-1-15.jpg",
+  "kotak": [
+   593,
+   1013,
+   855,
+   1325
+  ],
+  "lebar_px": 238,
+  "tinggi_px": 288,
+  "nisbah": 0.83,
+  "dakwat_pct": 42.5
+ },
+ {
+  "id": "1-16",
+  "gambar": 1,
+  "fail_asal": "IMG_5856.jpg",
+  "baris": 4,
+  "lajur": 4,
+  "crop": "etsy-1-16.jpg",
+  "kotak": [
+   882,
+   1039,
+   1167,
+   1300
+  ],
+  "lebar_px": 261,
+  "tinggi_px": 237,
+  "nisbah": 1.1,
+  "dakwat_pct": 39.9
+ },
+ {
+  "id": "3-01",
+  "gambar": 3,
+  "fail_asal": "IMG_5858.jpg",
+  "baris": 1,
+  "lajur": 1,
+  "crop": "etsy-3-01.jpg",
+  "kotak": [
+   31,
+   27,
+   276,
+   320
+  ],
+  "lebar_px": 221,
+  "tinggi_px": 269,
+  "nisbah": 0.82,
+  "dakwat_pct": 40.0
+ },
+ {
+  "id": "3-02",
+  "gambar": 3,
+  "fail_asal": "IMG_5858.jpg",
+  "baris": 1,
+  "lajur": 2,
+  "crop": "etsy-3-02.jpg",
+  "kotak": [
+   306,
+   28,
+   583,
+   319
+  ],
+  "lebar_px": 253,
+  "tinggi_px": 267,
+  "nisbah": 0.95,
+  "dakwat_pct": 41.1
+ },
+ {
+  "id": "3-03",
+  "gambar": 3,
+  "fail_asal": "IMG_5858.jpg",
+  "baris": 1,
+  "lajur": 3,
+  "crop": "etsy-3-03.jpg",
+  "kotak": [
+   613,
+   32,
+   887,
+   293
+  ],
+  "lebar_px": 250,
+  "tinggi_px": 237,
+  "nisbah": 1.05,
+  "dakwat_pct": 43.7
+ },
+ {
+  "id": "3-04",
+  "gambar": 3,
+  "fail_asal": "IMG_5858.jpg",
+  "baris": 1,
+  "lajur": 4,
+  "crop": "etsy-3-04.jpg",
+  "kotak": [
+   902,
+   44,
+   1170,
+   281
+  ],
+  "lebar_px": 256,
+  "tinggi_px": 213,
+  "nisbah": 1.2,
+  "dakwat_pct": 39.8
+ },
+ {
+  "id": "3-05",
+  "gambar": 3,
+  "fail_asal": "IMG_5858.jpg",
+  "baris": 2,
+  "lajur": 1,
+  "crop": "etsy-3-05.jpg",
+  "kotak": [
+   25,
+   349,
+   283,
+   626
+  ],
+  "lebar_px": 234,
+  "tinggi_px": 253,
+  "nisbah": 0.92,
+  "dakwat_pct": 43.5
+ },
+ {
+  "id": "3-06",
+  "gambar": 3,
+  "fail_asal": "IMG_5858.jpg",
+  "baris": 2,
+  "lajur": 2,
+  "crop": "etsy-3-06.jpg",
+  "kotak": [
+   314,
+   343,
+   575,
+   632
+  ],
+  "lebar_px": 237,
+  "tinggi_px": 265,
+  "nisbah": 0.89,
+  "dakwat_pct": 42.8
+ },
+ {
+  "id": "3-07",
+  "gambar": 3,
+  "fail_asal": "IMG_5858.jpg",
+  "baris": 2,
+  "lajur": 3,
+  "crop": "etsy-3-07.jpg",
+  "kotak": [
+   616,
+   368,
+   883,
+   620
+  ],
+  "lebar_px": 243,
+  "tinggi_px": 228,
+  "nisbah": 1.07,
+  "dakwat_pct": 43.8
+ },
+ {
+  "id": "3-08",
+  "gambar": 3,
+  "fail_asal": "IMG_5858.jpg",
+  "baris": 2,
+  "lajur": 4,
+  "crop": "etsy-3-08.jpg",
+  "kotak": [
+   923,
+   344,
+   1160,
+   645
+  ],
+  "lebar_px": 213,
+  "tinggi_px": 277,
+  "nisbah": 0.77,
+  "dakwat_pct": 36.0
+ },
+ {
+  "id": "3-09",
+  "gambar": 3,
+  "fail_asal": "IMG_5858.jpg",
+  "baris": 3,
+  "lajur": 1,
+  "crop": "etsy-3-09.jpg",
+  "kotak": [
+   19,
+   668,
+   287,
+   955
+  ],
+  "lebar_px": 244,
+  "tinggi_px": 263,
+  "nisbah": 0.93,
+  "dakwat_pct": 36.3
+ },
+ {
+  "id": "3-10",
+  "gambar": 3,
+  "fail_asal": "IMG_5858.jpg",
+  "baris": 3,
+  "lajur": 2,
+  "crop": "etsy-3-10.jpg",
+  "kotak": [
+   314,
+   660,
+   574,
+   963
+  ],
+  "lebar_px": 236,
+  "tinggi_px": 279,
+  "nisbah": 0.85,
+  "dakwat_pct": 35.0
+ },
+ {
+  "id": "3-11",
+  "gambar": 3,
+  "fail_asal": "IMG_5858.jpg",
+  "baris": 3,
+  "lajur": 3,
+  "crop": "etsy-3-11.jpg",
+  "kotak": [
+   618,
+   664,
+   887,
+   960
+  ],
+  "lebar_px": 245,
+  "tinggi_px": 272,
+  "nisbah": 0.9,
+  "dakwat_pct": 39.9
+ },
+ {
+  "id": "3-12",
+  "gambar": 3,
+  "fail_asal": "IMG_5858.jpg",
+  "baris": 3,
+  "lajur": 4,
+  "crop": "etsy-3-12.jpg",
+  "kotak": [
+   929,
+   674,
+   1170,
+   949
+  ],
+  "lebar_px": 222,
+  "tinggi_px": 251,
+  "nisbah": 0.88,
+  "dakwat_pct": 36.3
+ },
+ {
+  "id": "3-13",
+  "gambar": 3,
+  "fail_asal": "IMG_5858.jpg",
+  "baris": 4,
+  "lajur": 1,
+  "crop": "etsy-3-13.jpg",
+  "kotak": [
+   21,
+   1010,
+   285,
+   1278
+  ],
+  "lebar_px": 240,
+  "tinggi_px": 244,
+  "nisbah": 0.98,
+  "dakwat_pct": 42.0
+ },
+ {
+  "id": "3-14",
+  "gambar": 3,
+  "fail_asal": "IMG_5858.jpg",
+  "baris": 4,
+  "lajur": 2,
+  "crop": "etsy-3-14.jpg",
+  "kotak": [
+   308,
+   1009,
+   580,
+   1278
+  ],
+  "lebar_px": 248,
+  "tinggi_px": 245,
+  "nisbah": 1.01,
+  "dakwat_pct": 38.4
+ },
+ {
+  "id": "3-15",
+  "gambar": 3,
+  "fail_asal": "IMG_5858.jpg",
+  "baris": 4,
+  "lajur": 3,
+  "crop": "etsy-3-15.jpg",
+  "kotak": [
+   628,
+   993,
+   876,
+   1295
+  ],
+  "lebar_px": 224,
+  "tinggi_px": 278,
+  "nisbah": 0.81,
+  "dakwat_pct": 33.1
+ },
+ {
+  "id": "3-16",
+  "gambar": 3,
+  "fail_asal": "IMG_5858.jpg",
+  "baris": 4,
+  "lajur": 4,
+  "crop": "etsy-3-16.jpg",
+  "kotak": [
+   925,
+   1000,
+   1170,
+   1287
+  ],
+  "lebar_px": 230,
+  "tinggi_px": 263,
+  "nisbah": 0.87,
+  "dakwat_pct": 37.1
+ },
+ {
+  "id": "4-01",
+  "gambar": 4,
+  "fail_asal": "IMG_5857.jpg",
+  "baris": 1,
+  "lajur": 1,
+  "crop": "etsy-4-01.jpg",
+  "kotak": [
+   10,
+   28,
+   277,
+   299
+  ],
+  "lebar_px": 243,
+  "tinggi_px": 247,
+  "nisbah": 0.98,
+  "dakwat_pct": 30.4
+ },
+ {
+  "id": "4-02",
+  "gambar": 4,
+  "fail_asal": "IMG_5857.jpg",
+  "baris": 1,
+  "lajur": 2,
+  "crop": "etsy-4-02.jpg",
+  "kotak": [
+   304,
+   30,
+   580,
+   297
+  ],
+  "lebar_px": 252,
+  "tinggi_px": 243,
+  "nisbah": 1.04,
+  "dakwat_pct": 39.0
+ },
+ {
+  "id": "4-03",
+  "gambar": 4,
+  "fail_asal": "IMG_5857.jpg",
+  "baris": 1,
+  "lajur": 3,
+  "crop": "etsy-4-03.jpg",
+  "kotak": [
+   608,
+   27,
+   861,
+   315
+  ],
+  "lebar_px": 229,
+  "tinggi_px": 264,
+  "nisbah": 0.87,
+  "dakwat_pct": 40.7
+ },
+ {
+  "id": "4-04",
+  "gambar": 4,
+  "fail_asal": "IMG_5857.jpg",
+  "baris": 1,
+  "lajur": 4,
+  "crop": "etsy-4-04.jpg",
+  "kotak": [
+   892,
+   38,
+   1159,
+   304
+  ],
+  "lebar_px": 243,
+  "tinggi_px": 242,
+  "nisbah": 1.0,
+  "dakwat_pct": 42.8
+ },
+ {
+  "id": "4-05",
+  "gambar": 4,
+  "fail_asal": "IMG_5857.jpg",
+  "baris": 2,
+  "lajur": 1,
+  "crop": "etsy-4-05.jpg",
+  "kotak": [
+   10,
+   345,
+   277,
+   638
+  ],
+  "lebar_px": 243,
+  "tinggi_px": 269,
+  "nisbah": 0.9,
+  "dakwat_pct": 29.5
+ },
+ {
+  "id": "4-06",
+  "gambar": 4,
+  "fail_asal": "IMG_5857.jpg",
+  "baris": 2,
+  "lajur": 2,
+  "crop": "etsy-4-06.jpg",
+  "kotak": [
+   305,
+   345,
+   581,
+   638
+  ],
+  "lebar_px": 252,
+  "tinggi_px": 269,
+  "nisbah": 0.94,
+  "dakwat_pct": 42.4
+ },
+ {
+  "id": "4-07",
+  "gambar": 4,
+  "fail_asal": "IMG_5857.jpg",
+  "baris": 2,
+  "lajur": 3,
+  "crop": "etsy-4-07.jpg",
+  "kotak": [
+   608,
+   346,
+   878,
+   618
+  ],
+  "lebar_px": 246,
+  "tinggi_px": 248,
+  "nisbah": 0.99,
+  "dakwat_pct": 24.5
+ },
+ {
+  "id": "4-08",
+  "gambar": 4,
+  "fail_asal": "IMG_5857.jpg",
+  "baris": 2,
+  "lajur": 4,
+  "crop": "etsy-4-08.jpg",
+  "kotak": [
+   901,
+   336,
+   1165,
+   629
+  ],
+  "lebar_px": 240,
+  "tinggi_px": 269,
+  "nisbah": 0.89,
+  "dakwat_pct": 38.5
+ },
+ {
+  "id": "4-09",
+  "gambar": 4,
+  "fail_asal": "IMG_5857.jpg",
+  "baris": 3,
+  "lajur": 1,
+  "crop": "etsy-4-09.jpg",
+  "kotak": [
+   6,
+   677,
+   282,
+   953
+  ],
+  "lebar_px": 252,
+  "tinggi_px": 252,
+  "nisbah": 1.0,
+  "dakwat_pct": 27.3
+ },
+ {
+  "id": "4-10",
+  "gambar": 4,
+  "fail_asal": "IMG_5857.jpg",
+  "baris": 3,
+  "lajur": 2,
+  "crop": "etsy-4-10.jpg",
+  "kotak": [
+   312,
+   672,
+   573,
+   958
+  ],
+  "lebar_px": 237,
+  "tinggi_px": 262,
+  "nisbah": 0.9,
+  "dakwat_pct": 36.1
+ },
+ {
+  "id": "4-11",
+  "gambar": 4,
+  "fail_asal": "IMG_5857.jpg",
+  "baris": 3,
+  "lajur": 3,
+  "crop": "etsy-4-11.jpg",
+  "kotak": [
+   618,
+   650,
+   858,
+   951
+  ],
+  "lebar_px": 216,
+  "tinggi_px": 277,
+  "nisbah": 0.78,
+  "dakwat_pct": 37.6
+ },
+ {
+  "id": "4-12",
+  "gambar": 4,
+  "fail_asal": "IMG_5857.jpg",
+  "baris": 3,
+  "lajur": 4,
+  "crop": "etsy-4-12.jpg",
+  "kotak": [
+   908,
+   652,
+   1165,
+   949
+  ],
+  "lebar_px": 233,
+  "tinggi_px": 273,
+  "nisbah": 0.85,
+  "dakwat_pct": 42.0
+ },
+ {
+  "id": "4-13",
+  "gambar": 4,
+  "fail_asal": "IMG_5857.jpg",
+  "baris": 4,
+  "lajur": 1,
+  "crop": "etsy-4-13.jpg",
+  "kotak": [
+   12,
+   988,
+   276,
+   1282
+  ],
+  "lebar_px": 240,
+  "tinggi_px": 270,
+  "nisbah": 0.89,
+  "dakwat_pct": 33.2
+ },
+ {
+  "id": "4-14",
+  "gambar": 4,
+  "fail_asal": "IMG_5857.jpg",
+  "baris": 4,
+  "lajur": 2,
+  "crop": "etsy-4-14.jpg",
+  "kotak": [
+   308,
+   988,
+   577,
+   1282
+  ],
+  "lebar_px": 245,
+  "tinggi_px": 270,
+  "nisbah": 0.91,
+  "dakwat_pct": 44.2
+ },
+ {
+  "id": "4-15",
+  "gambar": 4,
+  "fail_asal": "IMG_5857.jpg",
+  "baris": 4,
+  "lajur": 3,
+  "crop": "etsy-4-15.jpg",
+  "kotak": [
+   611,
+   957,
+   865,
+   1269
+  ],
+  "lebar_px": 230,
+  "tinggi_px": 288,
+  "nisbah": 0.8,
+  "dakwat_pct": 38.5
+ },
+ {
+  "id": "4-16",
+  "gambar": 4,
+  "fail_asal": "IMG_5857.jpg",
+  "baris": 4,
+  "lajur": 4,
+  "crop": "etsy-4-16.jpg",
+  "kotak": [
+   903,
+   964,
+   1170,
+   1263
+  ],
+  "lebar_px": 243,
+  "tinggi_px": 275,
+  "nisbah": 0.88,
+  "dakwat_pct": 42.4
+ },
+ {
+  "id": "7-01",
+  "gambar": 7,
+  "fail_asal": "IMG_5862.jpg",
+  "baris": 1,
+  "lajur": 1,
+  "crop": "etsy-7-01.jpg",
+  "kotak": [
+   12,
+   30,
+   262,
+   328
+  ],
+  "lebar_px": 226,
+  "tinggi_px": 274,
+  "nisbah": 0.82,
+  "dakwat_pct": 42.1
+ },
+ {
+  "id": "7-02",
+  "gambar": 7,
+  "fail_asal": "IMG_5862.jpg",
+  "baris": 1,
+  "lajur": 2,
+  "crop": "etsy-7-02.jpg",
+  "kotak": [
+   301,
+   36,
+   571,
+   322
+  ],
+  "lebar_px": 246,
+  "tinggi_px": 262,
+  "nisbah": 0.94,
+  "dakwat_pct": 39.4
+ },
+ {
+  "id": "7-03",
+  "gambar": 7,
+  "fail_asal": "IMG_5862.jpg",
+  "baris": 1,
+  "lajur": 3,
+  "crop": "etsy-7-03.jpg",
+  "kotak": [
+   593,
+   57,
+   871,
+   301
+  ],
+  "lebar_px": 254,
+  "tinggi_px": 220,
+  "nisbah": 1.15,
+  "dakwat_pct": 42.9
+ },
+ {
+  "id": "7-04",
+  "gambar": 7,
+  "fail_asal": "IMG_5862.jpg",
+  "baris": 1,
+  "lajur": 4,
+  "crop": "etsy-7-04.jpg",
+  "kotak": [
+   889,
+   38,
+   1170,
+   320
+  ],
+  "lebar_px": 257,
+  "tinggi_px": 258,
+  "nisbah": 1.0,
+  "dakwat_pct": 43.1
+ },
+ {
+  "id": "7-05",
+  "gambar": 7,
+  "fail_asal": "IMG_5862.jpg",
+  "baris": 2,
+  "lajur": 1,
+  "crop": "etsy-7-05.jpg",
+  "kotak": [
+   0,
+   357,
+   275,
+   643
+  ],
+  "lebar_px": 251,
+  "tinggi_px": 262,
+  "nisbah": 0.96,
+  "dakwat_pct": 44.8
+ },
+ {
+  "id": "7-06",
+  "gambar": 7,
+  "fail_asal": "IMG_5862.jpg",
+  "baris": 2,
+  "lajur": 2,
+  "crop": "etsy-7-06.jpg",
+  "kotak": [
+   292,
+   382,
+   579,
+   617
+  ],
+  "lebar_px": 263,
+  "tinggi_px": 211,
+  "nisbah": 1.25,
+  "dakwat_pct": 37.0
+ },
+ {
+  "id": "7-07",
+  "gambar": 7,
+  "fail_asal": "IMG_5862.jpg",
+  "baris": 2,
+  "lajur": 3,
+  "crop": "etsy-7-07.jpg",
+  "kotak": [
+   593,
+   356,
+   870,
+   643
+  ],
+  "lebar_px": 253,
+  "tinggi_px": 263,
+  "nisbah": 0.96,
+  "dakwat_pct": 37.1
+ },
+ {
+  "id": "7-08",
+  "gambar": 7,
+  "fail_asal": "IMG_5862.jpg",
+  "baris": 2,
+  "lajur": 4,
+  "crop": "etsy-7-08.jpg",
+  "kotak": [
+   891,
+   374,
+   1169,
+   626
+  ],
+  "lebar_px": 254,
+  "tinggi_px": 228,
+  "nisbah": 1.11,
+  "dakwat_pct": 40.2
+ },
+ {
+  "id": "7-09",
+  "gambar": 7,
+  "fail_asal": "IMG_5862.jpg",
+  "baris": 3,
+  "lajur": 1,
+  "crop": "etsy-7-09.jpg",
+  "kotak": [
+   15,
+   688,
+   259,
+   975
+  ],
+  "lebar_px": 220,
+  "tinggi_px": 263,
+  "nisbah": 0.84,
+  "dakwat_pct": 35.7
+ },
+ {
+  "id": "7-10",
+  "gambar": 7,
+  "fail_asal": "IMG_5862.jpg",
+  "baris": 3,
+  "lajur": 2,
+  "crop": "etsy-7-10.jpg",
+  "kotak": [
+   315,
+   677,
+   556,
+   986
+  ],
+  "lebar_px": 217,
+  "tinggi_px": 285,
+  "nisbah": 0.76,
+  "dakwat_pct": 44.2
+ },
+ {
+  "id": "7-11",
+  "gambar": 7,
+  "fail_asal": "IMG_5862.jpg",
+  "baris": 3,
+  "lajur": 3,
+  "crop": "etsy-7-11.jpg",
+  "kotak": [
+   593,
+   684,
+   871,
+   979
+  ],
+  "lebar_px": 254,
+  "tinggi_px": 271,
+  "nisbah": 0.94,
+  "dakwat_pct": 38.3
+ },
+ {
+  "id": "7-12",
+  "gambar": 7,
+  "fail_asal": "IMG_5862.jpg",
+  "baris": 3,
+  "lajur": 4,
+  "crop": "etsy-7-12.jpg",
+  "kotak": [
+   890,
+   694,
+   1168,
+   969
+  ],
+  "lebar_px": 254,
+  "tinggi_px": 251,
+  "nisbah": 1.01,
+  "dakwat_pct": 37.9
+ },
+ {
+  "id": "7-13",
+  "gambar": 7,
+  "fail_asal": "IMG_5862.jpg",
+  "baris": 4,
+  "lajur": 1,
+  "crop": "etsy-7-13.jpg",
+  "kotak": [
+   0,
+   1045,
+   278,
+   1297
+  ],
+  "lebar_px": 257,
+  "tinggi_px": 228,
+  "nisbah": 1.13,
+  "dakwat_pct": 44.0
+ },
+ {
+  "id": "7-14",
+  "gambar": 7,
+  "fail_asal": "IMG_5862.jpg",
+  "baris": 4,
+  "lajur": 2,
+  "crop": "etsy-7-14.jpg",
+  "kotak": [
+   301,
+   1030,
+   569,
+   1312
+  ],
+  "lebar_px": 244,
+  "tinggi_px": 258,
+  "nisbah": 0.95,
+  "dakwat_pct": 43.6
+ },
+ {
+  "id": "7-15",
+  "gambar": 7,
+  "fail_asal": "IMG_5862.jpg",
+  "baris": 4,
+  "lajur": 3,
+  "crop": "etsy-7-15.jpg",
+  "kotak": [
+   595,
+   1029,
+   868,
+   1313
+  ],
+  "lebar_px": 249,
+  "tinggi_px": 260,
+  "nisbah": 0.96,
+  "dakwat_pct": 44.2
+ },
+ {
+  "id": "7-16",
+  "gambar": 7,
+  "fail_asal": "IMG_5862.jpg",
+  "baris": 4,
+  "lajur": 4,
+  "crop": "etsy-7-16.jpg",
+  "kotak": [
+   897,
+   1018,
+   1163,
+   1324
+  ],
+  "lebar_px": 242,
+  "tinggi_px": 282,
+  "nisbah": 0.86,
+  "dakwat_pct": 39.9
+ },
+ {
+  "id": "8-01",
+  "gambar": 8,
+  "fail_asal": "IMG_5865.jpg",
+  "baris": 1,
+  "lajur": 1,
+  "crop": "etsy-8-01.jpg",
+  "kotak": [
+   9,
+   17,
+   208,
+   237
+  ],
+  "lebar_px": 175,
+  "tinggi_px": 196,
+  "nisbah": 0.89,
+  "dakwat_pct": 42.6
+ },
+ {
+  "id": "8-02",
+  "gambar": 8,
+  "fail_asal": "IMG_5865.jpg",
+  "baris": 1,
+  "lajur": 2,
+  "crop": "etsy-8-02.jpg",
+  "kotak": [
+   231,
+   17,
+   441,
+   238
+  ],
+  "lebar_px": 186,
+  "tinggi_px": 197,
+  "nisbah": 0.94,
+  "dakwat_pct": 38.3
+ },
+ {
+  "id": "8-03",
+  "gambar": 8,
+  "fail_asal": "IMG_5865.jpg",
+  "baris": 1,
+  "lajur": 3,
+  "crop": "etsy-8-03.jpg",
+  "kotak": [
+   477,
+   3,
+   672,
+   234
+  ],
+  "lebar_px": 171,
+  "tinggi_px": 207,
+  "nisbah": 0.83,
+  "dakwat_pct": 41.0
+ },
+ {
+  "id": "8-04",
+  "gambar": 8,
+  "fail_asal": "IMG_5865.jpg",
+  "baris": 1,
+  "lajur": 4,
+  "crop": "etsy-8-04.jpg",
+  "kotak": [
+   691,
+   10,
+   898,
+   227
+  ],
+  "lebar_px": 183,
+  "tinggi_px": 193,
+  "nisbah": 0.95,
+  "dakwat_pct": 38.4
+ },
+ {
+  "id": "8-05",
+  "gambar": 8,
+  "fail_asal": "IMG_5865.jpg",
+  "baris": 1,
+  "lajur": 5,
+  "crop": "etsy-8-05.jpg",
+  "kotak": [
+   944,
+   26,
+   1150,
+   245
+  ],
+  "lebar_px": 182,
+  "tinggi_px": 195,
+  "nisbah": 0.93,
+  "dakwat_pct": 44.8
+ },
+ {
+  "id": "8-06",
+  "gambar": 8,
+  "fail_asal": "IMG_5865.jpg",
+  "baris": 2,
+  "lajur": 1,
+  "crop": "etsy-8-06.jpg",
+  "kotak": [
+   3,
+   259,
+   215,
+   489
+  ],
+  "lebar_px": 188,
+  "tinggi_px": 206,
+  "nisbah": 0.91,
+  "dakwat_pct": 38.6
+ },
+ {
+  "id": "8-07",
+  "gambar": 8,
+  "fail_asal": "IMG_5865.jpg",
+  "baris": 2,
+  "lajur": 2,
+  "crop": "etsy-8-07.jpg",
+  "kotak": [
+   230,
+   268,
+   443,
+   479
+  ],
+  "lebar_px": 189,
+  "tinggi_px": 187,
+  "nisbah": 1.01,
+  "dakwat_pct": 43.2
+ },
+ {
+  "id": "8-08",
+  "gambar": 8,
+  "fail_asal": "IMG_5865.jpg",
+  "baris": 2,
+  "lajur": 3,
+  "crop": "etsy-8-08.jpg",
+  "kotak": [
+   478,
+   273,
+   699,
+   487
+  ],
+  "lebar_px": 197,
+  "tinggi_px": 190,
+  "nisbah": 1.04,
+  "dakwat_pct": 37.4
+ },
+ {
+  "id": "8-09",
+  "gambar": 8,
+  "fail_asal": "IMG_5865.jpg",
+  "baris": 2,
+  "lajur": 4,
+  "crop": "etsy-8-09.jpg",
+  "kotak": [
+   713,
+   275,
+   921,
+   485
+  ],
+  "lebar_px": 184,
+  "tinggi_px": 186,
+  "nisbah": 0.99,
+  "dakwat_pct": 40.5
+ },
+ {
+  "id": "8-10",
+  "gambar": 8,
+  "fail_asal": "IMG_5865.jpg",
+  "baris": 2,
+  "lajur": 5,
+  "crop": "etsy-8-10.jpg",
+  "kotak": [
+   938,
+   282,
+   1156,
+   490
+  ],
+  "lebar_px": 194,
+  "tinggi_px": 184,
+  "nisbah": 1.05,
+  "dakwat_pct": 39.0
+ },
+ {
+  "id": "8-11",
+  "gambar": 8,
+  "fail_asal": "IMG_5865.jpg",
+  "baris": 3,
+  "lajur": 1,
+  "crop": "etsy-8-11.jpg",
+  "kotak": [
+   3,
+   506,
+   215,
+   730
+  ],
+  "lebar_px": 188,
+  "tinggi_px": 200,
+  "nisbah": 0.94,
+  "dakwat_pct": 44.6
+ },
+ {
+  "id": "8-12",
+  "gambar": 8,
+  "fail_asal": "IMG_5865.jpg",
+  "baris": 3,
+  "lajur": 2,
+  "crop": "etsy-8-12.jpg",
+  "kotak": [
+   230,
+   507,
+   443,
+   729
+  ],
+  "lebar_px": 189,
+  "tinggi_px": 198,
+  "nisbah": 0.95,
+  "dakwat_pct": 43.6
+ },
+ {
+  "id": "8-13",
+  "gambar": 8,
+  "fail_asal": "IMG_5865.jpg",
+  "baris": 3,
+  "lajur": 3,
+  "crop": "etsy-8-13.jpg",
+  "kotak": [
+   482,
+   518,
+   695,
+   730
+  ],
+  "lebar_px": 189,
+  "tinggi_px": 188,
+  "nisbah": 1.01,
+  "dakwat_pct": 40.6
+ },
+ {
+  "id": "8-14",
+  "gambar": 8,
+  "fail_asal": "IMG_5865.jpg",
+  "baris": 3,
+  "lajur": 4,
+  "crop": "etsy-8-14.jpg",
+  "kotak": [
+   710,
+   523,
+   923,
+   725
+  ],
+  "lebar_px": 189,
+  "tinggi_px": 178,
+  "nisbah": 1.06,
+  "dakwat_pct": 40.4
+ },
+ {
+  "id": "8-15",
+  "gambar": 8,
+  "fail_asal": "IMG_5865.jpg",
+  "baris": 3,
+  "lajur": 5,
+  "crop": "etsy-8-15.jpg",
+  "kotak": [
+   948,
+   523,
+   1146,
+   741
+  ],
+  "lebar_px": 174,
+  "tinggi_px": 194,
+  "nisbah": 0.9,
+  "dakwat_pct": 38.4
+ },
+ {
+  "id": "8-16",
+  "gambar": 8,
+  "fail_asal": "IMG_5865.jpg",
+  "baris": 4,
+  "lajur": 1,
+  "crop": "etsy-8-16.jpg",
+  "kotak": [
+   0,
+   766,
+   218,
+   958
+  ],
+  "lebar_px": 195,
+  "tinggi_px": 168,
+  "nisbah": 1.16,
+  "dakwat_pct": 38.2
+ },
+ {
+  "id": "8-17",
+  "gambar": 8,
+  "fail_asal": "IMG_5865.jpg",
+  "baris": 4,
+  "lajur": 2,
+  "crop": "etsy-8-17.jpg",
+  "kotak": [
+   239,
+   751,
+   435,
+   974
+  ],
+  "lebar_px": 172,
+  "tinggi_px": 199,
+  "nisbah": 0.86,
+  "dakwat_pct": 39.1
+ },
+ {
+  "id": "8-18",
+  "gambar": 8,
+  "fail_asal": "IMG_5865.jpg",
+  "baris": 4,
+  "lajur": 3,
+  "crop": "etsy-8-18.jpg",
+  "kotak": [
+   488,
+   758,
+   688,
+   971
+  ],
+  "lebar_px": 176,
+  "tinggi_px": 189,
+  "nisbah": 0.93,
+  "dakwat_pct": 44.1
+ },
+ {
+  "id": "8-19",
+  "gambar": 8,
+  "fail_asal": "IMG_5865.jpg",
+  "baris": 4,
+  "lajur": 4,
+  "crop": "etsy-8-19.jpg",
+  "kotak": [
+   725,
+   749,
+   907,
+   980
+  ],
+  "lebar_px": 158,
+  "tinggi_px": 207,
+  "nisbah": 0.76,
+  "dakwat_pct": 41.7
+ },
+ {
+  "id": "8-20",
+  "gambar": 8,
+  "fail_asal": "IMG_5865.jpg",
+  "baris": 4,
+  "lajur": 5,
+  "crop": "etsy-8-20.jpg",
+  "kotak": [
+   957,
+   766,
+   1161,
+   980
+  ],
+  "lebar_px": 180,
+  "tinggi_px": 190,
+  "nisbah": 0.95,
+  "dakwat_pct": 39.3
+ },
+ {
+  "id": "8-21",
+  "gambar": 8,
+  "fail_asal": "IMG_5865.jpg",
+  "baris": 5,
+  "lajur": 1,
+  "crop": "etsy-8-21.jpg",
+  "kotak": [
+   8,
+   997,
+   212,
+   1220
+  ],
+  "lebar_px": 180,
+  "tinggi_px": 199,
+  "nisbah": 0.9,
+  "dakwat_pct": 38.5
+ },
+ {
+  "id": "8-22",
+  "gambar": 8,
+  "fail_asal": "IMG_5865.jpg",
+  "baris": 5,
+  "lajur": 2,
+  "crop": "etsy-8-22.jpg",
+  "kotak": [
+   233,
+   995,
+   440,
+   1223
+  ],
+  "lebar_px": 183,
+  "tinggi_px": 204,
+  "nisbah": 0.9,
+  "dakwat_pct": 44.5
+ },
+ {
+  "id": "8-23",
+  "gambar": 8,
+  "fail_asal": "IMG_5865.jpg",
+  "baris": 5,
+  "lajur": 3,
+  "crop": "etsy-8-23.jpg",
+  "kotak": [
+   472,
+   1004,
+   677,
+   1223
+  ],
+  "lebar_px": 181,
+  "tinggi_px": 195,
+  "nisbah": 0.93,
+  "dakwat_pct": 40.3
+ },
+ {
+  "id": "8-24",
+  "gambar": 8,
+  "fail_asal": "IMG_5865.jpg",
+  "baris": 5,
+  "lajur": 4,
+  "crop": "etsy-8-24.jpg",
+  "kotak": [
+   716,
+   996,
+   903,
+   1231
+  ],
+  "lebar_px": 163,
+  "tinggi_px": 211,
+  "nisbah": 0.77,
+  "dakwat_pct": 42.2
+ },
+ {
+  "id": "8-25",
+  "gambar": 8,
+  "fail_asal": "IMG_5865.jpg",
+  "baris": 5,
+  "lajur": 5,
+  "crop": "etsy-8-25.jpg",
+  "kotak": [
+   958,
+   1010,
+   1162,
+   1226
+  ],
+  "lebar_px": 180,
+  "tinggi_px": 192,
+  "nisbah": 0.94,
+  "dakwat_pct": 38.5
+ },
+ {
+  "id": "9-01",
+  "gambar": 9,
+  "fail_asal": "IMG_5864.jpg",
+  "baris": 1,
+  "lajur": 1,
+  "crop": "etsy-9-01.jpg",
+  "kotak": [
+   15,
+   38,
+   279,
+   282
+  ],
+  "lebar_px": 240,
+  "tinggi_px": 220,
+  "nisbah": 1.09,
+  "dakwat_pct": 51.4
+ },
+ {
+  "id": "9-02",
+  "gambar": 9,
+  "fail_asal": "IMG_5864.jpg",
+  "baris": 1,
+  "lajur": 2,
+  "crop": "etsy-9-02.jpg",
+  "kotak": [
+   303,
+   34,
+   574,
+   286
+  ],
+  "lebar_px": 247,
+  "tinggi_px": 228,
+  "nisbah": 1.08,
+  "dakwat_pct": 43.7
+ },
+ {
+  "id": "9-03",
+  "gambar": 9,
+  "fail_asal": "IMG_5864.jpg",
+  "baris": 1,
+  "lajur": 3,
+  "crop": "etsy-9-03.jpg",
+  "kotak": [
+   597,
+   28,
+   859,
+   292
+  ],
+  "lebar_px": 238,
+  "tinggi_px": 240,
+  "nisbah": 0.99,
+  "dakwat_pct": 42.1
+ },
+ {
+  "id": "9-04",
+  "gambar": 9,
+  "fail_asal": "IMG_5864.jpg",
+  "baris": 1,
+  "lajur": 4,
+  "crop": "etsy-9-04.jpg",
+  "kotak": [
+   914,
+   22,
+   1123,
+   297
+  ],
+  "lebar_px": 185,
+  "tinggi_px": 251,
+  "nisbah": 0.74,
+  "dakwat_pct": 46.3
+ },
+ {
+  "id": "9-05",
+  "gambar": 9,
+  "fail_asal": "IMG_5864.jpg",
+  "baris": 2,
+  "lajur": 1,
+  "crop": "etsy-9-05.jpg",
+  "kotak": [
+   10,
+   359,
+   284,
+   603
+  ],
+  "lebar_px": 250,
+  "tinggi_px": 220,
+  "nisbah": 1.14,
+  "dakwat_pct": 43.9
+ },
+ {
+  "id": "9-06",
+  "gambar": 9,
+  "fail_asal": "IMG_5864.jpg",
+  "baris": 2,
+  "lajur": 2,
+  "crop": "etsy-9-06.jpg",
+  "kotak": [
+   303,
+   340,
+   573,
+   622
+  ],
+  "lebar_px": 246,
+  "tinggi_px": 258,
+  "nisbah": 0.95,
+  "dakwat_pct": 43.5
+ },
+ {
+  "id": "9-07",
+  "gambar": 9,
+  "fail_asal": "IMG_5864.jpg",
+  "baris": 2,
+  "lajur": 3,
+  "crop": "etsy-9-07.jpg",
+  "kotak": [
+   608,
+   333,
+   848,
+   630
+  ],
+  "lebar_px": 216,
+  "tinggi_px": 273,
+  "nisbah": 0.79,
+  "dakwat_pct": 44.5
+ },
+ {
+  "id": "9-08",
+  "gambar": 9,
+  "fail_asal": "IMG_5864.jpg",
+  "baris": 2,
+  "lajur": 4,
+  "crop": "etsy-9-08.jpg",
+  "kotak": [
+   900,
+   353,
+   1141,
+   624
+  ],
+  "lebar_px": 217,
+  "tinggi_px": 247,
+  "nisbah": 0.88,
+  "dakwat_pct": 29.6
+ },
+ {
+  "id": "9-09",
+  "gambar": 9,
+  "fail_asal": "IMG_5864.jpg",
+  "baris": 3,
+  "lajur": 1,
+  "crop": "etsy-9-09.jpg",
+  "kotak": [
+   12,
+   663,
+   282,
+   942
+  ],
+  "lebar_px": 246,
+  "tinggi_px": 255,
+  "nisbah": 0.96,
+  "dakwat_pct": 34.9
+ },
+ {
+  "id": "9-10",
+  "gambar": 9,
+  "fail_asal": "IMG_5864.jpg",
+  "baris": 3,
+  "lajur": 2,
+  "crop": "etsy-9-10.jpg",
+  "kotak": [
+   303,
+   659,
+   574,
+   945
+  ],
+  "lebar_px": 247,
+  "tinggi_px": 262,
+  "nisbah": 0.94,
+  "dakwat_pct": 42.2
+ },
+ {
+  "id": "9-11",
+  "gambar": 9,
+  "fail_asal": "IMG_5864.jpg",
+  "baris": 3,
+  "lajur": 3,
+  "crop": "etsy-9-11.jpg",
+  "kotak": [
+   588,
+   668,
+   868,
+   937
+  ],
+  "lebar_px": 256,
+  "tinggi_px": 245,
+  "nisbah": 1.04,
+  "dakwat_pct": 39.1
+ },
+ {
+  "id": "9-12",
+  "gambar": 9,
+  "fail_asal": "IMG_5864.jpg",
+  "baris": 3,
+  "lajur": 4,
+  "crop": "etsy-9-12.jpg",
+  "kotak": [
+   892,
+   660,
+   1146,
+   944
+  ],
+  "lebar_px": 230,
+  "tinggi_px": 260,
+  "nisbah": 0.88,
+  "dakwat_pct": 37.4
+ },
+ {
+  "id": "9-13",
+  "gambar": 9,
+  "fail_asal": "IMG_5864.jpg",
+  "baris": 4,
+  "lajur": 1,
+  "crop": "etsy-9-13.jpg",
+  "kotak": [
+   13,
+   993,
+   281,
+   1259
+  ],
+  "lebar_px": 244,
+  "tinggi_px": 242,
+  "nisbah": 1.01,
+  "dakwat_pct": 40.8
+ },
+ {
+  "id": "9-14",
+  "gambar": 9,
+  "fail_asal": "IMG_5864.jpg",
+  "baris": 4,
+  "lajur": 2,
+  "crop": "etsy-9-14.jpg",
+  "kotak": [
+   299,
+   983,
+   577,
+   1269
+  ],
+  "lebar_px": 254,
+  "tinggi_px": 262,
+  "nisbah": 0.97,
+  "dakwat_pct": 38.8
+ },
+ {
+  "id": "9-15",
+  "gambar": 9,
+  "fail_asal": "IMG_5864.jpg",
+  "baris": 4,
+  "lajur": 3,
+  "crop": "etsy-9-15.jpg",
+  "kotak": [
+   588,
+   989,
+   868,
+   1263
+  ],
+  "lebar_px": 256,
+  "tinggi_px": 250,
+  "nisbah": 1.02,
+  "dakwat_pct": 42.8
+ },
+ {
+  "id": "9-16",
+  "gambar": 9,
+  "fail_asal": "IMG_5864.jpg",
+  "baris": 4,
+  "lajur": 4,
+  "crop": "etsy-9-16.jpg",
+  "kotak": [
+   882,
+   1001,
+   1156,
+   1251
+  ],
+  "lebar_px": 250,
+  "tinggi_px": 226,
+  "nisbah": 1.11,
+  "dakwat_pct": 40.6
+ },
+ {
+  "id": "10-01",
+  "gambar": 10,
+  "fail_asal": "IMG_5863.jpg",
+  "baris": 1,
+  "lajur": 1,
+  "crop": "etsy-10-01.jpg",
+  "kotak": [
+   4,
+   22,
+   218,
+   249
+  ],
+  "lebar_px": 190,
+  "tinggi_px": 203,
+  "nisbah": 0.94,
+  "dakwat_pct": 36.6
+ },
+ {
+  "id": "10-02",
+  "gambar": 10,
+  "fail_asal": "IMG_5863.jpg",
+  "baris": 1,
+  "lajur": 2,
+  "crop": "etsy-10-02.jpg",
+  "kotak": [
+   242,
+   22,
+   450,
+   248
+  ],
+  "lebar_px": 184,
+  "tinggi_px": 202,
+  "nisbah": 0.91,
+  "dakwat_pct": 43.4
+ },
+ {
+  "id": "10-03",
+  "gambar": 10,
+  "fail_asal": "IMG_5863.jpg",
+  "baris": 1,
+  "lajur": 3,
+  "crop": "etsy-10-03.jpg",
+  "kotak": [
+   484,
+   20,
+   701,
+   229
+  ],
+  "lebar_px": 193,
+  "tinggi_px": 185,
+  "nisbah": 1.04,
+  "dakwat_pct": 50.5
+ },
+ {
+  "id": "10-04",
+  "gambar": 10,
+  "fail_asal": "IMG_5863.jpg",
+  "baris": 1,
+  "lajur": 4,
+  "crop": "etsy-10-04.jpg",
+  "kotak": [
+   712,
+   17,
+   929,
+   232
+  ],
+  "lebar_px": 193,
+  "tinggi_px": 191,
+  "nisbah": 1.01,
+  "dakwat_pct": 33.5
+ },
+ {
+  "id": "10-05",
+  "gambar": 10,
+  "fail_asal": "IMG_5863.jpg",
+  "baris": 1,
+  "lajur": 5,
+  "crop": "etsy-10-05.jpg",
+  "kotak": [
+   966,
+   19,
+   1170,
+   259
+  ],
+  "lebar_px": 181,
+  "tinggi_px": 216,
+  "nisbah": 0.84,
+  "dakwat_pct": 38.0
+ },
+ {
+  "id": "10-06",
+  "gambar": 10,
+  "fail_asal": "IMG_5863.jpg",
+  "baris": 2,
+  "lajur": 1,
+  "crop": "etsy-10-06.jpg",
+  "kotak": [
+   6,
+   271,
+   217,
+   492
+  ],
+  "lebar_px": 187,
+  "tinggi_px": 197,
+  "nisbah": 0.95,
+  "dakwat_pct": 37.2
+ },
+ {
+  "id": "10-07",
+  "gambar": 10,
+  "fail_asal": "IMG_5863.jpg",
+  "baris": 2,
+  "lajur": 2,
+  "crop": "etsy-10-07.jpg",
+  "kotak": [
+   242,
+   279,
+   450,
+   484
+  ],
+  "lebar_px": 184,
+  "tinggi_px": 181,
+  "nisbah": 1.02,
+  "dakwat_pct": 40.5
+ },
+ {
+  "id": "10-08",
+  "gambar": 10,
+  "fail_asal": "IMG_5863.jpg",
+  "baris": 2,
+  "lajur": 3,
+  "crop": "etsy-10-08.jpg",
+  "kotak": [
+   479,
+   268,
+   706,
+   485
+  ],
+  "lebar_px": 203,
+  "tinggi_px": 193,
+  "nisbah": 1.05,
+  "dakwat_pct": 44.7
+ },
+ {
+  "id": "10-09",
+  "gambar": 10,
+  "fail_asal": "IMG_5863.jpg",
+  "baris": 2,
+  "lajur": 4,
+  "crop": "etsy-10-09.jpg",
+  "kotak": [
+   710,
+   257,
+   931,
+   496
+  ],
+  "lebar_px": 197,
+  "tinggi_px": 215,
+  "nisbah": 0.92,
+  "dakwat_pct": 44.6
+ },
+ {
+  "id": "10-10",
+  "gambar": 10,
+  "fail_asal": "IMG_5863.jpg",
+  "baris": 2,
+  "lajur": 5,
+  "crop": "etsy-10-10.jpg",
+  "kotak": [
+   958,
+   286,
+   1170,
+   509
+  ],
+  "lebar_px": 198,
+  "tinggi_px": 199,
+  "nisbah": 0.99,
+  "dakwat_pct": 41.8
+ },
+ {
+  "id": "10-11",
+  "gambar": 10,
+  "fail_asal": "IMG_5863.jpg",
+  "baris": 3,
+  "lajur": 1,
+  "crop": "etsy-10-11.jpg",
+  "kotak": [
+   7,
+   519,
+   215,
+   751
+  ],
+  "lebar_px": 184,
+  "tinggi_px": 208,
+  "nisbah": 0.88,
+  "dakwat_pct": 38.0
+ },
+ {
+  "id": "10-12",
+  "gambar": 10,
+  "fail_asal": "IMG_5863.jpg",
+  "baris": 3,
+  "lajur": 2,
+  "crop": "etsy-10-12.jpg",
+  "kotak": [
+   236,
+   524,
+   455,
+   746
+  ],
+  "lebar_px": 195,
+  "tinggi_px": 198,
+  "nisbah": 0.98,
+  "dakwat_pct": 44.8
+ },
+ {
+  "id": "10-13",
+  "gambar": 10,
+  "fail_asal": "IMG_5863.jpg",
+  "baris": 3,
+  "lajur": 3,
+  "crop": "etsy-10-13.jpg",
+  "kotak": [
+   490,
+   507,
+   694,
+   742
+  ],
+  "lebar_px": 180,
+  "tinggi_px": 211,
+  "nisbah": 0.85,
+  "dakwat_pct": 47.3
+ },
+ {
+  "id": "10-14",
+  "gambar": 10,
+  "fail_asal": "IMG_5863.jpg",
+  "baris": 3,
+  "lajur": 4,
+  "crop": "etsy-10-14.jpg",
+  "kotak": [
+   715,
+   507,
+   926,
+   742
+  ],
+  "lebar_px": 187,
+  "tinggi_px": 211,
+  "nisbah": 0.89,
+  "dakwat_pct": 41.9
+ },
+ {
+  "id": "10-15",
+  "gambar": 10,
+  "fail_asal": "IMG_5863.jpg",
+  "baris": 3,
+  "lajur": 5,
+  "crop": "etsy-10-15.jpg",
+  "kotak": [
+   955,
+   551,
+   1170,
+   751
+  ],
+  "lebar_px": 203,
+  "tinggi_px": 176,
+  "nisbah": 1.15,
+  "dakwat_pct": 39.9
+ },
+ {
+  "id": "10-16",
+  "gambar": 10,
+  "fail_asal": "IMG_5863.jpg",
+  "baris": 4,
+  "lajur": 1,
+  "crop": "etsy-10-16.jpg",
+  "kotak": [
+   5,
+   776,
+   217,
+   1015
+  ],
+  "lebar_px": 188,
+  "tinggi_px": 215,
+  "nisbah": 0.87,
+  "dakwat_pct": 45.8
+ },
+ {
+  "id": "10-17",
+  "gambar": 10,
+  "fail_asal": "IMG_5863.jpg",
+  "baris": 4,
+  "lajur": 2,
+  "crop": "etsy-10-17.jpg",
+  "kotak": [
+   241,
+   778,
+   451,
+   1013
+  ],
+  "lebar_px": 186,
+  "tinggi_px": 211,
+  "nisbah": 0.88,
+  "dakwat_pct": 43.7
+ },
+ {
+  "id": "10-18",
+  "gambar": 10,
+  "fail_asal": "IMG_5863.jpg",
+  "baris": 4,
+  "lajur": 3,
+  "crop": "etsy-10-18.jpg",
+  "kotak": [
+   484,
+   791,
+   696,
+   1003
+  ],
+  "lebar_px": 188,
+  "tinggi_px": 188,
+  "nisbah": 1.0,
+  "dakwat_pct": 38.5
+ },
+ {
+  "id": "10-19",
+  "gambar": 10,
+  "fail_asal": "IMG_5863.jpg",
+  "baris": 4,
+  "lajur": 4,
+  "crop": "etsy-10-19.jpg",
+  "kotak": [
+   721,
+   789,
+   917,
+   1005
+  ],
+  "lebar_px": 172,
+  "tinggi_px": 192,
+  "nisbah": 0.9,
+  "dakwat_pct": 39.6
+ },
+ {
+  "id": "10-20",
+  "gambar": 10,
+  "fail_asal": "IMG_5863.jpg",
+  "baris": 4,
+  "lajur": 5,
+  "crop": "etsy-10-20.jpg",
+  "kotak": [
+   964,
+   794,
+   1166,
+   1019
+  ],
+  "lebar_px": 178,
+  "tinggi_px": 201,
+  "nisbah": 0.89,
+  "dakwat_pct": 37.2
+ },
+ {
+  "id": "10-21",
+  "gambar": 10,
+  "fail_asal": "IMG_5863.jpg",
+  "baris": 5,
+  "lajur": 1,
+  "crop": "etsy-10-21.jpg",
+  "kotak": [
+   11,
+   1040,
+   211,
+   1255
+  ],
+  "lebar_px": 176,
+  "tinggi_px": 191,
+  "nisbah": 0.92,
+  "dakwat_pct": 44.9
+ },
+ {
+  "id": "10-22",
+  "gambar": 10,
+  "fail_asal": "IMG_5863.jpg",
+  "baris": 5,
+  "lajur": 2,
+  "crop": "etsy-10-22.jpg",
+  "kotak": [
+   245,
+   1044,
+   448,
+   1251
+  ],
+  "lebar_px": 179,
+  "tinggi_px": 183,
+  "nisbah": 0.98,
+  "dakwat_pct": 43.4
+ },
+ {
+  "id": "10-23",
+  "gambar": 10,
+  "fail_asal": "IMG_5863.jpg",
+  "baris": 5,
+  "lajur": 3,
+  "crop": "etsy-10-23.jpg",
+  "kotak": [
+   482,
+   1043,
+   700,
+   1255
+  ],
+  "lebar_px": 194,
+  "tinggi_px": 188,
+  "nisbah": 1.03,
+  "dakwat_pct": 32.0
+ },
+ {
+  "id": "10-24",
+  "gambar": 10,
+  "fail_asal": "IMG_5863.jpg",
+  "baris": 5,
+  "lajur": 4,
+  "crop": "etsy-10-24.jpg",
+  "kotak": [
+   719,
+   1032,
+   919,
+   1267
+  ],
+  "lebar_px": 176,
+  "tinggi_px": 211,
+  "nisbah": 0.83,
+  "dakwat_pct": 43.7
+ },
+ {
+  "id": "10-25",
+  "gambar": 10,
+  "fail_asal": "IMG_5863.jpg",
+  "baris": 5,
+  "lajur": 5,
+  "crop": "etsy-10-25.jpg",
+  "kotak": [
+   956,
+   1040,
+   1170,
+   1259
+  ],
+  "lebar_px": 197,
+  "tinggi_px": 195,
+  "nisbah": 1.01,
+  "dakwat_pct": 34.3
+ }
+]

@@ -13,3 +13,4 @@ Dashboard: https://claude.ai/artifact/EeAC4MqQijSGYGTWfZW3Sg (jenis "Data").
 - **Workflow**: tugas harian/mingguan/bulanan anda dan Claude (`data/export/setup/workflow.json`).
 - **Prestasi**: rangka 5 analisa, corong sasaran 10 jualan/hari × $30, milestone dan alat data (data `data/export/prestasi/*.json`, dijana oleh `scripts/build_prestasi.py`). Angka sebenar diisi bila GA4, Pinterest dan WooCommerce disambung.
 - **Semua produk**: riset semua produk (data `data/export/*.json`).
+- **Etsy**: rujukan gaya penjual Etsy, satu baris setiap design dengan gambar potongan (kod `etsy.js`, `etsy.css`; dataset `etsy_designs`, `etsy_listing`, `etsy_fonts`). Analisis tangan di `data/etsy/designs.txt`; `scripts/etsy_crop.py` memotong gambar grid dan mengukur; `scripts/build_etsy.py` membina `data/export/etsy/*.json`. Gambar potongan tidak dikomit (karya penjual lain); ia disimpan sebagai aset dashboard, id dalam `data/etsy/blobs.txt`.
