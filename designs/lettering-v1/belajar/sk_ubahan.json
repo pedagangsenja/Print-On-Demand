@@ -71,5 +71,23 @@
   "nota": "Jenis tekstur 'marker' (butir latar + butir dakwat) dengan parameter diukur pada IMG_5735 (--ukur-tekstur), dijana pada skala rujukan; hasil diukur semula. Cubaan pertama meniru butir bawah 1 px dan kekasaran tepi: tepi huruf bertakuk hitam (kesan JPEG kecil ditiru), jadi dibuang; tepi kekal ikut imej AI",
   "bukti": "3 imej: 3/3 -> 3/3; jurang 'tekstur K8 tiada jenis' tertutup; K8G diukur pada skala rujukan = IMG_5735 (latar 5.93 / 5.22, dakwat 4.68; v1.2 kapur 1.67 / 1.13); K3K dan K7M sama piksel. Had: butir < 1 px dan tepi marker kering tidak diukur (JPEG 600x449). Bukti lemah",
   "hasil": "final/v12-cpu-sk07/klein4b_K8G_s42 dijana semula"
+ },
+ {
+  "sk": "SK01",
+  "ubahan": "ukur_semula",
+  "jenis": "baiki",
+  "medan": "betulkan.betulkan (langkah SK01)",
+  "kelas": "condong",
+  "dari": "5b v1.1",
+  "ke": "5b v1.2 (28 Nov 2026)",
+  "imej": [
+   "v12b-cpu/klein3/K9B_s123",
+   "v12c-uji-bentuk/ernie/K7M_s123"
+  ],
+  "keputusan": "menang",
+  "tarikh": "2026-11-28",
+  "nota": "Selepas SK01 memutar, blok diukur semula dan baki sudut dibetulkan, paling banyak 2 kali lagi. Sebab: ukuran sudut pertama boleh tersasar (skrip berswash; nilai di had julat SK05)",
+  "bukti": "2 imej: 0/2 -> 2/2 lulus semakan akhir (K9B 13.4 -> 15.2, rujukan 15.x; K7M 0.0 -> 13.6, rujukan 12.4); semakan mata: kedua-dua condong naik ke kanan. Bukti lemah",
+  "hasil": "betul/v12b-cpu/klein3/K9B_s123 dan betul/v12c-uji-bentuk/ernie/K7M_s123 dijana semula"
  }
 ]

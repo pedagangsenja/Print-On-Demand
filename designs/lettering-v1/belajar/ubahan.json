@@ -207,5 +207,20 @@
   "selepas": "5/6",
   "keputusan": "kalah",
   "nota": "Ayat had positif diuji semula sebagai pembaikan kotak (arahan pengguna 28 Nov). Kotak betul: K11N 0/3 -> 3/3 (sama seperti 27 Nov), tetapi K12Y 3/3 -> 0/3 (kotak 'GROWTH' jadi garis luar sahaja). Tanda petikan 'BEGIN' s7 kekal. Dibuang"
+ },
+ {
+  "tarikh": "2026-11-28",
+  "model": "ernie",
+  "rev_dari": "r1",
+  "rev_ke": "r2",
+  "ubahan": "frasa_bentuk",
+  "kelas": [
+   "bentuk"
+  ],
+  "design": "K7M, K8G",
+  "sebelum": "6/6, bersih 0",
+  "selepas": "6/6, bersih 6",
+  "keputusan": "menang",
+  "nota": "Tambah ayat 'Every letter is drawn with a thick, heavy, fully filled stroke, never thin, scratchy or dry-brushed.' sebelum ayat had. Huruf berus nipis / kering hilang 6/6; K8G latar bersih (tiada tekstur kelabu), titik bulat ganti bintang. Ejaan kekal 6/6"
  }
 ]

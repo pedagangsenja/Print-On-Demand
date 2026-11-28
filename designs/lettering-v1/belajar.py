@@ -202,7 +202,10 @@ def stat(rows):
 
 
 def skor(rows):
-    return (sum(r["lulus"] for r in rows), sum(r["suka"] for r in rows))
+    # (lulus, ♥, bersih). Bersih = lulus tanpa kelas cacat prompt; pemecah seri supaya ubahan bagi cacat yang tidak
+    # menggagalkan imej (cth. bentuk huruf, "imej lulus; ciri gaya kad") boleh menang (pembaikan 28 Nov 2026).
+    return (sum(r["lulus"] for r in rows), sum(r["suka"] for r in rows),
+            sum(r["lulus"] and not r["kelas"] for r in rows))
 
 
 def banding(a, b):
@@ -215,7 +218,7 @@ def banding(a, b):
 
 
 def nisbah(s, n):
-    return f"{s[0]}/{n}" + (f" (♥ {s[1]})" if s[1] else "")
+    return f"{s[0]}/{n}" + (f" (♥ {s[1]})" if s[1] else "") + f", bersih {s[2]}"
 
 
 def ulasan(model, rows, ubahan):

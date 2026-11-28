@@ -27,8 +27,8 @@ DAFTAR = {
                     status="diuji: K3H, CPU, 3 seed", sumber="kad model BFL (rasmi); panduan BFL (lemah)"),
     "zturbo": dict(nama="Z-Image Turbo", bahagian="3.5", rev="r1", tarikh="2026-11-26",
                    status="diuji: K3H, CPU, 3 seed", sumber="pasukan Z-Image di Hugging Face + pe.py (rasmi)"),
-    "ernie": dict(nama="ERNIE-Image-Turbo", bahagian="3.6", rev="r1", tarikh="2026-11-26",
-                  status="diuji: K3H, CPU, 3 seed", sumber="dokumen diffusers + kad model (rasmi)"),
+    "ernie": dict(nama="ERNIE-Image-Turbo", bahagian="3.6", rev="r2", tarikh="2026-11-28",
+                  status="diuji: K3H, CPU, 3 seed; r2: K7M + K8G, CPU, 3 seed", sumber="dokumen diffusers + kad model (rasmi)"),
     "moss": dict(nama="MOSS-Image SFT + LoRA 8 langkah", bahagian="3.7", rev="r1", tarikh="2026-11-26",
                  status="diuji: K3H, CPU, 3 seed", sumber="kad model + panduan MOSS (rasmi); kad LoRA (pihak ketiga)"),
     "klein3": dict(nama="FLUX 3 Image Klein", bahagian="3.8", rev="r1", tarikh="2026-11-27",
@@ -43,7 +43,7 @@ MODEL = list(REV)
 W, H = 768, 1024
 # Ubahan CALON kitaran QC (langkah 5): hanya hidup bila dinamakan dalam PEMBINA_UJI (dipisah koma). Ubahan yang
 # berjaya ditulis balik ke aturan (rev naik) dan dibuang dari sini; yang gagal dicatat dalam standard dan dibuang.
-# Calon semasa: ernie_frasa_bentuk (K7M, K8G) (28 Nov 2026). ('ernie_kotak_positif' 28 Nov: K11N kotak 0/3 -> 3/3 tetapi K12Y 3/3 -> 0/3, kalah, dibuang.) (27 Nov 2026: 'zturbo_had_positif' pada K9B 1/3 -> 1/3 dan 'ernie_had_positif' pada K11N 2/3 -> 2/3, kalah, dibuang.) (26 Nov 2026: 'zturbo_satu_baris' diuji pada K8G, tidak berjaya, dibuang.)
+# Calon semasa: tiada. ('ernie_frasa_bentuk' 28 Nov: MENANG, ditulis ke aturan ERNIE r2.) ('ernie_kotak_positif' 28 Nov: K11N kotak 0/3 -> 3/3 tetapi K12Y 3/3 -> 0/3, kalah, dibuang.) (27 Nov 2026: 'zturbo_had_positif' pada K9B 1/3 -> 1/3 dan 'ernie_had_positif' pada K11N 2/3 -> 2/3, kalah, dibuang.) (26 Nov 2026: 'zturbo_satu_baris' diuji pada K8G, tidak berjaya, dibuang.)
 # Nama calon = <model>_<id pilihan> daripada belajar.py (KELAS), cth. zturbo_had_positif; belajar.py memutuskan menang / kalah (3.15).
 UJI = {u for u in os.environ.get("PEMBINA_UJI", "").split(",") if u}
 SATU = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"]
@@ -190,8 +190,8 @@ def ernie(m):
          f"{cap(SATU[m['n'] - 1])} stacked lines in {b['bentuk']} in the center" +
          (f" that {b['condong']}" if b.get("condong") else "") + ": " + "; ".join(butir) + "."]
     s += tambahan(b)
-    if "ernie_frasa_bentuk" in UJI:  # calon belajar 3.15 (28 Nov 2026, diluluskan pengguna): huruf berus nipis / kering (K7M, K8G)
-        s.append("Every letter is drawn with a thick, heavy, fully filled stroke, never thin, scratchy or dry-brushed.")
+    # r2 (28 Nov 2026, 3.15 menang: K7M + K8G bersih 0/6 -> 6/6, lulus 6/6 -> 6/6): ayat ketebalan huruf (blok I).
+    s.append("Every letter is drawn with a thick, heavy, fully filled stroke, never thin, scratchy or dry-brushed.")
     s.append(f"Only these {SATU[m['nw'] - 1]} words, no other text, pure black and white, "
              f"{', '.join('no ' + x for x in b['tiada'])}, {b['gaya']} style, {b['margin']}.")
     return " ".join(s)

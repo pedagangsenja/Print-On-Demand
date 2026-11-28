@@ -1,8 +1,8 @@
 {
  "versi": "s1 (27 Nov 2026)",
- "tarikh": "2026-11-27",
- "baris": 448,
- "imej": 99,
+ "tarikh": "2026-11-28",
+ "baris": 500,
+ "imej": 110,
  "kad_dipakai": [
   "K10",
   "K11",
@@ -20,38 +20,36 @@
    "nama": "condong",
    "fail": "SK01_condong.py",
    "langkah": "5b",
-   "versi": "5b v1.1",
+   "versi": "5b v1.2",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 39,
-     "lulus": 38,
-     "cacat": 1,
+     "imej": 42,
+     "lulus": 40,
+     "cacat": 2,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    },
+    "5b v1.2": {
+     "imej": 2,
+     "lulus": 2,
+     "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
      "tolak": 0
     }
    },
    "semasa": {
-    "imej": 39,
-    "lulus": 38,
-    "cacat": 1,
+    "imej": 2,
+    "lulus": 2,
+    "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
     "tolak": 0
    },
-   "berulang": [
-    {
-     "kelas": "condong",
-     "nama": "Sudut condong lain daripada kad",
-     "imej": [
-      "v12b-cpu/klein3/K9B_s123"
-     ],
-     "n": 1,
-     "kalah": []
-    }
-   ],
+   "berulang": [],
    "calon": [],
-   "ubahan_dicuba": 0,
+   "ubahan_dicuba": 1,
    "tindakan": [
     {
      "jenis": "tiada",
@@ -64,11 +62,19 @@
    "nama": "ruang tepi",
    "fail": "SK02_ruang_tepi.py",
    "langkah": "5b",
-   "versi": "5b v1.1",
+   "versi": "5b v1.2",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 45,
-     "lulus": 45,
+     "imej": 54,
+     "lulus": 54,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    },
+    "5b v1.2": {
+     "imej": 1,
+     "lulus": 1,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -76,8 +82,8 @@
     }
    },
    "semasa": {
-    "imej": 45,
-    "lulus": 45,
+    "imej": 1,
+    "lulus": 1,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -98,11 +104,19 @@
    "nama": "kedudukan",
    "fail": "SK03_kedudukan.py",
    "langkah": "5b",
-   "versi": "5b v1.1",
+   "versi": "5b v1.2",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 17,
-     "lulus": 17,
+     "imej": 21,
+     "lulus": 21,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    },
+    "5b v1.2": {
+     "imej": 1,
+     "lulus": 1,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -110,8 +124,8 @@
     }
    },
    "semasa": {
-    "imej": 17,
-    "lulus": 17,
+    "imej": 1,
+    "lulus": 1,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -132,11 +146,19 @@
    "nama": "hitam putih",
    "fail": "SK04_hitam_putih.py",
    "langkah": "5b",
-   "versi": "5b v1.1",
+   "versi": "5b v1.2",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 65,
-     "lulus": 65,
+     "imej": 75,
+     "lulus": 75,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    },
+    "5b v1.2": {
+     "imej": 2,
+     "lulus": 2,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -144,8 +166,8 @@
     }
    },
    "semasa": {
-    "imej": 65,
-    "lulus": 65,
+    "imej": 2,
+    "lulus": 2,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,

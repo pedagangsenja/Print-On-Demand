@@ -1,7 +1,7 @@
 {
  "versi": "b1.1 (27 Nov 2026)",
  "tarikh": "2026-11-28",
- "imej": 208,
+ "imej": 214,
  "suka": 0,
  "tolak": 0,
  "model": {
@@ -245,8 +245,8 @@
    "model": "ernie",
    "nama": "ERNIE-Image-Turbo",
    "bahagian": "3.6",
-   "rev": "r1",
-   "status": "diuji: K3H, CPU, 3 seed",
+   "rev": "r2",
+   "status": "diuji: K3H, CPU, 3 seed; r2: K7M + K8G, CPU, 3 seed",
    "ikut_rev": {
     "am": {
      "imej": 9,
@@ -274,53 +274,28 @@
     }
    },
    "semasa": {
-    "imej": 24,
-    "lulus": 23,
-    "pct": 96,
+    "imej": 0,
+    "lulus": 0,
+    "pct": null,
     "suka": 0,
     "tolak": 0,
-    "design": 7
+    "design": 0
    },
    "semua": {
-    "imej": 52,
-    "lulus": 43,
-    "pct": 83,
+    "imej": 58,
+    "lulus": 49,
+    "pct": 84,
     "suka": 0,
     "tolak": 0,
     "design": 11
    },
-   "berulang": [
-    {
-     "kelas": "bentuk",
-     "nama": "Bentuk huruf atau saiz label lain daripada kad",
-     "imej": 6,
-     "gagal": 0,
-     "design": [
-      "K7M",
-      "K8G"
-     ],
-     "cadangan": "frasa_bentuk",
-     "cadangan_teks": "Frasa bentuk huruf dalam aturan model"
-    },
-    {
-     "kelas": "lain",
-     "nama": "Cacat lain (tiada kelas)",
-     "imej": 2,
-     "gagal": 0,
-     "design": [
-      "K10V"
-     ],
-     "cadangan": null,
-     "cadangan_teks": "Tanya pengguna sebabnya; tambah ke kad sebagai ciri QC"
-    }
-   ],
-   "ubahan_dicuba": 3,
+   "berulang": [],
+   "ubahan_dicuba": 4,
    "suka_imej": [],
    "tindakan": [
     {
-     "jenis": "cuba",
-     "ubahan": "frasa_bentuk",
-     "teks": "Satu ubahan untuk jana seterusnya model ini: PEMBINA_UJI=ernie_frasa_bentuk (Frasa bentuk huruf dalam aturan model) bagi cacat 'Bentuk huruf atau saiz label lain daripada kad' (imej lulus; ciri gaya kad) (6 imej, 2 design); jana bersama aturan semasa, seed sama"
+     "jenis": "tiada",
+     "teks": "Tiada tindakan: tiada cacat berulang pada aturan semasa"
     }
    ]
   },
