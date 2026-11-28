@@ -33,3 +33,16 @@ IMG_5840 dan IMG_5793 dipakai oleh dua sesi (sesi ini dan focused-faraday) denga
   - focused-allen: kad K14R, K15T, K16S, K17O (IMG_5852, IMG_5751, ...) bertembung dengan K14–K18 lucid-galileo; definisi kad itu hilang daripada kad.py cawangan itu selepas gabung sleepy-edison (ada dalam commit 99990ad).
   - exciting-sagan dan focused-faraday: K9–K13 bertembung dengan K9–K12 sleepy-edison; huruf ayat Q, R, V bertembung.
 - Cadangan nombor baharu: focused-allen K30–K33, exciting-sagan K40–K44, focused-faraday K50–K54; huruf ayat ditukar ke huruf yang belum dipakai.
+
+## Gabung kod selesai (28 Nov 2026, sesi hab)
+| Cawangan | Kad | Huruf ayat | Batch | Ujian dashboard |
+|---|---|---|---|---|
+| nifty-lovelace | K20–K23 | a b c e f q | v12-cpu-ref6, v12-cpu-uji, v12-cpu-uji2 | U20, U21, U22, U27 |
+| sleepy-edison | K9–K12 | B V N Y | v12b-cpu | U16, U25, U26 |
+| lucid-galileo | K14–K18 | X E C Z U | v12-cpu-k14 | U15, U28 |
+| focused-allen | K30–K33 (dahulu K14–K17) | R T S O F | v12c-cpu | U17 |
+| exciting-sagan | K40–K44 (dahulu K9–K13) | Q g h i j (dahulu Q F R O V) | v12e-cpu (dahulu v12b-cpu) | U13, U14, U24 |
+| focused-faraday | K50–K54 (dahulu K9–K13) | k m A n p (dahulu R Q A T S) | v12-cpu-k50k54 (dahulu v12-cpu-k9k13) | U23 |
+
+Kod digabung: pembina (klein4b r4 = r3 + TUKAR K43i; zturbo r2 ayat lucid-galileo; ERNIE r3; klein3 r2), betulkan.py 5b v1.4, SK06 v1.9 (dua kaedah calar: lubang_dakwat focused-faraday dan g_bil_calar nifty-lovelace; semburan), SK07 v1.3, SK05 v1.2, belajar b1.5. Cawangan lama (blissful-curie, great-sagan, intelligent-shannon, ecstatic-johnson, nifty-ptolemy) kekal rekod sahaja dalam `cawangan/`.
+Pengajaran: nama ubahan calon mesti unik bagi setiap sesi dan setiap ayat (`had_positif`, `hiasan_tepat` dan `frasa_bentuk` dipakai oleh beberapa sesi dengan ayat berlainan; dinilai semula ikut sesi dalam `belajar/ubahan.json`).

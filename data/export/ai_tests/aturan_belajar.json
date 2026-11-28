@@ -3,8 +3,8 @@
   "model": "klein4b",
   "nama": "FLUX.2 klein 4B",
   "bahagian": "3.4",
-  "rev": "r3",
-  "status": "diuji: K3H, CPU, 3 seed; r2 hiasan_kedudukan (K3K); r3 dua_kata_sebaris: K4q + K8G 2/6 -> 3/6",
+  "rev": "r4",
+  "status": "diuji: K3H, CPU, 3 seed; r2 hiasan_kedudukan (K3K); r3 dua_kata_sebaris: K4q + K8G 2/6 -> 3/6; r4 = r3 + TUKAR K43i (exciting-sagan tukar_peranan 0/3 -> 2/3)",
   "imej": 156,
   "imej_semasa": 0,
   "lulus_semasa": 0,
@@ -13,7 +13,7 @@
   "tolak": 0,
   "cacat_berulang": "-",
   "tindakan": "Tiada tindakan: tiada cacat berulang pada aturan semasa",
-  "ubahan_dicuba": 10,
+  "ubahan_dicuba": 8,
   "tarikh": "2026-11-28"
  },
  {
@@ -30,7 +30,7 @@
   "tolak": 0,
   "cacat_berulang": "-",
   "tindakan": "Tiada tindakan: tiada cacat berulang pada aturan semasa",
-  "ubahan_dicuba": 15,
+  "ubahan_dicuba": 12,
   "tarikh": "2026-11-28"
  },
  {
@@ -64,7 +64,7 @@
   "tolak": 0,
   "cacat_berulang": "Perkataan salah eja, rosak, atau huruf besar / kecil salah (6 imej, 2 design); Teks rawak, label atau tanda baca tambahan (3 imej, 1 design); Cacat lain (tiada kelas) (9 imej, 5 design); Bentuk huruf atau saiz label lain daripada kad (15 imej, 7 design); Hiasan yang tidak diminta (3 imej, 1 design); Hiasan di tempat salah (2 imej, 1 design)",
   "tindakan": "Cacat 'Perkataan salah eja, rosak, atau huruf besar / kecil salah': Pilihan ubahan habis: tukar ke model seterusnya ikut jadual model × gaya, kemudian pendekkan ayat, kemudian lapor kepada pengguna",
-  "ubahan_dicuba": 9,
+  "ubahan_dicuba": 3,
   "tarikh": "2026-11-28"
  },
  {
@@ -81,7 +81,7 @@
   "tolak": 0,
   "cacat_berulang": "-",
   "tindakan": "Tiada tindakan: tiada cacat berulang pada aturan semasa",
-  "ubahan_dicuba": 6,
+  "ubahan_dicuba": 4,
   "tarikh": "2026-11-28"
  },
  {

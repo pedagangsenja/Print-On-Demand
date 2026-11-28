@@ -1,5 +1,5 @@
 {
- "versi": "b1.4 (28 Nov 2026)",
+ "versi": "b1.5 (28 Nov 2026)",
  "tarikh": "2026-11-28",
  "imej": 799,
  "suka": 0,
@@ -9,8 +9,8 @@
    "model": "klein4b",
    "nama": "FLUX.2 klein 4B",
    "bahagian": "3.4",
-   "rev": "r3",
-   "status": "diuji: K3H, CPU, 3 seed; r2 hiasan_kedudukan (K3K); r3 dua_kata_sebaris: K4q + K8G 2/6 -> 3/6",
+   "rev": "r4",
+   "status": "diuji: K3H, CPU, 3 seed; r2 hiasan_kedudukan (K3K); r3 dua_kata_sebaris: K4q + K8G 2/6 -> 3/6; r4 = r3 + TUKAR K43i (exciting-sagan tukar_peranan 0/3 -> 2/3)",
    "ikut_rev": {
     "?": {
      "imej": 30,
@@ -70,7 +70,7 @@
     "design": 52
    },
    "berulang": [],
-   "ubahan_dicuba": 10,
+   "ubahan_dicuba": 8,
    "suka_imej": [],
    "tindakan": [
     {
@@ -136,7 +136,7 @@
     "design": 53
    },
    "berulang": [],
-   "ubahan_dicuba": 15,
+   "ubahan_dicuba": 12,
    "suka_imej": [],
    "tindakan": [
     {
@@ -199,7 +199,7 @@
     "pct": 70,
     "suka": 0,
     "tolak": 0,
-    "design": 55
+    "design": 54
    },
    "berulang": [],
    "ubahan_dicuba": 11,
@@ -298,9 +298,9 @@
      "gagal": 1,
      "design": [
       "K23f",
-      "exciting-sagan:K11R",
-      "exciting-sagan:K13V",
-      "focused-faraday:K10Q",
+      "K42h",
+      "K44j",
+      "K51m",
       "intelligent-shannon:K24T"
      ],
      "cadangan": null,
@@ -316,8 +316,8 @@
       "K15E",
       "K16C",
       "K23f",
-      "exciting-sagan:K12O",
-      "focused-faraday:K13S",
+      "K43i",
+      "K54p",
       "intelligent-shannon:K24T"
      ],
      "cadangan": "frasa_bentuk",
@@ -346,7 +346,7 @@
      "cadangan_teks": "Nyatakan kedudukan hiasan (kiri dan kanan, di luar label)"
     }
    ],
-   "ubahan_dicuba": 9,
+   "ubahan_dicuba": 3,
    "suka_imej": [],
    "tindakan": [
     {
@@ -396,7 +396,7 @@
     "design": 34
    },
    "berulang": [],
-   "ubahan_dicuba": 6,
+   "ubahan_dicuba": 4,
    "suka_imej": [],
    "tindakan": [
     {

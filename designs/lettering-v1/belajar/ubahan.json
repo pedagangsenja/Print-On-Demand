@@ -523,5 +523,50 @@
   "selepas": "0/5",
   "keputusan": "kalah",
   "nota": "Tambah 'Every letter is a tall, narrow condensed letterform, much taller than it is wide.' Huruf masih lebar pada 6/6 imej (seed 42, 7, 123; K51m s123 baharu). Dibuang. Pilihan bentuk habis: FLUX 3 Klein tidak sesuai untuk K10 / K13 (model lain lulus)"
+ },
+ {
+  "tarikh": "2026-11-28",
+  "model": "zturbo",
+  "rev_dari": "r2",
+  "rev_ke": "r2",
+  "ubahan": "had_positif",
+  "kelas": [
+   "rawak"
+  ],
+  "design": "K16C, K17Z, K43i, K7M, K8G, K9B",
+  "sebelum": "2/18",
+  "selepas": "5/18",
+  "keputusan": "menang",
+  "nota": "Sesi hab selepas gabung exciting-sagan: dinilai ikut sesi / ayat. lucid-galileo (K16C, K17Z) menang = aturan 3.5 r2; nifty-lovelace (K7M, K8G) menang; sleepy-edison (K9B) kalah (hiasan_lebih); exciting-sagan (K43i) seri 0/3 -> 0/3. Gabungan nama sahaja tidak sah."
+ },
+ {
+  "tarikh": "2026-11-28",
+  "model": "ernie",
+  "rev_dari": "r3",
+  "rev_ke": "r3",
+  "ubahan": "hiasan_tepat",
+  "kelas": [
+   "hiasan_lebih"
+  ],
+  "design": "K14X, K52A, K54p",
+  "sebelum": "4/8",
+  "selepas": "7/8",
+  "keputusan": "menang",
+  "nota": "Dinilai ikut sesi: lucid-galileo (K14X) 2/3 -> 3/3 tiada kelas baharu = MENANG, ayatnya dalam aturan 3.6 r3; focused-faraday (K52A, K54p) 2/5 -> 4/5 tetapi kelas baharu rawak = kalah (ayat sesi itu berlainan)."
+ },
+ {
+  "tarikh": "2026-11-28",
+  "model": "ernie",
+  "rev_dari": "r3",
+  "rev_ke": "r3",
+  "ubahan": "frasa_bentuk",
+  "kelas": [
+   "bentuk"
+  ],
+  "design": "K43i, K7M, K8G",
+  "sebelum": "11/11, bersih 0",
+  "selepas": "11/11, bersih 11",
+  "keputusan": "menang",
+  "nota": "Gabungan sleepy-edison (K7M, K8G 9/9, bersih 0 -> 9) + exciting-sagan (K43i bersih 0 -> 2): menang ikut b1.5; sudah dalam aturan 3.6 (blok ketebalan huruf)."
  }
 ]
