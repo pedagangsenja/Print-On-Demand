@@ -1,0 +1,53 @@
+{
+ "nama_gaya": "Skrip berus kering tebal + garis bawah berus",
+ "teks_rujukan": [
+  "Trust",
+  "your",
+  "Pace"
+ ],
+ "kelas_huruf": "skrip berus tebal bersambung, tepi berus kering (garis halus di hujung strok), huruf awal besar",
+ "susunan": "tiga baris rapat dan sedikit bertindih, tengah; garis dasar mendatar (selepas diluruskan), huruf condong ke kanan",
+ "hiasan": [
+  "satu garis bawah berus panjang di bawah baris akhir, berasingan daripada huruf",
+  "garis lintang 'T' panjang"
+ ],
+ "jangan_salin": [
+  "ayat asal"
+ ],
+ "nota": "Imej jana sendiri (ERNIE seed 7, kad K24 v1.0), dipilih pengguna 28 Nov 2026 sebagai design hitam putih. Dijadikan rujukan kad K25 atas keputusan pengguna.",
+ "kata": [
+  {
+   "teks": "Trust",
+   "kotak": [
+    12,
+    16,
+    90,
+    45
+   ],
+   "peranan": "utama",
+   "kelas": "skrip berus kering"
+  },
+  {
+   "teks": "your",
+   "kotak": [
+    14,
+    40,
+    82,
+    66
+   ],
+   "peranan": "sokongan",
+   "kelas": "skrip berus kering"
+  },
+  {
+   "teks": "Pace",
+   "kotak": [
+    12,
+    58,
+    86,
+    82
+   ],
+   "peranan": "utama",
+   "kelas": "skrip berus kering"
+  }
+ ]
+}

@@ -342,6 +342,41 @@ KAD = {
             ("Huruf awal besar pada perkataan pertama", False),
             ("Tepi strok tajam, isi rata", False),
             ("Putih satu warna atas hitam, tiada hiasan lain", False)]),
+    # K25 (28 Nov 2026, keputusan pengguna): gaya berus kering daripada imej jana yang dipilih pengguna (K24T, ERNIE
+    # seed 7, kad K24 v1.0). Frasa = kad K24 v1.0 yang menghasilkan imej itu, + garis bawah yang ERNIE tambah.
+    # Ukuran daripada rekod decode imej itu (decode/K24T_ernie_s7.json). Belum dijana semula dengan kad ini.
+    "K25": dict(
+        nama="Skrip berus kering tebal + garis bawah berus (putih atas hitam)",
+        ref="K24T ERNIE seed 7 (imej jana sendiri, lulus/K24T_ernie_s7.png); asal gaya IMG_5840",
+        versi="v1.0 (28 Nov 2026; dibuat atas keputusan pengguna; belum diuji dengan jana baharu)",
+        kelas="F1", dakwat=1, ruang_tepi=11, tekstur="tepi berus kering (dijana AI, bukan skrip)", julat="2-4 perkataan",
+        warna=dict(latar=("hitam", "#000000", "black"), dakwat=[("putih", "#ffffff", "white")]),
+        medium="Hand-lettered brush script quote poster, portrait.",
+        latar="Solid black background.",
+        susunan=("Three lines stacked in one tight centered block; the lines sit close together and overlap "
+                 "slightly, the baselines are level, and the letters lean to the right."),
+        huruf={"utama": ("title", "very large heavy connected brush script with thick strokes, dry-brush edges and a big capital", "white"),
+               "sokongan": ("lower", "very large heavy connected brush script with thick strokes and dry-brush edges", "white"),
+               "penyambung": ("lower", "smaller heavy brush script", "white")},
+        hierarki="All the words are about the same size.",
+        hiasan="One long dry brush stroke underlines the last line.",
+        margin="Wide empty black margins.",
+        larangan="Solid white strokes with rough dry-brush edges. White on black only, no outline, no shadow.",
+        risiko=["skrip bersambung: huruf boleh tertinggal atau bertambah", "garis bawah boleh dibaca sebagai huruf",
+                "tepi berus kering boleh jadi terlalu pecah pada model lain (FLUX 3 Klein: tepi kasar 35-109%)"],
+        jangan_salin=["ayat Trust Your Pace (design K24T sudah memakainya)"],
+        decode=dict(rekod="decode/K24T_ernie_s7.json", versi="SK09 v1.2", jenis_susunan="lettering bertaut",
+                    condong_blok=0.0, condong_huruf=28.5, indeks_tebal=0.284, kontras_strok=2.46, strok_nipis_pct=14.9,
+                    kongsi_bentuk_terbesar=0.39, gelung_setiap_huruf=0.85, tepi_kasar_pct=33.7, bentuk_blok="segi empat",
+                    kepadatan_blok_pct=38.6, tepi_pct=dict(kiri=10.7, kanan=10.5, atas=16.1, bawah=16.2)),
+        qc=[("Skrip berus tebal bersambung", True),
+            ("Tepi strok berus kering (garis halus di hujung strok)", True),
+            ("Huruf condong ke kanan, garis dasar mendatar", True),
+            ("Satu garis bawah berus di bawah baris akhir", False),
+            ("Baris rapat dan sedikit bertindih, satu blok tengah", False),
+            ("Semua perkataan hampir sama besar", False),
+            ("Huruf awal besar pada perkataan pertama", False),
+            ("Putih satu warna, tiada hiasan lain selain garis bawah", False)]),
 }
 
 
@@ -516,6 +551,7 @@ BLOK = {
         hiasan="The last letter of each line ends in a long flat horizontal swash.", sisi=None, hiasan_kotak=[],
         tiada=["other colors", "outline", "shadow"], ada="solid white strokes on a clean black background",
         sama_lebar=False,
+        # Untuk ayat 3 baris (julat kad 2-4 perkataan); ayat 5 baris gagal semakan 3.11 (di luar julat kad).
         # Kotak baris (piksel, kanvas 768x1024) daripada kotak kata rekod decode: lebar kata 78% / 60% lebar gambar,
         # tinggi blok 74% kanvas dibahagi tiga baris (baris bertindih dalam rujukan; kotak tidak bertindih).
         ukuran=dict(utama=(592, 248), sokongan=(464, 248), penyambung=(296, 120)),
@@ -524,6 +560,26 @@ BLOK = {
         # ialah urusan prompt, bukan SK01.
         rujukan=dict(condong_darjah=1.8, tepi_pct=10.6, tepi_sisi_pct=10.6, tepi_atas_bawah_pct=12.7,
                      sumber="SK09 v1.2 pada IMG_5840 (decode/IMG_5840.json)")),
+    "K25": dict(
+        medium="brush script quote poster", gaya="hand-lettered", latar_warna="solid black", latar_isi=None,
+        tepi="rough dry-brush edges", bentuk="one tight block", condong=None,
+        sentuh="sit close together and overlap slightly", margin="wide empty black margins",
+        huruf={"utama": dict(penuh="very large heavy connected brush script with thick strokes and dry-brush edges, leaning to the right, with a big capital",
+                             ringkas="heavy connected brush script"),
+               "sokongan": dict(penuh="very large heavy connected brush script with thick strokes and dry-brush edges, leaning to the right",
+                                ringkas="heavy connected brush script"),
+               "penyambung": dict(penuh="smaller heavy brush script", ringkas="heavy brush script")},
+        tertinggi=None, hierarki="All the words are about the same size.",
+        hiasan="One long dry brush stroke underlines the last line.", sisi=None,
+        hiasan_kotak=[dict(pada="bawah", nama="swash", frasa="a long dry brush stroke underline",
+                           ayat="One long dry brush stroke underlines the last line")],
+        tiada=["other colors", "outline", "shadow"], ada="solid white strokes on a clean black background",
+        sama_lebar=False,
+        # Kotak baris untuk ayat 3 baris (julat kad 2-4 perkataan); ayat 5 baris gagal semakan 3.11 (di luar julat).
+        ukuran=dict(utama=(592, 232), sokongan=(464, 232), penyambung=(296, 112)),
+        # Diukur SK09 v1.2 daripada imej jana yang dipilih pengguna (selepas diluruskan), 28 Nov 2026. Satu imej.
+        rujukan=dict(condong_darjah=0.0, tepi_pct=10.5, tepi_sisi_pct=10.5, tepi_atas_bawah_pct=16.1,
+                     sumber="SK09 v1.2 pada lulus/K24T_ernie_s7.png (decode/K24T_ernie_s7.json)")),
 }
 
 

@@ -73,6 +73,11 @@ Bahagian ini mengatasi mana-mana ayat lain dalam fail ini yang bercanggah dengan
 - **Kelulusan pengguna 28 Nov 2026:** Kad K24 (v1.1) diluluskan. Design hitam putih yang dipilih: imej 4 = ERNIE seed 7 pusingan 0 (`lulus/K24T_ernie_s7.png`, rekod `lulus/K24T.json`). Catatan: imej itu dijana dengan kad v1.0 (tepi berus kering), bukan v1.1; pilihan pengguna mengatasi cadangan Claude (imej 10). Direkod dalam `belajar/pengguna.jsonl`.
 - `belajar.py` dan `belajar_sk.py` dijalankan selepas batch: tiada ubahan aturan model; ubahan masuk kad K24 (ciri gaya, bukan cara menulis prompt). Hasil eksport TIDAK dimuat naik ke dashboard dari cawangan ini, kerana cawangan ini tiada batch sesi lain dan akan menimpa data yang lebih baharu.
 
+- **Simpan (pilihan pengguna A, 28 Nov 2026):** 10 imej K24T disimpan di tab AI Image Test sebagai U29 (`data/ai_tests/rows/U29.json`); imej 4 bertanda ★ Final dengan gambar siap selepas diluruskan. 10 baris itu ditambah terus pada dataset live (1070 → 1080 baris) supaya baris sesi lain (U13–U28) tidak ditimpa; eksport `data/export/ai_tests/ai_all.json` di cawangan ini hanya ada baris cawangan ini.
+- **Kad K25 (keputusan pengguna 28 Nov 2026):** gaya berus kering daripada imej 4 dijadikan kad berasingan. Frasa = kad K24 v1.0 + garis bawah berus; ukuran daripada rekod decode imej itu (`decode/K24T_ernie_s7.json`). Belum diuji dengan jana baharu. K24 kekal gaya tepi licin (v1.1).
+- **Pendua yang terlepas:** IMG_5840 sudah ada kad K22 dan K9 di cawangan sesi lain (37 imej dalam AI Image Test). Langkah 1b (semak pendua) hanya melihat Daftar S/C, jadi tidak menangkapnya. Sehingga cawangan digabung, semak pendua juga pada lajur rujukan dataset `ai_all`.
+- Kad K24 dan K25 mempunyai `ukuran` untuk ayat 3–4 baris; gabungan dengan ayat 5 baris gagal semakan 3.11 (di luar julat kad), jadi `python3 pembina.py` kini melaporkan 16 gabungan gagal yang memang tidak dipakai.
+
 Guna: `python3 skrip/SK09_decode.py <gambar> [--semak]`; `python3 skrip/SK10_banding.py --gambar <upload> <imej jana…>` atau dengan dua rekod JSON.
 
 ## Urutan tetap: hitam putih dahulu, warna akhir sekali (keputusan pengguna 26 Nov 2026)
