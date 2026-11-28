@@ -14,15 +14,15 @@
   "cacat_berulang": "-",
   "tindakan": "Tiada tindakan: tiada cacat berulang",
   "ubahan_dicuba": 0,
-  "tarikh": "2026-11-27"
+  "tarikh": "2026-11-28"
  },
  {
   "sk": "SK02",
   "nama": "ruang tepi",
   "langkah": "5b",
   "versi": "5b v1.1",
-  "imej": 19,
-  "lulus": 19,
+  "imej": 20,
+  "lulus": 20,
   "cacat_sk": 0,
   "input_rosak": 0,
   "belum_semak": 0,
@@ -31,15 +31,15 @@
   "cacat_berulang": "-",
   "tindakan": "Tiada tindakan: tiada cacat berulang",
   "ubahan_dicuba": 0,
-  "tarikh": "2026-11-27"
+  "tarikh": "2026-11-28"
  },
  {
   "sk": "SK03",
   "nama": "kedudukan",
   "langkah": "5b",
   "versi": "5b v1.1",
-  "imej": 17,
-  "lulus": 17,
+  "imej": 20,
+  "lulus": 20,
   "cacat_sk": 0,
   "input_rosak": 0,
   "belum_semak": 0,
@@ -48,15 +48,15 @@
   "cacat_berulang": "-",
   "tindakan": "Tiada tindakan: tiada cacat berulang",
   "ubahan_dicuba": 0,
-  "tarikh": "2026-11-27"
+  "tarikh": "2026-11-28"
  },
  {
   "sk": "SK04",
   "nama": "hitam putih",
   "langkah": "5b",
   "versi": "5b v1.1",
-  "imej": 32,
-  "lulus": 32,
+  "imej": 37,
+  "lulus": 37,
   "cacat_sk": 0,
   "input_rosak": 0,
   "belum_semak": 0,
@@ -65,7 +65,7 @@
   "cacat_berulang": "-",
   "tindakan": "Tiada tindakan: tiada cacat berulang",
   "ubahan_dicuba": 0,
-  "tarikh": "2026-11-27"
+  "tarikh": "2026-11-28"
  },
  {
   "sk": "SK05",
@@ -82,7 +82,7 @@
   "cacat_berulang": "-",
   "tindakan": "Tiada tindakan: tiada cacat berulang",
   "ubahan_dicuba": 0,
-  "tarikh": "2026-11-27"
+  "tarikh": "2026-11-28"
  },
  {
   "sk": "SK06",
@@ -99,7 +99,7 @@
   "cacat_berulang": "-",
   "tindakan": "Kad K8, had tekstur: butir bawah 1 px dan tepi marker kering tidak ditiru: pada JPEG 600x449 itu kesan mampatan; perlu gambar upload lebih besar",
   "ubahan_dicuba": 3,
-  "tarikh": "2026-11-27"
+  "tarikh": "2026-11-28"
  },
  {
   "sk": "SK07",
@@ -116,7 +116,7 @@
   "cacat_berulang": "-",
   "tindakan": "Tiada tindakan: tiada cacat berulang",
   "ubahan_dicuba": 1,
-  "tarikh": "2026-11-27"
+  "tarikh": "2026-11-28"
  },
  {
   "sk": "SK08",
@@ -133,6 +133,40 @@
   "cacat_berulang": "-",
   "tindakan": "Tiada tindakan: tiada cacat berulang",
   "ubahan_dicuba": 0,
-  "tarikh": "2026-11-27"
+  "tarikh": "2026-11-28"
+ },
+ {
+  "sk": "SK09",
+  "nama": "decode",
+  "langkah": "?",
+  "versi": "SK09 v1.2",
+  "imej": 0,
+  "lulus": 0,
+  "cacat_sk": 0,
+  "input_rosak": 0,
+  "belum_semak": 0,
+  "tolak": 0,
+  "suka": 0,
+  "cacat_berulang": "-",
+  "tindakan": "Tiada tindakan: tiada cacat berulang",
+  "ubahan_dicuba": 0,
+  "tarikh": "2026-11-28"
+ },
+ {
+  "sk": "SK10",
+  "nama": "banding",
+  "langkah": "?",
+  "versi": "SK10 v1.2",
+  "imej": 0,
+  "lulus": 0,
+  "cacat_sk": 0,
+  "input_rosak": 0,
+  "belum_semak": 0,
+  "tolak": 0,
+  "suka": 0,
+  "cacat_berulang": "-",
+  "tindakan": "Tiada tindakan: tiada cacat berulang",
+  "ubahan_dicuba": 0,
+  "tarikh": "2026-11-28"
  }
 ]

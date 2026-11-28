@@ -1,7 +1,7 @@
 {
  "versi": "b1.1 (27 Nov 2026)",
- "tarikh": "2026-11-27",
- "imej": 126,
+ "tarikh": "2026-11-28",
+ "imej": 136,
  "suka": 0,
  "tolak": 0,
  "model": {
@@ -216,29 +216,29 @@
      "design": 1
     },
     "r1": {
-     "imej": 9,
-     "lulus": 8,
-     "pct": 89,
+     "imej": 13,
+     "lulus": 12,
+     "pct": 92,
      "suka": 0,
      "tolak": 0,
-     "design": 3
+     "design": 4
     }
    },
    "semasa": {
-    "imej": 9,
-    "lulus": 8,
-    "pct": 89,
+    "imej": 13,
+    "lulus": 12,
+    "pct": 92,
     "suka": 0,
     "tolak": 0,
-    "design": 3
+    "design": 4
    },
    "semua": {
-    "imej": 21,
-    "lulus": 15,
-    "pct": 71,
+    "imej": 25,
+    "lulus": 19,
+    "pct": 76,
     "suka": 0,
     "tolak": 0,
-    "design": 7
+    "design": 8
    },
    "berulang": [
     {
@@ -252,6 +252,17 @@
      ],
      "cadangan": "frasa_bentuk",
      "cadangan_teks": "Frasa bentuk huruf dalam aturan model"
+    },
+    {
+     "kelas": "lain",
+     "nama": "Cacat lain (tiada kelas)",
+     "imej": 4,
+     "gagal": 0,
+     "design": [
+      "K24T"
+     ],
+     "cadangan": null,
+     "cadangan_teks": "Tanya pengguna sebabnya; tambah ke kad sebagai ciri QC"
     }
    ],
    "ubahan_dicuba": 1,
@@ -288,29 +299,29 @@
      "design": 1
     },
     "r1": {
-     "imej": 9,
-     "lulus": 6,
-     "pct": 67,
+     "imej": 13,
+     "lulus": 10,
+     "pct": 77,
      "suka": 0,
      "tolak": 0,
-     "design": 3
+     "design": 4
     }
    },
    "semasa": {
-    "imej": 9,
-    "lulus": 6,
-    "pct": 67,
+    "imej": 13,
+    "lulus": 10,
+    "pct": 77,
     "suka": 0,
     "tolak": 0,
-    "design": 3
+    "design": 4
    },
    "semua": {
-    "imej": 27,
-    "lulus": 20,
-    "pct": 74,
+    "imej": 31,
+    "lulus": 24,
+    "pct": 77,
     "suka": 0,
     "tolak": 0,
-    "design": 8
+    "design": 9
    },
    "berulang": [
     {
@@ -323,6 +334,17 @@
      ],
      "cadangan": null,
      "cadangan_teks": "Pilihan ubahan habis: tukar ke model seterusnya ikut jadual model × gaya, kemudian pendekkan ayat, kemudian lapor kepada pengguna"
+    },
+    {
+     "kelas": "lain",
+     "nama": "Cacat lain (tiada kelas)",
+     "imej": 4,
+     "gagal": 0,
+     "design": [
+      "K24T"
+     ],
+     "cadangan": null,
+     "cadangan_teks": "Tanya pengguna sebabnya; tambah ke kad sebagai ciri QC"
     }
    ],
    "ubahan_dicuba": 3,
@@ -350,37 +372,49 @@
      "design": 3
     },
     "r1": {
-     "imej": 9,
-     "lulus": 9,
+     "imej": 11,
+     "lulus": 11,
      "pct": 100,
      "suka": 0,
      "tolak": 0,
-     "design": 3
+     "design": 4
     }
    },
    "semasa": {
-    "imej": 9,
-    "lulus": 9,
+    "imej": 11,
+    "lulus": 11,
     "pct": 100,
     "suka": 0,
     "tolak": 0,
-    "design": 3
+    "design": 4
    },
    "semua": {
-    "imej": 18,
-    "lulus": 15,
-    "pct": 83,
+    "imej": 20,
+    "lulus": 17,
+    "pct": 85,
     "suka": 0,
     "tolak": 0,
-    "design": 3
+    "design": 4
    },
-   "berulang": [],
+   "berulang": [
+    {
+     "kelas": "lain",
+     "nama": "Cacat lain (tiada kelas)",
+     "imej": 2,
+     "gagal": 0,
+     "design": [
+      "K24T"
+     ],
+     "cadangan": null,
+     "cadangan_teks": "Tanya pengguna sebabnya; tambah ke kad sebagai ciri QC"
+    }
+   ],
    "ubahan_dicuba": 2,
    "suka_imej": [],
    "tindakan": [
     {
-     "jenis": "tiada",
-     "teks": "Tiada tindakan: tiada cacat berulang pada aturan semasa"
+     "jenis": "habis",
+     "teks": "Cacat 'Cacat lain (tiada kelas)': Tanya pengguna sebabnya; tambah ke kad sebagai ciri QC"
     }
    ]
   },
