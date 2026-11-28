@@ -1,0 +1,29 @@
+{
+ "nama_gaya": "Sans pekat besar + satu kata dalam kotak berus + baris kecil",
+ "medium": "poster tipografi rata",
+ "teks_rujukan": [
+  "START",
+  "MESSY.",
+  "FINISH",
+  "PROUD.",
+  "Your first draft counts."
+ ],
+ "kelas_huruf": {
+  "1": "sans pekat sempit, huruf besar",
+  "2": "sans pekat sempit, huruf besar, warna latar di dalam kotak",
+  "3": "sans pekat sempit, huruf besar",
+  "4": "sans pekat sempit, huruf besar",
+  "5": "sans tebal, huruf campur, kecil"
+ },
+ "hiasan": [
+  "kotak berus bertepi kasar di belakang baris 2",
+  "dua garis berus pendek di kiri dan kanan baris kecil"
+ ],
+ "tanda_baca": "noktah selepas baris 2, 4 dan 5",
+ "jangan_salin": [
+  "ayat asal",
+  "susun atur tepat",
+  "tandatangan / logo jika ada"
+ ],
+ "nota": "Hampir penuh kanvas; baris hampir bersentuh. Kotak lebih lebar daripada baris teks."
+}

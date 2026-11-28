@@ -1,0 +1,26 @@
+{
+ "nama_gaya": "Skrip berus tebal condong + garis bawah berus",
+ "medium": "lettering berus",
+ "teks_rujukan": [
+  "Make",
+  "it",
+  "happen"
+ ],
+ "kelas_huruf": {
+  "1": "skrip berus tebal, huruf awal besar",
+  "2": "skrip berus, huruf kecil",
+  "3": "skrip berus tebal, huruf kecil"
+ },
+ "hiasan": [
+  "sapuan berus kering di bawah baris akhir",
+  "sapuan pendek di bawah 'it'",
+  "bayang lembut di bawah huruf"
+ ],
+ "tanda_baca": "tiada",
+ "jangan_salin": [
+  "ayat asal",
+  "susun atur tepat",
+  "tandatangan / logo jika ada"
+ ],
+ "nota": "Seluruh blok naik ke kanan; baris bertindih (ekor huruf masuk ke baris sebelah). Bayang lembut tidak dijana dalam v1.2 (hitam putih); ia urusan Warna v1."
+}

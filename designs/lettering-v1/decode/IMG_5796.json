@@ -1,0 +1,332 @@
+{
+ "versi": "SK09 v1.0",
+ "fail": "IMG_5796.jpeg",
+ "sha1": "db25b88b1c53",
+ "tarikh": "2026-11-28",
+ "sumber_medan": "diukur skrip (kecuali kumpulan 'mata' = mata Claude)",
+ "kanvas": {
+  "w": 1024,
+  "h": 1536,
+  "nisbah": 0.667
+ },
+ "amaran": [],
+ "susunan": {
+  "condong_darjah": 0.0,
+  "kotak_blok": [
+   25,
+   39,
+   1004,
+   1441
+  ],
+  "tepi_pct": {
+   "kiri": 2.4,
+   "kanan": 2.0,
+   "atas": 2.5,
+   "bawah": 6.2
+  },
+  "tepi_min_pct": 2.0,
+  "pusat_dx_pct": 0.2,
+  "pusat_dy_pct": -1.8,
+  "nisbah_blok": 0.698,
+  "liputan_dakwat_pct": 51.1,
+  "isian_blok_pct": 58.6,
+  "bil_baris": 5,
+  "penjajaran": "tengah",
+  "serakan_penjajaran_pct": 0.7,
+  "sela_baris_pct": [
+   0.3,
+   0.3,
+   0.9,
+   3.4
+  ],
+  "hierarki_nisbah": 9.42,
+  "baris_tertinggi": 1,
+  "ambang_dakwat": 27.0
+ },
+ "baris": [
+  {
+   "n": 1,
+   "atas_pct": 0.0,
+   "tinggi_pct": 22.6,
+   "jalur_tinggi_pct": 22.6,
+   "warna_teks": "#151515",
+   "dalam_bekas": false,
+   "bekas": null,
+   "kotak_blok_pct": [
+    4.0,
+    95.8
+   ],
+   "tinggi_px": 317,
+   "lebar_px": 899,
+   "ukuran_kasar": false,
+   "lebar_pct": 91.8,
+   "tebal_strok_pct": 23.8,
+   "kontras_strok": 1.17,
+   "isian_pct": 70.0,
+   "condong_huruf_darjah": 0.0,
+   "komponen": 5,
+   "komponen_besar": 5,
+   "bersambung": false,
+   "nisbah_lebar_huruf": 0.59,
+   "beza_tinggi_huruf": 0.009,
+   "huruf": "HURUF BESAR (tinggi seragam)",
+   "tepi_kasar_pct": 1.8,
+   "pecah_pct": 2.3,
+   "kelas_anggaran": "blok pekat",
+   "peranan_saiz": "utama"
+  },
+  {
+   "n": 2,
+   "atas_pct": 22.9,
+   "tinggi_pct": 21.3,
+   "jalur_tinggi_pct": 25.0,
+   "warna_teks": "#f6f1e6",
+   "dalam_bekas": true,
+   "bekas": "pejal",
+   "kotak_blok_pct": [
+    4.8,
+    97.0
+   ],
+   "tinggi_px": 298,
+   "lebar_px": 903,
+   "ukuran_kasar": false,
+   "lebar_pct": 92.2,
+   "tebal_strok_pct": 21.3,
+   "kontras_strok": 1.17,
+   "isian_pct": 69.4,
+   "condong_huruf_darjah": 0.0,
+   "komponen": 6,
+   "komponen_besar": 5,
+   "bersambung": false,
+   "nisbah_lebar_huruf": 0.55,
+   "beza_tinggi_huruf": 0.02,
+   "huruf": "HURUF BESAR (tinggi seragam)",
+   "tepi_kasar_pct": 2.4,
+   "pecah_pct": 1.2,
+   "kelas_anggaran": "blok pekat",
+   "warna_bekas": "#f65f0e",
+   "bekas_lebar_pct": 99.6,
+   "peranan_saiz": "utama"
+  },
+  {
+   "n": 3,
+   "atas_pct": 48.2,
+   "tinggi_pct": 22.5,
+   "jalur_tinggi_pct": 22.5,
+   "warna_teks": "#151515",
+   "dalam_bekas": false,
+   "bekas": null,
+   "kotak_blok_pct": [
+    2.2,
+    97.0
+   ],
+   "tinggi_px": 315,
+   "lebar_px": 928,
+   "ukuran_kasar": false,
+   "lebar_pct": 94.8,
+   "tebal_strok_pct": 24.1,
+   "kontras_strok": 1.14,
+   "isian_pct": 78.0,
+   "condong_huruf_darjah": 0.0,
+   "komponen": 6,
+   "komponen_besar": 6,
+   "bersambung": false,
+   "nisbah_lebar_huruf": 0.53,
+   "beza_tinggi_huruf": 0.01,
+   "huruf": "HURUF BESAR (tinggi seragam)",
+   "tepi_kasar_pct": 1.9,
+   "pecah_pct": 1.8,
+   "kelas_anggaran": "blok pekat",
+   "peranan_saiz": "utama"
+  },
+  {
+   "n": 4,
+   "atas_pct": 71.6,
+   "tinggi_pct": 22.5,
+   "jalur_tinggi_pct": 22.5,
+   "warna_teks": "#151515",
+   "dalam_bekas": false,
+   "bekas": null,
+   "kotak_blok_pct": [
+    2.2,
+    100.0
+   ],
+   "tinggi_px": 316,
+   "lebar_px": 957,
+   "ukuran_kasar": false,
+   "lebar_pct": 97.8,
+   "tebal_strok_pct": 24.1,
+   "kontras_strok": 1.03,
+   "isian_pct": 74.5,
+   "condong_huruf_darjah": 0.0,
+   "komponen": 6,
+   "komponen_besar": 5,
+   "bersambung": false,
+   "nisbah_lebar_huruf": 0.56,
+   "beza_tinggi_huruf": 0.014,
+   "huruf": "HURUF BESAR (tinggi seragam)",
+   "tepi_kasar_pct": 0.9,
+   "pecah_pct": 1.2,
+   "kelas_anggaran": "blok pekat",
+   "peranan_saiz": "utama"
+  },
+  {
+   "n": 5,
+   "atas_pct": 97.6,
+   "tinggi_pct": 2.4,
+   "jalur_tinggi_pct": 2.4,
+   "warna_teks": "#151515",
+   "dalam_bekas": false,
+   "bekas": null,
+   "kotak_blok_pct": [
+    24.0,
+    74.6
+   ],
+   "tinggi_px": 34,
+   "lebar_px": 495,
+   "ukuran_kasar": true,
+   "lebar_pct": 50.6,
+   "tebal_strok_pct": 23.5,
+   "kontras_strok": 1.05,
+   "isian_pct": 44.2,
+   "condong_huruf_darjah": 0.0,
+   "komponen": 20,
+   "komponen_besar": 20,
+   "bersambung": false,
+   "nisbah_lebar_huruf": 0.79,
+   "beza_tinggi_huruf": 0.112,
+   "huruf": "huruf campur (tinggi tidak seragam)",
+   "tepi_kasar_pct": 3.8,
+   "pecah_pct": 3.3,
+   "kelas_anggaran": "blok pekat",
+   "peranan_saiz": "kecil"
+  }
+ ],
+ "elemen": [
+  {
+   "jenis": "bekas (kotak / label)",
+   "kotak_pct": [
+    0.0,
+    22.9,
+    99.6,
+    47.9
+   ],
+   "warna": "#f65f0e",
+   "baris": 2
+  },
+  {
+   "jenis": "garis",
+   "kotak_pct": [
+    78.1,
+    97.8,
+    91.6,
+    99.5
+   ],
+   "warna": "#f65f0e"
+  },
+  {
+   "jenis": "garis",
+   "kotak_pct": [
+    7.8,
+    98.1,
+    21.2,
+    99.6
+   ],
+   "warna": "#f65f0e"
+  }
+ ],
+ "warna": {
+  "latar": "#f6f2e7",
+  "bil_dakwat": 2,
+  "dakwat": [
+   {
+    "hex": "#151515",
+    "kongsi_pct": 41.3,
+    "peranan": "teks",
+    "ton": 1
+   },
+   {
+    "hex": "#f65f0e",
+    "kongsi_pct": 8.6,
+    "peranan": "bekas (kotak / label)",
+    "ton": 1
+   }
+  ],
+  "palet": [
+   {
+    "hex": "#f6f1e6",
+    "kongsi_pct": 48.6,
+    "peranan": "latar",
+    "beza_dari_latar": 0.4
+   },
+   {
+    "hex": "#151515",
+    "kongsi_pct": 41.3,
+    "peranan": "teks",
+    "beza_dari_latar": 88.6
+   },
+   {
+    "hex": "#f65f0e",
+    "kongsi_pct": 8.6,
+    "peranan": "bekas (kotak / label)",
+    "beza_dari_latar": 89.9
+   },
+   {
+    "hex": "#fba474",
+    "kongsi_pct": 0.6,
+    "peranan": "peralihan tepi (antialias)",
+    "beza_dari_latar": 47.3
+   },
+   {
+    "hex": "#a7a49f",
+    "kongsi_pct": 0.5,
+    "peranan": "ton latar (bayang atau tekstur latar)",
+    "beza_dari_latar": 27.9
+   },
+   {
+    "hex": "#52514f",
+    "kongsi_pct": 0.5,
+    "peranan": "peralihan tepi (antialias)",
+    "beza_dari_latar": 60.9
+   }
+  ]
+ },
+ "tekstur": {
+  "latar_sd": 1.15,
+  "latar": "rata",
+  "dakwat_sd": 0.55,
+  "dakwat": "rata",
+  "huruf_pecah_pct": 1.6,
+  "bayang_lembut_pct": 0.0
+ },
+ "mata": {
+  "nama_gaya": "Sans pekat besar + satu kata dalam kotak berus + baris kecil",
+  "medium": "poster tipografi rata",
+  "teks_rujukan": [
+   "START",
+   "MESSY.",
+   "FINISH",
+   "PROUD.",
+   "Your first draft counts."
+  ],
+  "kelas_huruf": {
+   "1": "sans pekat sempit, huruf besar",
+   "2": "sans pekat sempit, huruf besar, warna latar di dalam kotak",
+   "3": "sans pekat sempit, huruf besar",
+   "4": "sans pekat sempit, huruf besar",
+   "5": "sans tebal, huruf campur, kecil"
+  },
+  "hiasan": [
+   "kotak berus bertepi kasar di belakang baris 2",
+   "dua garis berus pendek di kiri dan kanan baris kecil"
+  ],
+  "tanda_baca": "noktah selepas baris 2, 4 dan 5",
+  "jangan_salin": [
+   "ayat asal",
+   "susun atur tepat",
+   "tandatangan / logo jika ada"
+  ],
+  "nota": "Hampir penuh kanvas; baris hampir bersentuh. Kotak lebih lebar daripada baris teks.",
+  "sumber": "mata Claude"
+ }
+}

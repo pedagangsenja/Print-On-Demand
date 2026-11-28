@@ -1,0 +1,28 @@
+{
+ "nama_gaya": "Sans pekat sempit rata kiri + satu kata dalam kotak penuh",
+ "medium": "poster tipografi rata",
+ "teks_rujukan": [
+  "WORK",
+  "IN SILENCE.",
+  "LET YOUR",
+  "RESULTS",
+  "SPEAK."
+ ],
+ "kelas_huruf": {
+  "1": "sans pekat sempit, huruf besar",
+  "2": "sans pekat sempit, huruf besar",
+  "3": "sans pekat sempit, huruf besar",
+  "4": "sans pekat sempit, huruf besar",
+  "5": "sans pekat sempit, huruf besar"
+ },
+ "hiasan": [
+  "kotak segi empat tepat pejal bertepi tajam di belakang baris 4"
+ ],
+ "tanda_baca": "noktah selepas baris 2 dan 5",
+ "jangan_salin": [
+  "ayat asal",
+  "susun atur tepat",
+  "tandatangan / logo jika ada"
+ ],
+ "nota": "Semua baris sama tinggi; lebar baris berbeza ikut panjang perkataan; rata kiri."
+}

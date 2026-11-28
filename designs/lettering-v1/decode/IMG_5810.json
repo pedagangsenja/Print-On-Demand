@@ -1,0 +1,236 @@
+{
+ "versi": "SK09 v1.0",
+ "fail": "IMG_5810.jpeg",
+ "sha1": "67b92924234b",
+ "tarikh": "2026-11-28",
+ "sumber_medan": "diukur skrip (kecuali kumpulan 'mata' = mata Claude)",
+ "kanvas": {
+  "w": 736,
+  "h": 1308,
+  "nisbah": 0.563
+ },
+ "amaran": [],
+ "susunan": {
+  "condong_darjah": 14.8,
+  "kotak_blok": [
+   84,
+   256,
+   680,
+   1111
+  ],
+  "tepi_pct": {
+   "kiri": 11.4,
+   "kanan": 7.6,
+   "atas": 19.6,
+   "bawah": 15.1
+  },
+  "tepi_min_pct": 7.6,
+  "pusat_dx_pct": 1.9,
+  "pusat_dy_pct": 2.3,
+  "nisbah_blok": 0.697,
+  "liputan_dakwat_pct": 20.6,
+  "isian_blok_pct": 39.0,
+  "bil_baris": 3,
+  "penjajaran": "tengah",
+  "serakan_penjajaran_pct": 6.9,
+  "sela_baris_pct": [
+   0.0,
+   0.0
+  ],
+  "hierarki_nisbah": 2.75,
+  "baris_tertinggi": 1,
+  "ambang_dakwat": 32.1
+ },
+ "baris": [
+  {
+   "n": 1,
+   "atas_pct": 0.8,
+   "tinggi_pct": 43.8,
+   "jalur_tinggi_pct": 43.8,
+   "warna_teks": "#f98a06",
+   "dalam_bekas": false,
+   "bekas": null,
+   "kotak_blok_pct": [
+    15.5,
+    100.0
+   ],
+   "tinggi_px": 344,
+   "lebar_px": 595,
+   "ukuran_kasar": false,
+   "lebar_pct": 84.5,
+   "tebal_strok_pct": 10.6,
+   "kontras_strok": 1.57,
+   "isian_pct": 43.5,
+   "condong_huruf_darjah": 31.0,
+   "komponen": 5,
+   "komponen_besar": 2,
+   "bersambung": false,
+   "nisbah_lebar_huruf": 1.15,
+   "beza_tinggi_huruf": 0.023,
+   "huruf": "HURUF BESAR (tinggi seragam)",
+   "tepi_kasar_pct": 20.9,
+   "pecah_pct": 5.3,
+   "kelas_anggaran": "skrip / tulisan sambung",
+   "peranan_saiz": "utama"
+  },
+  {
+   "n": 2,
+   "atas_pct": 44.6,
+   "tinggi_pct": 15.9,
+   "jalur_tinggi_pct": 15.9,
+   "warna_teks": "#f98a06",
+   "dalam_bekas": false,
+   "bekas": null,
+   "kotak_blok_pct": [
+    13.9,
+    68.9
+   ],
+   "tinggi_px": 125,
+   "lebar_px": 387,
+   "ukuran_kasar": false,
+   "lebar_pct": 55.0,
+   "tebal_strok_pct": 22.6,
+   "kontras_strok": 1.69,
+   "isian_pct": 35.7,
+   "condong_huruf_darjah": 36.0,
+   "komponen": 2,
+   "komponen_besar": 2,
+   "bersambung": true,
+   "nisbah_lebar_huruf": null,
+   "beza_tinggi_huruf": 0.03,
+   "huruf": "HURUF BESAR (tinggi seragam)",
+   "tepi_kasar_pct": 9.5,
+   "pecah_pct": 0.7,
+   "kelas_anggaran": "skrip / tulisan sambung",
+   "peranan_saiz": "kecil"
+  },
+  {
+   "n": 3,
+   "atas_pct": 60.5,
+   "tinggi_pct": 25.5,
+   "jalur_tinggi_pct": 25.5,
+   "warna_teks": "#f98a06",
+   "dalam_bekas": false,
+   "bekas": null,
+   "kotak_blok_pct": [
+    0.0,
+    91.8
+   ],
+   "tinggi_px": 200,
+   "lebar_px": 646,
+   "ukuran_kasar": false,
+   "lebar_pct": 91.8,
+   "tebal_strok_pct": 16.2,
+   "kontras_strok": 1.55,
+   "isian_pct": 57.0,
+   "condong_huruf_darjah": 30.5,
+   "komponen": 1,
+   "komponen_besar": 1,
+   "bersambung": true,
+   "nisbah_lebar_huruf": null,
+   "beza_tinggi_huruf": null,
+   "huruf": "tidak pasti",
+   "tepi_kasar_pct": 18.3,
+   "pecah_pct": 3.3,
+   "kelas_anggaran": "skrip / tulisan sambung",
+   "peranan_saiz": "kecil"
+  }
+ ],
+ "elemen": [
+  {
+   "jenis": "garis / sapuan",
+   "kotak_pct": [
+    16.1,
+    86.0,
+    78.7,
+    99.4
+   ],
+   "warna": "#f98a06"
+  }
+ ],
+ "warna": {
+  "latar": "#027588",
+  "bil_dakwat": 1,
+  "dakwat": [
+   {
+    "hex": "#f98a06",
+    "kongsi_pct": 17.1,
+    "peranan": "teks",
+    "ton": 2
+   }
+  ],
+  "palet": [
+   {
+    "hex": "#027386",
+    "kongsi_pct": 72.8,
+    "peranan": "latar",
+    "beza_dari_latar": 0.8
+   },
+   {
+    "hex": "#f98a06",
+    "kongsi_pct": 15.1,
+    "peranan": "teks",
+    "beza_dari_latar": 110.1
+   },
+   {
+    "hex": "#0c4b53",
+    "kongsi_pct": 6.7,
+    "peranan": "ton latar (bayang atau tekstur latar)",
+    "beza_dari_latar": 18.6
+   },
+   {
+    "hex": "#414d37",
+    "kongsi_pct": 2.1,
+    "peranan": "dakwat lain (hiasan, bayang atau tekstur huruf)",
+    "beza_dari_latar": 34.6
+   },
+   {
+    "hex": "#c07d24",
+    "kongsi_pct": 2.0,
+    "peranan": "dakwat lain (hiasan, bayang atau tekstur huruf)",
+    "beza_dari_latar": 84.5
+   },
+   {
+    "hex": "#7e642e",
+    "kongsi_pct": 1.3,
+    "peranan": "peralihan tepi (antialias)",
+    "beza_dari_latar": 57.6
+   }
+  ]
+ },
+ "tekstur": {
+  "latar_sd": 2.73,
+  "latar": "berbutir halus",
+  "dakwat_sd": 2.31,
+  "dakwat": "rata",
+  "huruf_pecah_pct": 5.3,
+  "bayang_lembut_pct": 3.04
+ },
+ "mata": {
+  "nama_gaya": "Skrip berus tebal condong + garis bawah berus",
+  "medium": "lettering berus",
+  "teks_rujukan": [
+   "Make",
+   "it",
+   "happen"
+  ],
+  "kelas_huruf": {
+   "1": "skrip berus tebal, huruf awal besar",
+   "2": "skrip berus, huruf kecil",
+   "3": "skrip berus tebal, huruf kecil"
+  },
+  "hiasan": [
+   "sapuan berus kering di bawah baris akhir",
+   "sapuan pendek di bawah 'it'",
+   "bayang lembut di bawah huruf"
+  ],
+  "tanda_baca": "tiada",
+  "jangan_salin": [
+   "ayat asal",
+   "susun atur tepat",
+   "tandatangan / logo jika ada"
+  ],
+  "nota": "Seluruh blok naik ke kanan; baris bertindih (ekor huruf masuk ke baris sebelah). Bayang lembut tidak dijana dalam v1.2 (hitam putih); ia urusan Warna v1.",
+  "sumber": "mata Claude"
+ }
+}

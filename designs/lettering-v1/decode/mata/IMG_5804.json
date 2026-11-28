@@ -1,0 +1,26 @@
+{
+ "nama_gaya": "Blok sans pekat sempit sama lebar + tekstur grunge",
+ "medium": "poster tipografi bertekstur",
+ "teks_rujukan": [
+  "BE",
+  "MORE",
+  "DO",
+  "MORE"
+ ],
+ "kelas_huruf": {
+  "1": "sans pekat sempit, huruf besar",
+  "2": "sans pekat sempit, huruf besar",
+  "3": "sans pekat sempit, huruf besar",
+  "4": "sans pekat sempit, huruf besar"
+ },
+ "hiasan": [
+  "tiada"
+ ],
+ "tanda_baca": "tiada",
+ "jangan_salin": [
+  "ayat asal",
+  "susun atur tepat",
+  "tandatangan / logo jika ada"
+ ],
+ "nota": "Setiap baris diregang supaya sama lebar; baris 2 huruf jadi tinggi, baris 4 huruf jadi rendah. Tekstur calar dalam huruf dan latar batu gelap. Retakan gelap melintasi huruf dikira tekstur."
+}

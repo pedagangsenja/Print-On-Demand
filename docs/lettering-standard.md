@@ -1,4 +1,4 @@
-# Standard Lettering v1.2 (v1: 25 Nov 2026; v1.2: 26 Nov 2026)
+# Standard Lettering v1.2 (v1: 25 Nov 2026; v1.2: 26 Nov 2026; semakan hitam putih sahaja: 28 Nov 2026)
 
 Status: v1 dipersetujui pengguna 25 Nov 2026; v1.2 diluluskan pengguna sebagai standard 26 Nov 2026 (menggantikan v1); **sebahagian dibina**: pembina prompt ikut model siap (3.13); selebihnya lihat "Belum selesai". Liputan: laluan 1–2 (ayat 1–8 perkataan), kemasan F1–F2. Laluan 3–4 = percubaan (belum diuji); F3 ditangguh.
 
@@ -16,6 +16,36 @@ Status: v1 dipersetujui pengguna 25 Nov 2026; v1.2 diluluskan pengguna sebagai s
 
 Yang kekal daripada v1: hitam putih dahulu dan warna oleh skrip; pintu G1–G3; seed tetap; Kad Gaya satu-satunya sumber gaya; 768×1024.
 Bukti, ukuran dan sebab setiap peraturan: `docs/lettering-standard-handover.md` (tahap bukti angka: lemah, kecuali lesen: rasmi). Carta 3 lajur: `docs/lettering-aliran.png` (`scripts/lettering_flowchart.py`).
+
+## Semakan 28 Nov 2026: v1.2 hitam putih sahaja, decode dahulu, QC dua bahagian (keputusan pengguna)
+Bahagian ini mengatasi mana-mana ayat lain dalam fail ini yang bercanggah dengannya.
+
+**Skop v1.2 = hitam putih sahaja.** Aliran: upload → decode → pengguna lulus rekod decode dan kad → ayat → prompt → jana → QC A → pembetulan skrip (5b) → QC B → pengguna lulus hitam putih → simpan → serahan. v1.2 tamat di kelulusan hitam putih. Dua titik kelulusan pengguna: 1d dan langkah 7.
+
+**Dipindah keluar daripada v1.2** (skrip kekal dalam repo; carta workflow baharu belum dibina):
+- **Warna v1:** pilih warna C, SK07 warna ikut peranan, SK08 bayang, QC berwarna, kelulusan berwarna, rekod C.
+- **Cetak v1:** SK06 vektor + tekstur + saiz cetak, mockup, Printify, Pinterest, prestasi ikut kod S / C.
+- Langkah 6, QC akhir berwarna, rekod C dan langkah 9 di bawah dikekalkan sebagai rujukan untuk dua workflow itu.
+
+**Decode (langkah 1u, skrip SK09).** Setiap gambar upload di-decode SEBELUM prompt ditulis, dan rekodnya disimpan di `designs/lettering-v1/decode/<gambar>.json`.
+- Lima kumpulan: susunan (condong blok, ruang tepi, nisbah blok, penjajaran, sela baris, isian blok); baris (bagi setiap baris: tinggi, lebar, tebal strok, kontras strok, lebar huruf, condong huruf, huruf besar / campur, tepi kasar, kelas huruf anggaran, warna teks, dalam bekas atau tidak); elemen (kotak pejal, kotak garis luar, garis, sapuan, hiasan warna lain); warna (latar, dakwat, kod hex, kongsi, peranan); tekstur (latar, huruf, bayang lembut).
+- Setiap medan bertanda sumbernya: "diukur skrip" atau "mata Claude". Medan mata (`decode/mata/<gambar>.json`): nama gaya, kelas huruf sebenar (sans / serif / skrip), teks rujukan, hiasan, senarai jangan salin.
+- Had: skrip mengukur ciri huruf tetapi TIDAK boleh menamakan font. Latar mesti hampir satu warna. Gambar bawah 600 piksel lebar ditanda "ukuran kasar".
+- Warna diukur dan disimpan sekali, tetapi tidak dipakai dalam v1.2; ia untuk Warna v1.
+- Kad Gaya (1c) diisi daripada rekod decode. Angka kad tanpa rekod decode = tekaan, dan tidak dibenarkan untuk kad baharu.
+- Bukti (lemah): diuji pada 4 gambar upload saiz penuh (IMG_5796, IMG_5797, IMG_5804, IMG_5810), 28 Nov 2026; baris, kotak, garis dan warna disemak dengan mata pada gambar semakan (`--semak`).
+
+**QC dua bahagian (langkah 5).**
+- **Bahagian A, pintu wajib:** G1 ejaan 100%, G2 tiada teks rawak, G3 tiada cacat, imej hanya hitam dan putih. Gagal satu = imej gagal (kitaran QC di bawah tidak berubah).
+- **Bahagian B, banding dengan upload (skrip SK10):** imej jana di-decode dengan SK09, kemudian dibanding dengan rekod decode gambar upload, medan demi medan (21 medan gaya dikira dalam mod hitam putih; ruang tepi ditunjuk sebagai maklumat sahaja). Hasil: sama / hampir / beza bagi setiap medan, skor persamaan 0–100, dan SATU ubahan seterusnya = beza terbesar yang bukan kerja skrip 5b, dengan bahagian kad yang perlu dibaiki.
+- Ubahan seterusnya disalur balik ke prompt (langkah 3), satu ubahan setiap pusingan, ikut kitaran QC.
+- Banding GAYA, bukan ayat atau susun atur tepat. Gambar rujukan ialah design orang lain; senarai "jangan salin" kekal.
+- Skor B menanda dan menyusun; ia tidak meluluskan imej. Mata pengguna kekal pintu terakhir (langkah 7).
+- Had setiap medan ialah cadangan Claude 28 Nov 2026, belum ditentukur (bukti lemah). Ruang tepi: kad yang menetapkan, jadi ia tidak dikira dalam skor.
+- Ujian pertama (`qc/sk10_ujian_pertama.json`): 10 imej jana sedia ada lawan 4 upload, skor 76.7–100. Dikesan sendiri: kotak garis luar sedangkan rujukan kotak pejal (ERNIE K12Y, sama dengan catatan QC mata), condong tersasar pada imej mentah (MOSS K9B), tekstur huruf hilang (K10V).
+- Belum dibuat: skor B masuk `belajar.py` secara automatik; paparan sebelah-menyebelah di dashboard; rekod decode dalam stor dashboard.
+
+Guna: `python3 skrip/SK09_decode.py <gambar> [--semak]`; `python3 skrip/SK10_banding.py --gambar <upload> <imej jana…>` atau dengan dua rekod JSON.
 
 ## Urutan tetap: hitam putih dahulu, warna akhir sekali (keputusan pengguna 26 Nov 2026)
 1. AI menjana hitam putih sahaja: dakwat putih atas latar hitam; tiada warna lain, tiada kelabu.
@@ -501,6 +531,7 @@ Turutan semakan setiap imej: pintu wajib G1–G3 → ukur dan betulkan (5b) → 
 - Ruang tepi untuk cetak kekal urusan kemasan (langkah 6); pembetulan di sini hanya supaya imej mentah menepati kad.
 
 ## Langkah 6: Kemasan ikut kad
+> Sejak 28 Nov 2026 langkah ini bukan lagi sebahagian daripada v1.2: warna dan bayang → Warna v1; vektor, tekstur dan saiz cetak → Cetak v1. Isi di bawah dikekalkan sebagai rujukan.
 - Bermula hanya selepas QC mentah (hitam putih) lulus. Urutan skrip (27 Nov 2026): SK07 warna C ikut peranan → SK08 bayang → SK06 vektor + tekstur + saiz cetak → QC akhir. Warna dan bayang dibuat pada imej rata (resolusi asal, tepi anti-alias dikekalkan) sebelum vektor, kerana peta peranan dan bayang perlukan piksel; SK06 menyurih semua lapisan sekali dengan palet tepat (`--palet`).
 - Jalan penuh: `python3 skrip/kemasan.py <kad> <ayat> <gaya S1..S6> <folder keluar> <imej…> [--warna Cxxx] [--sizes 18x24]`. Imej yang GAGAL SK07 dilangkau dan dilapor.
 - Kelas: F1 vektor rata; F2 rata + tekstur. F3 raster: ditangguh.
@@ -525,6 +556,8 @@ Skrip di sini ialah kerja SELEPAS jana (pembetulan 5b dan kemasan langkah 6). Al
 | SK06 | Vektor + saiz cetak (`SK06_finish.py` + `styles.py`) | 6 | SVG induk, susun di tengah, PNG 300 DPI | ruang tepi, tekstur | Dibawa dari `claude/dazzling-cannon-5wzn6h`; diuji pada 1 imej K3H selepas 5b (SVG + 18×24). 27 Nov: parameter `--palet` ditambah (warna tepat SK07 / SK08, topeng setiap warna dilembutkan sebelum surih). Ruang tepi dan tekstur masih tetap S1–S6, belum dibaca daripada kad. **v1.1 (27 Nov 2026, Belajar SK, ubahan `tekstur_kad`, MENANG):** `--kad Kx` = jenis dan kekuatan tekstur daripada kad (kapur, lusuh / grunge, butir; "halus" = 0.6); bahagian tanpa jenis = amaran, diganti tekstur gaya daripada gambar upload yang sama (K8 → S4). **v1.2 (27 Nov 2026, ubahan `tepi_kad`, MENANG):** ruang tepi setiap saiz poster ikut kad (sama seperti SK02), diukur pada blok tulisan; amaran jika beza > 2 mata atau dakwat sentuh tepi. **v1.3 (27 Nov 2026, ubahan `tekstur_marker`, MENANG):** jenis tekstur `marker` (butir latar + butir dakwat) dengan parameter diukur pada gambar upload kad (`--ukur-tekstur`, disimpan di `rujukan.tekstur`); butir dijana pada skala rujukan dan hasil diukur semula (amaran jika beza > 30%) |
 | SK07 | Warna C ikut peranan (`SK07_warna.py`) | 6 | Peta peranan setiap piksel (utama, sokongan, penyambung, hiasan) ikut baris Spesifikasi Teks, kemudian warna kad atau warna C | `peta_warna`, `warna` (kad); `--warna Cxxx` (Daftar S/C) | Dibina 27 Nov 2026; diuji pada 14 imej K3K (12 lulus, 2 GAGAL dikesan betul) + K7M, K8G (satu dakwat, tidak rosak) + 1 varian C001. **v1.1 (27 Nov 2026, Belajar SK, ubahan `belah_leher`, MENANG):** huruf bertaut merentas baris dibelah pada leher paling sempit; 15 imej K3K: 15/15 tanpa cacat SK (v1: 13/15) |
 | SK08 | Bayang ikut kad (`SK08_bayang.py`) | 6 | Bayang 3D dalam huruf: bahagian bawah setiap strok peranan yang diminta jadi kelabu | `rujukan.bayang` (arah, nisbah, warna; diukur `--ukur` pada gambar upload) | Dibina 27 Nov 2026; diukur pada IMG_5775; diuji pada 12 imej K3K yang lulus SK07. Bayang lembut K1 belum (lihat bawah) |
+| SK09 | Decode (`SK09_decode.py`) | 1u, 5 (QC B) | Rekod decode satu gambar: susunan, baris, elemen, warna, tekstur | – (skrip ini yang menghasilkan rekod untuk kad) | Dibina 28 Nov 2026 (v1.0); diuji pada 4 gambar upload saiz penuh dan 10 imej jana. Tidak menamakan font; kelas huruf anggaran |
+| SK10 | Banding (`SK10_banding.py`) | 5 (QC B) | Banding rekod decode imej jana dengan rekod upload; skor persamaan + satu ubahan seterusnya | – (membaca dua rekod SK09) | Dibina 28 Nov 2026 (v1.0); diuji pada 10 imej jana lawan 4 upload. Had belum ditentukur |
 
 Semua skrip di `designs/lettering-v1/skrip/`. Jalan 5b penuh: `python3 skrip/betulkan.py <kad> <folder keluar> <imej…> [--condong D] [--tepi P]` (satu folder keluar bagi setiap model). Ukur gambar upload: `python3 skrip/SK05_ukur.py <gambar>`.
 
@@ -628,6 +661,7 @@ Setiap ubahan SK direkod di sini dan dalam `designs/lettering-v1/belajar/sk_ubah
 - Fail disimpan sebelum sesi tamat: imej mentah, SVG induk, log.
 
 ## Langkah 9: Serahan, mockup, pin, upload
+> Sejak 28 Nov 2026: v1.2 menyerah design hitam putih yang lulus + rekod decode kepada Warna v1; mockup, pin dan upload ialah urusan Cetak v1.
 - Standard lettering berhenti di serahan kepada Workflow (w02–w05).
 - Serahan: fail cetak setiap saiz, pratonton, ayat, kod S dan C, hasil saringan trademark.
 - Setiap produk dan pin ditanda kod S dan C, supaya tab Prestasi menunjukkan gaya dan warna yang menang.
