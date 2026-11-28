@@ -24,7 +24,7 @@ VERSI = "v1.2-p1"
 # rev r0 = ditulis daripada sumber sahaja, belum diuji; r1+ = sudah diuji pada imej.
 DAFTAR = {
     "klein4b": dict(nama="FLUX.2 klein 4B", bahagian="3.4", rev="r2", tarikh="2026-11-27",
-                    status="diuji: K3H, CPU, 3 seed; r2: tukar peranan K12O 0/3 -> 2/3, CPU", sumber="kad model BFL (rasmi); panduan BFL (lemah)"),
+                    status="diuji: K3H, CPU, 3 seed; r2: tukar peranan K43i 0/3 -> 2/3, CPU", sumber="kad model BFL (rasmi); panduan BFL (lemah)"),
     "zturbo": dict(nama="Z-Image Turbo", bahagian="3.5", rev="r1", tarikh="2026-11-26",
                    status="diuji: K3H, CPU, 3 seed", sumber="pasukan Z-Image di Hugging Face + pe.py (rasmi)"),
     "ernie": dict(nama="ERNIE-Image-Turbo", bahagian="3.6", rev="r1", tarikh="2026-11-26",
@@ -46,12 +46,12 @@ W, H = 768, 1024
 # (26 Nov 2026: 'zturbo_satu_baris' diuji pada K8G, tidak berjaya, dibuang.)
 # Calon semasa (27 Nov 2026, larian v1.2 kedua, kitaran QC pusingan 1):
 #   <model>_tukar_peranan: perkataan yang salah eja berulang bertukar peranan dengan baris jiran (TUKAR_UJI); ayat sama.
-#   (ernie_frasa_bentuk K12O + K7M: KALAH 5/5 -> 5/5, swash K7 hilang 3/3; dibuang 28 Nov 2026.)
-#   (zturbo_tukar_peranan K10F dan zturbo_had_positif K12O: KALAH 0/3 -> 0/3, dibuang 27 Nov 2026.)
-#   (klein4b_tukar_peranan: MENANG 0/6 -> 2/6 kerana K12O 0/3 -> 2/3; ditulis balik sebagai aturan klein 4B r2 bagi K12O
-#    sahaja, dalam TUKAR; K10F 0/3 -> 0/3 tidak ditulis.)
+#   (ernie_frasa_bentuk K43i + K7M: KALAH 5/5 -> 5/5, swash K7 hilang 3/3; dibuang 28 Nov 2026.)
+#   (zturbo_tukar_peranan K41g dan zturbo_had_positif K43i: KALAH 0/3 -> 0/3, dibuang 27 Nov 2026.)
+#   (klein4b_tukar_peranan: MENANG 0/6 -> 2/6 kerana K43i 0/3 -> 2/3; ditulis balik sebagai aturan klein 4B r2 bagi K43i
+#    sahaja, dalam TUKAR; K41g 0/3 -> 0/3 tidak ditulis.)
 # Tukar peranan yang sudah menjadi aturan model (3.15 MENANG): model -> {(kad, ayat): perkataan}.
-TUKAR = {"klein4b": {("K12", "O"): "Loosely"}}
+TUKAR = {"klein4b": {("K43", "i"): "Loosely"}}
 TUKAR_UJI = {}  # calon: {(kad, ayat): perkataan}, hidup dengan PEMBINA_UJI=<model>_tukar_peranan
 # Nama calon = <model>_<id pilihan> daripada belajar.py (KELAS), cth. zturbo_had_positif; belajar.py memutuskan menang / kalah (3.15).
 UJI = {u for u in os.environ.get("PEMBINA_UJI", "").split(",") if u}

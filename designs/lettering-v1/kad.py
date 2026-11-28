@@ -19,6 +19,7 @@ TAIL = ("No other text, no letters except the quoted words, no signature, no wat
 
 # Langkah 2: Spesifikasi Teks. Ayat sama untuk semua kad (seragam). Baris: (teks, peranan).
 AYAT = {
+    # 28 Nov 2026 (sesi hab): kad exciting-sagan K9-K13 -> K40-K44, ayat F R O V -> g h i j (Q kekal).
     "P": dict(nama="pendek", laluan=1, ayat="Brave Hearts Begin Again",
               baris=[("Brave", "sokongan"), ("Hearts", "utama"), ("Begin", "sokongan"), ("Again", "utama")]),
     "D": dict(nama="sederhana", laluan=2, ayat="Every Small Step Builds a Bolder You",
@@ -52,17 +53,17 @@ AYAT = {
               baris=[("Keep Going", "sokongan"), ("You Are", "penyambung"), ("Almost", "sokongan"), ("There", "utama")]),
     # 27 Nov 2026: lima ayat baharu untuk lima gambar upload (IMG_5776, 5777, 5761, 5762, 5755); dipilih Claude
     # (pengguna serah pilihan). Ayat asal, bukan ayat rujukan. Setiap ayat dijana dengan SATU kad sahaja:
-    # Q (K9, id K9Q), F (K10, id K10F), R (K11, id K11R), O (K12, id K12O), V (K13, id K13V).
+    # Q (K9, id K40Q), F (K10, id K41g), R (K11, id K42h), O (K12, id K43i), V (K13, id K44j).
     "Q": dict(nama="sederhana", laluan=2, ayat="Quiet Effort Builds Loud Results",
               baris=[("Quiet", "utama"), ("Effort Builds", "penyambung"), ("Loud", "sokongan"), ("Results", "utama")]),
-    "F": dict(nama="pendek", laluan=1, ayat="Fewer Excuses Bigger Moves",
+    "g": dict(nama="pendek", laluan=1, ayat="Fewer Excuses Bigger Moves",
               baris=[("Fewer", "utama"), ("Excuses", "sokongan"), ("Bigger", "sokongan"), ("Moves", "utama")]),
-    "R": dict(nama="sederhana", laluan=2, ayat="The Real Power Is Steady Progress",
+    "h": dict(nama="sederhana", laluan=2, ayat="The Real Power Is Steady Progress",
               baris=[("The", "penyambung"), ("Real", "sokongan"), ("Power", "utama"), ("Is", "penyambung"),
                      ("Steady", "sokongan"), ("Progress", "utama")]),
-    "O": dict(nama="pendek", laluan=1, ayat="Hold Loosely Love Deeply",
+    "i": dict(nama="pendek", laluan=1, ayat="Hold Loosely Love Deeply",
               baris=[("Hold", "sokongan"), ("Loosely", "utama"), ("Love", "sokongan"), ("Deeply", "utama")]),
-    "V": dict(nama="sederhana", laluan=2, ayat="Make the Move or Miss Your Moment",
+    "j": dict(nama="sederhana", laluan=2, ayat="Make the Move or Miss Your Moment",
               baris=[("Make the", "sokongan"), ("Move", "utama"), ("or", "penyambung"), ("Miss", "utama"),
                      ("Your", "penyambung"), ("Moment", "sokongan")]),
 }
@@ -322,7 +323,7 @@ KAD = {
             ("Putih satu warna atas hitam, tiada swash", False)]),
     # 27 Nov 2026: lima kad baharu daripada upload pengguna (rujukan gaya sahaja; ayat dan susun atur tepat tidak
     # disalin). Gambar: designs/lettering-v1/rujukan/. Warna C diukur (k-means) daripada gambar; tidak masuk prompt.
-    "K9": dict(
+    "K40": dict(
         nama="Sans gergasi lusuh + jalur berus berlabel + skrip berus (putih atas hitam)", ref="IMG_5776", versi="v1.0 (27 Nov 2026; dibuat Claude daripada gambar; diluluskan pengguna 27 Nov 2026)",
         kelas="F2", dakwat=3, ruang_tepi=4, tekstur="bintik lusuh grunge", julat="4-7 perkataan",
         warna=dict(latar=("hitam", "#030302", "black"),
@@ -354,7 +355,7 @@ KAD = {
             ("Blok rapat di tengah", False),
             ("Ruang tepi sempit", False),
             ("Hanya putih atas hitam", False)]),
-    "K10": dict(
+    "K41": dict(
         nama="Sans pekat sempit lusuh bertindan (putih atas hitam)", ref="IMG_5777", versi="v1.0 (27 Nov 2026; dibuat Claude daripada gambar; diluluskan pengguna 27 Nov 2026)",
         kelas="F2", dakwat=3, ruang_tepi=10, tekstur="cetakan lusuh berbintik", julat="3-5 perkataan",
         warna=dict(latar=("hitam", "#030101", "black"),
@@ -380,7 +381,7 @@ KAD = {
             ("Tiada hiasan", False),
             ("Ruang tepi sederhana", False),
             ("Hanya putih atas hitam", False)]),
-    "K11": dict(
+    "K42": dict(
         nama="Sans italik pekat bertekstur + sengkang berus + sapuan bawah (putih atas hitam)", ref="IMG_5761", versi="v1.0 (27 Nov 2026; dibuat Claude daripada gambar; diluluskan pengguna 27 Nov 2026)",
         kelas="F2", dakwat=2, ruang_tepi=8, tekstur="grunge retak kasar", julat="4-7 perkataan",
         warna=dict(latar=("hitam arang", "#0a0605", "black"),
@@ -406,7 +407,7 @@ KAD = {
             ("Baris mendatar", False),
             ("Ruang tepi sederhana", False),
             ("Hanya putih atas hitam", False)]),
-    "K12": dict(
+    "K43": dict(
         nama="Huruf tangan gemuk melantun + kilat dalam huruf (hitam atas putih)", ref="IMG_5762", versi="v1.1 (28 Nov 2026: ciri bertaut bukan teras lagi, keputusan pengguna; v1.0 27 Nov 2026 dibuat Claude daripada gambar, diluluskan pengguna)",
         kelas="F1", dakwat=1, ruang_tepi=18, tekstur="tiada (rata)", julat="3-5 perkataan",
         warna=dict(latar=("putih", "#fcfcfc", "white"), dakwat=[("hitam", "#1d1c1c", "black")]),
@@ -431,7 +432,7 @@ KAD = {
             ("Tiada condong", False),
             ("Ruang tepi lebar", False),
             ("Satu dakwat rata, tiada tekstur", False)]),
-    "K13": dict(
+    "K44": dict(
         nama="Sans pekat sempit lusuh + tanda petik besar + anak panah (putih atas hitam)", ref="IMG_5755", versi="v1.0 (27 Nov 2026; dibuat Claude daripada gambar; diluluskan pengguna 27 Nov 2026)",
         kelas="F2", dakwat=3, ruang_tepi=6, tekstur="bintik lusuh grunge", julat="5-8 perkataan",
         warna=dict(latar=("putih", "#fbfbf9", "white"),
@@ -620,7 +621,7 @@ BLOK = {
                                   had=["butir bawah 1 px dan tepi marker kering tidak ditiru: pada JPEG 600x449 itu kesan "
                                        "mampatan; perlu gambar upload lebih besar"]))),
     # 27 Nov 2026: K9-K13 (frasa daripada kad di atas; tiada ciri baharu). rujukan = SK05 pada rujukan/IMG_*.jpg.
-    "K9": dict(
+    "K40": dict(
         medium="motivational typography poster", gaya="bold distressed", latar_warna="solid black", latar_isi=None,
         tepi="a gritty speckled distressed texture", bentuk="one tight block", condong=None, sentuh="sit close together",
         margin="narrow black margins",
@@ -634,7 +635,7 @@ BLOK = {
         # SK05 pada IMG_5776 (1024x1536), 27 Nov 2026. Condong SK05 7.9 TIDAK dipakai: garis dasar huruf mendatar,
         # yang condong hanya jalur berus; kad menyatakan tiada condong. Ruang tepi termasuk garis percikan.
         rujukan=dict(tepi_pct=2.0, tepi_sisi_pct=3.2, tepi_atas_bawah_pct=2.0, sumber="SK05 pada IMG_5776")),
-    "K10": dict(
+    "K41": dict(
         medium="typography poster", gaya="bold distressed", latar_warna="solid black", latar_isi=None,
         tepi="a rough speckled distressed print texture", bentuk="one tight block of nearly equal width",
         condong="tilts slightly so each line rises toward the right", sentuh="sit close together",
@@ -648,7 +649,7 @@ BLOK = {
         # SK05 pada IMG_5777 (736x1104), 27 Nov 2026. Satu gambar.
         rujukan=dict(condong_darjah=5.8, tepi_pct=9.7, tepi_sisi_pct=10.8, tepi_atas_bawah_pct=9.8,
                      sumber="SK05 pada IMG_5777")),
-    "K11": dict(
+    "K42": dict(
         medium="typography quote poster", gaya="bold italic", latar_warna="solid black", latar_isi=None,
         tepi="a rough cracked grunge texture", bentuk="one tight block", condong=None, sentuh="sit close together",
         margin="moderate black margins",
@@ -664,7 +665,7 @@ BLOK = {
         tiada=["gray", "outline", "shadow"], ada="rough textured fills on a clean black background", sama_lebar=False),
         # Tiada rujukan: SK05 gagal pada IMG_5761 (latar batu bertekstur, kotak = seluruh kanvas; ambang 100-160 juga gagal,
         # 27 Nov 2026). 5b memakai ruang_tepi kad (SK02 tanpa rujukan); ukuran tangan atau gambar latar rata diperlukan.
-    "K12": dict(
+    "K43": dict(
         medium="hand-lettered quote poster", gaya="hand-drawn", latar_warna="solid black", latar_isi=None,
         tepi="flat solid white strokes", bentuk="one tight block", condong=None, sentuh="touch and interlock",
         margin="wide black margins",
@@ -681,7 +682,7 @@ BLOK = {
         # 768x1024 dengan lebar blok 64.3% -> ruang tepi 17.9% semua sisi (dikira, bukan diteka). Tiada condong.
         rujukan=dict(condong_darjah=0.0, tepi_pct=17.9, tepi_sisi_pct=17.9, tepi_atas_bawah_pct=17.9,
                      sumber="SK05 pada IMG_5762, dipadan ke 3:4")),
-    "K13": dict(
+    "K44": dict(
         medium="typography quote poster", gaya="bold distressed", latar_warna="solid black", latar_isi=None,
         tepi="a gritty speckled distressed texture", bentuk="one tight block", condong=None, sentuh="sit close together",
         margin="moderate black margins",
