@@ -1,0 +1,44 @@
+{
+ "versi": "SK06 v1.4 (27 Nov 2026)",
+ "raw": "ernie_K21b_s42_warna.png",
+ "style": "S3",
+ "palet": "kad K21",
+ "bg": "#000000",
+ "fills": [
+  "#ffffff"
+ ],
+ "layers": 1,
+ "ink_px": [
+  1759680
+ ],
+ "sizes": {
+  "18x24": [
+   5400,
+   7200
+  ]
+ },
+ "tekstur": {
+  "kad": "K21",
+  "teks": "tiada",
+  "jenis": "none",
+  "kuat": 0.0,
+  "tidak_dibuat": []
+ },
+ "amaran": [],
+ "tepi": {
+  "sasaran": {
+   "sisi": 7.0,
+   "atas_bawah": 7.0,
+   "sumber": "SK05 pada IMG_5846 (1200x1200); lencana bulat, condong dibaca 0"
+  },
+  "hasil": {
+   "18x24": {
+    "kiri": 7.0,
+    "kanan": 7.0,
+    "atas": 14.1,
+    "bawah": 20.1
+   }
+  },
+  "dakwat_min_pct": 7.0
+ }
+}

@@ -112,7 +112,7 @@ Dipakai untuk model tanpa aturan sendiri, dan sebagai pembanding dalam ujian kel
 - Simpan bersama imej: prompt, versi pembina, versi kad, rev.
 - Syarat pakai: pembina mesti menghasilkan semula S1–S6 (ayat 4 perkataan) dengan imej yang tidak lebih buruk.
 
-### 3.4 Aturan FLUX.2 klein 4B (rev r1)
+### 3.4 Aturan FLUX.2 klein 4B (rev r2: hiasan sisi di luar label, 28 Nov 2026)
 - **Sumber:** kad model: "Prompt following is heavily influenced by the prompting style" (rasmi). Panduan BFL: prosa mengalir, tiada penambah prompt (lemah: petikan carian sahaja, laman tidak dapat dibuka).
 - **Bentuk:** SATU perenggan prosa, ayat penuh. Bukan senarai kata kunci, bukan "nama: nilai", bukan baris bernombor.
 - **Turutan ayat:**
@@ -359,7 +359,7 @@ Tempat menyimpan aturan model baharu yang ditulis ikut 3.12 (3.14.1, 3.14.2, …
    - **HABIS:** semua pilihan ubahan sudah dicuba: tukar model ikut jadual model × gaya, kemudian pendekkan ayat, kemudian lapor.
 5. Muat naik `aturan_belajar.json` ke dashboard (dataset `aturan_belajar`, tab AI Image Test) dan simpan semua fail dalam git.
 
-**Peraturan belajar (kod: `belajar.py`, versi b1):**
+**Peraturan belajar (kod: `belajar.py`, versi b1; b1.2 pada 28 Nov 2026: seri lulus dan ♥ dipecah oleh bilangan imej dengan kelas cacat sasaran ubahan, keputusan pengguna):**
 - **Isyarat:** QC G1–G2; ♥ pengguna; tolak pengguna (`pengguna.jsonl`, atau kod yang dipadam daripada Daftar S/C). Imej lulus = lulus QC dan tidak ditolak. Imej yang ditolak dikira cacat.
 - **Kelas cacat** ikut jadual kitaran QC (langkah 5): berulang, rawak, luar label, hiasan lebih, hiasan di tempat salah, baris, ejaan, bentuk, ditolak. Cacat "bukan prompt" (condong, ruang tepi, kedudukan, kelabu, warna, bayang, tekstur, vektor: kelas `KELAS_SK`) diabaikan, kerana itu kerja skrip SK; ia dipelajari oleh `belajar_sk.py` ("Belajar SK", selepas Daftar skrip). b1.1: senarai ini dibaca terus daripada `belajar_sk.py`.
 - **Cacat berulang** = kelas yang sama pada sekurang-kurangnya 2 imej, sama ada pada 2 design atau lebih, atau pada 2 seed atau lebih dalam satu design. Bagi ejaan: hanya jika PERKATAAN yang sama salah.
@@ -702,7 +702,7 @@ Setiap ubahan aturan (3.4–3.10) direkod di sini, dan juga dalam `designs/lette
 | Tarikh | Model | Rev | Cacat dengan rangka am | Ubahan | Ejaan betul sebelum → selepas |
 |---|---|---|---|---|---|
 | 27 Nov 2026 | Z-Image Turbo | r1 → r2 | Titik / tanda rawak (K7M, K8G) | `had_positif` MENANG: ayat had akhir kini "Every letter in the image belongs to these N words, and each word appears once; the rest of the canvas is plain empty background" (ganti "The only text in the image is…") | G1+G2 0/4 → 2/4 (K7M 2/2 bersih; K8G masih 5 baris + bintik). Had: prompt K3L kini 254 perkataan (> 250), K3L tidak boleh dijana dengan Z-Image |
-| 27 Nov 2026 | klein 4B | r1 | Percikan di dalam label (K3K) | `hiasan_kedudukan` KALAH: percikan di luar label 3/3 pada mata, tetapi lulus seri 3/3 tanpa ♥ (peraturan 3.15) | 3/3 → 3/3 |
+| 27 Nov 2026 | klein 4B | r1 → r2 | Percikan di dalam label (K3K) | `hiasan_kedudukan`: hiasan sisi ditulis "placed outside the label, one group on its left and one group on its right". Mula-mula KALAH (lulus seri 3/3, tiada ♥); 28 Nov dinilai semula dengan belajar.py b1.2 (seri dipecah oleh cacat sasaran, keputusan pengguna): MENANG | 3/3 → 3/3; percikan di dalam label 3 → 0 |
 | 27 Nov 2026 | ERNIE Turbo | r1 | Tanda petikan rawak (K22c, K3K) | `had_positif` KALAH: tanda petikan hilang 2/2, tetapi K3K s7 dapat 'AFTER' berulang + hiasan tambahan | 0/2 → 1/2 (kelas baharu) |
 | 27 Nov 2026 | klein 4B | r1 | 'QUIET WORK' dipisah jadi dua baris (K4q s7, s123; Z-Image juga) | `dua_kata_sebaris` CUBA (calon dalam `pembina.py`, belum dijana) | – |
 | 26 Nov 2026 | klein 4B | r1 | Label tambahan di bawah; "WHAT" tiada kotak (3/3) | Prosa mengalir; gaya di dalam ayat baris; had satu ayat | 0/3 → 3/3 |

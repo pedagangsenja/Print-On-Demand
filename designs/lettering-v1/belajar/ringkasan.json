@@ -1,5 +1,5 @@
 {
- "versi": "b1.1 (27 Nov 2026)",
+ "versi": "b1.2 (28 Nov 2026)",
  "tarikh": "2026-11-28",
  "imej": 225,
  "suka": 0,
@@ -9,8 +9,8 @@
    "model": "klein4b",
    "nama": "FLUX.2 klein 4B",
    "bahagian": "3.4",
-   "rev": "r1",
-   "status": "diuji: K3H, CPU, 3 seed",
+   "rev": "r2",
+   "status": "diuji: K3H, CPU, 3 seed; r2 hiasan_kedudukan: K3K percikan di dalam label 3 -> 0 (b1.2)",
    "ikut_rev": {
     "am": {
      "imej": 9,
@@ -38,12 +38,12 @@
     }
    },
    "semasa": {
-    "imej": 27,
-    "lulus": 19,
-    "pct": 70,
+    "imej": 0,
+    "lulus": 0,
+    "pct": null,
     "suka": 0,
     "tolak": 0,
-    "design": 9
+    "design": 0
    },
    "semua": {
     "imej": 42,
@@ -53,50 +53,13 @@
     "tolak": 0,
     "design": 13
    },
-   "berulang": [
-    {
-     "kelas": "baris",
-     "nama": "Bilangan baris salah (baris dipisah)",
-     "imej": 3,
-     "gagal": 3,
-     "design": [
-      "K4q",
-      "K8G"
-     ],
-     "cadangan": "dua_kata_sebaris",
-     "cadangan_teks": "Nyatakan dua perkataan sebaris (\"as two words side by side on one line\")"
-    },
-    {
-     "kelas": "hiasan_lebih",
-     "nama": "Hiasan yang tidak diminta",
-     "imej": 3,
-     "gagal": 1,
-     "design": [
-      "K20a",
-      "K21b"
-     ],
-     "cadangan": "hiasan_tepat",
-     "cadangan_teks": "Nyatakan hiasan yang dibenarkan dengan tepat, tambah \"clean empty background\""
-    },
-    {
-     "kelas": "hiasan_tempat",
-     "nama": "Hiasan di tempat salah",
-     "imej": 3,
-     "gagal": 0,
-     "design": [
-      "K3K"
-     ],
-     "cadangan": null,
-     "cadangan_teks": "Pilihan ubahan habis: tukar ke model seterusnya ikut jadual model × gaya, kemudian pendekkan ayat, kemudian lapor kepada pengguna"
-    }
-   ],
+   "berulang": [],
    "ubahan_dicuba": 2,
    "suka_imej": [],
    "tindakan": [
     {
-     "jenis": "cuba",
-     "ubahan": "dua_kata_sebaris",
-     "teks": "Satu ubahan untuk jana seterusnya model ini: PEMBINA_UJI=klein4b_dua_kata_sebaris (Nyatakan dua perkataan sebaris (\"as two words side by side on one line\")) bagi cacat 'Bilangan baris salah (baris dipisah)' (3 imej, 2 design); jana bersama aturan semasa, seed sama"
+     "jenis": "tiada",
+     "teks": "Tiada tindakan: tiada cacat berulang pada aturan semasa"
     }
    ]
   },

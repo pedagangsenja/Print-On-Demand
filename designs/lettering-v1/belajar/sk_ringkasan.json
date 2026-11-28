@@ -1,8 +1,8 @@
 {
  "versi": "s1 (27 Nov 2026)",
  "tarikh": "2026-11-28",
- "baris": 446,
- "imej": 76,
+ "baris": 700,
+ "imej": 119,
  "kad_dipakai": [
   "K2",
   "K20",
@@ -25,29 +25,46 @@
    "versi": "5b v1.1",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 34,
-     "lulus": 34,
-     "cacat": 0,
+     "imej": 39,
+     "lulus": 36,
+     "cacat": 3,
      "input_rosak": 0,
-     "belum": 0,
+     "belum": 3,
      "tolak": 0
     }
    },
    "semasa": {
-    "imej": 34,
-    "lulus": 34,
-    "cacat": 0,
+    "imej": 39,
+    "lulus": 36,
+    "cacat": 3,
     "input_rosak": 0,
-    "belum": 0,
+    "belum": 3,
     "tolak": 0
    },
-   "berulang": [],
+   "berulang": [
+    {
+     "kelas": "condong",
+     "nama": "Sudut condong lain daripada kad",
+     "imej": [
+      "v12-cpu-ref6/klein4b/K22c_s123",
+      "v12-cpu-ref6/zturbo/K22c_s123",
+      "v12-cpu-ref6/zturbo/K22c_s42"
+     ],
+     "n": 3,
+     "kalah": []
+    }
+   ],
    "calon": [],
    "ubahan_dicuba": 0,
    "tindakan": [
     {
-     "jenis": "tiada",
-     "teks": "Tiada tindakan: tiada cacat berulang"
+     "jenis": "semak",
+     "teks": "Semak 3 imej (GAGAL / amaran belum disemak): v12-cpu-ref6/klein4b/K22c_s123, v12-cpu-ref6/zturbo/K22c_s123, v12-cpu-ref6/zturbo/K22c_s42. Lihat imej; tulis sk_semakan.jsonl (silap = kelemahan SK, betul = imej input rosak / amaran tidak merosakkan)"
+    },
+    {
+     "jenis": "baiki",
+     "kelas": "condong",
+     "teks": "BAIKI SK01 bagi cacat 'Sudut condong lain daripada kad' (3 imej: v12-cpu-ref6/klein4b/K22c_s123, v12-cpu-ref6/zturbo/K22c_s123, v12-cpu-ref6/zturbo/K22c_s42). Satu ubahan kod, versi naik, catat sk_ubahan.json (cuba), jalan semula pada imej yang sama"
     }
    ]
   },
@@ -59,29 +76,39 @@
    "versi": "5b v1.1",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 38,
-     "lulus": 38,
-     "cacat": 0,
+     "imej": 75,
+     "lulus": 74,
+     "cacat": 1,
      "input_rosak": 0,
-     "belum": 0,
+     "belum": 1,
      "tolak": 0
     }
    },
    "semasa": {
-    "imej": 38,
-    "lulus": 38,
-    "cacat": 0,
+    "imej": 75,
+    "lulus": 74,
+    "cacat": 1,
     "input_rosak": 0,
-    "belum": 0,
+    "belum": 1,
     "tolak": 0
    },
-   "berulang": [],
+   "berulang": [
+    {
+     "kelas": "ruang_tepi",
+     "nama": "Ruang tepi lain daripada kad",
+     "imej": [
+      "v12-cpu-ref6/klein4b/K20a_s7"
+     ],
+     "n": 1,
+     "kalah": []
+    }
+   ],
    "calon": [],
    "ubahan_dicuba": 0,
    "tindakan": [
     {
-     "jenis": "tiada",
-     "teks": "Tiada tindakan: tiada cacat berulang"
+     "jenis": "semak",
+     "teks": "Semak 1 imej (GAGAL / amaran belum disemak): v12-cpu-ref6/klein4b/K20a_s7. Lihat imej; tulis sk_semakan.jsonl (silap = kelemahan SK, betul = imej input rosak / amaran tidak merosakkan)"
     }
    ]
   },
@@ -93,8 +120,8 @@
    "versi": "5b v1.1",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 17,
-     "lulus": 17,
+     "imej": 20,
+     "lulus": 20,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -102,8 +129,8 @@
     }
    },
    "semasa": {
-    "imej": 17,
-    "lulus": 17,
+    "imej": 20,
+    "lulus": 20,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -127,8 +154,8 @@
    "versi": "5b v1.1",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 57,
-     "lulus": 57,
+     "imej": 96,
+     "lulus": 96,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -136,8 +163,8 @@
     }
    },
    "semasa": {
-    "imej": 57,
-    "lulus": 57,
+    "imej": 96,
+    "lulus": 96,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -218,18 +245,26 @@
      "tolak": 0
     },
     "SK06 v1.4 (27 Nov 2026)": {
-     "imej": 30,
-     "lulus": 29,
-     "cacat": 1,
+     "imej": 68,
+     "lulus": 64,
+     "cacat": 4,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    },
+    "SK06 v1.5 (28 Nov 2026)": {
+     "imej": 1,
+     "lulus": 1,
+     "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
      "tolak": 0
     }
    },
    "semasa": {
-    "imej": 30,
-    "lulus": 29,
-    "cacat": 1,
+    "imej": 68,
+    "lulus": 64,
+    "cacat": 4,
     "input_rosak": 0,
     "belum": 0,
     "tolak": 0
@@ -239,15 +274,25 @@
      "kelas": "tekstur",
      "nama": "Tekstur lain daripada kad",
      "imej": [
-      "v12-cpu-ref6/klein3/K23f_s42"
+      "v12-cpu-ref6/ernie/K23f_s123",
+      "v12-cpu-ref6/klein3/K23f_s42",
+      "v12-cpu-ref6/klein4b/K23f_s123",
+      "v12-cpu-ref6/zturbo/K23f_s123"
      ],
-     "n": 1,
-     "kalah": []
+     "n": 4,
+     "kalah": [
+      "tala_calar"
+     ]
     }
    ],
    "calon": [],
-   "ubahan_dicuba": 4,
+   "ubahan_dicuba": 5,
    "tindakan": [
+    {
+     "jenis": "baiki",
+     "kelas": "tekstur",
+     "teks": "BAIKI SK06 bagi cacat 'Tekstur lain daripada kad' (4 imej: v12-cpu-ref6/ernie/K23f_s123, v12-cpu-ref6/klein3/K23f_s42, v12-cpu-ref6/klein4b/K23f_s123, v12-cpu-ref6/zturbo/K23f_s123). Satu ubahan kod, versi naik, catat sk_ubahan.json (cuba), jalan semula pada imej yang sama; jangan ulang: tala_calar"
+    },
     {
      "jenis": "ukur",
      "medan": "tekstur_had",
@@ -271,19 +316,19 @@
      "tolak": 0
     },
     "SK07 v1.1 (27 Nov 2026)": {
-     "imej": 53,
-     "lulus": 53,
+     "imej": 96,
+     "lulus": 96,
      "cacat": 0,
-     "input_rosak": 1,
+     "input_rosak": 3,
      "belum": 0,
      "tolak": 0
     }
    },
    "semasa": {
-    "imej": 53,
-    "lulus": 53,
+    "imej": 96,
+    "lulus": 96,
     "cacat": 0,
-    "input_rosak": 1,
+    "input_rosak": 3,
     "belum": 0,
     "tolak": 0
    },

@@ -29,7 +29,7 @@ sys.path.insert(0, HERE)
 import pembina  # noqa: E402
 import belajar_sk  # noqa: E402
 
-VERSI = "b1.1 (27 Nov 2026)"
+VERSI = "b1.2 (28 Nov 2026)"  # b1.2: seri lulus dan ♥ dipecah oleh bilangan imej dengan kelas cacat sasaran ubahan (keputusan pengguna 28 Nov 2026)
 B = os.path.join(HERE, "belajar")
 STOR = os.path.join(B, "stor", "data")
 EXPORT = os.path.normpath(os.path.join(HERE, "..", "..", "data", "export", "ai_tests", "aturan_belajar.json"))
@@ -205,17 +205,25 @@ def skor(rows):
     return (sum(r["lulus"] for r in rows), sum(r["suka"] for r in rows))
 
 
-def banding(a, b):
-    """Imej a lawan b pada (kad, ayat, seed) yang sama. Pulang (skor a, skor b, bilangan pasangan, kelas baharu dalam a)."""
+def sasaran(nama):
+    """Kelas cacat yang disasar oleh ubahan calon (id pilihan dalam KELAS), atau None."""
+    return next((k for k, v in KELAS.items() if any(i == nama for i, _ in v[2])), None)
+
+
+def banding(a, b, kelas_sasaran=None):
+    """Imej a lawan b pada (kad, ayat, seed) yang sama. Pulang (skor a, skor b, bilangan pasangan, kelas baharu dalam a).
+    b1.2: skor = (lulus, ♥, -imej dengan kelas sasaran); jadi seri lulus dan ♥ dipecah oleh cacat gaya sasaran
+    yang berkurang (cth. hiasan di tempat salah pada imej yang sudah lulus)."""
     kb = {(r["kad"], r["ayat"], r["seed"]): r for r in b}
     pa = [r for r in a if (r["kad"], r["ayat"], r["seed"]) in kb]
     pb = [kb[(r["kad"], r["ayat"], r["seed"])] for r in pa]
     baru = sorted({k for r in pa for k in r["kelas"]} - {k for r in pb for k in r["kelas"]})
-    return skor(pa), skor(pb), len(pa), baru
+    c = lambda rr: -sum(kelas_sasaran in r["kelas"] for r in rr) if kelas_sasaran else 0
+    return skor(pa) + (c(pa),), skor(pb) + (c(pb),), len(pa), baru
 
 
 def nisbah(s, n):
-    return f"{s[0]}/{n}" + (f" (♥ {s[1]})" if s[1] else "")
+    return f"{s[0]}/{n}" + (f" (♥ {s[1]})" if s[1] else "") + (f" (cacat sasaran {-s[2]})" if len(s) > 2 and s[2] else "")
 
 
 def ulasan(model, rows, ubahan):
@@ -231,7 +239,7 @@ def ulasan(model, rows, ubahan):
             kump["+".join(r["uji"])].append(r)
     for nama, a in sorted(kump.items()):
         asas = [r for r in rows if not r["uji"] and r["rev"] == a[0]["rev"]]
-        sa, sb, n, baru = banding(a, asas)
+        sa, sb, n, baru = banding(a, asas, sasaran(nama))
         design = ", ".join(sorted({r["kad"] + r["ayat"] for r in a}))
         if any(u["ubahan"] == nama and all(x in u.get("design", "") for x in design.split(", ")) for u in dicuba):
             continue

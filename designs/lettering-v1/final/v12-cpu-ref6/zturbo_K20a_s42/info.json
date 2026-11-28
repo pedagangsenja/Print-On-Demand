@@ -1,0 +1,44 @@
+{
+ "versi": "SK06 v1.4 (27 Nov 2026)",
+ "raw": "zturbo_K20a_s42_warna.png",
+ "style": "S3",
+ "palet": "kad K20",
+ "bg": "#000000",
+ "fills": [
+  "#ffffff"
+ ],
+ "layers": 1,
+ "ink_px": [
+  2551075
+ ],
+ "sizes": {
+  "18x24": [
+   5400,
+   7200
+  ]
+ },
+ "tekstur": {
+  "kad": "K20",
+  "teks": "tiada",
+  "jenis": "none",
+  "kuat": 0.0,
+  "tidak_dibuat": []
+ },
+ "amaran": [],
+ "tepi": {
+  "sasaran": {
+   "sisi": 3.8,
+   "atas_bawah": 14.8,
+   "sumber": "SK05 pada IMG_5845 (1199x1799); condong 11.4 diukur tetapi dibaca 0 kerana ekor swash"
+  },
+  "hasil": {
+   "18x24": {
+    "kiri": 15.9,
+    "kanan": 15.9,
+    "atas": 14.8,
+    "bawah": 14.8
+   }
+  },
+  "dakwat_min_pct": 12.51
+ }
+}
