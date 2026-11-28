@@ -324,7 +324,7 @@ KAD = {
     # (arahan pengguna 27 Nov 2026); warna_asal = warna gambar upload, untuk varian C kelak.
     "K9": dict(
         nama="Skrip berus tebal bertingkat + swash garis bawah (putih atas hitam)", ref="IMG_5840",
-        snc="belum", versi="v1.0 (27 Nov 2026; belum diluluskan pengguna)",
+        snc="belum", versi="v1.0 (27 Nov 2026; diluluskan pengguna 28 Nov 2026)",
         kelas="F1", dakwat=1, ruang_tepi=11, tekstur="tiada", julat="2-5 perkataan",
         warna=dict(latar=("hitam", "#101010", "black"), dakwat=[("putih", "#ffffff", "white")]),
         warna_asal="latar #101010, dakwat #ffffff",
@@ -352,7 +352,7 @@ KAD = {
             ("Tiada bayang, tiada garis luar", False)]),
     "K10": dict(
         nama="Blok sans pekat sempit rata penuh lebar, satu perkataan gergasi (lusuh calar)", ref="IMG_5793",
-        snc="belum", versi="v1.0 (27 Nov 2026; belum diluluskan pengguna)",
+        snc="belum", versi="v1.0 (27 Nov 2026; diluluskan pengguna 28 Nov 2026)",
         kelas="F2", dakwat=1, ruang_tepi=6, tekstur="lusuh calar sederhana", julat="3-7 perkataan",
         warna=dict(latar=("hitam", "#0b0b0b", "black"), dakwat=[("putih", "#f4f4f2", "white")]),
         warna_asal="latar karang #dd6155, dakwat hitam #0b0303 (songsang dalam hitam putih)",
@@ -369,7 +369,7 @@ KAD = {
         kemasan="Tekstur calar lusuh oleh SK06 (AI jana rata).",
         risiko=["baris rapat boleh menggabung perkataan", "perkataan gergasi boleh terpotong di tepi"],
         jangan_salin=["ayat Follow your plan not your mood", "struktur ayat X YOUR Y NOT YOUR Z", "tera air rujukan"],
-        qc=[("Semua huruf besar sans pekat sempit", True),
+        qc=[("Semua huruf besar sans pekat sempit tinggi (condensed), bukan lebar", True),
             ("Setiap baris sama lebar (blok rata kiri-kanan)", True),
             ("Satu perkataan gergasi paling tinggi di tengah", True),
             ("Jarak baris sangat rapat", False),
@@ -379,7 +379,7 @@ KAD = {
             ("Ruang tepi sederhana sekata", False)]),
     "K11": dict(
         nama="Sans pekat sempit condong + baris kecil + jalur amaran + bar gelembung cakap", ref="IMG_5789",
-        snc="belum", versi="v1.0 (27 Nov 2026; belum diluluskan pengguna)",
+        snc="belum", versi="v1.0 (27 Nov 2026; diluluskan pengguna 28 Nov 2026)",
         kelas="F2", dakwat=1, ruang_tepi=3, tekstur="lusuh grunge sederhana", julat="3-6 perkataan",
         warna=dict(latar=("hitam", "#010101", "black"), dakwat=[("putih", "#fbfbfb", "white")]),
         warna_asal="latar #010101, dakwat putih #fbfbfb + kuning #fcc206 (hitam putih: semua putih)",
@@ -409,7 +409,7 @@ KAD = {
             ("Ruang tepi sempit", False)]),
     "K12": dict(
         nama="Poster vintaj bertingkat: sans pekat + reben + garis pembahagi + bintang", ref="IMG_5786",
-        snc="belum", versi="v1.0 (27 Nov 2026; belum diluluskan pengguna)",
+        snc="belum", versi="v1.0 (27 Nov 2026; diluluskan pengguna 28 Nov 2026)",
         kelas="F2", dakwat=1, ruang_tepi=4, tekstur="lusuh cetakan halus", julat="3-6 perkataan",
         warna=dict(latar=("hitam", "#0b0b0a", "black"), dakwat=[("putih", "#f4f4f2", "white")]),
         warna_asal="latar krim #dec9a9, dakwat hitam #0b0b0a + merah #8c1207 (songsang dalam hitam putih)",
@@ -437,7 +437,7 @@ KAD = {
             ("Tiada teks rawak dalam reben / hiasan", False)]),
     "K13": dict(
         nama="Blok sans pekat rata penuh lebar, baris sangat rapat (semburan butir)", ref="IMG_5791",
-        snc="belum", versi="v1.0 (27 Nov 2026; belum diluluskan pengguna)",
+        snc="belum", versi="v1.0 (27 Nov 2026; diluluskan pengguna 28 Nov 2026)",
         kelas="F2", dakwat=1, ruang_tepi=2, tekstur="butir semburan kasar", julat="4-8 perkataan",
         warna=dict(latar=("hitam", "#0b0b0b", "black"), dakwat=[("putih", "#f4f4f2", "white")]),
         warna_asal="latar kuning #feba01, dakwat hitam #191106 (songsang dalam hitam putih)",
@@ -455,7 +455,7 @@ KAD = {
         kemasan="Tekstur butir semburan kasar oleh SK06 (AI jana rata). Hampir K10; beza: blok penuh tinggi, tekstur semburan.",
         risiko=["baris rapat boleh menggabung perkataan", "huruf boleh terpotong di tepi"],
         jangan_salin=["ayat I'm not in danger I am the danger (petikan terkenal)", "susunan baris tepat rujukan"],
-        qc=[("Semua huruf besar sans pekat sempit", True),
+        qc=[("Semua huruf besar sans pekat sempit tinggi (condensed), bukan lebar", True),
             ("Setiap baris sama lebar (blok rata kiri-kanan)", True),
             ("Blok mengisi hampir seluruh tinggi poster, baris hampir bersentuh", True),
             ("Perkataan pendek lebih tinggi", False),

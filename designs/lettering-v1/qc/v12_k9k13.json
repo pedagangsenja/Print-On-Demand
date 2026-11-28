@@ -137,13 +137,13 @@
     ""
    ],
    "K10Q_s42": [
-    true,
-    "huruf tebal lebar, bukan condensed (nota gaya)",
+    false,
+    "ciri teras gagal: bentuk huruf lebar, bukan sempit tinggi (condensed) seperti kad (syarat QC, keputusan pengguna 28 Nov 2026)",
     ""
    ],
    "K10Q_s7": [
-    true,
-    "huruf lebar (nota gaya)",
+    false,
+    "ciri teras gagal: bentuk huruf lebar, bukan sempit tinggi (condensed) seperti kad (syarat QC, keputusan pengguna 28 Nov 2026)",
     ""
    ],
    "K11A_s42": [
@@ -167,18 +167,18 @@
     ""
    ],
    "K13S_s42": [
-    true,
-    "sentuh tepi kiri / kanan (ruang tepi, SK02); huruf lebar bukan condensed (nota gaya)",
+    false,
+    "ciri teras gagal: bentuk huruf lebar, bukan sempit tinggi (condensed) seperti kad (syarat QC, keputusan pengguna 28 Nov 2026); sentuh tepi kiri / kanan (ruang tepi, SK02)",
     ""
    ],
    "K13S_s7": [
-    true,
-    "sentuh tepi kiri / kanan (ruang tepi, SK02); huruf lebar bukan condensed (nota gaya)",
+    false,
+    "ciri teras gagal: bentuk huruf lebar, bukan sempit tinggi (condensed) seperti kad (syarat QC, keputusan pengguna 28 Nov 2026); sentuh tepi kiri / kanan (ruang tepi, SK02)",
     ""
    ],
    "K13S_s123": [
-    true,
-    "sentuh tepi kiri / kanan (ruang tepi, SK02); huruf lebar bukan condensed (nota gaya)",
+    false,
+    "ciri teras gagal: bentuk huruf lebar, bukan sempit tinggi (condensed) seperti kad (syarat QC, keputusan pengguna 28 Nov 2026); sentuh tepi kiri / kanan (ruang tepi, SK02)",
     ""
    ]
   },

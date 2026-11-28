@@ -29,7 +29,7 @@ sys.path.insert(0, HERE)
 import pembina  # noqa: E402
 import belajar_sk  # noqa: E402
 
-VERSI = "b1.1 (27 Nov 2026)"
+VERSI = "b1.2 (28 Nov 2026)"  # b1.2: kelas bentuk juga "bentuk huruf lebar" (syarat QC condensed, keputusan pengguna 28 Nov 2026)
 B = os.path.join(HERE, "belajar")
 STOR = os.path.join(B, "stor", "data")
 EXPORT = os.path.normpath(os.path.join(HERE, "..", "..", "data", "export", "ai_tests", "aturan_belajar.json"))
@@ -56,7 +56,7 @@ KELAS = {
               r"jadi|rosak|meragukan|huruf besar|huruf kecil|Morrrnings|omornings|Betters",
               [("huruf_besar", "Huruf besar untuk baris itu jika kad membenarkan"),
                ("tukar_peranan", "Tukar peranan perkataan itu")]),
-    "bentuk": ("Bentuk huruf atau saiz label lain daripada kad", r"nipis|label (lebih )?besar|label kecil",
+    "bentuk": ("Bentuk huruf atau saiz label lain daripada kad", r"nipis|label (lebih )?besar|label kecil|bentuk huruf lebar",
                [("frasa_bentuk", "Frasa bentuk huruf dalam aturan model")]),
     "ditolak": ("Ditolak pengguna tanpa sebab", r"^dipadam|^ditolak", []),
 }

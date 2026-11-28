@@ -1,6 +1,6 @@
 {
- "versi": "b1.1 (27 Nov 2026)",
- "tarikh": "2026-11-27",
+ "versi": "b1.2 (28 Nov 2026)",
+ "tarikh": "2026-11-28",
  "imej": 187,
  "suka": 0,
  "tolak": 0,
@@ -420,8 +420,8 @@
     },
     "r1": {
      "imej": 20,
-     "lulus": 20,
-     "pct": 100,
+     "lulus": 15,
+     "pct": 75,
      "suka": 0,
      "tolak": 0,
      "design": 8
@@ -429,30 +429,40 @@
    },
    "semasa": {
     "imej": 20,
-    "lulus": 20,
-    "pct": 100,
+    "lulus": 15,
+    "pct": 75,
     "suka": 0,
     "tolak": 0,
     "design": 8
    },
    "semua": {
     "imej": 29,
-    "lulus": 26,
-    "pct": 90,
+    "lulus": 21,
+    "pct": 72,
     "suka": 0,
     "tolak": 0,
     "design": 8
    },
    "berulang": [
     {
-     "kelas": "lain",
-     "nama": "Cacat lain (tiada kelas)",
-     "imej": 7,
-     "gagal": 0,
+     "kelas": "bentuk",
+     "nama": "Bentuk huruf atau saiz label lain daripada kad",
+     "imej": 5,
+     "gagal": 5,
      "design": [
       "K10Q",
-      "K12T",
       "K13S"
+     ],
+     "cadangan": "frasa_bentuk",
+     "cadangan_teks": "Frasa bentuk huruf dalam aturan model"
+    },
+    {
+     "kelas": "lain",
+     "nama": "Cacat lain (tiada kelas)",
+     "imej": 2,
+     "gagal": 0,
+     "design": [
+      "K12T"
      ],
      "cadangan": null,
      "cadangan_teks": "Tanya pengguna sebabnya; tambah ke kad sebagai ciri QC"
@@ -462,8 +472,9 @@
    "suka_imej": [],
    "tindakan": [
     {
-     "jenis": "habis",
-     "teks": "Cacat 'Cacat lain (tiada kelas)': Tanya pengguna sebabnya; tambah ke kad sebagai ciri QC"
+     "jenis": "cuba",
+     "ubahan": "frasa_bentuk",
+     "teks": "Satu ubahan untuk jana seterusnya model ini: PEMBINA_UJI=klein3_frasa_bentuk (Frasa bentuk huruf dalam aturan model) bagi cacat 'Bentuk huruf atau saiz label lain daripada kad' (5 imej, 2 design); jana bersama aturan semasa, seed sama"
     }
    ]
   },
