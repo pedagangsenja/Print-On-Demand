@@ -1,6 +1,6 @@
 {
  "versi": "b1.1 (27 Nov 2026)",
- "tarikh": "2026-11-27",
+ "tarikh": "2026-11-28",
  "imej": 225,
  "suka": 0,
  "tolak": 0,
@@ -60,7 +60,7 @@
      "imej": 3,
      "gagal": 3,
      "design": [
-      "K4Q",
+      "K4q",
       "K8G"
      ],
      "cadangan": "dua_kata_sebaris",
@@ -72,8 +72,8 @@
      "imej": 3,
      "gagal": 1,
      "design": [
-      "K10B",
-      "K9A"
+      "K20a",
+      "K21b"
      ],
      "cadangan": "hiasan_tepat",
      "cadangan_teks": "Nyatakan hiasan yang dibenarkan dengan tepat, tambah \"clean empty background\""
@@ -165,6 +165,14 @@
    "rev": "r1",
    "status": "diuji: K3H, CPU, 3 seed",
    "ikut_rev": {
+    "?": {
+     "imej": 1,
+     "lulus": 1,
+     "pct": 100,
+     "suka": 0,
+     "tolak": 0,
+     "design": 1
+    },
     "am": {
      "imej": 9,
      "lulus": 5,
@@ -213,7 +221,7 @@
      "imej": 4,
      "gagal": 4,
      "design": [
-      "K11C",
+      "K22c",
       "K3K"
      ],
      "cadangan": null,
@@ -225,10 +233,10 @@
      "imej": 9,
      "gagal": 0,
      "design": [
-      "K10B",
-      "K4Q",
-      "K8G",
-      "K9A"
+      "K20a",
+      "K21b",
+      "K4q",
+      "K8G"
      ],
      "cadangan": "hiasan_tepat",
      "cadangan_teks": "Nyatakan hiasan yang dibenarkan dengan tepat, tambah \"clean empty background\""
@@ -251,7 +259,7 @@
      "imej": 3,
      "gagal": 0,
      "design": [
-      "K2E"
+      "K2e"
      ],
      "cadangan": null,
      "cadangan_teks": "Tanya pengguna sebabnya; tambah ke kad sebagai ciri QC"
@@ -262,7 +270,7 @@
      "imej": 3,
      "gagal": 0,
      "design": [
-      "K2E"
+      "K2e"
      ],
      "cadangan": "bekas_dahulu",
      "cadangan_teks": "Tulis bekas dahulu, perkataan kemudian (\"a small white label, and inside that label the word ...\")"
@@ -343,7 +351,7 @@
      "imej": 3,
      "gagal": 0,
      "design": [
-      "K12F"
+      "K23f"
      ],
      "cadangan": null,
      "cadangan_teks": "Tanya pengguna sebabnya; tambah ke kad sebagai ciri QC"
@@ -405,7 +413,7 @@
      "imej": 3,
      "gagal": 0,
      "design": [
-      "K12F"
+      "K23f"
      ],
      "cadangan": null,
      "cadangan_teks": "Tanya pengguna sebabnya; tambah ke kad sebagai ciri QC"

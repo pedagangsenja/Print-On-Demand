@@ -51,20 +51,21 @@ AYAT = {
     "J": dict(nama="sederhana", laluan=2, ayat="Keep Going You Are Almost There",
               baris=[("Keep Going", "sokongan"), ("You Are", "penyambung"), ("Almost", "sokongan"), ("There", "utama")]),
     # 27 Nov 2026: enam ayat baharu untuk ujian v1.2 pada enam gambar upload (IMG_5845, 5846, 5840, 5792, 5793, 5764);
-    # dipilih Claude (pengguna serah pilihan). Setiap ayat dijana dengan SATU kad sahaja: A (K9), B (K10), C (K11),
-    # E (K2), F (K12), Q (K4). Ayat rujukan tidak disalin.
-    "A": dict(nama="sederhana", laluan=2, ayat="Strong Moms Raise Brave Kids",
+    # dipilih Claude (pengguna serah pilihan). Setiap ayat dijana dengan SATU kad sahaja: a (K20), b (K21), c (K22),
+    # e (K2), f (K23), q (K4). 28 Nov 2026: kad K9-K12 dan ayat A-Q ditukar nama (K20-K23, huruf kecil) kerana
+    # sesi lain memakai K9-K13 dan huruf ayat yang sama untuk gambar lain. Ayat rujukan tidak disalin.
+    "a": dict(nama="sederhana", laluan=2, ayat="Strong Moms Raise Brave Kids",
               baris=[("Strong", "sokongan"), ("Moms", "utama"), ("Raise", "utama"), ("Brave Kids", "sokongan")]),
-    "B": dict(nama="sederhana", laluan=2, ayat="Every Single Day Spreading Kindness Teacher Life",
+    "b": dict(nama="sederhana", laluan=2, ayat="Every Single Day Spreading Kindness Teacher Life",
               baris=[("Every Single Day", "penyambung"), ("Spreading", "sokongan"), ("Kindness", "utama"),
                      ("Teacher Life", "penyambung")]),
-    "C": dict(nama="pendek", laluan=1, ayat="Trust Your Timing",
+    "c": dict(nama="pendek", laluan=1, ayat="Trust Your Timing",
               baris=[("Trust", "utama"), ("Your", "sokongan"), ("Timing", "utama")]),
-    "E": dict(nama="pendek", laluan=1, ayat="Comfort Zones Kill Dreams",
+    "e": dict(nama="pendek", laluan=1, ayat="Comfort Zones Kill Dreams",
               baris=[("Comfort", "sokongan"), ("Zones", "sokongan"), ("Kill", "sokongan"), ("Dreams", "utama")]),
-    "F": dict(nama="sederhana", laluan=2, ayat="Build Your Habits Not Your Excuses",
+    "f": dict(nama="sederhana", laluan=2, ayat="Build Your Habits Not Your Excuses",
               baris=[("Build Your", "sokongan"), ("Habits", "utama"), ("Not Your", "sokongan"), ("Excuses", "sokongan")]),
-    "Q": dict(nama="sederhana", laluan=2, ayat="Quiet Work Builds Loud Results",
+    "q": dict(nama="sederhana", laluan=2, ayat="Quiet Work Builds Loud Results",
               baris=[("Quiet Work", "sokongan"), ("Builds", "penyambung"), ("Loud", "utama"), ("Results", "utama")]),
 }
 
@@ -321,7 +322,7 @@ KAD = {
             ("Bintik putih kecil bertabur di latar", False),
             ("Tepi huruf sedikit kasar (marker kering)", False),
             ("Putih satu warna atas hitam, tiada swash", False)]),
-    "K9": dict(
+    "K20": dict(
         nama="Skrip melantun + sans bulat pekat + hati bertabur (putih atas hitam)", ref="IMG_5845",
         snc="belum didaftar", versi="v1.0 (27 Nov 2026; diluluskan pengguna 27 Nov 2026)",
         kelas="F1", dakwat=1, ruang_tepi=4, tekstur="tiada", julat="4-7 perkataan",
@@ -347,7 +348,7 @@ KAD = {
             ("Baris huruf besar paling lebar", False),
             ("Rata bersih tanpa tekstur", False),
             ("Satu warna putih atas hitam", False)]),
-    "K10": dict(
+    "K21": dict(
         nama="Lencana bulat: teks lengkung sans + skrip berus tengah + bintang (putih atas hitam)", ref="IMG_5846",
         snc="belum didaftar", versi="v1.0 (27 Nov 2026; diluluskan pengguna 27 Nov 2026)",
         kelas="F1", dakwat=1, ruang_tepi=8, tekstur="tiada", julat="5-8 perkataan",
@@ -375,7 +376,7 @@ KAD = {
             ("Tiada garis bulatan", False),
             ("Rata bersih tanpa tekstur", False),
             ("Satu warna putih atas hitam", False)]),
-    "K11": dict(
+    "K22": dict(
         nama="Skrip berus tebal bertangga + swash ekor (putih atas hitam)", ref="IMG_5840",
         snc="belum didaftar", versi="v1.0 (27 Nov 2026; diluluskan pengguna 27 Nov 2026)",
         kelas="F1", dakwat=1, ruang_tepi=11, tekstur="tiada", julat="2-4 perkataan",
@@ -400,7 +401,7 @@ KAD = {
             ("Saiz perkataan hampir sama", False),
             ("Rata bersih tanpa tekstur", False),
             ("Satu warna putih atas hitam", False)]),
-    "K12": dict(
+    "K23": dict(
         nama="Blok sans sempit pekat calar + satu perkataan gergasi (hitam atas koral)", ref="IMG_5793",
         snc="belum didaftar", versi="v1.0 (27 Nov 2026; diluluskan pengguna 27 Nov 2026)",
         kelas="F2", dakwat=1, ruang_tepi=15, tekstur="calar dan bintik lusuh kuat", julat="4-8 perkataan",
@@ -595,7 +596,7 @@ BLOK = {
                                   g_sederhana=5.72, g_kasar=4.75, g_dakwat=5.28, sumber="SK06 --ukur-tekstur pada IMG_5735",
                                   had=["butir bawah 1 px dan tepi marker kering tidak ditiru: pada JPEG 600x449 itu kesan "
                                        "mampatan; perlu gambar upload lebih besar"]))),
-    "K9": dict(
+    "K20": dict(
         medium="hand-lettered quote poster", gaya="playful", latar_warna="solid black",
         latar_isi="small white hearts scattered on the left and right sides", tepi="crisp clean vector edges",
         bentuk="one tight block", condong=None, sentuh="sit close together", margin="narrow black margins",
@@ -611,7 +612,7 @@ BLOK = {
         sama_lebar=False,
         rujukan=dict(condong_darjah=0.0, tepi_pct=3.8, tepi_sisi_pct=3.8, tepi_atas_bawah_pct=14.8,
                      sumber="SK05 pada IMG_5845 (1199x1799); condong 11.4 diukur tetapi dibaca 0 kerana ekor swash")),
-    "K10": dict(
+    "K21": dict(
         medium="round badge typography design", gaya="clean hand-lettered", latar_warna="solid black", latar_isi=None,
         tepi="crisp clean vector edges",
         bentuk="one round badge layout whose first line arcs over the top and whose last line arcs under the bottom",
@@ -626,7 +627,7 @@ BLOK = {
         tiada=["gray", "outline", "circle line", "shadow"], ada="flat solid white fills on a clean black background",
         sama_lebar=False,
         rujukan=dict(condong_darjah=0.0, tepi_pct=7.0, sumber="SK05 pada IMG_5846 (1200x1200); lencana bulat, condong dibaca 0")),
-    "K11": dict(
+    "K22": dict(
         medium="script lettering quote poster", gaya="hand-lettered", latar_warna="solid black", latar_isi=None,
         tepi="crisp clean edges", bentuk="one tight block with one word on each line",
         condong="rises slightly toward the right", sentuh="interlock", margin="moderate black margins",
@@ -645,7 +646,7 @@ BLOK = {
         sama_lebar=False,
         rujukan=dict(condong_darjah=1.9, tepi_pct=11.0, tepi_sisi_pct=11.0, tepi_atas_bawah_pct=13.2,
                      sumber="SK05 pada IMG_5840 (736x981)")),
-    "K12": dict(
+    "K23": dict(
         medium="typographic quote poster", gaya="bold distressed", latar_warna="solid black", latar_isi=None,
         tepi="a heavy scratched and speckled distressed texture",
         bentuk="one tight justified block in which every line is stretched to the same full width",

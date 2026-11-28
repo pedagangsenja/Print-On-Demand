@@ -22,7 +22,7 @@
 # Butir dijana pada skala rujukan (blok tulisan sama lebar), jadi rupa sama pada setiap saiz poster. Hasil diukur
 # semula pada skala rujukan dan dicatat dalam info.json (amaran jika beza > 30%).
 # v1.4 (27 Nov 2026, Belajar SK, ubahan tekstur_calar): jenis tekstur 'calar' (calar + bintik lusuh dalam dakwat,
-# kad K12, IMG_5793) dengan parameter yang diukur pada gambar upload (ukur_calar: peratus lubang dalam sampul huruf,
+# kad K23 (dahulu K12), IMG_5793) dengan parameter yang diukur pada gambar upload (ukur_calar: peratus lubang dalam sampul huruf,
 # kongsi lubang memanjang = calar, panjang median calar), dijana pada skala rujukan; diukur semula selepas jana.
 # Guna: python3 SK06_finish.py <imej> <S1..S6> <folder keluar> [--sizes 18x24,24x36] [--keep-color] [--palet <json>] [--kad Kx]
 #       python3 SK06_finish.py --ukur-tekstur <gambar upload>   (v1.3: ukuran tekstur untuk kad)

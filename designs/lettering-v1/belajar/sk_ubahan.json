@@ -81,12 +81,12 @@
   "dari": "SK06 v1.3 (27 Nov 2026)",
   "ke": "SK06 v1.4 (27 Nov 2026)",
   "imej": [
-   "v12-cpu-ref6/moss/K12F_s42",
-   "v12-cpu-ref6/klein3/K12F_s42"
+   "v12-cpu-ref6/moss/K23f_s42",
+   "v12-cpu-ref6/klein3/K23f_s42"
   ],
   "keputusan": "menang",
   "tarikh": "2026-11-27",
-  "nota": "Jenis tekstur 'calar' (calar + bintik lusuh dalam dakwat) untuk kad K12; parameter diukur pada panel koral IMG_5793 (ukur_calar: lubang 2.08%, calar 24.9%, panjang 21.5 px pada blok 664 px); penjana ditala pada moss K12F s42. Imej kad lain sama piksel (moss K2E s42, beza 0).",
-  "bukti": "moss K12F 1.61 / 24.5 / 22.0 (dalam had); klein3 K12F 0.92 / 12.3 (amaran > 30%); mata: calar nampak, tetapi lebih ringan daripada rujukan ; belajar_sk: lulus 0/2 -> 1/2 (K12F), jurang tertutup, tiada cacat baharu"
+  "nota": "Jenis tekstur 'calar' (calar + bintik lusuh dalam dakwat) untuk kad K12; parameter diukur pada panel koral IMG_5793 (ukur_calar: lubang 2.08%, calar 24.9%, panjang 21.5 px pada blok 664 px); penjana ditala pada moss K23f s42. Imej kad lain sama piksel (moss K2e s42, beza 0).",
+  "bukti": "moss K23f 1.61 / 24.5 / 22.0 (dalam had); klein3 K23f 0.92 / 12.3 (amaran > 30%); mata: calar nampak, tetapi lebih ringan daripada rujukan ; belajar_sk: lulus 0/2 -> 1/2 (K23f), jurang tertutup, tiada cacat baharu"
  }
 ]

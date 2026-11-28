@@ -1,19 +1,19 @@
 {
  "versi": "s1 (27 Nov 2026)",
- "tarikh": "2026-11-27",
+ "tarikh": "2026-11-28",
  "baris": 446,
  "imej": 76,
  "kad_dipakai": [
-  "K10",
-  "K11",
-  "K12",
   "K2",
+  "K20",
+  "K21",
+  "K22",
+  "K23",
   "K3",
   "K4",
   "K6",
   "K7",
-  "K8",
-  "K9"
+  "K8"
  ],
  "suka": 0,
  "sk": {
@@ -239,7 +239,7 @@
      "kelas": "tekstur",
      "nama": "Tekstur lain daripada kad",
      "imej": [
-      "v12-cpu-ref6/klein3/K12F_s42"
+      "v12-cpu-ref6/klein3/K23f_s42"
      ],
      "n": 1,
      "kalah": []
