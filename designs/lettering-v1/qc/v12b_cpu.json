@@ -5,310 +5,310 @@
    "K9B_s42": [
     true,
     "Condong kurang daripada kad (dibetulkan SK01); garis tambahan di kiri dan kanan 'it'",
-    ""
+    "9786b33db2498f5fc7508d968ed44656"
    ],
    "K10V_s42": [
     true,
     "Tekstur dalam huruf",
-    ""
+    "ee3d4d5ca9f18117b014e062ad403d44"
    ],
    "K11N_s42": [
     true,
     "",
-    ""
+    "f0c501150b58b44b4453e8bf89a91ba2"
    ],
    "K12Y_s42": [
     true,
     "",
-    ""
+    "b2c46d8de681396e817090e8dc1fffa8"
    ],
    "K9B_s7": [
     true,
     "Condong kurang daripada kad (dibetulkan SK01); garis tambahan di kiri dan kanan 'it'",
-    ""
+    "79a2db143ba9b03f32cc330ddfe46092"
    ],
    "K10V_s7": [
     true,
     "Tekstur dalam huruf",
-    ""
+    "c8006727926d0c97103ba985aeedc362"
    ],
    "K11N_s7": [
     true,
     "",
-    ""
+    "44c9dfd31d3781ecdb263e9378f90070"
    ],
    "K12Y_s7": [
     true,
     "",
-    ""
+    "e76cafa45f44bb523ee0796c8f69b0e0"
    ],
    "K9B_s123": [
     true,
     "Condong kurang daripada kad (dibetulkan SK01); garis tambahan di kiri dan kanan 'it'",
-    ""
+    "99997d8d54376ab0a5f84558dc4b2c56"
    ],
    "K10V_s123": [
     true,
     "Tekstur dalam huruf",
-    ""
+    "b993ea943604353a41b2de0a75eec8c6"
    ],
    "K11N_s123": [
     true,
     "",
-    ""
+    "3aa8bf2bd7338bfeaffe1a8f24d2ecf1"
    ],
    "K12Y_s123": [
     true,
     "",
-    ""
+    "d1c72398c7ec48d50bcefbdf808909b2"
    ]
   },
   "ernie": {
    "K9B_s42": [
     true,
     "Huruf berongga selepas SK04 (pepijat kod hp kad.py dan semak_pe, dibaiki 27 Nov, dijana semula v12b-cpu-p1)",
-    ""
+    "3defa7c92527c7a25b8ca93a9930b16b"
    ],
    "K9B_s7": [
     true,
     "Huruf berongga selepas SK04 (pepijat kod hp kad.py dan semak_pe, dibaiki 27 Nov, dijana semula v12b-cpu-p1); condong 4.6 selepas SK04",
-    ""
+    "211227ad6c9344db5ce6ca3dcd4215f1"
    ],
    "K9B_s123": [
     true,
     "Huruf berongga selepas SK04 (pepijat kod hp kad.py dan semak_pe, dibaiki 27 Nov, dijana semula v12b-cpu-p1)",
-    ""
+    "c415b5158f7f328506e6bf6407973336"
    ],
    "K10V_s42": [
     true,
     "",
-    ""
+    "16315e1847ead0ac9d9435b6e25cae08"
    ],
    "K10V_s7": [
     true,
     "Seluruh blok dalam panel putih tambahan",
-    ""
+    "b147137a5ebb05f87df22a9fc893a3fa"
    ],
    "K10V_s123": [
     true,
     "Seluruh blok dalam panel putih tambahan",
-    ""
+    "c2bb813b280b4d803fe27e04263eb23e"
    ],
    "K11N_s42": [
     true,
     "Kotak atau bentuk huruf lain daripada kad (pepijat kod hp kad.py dan semak_pe, dibaiki 27 Nov, dijana semula v12b-cpu-p1)",
-    ""
+    "59a05da52c61f948f5c087f9b9c75a83"
    ],
    "K11N_s7": [
     true,
     "Kotak atau bentuk huruf lain daripada kad (pepijat kod hp kad.py dan semak_pe, dibaiki 27 Nov, dijana semula v12b-cpu-p1)",
-    ""
+    "7f343789729cfa87a4e1974eb3974abf"
    ],
    "K11N_s123": [
     true,
     "Kotak atau bentuk huruf lain daripada kad (pepijat kod hp kad.py dan semak_pe, dibaiki 27 Nov, dijana semula v12b-cpu-p1)",
-    ""
+    "0b2a93ee33115a8fba01d8d8afefa1a0"
    ],
    "K12Y_s42": [
     true,
     "Kotak atau bentuk huruf lain daripada kad (pepijat kod hp kad.py dan semak_pe, dibaiki 27 Nov, dijana semula v12b-cpu-p1)",
-    ""
+    "7510293071e414538bb77ca77a27d718"
    ],
    "K12Y_s7": [
     true,
     "Kotak atau bentuk huruf lain daripada kad (pepijat kod hp kad.py dan semak_pe, dibaiki 27 Nov, dijana semula v12b-cpu-p1)",
-    ""
+    "b548d7954e82ec33ceaab8a6fff82c99"
    ],
    "K12Y_s123": [
     true,
     "Kotak atau bentuk huruf lain daripada kad (pepijat kod hp kad.py dan semak_pe, dibaiki 27 Nov, dijana semula v12b-cpu-p1)",
-    ""
+    "b2b381c439c7ebd46cb0d2bd4b7b46f7"
    ]
   },
   "klein3": {
    "K9B_s42": [
     true,
     "Condong kurang (dibetulkan SK01)",
-    ""
+    "f5a81e955efd477ec65f27f97babaddd"
    ],
    "K9B_s7": [
     true,
     "Condong kurang (dibetulkan SK01)",
-    ""
+    "5ae5226c3aff0ad8413c01d761649d52"
    ],
    "K9B_s123": [
     true,
     "Condong kurang; SK01 tidak cukup (12.1 -> 13.4)",
-    ""
+    "13c2f6bd8554a2c59b8cc68ea420a9b3"
    ],
    "K10V_s42": [
     true,
     "Tekstur dalam huruf",
-    ""
+    "b2ddfcd36d745b146b619432f4ff26ce"
    ],
    "K10V_s7": [
     true,
     "Tekstur dalam huruf",
-    ""
+    "877091cb74611cf870785fa01d9c2729"
    ],
    "K10V_s123": [
     true,
     "Tekstur dalam huruf",
-    ""
+    "066ae1e6de2cc1b21cc362ae42cfb6ad"
    ],
    "K11N_s42": [
     true,
     "",
-    ""
+    "a060eb5d5e1c6697c8b83884247335d7"
    ],
    "K11N_s7": [
     true,
     "",
-    ""
+    "8f994fd8be4bff146c048604d5047666"
    ],
    "K11N_s123": [
     true,
     "",
-    ""
+    "46ba996d5abe78e62b9df50c40fce849"
    ],
    "K12Y_s42": [
     true,
     "",
-    ""
+    "f89e9c2bc3a3fbd0055ef67a8599a67d"
    ],
    "K12Y_s7": [
     true,
     "",
-    ""
+    "497c1ec08dea564d26533f5fe16ec5f0"
    ],
    "K12Y_s123": [
     true,
     "",
-    ""
+    "dd1661837b6d65aa00f5525ab11e68a7"
    ]
   },
   "zturbo": {
    "K9B_s42": [
     true,
     "Ruang tepi sempit (SK02); condong kurang (SK01)",
-    ""
+    "31462b0bad5a7182b871c57506cef4dc"
    ],
    "K9B_s7": [
     false,
     "Koma tambahan selepas 'Daily' (tanda baca, G1); sengkang di kiri dan kanan 'it'",
-    ""
+    "cd6506d5f38c3c6c59415664539b6edc"
    ],
    "K9B_s123": [
     false,
     "Koma tambahan selepas 'Build' (tanda baca, G1)",
-    ""
+    "0f65ded9d812cbbf251d38ff3099b854"
    ],
    "K10V_s42": [
     true,
     "Ruang tepi sempit (SK02); baris tidak sama lebar (bentuk)",
-    ""
+    "0fb7a15869850ed3fb5643f8ed39ac3f"
    ],
    "K10V_s7": [
     true,
     "Baris tidak sama lebar (bentuk)",
-    ""
+    "26d430409d663df27c35387dd2197a20"
    ],
    "K10V_s123": [
     true,
     "Baris tidak sama lebar (bentuk)",
-    ""
+    "a452b3e0101bd9a8609643be26067682"
    ],
    "K11N_s42": [
     true,
     "Sengkang hanya di kanan baris kecil (hiasan di tempat salah)",
-    ""
+    "3db35415c068b5de4ed6af560695c4ed"
    ],
    "K11N_s7": [
     true,
     "Garis tambahan di bawah baris kecil, bukan sengkang kiri kanan",
-    ""
+    "8a4ba6117c6dfc01d6517fe1cdd8218d"
    ],
    "K11N_s123": [
     false,
     "Baris 'STEADY.' berulang dua kali (G1)",
-    ""
+    "44d229840ff91cd77132043167b36d9c"
    ],
    "K12Y_s42": [
     true,
     "Ruang tepi sempit (SK02)",
-    ""
+    "44dbea42063b4564148e7d6597d86d84"
    ],
    "K12Y_s7": [
     false,
     "Baris 'LET YOUR' berulang, salinan kabur 'LETI YOUR' (G1/G2)",
-    ""
+    "837b4b711d820ded8116902b7d0d22dc"
    ],
    "K12Y_s123": [
     true,
     "",
-    ""
+    "2e5bcfcdec4e4ada92fdfbedc907801b"
    ]
   },
   "klein4b": {
    "K9B_s42": [
     false,
     "'Daily' jadi 'Daly' (ejaan; 3/3 seed)",
-    ""
+    "95638dc05c9c5fb9ed5d88b154428261"
    ],
    "K9B_s7": [
     false,
     "'Daily' jadi 'Daly' (ejaan; 3/3 seed)",
-    ""
+    "be200d7b68c5578d463a5cea73a3e9c2"
    ],
    "K9B_s123": [
     false,
     "'Daily' jadi 'Daly' (ejaan; 3/3 seed)",
-    ""
+    "b365d9e6c15d242f202dacbeedbe39ff"
    ],
    "K10V_s42": [
     true,
     "",
-    ""
+    "626c5b9ebf8e5195ccdc473620e05f94"
    ],
    "K10V_s7": [
     true,
     "",
-    ""
+    "cf0a2001637c9f1dfcf47bc97c6ac2e0"
    ],
    "K10V_s123": [
     true,
     "",
-    ""
+    "6d4a0656c53ad226e87c19d071442aa7"
    ],
    "K11N_s42": [
     false,
     "'SHAKY.' jadi 'SHAKY' tanpa noktah dan 'add' jadi 'adl', huruf kecil 'small' (ejaan)",
-    ""
+    "f87ab695efff9c222c751ec7ce80ec62"
    ],
    "K11N_s7": [
     false,
     "Huruf 'e' dalam 'steps' rosak (ejaan)",
-    ""
+    "1813cbdebd260c7ddfce621056505219"
    ],
    "K11N_s123": [
     true,
     "",
-    ""
+    "c7730c9e27387c9d078993ccf5d10072"
    ],
    "K12Y_s42": [
     false,
     "'HUMBLE.' jadi 'HUMBLE' tanpa noktah (ejaan; 3/3 seed); blok di tengah, bukan rata kiri",
-    ""
+    "43cab1183f597d0d451be1e5c1ff5ad8"
    ],
    "K12Y_s7": [
     false,
     "'HUMBLE.' jadi 'HUMBLE' tanpa noktah (ejaan; 3/3 seed); blok di tengah, bukan rata kiri",
-    ""
+    "e11077e83b132f776c80bca0ce8ef83e"
    ],
    "K12Y_s123": [
     false,
     "'HUMBLE.' jadi 'HUMBLE' tanpa noktah (ejaan; 3/3 seed); blok di tengah, bukan rata kiri",
-    ""
+    "5db994237b4d3e09846ea98a77dfcf47"
    ]
   }
  },
@@ -317,47 +317,47 @@
    "K9B_s42": [
     true,
     "",
-    ""
+    "78dfb26993428f340dafee2030ee8481"
    ],
    "K9B_s7": [
     true,
     "Condong kurang (dibetulkan SK01)",
-    ""
+    "b08d0f84c964bb237a1b144df4236d20"
    ],
    "K9B_s123": [
     true,
     "",
-    ""
+    "d6b9984809ab82e78f32eaa51084b2ff"
    ],
    "K11N_s42": [
     true,
     "Kotak tambahan pada 'STEADY.' (hiasan di tempat salah)",
-    ""
+    "182bbe0bdef75db75ce8aa3f620edb91"
    ],
    "K11N_s7": [
     false,
     "Tanda petikan tambahan pada 'BEGIN'; 'GROW' huruf berongga; bingkai kelabu",
-    ""
+    "034736eda672cb4446d52b523eb55aac"
    ],
    "K11N_s123": [
     true,
     "Tiada kotak pada 'SHAKY.' (ciri kad)",
-    ""
+    "3e62929a0c5ed80d82a4ba7ad9ebc830"
    ],
    "K12Y_s42": [
     true,
     "",
-    ""
+    "2ac89404e35ed29579a44ee0c9720976"
    ],
    "K12Y_s7": [
     true,
     "",
-    ""
+    "9b89ac1ed8efd305dc9395087d0e0271"
    ],
    "K12Y_s123": [
     true,
     "",
-    ""
+    "3318f77e730434ef253203674a22300d"
    ]
   }
  },
@@ -366,17 +366,17 @@
    "K9B_s42": [
     true,
     "",
-    ""
+    "aefca09212d10725ba8953898f61a7c5"
    ],
    "K9B_s7": [
     false,
     "Koma tambahan selepas 'Daily'; garis tambahan di kiri dan kanan 'it'",
-    ""
+    "6a0bb947bdc9dceae0e950f4ac25a1c8"
    ],
    "K9B_s123": [
     false,
     "Koma tambahan selepas 'Build'",
-    ""
+    "677b38b4ea96aa682c8b00e532eb2230"
    ]
   }
  },
@@ -385,7 +385,7 @@
    "K11N_s2024": [
     true,
     "Kotak tambahan pada 'STEADY.' (hiasan di tempat salah); bingkai putih nipis di tepi (mockup)",
-    ""
+    "388a785e14b16bff67bbee402418c2ed"
    ]
   }
  },
@@ -394,17 +394,17 @@
    "K11N_s42": [
     true,
     "",
-    ""
+    "4ca2d236a608dd2de82f89a6a62c0c68"
    ],
    "K11N_s7": [
     false,
     "Tanda petikan tambahan pada 'BEGIN'",
-    ""
+    "0fc97940be57b2a2fee40b2d4c91f05e"
    ],
    "K11N_s123": [
     true,
     "",
-    ""
+    "bad15511b4bfd39686dfa4bae145ece1"
    ]
   }
  }

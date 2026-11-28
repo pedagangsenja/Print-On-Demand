@@ -319,13 +319,13 @@ KAD = {
             ("Tepi huruf sedikit kasar (marker kering)", False),
             ("Putih satu warna atas hitam, tiada swash", False)]),
     # 27 Nov 2026: empat kad baharu daripada upload pengguna (larian v1.2 kedua). Dibuat Claude daripada gambar; pengguna
-    # membenarkan jana tanpa menunggu kelulusan kad. Semakan S&C (1b): tiada gaya sedia ada daripada gambar yang sama;
+    # membenarkan jana tanpa menunggu kelulusan kad; keempat-empat diluluskan pengguna 28 Nov 2026. Semakan S&C (1b): tiada gaya sedia ada daripada gambar yang sama;
     # paling hampir S008 / K2 (blok sans pekat lusuh) tetapi K2 ada jalur atas + kotak penuh lebar, jadi kad baharu.
     # Kanvas rujukan 9:16 (IMG_5810, IMG_5804) dan 2:3 (IMG_5796, IMG_5797) -> potret 3:4: blok dikekalkan nisbahnya dan
     # dimuat dengan ruang tepi rujukan sebagai had paling kecil (ruang tepi sisi / atas-bawah ditukar ikut kanvas 3:4).
     "K9": dict(
         nama="Skrip berus tebal condong + garis bawah berus (putih atas hitam)", ref="IMG_5810",
-        versi="v1.0 (27 Nov 2026; belum diluluskan pengguna)",
+        versi="v1.0 (27 Nov 2026; diluluskan pengguna 28 Nov 2026)",
         kelas="F1", dakwat=1, ruang_tepi=20, tekstur="tiada", julat="2-4 perkataan",
         warna=dict(latar=("teal", "#027588", "teal"), dakwat=[("oren", "#f7901e", "orange")]),
         medium="Hand-lettered brush script quote poster, portrait.",
@@ -353,7 +353,7 @@ KAD = {
             ("Satu dakwat cerah atas latar gelap", False)]),
     "K10": dict(
         nama="Blok sans pekat sempit sama lebar + tekstur grunge (putih atas hitam)", ref="IMG_5804",
-        versi="v1.0 (27 Nov 2026; belum diluluskan pengguna)",
+        versi="v1.0 (27 Nov 2026; diluluskan pengguna 28 Nov 2026)",
         kelas="F2", dakwat=1, ruang_tepi=28, tekstur="grunge lusuh sederhana", julat="3-5 perkataan",
         warna=dict(latar=("hitam batu", "#121212", "black"), dakwat=[("kuning limau", "#d8e021", "lime yellow")]),
         medium="Bold distressed typographic quote poster, portrait.",
@@ -376,11 +376,12 @@ KAD = {
             ("Blok sempit tinggi di tengah, ruang sisi lebar", False),
             ("Jarak baris rapat dan sekata", False),
             ("Tiada condong atau lengkung", False),
+            ("Tiada panel atau kotak putih di sekeliling blok", True),  # ditambah 28 Nov 2026 (pengguna): ERNIE K10V s7, s123
             ("Tekstur lusuh grunge dalam huruf (oleh skrip)", False),
             ("Satu dakwat cerah atas latar gelap", False)]),
     "K11": dict(
         nama="Sans pekat besar + satu kata dalam kotak berus + baris kecil (hitam atas krim)", ref="IMG_5796",
-        versi="v1.0 (27 Nov 2026; belum diluluskan pengguna)",
+        versi="v1.0 (27 Nov 2026; diluluskan pengguna 28 Nov 2026)",
         kelas="F1", dakwat=3, ruang_tepi=8, tekstur="tiada", julat="5-9 perkataan",
         peta_warna=dict(utama=0, sokongan=1, penyambung=0, hiasan=1),
         warna=dict(latar=("krim", "#f5f1e6", "cream"),
@@ -409,7 +410,7 @@ KAD = {
             ("Hanya hitam, oren dan krim", False)]),
     "K12": dict(
         nama="Sans pekat sempit rata kiri + satu kata dalam kotak penuh (hitam atas putih)", ref="IMG_5797",
-        versi="v1.0 (27 Nov 2026; belum diluluskan pengguna)",
+        versi="v1.0 (27 Nov 2026; diluluskan pengguna 28 Nov 2026)",
         kelas="F1", dakwat=2, ruang_tepi=8, tekstur="tiada", julat="5-8 perkataan",
         peta_warna=dict(utama=0, sokongan=1, penyambung=0, hiasan=1),
         warna=dict(latar=("putih", "#f7f5f8", "white"),
