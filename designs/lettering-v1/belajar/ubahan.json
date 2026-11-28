@@ -142,7 +142,7 @@
   "kelas": [
    "rawak"
   ],
-  "design": "K11A, K7M, K8G",
+  "design": "K52A, K7M, K8G",
   "sebelum": "-",
   "selepas": "-",
   "keputusan": "tidak berkenaan",
@@ -157,11 +157,11 @@
   "kelas": [
    "hiasan_lebih"
   ],
-  "design": "K11A, K13S",
+  "design": "K52A, K54p",
   "sebelum": "2/5",
   "selepas": "4/5",
   "keputusan": "kalah",
-  "nota": "Tambah 'These are the only decorations, on a clean empty background.' (K11A) / 'There are no decorations, only a clean empty background.' (K13S). Bingkai putih hilang 6/6, tetapi K13S s123 kini ada tanda petikan tambahan (kelas cacat baharu: rawak). Seed 42, 7 (+123 K11A baharu). Dibuang. Imej K11A pusingan ini lulus QC dan dipakai (kitaran QC tamat)"
+  "nota": "Tambah 'These are the only decorations, on a clean empty background.' (K52A) / 'There are no decorations, only a clean empty background.' (K54p). Bingkai putih hilang 6/6, tetapi K54p s123 kini ada tanda petikan tambahan (kelas cacat baharu: rawak). Seed 42, 7 (+123 K52A baharu). Dibuang. Imej K52A pusingan ini lulus QC dan dipakai (kitaran QC tamat)"
  },
  {
   "tarikh": "2026-11-28",
@@ -172,10 +172,10 @@
   "kelas": [
    "bentuk"
   ],
-  "design": "K10Q, K13S",
+  "design": "K51m, K54p",
   "sebelum": "0/5",
   "selepas": "0/5",
   "keputusan": "kalah",
-  "nota": "Tambah 'Every letter is a tall, narrow condensed letterform, much taller than it is wide.' Huruf masih lebar pada 6/6 imej (seed 42, 7, 123; K10Q s123 baharu). Dibuang. Pilihan bentuk habis: FLUX 3 Klein tidak sesuai untuk K10 / K13 (model lain lulus)"
+  "nota": "Tambah 'Every letter is a tall, narrow condensed letterform, much taller than it is wide.' Huruf masih lebar pada 6/6 imej (seed 42, 7, 123; K51m s123 baharu). Dibuang. Pilihan bentuk habis: FLUX 3 Klein tidak sesuai untuk K10 / K13 (model lain lulus)"
  }
 ]

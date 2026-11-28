@@ -53,15 +53,15 @@ AYAT = {
     # 27 Nov 2026: lima ayat baharu untuk lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791); dipilih Claude
     # (pengguna serah pilihan). Setiap ayat dijana dengan SATU kad sahaja: R (K9), Q (K10), A (K11), T (K12), S (K13).
     # Saringan trademark: lihat qc/v12_k9k13.json (saringan, bukan pengesahan undang-undang).
-    "R": dict(nama="pendek", laluan=1, ayat="Hold your ground",
+    "k": dict(nama="pendek", laluan=1, ayat="Hold your ground",
               baris=[("Hold", "utama"), ("your", "penyambung"), ("ground", "sokongan")]),
-    "Q": dict(nama="pendek", laluan=1, ayat="Do The Work Quietly",
+    "m": dict(nama="pendek", laluan=1, ayat="Do The Work Quietly",
               baris=[("Do The", "sokongan"), ("Work", "utama"), ("Quietly", "sokongan")]),
     "A": dict(nama="pendek", laluan=1, ayat="Doubt Loses To Action",
               baris=[("Doubt", "utama"), ("Loses To", "penyambung"), ("Action", "utama")]),
-    "T": dict(nama="pendek", laluan=1, ayat="Effort Today Freedom Tomorrow",
+    "n": dict(nama="pendek", laluan=1, ayat="Effort Today Freedom Tomorrow",
               baris=[("Effort", "utama"), ("Today", "penyambung"), ("Freedom", "utama"), ("Tomorrow", "sokongan")]),
-    "S": dict(nama="sederhana", laluan=2, ayat="Steady Hands Build Strong Lives",
+    "p": dict(nama="sederhana", laluan=2, ayat="Steady Hands Build Strong Lives",
               baris=[("Steady", "sokongan"), ("Hands", "utama"), ("Build", "penyambung"), ("Strong", "sokongan"),
                      ("Lives", "utama")]),
 }
@@ -322,7 +322,7 @@ KAD = {
     # K9-K13: dibuat Claude 27 Nov 2026 daripada lima upload pengguna (rujukan/IMG_*.jpg). Ruang tepi, condong dan
     # warna asal diukur SK05 (gambar dipotong ke kawasan poster dahulu: IMG_5793, IMG_5789). Hitam putih sahaja
     # (arahan pengguna 27 Nov 2026); warna_asal = warna gambar upload, untuk varian C kelak.
-    "K9": dict(
+    "K50": dict(
         nama="Skrip berus tebal bertingkat + swash garis bawah (putih atas hitam)", ref="IMG_5840",
         snc="belum", versi="v1.0 (27 Nov 2026; diluluskan pengguna 28 Nov 2026)",
         kelas="F1", dakwat=1, ruang_tepi=11, tekstur="tiada", julat="2-5 perkataan",
@@ -350,7 +350,7 @@ KAD = {
             ("Perkataan kecil diselit antara baris besar", False),
             ("Putih satu warna atas hitam rata", False),
             ("Tiada bayang, tiada garis luar", False)]),
-    "K10": dict(
+    "K51": dict(
         nama="Blok sans pekat sempit rata penuh lebar, satu perkataan gergasi (lusuh calar)", ref="IMG_5793",
         snc="belum", versi="v1.0 (27 Nov 2026; diluluskan pengguna 28 Nov 2026)",
         kelas="F2", dakwat=1, ruang_tepi=6, tekstur="lusuh calar sederhana", julat="3-7 perkataan",
@@ -377,7 +377,7 @@ KAD = {
             ("Tiada hiasan", False),
             ("Satu warna dakwat atas latar rata", False),
             ("Ruang tepi sederhana sekata", False)]),
-    "K11": dict(
+    "K52": dict(
         nama="Sans pekat sempit condong + baris kecil + jalur amaran + bar gelembung cakap", ref="IMG_5789",
         snc="belum", versi="v1.0 (27 Nov 2026; diluluskan pengguna 28 Nov 2026)",
         kelas="F2", dakwat=1, ruang_tepi=3, tekstur="lusuh grunge sederhana", julat="3-6 perkataan",
@@ -407,7 +407,7 @@ KAD = {
             ("Seluruh blok condong naik ke kanan", False),
             ("Satu warna dakwat atas latar rata", False),
             ("Ruang tepi sempit", False)]),
-    "K12": dict(
+    "K53": dict(
         nama="Poster vintaj bertingkat: sans pekat + reben + garis pembahagi + bintang", ref="IMG_5786",
         snc="belum", versi="v1.0 (27 Nov 2026; diluluskan pengguna 28 Nov 2026)",
         kelas="F2", dakwat=1, ruang_tepi=4, tekstur="lusuh cetakan halus", julat="3-6 perkataan",
@@ -435,7 +435,7 @@ KAD = {
             ("Coretan berus pendek di bawah baris akhir", False),
             ("Satu warna dakwat atas latar rata", False),
             ("Tiada teks rawak dalam reben / hiasan", False)]),
-    "K13": dict(
+    "K54": dict(
         nama="Blok sans pekat rata penuh lebar, baris sangat rapat (semburan butir)", ref="IMG_5791",
         snc="belum", versi="v1.0 (27 Nov 2026; diluluskan pengguna 28 Nov 2026)",
         kelas="F2", dakwat=1, ruang_tepi=2, tekstur="butir semburan kasar", julat="4-8 perkataan",
@@ -625,7 +625,7 @@ BLOK = {
                                   had=["butir bawah 1 px dan tepi marker kering tidak ditiru: pada JPEG 600x449 itu kesan "
                                        "mampatan; perlu gambar upload lebih besar"]))),
     # K9-K13 (27 Nov 2026): rujukan diukur SK05 pada rujukan/IMG_*.jpg (IMG_5793, IMG_5789: dipotong ke poster).
-    "K9": dict(
+    "K50": dict(
         medium="brush script quote poster", gaya="hand-lettered", latar_warna="solid black", latar_isi=None,
         tepi="crisp clean edges", bentuk="one tight block of staggered lines", condong=None, sentuh="nest closely",
         margin="wide empty black margins",
@@ -644,7 +644,7 @@ BLOK = {
         sama_lebar=False,
         rujukan=dict(condong_darjah=1.9, tepi_pct=11.0, tepi_sisi_pct=11.0, tepi_atas_bawah_pct=13.2,
                      sumber="SK05 pada IMG_5840 (736x981)")),
-    "K10": dict(
+    "K51": dict(
         medium="typographic quote poster", gaya="bold", latar_warna="solid black", latar_isi=None,
         tepi="crisp clean edges",
         bentuk="one tight justified block in which every line is stretched to the same full width",
@@ -660,7 +660,7 @@ BLOK = {
                      tekstur=dict(jenis="calar", lubang_dakwat=0.0271, lebar_blok=664,
                                   sumber="SK06 --ukur-tekstur --songsang pada IMG_5793_poster.png (v1.4)",
                                   had=["calar diukur sebagai pecahan lubang sahaja; arah / panjang calar ditetapkan prosedur"]))),
-    "K11": dict(
+    "K52": dict(
         medium="typographic quote poster", gaya="bold condensed", latar_warna="solid black", latar_isi=None,
         tepi="crisp clean edges", bentuk="one tight block",
         condong="tilts slightly so each line rises toward the right", sentuh="sit close together",
@@ -680,7 +680,7 @@ BLOK = {
         sama_lebar=False,
         rujukan=dict(condong_darjah=4.5, tepi_pct=3.0, tepi_sisi_pct=7.7, tepi_atas_bawah_pct=3.0,
                      sumber="SK05 pada IMG_5789 dipotong ke kad hitam (602x853)")),
-    "K12": dict(
+    "K53": dict(
         medium="motivational typographic poster", gaya="vintage", latar_warna="solid black", latar_isi=None,
         tepi="crisp clean edges",
         bentuk="one tall centered column of equal-width lines separated by thin horizontal white rules",
@@ -702,7 +702,7 @@ BLOK = {
         tiada=["other colors", "outline"], ada="one white ink on a clean black background", sama_lebar=True,
         rujukan=dict(condong_darjah=0.0, tepi_pct=1.6, tepi_sisi_pct=4.6, tepi_atas_bawah_pct=1.6,
                      sumber="SK05 pada IMG_5786 (1024x1535; garis pembahagi hampir ke tepi)")),
-    "K13": dict(
+    "K54": dict(
         medium="typographic quote poster", gaya="bold", latar_warna="solid black", latar_isi=None,
         tepi="crisp clean edges",
         bentuk="one tall tight justified block in which every line is stretched to the same full width",

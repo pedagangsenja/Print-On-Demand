@@ -696,23 +696,23 @@ Model baharu juga memerlukan aturan prompt sendiri sebelum dipakai untuk design 
 - **5b:** 33 imej yang lulus dibetulkan (24 + 9 FLUX 3 Klein); angka di bawah untuk 24 yang pertama: imej dibetulkan (`designs/lettering-v1/betul/v12-cpu/`, `log_5b.jsonl`); 0 gagal semakan akhir. Dua pembaikan skrip semasa larian: SK05 v1.1 (bintik latar di tepi tidak lagi menggagalkan imej) dan SK02 v1.1 (ruang tepi sisi dan atas / bawah berasingan; K3: 13.6 / 15.5, K7: 6.2 / 11.3).
 - **Kemasan (SK06):** imej terbaik setiap design, pilihan Claude; pengguna memilih melalui Daftar S/C: K3K MOSS seed 42 (gaya S3, putih; warna kuning + bayang dibuat 27 Nov oleh SK07 + SK08, lihat daftar skrip), K7M MOSS seed 42 (gaya S2, krim + butir), K8G klein 4B seed 42 (gaya S4, kapur). Fail: `designs/lettering-v1/final/v12-cpu/` (SVG induk + pratonton 18×24); gambar ringkas `qc/v12_cpu_akhir.jpg`.
 
-## Larian v1.2 kedua: K9–K13 (27 Nov 2026, arahan pengguna)
+## Larian v1.2 kedua: K50–K54 (27 Nov 2026, arahan pengguna)
 - **Tugas:** lima gambar upload, ayat baharu pilihan Claude, semua model di CPU, hitam putih sahaja, ikut standard; QC dan Kad Gaya.
-- **Design dan kad** (kad K9–K13 dibuat Claude daripada gambar, v1.0, **diluluskan pengguna 28 Nov 2026**; rujukan diukur SK05; saringan tanda dagang carian web sahaja, `qc/v12_k9k13.json`):
+- **Design dan kad** (kad K50–K54 dibuat Claude daripada gambar, v1.0, **diluluskan pengguna 28 Nov 2026**; rujukan diukur SK05; saringan tanda dagang carian web sahaja, `qc/v12_k50k54.json`):
 
 | Id | Gambar upload | Kad | Ayat (Claude) | Laluan | Rujukan diukur SK05 |
 |---|---|---|---|---|---|
-| K9R | IMG_5840 | K9 skrip berus + garis swash | Hold your ground | 1 | condong 1.9°, tepi 11.0 / 13.2% |
-| K10Q | IMG_5793 (dipotong ke poster karang) | K10 huruf condensed rata, satu perkataan gergasi, calar | Do The Work Quietly | 1 | tepi 8.0 / 5.7% |
-| K11A | IMG_5789 (bingkai putih dibuang) | K11 condensed condong, baris tengah kecil, jalur hazard, bar ucapan | Doubt Loses To Action | 1 | condong 4.5°, tepi 7.7 / 3.0% |
-| K12T | IMG_5786 | K12 poster vintaj bertingkat, banner, garis, bintang | Effort Today Freedom Tomorrow | 1 | tepi 4.6 / 1.6% |
-| K13S | IMG_5791 | K13 blok rata penuh tinggi, butir semburan | Steady Hands Build Strong Lives | 2 | tepi 11.7 / 2.0% |
+| K50k | IMG_5840 | K9 skrip berus + garis swash | Hold your ground | 1 | condong 1.9°, tepi 11.0 / 13.2% |
+| K51m | IMG_5793 (dipotong ke poster karang) | K10 huruf condensed rata, satu perkataan gergasi, calar | Do The Work Quietly | 1 | tepi 8.0 / 5.7% |
+| K52A | IMG_5789 (bingkai putih dibuang) | K11 condensed condong, baris tengah kecil, jalur hazard, bar ucapan | Doubt Loses To Action | 1 | condong 4.5°, tepi 7.7 / 3.0% |
+| K53n | IMG_5786 | K12 poster vintaj bertingkat, banner, garis, bintang | Effort Today Freedom Tomorrow | 1 | tepi 4.6 / 1.6% |
+| K54p | IMG_5791 | K13 blok rata penuh tinggi, butir semburan | Steady Hands Build Strong Lives | 2 | tepi 11.7 / 2.0% |
 
 - **Hitam putih:** semua kad satu dakwat putih atas hitam; warna asal disimpan dalam `warna_asal` kad. K12 dan K13: warna kad ditukar ke neutral (#f4f4f2 / #0b0b0b; sebelum ini krim dan hitam keperangan) supaya benar-benar hitam putih.
 - **Model:** MOSS, ERNIE Turbo, FLUX 3 Image Klein, Z-Image Turbo, klein 4B di CPU; tiada yang dilangkau. Qwen-Image-2512 dan GLM-Image tidak dijalankan (tidak muat RAM 15 GB, sama seperti larian pertama).
-- **Hasil pusingan 0** (55 imej; semakan mata Claude, bukti lemah; lulus = G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat). Rekod: `qc/v12_k9k13.json`; helaian `qc/v12_k9k13_<ID>.jpg`.
+- **Hasil pusingan 0** (55 imej; semakan mata Claude, bukti lemah; lulus = G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat). Rekod: `qc/v12_k50k54.json`; helaian `qc/v12_k50k54_<ID>.jpg`.
 
-| Model | K9R | K10Q | K11A | K12T | K13S | Jumlah | Masa CPU |
+| Model | K50k | K51m | K52A | K53n | K54p | Jumlah | Masa CPU |
 |---|---|---|---|---|---|---|---|
 | MOSS + LoRA | 2/2 | 2/2 | 2/2 | 2/2 | 3/3 | 11/11 | 81 minit |
 | ERNIE Turbo | 2/2 | 2/2 | 0/2 | 2/2 | 2/3 | 8/11 | 125 minit |
@@ -721,15 +721,15 @@ Model baharu juga memerlukan aturan prompt sendiri sebelum dipakai untuk design 
 | klein 4B | 2/2 | 2/2 | 2/2 | 1/2 | 2/3 | 9/11 | 31 minit |
 | Jumlah | 10/10 | 8/10 | 7/10 | 9/10 | 10/15 | 44/55 | |
 
-- **Gagal:** ERNIE K11A s42, s7 dan K13S s7 (bingkai putih separa; 5b membaca latar sebagai putih); Z-Image K11A s42 (serpihan jalur seperti tanda petikan); klein 4B K12T s42 (garis tegak separa di tepi), K13S s42 ('BUIILD'); FLUX 3 Klein K10Q 2/2 dan K13S 3/3: ciri teras gagal, huruf lebar bukan condensed (syarat QC, keputusan pengguna 28 Nov 2026; sebelum itu nota gaya, jadi angka awal 49/55).
-- **Nota gaya pada imej lulus** (bukan pintu): ERNIE K10Q 'WORK' tidak cukup besar; MOSS K13S lebar baris tidak sama; Z-Image dan FLUX 3 Klein K12T bintang menyentuh huruf O; jalur hazard menyentuh 'ACTION' (Z-Image, klein 4B); klein 4B K12T s7 bingkai garis nipis.
-- **Kitaran QC pusingan 1** (ERNIE × K11A tanpa imej lulus; cacat sama 2/2 seed = sistematik): calon 3.15 `ernie_hiasan_tepat` ("These are the only decorations, on a clean empty background."), K11A + K13S, seed 42, 7, 123 (`raw/v12-cpu-k9k13-p1`, 63 minit). Bingkai hilang 6/6; K11A 3/3 lulus (kitaran tamat, imej dipakai); K13S s123 tanda petikan tambahan. `belajar.py`: KALAH (2/5 → 4/5 tetapi kelas cacat baharu 'rawak'); dibuang.
-- **Kitaran QC pusingan 1, FLUX 3 Klein × K10Q / K13S** (28 Nov 2026): calon `klein3_frasa_bentuk` ("Every letter is a tall, narrow condensed letterform, much taller than it is wide."), seed 42, 7, 123 (56 minit): huruf masih lebar 6/6. KALAH, dibuang; pilihan bentuk habis → FLUX 3 Klein tidak dipakai untuk K10 / K13. 6 imej ini disimpan di U23 (keputusan pengguna 28 Nov 2026: A), jadi U23 = 67 imej.
-- **5b:** 50 imej lulus (45 + 5 pusingan 1; 5 imej FLUX 3 Klein K10Q / K13S kemudian dibuang kerana syarat condensed) dibetulkan, 0 gagal semakan akhir (`betul/v12-cpu-k9k13*/`).
-- **Kemasan langkah 6 (hitam putih, SK07 satu dakwat → SK06 `--kad`):** 49 imej (54 − 5 FLUX 3 Klein) (`final/v12-cpu-k9k13/`, `final/v12-cpu-k9k13-p1/`; SVG induk + pratonton 18×24; PNG 300 DPI dijana semula bila perlu, tidak disimpan dalam git). Tekstur: K9 tiada, K10 calar, K11 lusuh, K12 lusuh halus, K13 semburan. Helaian `qc/v12_k9k13_akhir.jpg`.
+- **Gagal:** ERNIE K52A s42, s7 dan K54p s7 (bingkai putih separa; 5b membaca latar sebagai putih); Z-Image K52A s42 (serpihan jalur seperti tanda petikan); klein 4B K53n s42 (garis tegak separa di tepi), K54p s42 ('BUIILD'); FLUX 3 Klein K51m 2/2 dan K54p 3/3: ciri teras gagal, huruf lebar bukan condensed (syarat QC, keputusan pengguna 28 Nov 2026; sebelum itu nota gaya, jadi angka awal 49/55).
+- **Nota gaya pada imej lulus** (bukan pintu): ERNIE K51m 'WORK' tidak cukup besar; MOSS K54p lebar baris tidak sama; Z-Image dan FLUX 3 Klein K53n bintang menyentuh huruf O; jalur hazard menyentuh 'ACTION' (Z-Image, klein 4B); klein 4B K53n s7 bingkai garis nipis.
+- **Kitaran QC pusingan 1** (ERNIE × K52A tanpa imej lulus; cacat sama 2/2 seed = sistematik): calon 3.15 `ernie_hiasan_tepat` ("These are the only decorations, on a clean empty background."), K52A + K54p, seed 42, 7, 123 (`raw/v12-cpu-k50k54-p1`, 63 minit). Bingkai hilang 6/6; K52A 3/3 lulus (kitaran tamat, imej dipakai); K54p s123 tanda petikan tambahan. `belajar.py`: KALAH (2/5 → 4/5 tetapi kelas cacat baharu 'rawak'); dibuang.
+- **Kitaran QC pusingan 1, FLUX 3 Klein × K51m / K54p** (28 Nov 2026): calon `klein3_frasa_bentuk` ("Every letter is a tall, narrow condensed letterform, much taller than it is wide."), seed 42, 7, 123 (56 minit): huruf masih lebar 6/6. KALAH, dibuang; pilihan bentuk habis → FLUX 3 Klein tidak dipakai untuk K10 / K13. 6 imej ini disimpan di U23 (keputusan pengguna 28 Nov 2026: A), jadi U23 = 67 imej.
+- **5b:** 50 imej lulus (45 + 5 pusingan 1; 5 imej FLUX 3 Klein K51m / K54p kemudian dibuang kerana syarat condensed) dibetulkan, 0 gagal semakan akhir (`betul/v12-cpu-k50k54*/`).
+- **Kemasan langkah 6 (hitam putih, SK07 satu dakwat → SK06 `--kad`):** 49 imej (54 − 5 FLUX 3 Klein) (`final/v12-cpu-k50k54/`, `final/v12-cpu-k50k54-p1/`; SVG induk + pratonton 18×24; PNG 300 DPI dijana semula bila perlu, tidak disimpan dalam git). Tekstur: K9 tiada, K10 calar, K11 lusuh, K12 lusuh halus, K13 semburan. Helaian `qc/v12_k50k54_akhir.jpg`.
 - **Belajar SK:** SK06 v1.4 `tekstur_calar_semburan` MENANG (19/19, jurang tekstur K10 / K13 tertutup). SK01–SK04, SK07, SK08: tiada cacat.
-- **Satu sesi sahaja (keputusan pengguna 28 Nov 2026):** sesi ini (cawangan `claude/focused-faraday-f7q7vc`) berhenti menulis dashboard selepas simpanan U23; kerja K9–K13 diteruskan dalam satu sesi.
-- **Simpanan (keputusan pengguna 28 Nov 2026: A):** 61 imej (55 + 6 pusingan 1 ERNIE) di AI Image Test sebagai **U23** (`data/ai_tests/rows/U23.json`, `ai_rows_k9k13.py`; peta blob `qc/v12_k9k13_blobs.txt`; `img_siap` = pratonton kemasan). Nombor U13 diambil oleh sesi Claude lain yang menjalankan K9–K13 dengan ayat berbeza; `ai_all` digabung di atas versi dashboard terkini (955 baris), bukan dijana semula, supaya U13–U22 sesi itu kekal. `aturan_belajar` dan `sk_belajar` di dashboard kini milik sesi itu; tidak ditimpa (fail cawangan ini dalam `data/export/ai_tests/`).
+- **Satu sesi sahaja (keputusan pengguna 28 Nov 2026):** sesi ini (cawangan `claude/focused-faraday-f7q7vc`) berhenti menulis dashboard selepas simpanan U23; kerja K50–K54 diteruskan dalam satu sesi.
+- **Simpanan (keputusan pengguna 28 Nov 2026: A):** 61 imej (55 + 6 pusingan 1 ERNIE) di AI Image Test sebagai **U23** (`data/ai_tests/rows/U23.json`, `ai_rows_k50k54.py`; peta blob `qc/v12_k50k54_blobs.txt`; `img_siap` = pratonton kemasan). Nombor U13 diambil oleh sesi Claude lain yang menjalankan K50–K54 dengan ayat berbeza; `ai_all` digabung di atas versi dashboard terkini (955 baris), bukan dijana semula, supaya U13–U22 sesi itu kekal. `aturan_belajar` dan `sk_belajar` di dashboard kini milik sesi itu; tidak ditimpa (fail cawangan ini dalam `data/export/ai_tests/`).
 - **Belajar 3.15** (`belajar.py` b1.2: kelas bentuk juga "bentuk huruf lebar"): ERNIE `hiasan_tepat` KALAH → pilihan habis bagi 'hiasan yang tidak diminta' (tukar model); Z-Image `had_positif` tidak berkenaan (aturan r1 sudah positif) → pilihan habis bagi 'teks rawak'; klein 4B calon `klein4b_hiasan_tepat` ditulis (dipakai pada jana klein 4B seterusnya); FLUX 3 Klein `frasa_bentuk` KALAH → pilihan habis bagi bentuk (tukar model).
 - **Model × kad selepas larian ini** (bukti lemah, satu ayat setiap kad): K9, K10 = MOSS, ERNIE, Z-Image, klein 4B (FLUX 3 Klein tidak: huruf lebar); K11 = MOSS, FLUX 3 Klein, klein 4B (2/2), Z-Image (1/2), ERNIE hanya dengan baris hiasan tepat; K12 = MOSS, ERNIE, FLUX 3 Klein, Z-Image (2/2), klein 4B (1/2); K13 = MOSS, Z-Image (3/3), ERNIE, klein 4B (2/3); FLUX 3 Klein tidak (huruf lebar). Paling hampir gaya rujukan (mata Claude): K9 ERNIE, K10 Z-Image / klein 4B, K11 MOSS / FLUX 3 Klein, K12 ERNIE / klein 4B, K13 Z-Image / ERNIE.
 
@@ -746,7 +746,7 @@ Setiap ubahan aturan (3.4–3.10) direkod di sini, dan juga dalam `designs/lette
 | 26 Nov 2026 | Z-Image Turbo | r1 (tiada perubahan) | K8 × ayat G: baris dua perkataan dipisah jadi dua baris (3/3) | Tambah "as two words side by side on one line". TIDAK berjaya, dibuang | 0/3 → 0/3 |
 | 26 Nov 2026 | FLUX 3 Image Klein | r0 (ujian pertama) | Tiada pembanding rangka am | Aturan 3.8 seperti ditulis; CPU | 9/9 pada K3, K7, K8 |
 | 27 Nov 2026 | FLUX 3 Image Klein | r0 → r1 (ujian kelayakan, `belajar.py`) | K8 × ayat G: 'KEEP GOING' tanpa jarak antara perkataan (3/3) | Tiada ubahan teks; rangka am lawan aturan 3.8 pada kad, ayat dan seed yang sama | rangka am 6/9 → aturan 9/9 |
-| 27 Nov 2026 | ERNIE Turbo | r1 (tiada perubahan) | K11 / K13: bingkai putih separa di tepi (3 imej) | Calon `hiasan_tepat`: "These are the only decorations, on a clean empty background." KALAH (bingkai hilang 6/6, tetapi tanda petikan baharu K13S s123), dibuang | 2/5 → 4/5 |
+| 27 Nov 2026 | ERNIE Turbo | r1 (tiada perubahan) | K11 / K13: bingkai putih separa di tepi (3 imej) | Calon `hiasan_tepat`: "These are the only decorations, on a clean empty background." KALAH (bingkai hilang 6/6, tetapi tanda petikan baharu K54p s123), dibuang | 2/5 → 4/5 |
 | 27 Nov 2026 | Z-Image Turbo | r1 (tiada perubahan) | Teks / tanda rawak (5 imej, K7, K8, K11) | Calon `had_positif`: tidak berkenaan (aturan 3.5 r1 sudah positif, tiada perkataan berisiko); tidak dijana | - |
 | 28 Nov 2026 | FLUX 3 Image Klein | r1 (tiada perubahan) | K10 / K13: huruf lebar, bukan condensed (5 imej; syarat QC pengguna) | Calon `frasa_bentuk`: "Every letter is a tall, narrow condensed letterform, much taller than it is wide." KALAH (6/6 masih lebar), dibuang | 0/5 → 0/5 |
 | 27 Nov 2026 | klein 4B | r1 (calon) | K12: bingkai / garis tepi tidak diminta (2 imej) | Calon `klein4b_hiasan_tepat` ditulis dalam `pembina.py` (UJI); belum dijana | - |

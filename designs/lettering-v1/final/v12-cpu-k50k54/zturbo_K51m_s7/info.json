@@ -1,0 +1,59 @@
+{
+ "versi": "SK06 v1.4 (27 Nov 2026)",
+ "raw": "zturbo_K51m_s7_warna.png",
+ "style": "S1",
+ "palet": "kad K10",
+ "bg": "#0b0b0b",
+ "fills": [
+  "#f4f4f2"
+ ],
+ "layers": 1,
+ "ink_px": [
+  5452129
+ ],
+ "sizes": {
+  "18x24": [
+   5400,
+   7200
+  ]
+ },
+ "tekstur": {
+  "kad": "K51",
+  "teks": "lusuh calar sederhana",
+  "jenis": "calar",
+  "kuat": 1.0,
+  "tidak_dibuat": [],
+  "ukur": {
+   "jenis": "calar",
+   "lubang_dakwat": 0.0271,
+   "lebar_blok": 664,
+   "sumber": "SK06 --ukur-tekstur --songsang pada IMG_5793_poster.png (v1.4)",
+   "had": [
+    "calar diukur sebagai pecahan lubang sahaja; arah / panjang calar ditetapkan prosedur"
+   ]
+  },
+  "hasil_ukur": {
+   "18x24": {
+    "lubang_dakwat": 0.0252,
+    "lebar_blok_lubang": 664
+   }
+  }
+ },
+ "amaran": [],
+ "tepi": {
+  "sasaran": {
+   "sisi": 8.0,
+   "atas_bawah": 5.7,
+   "sumber": "SK05 pada IMG_5793 dipotong ke poster karang (792x1114)"
+  },
+  "hasil": {
+   "18x24": {
+    "kiri": 8.0,
+    "kanan": 8.0,
+    "atas": 5.7,
+    "bawah": 8.1
+   }
+  },
+  "dakwat_min_pct": 7.69
+ }
+}
