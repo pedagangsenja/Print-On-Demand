@@ -187,7 +187,13 @@ def bina_log():
         k = kelas(r["sebab"])
         if tolak:
             k = sorted(set(k) | set(kelas(sebab_tolak) or ["ditolak"]))
-        out.append(dict(imej=nama, batch=r["batch"], model=r["model"], kad=g.get("kad") or (m[1] if m else ""),
+        kad_, ayat_ = g.get("kad") or (m[1] if m else ""), g.get("ayat") or (m[2] if m else "")
+        try:   # b1.2: prompt imej ini sama dengan prompt aturan semasa (rev naik yang tidak mengubah kad / ayat ini)
+            kini = bool(g.get("prompt")) and not uji and r["model"] in pembina.DAFTAR and \
+                g["prompt"] == pembina.bina(r["model"], kad_, ayat_)[0]
+        except Exception:
+            kini = False
+        out.append(dict(imej=nama, batch=r["batch"], model=r["model"], kad=g.get("kad") or (m[1] if m else ""), kini=kini,
                         ayat=g.get("ayat") or (m[2] if m else ""), seed=r["seed"], rev=rev, pembina=g.get("pembina"),
                         uji=uji, ok=r["ok"], suka=bool(bl) and bl in suka, tolak=tolak, lulus=r["ok"] and not tolak,
                         kelas=k, sebab="; ".join(x for x in (r["sebab"], sebab_tolak) if x), blob=bl, snc=kod))
@@ -238,7 +244,7 @@ def ulasan(model, rows, ubahan):
         if r["uji"]:
             kump["+".join(r["uji"])].append(r)
     for nama, a in sorted(kump.items()):
-        asas = [r for r in rows if not r["uji"] and r["rev"] == a[0]["rev"]]
+        asas = [r for r in rows if not r["uji"] and (r["rev"] == a[0]["rev"] or r.get("kini"))]   # b1.2: atau prompt sama
         sa, sb, n, baru = banding(a, asas, sasaran(nama))
         design = ", ".join(sorted({r["kad"] + r["ayat"] for r in a}))
         if any(u["ubahan"] == nama and all(x in u.get("design", "") for x in design.split(", ")) for u in dicuba):

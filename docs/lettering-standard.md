@@ -112,7 +112,7 @@ Dipakai untuk model tanpa aturan sendiri, dan sebagai pembanding dalam ujian kel
 - Simpan bersama imej: prompt, versi pembina, versi kad, rev.
 - Syarat pakai: pembina mesti menghasilkan semula S1–S6 (ayat 4 perkataan) dengan imej yang tidak lebih buruk.
 
-### 3.4 Aturan FLUX.2 klein 4B (rev r2: hiasan sisi di luar label, 28 Nov 2026)
+### 3.4 Aturan FLUX.2 klein 4B (rev r3: hiasan sisi di luar label; baris berbilang perkataan 'side by side on one line', 28 Nov 2026)
 - **Sumber:** kad model: "Prompt following is heavily influenced by the prompting style" (rasmi). Panduan BFL: prosa mengalir, tiada penambah prompt (lemah: petikan carian sahaja, laman tidak dapat dibuka).
 - **Bentuk:** SATU perenggan prosa, ayat penuh. Bukan senarai kata kunci, bukan "nama: nilai", bukan baris bernombor.
 - **Turutan ayat:**
@@ -704,7 +704,7 @@ Setiap ubahan aturan (3.4–3.10) direkod di sini, dan juga dalam `designs/lette
 | 27 Nov 2026 | Z-Image Turbo | r1 → r2 | Titik / tanda rawak (K7M, K8G) | `had_positif` MENANG: ayat had akhir kini "Every letter in the image belongs to these N words, and each word appears once; the rest of the canvas is plain empty background" (ganti "The only text in the image is…") | G1+G2 0/4 → 2/4 (K7M 2/2 bersih; K8G masih 5 baris + bintik). Had: prompt K3L kini 254 perkataan (> 250), K3L tidak boleh dijana dengan Z-Image |
 | 27 Nov 2026 | klein 4B | r1 → r2 | Percikan di dalam label (K3K) | `hiasan_kedudukan`: hiasan sisi ditulis "placed outside the label, one group on its left and one group on its right". Mula-mula KALAH (lulus seri 3/3, tiada ♥); 28 Nov dinilai semula dengan belajar.py b1.2 (seri dipecah oleh cacat sasaran, keputusan pengguna): MENANG | 3/3 → 3/3; percikan di dalam label 3 → 0 |
 | 27 Nov 2026 | ERNIE Turbo | r1 | Tanda petikan rawak (K22c, K3K) | `had_positif` KALAH: tanda petikan hilang 2/2, tetapi K3K s7 dapat 'AFTER' berulang + hiasan tambahan | 0/2 → 1/2 (kelas baharu) |
-| 27 Nov 2026 | klein 4B | r1 | 'QUIET WORK' dipisah jadi dua baris (K4q s7, s123; Z-Image juga) | `dua_kata_sebaris` CUBA (calon dalam `pembina.py`, belum dijana) | – |
+| 28 Nov 2026 | klein 4B | r2 → r3 | Baris berbilang perkataan dipisah (K4q 'QUIET WORK', K8G 'KEEP GOING') | `dua_kata_sebaris` MENANG: setiap baris berbilang perkataan mendapat ", as N words side by side on one line" | G1+G2 2/6 → 3/6; cacat baris 3 → 2; K4q s123 dapat salah eja baru ('WOK'). Pembanding r1 sah kerana prompt sama tepat (belajar b1.2) |
 | 26 Nov 2026 | klein 4B | r1 | Label tambahan di bawah; "WHAT" tiada kotak (3/3) | Prosa mengalir; gaya di dalam ayat baris; had satu ayat | 0/3 → 3/3 |
 | 26 Nov 2026 | Z-Image Turbo | r1 | Bintang dan garis lengkung yang tidak diminta | Huraian panjang, baris bernombor, had positif | 3/3 → 3/3 |
 | 26 Nov 2026 | ERNIE Turbo | r1 | "WHAT WHAT" (3/3) | Prompt mentah pendek + PE rasmi | 0/3 → 2/3 |

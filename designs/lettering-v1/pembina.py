@@ -23,8 +23,8 @@ VERSI = "v1.2-p1"
 # baris + fungsi + bahagian. Model yang belum ada baris memakai rangka am (kad.bina) dan ditanda "am".
 # rev r0 = ditulis daripada sumber sahaja, belum diuji; r1+ = sudah diuji pada imej.
 DAFTAR = {
-    "klein4b": dict(nama="FLUX.2 klein 4B", bahagian="3.4", rev="r2", tarikh="2026-11-28",
-                    status="diuji: K3H, CPU, 3 seed; r2 hiasan_kedudukan: K3K percikan di dalam label 3 -> 0 (b1.2)", sumber="kad model BFL (rasmi); panduan BFL (lemah)"),
+    "klein4b": dict(nama="FLUX.2 klein 4B", bahagian="3.4", rev="r3", tarikh="2026-11-28",
+                    status="diuji: K3H, CPU, 3 seed; r2 hiasan_kedudukan (K3K); r3 dua_kata_sebaris: K4q + K8G 2/6 -> 3/6", sumber="kad model BFL (rasmi); panduan BFL (lemah)"),
     "zturbo": dict(nama="Z-Image Turbo", bahagian="3.5", rev="r2", tarikh="2026-11-27",
                    status="diuji: K3H, CPU, 3 seed; r2 had_positif: K7M + K8G 0/4 -> 2/4", sumber="pasukan Z-Image di Hugging Face + pe.py (rasmi)"),
     "ernie": dict(nama="ERNIE-Image-Turbo", bahagian="3.6", rev="r1", tarikh="2026-11-26",
@@ -43,7 +43,7 @@ MODEL = list(REV)
 W, H = 768, 1024
 # Ubahan CALON kitaran QC (langkah 5): hanya hidup bila dinamakan dalam PEMBINA_UJI (dipisah koma). Ubahan yang
 # berjaya ditulis balik ke aturan (rev naik) dan dibuang dari sini; yang gagal dicatat dalam standard dan dibuang.
-# Calon semasa: klein4b_dua_kata_sebaris (CUBA, 27 Nov 2026; belum diuji). 27 Nov 2026: zturbo_had_positif MENANG (aturan 3.5 r2); ernie_had_positif KALAH, dibuang;
+# Tiada calon semasa. 28 Nov 2026: klein4b_dua_kata_sebaris MENANG (aturan 3.4 r3). 27 Nov 2026: zturbo_had_positif MENANG (aturan 3.5 r2); ernie_had_positif KALAH, dibuang;
 # klein4b_hiasan_kedudukan MENANG selepas dinilai semula dengan belajar b1.2 (28 Nov 2026, aturan 3.4 r2). (26 Nov 2026: 'zturbo_satu_baris' diuji pada K8G, tidak berjaya, dibuang.)
 # Nama calon = <model>_<id pilihan> daripada belajar.py (KELAS), cth. zturbo_had_positif; belajar.py memutuskan menang / kalah (3.15).
 UJI = {u for u in os.environ.get("PEMBINA_UJI", "").split(",") if u}
@@ -136,7 +136,7 @@ def klein4b(m):
         else:
             t = (f'{a}, the {l["kata"]} "{l["q"]}" {l["ialah"]} written in '
                  f'{frasa(l, lambda d: " as the top line" if d == 0 else "")}')
-            if "klein4b_dua_kata_sebaris" in UJI and " " in l["q"]:   # calon CUBA 27 Nov 2026 (belajar 3.15, kelas baris)
+            if " " in l["q"]:   # r3 (28 Nov 2026, belajar 3.15, ubahan dua_kata_sebaris MENANG, kelas baris)
                 t += f', as {SATU[len(l["q"].split()) - 1]} words side by side on one line'
         s.append(t + (", and it is the largest line of all." if l["tertinggi"] else "."))
     if b.get("sentuh"):

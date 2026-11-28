@@ -1,7 +1,7 @@
 {
  "versi": "b1.2 (28 Nov 2026)",
  "tarikh": "2026-11-28",
- "imej": 225,
+ "imej": 231,
  "suka": 0,
  "tolak": 0,
  "model": {
@@ -9,8 +9,8 @@
    "model": "klein4b",
    "nama": "FLUX.2 klein 4B",
    "bahagian": "3.4",
-   "rev": "r2",
-   "status": "diuji: K3H, CPU, 3 seed; r2 hiasan_kedudukan: K3K percikan di dalam label 3 -> 0 (b1.2)",
+   "rev": "r3",
+   "status": "diuji: K3H, CPU, 3 seed; r2 hiasan_kedudukan (K3K); r3 dua_kata_sebaris: K4q + K8G 2/6 -> 3/6",
    "ikut_rev": {
     "am": {
      "imej": 9,
@@ -35,6 +35,14 @@
      "suka": 0,
      "tolak": 0,
      "design": 9
+    },
+    "r2": {
+     "imej": 0,
+     "lulus": 0,
+     "pct": null,
+     "suka": 0,
+     "tolak": 0,
+     "design": 0
     }
    },
    "semasa": {
@@ -46,15 +54,15 @@
     "design": 0
    },
    "semua": {
-    "imej": 42,
-    "lulus": 28,
-    "pct": 67,
+    "imej": 48,
+    "lulus": 31,
+    "pct": 65,
     "suka": 0,
     "tolak": 0,
     "design": 13
    },
    "berulang": [],
-   "ubahan_dicuba": 2,
+   "ubahan_dicuba": 3,
    "suka_imej": [],
    "tindakan": [
     {
@@ -128,14 +136,6 @@
    "rev": "r1",
    "status": "diuji: K3H, CPU, 3 seed",
    "ikut_rev": {
-    "?": {
-     "imej": 1,
-     "lulus": 1,
-     "pct": 100,
-     "suka": 0,
-     "tolak": 0,
-     "design": 1
-    },
     "am": {
      "imej": 9,
      "lulus": 5,

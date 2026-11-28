@@ -177,5 +177,20 @@
   "selepas": "1/2",
   "keputusan": "kalah",
   "nota": "'each written once and nothing else written' ganti 'no other text'. Tanda petikan hilang 2/2, tetapi K3K s7 dapat kelas cacat baharu: 'AFTER' berulang, garis dan bintang tambahan"
+ },
+ {
+  "tarikh": "2026-11-28",
+  "model": "klein4b",
+  "rev_dari": "r2",
+  "rev_ke": "r3",
+  "ubahan": "dua_kata_sebaris",
+  "kelas": [
+   "baris"
+  ],
+  "design": "K4q, K8G",
+  "sebelum": "2/6 (cacat sasaran 3)",
+  "selepas": "3/6 (cacat sasaran 2)",
+  "keputusan": "menang",
+  "nota": "Baris berbilang perkataan ditambah ', as N words side by side on one line'. K8G s7 kini lulus (KEEP GOING sebaris); K4q s7 dan K8G s123 masih dipisah; K4q s123 dapat salah eja baru ('WOK', 'RESULLTS', kelas ejaan sudah ada pada pembanding). raw/v12-cpu-uji2, seed 42, 7, 123. Pembanding r1 dengan prompt sama tepat (belajar b1.2: medan kini)."
  }
 ]

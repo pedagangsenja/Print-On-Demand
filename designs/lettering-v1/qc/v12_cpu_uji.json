@@ -52,5 +52,39 @@
     ""
    ]
   }
+ },
+ "v12-cpu-uji2": {
+  "klein4b": {
+   "K4q_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K4q_s7": [
+    false,
+    "'QUIET WORK' dipisah jadi dua baris",
+    ""
+   ],
+   "K4q_s123": [
+    false,
+    "'WORK' jadi 'WOK', 'RESULTS' jadi 'RESULLTS'",
+    ""
+   ],
+   "K8G_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K8G_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K8G_s123": [
+    false,
+    "5 baris (KEEP / GOING dipisah); 'ALMOST' jadi 'ALMOT'",
+    ""
+   ]
+  }
  }
 }
