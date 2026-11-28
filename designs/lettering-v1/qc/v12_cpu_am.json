@@ -1,0 +1,52 @@
+{
+ "nota": "Ujian kelayakan FLUX 3 Image Klein (3.12 F), 27 Nov 2026: rangka am (kad.bina, pembina v1.1) pada kad, ayat dan seed yang sama dengan larian aturan r0 (raw/v12-cpu/klein3). CPU. Semakan mata Claude pada setiap imej; bukti lemah. ok = G1 (ejaan, huruf besar / kecil, baris, jarak perkataan) dan G2 lulus. Nilai ketiga = id aset dashboard (kosong: pengguna belum pilih A / SNC).",
+ "v12-cpu-am": {
+  "klein3": {
+   "K3K_s42": [
+    true,
+    "Bintang di sisi label, bukan garis percikan",
+    "5f02213efbd87530a4ec0a1ba3807a74"
+   ],
+   "K3K_s7": [
+    true,
+    "Bintang kecil di sisi label, bukan garis percikan",
+    "f27d99317c7fef2fada4a536cb56e308"
+   ],
+   "K3K_s123": [
+    true,
+    "Bintang di sisi label, bukan garis percikan",
+    "5d80ade84320b228cc80aefe2547a516"
+   ],
+   "K7M_s42": [
+    true,
+    "",
+    "069e322e49ebb950b654187505852a08"
+   ],
+   "K7M_s7": [
+    true,
+    "Lorekan kelabu pada huruf (dibersih SK04)",
+    "2d78bda20d5de02b4864c7899ad79406"
+   ],
+   "K7M_s123": [
+    true,
+    "Lorekan kelabu pada huruf (dibersih SK04)",
+    "848b4427c19e3d5885862d1afc9c8b4c"
+   ],
+   "K8G_s42": [
+    false,
+    "'KEEP GOING' jadi 'KEEPGOING' (tiada jarak antara perkataan)",
+    "b954f5665f600566d58f88548ab70e4a"
+   ],
+   "K8G_s7": [
+    false,
+    "'KEEP GOING' jadi 'KEEPGOING' (jarak perkataan sama dengan jarak huruf)",
+    "fdf7a9778b56b4d4619ddefa63db4713"
+   ],
+   "K8G_s123": [
+    false,
+    "'KEEP GOING' jadi 'KEEPGOING' (tiada jarak antara perkataan)",
+    "08c316d467dad15d4c5566ff7bcb1913"
+   ]
+  }
+ }
+}

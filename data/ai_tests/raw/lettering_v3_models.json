@@ -1,0 +1,30 @@
+[
+ {
+  "model": "a1",
+  "model_name": "Cubaan 1 (seed 42)",
+  "model_order": 0,
+  "missing_note": "Tiada cubaan: sudah lulus, atau belum sampai giliran",
+  "level": "lemah"
+ },
+ {
+  "model": "a2",
+  "model_name": "Cubaan 2 (seed 7)",
+  "model_order": 1,
+  "missing_note": "Tiada cubaan: sudah lulus, atau belum sampai giliran",
+  "level": "lemah"
+ },
+ {
+  "model": "a3",
+  "model_name": "Cubaan 3 (seed 123)",
+  "model_order": 2,
+  "missing_note": "Tiada cubaan: sudah lulus, atau belum sampai giliran",
+  "level": "lemah"
+ },
+ {
+  "model": "a4",
+  "model_name": "Cubaan 4 (seed 2024)",
+  "model_order": 3,
+  "missing_note": "Tiada cubaan: sudah lulus, atau belum sampai giliran",
+  "level": "lemah"
+ }
+]

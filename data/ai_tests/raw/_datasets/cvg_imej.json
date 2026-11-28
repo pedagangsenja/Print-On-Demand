@@ -1,0 +1,19 @@
+{
+ "id": "cvg_imej",
+ "version": 4,
+ "data": {
+  "description": "36 imej ujian K6: masa, ejaan lulus / gagal, sebab dan gambar di CPU, GPU Kaggle dan GPU Hugging Face. Tahap bukti lemah.",
+  "fixed": true,
+  "source": {
+   "format": "json",
+   "kind": "file",
+   "name": "cvg_imej.json",
+   "url": "/_blob/6b22248fc076808b7b3c2f8f0ddfb93c"
+  },
+  "title": "CPU vs GPU: setiap imej",
+  "updated": {
+   "at": "2026-11-26T04:00:00Z",
+   "by": "Claude"
+  }
+ }
+}

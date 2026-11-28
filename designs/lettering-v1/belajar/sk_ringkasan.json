@@ -1,0 +1,312 @@
+{
+ "versi": "s1 (27 Nov 2026)",
+ "tarikh": "2026-11-27",
+ "baris": 224,
+ "imej": 40,
+ "kad_dipakai": [
+  "K3",
+  "K6",
+  "K7",
+  "K8"
+ ],
+ "suka": 0,
+ "sk": {
+  "SK01": {
+   "sk": "SK01",
+   "nama": "condong",
+   "fail": "SK01_condong.py",
+   "langkah": "5b",
+   "versi": "5b v1.1",
+   "ikut_versi": {
+    "5b v1.1": {
+     "imej": 28,
+     "lulus": 28,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    }
+   },
+   "semasa": {
+    "imej": 28,
+    "lulus": 28,
+    "cacat": 0,
+    "input_rosak": 0,
+    "belum": 0,
+    "tolak": 0
+   },
+   "berulang": [],
+   "calon": [],
+   "ubahan_dicuba": 0,
+   "tindakan": [
+    {
+     "jenis": "tiada",
+     "teks": "Tiada tindakan: tiada cacat berulang"
+    }
+   ]
+  },
+  "SK02": {
+   "sk": "SK02",
+   "nama": "ruang tepi",
+   "fail": "SK02_ruang_tepi.py",
+   "langkah": "5b",
+   "versi": "5b v1.1",
+   "ikut_versi": {
+    "5b v1.1": {
+     "imej": 19,
+     "lulus": 19,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    }
+   },
+   "semasa": {
+    "imej": 19,
+    "lulus": 19,
+    "cacat": 0,
+    "input_rosak": 0,
+    "belum": 0,
+    "tolak": 0
+   },
+   "berulang": [],
+   "calon": [],
+   "ubahan_dicuba": 0,
+   "tindakan": [
+    {
+     "jenis": "tiada",
+     "teks": "Tiada tindakan: tiada cacat berulang"
+    }
+   ]
+  },
+  "SK03": {
+   "sk": "SK03",
+   "nama": "kedudukan",
+   "fail": "SK03_kedudukan.py",
+   "langkah": "5b",
+   "versi": "5b v1.1",
+   "ikut_versi": {
+    "5b v1.1": {
+     "imej": 17,
+     "lulus": 17,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    }
+   },
+   "semasa": {
+    "imej": 17,
+    "lulus": 17,
+    "cacat": 0,
+    "input_rosak": 0,
+    "belum": 0,
+    "tolak": 0
+   },
+   "berulang": [],
+   "calon": [],
+   "ubahan_dicuba": 0,
+   "tindakan": [
+    {
+     "jenis": "tiada",
+     "teks": "Tiada tindakan: tiada cacat berulang"
+    }
+   ]
+  },
+  "SK04": {
+   "sk": "SK04",
+   "nama": "hitam putih",
+   "fail": "SK04_hitam_putih.py",
+   "langkah": "5b",
+   "versi": "5b v1.1",
+   "ikut_versi": {
+    "5b v1.1": {
+     "imej": 32,
+     "lulus": 32,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    }
+   },
+   "semasa": {
+    "imej": 32,
+    "lulus": 32,
+    "cacat": 0,
+    "input_rosak": 0,
+    "belum": 0,
+    "tolak": 0
+   },
+   "berulang": [],
+   "calon": [],
+   "ubahan_dicuba": 0,
+   "tindakan": [
+    {
+     "jenis": "tiada",
+     "teks": "Tiada tindakan: tiada cacat berulang"
+    }
+   ]
+  },
+  "SK05": {
+   "sk": "SK05",
+   "nama": "ukur",
+   "fail": "SK05_ukur.py",
+   "langkah": "1, 5b",
+   "versi": "SK05 v1.1",
+   "ikut_versi": {},
+   "semasa": {
+    "imej": 0,
+    "lulus": 0,
+    "cacat": 0,
+    "input_rosak": 0,
+    "belum": 0,
+    "tolak": 0
+   },
+   "berulang": [],
+   "calon": [],
+   "ubahan_dicuba": 0,
+   "tindakan": [
+    {
+     "jenis": "tiada",
+     "teks": "Tiada tindakan: tiada cacat berulang"
+    }
+   ]
+  },
+  "SK06": {
+   "sk": "SK06",
+   "nama": "finish",
+   "fail": "SK06_finish.py",
+   "langkah": "6",
+   "versi": "SK06 v1.3 (27 Nov 2026)",
+   "ikut_versi": {
+    "SK06 v1 (27 Nov 2026)": {
+     "imej": 22,
+     "lulus": 22,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    },
+    "SK06 v1.1 (27 Nov 2026)": {
+     "imej": 3,
+     "lulus": 3,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    },
+    "SK06 v1.2 (27 Nov 2026)": {
+     "imej": 16,
+     "lulus": 16,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    },
+    "SK06 v1.3 (27 Nov 2026)": {
+     "imej": 3,
+     "lulus": 3,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    }
+   },
+   "semasa": {
+    "imej": 3,
+    "lulus": 3,
+    "cacat": 0,
+    "input_rosak": 0,
+    "belum": 0,
+    "tolak": 0
+   },
+   "berulang": [],
+   "calon": [],
+   "ubahan_dicuba": 3,
+   "tindakan": [
+    {
+     "jenis": "ukur",
+     "medan": "tekstur_had",
+     "teks": "Kad K8, had tekstur: butir bawah 1 px dan tepi marker kering tidak ditiru: pada JPEG 600x449 itu kesan mampatan; perlu gambar upload lebih besar"
+    }
+   ]
+  },
+  "SK07": {
+   "sk": "SK07",
+   "nama": "warna",
+   "fail": "SK07_warna.py",
+   "langkah": "6",
+   "versi": "SK07 v1.1 (27 Nov 2026)",
+   "ikut_versi": {
+    "SK07 v1 (27 Nov 2026)": {
+     "imej": 17,
+     "lulus": 15,
+     "cacat": 2,
+     "input_rosak": 1,
+     "belum": 0,
+     "tolak": 0
+    },
+    "SK07 v1.1 (27 Nov 2026)": {
+     "imej": 17,
+     "lulus": 17,
+     "cacat": 0,
+     "input_rosak": 1,
+     "belum": 0,
+     "tolak": 0
+    }
+   },
+   "semasa": {
+    "imej": 17,
+    "lulus": 17,
+    "cacat": 0,
+    "input_rosak": 1,
+    "belum": 0,
+    "tolak": 0
+   },
+   "berulang": [],
+   "calon": [],
+   "ubahan_dicuba": 1,
+   "tindakan": [
+    {
+     "jenis": "tiada",
+     "teks": "Tiada tindakan: tiada cacat berulang"
+    }
+   ]
+  },
+  "SK08": {
+   "sk": "SK08",
+   "nama": "bayang",
+   "fail": "SK08_bayang.py",
+   "langkah": "6",
+   "versi": "SK08 v1 (27 Nov 2026)",
+   "ikut_versi": {
+    "SK08 v1 (27 Nov 2026)": {
+     "imej": 14,
+     "lulus": 14,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    }
+   },
+   "semasa": {
+    "imej": 14,
+    "lulus": 14,
+    "cacat": 0,
+    "input_rosak": 0,
+    "belum": 0,
+    "tolak": 0
+   },
+   "berulang": [],
+   "calon": [],
+   "ubahan_dicuba": 0,
+   "tindakan": [
+    {
+     "jenis": "tiada",
+     "teks": "Tiada tindakan: tiada cacat berulang"
+    }
+   ]
+  }
+ },
+ "sk_baharu": []
+}

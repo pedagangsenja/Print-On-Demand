@@ -1,0 +1,65 @@
+[
+ {
+  "model": "klein4b",
+  "model_name": "FLUX.2 klein 4B",
+  "model_order": 1,
+  "status": "Diuji",
+  "note": "",
+  "repo": "black-forest-labs/FLUX.2-klein-4B",
+  "versi": "bf16 asal · 4 langkah"
+ },
+ {
+  "model": "schnell",
+  "model_name": "FLUX.1-schnell",
+  "model_order": 2,
+  "status": "Diuji",
+  "note": "",
+  "repo": "unsloth/FLUX.1-schnell",
+  "versi": "GGUF Q6_K · 4 langkah"
+ },
+ {
+  "model": "chroma_flash",
+  "model_name": "Chroma1-Flash",
+  "model_order": 3,
+  "status": "Dilangkau",
+  "note": "Terlalu perlahan di CPU; anda minta langkau",
+  "repo": null,
+  "versi": null
+ },
+ {
+  "model": "zturbo",
+  "model_name": "Z-Image-Turbo",
+  "model_order": 4,
+  "status": "Diuji",
+  "note": "",
+  "repo": "Tongyi-MAI/Z-Image-Turbo",
+  "versi": "GGUF Q8_0 · 9 langkah"
+ },
+ {
+  "model": "ernie",
+  "model_name": "ERNIE-Image-Turbo",
+  "model_order": 5,
+  "status": "Diuji",
+  "note": "",
+  "repo": "baidu/ERNIE-Image-Turbo",
+  "versi": "GGUF Q8_0 · 8 langkah"
+ },
+ {
+  "model": "moss",
+  "model_name": "MOSS-Image-SFT + LoRA 8 langkah",
+  "model_order": 6,
+  "status": "Diuji",
+  "note": "",
+  "repo": "OpenMOSS-Team/MOSS-Image-SFT",
+  "versi": "bf16 asal · 8 langkah · LoRA x0.7"
+ },
+ {
+  "model": "kandinsky",
+  "model_name": "Kandinsky 2.2",
+  "model_order": 7,
+  "status": "Tidak diuji",
+  "note": "Keputusan anda: 6 model sahaja",
+  "repo": null,
+  "versi": null
+ }
+]

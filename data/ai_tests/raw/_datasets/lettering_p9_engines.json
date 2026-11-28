@@ -1,0 +1,19 @@
+{
+ "id": "lettering_p9_engines",
+ "version": 1,
+ "data": {
+  "description": "Ringkasan 3 enjin pada quote, prompt dan seed sama: imej betul, gaya yang ada imej betul, purata masa CPU, bilangan siap cetak, kekuatan dan kelemahan. Tahap bukti lemah.",
+  "fixed": true,
+  "source": {
+   "format": "json",
+   "kind": "file",
+   "name": "lettering_p9_engines.json",
+   "url": "/_blob/5a786fa6064a17be6538cb6648c96339"
+  },
+  "title": "Lettering P9: banding 3 enjin",
+  "updated": {
+   "at": "2026-11-24T14:00:00Z",
+   "by": "Claude"
+  }
+ }
+}

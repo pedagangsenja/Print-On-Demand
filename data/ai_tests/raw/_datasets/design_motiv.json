@@ -1,0 +1,19 @@
+{
+ "id": "design_motiv",
+ "version": 1,
+ "data": {
+  "description": "30 poster typography motivasi hitam atas putih yang lulus semakan ejaan, dijana dengan FLUX.2 klein 4B di CPU komputer awan dan dibaiki dengan skrip. Gambar disimpan dalam artifact.",
+  "fixed": true,
+  "source": {
+   "format": "json",
+   "kind": "file",
+   "name": "motiv_posters.json",
+   "url": "/_blob/11173265a770a566477da84159cd5a0a"
+  },
+  "title": "Poster motivasi siap (30)",
+  "updated": {
+   "at": "2026-11-23T06:48:00Z",
+   "by": "Claude"
+  }
+ }
+}

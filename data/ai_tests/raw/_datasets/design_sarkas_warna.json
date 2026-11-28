@@ -1,0 +1,19 @@
+{
+ "id": "design_sarkas_warna",
+ "version": 1,
+ "data": {
+  "description": "30 design sarkastik yang sama diwarna semula atas latar gelap ikut 5 palet contoh Pinterest, dengan skrip scripts/recolor_sarkas.py. Gambar disimpan dalam artifact.",
+  "fixed": true,
+  "source": {
+   "format": "json",
+   "kind": "file",
+   "name": "sarkas_warna.json",
+   "url": "/_blob/83b1418104516c84d230e4d34884a15f"
+  },
+  "title": "Design sarkastik berwarna (30)",
+  "updated": {
+   "at": "2026-11-24T03:00:00Z",
+   "by": "Claude"
+  }
+ }
+}

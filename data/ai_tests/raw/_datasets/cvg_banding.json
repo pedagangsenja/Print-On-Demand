@@ -1,0 +1,19 @@
+{
+ "id": "cvg_banding",
+ "version": 1,
+ "data": {
+  "description": "Imej yang dijana di CPU dan GPU dengan ayat dan seed sama: masa, ejaan dan gambar setiap pasangan. Tahap bukti lemah.",
+  "fixed": true,
+  "source": {
+   "format": "json",
+   "kind": "file",
+   "name": "cvg_banding.json",
+   "url": "/_blob/3ad5bf0e745bd0b06ab8ecfce949817c"
+  },
+  "title": "CPU vs GPU: pasangan imej sama",
+  "updated": {
+   "at": "2026-11-26T04:00:00Z",
+   "by": "Claude"
+  }
+ }
+}

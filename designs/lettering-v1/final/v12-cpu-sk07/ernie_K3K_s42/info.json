@@ -1,0 +1,48 @@
+{
+ "versi": "SK06 v1.2 (27 Nov 2026)",
+ "raw": "ernie_K3K_s42_bayang_warna.png",
+ "style": "S3",
+ "palet": "kad K3",
+ "bg": "#0b0b0b",
+ "fills": [
+  "#f5b51c",
+  "#f7f7f5",
+  "#b2b3b5"
+ ],
+ "layers": 3,
+ "ink_px": [
+  1190002,
+  478115,
+  266068
+ ],
+ "sizes": {
+  "18x24": [
+   5400,
+   7200
+  ]
+ },
+ "tekstur": {
+  "kad": "K3",
+  "teks": "tiada",
+  "jenis": "none",
+  "kuat": 0.0,
+  "tidak_dibuat": []
+ },
+ "amaran": [],
+ "tepi": {
+  "sasaran": {
+   "sisi": 13.6,
+   "atas_bawah": 15.5,
+   "sumber": "SK05 pada IMG_5775"
+  },
+  "hasil": {
+   "18x24": {
+    "kiri": 19.8,
+    "kanan": 19.8,
+    "atas": 15.5,
+    "bawah": 15.5
+   }
+  },
+  "dakwat_min_pct": 19.81
+ }
+}

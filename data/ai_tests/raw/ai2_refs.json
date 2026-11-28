@@ -1,0 +1,42 @@
+[
+ {
+  "kad": "K1",
+  "kad_name": "Skrip swash tebal bertaut (putih atas hitam)",
+  "ref": "IMG_5818",
+  "ref_img": "/_blob/b0cee8f10c4ec5410f3319400d7ab586",
+  "teras": "Semua perkataan dalam skrip berus tebal bersambung; Keseluruhan teks membentuk satu blok bujur (oval); Ekor swash bergulung keluar daripada huruf dan mengisi ruang kosong",
+  "ciri_lain": "Perkataan kecil diselit di celah perkataan besar; Putih satu warna atas hitam; Huruf condong ke kanan; Baris rapat dan bertindih / bertaut; Bayang lembut di bawah garisan huruf"
+ },
+ {
+  "kad": "K2",
+  "kad_name": "Blok sans pekat lusuh + jalur kuning",
+  "ref": "IMG_5792",
+  "ref_img": "/_blob/6b389accc29f9b3c540dbf88332e9126",
+  "teras": "Semua huruf besar sans pekat sempit; Setiap baris sama lebar (blok rata kiri-kanan); Perkataan utama hitam dalam kotak kuning penuh lebar",
+  "ciri_lain": "Tekstur lusuh grunge pada putih dan kuning; Jalur kuning nipis di bahagian atas; Tiada condong atau lengkung; Jarak baris rapat; Hanya putih, kuning dan hitam"
+ },
+ {
+  "kad": "K3",
+  "kad_name": "Campuran sans kuning + skrip putih + label",
+  "ref": "IMG_5775",
+  "ref_img": "/_blob/db6e0ed73a91c8dada8566bcd0ee5928",
+  "teras": "Baris berselang: sans tebal kuning dan skrip putih; Perkataan penyambung dalam label kotak kuning kecil; Kontras saiz kuat antara baris",
+  "ciri_lain": "Skrip putih ada bayang gelap; Garis percikan kecil kuning di sisi; Baris atas sans sedikit melengkung; Latar hitam rata, tiada tekstur; Maksimum 3 warna dakwat"
+ },
+ {
+  "kad": "K4",
+  "kad_name": "Serif vintaj dekoratif + hiasan bertitik (krim atas hitam)",
+  "ref": "IMG_5764",
+  "ref_img": "/_blob/f26280322e974a7d62f517b465bc0734",
+  "teras": "Serif vintaj dekoratif huruf besar; Baris dipisah garis hiasan bertitik dan gulungan; Hiasan flourish simetri di atas dan di bawah",
+  "ciri_lain": "Huruf pertama perkataan utama lebih besar; Tekstur lusuh pada huruf; Satu warna krim atas hitam; Percikan titik kecil di latar; Lajur tegak di tengah"
+ },
+ {
+  "kad": "K5",
+  "kad_name": "Blok huruf tangan lusuh (S005)",
+  "ref": "IMG_5730",
+  "ref_img": "/_blob/2a61936009af7607a68f79d8c5d5a8b5",
+  "teras": "Huruf tangan tebal dengan garis dasar melantun; Baris sama lebar membentuk satu blok rapat; Huruf antara baris bersentuh / bertaut",
+  "ciri_lain": "Perkataan kecil huruf kecil diselit; Tekstur kapur lusuh; Putih satu warna atas hitam; Ekor huruf memanjang; Tiada hiasan lain"
+ }
+]

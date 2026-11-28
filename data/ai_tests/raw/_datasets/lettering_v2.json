@@ -1,0 +1,19 @@
+{
+ "id": "lettering_v2",
+ "version": 2,
+ "data": {
+  "description": "Satu baris untuk setiap imej v2: ERNIE + penambah prompt, 5 ayat Melayu baharu, prompt ikut ciri poster rujukan, seed 42 dan 7. Perkataan salah eja atau teks rawak (semakan mata oleh Claude), masa jana dan gambar kecil. Tahap bukti lemah.",
+  "fixed": true,
+  "source": {
+   "format": "json",
+   "kind": "file",
+   "name": "lettering_v2.json",
+   "url": "/_blob/1a325afd5f368c35020daac8d32c9af0"
+  },
+  "title": "Ujian ERNIE v2: hasil setiap imej",
+  "updated": {
+   "at": "2026-11-23T10:40:00Z",
+   "by": "Claude"
+  }
+ }
+}

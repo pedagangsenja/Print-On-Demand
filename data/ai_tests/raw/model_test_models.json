@@ -1,0 +1,35 @@
+[
+ {
+  "model": "klein4b",
+  "model_name": "FLUX.2 klein 4B",
+  "model_order": 0,
+  "license": "Apache 2.0",
+  "source": "https://huggingface.co/black-forest-labs/FLUX.2-klein-4B",
+  "strength": "Paling laju. Bentuk dan susun atur kemas.",
+  "weakness": "Kerap salah eja, terutama perkataan Melayu (Janna, Bermimpo, Aidup).",
+  "level": "lemah",
+  "tested": "23 Nov 2026, CPU 4 teras, seed 42, 1 cubaan setiap design"
+ },
+ {
+  "model": "zimage",
+  "model_name": "Z-Image-Turbo",
+  "model_order": 1,
+  "license": "Apache 2.0",
+  "source": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo",
+  "strength": "Garis tebal dan bersih. Kuat untuk gaya SVG Inggeris.",
+  "weakness": "Salah eja pada 4 imej (Patiance, Janban, Alimat, PENKGATI).",
+  "level": "lemah",
+  "tested": "23 Nov 2026, CPU 4 teras, seed 42, 1 cubaan setiap design"
+ },
+ {
+  "model": "ernie",
+  "model_name": "ERNIE-Image-Turbo",
+  "model_order": 2,
+  "license": "Apache 2.0",
+  "source": "https://huggingface.co/baidu/ERNIE-Image-Turbo",
+  "strength": "Semua ejaan betul. Gaya vintage, kapur dan emblem paling hampir dengan contoh.",
+  "weakness": "Paling perlahan. Garis bingkai imej 5 sedikit bersepah.",
+  "level": "lemah",
+  "tested": "23 Nov 2026, CPU 4 teras, seed 42, 1 cubaan setiap design"
+ }
+]
