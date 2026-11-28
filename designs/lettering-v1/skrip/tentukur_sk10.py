@@ -72,7 +72,9 @@ def _teks_ruj(nama, kid):
 
 def _kerja(a):
     jenis, kunci, fail, teks, kata, spec = a
-    cf = CACHE / (jenis + "_" + re.sub(r"[^A-Za-z0-9_.-]", "_", kunci) + ".json")
+    st = os.stat(fail)                                    # saiz + masa ubah dalam nama: imej yang berubah diukur semula
+    cf = CACHE / ("%s_%s_%d_%d_%s.json" % (jenis, re.sub(r"[^A-Za-z0-9_.-]", "_", kunci), st.st_size, int(st.st_mtime),
+                                             sk9.VERSI.replace(" ", "")))
     if cf.exists():
         return kunci, json.loads(cf.read_text())
     try:

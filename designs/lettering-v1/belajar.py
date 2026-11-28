@@ -378,6 +378,13 @@ def main():
             print(f"  cacat berulang: {x['nama']}: {x['imej']} imej ({x['gagal']} gagal), design {', '.join(x['design'])}")
         for t in h["tindakan"]:
             print(f"  TINDAKAN [{t['jenis']}]: {t['teks']}")
+    # QC B (28 Nov 2026): ciri gaya yang gagal berulang lawan gambar upload -> calon ubahan frasa kad. Calon sahaja.
+    try:
+        sys.path.insert(0, os.path.join(HERE, "skrip"))
+        import SK10_ringkas
+        SK10_ringkas.cetak(SK10_ringkas.ringkas())
+    except Exception as e:  # QC B tidak boleh menghentikan belajar.py
+        print(f"\nQC B dilangkau: {e}")
 
 
 if __name__ == "__main__":

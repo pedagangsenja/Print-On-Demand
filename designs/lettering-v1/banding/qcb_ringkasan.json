@@ -1,0 +1,1829 @@
+{
+ "versi": "SK10_ringkas v1.0",
+ "tarikh": "2026-11-28",
+ "imej": 384,
+ "gabungan_kad_model": 135,
+ "nota": "Calon ubahan daripada QC B (ciri gagal berulang lawan gambar upload). Calon sahaja; ukuran_lemah = ciri yang ujian 384 imej tunjuk lemah sebagai ukuran. Dikira daripada imej betul/ sedia ada.",
+ "ringkasan": {
+  "calon": 110,
+  "kad": 49,
+  "model": 51,
+  "skrip": 10,
+  "ukuran_lemah": 42,
+  "kad_ukuran_kuat": 10
+ },
+ "calon": [
+  {
+   "kad": "K2",
+   "ciri": "kontras_strok",
+   "jenis": "kad",
+   "model_gagal": [
+    "ernie",
+    "klein4b",
+    "moss"
+   ],
+   "bil_model": 5,
+   "dapat": "sekata",
+   "sasaran": "kontras tinggi",
+   "frasa_sasaran": "high thick-and-thin contrast",
+   "kekuatan": "kuat",
+   "ukuran_lemah": false,
+   "tindakan": "ubah frasa kad K2: kontras_strok -> high thick-and-thin contrast"
+  },
+  {
+   "kad": "K15",
+   "ciri": "penjajaran",
+   "jenis": "kad",
+   "model_gagal": [
+    "klein3",
+    "moss",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "sama lebar (kiri dan kanan rata)",
+   "sasaran": "tengah",
+   "frasa_sasaran": "centered",
+   "kekuatan": "kuat",
+   "ukuran_lemah": false,
+   "tindakan": "ubah frasa kad K15: penjajaran -> centered"
+  },
+  {
+   "kad": "K17",
+   "ciri": "condong_huruf_utama",
+   "jenis": "kad",
+   "model_gagal": [
+    "klein3",
+    "moss",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "tegak",
+   "sasaran": "condong sedikit",
+   "frasa_sasaran": "slightly slanted to the left",
+   "kekuatan": "kuat",
+   "ukuran_lemah": false,
+   "tindakan": "ubah frasa kad K17: condong_huruf_utama -> slightly slanted to the left"
+  },
+  {
+   "kad": "K20",
+   "ciri": "condong_huruf_utama",
+   "jenis": "kad",
+   "model_gagal": [
+    "ernie",
+    "klein3",
+    "klein4b",
+    "moss",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "tegak",
+   "sasaran": "condong",
+   "frasa_sasaran": "leaning to the right",
+   "kekuatan": "kuat",
+   "ukuran_lemah": false,
+   "tindakan": "ubah frasa kad K20: condong_huruf_utama -> leaning to the right"
+  },
+  {
+   "kad": "K20",
+   "ciri": "kontras_strok",
+   "jenis": "kad",
+   "model_gagal": [
+    "ernie",
+    "klein3",
+    "klein4b",
+    "moss",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "kontras tinggi",
+   "sasaran": "kontras sederhana",
+   "frasa_sasaran": "moderate thick-and-thin contrast",
+   "kekuatan": "kuat",
+   "ukuran_lemah": false,
+   "tindakan": "ubah frasa kad K20: kontras_strok -> moderate thick-and-thin contrast"
+  },
+  {
+   "kad": "K21",
+   "ciri": "kontras_strok",
+   "jenis": "kad",
+   "model_gagal": [
+    "ernie",
+    "klein3",
+    "moss",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "kontras sederhana",
+   "sasaran": "kontras tinggi",
+   "frasa_sasaran": "high thick-and-thin contrast",
+   "kekuatan": "kuat",
+   "ukuran_lemah": false,
+   "tindakan": "ubah frasa kad K21: kontras_strok -> high thick-and-thin contrast"
+  },
+  {
+   "kad": "K22",
+   "ciri": "condong_huruf_utama",
+   "jenis": "kad",
+   "model_gagal": [
+    "klein3",
+    "moss"
+   ],
+   "bil_model": 4,
+   "dapat": "sangat condong",
+   "sasaran": "condong",
+   "frasa_sasaran": "leaning to the right",
+   "kekuatan": "kuat",
+   "ukuran_lemah": false,
+   "tindakan": "ubah frasa kad K22: condong_huruf_utama -> leaning to the right"
+  },
+  {
+   "kad": "K31",
+   "ciri": "condong_huruf_utama",
+   "jenis": "kad",
+   "model_gagal": [
+    "klein3",
+    "klein4b",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "condong",
+   "sasaran": "condong sedikit",
+   "frasa_sasaran": "slightly slanted to the right",
+   "kekuatan": "kuat",
+   "ukuran_lemah": false,
+   "tindakan": "ubah frasa kad K31: condong_huruf_utama -> slightly slanted to the right"
+  },
+  {
+   "kad": "K40",
+   "ciri": "condong_huruf_utama",
+   "jenis": "kad",
+   "model_gagal": [
+    "ernie",
+    "klein3",
+    "moss"
+   ],
+   "bil_model": 5,
+   "dapat": "tegak",
+   "sasaran": "condong sedikit",
+   "frasa_sasaran": "slightly slanted to the right",
+   "kekuatan": "kuat",
+   "ukuran_lemah": false,
+   "tindakan": "ubah frasa kad K40: condong_huruf_utama -> slightly slanted to the right"
+  },
+  {
+   "kad": "K52",
+   "ciri": "kontras_strok",
+   "jenis": "kad",
+   "model_gagal": [
+    "ernie",
+    "klein4b",
+    "moss"
+   ],
+   "bil_model": 5,
+   "dapat": "sekata",
+   "sasaran": "kontras tinggi",
+   "frasa_sasaran": "high thick-and-thin contrast",
+   "kekuatan": "kuat",
+   "ukuran_lemah": false,
+   "tindakan": "ubah frasa kad K52: kontras_strok -> high thick-and-thin contrast"
+  },
+  {
+   "kad": "K2",
+   "ciri": "penjajaran",
+   "jenis": "model",
+   "model_gagal": [
+    "klein4b"
+   ],
+   "bil_model": 5,
+   "dapat": "tengah",
+   "sasaran": "sama lebar (kiri dan kanan rata)",
+   "frasa_sasaran": "every line stretched to the same width",
+   "kekuatan": "kuat",
+   "ukuran_lemah": false,
+   "tindakan": "kad K2: penjajaran gagal pada klein4b sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K10",
+   "ciri": "penjajaran",
+   "jenis": "model",
+   "model_gagal": [
+    "klein4b"
+   ],
+   "bil_model": 5,
+   "dapat": "tengah",
+   "sasaran": "sama lebar (kiri dan kanan rata)",
+   "frasa_sasaran": "every line stretched to the same width",
+   "kekuatan": "kuat",
+   "ukuran_lemah": false,
+   "tindakan": "kad K10: penjajaran gagal pada klein4b sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K12",
+   "ciri": "penjajaran",
+   "jenis": "model",
+   "model_gagal": [
+    "zturbo"
+   ],
+   "bil_model": 4,
+   "dapat": "sama lebar (kiri dan kanan rata)",
+   "sasaran": "rata kiri",
+   "frasa_sasaran": "left-aligned",
+   "kekuatan": "kuat",
+   "ukuran_lemah": false,
+   "tindakan": "kad K12: penjajaran gagal pada zturbo sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K16",
+   "ciri": "kontras_strok",
+   "jenis": "model",
+   "model_gagal": [
+    "klein4b",
+    "moss"
+   ],
+   "bil_model": 5,
+   "dapat": "sekata",
+   "sasaran": "kontras sederhana",
+   "frasa_sasaran": "moderate thick-and-thin contrast",
+   "kekuatan": "kuat",
+   "ukuran_lemah": false,
+   "tindakan": "kad K16: kontras_strok gagal pada klein4b, moss sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K17",
+   "ciri": "kontras_strok",
+   "jenis": "model",
+   "model_gagal": [
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "sekata",
+   "sasaran": "kontras sederhana",
+   "frasa_sasaran": "moderate thick-and-thin contrast",
+   "kekuatan": "kuat",
+   "ukuran_lemah": false,
+   "tindakan": "kad K17: kontras_strok gagal pada zturbo sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K21",
+   "ciri": "condong_huruf_utama",
+   "jenis": "model",
+   "model_gagal": [
+    "klein3"
+   ],
+   "bil_model": 5,
+   "dapat": "condong",
+   "sasaran": "condong sedikit",
+   "frasa_sasaran": "slightly slanted to the right",
+   "kekuatan": "kuat",
+   "ukuran_lemah": false,
+   "tindakan": "kad K21: condong_huruf_utama gagal pada klein3 sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K32",
+   "ciri": "condong_huruf_utama",
+   "jenis": "model",
+   "model_gagal": [
+    "klein3"
+   ],
+   "bil_model": 2,
+   "dapat": "tegak",
+   "sasaran": "condong sedikit",
+   "frasa_sasaran": "slightly slanted to the right",
+   "kekuatan": "kuat",
+   "ukuran_lemah": false,
+   "tindakan": "kad K32: condong_huruf_utama gagal pada klein3 sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K40",
+   "ciri": "condong_huruf_sokongan",
+   "jenis": "model",
+   "model_gagal": [
+    "klein3",
+    "moss"
+   ],
+   "bil_model": 5,
+   "dapat": "sangat condong",
+   "sasaran": "condong",
+   "frasa_sasaran": "leaning to the right",
+   "kekuatan": "kuat",
+   "ukuran_lemah": false,
+   "tindakan": "kad K40: condong_huruf_sokongan gagal pada klein3, moss sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K40",
+   "ciri": "saiz_sokongan",
+   "jenis": "model",
+   "model_gagal": [
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "sama besar",
+   "sasaran": "lebih kecil",
+   "frasa_sasaran": "large",
+   "kekuatan": "kuat",
+   "ukuran_lemah": false,
+   "tindakan": "kad K40: saiz_sokongan gagal pada zturbo sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K41",
+   "ciri": "penjajaran",
+   "jenis": "model",
+   "model_gagal": [
+    "ernie"
+   ],
+   "bil_model": 3,
+   "dapat": "rata kanan",
+   "sasaran": "sama lebar (kiri dan kanan rata)",
+   "frasa_sasaran": "every line stretched to the same width",
+   "kekuatan": "kuat",
+   "ukuran_lemah": false,
+   "tindakan": "kad K41: penjajaran gagal pada ernie sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K41",
+   "ciri": "condong_huruf_utama",
+   "jenis": "model",
+   "model_gagal": [
+    "moss"
+   ],
+   "bil_model": 3,
+   "dapat": "tegak",
+   "sasaran": "condong sedikit",
+   "frasa_sasaran": "slightly slanted to the right",
+   "kekuatan": "kuat",
+   "ukuran_lemah": false,
+   "tindakan": "kad K41: condong_huruf_utama gagal pada moss sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K42",
+   "ciri": "condong_huruf_utama",
+   "jenis": "model",
+   "model_gagal": [
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "tegak",
+   "sasaran": "condong sedikit",
+   "frasa_sasaran": "slightly slanted to the right",
+   "kekuatan": "kuat",
+   "ukuran_lemah": false,
+   "tindakan": "kad K42: condong_huruf_utama gagal pada zturbo sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K53",
+   "ciri": "kontras_strok",
+   "jenis": "model",
+   "model_gagal": [
+    "klein3",
+    "moss"
+   ],
+   "bil_model": 5,
+   "dapat": "sekata",
+   "sasaran": "kontras sederhana",
+   "frasa_sasaran": "moderate thick-and-thin contrast",
+   "kekuatan": "kuat",
+   "ukuran_lemah": false,
+   "tindakan": "kad K53: kontras_strok gagal pada klein3, moss sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K9",
+   "ciri": "garis_sapuan",
+   "jenis": "kad",
+   "model_gagal": [
+    "ernie",
+    "klein3"
+   ],
+   "bil_model": 4,
+   "dapat": "tiada",
+   "sasaran": "ada",
+   "frasa_sasaran": "a long swash or short dash strokes",
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "ubah frasa kad K9: garis_sapuan -> a long swash or short dash strokes"
+  },
+  {
+   "kad": "K12",
+   "ciri": "bekas",
+   "jenis": "kad",
+   "model_gagal": [
+    "ernie",
+    "zturbo"
+   ],
+   "bil_model": 4,
+   "dapat": "garis luar",
+   "sasaran": "pejal",
+   "frasa_sasaran": "a small solid rectangular label",
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "ubah frasa kad K12: bekas -> a small solid rectangular label"
+  },
+  {
+   "kad": "K14",
+   "ciri": "garis_sapuan",
+   "jenis": "kad",
+   "model_gagal": [
+    "klein3",
+    "klein4b",
+    "moss",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "tiada",
+   "sasaran": "ada",
+   "frasa_sasaran": "a long swash or short dash strokes",
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "ubah frasa kad K14: garis_sapuan -> a long swash or short dash strokes"
+  },
+  {
+   "kad": "K17",
+   "ciri": "bekas",
+   "jenis": "kad",
+   "model_gagal": [
+    "klein3",
+    "moss",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "tiada",
+   "sasaran": "pejal",
+   "frasa_sasaran": "a small solid rectangular label",
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "ubah frasa kad K17: bekas -> a small solid rectangular label"
+  },
+  {
+   "kad": "K18",
+   "ciri": "bekas",
+   "jenis": "kad",
+   "model_gagal": [
+    "ernie",
+    "klein3",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "garis luar",
+   "sasaran": "tiada",
+   "frasa_sasaran": null,
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "ubah frasa kad K18: bekas -> tiada"
+  },
+  {
+   "kad": "K18",
+   "ciri": "garis_sapuan",
+   "jenis": "kad",
+   "model_gagal": [
+    "ernie",
+    "klein3",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "tiada",
+   "sasaran": "ada",
+   "frasa_sasaran": "a long swash or short dash strokes",
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "ubah frasa kad K18: garis_sapuan -> a long swash or short dash strokes"
+  },
+  {
+   "kad": "K20",
+   "ciri": "bentuk_blok",
+   "jenis": "kad",
+   "model_gagal": [
+    "ernie",
+    "klein3",
+    "moss",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "segi empat",
+   "sasaran": "bujur / membulat",
+   "frasa_sasaran": "one tight block with a rounded outline",
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "ubah frasa kad K20: bentuk_blok -> one tight block with a rounded outline"
+  },
+  {
+   "kad": "K21",
+   "ciri": "bentuk_blok",
+   "jenis": "kad",
+   "model_gagal": [
+    "ernie",
+    "klein3",
+    "moss",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "bujur / membulat",
+   "sasaran": "tidak sekata",
+   "frasa_sasaran": "one loose block",
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "ubah frasa kad K21: bentuk_blok -> one loose block"
+  },
+  {
+   "kad": "K22",
+   "ciri": "garis_sapuan",
+   "jenis": "kad",
+   "model_gagal": [
+    "klein3",
+    "klein4b",
+    "moss",
+    "zturbo"
+   ],
+   "bil_model": 4,
+   "dapat": "ada",
+   "sasaran": "tiada",
+   "frasa_sasaran": null,
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "ubah frasa kad K22: garis_sapuan -> tiada"
+  },
+  {
+   "kad": "K23",
+   "ciri": "bekas",
+   "jenis": "kad",
+   "model_gagal": [
+    "ernie",
+    "klein3",
+    "klein4b",
+    "moss",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "tiada",
+   "sasaran": "pejal",
+   "frasa_sasaran": "a small solid rectangular label",
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "ubah frasa kad K23: bekas -> a small solid rectangular label"
+  },
+  {
+   "kad": "K24",
+   "ciri": "garis_sapuan",
+   "jenis": "kad",
+   "model_gagal": [
+    "ernie",
+    "klein3"
+   ],
+   "bil_model": 3,
+   "dapat": "ada",
+   "sasaran": "tiada",
+   "frasa_sasaran": null,
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "ubah frasa kad K24: garis_sapuan -> tiada"
+  },
+  {
+   "kad": "K30",
+   "ciri": "garis_sapuan",
+   "jenis": "kad",
+   "model_gagal": [
+    "klein3",
+    "moss"
+   ],
+   "bil_model": 3,
+   "dapat": "ada",
+   "sasaran": "tiada",
+   "frasa_sasaran": null,
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "ubah frasa kad K30: garis_sapuan -> tiada"
+  },
+  {
+   "kad": "K31",
+   "ciri": "bentuk_blok",
+   "jenis": "kad",
+   "model_gagal": [
+    "ernie",
+    "klein3",
+    "klein4b",
+    "moss",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "segi empat",
+   "sasaran": "bujur / membulat",
+   "frasa_sasaran": "one tight block with a rounded outline",
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "ubah frasa kad K31: bentuk_blok -> one tight block with a rounded outline"
+  },
+  {
+   "kad": "K42",
+   "ciri": "bentuk_blok",
+   "jenis": "kad",
+   "model_gagal": [
+    "ernie",
+    "klein3",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "segi empat",
+   "sasaran": "bujur / membulat",
+   "frasa_sasaran": "one tight block with a rounded outline",
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "ubah frasa kad K42: bentuk_blok -> one tight block with a rounded outline"
+  },
+  {
+   "kad": "K44",
+   "ciri": "bentuk_blok",
+   "jenis": "kad",
+   "model_gagal": [
+    "klein3",
+    "moss",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "segi empat",
+   "sasaran": "bujur / membulat",
+   "frasa_sasaran": "one tight block with a rounded outline",
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "ubah frasa kad K44: bentuk_blok -> one tight block with a rounded outline"
+  },
+  {
+   "kad": "K50",
+   "ciri": "garis_sapuan",
+   "jenis": "kad",
+   "model_gagal": [
+    "ernie",
+    "klein4b",
+    "moss",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "ada",
+   "sasaran": "tiada",
+   "frasa_sasaran": null,
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "ubah frasa kad K50: garis_sapuan -> tiada"
+  },
+  {
+   "kad": "K51",
+   "ciri": "bekas",
+   "jenis": "kad",
+   "model_gagal": [
+    "ernie",
+    "klein4b",
+    "moss",
+    "zturbo"
+   ],
+   "bil_model": 4,
+   "dapat": "tiada",
+   "sasaran": "pejal",
+   "frasa_sasaran": "a small solid rectangular label",
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "ubah frasa kad K51: bekas -> a small solid rectangular label"
+  },
+  {
+   "kad": "K52",
+   "ciri": "bekas",
+   "jenis": "kad",
+   "model_gagal": [
+    "ernie",
+    "klein3",
+    "klein4b",
+    "moss"
+   ],
+   "bil_model": 5,
+   "dapat": "tiada",
+   "sasaran": "pejal",
+   "frasa_sasaran": "a small solid rectangular label",
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "ubah frasa kad K52: bekas -> a small solid rectangular label"
+  },
+  {
+   "kad": "K54",
+   "ciri": "garis_sapuan",
+   "jenis": "kad",
+   "model_gagal": [
+    "ernie",
+    "klein4b",
+    "moss",
+    "zturbo"
+   ],
+   "bil_model": 4,
+   "dapat": "tiada",
+   "sasaran": "ada",
+   "frasa_sasaran": "a long swash or short dash strokes",
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "ubah frasa kad K54: garis_sapuan -> a long swash or short dash strokes"
+  },
+  {
+   "kad": "K2",
+   "ciri": "bekas",
+   "jenis": "model",
+   "model_gagal": [
+    "ernie"
+   ],
+   "bil_model": 5,
+   "dapat": "tiada",
+   "sasaran": "pejal",
+   "frasa_sasaran": "a small solid rectangular label",
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "kad K2: bekas gagal pada ernie sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K4",
+   "ciri": "bentuk_blok",
+   "jenis": "model",
+   "model_gagal": [
+    "moss"
+   ],
+   "bil_model": 5,
+   "dapat": "bujur / membulat",
+   "sasaran": "segi empat",
+   "frasa_sasaran": "one tight block",
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "kad K4: bentuk_blok gagal pada moss sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K10",
+   "ciri": "bekas",
+   "jenis": "model",
+   "model_gagal": [
+    "ernie"
+   ],
+   "bil_model": 5,
+   "dapat": "pejal",
+   "sasaran": "tiada",
+   "frasa_sasaran": null,
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "kad K10: bekas gagal pada ernie sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K14",
+   "ciri": "bekas",
+   "jenis": "model",
+   "model_gagal": [
+    "klein3",
+    "moss"
+   ],
+   "bil_model": 5,
+   "dapat": "pejal",
+   "sasaran": "tiada",
+   "frasa_sasaran": null,
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "kad K14: bekas gagal pada klein3, moss sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K14",
+   "ciri": "bentuk_blok",
+   "jenis": "model",
+   "model_gagal": [
+    "moss"
+   ],
+   "bil_model": 5,
+   "dapat": "bujur / membulat",
+   "sasaran": "segi empat",
+   "frasa_sasaran": "one tight block",
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "kad K14: bentuk_blok gagal pada moss sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K16",
+   "ciri": "condong_blok",
+   "jenis": "skrip",
+   "model_gagal": [
+    "ernie",
+    "klein3",
+    "klein4b",
+    "moss"
+   ],
+   "bil_model": 5,
+   "dapat": "mendatar",
+   "sasaran": "naik sedikit ke kanan",
+   "frasa_sasaran": "tilts slightly so each line rises toward the right",
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "skrip 5b (SK01), bukan prompt"
+  },
+  {
+   "kad": "K16",
+   "ciri": "garis_sapuan",
+   "jenis": "model",
+   "model_gagal": [
+    "klein4b",
+    "moss"
+   ],
+   "bil_model": 5,
+   "dapat": "tiada",
+   "sasaran": "ada",
+   "frasa_sasaran": "a long swash or short dash strokes",
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "kad K16: garis_sapuan gagal pada klein4b, moss sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K17",
+   "ciri": "condong_blok",
+   "jenis": "skrip",
+   "model_gagal": [
+    "klein3",
+    "moss",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "mendatar",
+   "sasaran": "naik sedikit ke kanan",
+   "frasa_sasaran": "tilts slightly so each line rises toward the right",
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "skrip 5b (SK01), bukan prompt"
+  },
+  {
+   "kad": "K18",
+   "ciri": "condong_blok",
+   "jenis": "skrip",
+   "model_gagal": [
+    "ernie",
+    "klein3",
+    "moss",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "mendatar",
+   "sasaran": "naik sedikit ke kanan",
+   "frasa_sasaran": "tilts slightly so each line rises toward the right",
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "skrip 5b (SK01), bukan prompt"
+  },
+  {
+   "kad": "K20",
+   "ciri": "condong_blok",
+   "jenis": "skrip",
+   "model_gagal": [
+    "ernie",
+    "klein3",
+    "klein4b",
+    "moss",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "mendatar",
+   "sasaran": "naik jelas ke kanan",
+   "frasa_sasaran": "rises clearly toward the right",
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "skrip 5b (SK01), bukan prompt"
+  },
+  {
+   "kad": "K20",
+   "ciri": "garis_sapuan",
+   "jenis": "model",
+   "model_gagal": [
+    "ernie"
+   ],
+   "bil_model": 5,
+   "dapat": "tiada",
+   "sasaran": "ada",
+   "frasa_sasaran": "a long swash or short dash strokes",
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "kad K20: garis_sapuan gagal pada ernie sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K22",
+   "ciri": "bentuk_blok",
+   "jenis": "model",
+   "model_gagal": [
+    "klein3"
+   ],
+   "bil_model": 4,
+   "dapat": "bujur / membulat",
+   "sasaran": "segi empat",
+   "frasa_sasaran": "one tight block",
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "kad K22: bentuk_blok gagal pada klein3 sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K31",
+   "ciri": "condong_blok",
+   "jenis": "skrip",
+   "model_gagal": [
+    "ernie",
+    "klein3",
+    "klein4b",
+    "moss",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "mendatar",
+   "sasaran": "naik jelas ke kanan",
+   "frasa_sasaran": "rises clearly toward the right",
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "skrip 5b (SK01), bukan prompt"
+  },
+  {
+   "kad": "K32",
+   "ciri": "condong_blok",
+   "jenis": "skrip",
+   "model_gagal": [
+    "klein3"
+   ],
+   "bil_model": 2,
+   "dapat": "mendatar",
+   "sasaran": "naik sedikit ke kanan",
+   "frasa_sasaran": "tilts slightly so each line rises toward the right",
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "skrip 5b (SK01), bukan prompt"
+  },
+  {
+   "kad": "K33",
+   "ciri": "condong_blok",
+   "jenis": "skrip",
+   "model_gagal": [
+    "ernie",
+    "klein3",
+    "klein4b",
+    "moss",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "mendatar",
+   "sasaran": "naik sedikit ke kanan",
+   "frasa_sasaran": "tilts slightly so each line rises toward the right",
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "skrip 5b (SK01), bukan prompt"
+  },
+  {
+   "kad": "K40",
+   "ciri": "condong_blok",
+   "jenis": "skrip",
+   "model_gagal": [
+    "ernie",
+    "klein3",
+    "moss"
+   ],
+   "bil_model": 5,
+   "dapat": "mendatar",
+   "sasaran": "naik sedikit ke kanan",
+   "frasa_sasaran": "tilts slightly so each line rises toward the right",
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "skrip 5b (SK01), bukan prompt"
+  },
+  {
+   "kad": "K40",
+   "ciri": "garis_sapuan",
+   "jenis": "model",
+   "model_gagal": [
+    "klein3",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "tiada",
+   "sasaran": "ada",
+   "frasa_sasaran": "a long swash or short dash strokes",
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "kad K40: garis_sapuan gagal pada klein3, zturbo sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K40",
+   "ciri": "bekas",
+   "jenis": "model",
+   "model_gagal": [
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "pejal",
+   "sasaran": "tiada",
+   "frasa_sasaran": null,
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "kad K40: bekas gagal pada zturbo sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K41",
+   "ciri": "bentuk_blok",
+   "jenis": "model",
+   "model_gagal": [
+    "ernie"
+   ],
+   "bil_model": 3,
+   "dapat": "bujur / membulat",
+   "sasaran": "segi empat",
+   "frasa_sasaran": "one tight block",
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "kad K41: bentuk_blok gagal pada ernie sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K42",
+   "ciri": "condong_blok",
+   "jenis": "skrip",
+   "model_gagal": [
+    "ernie",
+    "klein3",
+    "klein4b",
+    "moss",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "mendatar",
+   "sasaran": "naik sedikit ke kanan",
+   "frasa_sasaran": "tilts slightly so each line rises toward the right",
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "skrip 5b (SK01), bukan prompt"
+  },
+  {
+   "kad": "K42",
+   "ciri": "garis_sapuan",
+   "jenis": "model",
+   "model_gagal": [
+    "klein4b"
+   ],
+   "bil_model": 5,
+   "dapat": "tiada",
+   "sasaran": "ada",
+   "frasa_sasaran": "a long swash or short dash strokes",
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "kad K42: garis_sapuan gagal pada klein4b sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K43",
+   "ciri": "bentuk_blok",
+   "jenis": "model",
+   "model_gagal": [
+    "ernie"
+   ],
+   "bil_model": 4,
+   "dapat": "segi empat",
+   "sasaran": "bujur / membulat",
+   "frasa_sasaran": "one tight block with a rounded outline",
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "kad K43: bentuk_blok gagal pada ernie sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K43",
+   "ciri": "garis_sapuan",
+   "jenis": "model",
+   "model_gagal": [
+    "moss"
+   ],
+   "bil_model": 4,
+   "dapat": "ada",
+   "sasaran": "tiada",
+   "frasa_sasaran": null,
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "kad K43: garis_sapuan gagal pada moss sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K52",
+   "ciri": "condong_blok",
+   "jenis": "skrip",
+   "model_gagal": [
+    "ernie",
+    "klein4b"
+   ],
+   "bil_model": 5,
+   "dapat": "naik sedikit ke kanan",
+   "sasaran": "mendatar",
+   "frasa_sasaran": null,
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "skrip 5b (SK01), bukan prompt"
+  },
+  {
+   "kad": "K52",
+   "ciri": "bentuk_blok",
+   "jenis": "model",
+   "model_gagal": [
+    "ernie"
+   ],
+   "bil_model": 5,
+   "dapat": "bujur / membulat",
+   "sasaran": "segi empat",
+   "frasa_sasaran": "one tight block",
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "kad K52: bentuk_blok gagal pada ernie sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K53",
+   "ciri": "bekas",
+   "jenis": "model",
+   "model_gagal": [
+    "ernie"
+   ],
+   "bil_model": 5,
+   "dapat": "tiada",
+   "sasaran": "pejal",
+   "frasa_sasaran": "a small solid rectangular label",
+   "kekuatan": "sederhana",
+   "ukuran_lemah": false,
+   "tindakan": "kad K53: bekas gagal pada ernie sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K2",
+   "ciri": "tepi_strok",
+   "jenis": "kad",
+   "model_gagal": [
+    "ernie",
+    "klein3",
+    "klein4b",
+    "moss",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "licin",
+   "sasaran": "sedikit kasar",
+   "frasa_sasaran": "slightly rough hand-drawn edges",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "ubah frasa kad K2: tepi_strok -> slightly rough hand-drawn edges"
+  },
+  {
+   "kad": "K4",
+   "ciri": "tepi_strok",
+   "jenis": "kad",
+   "model_gagal": [
+    "ernie",
+    "klein3",
+    "klein4b",
+    "moss"
+   ],
+   "bil_model": 5,
+   "dapat": "kasar / bertekstur",
+   "sasaran": "licin",
+   "frasa_sasaran": "smooth clean edges",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "ubah frasa kad K4: tepi_strok -> smooth clean edges"
+  },
+  {
+   "kad": "K4",
+   "ciri": "hubungan_baris",
+   "jenis": "kad",
+   "model_gagal": [
+    "klein3",
+    "klein4b",
+    "moss",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "terpisah",
+   "sasaran": "bertindih sedikit",
+   "frasa_sasaran": "sit close together and overlap slightly",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "ubah frasa kad K4: hubungan_baris -> sit close together and overlap slightly"
+  },
+  {
+   "kad": "K14",
+   "ciri": "hubungan_baris",
+   "jenis": "kad",
+   "model_gagal": [
+    "ernie",
+    "klein3",
+    "klein4b",
+    "moss",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "rapat",
+   "sasaran": "bertindih sedikit",
+   "frasa_sasaran": "sit close together and overlap slightly",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "ubah frasa kad K14: hubungan_baris -> sit close together and overlap slightly"
+  },
+  {
+   "kad": "K16",
+   "ciri": "tepi_strok",
+   "jenis": "kad",
+   "model_gagal": [
+    "ernie",
+    "klein3",
+    "klein4b",
+    "moss"
+   ],
+   "bil_model": 5,
+   "dapat": "kasar / bertekstur",
+   "sasaran": "sedikit kasar",
+   "frasa_sasaran": "slightly rough hand-drawn edges",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "ubah frasa kad K16: tepi_strok -> slightly rough hand-drawn edges"
+  },
+  {
+   "kad": "K16",
+   "ciri": "hubungan_baris",
+   "jenis": "kad",
+   "model_gagal": [
+    "klein3",
+    "klein4b",
+    "moss"
+   ],
+   "bil_model": 5,
+   "dapat": "rapat",
+   "sasaran": "bertindih sedikit",
+   "frasa_sasaran": "sit close together and overlap slightly",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "ubah frasa kad K16: hubungan_baris -> sit close together and overlap slightly"
+  },
+  {
+   "kad": "K17",
+   "ciri": "tebal_utama",
+   "jenis": "kad",
+   "model_gagal": [
+    "klein3",
+    "moss",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "sangat tebal",
+   "sasaran": "ringan",
+   "frasa_sasaran": "light",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "ubah frasa kad K17: tebal_utama -> light"
+  },
+  {
+   "kad": "K20",
+   "ciri": "tepi_strok",
+   "jenis": "kad",
+   "model_gagal": [
+    "ernie",
+    "klein3",
+    "klein4b",
+    "moss",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "licin",
+   "sasaran": "sedikit kasar",
+   "frasa_sasaran": "slightly rough hand-drawn edges",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "ubah frasa kad K20: tepi_strok -> slightly rough hand-drawn edges"
+  },
+  {
+   "kad": "K20",
+   "ciri": "hubungan_baris",
+   "jenis": "kad",
+   "model_gagal": [
+    "klein3",
+    "moss",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "rapat",
+   "sasaran": "bertindih sedikit",
+   "frasa_sasaran": "sit close together and overlap slightly",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "ubah frasa kad K20: hubungan_baris -> sit close together and overlap slightly"
+  },
+  {
+   "kad": "K21",
+   "ciri": "hubungan_baris",
+   "jenis": "kad",
+   "model_gagal": [
+    "klein3",
+    "moss",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "bertindih sedikit",
+   "sasaran": "terpisah",
+   "frasa_sasaran": "are clearly separated",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "ubah frasa kad K21: hubungan_baris -> are clearly separated"
+  },
+  {
+   "kad": "K22",
+   "ciri": "tepi_strok",
+   "jenis": "kad",
+   "model_gagal": [
+    "klein3",
+    "klein4b"
+   ],
+   "bil_model": 4,
+   "dapat": "kasar / bertekstur",
+   "sasaran": "licin",
+   "frasa_sasaran": "smooth clean edges",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "ubah frasa kad K22: tepi_strok -> smooth clean edges"
+  },
+  {
+   "kad": "K22",
+   "ciri": "tebal_utama",
+   "jenis": "kad",
+   "model_gagal": [
+    "klein3",
+    "klein4b",
+    "moss",
+    "zturbo"
+   ],
+   "bil_model": 4,
+   "dapat": "sangat tebal",
+   "sasaran": "tebal",
+   "frasa_sasaran": "bold",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "ubah frasa kad K22: tebal_utama -> bold"
+  },
+  {
+   "kad": "K23",
+   "ciri": "tebal_utama",
+   "jenis": "kad",
+   "model_gagal": [
+    "klein3",
+    "klein4b",
+    "moss",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "sangat tebal",
+   "sasaran": "tebal",
+   "frasa_sasaran": "bold",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "ubah frasa kad K23: tebal_utama -> bold"
+  },
+  {
+   "kad": "K40",
+   "ciri": "hubungan_baris",
+   "jenis": "kad",
+   "model_gagal": [
+    "ernie",
+    "moss",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "bertindih sedikit",
+   "sasaran": "rapat",
+   "frasa_sasaran": "sit close together",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "ubah frasa kad K40: hubungan_baris -> sit close together"
+  },
+  {
+   "kad": "K41",
+   "ciri": "hubungan_baris",
+   "jenis": "kad",
+   "model_gagal": [
+    "ernie",
+    "klein3",
+    "moss"
+   ],
+   "bil_model": 3,
+   "dapat": "rapat",
+   "sasaran": "terpisah",
+   "frasa_sasaran": "are clearly separated",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "ubah frasa kad K41: hubungan_baris -> are clearly separated"
+  },
+  {
+   "kad": "K44",
+   "ciri": "hubungan_baris",
+   "jenis": "kad",
+   "model_gagal": [
+    "ernie",
+    "klein3",
+    "klein4b",
+    "moss",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "rapat",
+   "sasaran": "bertindih sedikit",
+   "frasa_sasaran": "sit close together and overlap slightly",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "ubah frasa kad K44: hubungan_baris -> sit close together and overlap slightly"
+  },
+  {
+   "kad": "K50",
+   "ciri": "tepi_strok",
+   "jenis": "kad",
+   "model_gagal": [
+    "ernie",
+    "klein3",
+    "klein4b",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "kasar / bertekstur",
+   "sasaran": "licin",
+   "frasa_sasaran": "smooth clean edges",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "ubah frasa kad K50: tepi_strok -> smooth clean edges"
+  },
+  {
+   "kad": "K52",
+   "ciri": "tebal_utama",
+   "jenis": "kad",
+   "model_gagal": [
+    "ernie",
+    "klein3",
+    "moss"
+   ],
+   "bil_model": 5,
+   "dapat": "tebal",
+   "sasaran": "ringan",
+   "frasa_sasaran": "light",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "ubah frasa kad K52: tebal_utama -> light"
+  },
+  {
+   "kad": "K52",
+   "ciri": "hubungan_baris",
+   "jenis": "kad",
+   "model_gagal": [
+    "ernie",
+    "klein3",
+    "klein4b",
+    "moss"
+   ],
+   "bil_model": 5,
+   "dapat": "rapat",
+   "sasaran": "bertindih sedikit",
+   "frasa_sasaran": "sit close together and overlap slightly",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "ubah frasa kad K52: hubungan_baris -> sit close together and overlap slightly"
+  },
+  {
+   "kad": "K53",
+   "ciri": "hubungan_baris",
+   "jenis": "kad",
+   "model_gagal": [
+    "ernie",
+    "moss",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "terpisah",
+   "sasaran": "rapat",
+   "frasa_sasaran": "sit close together",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "ubah frasa kad K53: hubungan_baris -> sit close together"
+  },
+  {
+   "kad": "K2",
+   "ciri": "hubungan_baris",
+   "jenis": "model",
+   "model_gagal": [
+    "klein3",
+    "moss"
+   ],
+   "bil_model": 5,
+   "dapat": "rapat",
+   "sasaran": "terpisah",
+   "frasa_sasaran": "are clearly separated",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "kad K2: hubungan_baris gagal pada klein3, moss sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K4",
+   "ciri": "tebal_utama",
+   "jenis": "model",
+   "model_gagal": [
+    "ernie"
+   ],
+   "bil_model": 5,
+   "dapat": "sangat tebal",
+   "sasaran": "ringan",
+   "frasa_sasaran": "light",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "kad K4: tebal_utama gagal pada ernie sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K9",
+   "ciri": "hubungan_baris",
+   "jenis": "model",
+   "model_gagal": [
+    "zturbo"
+   ],
+   "bil_model": 4,
+   "dapat": "terpisah",
+   "sasaran": "bertindih sedikit",
+   "frasa_sasaran": "sit close together and overlap slightly",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "kad K9: hubungan_baris gagal pada zturbo sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K10",
+   "ciri": "hubungan_baris",
+   "jenis": "model",
+   "model_gagal": [
+    "klein4b",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "terpisah",
+   "sasaran": "rapat",
+   "frasa_sasaran": "sit close together",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "kad K10: hubungan_baris gagal pada klein4b, zturbo sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K11",
+   "ciri": "hubungan_baris",
+   "jenis": "model",
+   "model_gagal": [
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "terpisah",
+   "sasaran": "rapat",
+   "frasa_sasaran": "sit close together",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "kad K11: hubungan_baris gagal pada zturbo sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K12",
+   "ciri": "hubungan_baris",
+   "jenis": "model",
+   "model_gagal": [
+    "zturbo"
+   ],
+   "bil_model": 4,
+   "dapat": "terpisah",
+   "sasaran": "rapat",
+   "frasa_sasaran": "sit close together",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "kad K12: hubungan_baris gagal pada zturbo sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K15",
+   "ciri": "hubungan_baris",
+   "jenis": "model",
+   "model_gagal": [
+    "moss"
+   ],
+   "bil_model": 5,
+   "dapat": "rapat",
+   "sasaran": "terpisah",
+   "frasa_sasaran": "are clearly separated",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "kad K15: hubungan_baris gagal pada moss sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K17",
+   "ciri": "tepi_strok",
+   "jenis": "model",
+   "model_gagal": [
+    "klein3",
+    "moss"
+   ],
+   "bil_model": 5,
+   "dapat": "kasar / bertekstur",
+   "sasaran": "licin",
+   "frasa_sasaran": "smooth clean edges",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "kad K17: tepi_strok gagal pada klein3, moss sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K17",
+   "ciri": "hubungan_baris",
+   "jenis": "model",
+   "model_gagal": [
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "terpisah",
+   "sasaran": "bertindih sedikit",
+   "frasa_sasaran": "sit close together and overlap slightly",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "kad K17: hubungan_baris gagal pada zturbo sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K20",
+   "ciri": "tebal_utama",
+   "jenis": "model",
+   "model_gagal": [
+    "ernie"
+   ],
+   "bil_model": 5,
+   "dapat": "tebal",
+   "sasaran": "sangat tebal",
+   "frasa_sasaran": "very heavy",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "kad K20: tebal_utama gagal pada ernie sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K21",
+   "ciri": "tebal_utama",
+   "jenis": "model",
+   "model_gagal": [
+    "ernie"
+   ],
+   "bil_model": 5,
+   "dapat": "tebal",
+   "sasaran": "sangat tebal",
+   "frasa_sasaran": "very heavy",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "kad K21: tebal_utama gagal pada ernie sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K24",
+   "ciri": "tepi_strok",
+   "jenis": "model",
+   "model_gagal": [
+    "klein3"
+   ],
+   "bil_model": 3,
+   "dapat": "kasar / bertekstur",
+   "sasaran": "licin",
+   "frasa_sasaran": "smooth clean edges",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "kad K24: tepi_strok gagal pada klein3 sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K24",
+   "ciri": "tebal_utama",
+   "jenis": "model",
+   "model_gagal": [
+    "moss"
+   ],
+   "bil_model": 3,
+   "dapat": "sangat tebal",
+   "sasaran": "tebal",
+   "frasa_sasaran": "bold",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "kad K24: tebal_utama gagal pada moss sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K24",
+   "ciri": "hubungan_baris",
+   "jenis": "model",
+   "model_gagal": [
+    "moss"
+   ],
+   "bil_model": 3,
+   "dapat": "rapat",
+   "sasaran": "bertindih sedikit",
+   "frasa_sasaran": "sit close together and overlap slightly",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "kad K24: hubungan_baris gagal pada moss sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K31",
+   "ciri": "hubungan_baris",
+   "jenis": "model",
+   "model_gagal": [
+    "klein4b"
+   ],
+   "bil_model": 5,
+   "dapat": "rapat",
+   "sasaran": "bertindih sedikit",
+   "frasa_sasaran": "sit close together and overlap slightly",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "kad K31: hubungan_baris gagal pada klein4b sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K32",
+   "ciri": "tepi_strok",
+   "jenis": "model",
+   "model_gagal": [
+    "klein3"
+   ],
+   "bil_model": 2,
+   "dapat": "licin",
+   "sasaran": "sedikit kasar",
+   "frasa_sasaran": "slightly rough hand-drawn edges",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "kad K32: tepi_strok gagal pada klein3 sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K32",
+   "ciri": "tebal_utama",
+   "jenis": "model",
+   "model_gagal": [
+    "klein3"
+   ],
+   "bil_model": 2,
+   "dapat": "tebal",
+   "sasaran": "sangat tebal",
+   "frasa_sasaran": "very heavy",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "kad K32: tebal_utama gagal pada klein3 sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K32",
+   "ciri": "hubungan_baris",
+   "jenis": "model",
+   "model_gagal": [
+    "klein3"
+   ],
+   "bil_model": 2,
+   "dapat": "terpisah",
+   "sasaran": "bertindih sedikit",
+   "frasa_sasaran": "sit close together and overlap slightly",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "kad K32: hubungan_baris gagal pada klein3 sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K42",
+   "ciri": "hubungan_baris",
+   "jenis": "model",
+   "model_gagal": [
+    "klein4b"
+   ],
+   "bil_model": 5,
+   "dapat": "terpisah",
+   "sasaran": "rapat",
+   "frasa_sasaran": "sit close together",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "kad K42: hubungan_baris gagal pada klein4b sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K50",
+   "ciri": "hubungan_baris",
+   "jenis": "model",
+   "model_gagal": [
+    "moss",
+    "zturbo"
+   ],
+   "bil_model": 5,
+   "dapat": "terpisah",
+   "sasaran": "bertindih sedikit",
+   "frasa_sasaran": "sit close together and overlap slightly",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "kad K50: hubungan_baris gagal pada moss, zturbo sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K51",
+   "ciri": "tebal_utama",
+   "jenis": "model",
+   "model_gagal": [
+    "moss"
+   ],
+   "bil_model": 4,
+   "dapat": "sangat tebal",
+   "sasaran": "tebal",
+   "frasa_sasaran": "bold",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "kad K51: tebal_utama gagal pada moss sahaja -> ubah aturan model itu atau tukar model"
+  },
+  {
+   "kad": "K53",
+   "ciri": "tebal_utama",
+   "jenis": "model",
+   "model_gagal": [
+    "klein3",
+    "moss"
+   ],
+   "bil_model": 5,
+   "dapat": "sangat tebal",
+   "sasaran": "tebal",
+   "frasa_sasaran": "bold",
+   "kekuatan": "lemah",
+   "ukuran_lemah": true,
+   "tindakan": "kad K53: tebal_utama gagal pada klein3, moss sahaja -> ubah aturan model itu atau tukar model"
+  }
+ ]
+}

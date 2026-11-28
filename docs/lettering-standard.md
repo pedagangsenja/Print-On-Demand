@@ -109,6 +109,19 @@ Guna: `python3 skrip/SK09_decode.py <gambar> [--semak]`; `python3 skrip/SK10_ban
 - Hanya 30.7% imej sedia ada lulus SEMUA ciri teras dengan rujukan sendiri, jadi ciri teras TIDAK boleh menjadi pintu lulus; ia menanda sahaja.
 - Belum diketahui: sama ada "tepi strok" gagal kerana jana memang kerap bertepi kasar, atau kerana ukurannya hingar pada imej jana. Perlu semakan mata pada sampel.
 
+## Semakan ejaan automatik (SK12) dan QC B masuk belajar.py (28 Nov 2026, tanpa jana baharu)
+**SK12 (`skrip/SK12_ejaan.py`, QC A).** OCR (RapidOCR, `pip install rapidocr_onnxruntime`) membaca imej dan membanding dengan ayat dijangka. Tiga hasil: "lulus auto" (semua perkataan dibaca tepat, tiada tambahan), "tanda" (perkataan tambahan, berulang atau bercantum), "semak mata" (selebihnya).
+- Ujian pada 574 imej yang sudah ada keputusan QC mata (`banding/ejaan_ujian.json`), 133 daripadanya gagal mata. Tahap bukti: sederhana.
+- "Lulus auto" pada 272 imej (47%); 239 memang lulus mata (88%), 33 sebenarnya gagal mata. Jadi 25% imej gagal akan terlepas jika "lulus auto" dipercayai: **OCR tidak boleh menggantikan mata.**
+- Ikut jenis cacat: cacat perkataan 78, terlepas 11 (14%); titik, tanda dan garis rawak 38, terlepas 17 (45%); cacat gaya 11, terlepas 5. OCR tidak nampak titik dan garis, dan tidak membezakan huruf besar / kecil, noktah yang hilang, atau huruf berganda ("BUIILD" dibaca "BUILD").
+- Tulisan skrip: hanya 28% imej dapat "lulus auto" (selebihnya OCR tidak dapat membaca), berbanding 58% bagi imej tanpa skrip.
+- "Tanda": 24 imej, 14 daripadanya memang gagal mata. Versi pertama memberi 56 amaran palsu kerana salah baca OCR (cth. 'woids' bagi 'words') dikira teks tambahan; dibaiki dalam v1.2.
+- Kegunaan yang disokong data: menyusun kerja mata (lihat "tanda" dan "semak mata" dahulu) dan menangkap kebanyakan cacat perkataan. QC A kekal dengan mata bagi setiap imej; G2 (teks dan tanda rawak) dan G3 (cacat) kekal mata sepenuhnya.
+
+**QC B masuk belajar.py (`skrip/SK10_ringkas.py`).** Selepas setiap `belajar.py`, ciri gaya yang gagal berulang lawan gambar upload disenarai sebagai calon ubahan. "Berulang" = gagal pada sekurang-kurangnya 2 imej dan 2 / 3 imej gabungan kad × model. Gagal pada kebanyakan model = calon ubah frasa kad (dengan frasa sasaran); pada satu model sahaja = calon ubah aturan model atau tukar model; condong blok = skrip 5b.
+- Larian pertama pada 384 imej sedia ada, 135 gabungan kad × model: 110 calon (49 kad, 51 model, 10 skrip); 42 daripada ukuran lemah. Dipaparkan di hujung `belajar.py`: hanya calon kad daripada ukuran kuat (10 calon), cth. K20: huruf tegak sedangkan rujukan condong, pada 5 / 5 model.
+- Calon sahaja: tiada kad atau aturan diubah sendiri. Bilangan calon yang besar (110) menunjukkan ia perlu ditapis dengan mata sebelum dilaksanakan; kekuatan setiap ukuran datang daripada `banding/ciri_ujian.json`.
+
 ## Tentukur SK10 dan kad pendua (28 Nov 2026, tanpa jana baharu)
 Skrip: `skrip/tentukur_sk10.py`; hasil penuh: `banding/tentukur_sk10.json`. Data: 384 imej `betul/` sedia ada, 26 gambar rujukan, 30 kad. Tahap bukti: sederhana (ratusan imej, satu ukuran).
 
