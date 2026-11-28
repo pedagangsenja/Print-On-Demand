@@ -698,7 +698,7 @@ Model baharu juga memerlukan aturan prompt sendiri sebelum dipakai untuk design 
 - **Kemasan (SK06):** imej terbaik setiap design, pilihan Claude; pengguna memilih melalui Daftar S/C: K3K MOSS seed 42 (gaya S3, putih; warna kuning + bayang dibuat 27 Nov oleh SK07 + SK08, lihat daftar skrip), K7M MOSS seed 42 (gaya S2, krim + butir), K8G klein 4B seed 42 (gaya S4, kapur). Fail: `designs/lettering-v1/final/v12-cpu/` (SVG induk + pratonton 18×24); gambar ringkas `qc/v12_cpu_akhir.jpg`.
 
 ## Larian K9–K13 (27 Nov 2026, CPU, hitam putih sahaja, arahan pengguna)
-Lima gambar upload baharu, lima kad baharu (K9–K13, `kad.py`, v1.0 belum diluluskan pengguna), ayat baharu pilihan Claude. Semua model yang muat di CPU (15 GB RAM): MOSS, ERNIE, FLUX 3 Klein, Z-Image, klein 4B. Qwen-Image-2512 dan GLM-Image dilangkau (tidak muat RAM). Seed 42, 7, 123 (K9–K11) dan 42, 7 (K12–K13). Kemasan warna (langkah 6) tidak dibuat: arahan pengguna hitam putih sahaja. QC: semakan mata Claude, `qc/v12_cpu_k9.json`, helaian `qc/v12k9_<model>_<ID>.jpg` (bukti lemah).
+Lima gambar upload baharu, lima kad baharu (K9–K13, `kad.py`, v1.0, diluluskan pengguna 28 Nov 2026), ayat baharu pilihan Claude. Semua model yang muat di CPU (15 GB RAM): MOSS, ERNIE, FLUX 3 Klein, Z-Image, klein 4B. Qwen-Image-2512 dan GLM-Image dilangkau (tidak muat RAM). Seed 42, 7, 123 (K9–K11) dan 42, 7 (K12–K13). Kemasan warna (langkah 6) tidak dibuat: arahan pengguna hitam putih sahaja. QC: semakan mata Claude, `qc/v12_cpu_k9.json`, helaian `qc/v12k9_<model>_<ID>.jpg` (bukti lemah).
 
 | ID | Gambar | Kad | Ayat | Ciri utama |
 |---|---|---|---|---|
@@ -722,6 +722,7 @@ Lulus G1–G2 (imej lulus / dijana):
 - **Cacat utama:** Z-Image × K11 (NEED hilang / terlalu kecil, 3/3); huruf kecil i dalam STILL / WINS (Z-Image, klein 4B); MOSS × K11 terlalu kemas, MOSS × K13 bingkai atas / bawah sahaja; FLUX 3 Klein × K11, K13 blok kecil.
 - **5b:** 56 imej lulus dibetulkan (`betul/v12-cpu-k9/`), 56/56 lulus semakan akhir selepas SK 5b v1.2 (lihat Catatan pembaikan SK). Ejaan tidak berubah.
 - **Belajar (3.15, `belajar.py` b1.2):** nota QC kini ditulis dengan kata kelas cacat; kelas `bentuk` dan `hiasan_tempat` diluaskan (bentuk huruf, lebar baris, bingkai hanya, reben kecil); rekod SNC tanpa folder model (kemasan SK07 / SK08) dilangkau. TINDAKAN CUBA ditulis dalam `pembina.py` (`UJI`), dipakai pada jana seterusnya model itu: `zturbo_had_positif`, `ernie_hiasan_tepat`, `klein3_hiasan_kedudukan`, `klein4b_frasa_bentuk`. MOSS: HABIS bagi ejaan K8 (sedia ada).
+- **Dashboard (28 Nov 2026, pilihan pengguna A):** 65 imej disimpan di tab AI Image Test sebagai ujian **U15** (`data/ai_tests/rows/U15.json`). U13 / U14 milik sesi lain (cawangan `exciting-sagan-qk5lce`) dipulihkan ke dalam build ini selepas hampir tertimpa. **Amaran:** sesi itu juga mencipta kad bernombor K9–K13 daripada gambar upload yang sama dengan definisi lain; nombor kad bertindih bila cawangan digabung.
 - **Belajar SK:** SK02 BAIKI (5b v1.2, MENANG). PARAMETER tertangguh: jenis tekstur K9–K13 (SK06) dan peta warna K10 (SK07) milik langkah 6, tidak dijalankan kerana hitam putih sahaja.
 
 ## Catatan pembaikan aturan model

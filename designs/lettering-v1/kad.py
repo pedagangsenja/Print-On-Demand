@@ -331,7 +331,7 @@ KAD = {
     # baharu, hitam putih sahaja, semua model CPU). Belum diluluskan pengguna (1d); jana dibenarkan pengguna.
     "K9": dict(
         nama="Campuran caps inline + skrip berus + reben label + sinar (krim atas hijau gelap)", ref="IMG_5838",
-        snc="belum didaftar", versi="v1.0 (27 Nov 2026; belum diluluskan pengguna)",
+        snc="belum didaftar", versi="v1.0 (27 Nov 2026; diluluskan pengguna 28 Nov 2026)",
         kelas="F1", dakwat=3, ruang_tepi=9, tekstur="tiada (vektor rata)", julat="4-6 perkataan",
         warna=dict(latar=("hijau gelap", "#123a38", "black"),
                    dakwat=[("mint", "#8fc8c0", "white"), ("kuning cair", "#f2e4a0", "white"), ("krim", "#f4f1e2", "white")]),
@@ -358,7 +358,7 @@ KAD = {
             ("Satu dakwat putih atas hitam", False)]),
     "K10": dict(
         nama="Senarai sans pekat bertindan, setiap baris sama lebar (pelbagai warna atas hitam)", ref="IMG_5817",
-        snc="belum didaftar", versi="v1.0 (27 Nov 2026; belum diluluskan pengguna)",
+        snc="belum didaftar", versi="v1.0 (27 Nov 2026; diluluskan pengguna 28 Nov 2026)",
         kelas="F1", dakwat=4, ruang_tepi=9, tekstur="tiada (vektor rata)", julat="5-8 perkataan, satu idea setiap baris",
         warna=dict(latar=("hitam", "#151515", "black"),
                    dakwat=[("putih", "#f6f6f6", "white"), ("biru keluli", "#6a9ab4", "white"),
@@ -386,7 +386,7 @@ KAD = {
             ("Satu dakwat putih atas hitam (warna oleh skrip)", False)]),
     "K11": dict(
         nama="Huruf tangan pelik tebal bertaut + bintik latar (oren-merah jambu atas merah wain)", ref="IMG_5819",
-        snc="belum didaftar", versi="v1.0 (27 Nov 2026; belum diluluskan pengguna)",
+        snc="belum didaftar", versi="v1.0 (27 Nov 2026; diluluskan pengguna 28 Nov 2026)",
         kelas="F2", dakwat=2, ruang_tepi=9, tekstur="kapur kering + percikan latar", julat="4-8 perkataan",
         warna=dict(latar=("merah wain", "#420a22", "black"),
                    dakwat=[("oren", "#f7a23a", "white"), ("merah jambu", "#f4527a", "white")]),
@@ -413,7 +413,7 @@ KAD = {
             ("Satu dakwat putih atas hitam", False)]),
     "K12": dict(
         nama="Huruf belon kartun tebal + kilat + titik percikan (kuning, garis biru gelap)", ref="IMG_5745",
-        snc="belum didaftar", versi="v1.0 (27 Nov 2026; belum diluluskan pengguna)",
+        snc="belum didaftar", versi="v1.0 (27 Nov 2026; diluluskan pengguna 28 Nov 2026)",
         kelas="F1", dakwat=3, ruang_tepi=7, tekstur="tiada (vektor rata)", julat="2-5 perkataan",
         warna=dict(latar=("putih pudar", "#fcfbf7", "black"),
                    dakwat=[("kuning", "#f4b744", "white"), ("biru gelap", "#163444", "white"), ("oren", "#e9874a", "white")]),
@@ -440,7 +440,7 @@ KAD = {
             ("Satu dakwat putih atas hitam", False)]),
     "K13": dict(
         nama="Huruf cop lusuh dalam bingkai terbuka + anak panah (hijau gelap atas biru air)", ref="IMG_5743",
-        snc="belum didaftar", versi="v1.0 (27 Nov 2026; belum diluluskan pengguna)",
+        snc="belum didaftar", versi="v1.0 (27 Nov 2026; diluluskan pengguna 28 Nov 2026)",
         kelas="F2", dakwat=1, ruang_tepi=15, tekstur="cop getah lusuh + butir kertas", julat="2-4 perkataan",
         warna=dict(latar=("biru air", "#c4f2f2", "black"), dakwat=[("hijau gelap", "#06403f", "white")]),
         medium="Rubber stamp lettering quote poster, portrait.",
