@@ -113,3 +113,9 @@ final/v12-cpu-k9k13/zturbo_K13S_s42/18x24_preview.jpg 072469e7a80705f7971171ec03
 final/v12-cpu-k9k13/zturbo_K13S_s7/18x24_preview.jpg 32cc74140939f2ea7071f783be20d291
 final/v12-cpu-k9k13/zturbo_K9R_s42/18x24_preview.jpg 9538b6031d60d80b29869d4f9dbdee9b
 final/v12-cpu-k9k13/zturbo_K9R_s7/18x24_preview.jpg 8a94f16cb093bc8fdb7e0221f88a189d
+raw/v12-cpu-k9k13-p1/klein3/K10Q_s42.png f1300e9bc632d4ecbbf830e548669e08
+raw/v12-cpu-k9k13-p1/klein3/K10Q_s7.png 49489e0c0ff89c70c582d645416d4fa7
+raw/v12-cpu-k9k13-p1/klein3/K10Q_s123.png 6fcd1b340cc19371047dede6e64532aa
+raw/v12-cpu-k9k13-p1/klein3/K13S_s42.png e6b89b093f58cbc5a3bb68727fb8d9fa
+raw/v12-cpu-k9k13-p1/klein3/K13S_s7.png 66b1852921adf5e675e1a383065abb52
+raw/v12-cpu-k9k13-p1/klein3/K13S_s123.png a6f7dd8c0e4fa077b35b07eeae7bf69d
