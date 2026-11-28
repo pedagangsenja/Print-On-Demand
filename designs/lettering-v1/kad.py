@@ -407,7 +407,7 @@ KAD = {
             ("Ruang tepi sederhana", False),
             ("Hanya putih atas hitam", False)]),
     "K12": dict(
-        nama="Huruf tangan gemuk melantun + kilat dalam huruf (hitam atas putih)", ref="IMG_5762", versi="v1.0 (27 Nov 2026; dibuat Claude daripada gambar; diluluskan pengguna 27 Nov 2026)",
+        nama="Huruf tangan gemuk melantun + kilat dalam huruf (hitam atas putih)", ref="IMG_5762", versi="v1.1 (28 Nov 2026: ciri bertaut bukan teras lagi, keputusan pengguna; v1.0 27 Nov 2026 dibuat Claude daripada gambar, diluluskan pengguna)",
         kelas="F1", dakwat=1, ruang_tepi=18, tekstur="tiada (rata)", julat="3-5 perkataan",
         warna=dict(latar=("putih", "#fcfcfc", "white"), dakwat=[("hitam", "#1d1c1c", "black")]),
         medium="Hand-lettered quote poster, portrait.",
@@ -425,7 +425,7 @@ KAD = {
         jangan_salin=["ayat Expect nothing appreciate everything", "pecahan EVERY / THING"],
         qc=[("Huruf tangan gemuk, garis dasar melantun", True),
             ("Kilat kecil di dalam strok huruf", True),
-            ("Huruf antara baris bersentuh / bertaut", True),
+            ("Huruf antara baris bersentuh / bertaut", False),  # K12 v1.1: bukan teras lagi (keputusan pengguna 28 Nov 2026; tiada model CPU berjaya)
             ("Garis sengkang pendek di sisi blok", False),
             ("Perkataan panjang mengisi lebar blok", False),
             ("Tiada condong", False),
