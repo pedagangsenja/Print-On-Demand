@@ -1,9 +1,12 @@
 {
  "versi": "s1 (27 Nov 2026)",
  "tarikh": "2026-11-28",
- "baris": 700,
- "imej": 119,
+ "baris": 3400,
+ "imej": 523,
  "kad_dipakai": [
+  "K10",
+  "K11",
+  "K12",
   "K2",
   "K20",
   "K21",
@@ -13,7 +16,8 @@
   "K4",
   "K6",
   "K7",
-  "K8"
+  "K8",
+  "K9"
  ],
  "suka": 0,
  "sk": {
@@ -22,23 +26,39 @@
    "nama": "condong",
    "fail": "SK01_condong.py",
    "langkah": "5b",
-   "versi": "5b v1.1",
+   "versi": "5b v1.2",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 39,
-     "lulus": 36,
-     "cacat": 3,
+     "imej": 74,
+     "lulus": 68,
+     "cacat": 6,
      "input_rosak": 0,
-     "belum": 3,
+     "belum": 4,
+     "tolak": 0
+    },
+    "5b v1.2": {
+     "imej": 16,
+     "lulus": 15,
+     "cacat": 1,
+     "input_rosak": 0,
+     "belum": 1,
+     "tolak": 0
+    },
+    "5b v1.3 (28 Nov 2026)": {
+     "imej": 9,
+     "lulus": 9,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
      "tolak": 0
     }
    },
    "semasa": {
-    "imej": 39,
-    "lulus": 36,
-    "cacat": 3,
+    "imej": 16,
+    "lulus": 15,
+    "cacat": 1,
     "input_rosak": 0,
-    "belum": 3,
+    "belum": 1,
     "tolak": 0
    },
    "berulang": [
@@ -46,25 +66,18 @@
      "kelas": "condong",
      "nama": "Sudut condong lain daripada kad",
      "imej": [
-      "v12-cpu-ref6/klein4b/K22c_s123",
-      "v12-cpu-ref6/zturbo/K22c_s123",
-      "v12-cpu-ref6/zturbo/K22c_s42"
+      "focused-allen:v12b-cpu/ernie/K9B_s7"
      ],
-     "n": 3,
+     "n": 1,
      "kalah": []
     }
    ],
    "calon": [],
-   "ubahan_dicuba": 0,
+   "ubahan_dicuba": 2,
    "tindakan": [
     {
      "jenis": "semak",
-     "teks": "Semak 3 imej (GAGAL / amaran belum disemak): v12-cpu-ref6/klein4b/K22c_s123, v12-cpu-ref6/zturbo/K22c_s123, v12-cpu-ref6/zturbo/K22c_s42. Lihat imej; tulis sk_semakan.jsonl (silap = kelemahan SK, betul = imej input rosak / amaran tidak merosakkan)"
-    },
-    {
-     "jenis": "baiki",
-     "kelas": "condong",
-     "teks": "BAIKI SK01 bagi cacat 'Sudut condong lain daripada kad' (3 imej: v12-cpu-ref6/klein4b/K22c_s123, v12-cpu-ref6/zturbo/K22c_s123, v12-cpu-ref6/zturbo/K22c_s42). Satu ubahan kod, versi naik, catat sk_ubahan.json (cuba), jalan semula pada imej yang sama"
+     "teks": "Semak 1 imej (GAGAL / amaran belum disemak): focused-allen:v12b-cpu/ernie/K9B_s7. Lihat imej; tulis sk_semakan.jsonl (silap = kelemahan SK, betul = imej input rosak / amaran tidak merosakkan)"
     }
    ]
   },
@@ -73,42 +86,48 @@
    "nama": "ruang tepi",
    "fail": "SK02_ruang_tepi.py",
    "langkah": "5b",
-   "versi": "5b v1.1",
+   "versi": "5b v1.2",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 75,
-     "lulus": 74,
-     "cacat": 1,
+     "imej": 275,
+     "lulus": 263,
+     "cacat": 12,
      "input_rosak": 0,
-     "belum": 1,
+     "belum": 7,
+     "tolak": 0
+    },
+    "5b v1.2": {
+     "imej": 149,
+     "lulus": 149,
+     "cacat": 0,
+     "input_rosak": 1,
+     "belum": 0,
+     "tolak": 0
+    },
+    "5b v1.3 (28 Nov 2026)": {
+     "imej": 21,
+     "lulus": 21,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
      "tolak": 0
     }
    },
    "semasa": {
-    "imej": 75,
-    "lulus": 74,
-    "cacat": 1,
-    "input_rosak": 0,
-    "belum": 1,
+    "imej": 149,
+    "lulus": 149,
+    "cacat": 0,
+    "input_rosak": 1,
+    "belum": 0,
     "tolak": 0
    },
-   "berulang": [
-    {
-     "kelas": "ruang_tepi",
-     "nama": "Ruang tepi lain daripada kad",
-     "imej": [
-      "v12-cpu-ref6/klein4b/K20a_s7"
-     ],
-     "n": 1,
-     "kalah": []
-    }
-   ],
+   "berulang": [],
    "calon": [],
-   "ubahan_dicuba": 0,
+   "ubahan_dicuba": 3,
    "tindakan": [
     {
-     "jenis": "semak",
-     "teks": "Semak 1 imej (GAGAL / amaran belum disemak): v12-cpu-ref6/klein4b/K20a_s7. Lihat imej; tulis sk_semakan.jsonl (silap = kelemahan SK, betul = imej input rosak / amaran tidak merosakkan)"
+     "jenis": "tiada",
+     "teks": "Tiada tindakan: tiada cacat berulang"
     }
    ]
   },
@@ -117,11 +136,27 @@
    "nama": "kedudukan",
    "fail": "SK03_kedudukan.py",
    "langkah": "5b",
-   "versi": "5b v1.1",
+   "versi": "5b v1.2",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 20,
-     "lulus": 20,
+     "imej": 65,
+     "lulus": 65,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    },
+    "5b v1.2": {
+     "imej": 32,
+     "lulus": 32,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    },
+    "5b v1.3 (28 Nov 2026)": {
+     "imej": 0,
+     "lulus": 0,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -129,8 +164,8 @@
     }
    },
    "semasa": {
-    "imej": 20,
-    "lulus": 20,
+    "imej": 32,
+    "lulus": 32,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -151,11 +186,27 @@
    "nama": "hitam putih",
    "fail": "SK04_hitam_putih.py",
    "langkah": "5b",
-   "versi": "5b v1.1",
+   "versi": "5b v1.2",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 96,
-     "lulus": 96,
+     "imej": 337,
+     "lulus": 336,
+     "cacat": 1,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    },
+    "5b v1.2": {
+     "imej": 169,
+     "lulus": 169,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    },
+    "5b v1.3 (28 Nov 2026)": {
+     "imej": 28,
+     "lulus": 28,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -163,8 +214,8 @@
     }
    },
    "semasa": {
-    "imej": 96,
-    "lulus": 96,
+    "imej": 169,
+    "lulus": 169,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -237,17 +288,25 @@
      "tolak": 0
     },
     "SK06 v1.3 (27 Nov 2026)": {
-     "imej": 15,
-     "lulus": 13,
+     "imej": 40,
+     "lulus": 38,
      "cacat": 2,
      "input_rosak": 0,
      "belum": 0,
      "tolak": 0
     },
     "SK06 v1.4 (27 Nov 2026)": {
-     "imej": 68,
-     "lulus": 64,
+     "imej": 153,
+     "lulus": 149,
      "cacat": 4,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    },
+    "SK06 v1.5 (27 Nov 2026)": {
+     "imej": 5,
+     "lulus": 5,
+     "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
      "tolak": 0
@@ -259,11 +318,19 @@
      "input_rosak": 0,
      "belum": 0,
      "tolak": 0
+    },
+    "SK06 v1.6 (27 Nov 2026)": {
+     "imej": 2,
+     "lulus": 2,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
     }
    },
    "semasa": {
-    "imej": 68,
-    "lulus": 64,
+    "imej": 153,
+    "lulus": 149,
     "cacat": 4,
     "input_rosak": 0,
     "belum": 0,
@@ -286,7 +353,7 @@
     }
    ],
    "calon": [],
-   "ubahan_dicuba": 5,
+   "ubahan_dicuba": 22,
    "tindakan": [
     {
      "jenis": "baiki",
@@ -316,17 +383,25 @@
      "tolak": 0
     },
     "SK07 v1.1 (27 Nov 2026)": {
-     "imej": 96,
-     "lulus": 96,
+     "imej": 158,
+     "lulus": 158,
      "cacat": 0,
      "input_rosak": 3,
+     "belum": 0,
+     "tolak": 0
+    },
+    "SK07 v1.3 (27 Nov 2026)": {
+     "imej": 53,
+     "lulus": 53,
+     "cacat": 0,
+     "input_rosak": 0,
      "belum": 0,
      "tolak": 0
     }
    },
    "semasa": {
-    "imej": 96,
-    "lulus": 96,
+    "imej": 158,
+    "lulus": 158,
     "cacat": 0,
     "input_rosak": 3,
     "belum": 0,
@@ -334,7 +409,7 @@
    },
    "berulang": [],
    "calon": [],
-   "ubahan_dicuba": 1,
+   "ubahan_dicuba": 7,
    "tindakan": [
     {
      "jenis": "tiada",

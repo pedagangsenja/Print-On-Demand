@@ -121,6 +121,8 @@ def muat_qc(L):
         if isinstance(d, list):
             batch = akar.tanda(t, stem.replace("_", "-"))
             for r in d:
+                if not isinstance(r, dict) or "_s" not in str(r.get("id", "")):  # bukan rekod QC imej (cth. laporan decode)
+                    continue
                 i, s = r["id"].rsplit("_s", 1)
                 rows.append(dict(batch=batch, model=r["model"], id=i, seed=int(s), ok=bool(r.get("ejaan")),
                                  sebab=r.get("sebab", ""), blob=""))

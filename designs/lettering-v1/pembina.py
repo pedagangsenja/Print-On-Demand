@@ -25,8 +25,8 @@ VERSI = "v1.2-p1"
 DAFTAR = {
     "klein4b": dict(nama="FLUX.2 klein 4B", bahagian="3.4", rev="r3", tarikh="2026-11-28",
                     status="diuji: K3H, CPU, 3 seed; r2 hiasan_kedudukan (K3K); r3 dua_kata_sebaris: K4q + K8G 2/6 -> 3/6", sumber="kad model BFL (rasmi); panduan BFL (lemah)"),
-    "zturbo": dict(nama="Z-Image Turbo", bahagian="3.5", rev="r2", tarikh="2026-11-27",
-                   status="diuji: K3H, CPU, 3 seed; r2 had_positif: K7M + K8G 0/4 -> 2/4", sumber="pasukan Z-Image di Hugging Face + pe.py (rasmi)"),
+    "zturbo": dict(nama="Z-Image Turbo", bahagian="3.5", rev="r1", tarikh="2026-11-28",
+                   status="diuji: K3H, CPU, 3 seed; had_positif (r2) dipulangkan 28 Nov: rekod gabungan KALAH", sumber="pasukan Z-Image di Hugging Face + pe.py (rasmi)"),
     "ernie": dict(nama="ERNIE-Image-Turbo", bahagian="3.6", rev="r2", tarikh="2026-11-28",
                   status="diuji: K3H, CPU, 3 seed; r2: K7M + K8G, CPU, 3 seed", sumber="dokumen diffusers + kad model (rasmi)"),
     "moss": dict(nama="MOSS-Image SFT + LoRA 8 langkah", bahagian="3.7", rev="r1", tarikh="2026-11-26",
@@ -174,10 +174,10 @@ def zturbo(m):
             t = f'Line {SATU[l["i"]]}{p} reads "{l["q"]}" in {frasa(l, lambda d: f" as line {SATU[d]}")}'
         s.append(t + (", and it is the tallest line of the poster." if l["tertinggi"] else "."))
     s += tambahan(b)
-    # r2 (27 Nov 2026, belajar 3.15, ubahan had_positif MENANG): had ditulis sebagai ayat positif
-    s.append(f"Every letter in the image belongs to these {SATU[m['nw'] - 1]} words, and each word appears once; "
-             f"the rest of the canvas is plain empty background. The image uses only pure white and pure black, "
-             f"{b['ada']}.")
+    # 28 Nov 2026: had_positif (r2) dipulangkan ke r1 selepas rekod semua sesi digabung (K7M + K8G + K9B: 1/10 -> 3/10
+    # tetapi kelas cacat baharu 'hiasan tambahan', jadi KALAH ikut 3.15).
+    s.append(f"The only text in the image is these {SATU[m['nw'] - 1]} words, each appearing once. The image uses "
+             f"only pure white and pure black, {b['ada']}.")
     return " ".join(s)
 
 

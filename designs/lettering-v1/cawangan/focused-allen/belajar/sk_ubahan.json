@@ -80,13 +80,13 @@
   "dari": "5b v1.1",
   "ke": "5b v1.2",
   "imej": [
-   "v12b-cpu/klein3/K10N_s7",
-   "v12b-cpu/moss/K10N_s42"
+   "v12c-cpu/klein3/K15T_s7",
+   "v12c-cpu/moss/K15T_s42"
   ],
   "keputusan": "menang",
   "tarikh": "2026-11-27",
   "nota": "Selepas SK04, ruang tepi diukur semula; jika masih di luar had, SK02 dijalankan sekali lagi pada imej asal dengan matriks gabungan (sebab: SK04 membersihkan doodle halus, kotak blok mengecil)",
-  "bukti": "55 imej lulus QC batch v12b-cpu: 5b lulus 52/55 -> 54/55; K10N 6/6 (v1.1 4/6); baki gagal = SK01 ernie K9B_s7 (kelas lain); tiada kelas cacat baharu. Bukti sederhana (ukuran skrip)"
+  "bukti": "55 imej lulus QC batch v12c-cpu: 5b lulus 52/55 -> 54/55; K15T 6/6 (v1.1 4/6); baki gagal = SK01 ernie K14R_s7 (kelas lain); tiada kelas cacat baharu. Bukti sederhana (ukuran skrip)"
  },
  {
   "sk": "SK06",
@@ -96,14 +96,14 @@
   "dari": "SK06 v1.3 (27 Nov 2026)",
   "ke": "SK06 v1.4 (27 Nov 2026)",
   "imej": [
-   "v12b-cpu/klein4b_K4F_s123_C003+C003",
-   "v12b-cpu/moss_K4F_s42_C003+C003"
+   "v12c-cpu/klein4b_K4F_s123_C003+C003",
+   "v12c-cpu/moss_K4F_s42_C003+C003"
   ],
   "keputusan": "menang",
   "tarikh": "2026-11-27",
   "nota": "Had komponen dakwat clean() 30 px -> 4 px (skala imej asal). Titik garis K4 = 8-30 px (dikira pada imej 5b)",
-  "bukti": "2/2 imej K4F: garis titik + bintik latar kembali (dilihat mata pada 18x24.png); 6 imej lain (K9B, K12Y, K10N, K11S) tiada hingar baharu dilihat. Bukti lemah (mata)",
-  "hasil": "final/v12b-cpu: 12 imej dijana semula dengan v1.4"
+  "bukti": "2/2 imej K4F: garis titik + bintik latar kembali (dilihat mata pada 18x24.png); 6 imej lain (K14R, K17O, K15T, K16S) tiada hingar baharu dilihat. Bukti lemah (mata)",
+  "hasil": "final/v12c-cpu: 12 imej dijana semula dengan v1.4"
  },
  {
   "sk": "SK06",
@@ -114,17 +114,17 @@
   "dari": "SK06 v1.4 (27 Nov 2026)",
   "ke": "SK06 v1.5 (27 Nov 2026)",
   "imej": [
-   "v12b-cpu/klein3_K11S_s42",
-   "v12b-cpu/zturbo_K11S_s42",
-   "v12b-cpu/klein3_K12Y_s7_C003+C003",
-   "v12b-cpu/klein4b_K12Y_s42_C003+C003",
-   "v12b-cpu/moss_K12Y_s123_C003+C003"
+   "v12c-cpu/klein3_K16S_s42",
+   "v12c-cpu/zturbo_K16S_s42",
+   "v12c-cpu/klein3_K17O_s7_C003+C003",
+   "v12c-cpu/klein4b_K17O_s42_C003+C003",
+   "v12c-cpu/moss_K17O_s123_C003+C003"
   ],
   "keputusan": "menang",
   "tarikh": "2026-11-27",
-  "nota": "K11 'lusuh cetakan saring' dan K12 'lusuh cop kering' dipadan ke jenis worn sedia ada (kuat 1.0)",
-  "bukti": "5 imej: amaran tekstur 5 -> 0; dakwat_sd hasil 0.0 -> 2.2-2.3 (IMG_5743 K12 4.44; IMG_5739 K11 34.2 tetapi dakwat biru berwarna, tidak setara). Dilihat mata: lusuh seperti cop. Tiada kelas baharu. Bukti lemah",
-  "hasil": "final/v12b-cpu: 5 imej dijana semula dengan v1.5"
+  "nota": "K16 'lusuh cetakan saring' dan K17 'lusuh cop kering' dipadan ke jenis worn sedia ada (kuat 1.0)",
+  "bukti": "5 imej: amaran tekstur 5 -> 0; dakwat_sd hasil 0.0 -> 2.2-2.3 (IMG_5743 K17 4.44; IMG_5739 K16 34.2 tetapi dakwat biru berwarna, tidak setara). Dilihat mata: lusuh seperti cop. Tiada kelas baharu. Bukti lemah",
+  "hasil": "final/v12c-cpu: 5 imej dijana semula dengan v1.5"
  },
  {
   "sk": "SK06",
@@ -135,12 +135,46 @@
   "dari": "SK06 v1.5 (27 Nov 2026)",
   "ke": "SK06 v1.6 (27 Nov 2026)",
   "imej": [
-   "v12b-cpu/ernie_K9B_s123_C003+C003",
-   "v12b-cpu/moss_K9B_s7_C003+C003"
+   "v12c-cpu/ernie_K14R_s123_C003+C003",
+   "v12c-cpu/moss_K14R_s7_C003+C003"
   ],
   "keputusan": "menang",
   "tarikh": "2026-11-27",
-  "nota": "Nota dalam kurungan pada teks tekstur kad diabaikan: K9 'tiada (vektor rata)' = tiada tekstur",
-  "bukti": "2 imej K9B: sama piksel (beza 0.0), amaran palsu 2 -> 0; IMG_5852 dakwat_sd 1.52 (rata). Bukti sederhana"
+  "nota": "Nota dalam kurungan pada teks tekstur kad diabaikan: K14 'tiada (vektor rata)' = tiada tekstur",
+  "bukti": "2 imej K14R: sama piksel (beza 0.0), amaran palsu 2 -> 0; IMG_5852 dakwat_sd 1.52 (rata). Bukti sederhana"
+ },
+ {
+  "sk": "SK01",
+  "ubahan": "ukur_semula",
+  "jenis": "baiki",
+  "medan": "betulkan.betulkan (langkah SK01)",
+  "kelas": "condong",
+  "dari": "5b v1.1",
+  "ke": "5b v1.2 (28 Nov 2026)",
+  "imej": [
+   "v12b-cpu/klein3/K9B_s123",
+   "v12c-uji-bentuk/ernie/K7M_s123"
+  ],
+  "keputusan": "menang",
+  "tarikh": "2026-11-28",
+  "nota": "Selepas SK01 memutar, blok diukur semula dan baki sudut dibetulkan, paling banyak 2 kali lagi. Sebab: ukuran sudut pertama boleh tersasar (skrip berswash; nilai di had julat SK05)",
+  "bukti": "2 imej: 0/2 -> 2/2 lulus semakan akhir (K9B 13.4 -> 15.2, rujukan 15.x; K7M 0.0 -> 13.6, rujukan 12.4); semakan mata: kedua-dua condong naik ke kanan. Bukti lemah",
+  "hasil": "betul/v12b-cpu/klein3/K9B_s123 dan betul/v12c-uji-bentuk/ernie/K7M_s123 dijana semula"
+ },
+ {
+  "sk": "SK01+SK02",
+  "ubahan": "gabung_cawangan",
+  "jenis": "gabung",
+  "kelas": "condong, ruang_tepi",
+  "dari": "5b v1.2 (dua cawangan)",
+  "ke": "5b v1.3 (28 Nov 2026)",
+  "imej": [
+   "v12c-cpu: 55 imej lulus QC",
+   "v12b-cpu: 48 imej lulus QC"
+  ],
+  "keputusan": "menang",
+  "tarikh": "2026-11-28",
+  "nota": "Gabungan SK01 ukur_semula (sleepy-edison) + SK02 ukur_semula_selepas_SK04 (focused-allen); kod tidak bercanggah",
+  "bukti": "Uji semula: v12c-cpu 55/55 (v1.2 SK02 sahaja 54/55; ERNIE K14R s7 condong kini lulus); v12b-cpu 47/48 (baki ERNIE K9B s7 condong 4.6 lawan 15.5 = sama seperti v1.1, imej input rosak, dijana semula oleh cawangan itu). Tiada kelas baharu"
  }
 ]

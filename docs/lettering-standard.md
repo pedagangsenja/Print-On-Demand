@@ -129,7 +129,7 @@ Dipakai untuk model tanpa aturan sendiri, dan sebagai pembanding dalam ujian kel
 - **Tetapan:** bf16 asal, 4 langkah, guidance 1.0, tiada penambah prompt.
 - **Cacat diketahui (r1):** garis percikan dilukis di dalam label pada 2/3 imej. Ubahan pertama untuk dicuba: nyatakan `in the black space to the left and to the right of the label`.
 
-### 3.5 Aturan Z-Image Turbo (rev r2: had positif, 27 Nov 2026)
+### 3.5 Aturan Z-Image Turbo (rev r1; had positif r2 dipulangkan 28 Nov 2026 selepas rekod semua sesi digabung)
 - **Sumber:** perbincangan rasmi pasukan Z-Image di Hugging Face dan templat penambah prompt mereka (`pe.py`): prompt panjang dan terperinci; teks tepat dalam petikan berganda; untuk poster, huraikan font dan susun atur; tiada negative prompt; had 512 token (rasmi). Julat 80–250 perkataan (pihak ketiga).
 - **Bentuk:** huraian objektif yang panjang, seperti kapsyen gambar. Ayat penyata ("The poster contains…", "Line two reads…"), bukan arahan ("make", "draw").
 - **Turutan ayat:**
@@ -735,6 +735,7 @@ Setiap ubahan aturan (3.4–3.10) direkod di sini, dan juga dalam `designs/lette
 
 | Tarikh | Model | Rev | Cacat dengan rangka am | Ubahan | Ejaan betul sebelum → selepas |
 |---|---|---|---|---|---|
+| 28 Nov 2026 | Z-Image Turbo | r2 → r1 | Titik / tanda rawak | `had_positif` dinilai semula atas rekod gabungan nifty-lovelace (K7M, K8G) + sleepy-edison (K9B): 1/10 → 3/10 tetapi kelas cacat baharu (hiasan tambahan) → KALAH, teks dipulangkan ke r1 | 1/10 → 3/10 |
 | 27 Nov 2026 | Z-Image Turbo | r1 → r2 | Titik / tanda rawak (K7M, K8G) | `had_positif` MENANG: ayat had akhir kini "Every letter in the image belongs to these N words, and each word appears once; the rest of the canvas is plain empty background" (ganti "The only text in the image is…") | G1+G2 0/4 → 2/4 (K7M 2/2 bersih; K8G masih 5 baris + bintik). Had: prompt K3L kini 254 perkataan (> 250), K3L tidak boleh dijana dengan Z-Image |
 | 27 Nov 2026 | klein 4B | r1 → r2 | Percikan di dalam label (K3K) | `hiasan_kedudukan`: hiasan sisi ditulis "placed outside the label, one group on its left and one group on its right". Mula-mula KALAH (lulus seri 3/3, tiada ♥); 28 Nov dinilai semula dengan belajar.py b1.2 (seri dipecah oleh cacat sasaran, keputusan pengguna): MENANG | 3/3 → 3/3; percikan di dalam label 3 → 0 |
 | 27 Nov 2026 | ERNIE Turbo | r1 | Tanda petikan rawak (K22c, K3K) | `had_positif` KALAH: tanda petikan hilang 2/2, tetapi K3K s7 dapat 'AFTER' berulang + hiasan tambahan | 0/2 → 1/2 (kelas baharu) |
@@ -751,6 +752,11 @@ Setiap ubahan aturan (3.4–3.10) direkod di sini, dan juga dalam `designs/lette
 | 27 Nov 2026 | ERNIE Turbo | r1 (tiada perubahan) | K11 × ayat N: tanda petikan pada 'BEGIN' (s7); kotak di tempat salah | Ayat had positif: "The only text in the image is these N words, each drawn once exactly as written between the quotes, without the quote marks". TIDAK berjaya (G1–G2), dibuang; kotak betul 3/3 (sebelum 0/3) | 2/3 → 2/3 |
 | 28 Nov 2026 | ERNIE Turbo | r1 (tiada perubahan) | K11 × ayat N: kotak di tempat salah (ujian pembaikan kotak, arahan pengguna) | Ayat had positif yang sama, diuji pada K11N + K12Y. TIDAK berjaya: kotak K11N 0/3 → 3/3 tetapi K12Y 3/3 → 0/3 (kotak 'GROWTH' jadi garis luar). Dibuang | 5/6 → 5/6 |
 | 28 Nov 2026 | ERNIE Turbo | r1 → r2 | K7 × ayat M, K8 × ayat G: huruf berus nipis / kering (6/6, imej lulus) | Blok I: "Every letter is drawn with a thick, heavy, fully filled stroke, never thin, scratchy or dry-brushed." MENANG: huruf tebal penuh 6/6; K8G latar bersih | lulus 6/6 → 6/6, bersih 0 → 6 |
+
+## Gabung sesi (28 Nov 2026, keputusan pengguna: satu sesi gabung)
+- Cawangan hab: `claude/nifty-lovelace-i32bdx`. Cawangan `sleepy-edison` digabung dengan git (kod + kad K9–K12 + ayat B V N Y; kad sesi ini K20–K23 + ayat a b c e f q; tiada kunci bertembung). `belajar.py` b1.3 = b1.1 sleepy-edison (pemecah seri bersih, rekod cawangan) + b1.2 sesi ini (cacat sasaran, pembanding prompt sama).
+- Cawangan lain (exciting-sagan, focused-allen, focused-faraday, lucid-galileo dan 5 lagi) digabung pada aras rekod sahaja (`gabung_cawangan.py`, `cawangan/<sesi>/`), kerana ID kad K9–K13 dan huruf ayat mereka bertembung. Kod mereka (pembina, SK) belum digabung.
+- Jadual dashboard `aturan_belajar` dan `sk_belajar` kini daripada rekod semua sesi (muat naik 28 Nov 2026, 08:55 UTC).
 
 ## Larian v1.2: enam gambar upload, ayat baharu (27 Nov 2026, arahan pengguna)
 - **28 Nov 2026:** kad K9–K12 sesi ini ditukar nama ke K20–K23, dan ayat A, B, C, E, F, Q ke huruf kecil a, b, c, e, f, q, kerana empat sesi lain memakai K9–K13 dan huruf ayat yang sama untuk gambar lain. Ujian AI Image Test sesi ini: U20 (dahulu U13).

@@ -282,5 +282,35 @@
   "selepas": "6/6, bersih 6",
   "keputusan": "menang",
   "nota": "Tambah ayat 'Every letter is drawn with a thick, heavy, fully filled stroke, never thin, scratchy or dry-brushed.' sebelum ayat had. Huruf berus nipis / kering hilang 6/6; K8G latar bersih (tiada tekstur kelabu), titik bulat ganti bintang. Ejaan kekal 6/6"
+ },
+ {
+  "tarikh": "2026-11-28",
+  "model": "zturbo",
+  "rev_dari": "r2",
+  "rev_ke": "r1",
+  "ubahan": "had_positif",
+  "kelas": [
+   "rawak"
+  ],
+  "design": "K7M, K8G, K9B",
+  "sebelum": "1/10, bersih 1 (cacat sasaran 8)",
+  "selepas": "3/10, bersih 3 (cacat sasaran 7)",
+  "keputusan": "kalah",
+  "nota": "Dinilai semula atas rekod gabungan nifty-lovelace (K7M, K8G: menang 0/4 -> 2/4) + sleepy-edison (K9B: kalah). Kelas cacat baharu hiasan_lebih -> KALAH; teks aturan dipulangkan ke r1."
+ },
+ {
+  "tarikh": "2026-11-28",
+  "model": "ernie",
+  "rev_dari": "r2",
+  "rev_ke": "r2",
+  "ubahan": "had_positif",
+  "kelas": [
+   "rawak"
+  ],
+  "design": "K11N, K22c, K3K",
+  "sebelum": "3/5",
+  "selepas": "3/5",
+  "keputusan": "kalah",
+  "nota": "Dinilai semula atas rekod gabungan (nifty-lovelace + sleepy-edison): kalah, sama seperti kedua-dua sesi."
  }
 ]
