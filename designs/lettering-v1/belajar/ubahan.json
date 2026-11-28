@@ -132,5 +132,95 @@
   "selepas": "9/9",
   "keputusan": "menang",
   "nota": "Ujian kelayakan 3.12 F: rangka am (raw/v12-cpu-am) 6/9, gagal K8G 3/3 ('KEEP GOING' tanpa jarak); aturan 3.8 (raw/v12-cpu) 9/9; CPU; teks aturan tidak berubah"
+ },
+ {
+  "tarikh": "2026-11-27",
+  "model": "zturbo",
+  "rev_dari": "r1",
+  "rev_ke": "r1",
+  "ubahan": "had_positif",
+  "kelas": [
+   "rawak"
+  ],
+  "design": "K9B",
+  "sebelum": "1/3",
+  "selepas": "1/3",
+  "keputusan": "kalah",
+  "nota": "Ayat had ditambah 'written exactly as quoted, character for character, with nothing added after any word'. Koma tambahan kekal (s7 'Daily,', s123 'Build,'); s7 garis tambahan. Dibuang"
+ },
+ {
+  "tarikh": "2026-11-27",
+  "model": "klein4b",
+  "rev_dari": "r1",
+  "rev_ke": "r1",
+  "ubahan": "huruf_besar",
+  "kelas": [
+   "ejaan"
+  ],
+  "design": "K9B, K12Y",
+  "sebelum": "0/6",
+  "selepas": "-",
+  "keputusan": "tidak berkenaan",
+  "nota": "K9 minta skrip bersambung (huruf besar mengubah design); 'HUMBLE.' K12Y sudah huruf besar (cacatnya noktah hilang)"
+ },
+ {
+  "tarikh": "2026-11-27",
+  "model": "klein4b",
+  "rev_dari": "r1",
+  "rev_ke": "r1",
+  "ubahan": "tukar_peranan",
+  "kelas": [
+   "ejaan"
+  ],
+  "design": "K9B, K12Y",
+  "sebelum": "0/6",
+  "selepas": "-",
+  "keputusan": "tidak berkenaan",
+  "nota": "Tukar peranan mengubah design kad; FLUX 3 Klein dan MOSS lulus design sama, jadi tukar model (kitaran QC 7)"
+ },
+ {
+  "tarikh": "2026-11-27",
+  "model": "ernie",
+  "rev_dari": "r1",
+  "rev_ke": "r1",
+  "ubahan": "had_positif",
+  "kelas": [
+   "rawak"
+  ],
+  "design": "K11N",
+  "sebelum": "2/3",
+  "selepas": "2/3",
+  "keputusan": "kalah",
+  "nota": "Ayat had 'Only these N words, no other text' ditukar kepada 'The only text in the image is these N words, each drawn once exactly as written between the quotes, without the quote marks'. Tanda petikan pada 'BEGIN' kekal (s7). Catatan: kotak di tempat betul ('SHAKY.' sahaja) 3/3, sebelum 0/3 (bukti lemah; PE berubah setiap kali). Dibuang ikut 3.15"
+ },
+ {
+  "tarikh": "2026-11-28",
+  "model": "ernie",
+  "rev_dari": "r1",
+  "rev_ke": "r1",
+  "ubahan": "kotak_positif",
+  "kelas": [
+   "luar_label"
+  ],
+  "design": "K11N, K12Y",
+  "sebelum": "5/6",
+  "selepas": "5/6",
+  "keputusan": "kalah",
+  "nota": "Ayat had positif diuji semula sebagai pembaikan kotak (arahan pengguna 28 Nov). Kotak betul: K11N 0/3 -> 3/3 (sama seperti 27 Nov), tetapi K12Y 3/3 -> 0/3 (kotak 'GROWTH' jadi garis luar sahaja). Tanda petikan 'BEGIN' s7 kekal. Dibuang"
+ },
+ {
+  "tarikh": "2026-11-28",
+  "model": "ernie",
+  "rev_dari": "r1",
+  "rev_ke": "r2",
+  "ubahan": "frasa_bentuk",
+  "kelas": [
+   "bentuk"
+  ],
+  "design": "K7M, K8G",
+  "sebelum": "6/6, bersih 0",
+  "selepas": "6/6, bersih 6",
+  "keputusan": "menang",
+  "nota": "Tambah ayat 'Every letter is drawn with a thick, heavy, fully filled stroke, never thin, scratchy or dry-brushed.' sebelum ayat had. Huruf berus nipis / kering hilang 6/6; K8G latar bersih (tiada tekstur kelabu), titik bulat ganti bintang. Ejaan kekal 6/6"
  }
 ]

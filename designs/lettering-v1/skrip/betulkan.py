@@ -22,7 +22,7 @@ import SK02_ruang_tepi
 import SK03_kedudukan
 import SK04_hitam_putih
 
-VERSI = "5b v1.2"
+VERSI = "5b v1.3 (28 Nov 2026)"  # v1.2 SK01 ukur_semula (sleepy-edison) + v1.2 SK02 ukur_semula_selepas_SK04 (focused-allen)
 
 
 def betulkan(rgb, ruj, had=asas.HAD):
@@ -33,6 +33,15 @@ def betulkan(rgb, ruj, had=asas.HAD):
         if m is not None:
             M = m @ M
             semasa = asas.lukis(rgb, M, halus=False)
+            # 5b v1.2 (28 Nov 2026, Belajar SK: BAIKI SK01): ukur semula selepas putar dan betulkan baki, paling banyak
+            # 2 kali lagi. Ukuran pertama boleh tersasar (K7M s123 15.5 di had julat; klein3 K9B s123 12.1 -> 13.4).
+            for _ in range(2 if sk is SK01_condong else 0):
+                m2, c2 = sk.matriks(asas.ukur(semasa), ruj, had)
+                if m2 is None:
+                    break
+                M = m2 @ M
+                semasa = asas.lukis(rgb, M, halus=False)
+                cat.setdefault("ulang_putar", []).append(c2["putar_darjah"])
     ubah = any(t["jalan"] for t in tindakan.values())
     hasil = asas.lukis(rgb, M) if ubah else rgb
     hasil, tindakan["SK04"] = SK04_hitam_putih.betul(hasil, ruj, had, selepas_ubah=ubah)

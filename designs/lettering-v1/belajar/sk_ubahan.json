@@ -142,5 +142,39 @@
   "tarikh": "2026-11-27",
   "nota": "Nota dalam kurungan pada teks tekstur kad diabaikan: K14 'tiada (vektor rata)' = tiada tekstur",
   "bukti": "2 imej K14R: sama piksel (beza 0.0), amaran palsu 2 -> 0; IMG_5852 dakwat_sd 1.52 (rata). Bukti sederhana"
+ },
+ {
+  "sk": "SK01",
+  "ubahan": "ukur_semula",
+  "jenis": "baiki",
+  "medan": "betulkan.betulkan (langkah SK01)",
+  "kelas": "condong",
+  "dari": "5b v1.1",
+  "ke": "5b v1.2 (28 Nov 2026)",
+  "imej": [
+   "v12b-cpu/klein3/K9B_s123",
+   "v12c-uji-bentuk/ernie/K7M_s123"
+  ],
+  "keputusan": "menang",
+  "tarikh": "2026-11-28",
+  "nota": "Selepas SK01 memutar, blok diukur semula dan baki sudut dibetulkan, paling banyak 2 kali lagi. Sebab: ukuran sudut pertama boleh tersasar (skrip berswash; nilai di had julat SK05)",
+  "bukti": "2 imej: 0/2 -> 2/2 lulus semakan akhir (K9B 13.4 -> 15.2, rujukan 15.x; K7M 0.0 -> 13.6, rujukan 12.4); semakan mata: kedua-dua condong naik ke kanan. Bukti lemah",
+  "hasil": "betul/v12b-cpu/klein3/K9B_s123 dan betul/v12c-uji-bentuk/ernie/K7M_s123 dijana semula"
+ },
+ {
+  "sk": "SK01+SK02",
+  "ubahan": "gabung_cawangan",
+  "jenis": "gabung",
+  "kelas": "condong, ruang_tepi",
+  "dari": "5b v1.2 (dua cawangan)",
+  "ke": "5b v1.3 (28 Nov 2026)",
+  "imej": [
+   "v12c-cpu: 55 imej lulus QC",
+   "v12b-cpu: 48 imej lulus QC"
+  ],
+  "keputusan": "menang",
+  "tarikh": "2026-11-28",
+  "nota": "Gabungan SK01 ukur_semula (sleepy-edison) + SK02 ukur_semula_selepas_SK04 (focused-allen); kod tidak bercanggah",
+  "bukti": "Uji semula: v12c-cpu 55/55 (v1.2 SK02 sahaja 54/55; ERNIE K14R s7 condong kini lulus); v12b-cpu 47/48 (baki ERNIE K9B s7 condong 4.6 lawan 15.5 = sama seperti v1.1, imej input rosak, dijana semula oleh cawangan itu). Tiada kelas baharu"
  }
 ]

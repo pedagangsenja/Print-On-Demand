@@ -61,8 +61,8 @@ KELAS = {
     "ditolak": ("Ditolak pengguna tanpa sebab", r"^dipadam|^ditolak", []),
 }
 POLA = {k: re.compile(v[1], re.I) for k, v in KELAS.items()}
-# Bukan kerja prompt: cacat milik skrip SK (5b / langkah 6); senarai kelas di belajar_sk.KELAS_SK (b1.1: diselaraskan)
-BUKAN_PROMPT = re.compile(r"condong|ruang tepi|atas tengah|kelabu|lorekan|latar tidak hitam|" + belajar_sk.POLA_SK.pattern, re.I)
+# Bukan kerja prompt: cacat milik skrip SK (5b / langkah 6), dan cacat akibat pepijat kod yang sudah dibaiki (27 Nov 2026); senarai kelas di belajar_sk.KELAS_SK (b1.1: diselaraskan)
+BUKAN_PROMPT = re.compile(r"condong|ruang tepi|atas tengah|kelabu|lorekan|latar tidak hitam|pepijat kod|" + belajar_sk.POLA_SK.pattern, re.I)
 HABIS = "Pilihan ubahan habis: tukar ke model seterusnya ikut jadual model × gaya, kemudian pendekkan ayat, kemudian lapor kepada pengguna"
 
 
@@ -202,7 +202,10 @@ def stat(rows):
 
 
 def skor(rows):
-    return (sum(r["lulus"] for r in rows), sum(r["suka"] for r in rows))
+    # (lulus, ♥, bersih). Bersih = lulus tanpa kelas cacat prompt; pemecah seri supaya ubahan bagi cacat yang tidak
+    # menggagalkan imej (cth. bentuk huruf, "imej lulus; ciri gaya kad") boleh menang (pembaikan 28 Nov 2026).
+    return (sum(r["lulus"] for r in rows), sum(r["suka"] for r in rows),
+            sum(r["lulus"] and not r["kelas"] for r in rows))
 
 
 def banding(a, b):
@@ -215,7 +218,7 @@ def banding(a, b):
 
 
 def nisbah(s, n):
-    return f"{s[0]}/{n}" + (f" (♥ {s[1]})" if s[1] else "")
+    return f"{s[0]}/{n}" + (f" (♥ {s[1]})" if s[1] else "") + f", bersih {s[2]}"
 
 
 def ulasan(model, rows, ubahan):

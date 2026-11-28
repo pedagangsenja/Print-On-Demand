@@ -27,8 +27,8 @@ DAFTAR = {
                     status="diuji: K3H, CPU, 3 seed", sumber="kad model BFL (rasmi); panduan BFL (lemah)"),
     "zturbo": dict(nama="Z-Image Turbo", bahagian="3.5", rev="r1", tarikh="2026-11-26",
                    status="diuji: K3H, CPU, 3 seed", sumber="pasukan Z-Image di Hugging Face + pe.py (rasmi)"),
-    "ernie": dict(nama="ERNIE-Image-Turbo", bahagian="3.6", rev="r1", tarikh="2026-11-26",
-                  status="diuji: K3H, CPU, 3 seed", sumber="dokumen diffusers + kad model (rasmi)"),
+    "ernie": dict(nama="ERNIE-Image-Turbo", bahagian="3.6", rev="r2", tarikh="2026-11-28",
+                  status="diuji: K3H, CPU, 3 seed; r2: K7M + K8G, CPU, 3 seed", sumber="dokumen diffusers + kad model (rasmi)"),
     "moss": dict(nama="MOSS-Image SFT + LoRA 8 langkah", bahagian="3.7", rev="r1", tarikh="2026-11-26",
                  status="diuji: K3H, CPU, 3 seed", sumber="kad model + panduan MOSS (rasmi); kad LoRA (pihak ketiga)"),
     "klein3": dict(nama="FLUX 3 Image Klein", bahagian="3.8", rev="r1", tarikh="2026-11-27",
@@ -43,9 +43,9 @@ MODEL = list(REV)
 W, H = 768, 1024
 # Ubahan CALON kitaran QC (langkah 5): hanya hidup bila dinamakan dalam PEMBINA_UJI (dipisah koma). Ubahan yang
 # berjaya ditulis balik ke aturan (rev naik) dan dibuang dari sini; yang gagal dicatat dalam standard dan dibuang.
-# Calon semasa (27 Nov 2026, TINDAKAN [cuba] belajar.py selepas larian v12c-cpu): zturbo_had_positif, klein4b_hiasan_kedudukan,
-# klein4b_cara_baris (selepas QC klein4b: BRILLIANT hilang huruf I 2/3).
-# (26 Nov 2026: 'zturbo_satu_baris' diuji pada K8G, tidak berjaya, dibuang.)
+# Calon semasa (28 Nov 2026, gabungan cawangan focused-allen + sleepy-edison): klein4b_hiasan_kedudukan, klein4b_cara_baris
+# (larian v12c-cpu; QC klein4b: anak panah rosak, BRILLIANT hilang huruf I 2/3; diluluskan pengguna untuk larian seterusnya).
+# ('ernie_frasa_bentuk' 28 Nov: MENANG, ditulis ke aturan ERNIE r2.) ('ernie_kotak_positif' 28 Nov: K11N kotak 0/3 -> 3/3 tetapi K12Y 3/3 -> 0/3, kalah, dibuang.) (27 Nov 2026: 'zturbo_had_positif' pada K9B 1/3 -> 1/3 dan 'ernie_had_positif' pada K11N 2/3 -> 2/3, kalah, dibuang.) (26 Nov 2026: 'zturbo_satu_baris' diuji pada K8G, tidak berjaya, dibuang.)
 # Nama calon = <model>_<id pilihan> daripada belajar.py (KELAS), cth. zturbo_had_positif; belajar.py memutuskan menang / kalah (3.15).
 UJI = {u for u in os.environ.get("PEMBINA_UJI", "").split(",") if u}
 SATU = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"]
@@ -176,12 +176,8 @@ def zturbo(m):
             t = f'Line {SATU[l["i"]]}{p} reads "{l["q"]}" in {frasa(l, lambda d: f" as line {SATU[d]}")}'
         s.append(t + (", and it is the tallest line of the poster." if l["tertinggi"] else "."))
     s += tambahan(b)
-    if "zturbo_had_positif" in UJI:  # calon: had sebagai ayat positif sahaja, tanpa perkataan berisiko
-        s.append(f"Every letter in the image belongs to the {SATU[m['nw'] - 1]} quoted words, each written once, and "
-                 f"everywhere else is the empty {latar(b, 'surface')}. Pure white on pure black.")
-    else:
-        s.append(f"The only text in the image is these {SATU[m['nw'] - 1]} words, each appearing once. The image uses "
-                 f"only pure white and pure black, {b['ada']}.")
+    s.append(f"The only text in the image is these {SATU[m['nw'] - 1]} words, each appearing once. The image uses "
+             f"only pure white and pure black, {b['ada']}.")
     return " ".join(s)
 
 
@@ -202,6 +198,8 @@ def ernie(m):
          f"{cap(SATU[m['n'] - 1])} stacked lines in {b['bentuk']} in the center" +
          (f" that {b['condong']}" if b.get("condong") else "") + ": " + "; ".join(butir) + "."]
     s += tambahan(b)
+    # r2 (28 Nov 2026, 3.15 menang: K7M + K8G bersih 0/6 -> 6/6, lulus 6/6 -> 6/6): ayat ketebalan huruf (blok I).
+    s.append("Every letter is drawn with a thick, heavy, fully filled stroke, never thin, scratchy or dry-brushed.")
     s.append(f"Only these {SATU[m['nw'] - 1]} words, no other text, pure black and white, "
              f"{', '.join('no ' + x for x in b['tiada'])}, {b['gaya']} style, {b['margin']}.")
     return " ".join(s)
@@ -553,6 +551,7 @@ LATIN = re.compile(r"[A-Za-z][A-Za-z' ]*[A-Za-z]|[A-Za-z]")
 def semak_pe(hasil, kid, aid):
     """3.6: semakan pada hasil PE ERNIE. Setiap perkataan ada dan tepat; turutan sama; tiada perkataan Latin lain dalam petikan."""
     spec, err, mula = bahan(kid, aid)["petikan"], [], -1
+    tanpa_tanda = {re.sub(r"[.,!?;:]+$", "", q) for q in spec}
     for q in spec:
         i = hasil.find(q)
         if i < 0:
@@ -562,7 +561,7 @@ def semak_pe(hasil, kid, aid):
         mula = max(mula, i)
     for kump in PETIK_PE.findall(hasil):
         for kata in LATIN.findall("".join(kump)):
-            if kata.strip() not in spec:
+            if kata.strip() not in spec and kata.strip() not in tanpa_tanda:  # 'SHAKY' bagi 'SHAKY.' = perkataan sama
                 err.append(f"PE: perkataan Latin lain dalam petikan: {kata.strip()!r}")
     return err
 
