@@ -1,5 +1,5 @@
 {
- "versi": "SK09 v1.0",
+ "versi": "SK09 v1.1",
  "fail": "IMG_5810.jpeg",
  "sha1": "67b92924234b",
  "tarikh": "2026-11-28",
@@ -9,7 +9,9 @@
   "h": 1308,
   "nisbah": 0.563
  },
- "amaran": [],
+ "amaran": [
+  "lettering bertaut: medan 'baris' hanya anggaran; guna kumpulan 'seluruh' dan medan 'mata'"
+ ],
  "susunan": {
   "condong_darjah": 14.8,
   "kotak_blok": [
@@ -30,6 +32,7 @@
   "nisbah_blok": 0.697,
   "liputan_dakwat_pct": 20.6,
   "isian_blok_pct": 39.0,
+  "jenis_susunan": "lettering bertaut",
   "bil_baris": 3,
   "penjajaran": "tengah",
   "serakan_penjajaran_pct": 6.9,
@@ -40,6 +43,23 @@
   "hierarki_nisbah": 2.75,
   "baris_tertinggi": 1,
   "ambang_dakwat": 32.1
+ },
+ "seluruh": {
+  "tebal_strok_px": 39.6,
+  "kontras_strok": 1.71,
+  "strok_nipis_pct": 10.0,
+  "condong_huruf_darjah": 32.5,
+  "komponen": 5,
+  "komponen_kecil": 1,
+  "kongsi_komponen_terbesar": 0.49,
+  "gelung": 6,
+  "bentuk_blok": "bujur / membulat",
+  "hull_per_kotak": 0.73,
+  "kepadatan_blok_pct": 49.2,
+  "tepi_kasar_pct": 24.1,
+  "bil_huruf": 12,
+  "indeks_tebal": 0.308,
+  "gelung_setiap_huruf": 0.5
  },
  "baris": [
   {

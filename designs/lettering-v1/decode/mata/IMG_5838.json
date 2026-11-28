@@ -1,0 +1,24 @@
+{
+ "nama_gaya": "Campuran: huruf besar berhias garis dalam + skrip tebal + reben",
+ "teks_rujukan": [
+  "CHOOSE",
+  "People",
+  "WHO",
+  "CHOOSE",
+  "YOU"
+ ],
+ "kelas_huruf": "baris 1 sans huruf besar dengan garis dan titik di dalam strok; baris 2 skrip tebal; baris 4 huruf besar garis berkembar (inline); kata kecil dalam reben",
+ "susunan": "lima baris tengah, lebar hampir sama; ekor 'S' besar melingkar keluar",
+ "hiasan": [
+  "sinaran garis di atas",
+  "reben untuk 'WHO'",
+  "label melengkung untuk 'YOU'",
+  "garis kecil di kiri dan kanan"
+ ],
+ "jangan_salin": [
+  "ayat asal",
+  "susun atur tepat",
+  "tandatangan / logo jika ada"
+ ],
+ "nota": "Tiga warna dakwat; dalam v1.2 semuanya putih."
+}

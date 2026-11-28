@@ -1,4 +1,9 @@
-"""SK09 Decode (Standard Lettering v1.2, langkah 1: decode gambar upload). Versi 1.0, 28 Nov 2026.
+"""SK09 Decode (Standard Lettering v1.2, langkah 1: decode gambar upload). Versi 1.1, 28 Nov 2026.
+v1.1: design LETTERING (huruf bertaut, baris bertindih, ekor huruf merentas baris). Ujian pada 12 gambar lettering:
+      pecahan baris betul hanya pada sebahagian, dan gagal pada 3 (seluruh blok jadi satu baris). Jadi ditambah:
+      (1) kumpulan 'seluruh' = ciri huruf diukur pada SELURUH blok, tidak bergantung pada pecahan baris;
+      (2) 'jenis_susunan' = "baris lurus" atau "lettering bertaut"; bila bertaut, medan 'baris' hanya anggaran;
+      (3) hiasan warna lain mesti kecil (dahulu perkataan warna kedua tersilap dikira hiasan).
 
 Tugas: baca SATU gambar dan tulis SATU rekod decode (JSON) dengan lima kumpulan: susunan, baris (huruf), elemen,
        warna, tekstur. Rekod ini disimpan SEBELUM prompt ditulis; Kad Gaya diisi daripada rekod, bukan ditaip tangan.
@@ -12,8 +17,9 @@ Had: latar mesti hampir satu warna. Baris yang bertindih rapat boleh tergabung (
      (sans / serif / skrip) ialah anggaran daripada bentuk; nama font TIDAK boleh dikenal pasti oleh skrip ini.
      Gambar bawah 600 piksel lebar ditanda 'ukuran kasar'.
 
-Guna: python3 SK09_decode.py <gambar> [...] [--keluar DIR] [--semak]
+Guna: python3 SK09_decode.py <gambar> [...] [--keluar DIR] [--semak] [--teks "ayat pada gambar"]
       --keluar DIR  folder rekod (lalai: ../decode);  --semak = simpan gambar semakan (kotak baris dan elemen)
+      --teks        ayat pada gambar (untuk imej jana); gambar upload: diambil daripada mata/<nama>.json
 """
 import hashlib
 import json
@@ -28,7 +34,7 @@ from PIL import Image
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from SK05_ukur import _skor  # noqa: E402
 
-VERSI = "SK09 v1.0"
+VERSI = "SK09 v1.1"
 HERE = Path(__file__).resolve().parent
 KELUAR = HERE.parent / "decode"
 
@@ -246,7 +252,64 @@ def ukur_baris(t, blok_w, blok_h, x_blok):
         tepi_kasar_pct=round(kasar * 100, 1), pecah_pct=round(pecah * 100, 1), kelas_anggaran=kelas)
 
 
-def decode(path, semak=None):
+def condong_strok(c):
+    """Condong huruf daripada arah tepi strok (darjah, positif = rebah ke kanan). Tidak perlu pecahan baris:
+    histogram arah kecerunan, puncak dalam julat +-45 darjah daripada tegak."""
+    s = min(1.0, 500 / max(c.shape))
+    m = cv2.GaussianBlur(cv2.resize(c * 255, None, fx=s, fy=s, interpolation=cv2.INTER_AREA).astype(np.float32),
+                         (0, 0), 1.5)
+    gx, gy = cv2.Sobel(m, cv2.CV_32F, 1, 0), cv2.Sobel(m, cv2.CV_32F, 0, 1)
+    mag = np.hypot(gx, gy)
+    a = np.degrees(np.arctan2(gy, gx))
+    a = (a + 90) % 180 - 90                      # arah normal tepi, -90..90; 0 = strok tegak
+    ok = (mag > 0.25 * mag.max()) & (np.abs(a) <= 45)
+    if ok.sum() < 50:
+        return 0.0
+    h, e = np.histogram(a[ok], bins=90, range=(-45, 45), weights=mag[ok])
+    h = np.convolve(h, np.ones(5) / 5, mode="same")
+    return round(float((e[h.argmax()] + e[h.argmax() + 1]) / 2), 1)
+
+
+def ukur_seluruh(mr, n_huruf=None):
+    """Ciri huruf pada SELURUH blok (tidak perlu pecahan baris): untuk lettering yang hurufnya bertaut."""
+    ys, xs = np.nonzero(mr)
+    c = np.ascontiguousarray(mr[ys.min():ys.max() + 1, xs.min():xs.max() + 1])
+    hh, ww = c.shape
+    dakwat = float(c.sum())
+    n, lb, st, _ = cv2.connectedComponentsWithStats(c, 8)
+    luas = st[1:, cv2.CC_STAT_AREA].astype(float)
+    kt = max(3, int(hh * 0.005)) | 1                   # tutup bintik tekstur dalam huruf sebelum ukur strok
+    dt = cv2.distanceTransform(cv2.morphologyEx(c, cv2.MORPH_CLOSE, np.ones((kt, kt), np.uint8)), cv2.DIST_L2, 5)
+    rabung = dt[(dt >= cv2.dilate(dt, np.ones((3, 3), np.uint8)) - 1e-6) & (dt >= 1.0)]
+    tebal = float(2 * np.percentile(rabung, 75)) if len(rabung) else 0.0      # strok utama (tidak ditarik oleh ekor nipis)
+    kontras = float(np.percentile(rabung, 90) / max(1e-6, np.percentile(rabung, 20))) if len(rabung) else 0.0
+    nipis = float((2 * rabung < 0.4 * tebal).mean() * 100) if len(rabung) else 0.0
+    kon, hier = cv2.findContours(c, cv2.RETR_CCOMP, cv2.CHAIN_APPROX_SIMPLE)
+    luar = [k for k, h in zip(kon, hier[0]) if h[3] < 0]
+    gelung = sum(1 for k, h in zip(kon, hier[0]) if h[3] >= 0 and cv2.contourArea(k) >= max(12.0, 0.15 * tebal * tebal))
+    hull = cv2.convexHull(np.vstack(luar))
+    lh = float(cv2.contourArea(hull))
+    nb = lh / float(ww * hh)
+    kb = max(3, int(tebal * 0.25)) | 1
+    licin = (cv2.medianBlur(c * 255, kb) > 127).astype(np.uint8)
+    per = lambda a: sum(cv2.arcLength(k, True) for k in cv2.findContours(a, cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)[0])
+    kasar = per(c) / max(1.0, per(licin)) - 1
+    kecil = int((luas < 0.6 * tebal * tebal).sum())                     # bintik, percikan, titik huruf
+    r = dict(
+        tebal_strok_px=round(tebal, 1), kontras_strok=round(kontras, 2), strok_nipis_pct=round(nipis, 1),
+        condong_huruf_darjah=condong_strok(c), komponen=int(n - 1), komponen_kecil=kecil,
+        kongsi_komponen_terbesar=round(float(luas.max() / dakwat), 2), gelung=int(gelung),
+        bentuk_blok=("segi empat" if nb > 0.86 else "bujur / membulat" if nb > 0.7 else "tidak sekata"),
+        hull_per_kotak=round(nb, 2), kepadatan_blok_pct=round(dakwat / lh * 100, 1),
+        tepi_kasar_pct=round(kasar * 100, 1), bil_huruf=n_huruf)
+    if n_huruf:
+        # indeks tebal: tebal strok berbanding saiz purata satu huruf; bebas daripada bilangan baris dan panjang ayat
+        r["indeks_tebal"] = round(tebal / float(np.sqrt(dakwat / n_huruf)), 3)
+        r["gelung_setiap_huruf"] = round(gelung / n_huruf, 2)
+    return r
+
+
+def decode(path, semak=None, teks=None):
     rgb = muat(path)
     h, w = rgb.shape[:2]
     L = lab(rgb)
@@ -271,6 +334,9 @@ def decode(path, semak=None):
     ysr, xsr = np.nonzero(mr)
     bx0, bx1, by0, by1 = int(xsr.min()), int(xsr.max()) + 1, int(ysr.min()), int(ysr.max()) + 1
     bw, bh = bx1 - bx0, by1 - by0
+
+    n_huruf = sum(ch.isalnum() for ch in teks) if teks else None
+    seluruh = ukur_seluruh(mr, n_huruf)
 
     # ---- baris
     baris, elemen = [], []
@@ -340,7 +406,8 @@ def decode(path, semak=None):
                 vv = vv[vv >= 0]
                 li = int(np.bincount(vv).argmax()) if len(vv) else dom
                 leper = cw / max(1, ch) >= 4 and ch <= 0.9 * jh and st[i, cv2.CC_STAT_AREA] / (cw * ch) > 0.4
-                lain = np.linalg.norm(pusat[li] - pusat[dom]) > 40 and st[i, cv2.CC_STAT_AREA] > 0.002 * jw * jh
+                lain = (np.linalg.norm(pusat[li] - pusat[dom]) > 40 and st[i, cv2.CC_STAT_AREA] > 0.002 * jw * jh
+                        and max(cw, ch) < 0.4 * jh)
                 if leper or lain:
                     cx, cy = st[i, cv2.CC_STAT_LEFT], st[i, cv2.CC_STAT_TOP]
                     elemen.append(dict(jenis="garis" if leper else "hiasan warna lain",
@@ -386,6 +453,14 @@ def decode(path, semak=None):
         serak = round(float(min(sd.values())), 1)
     if len(baris) <= 1 and bh / h > 0.3:
         amaran.append("hanya %d baris dikesan pada blok tinggi: baris mungkin bertindih dan tergabung" % len(baris))
+    # lettering bertaut: tiada sela sebenar antara baris, atau sebahagian besar dakwat ialah satu bentuk bersambung,
+    # atau satu "baris" yang terlalu tinggi berbanding strok (beberapa baris tergabung)
+    tinggi_strok = [r["tinggi_px"] / max(1.0, seluruh["tebal_strok_px"]) for r in baris]
+    bertaut = (len(baris) <= 1 and bh / h > 0.3) or any(v <= 0 for v in sela) or \
+        seluruh["kongsi_komponen_terbesar"] > 0.45 or (tinggi_strok and max(tinggi_strok) > 14)
+    jenis_susunan = "lettering bertaut" if bertaut else "baris lurus"
+    if bertaut:
+        amaran.append("lettering bertaut: medan 'baris' hanya anggaran; guna kumpulan 'seluruh' dan medan 'mata'")
 
     # ---- warna
     kong = np.bincount(peta.ravel(), minlength=len(pusat)) / peta.size * 100
@@ -460,9 +535,10 @@ def decode(path, semak=None):
             pusat_dy_pct=round(((y0 + y1) / 2 - h / 2) / h * 100, 1),
             nisbah_blok=round((x1 - x0) / (y1 - y0), 3), liputan_dakwat_pct=round(float(m.mean()) * 100, 1),
             isian_blok_pct=round(float(m[y0:y1, x0:x1].mean()) * 100, 1),
-            bil_baris=len(baris), penjajaran=jajar, serakan_penjajaran_pct=serak, sela_baris_pct=sela,
+            jenis_susunan=jenis_susunan, bil_baris=len(baris), penjajaran=jajar, serakan_penjajaran_pct=serak, sela_baris_pct=sela,
             hierarki_nisbah=round(max(tg) / min(tg), 2) if tg else None,
             baris_tertinggi=int(np.argmax(tg)) + 1 if tg else None, ambang_dakwat=amb),
+        seluruh=seluruh,
         baris=[{k: v for k, v in r.items() if not k.startswith("_")} for r in baris],
         elemen=elemen,
         warna=dict(latar=hexa(lab_ke_rgb(bg)), bil_dakwat=bil_dakwat, dakwat=kump, palet=pal),
@@ -510,15 +586,18 @@ if __name__ == "__main__":
     a = sys.argv[1:]
     keluar = Path(a[a.index("--keluar") + 1]) if "--keluar" in a else KELUAR
     semak = "--semak" in a
-    fail = [x for i, x in enumerate(a) if not x.startswith("--") and (i == 0 or a[i - 1] != "--keluar")]
+    fail = [x for i, x in enumerate(a) if not x.startswith("--") and (i == 0 or a[i - 1] not in ("--keluar", "--teks"))]
     if not fail:
         sys.exit(__doc__)
     keluar.mkdir(parents=True, exist_ok=True)
+    teks_cli = a[a.index("--teks") + 1] if "--teks" in a else None
     for f in fail:
-        r = decode(f, keluar / "semak" / (Path(f).stem + ".jpg") if semak else None)
+        mf = keluar / "mata" / (Path(f).stem + ".json")
+        teks = teks_cli or (" ".join(json.loads(mf.read_text()).get("teks_rujukan", [])) if mf.exists() else None)
+        r = decode(f, keluar / "semak" / (Path(f).stem + ".jpg") if semak else None, teks)
         r = gabung_mata(r, keluar)
         (keluar / (Path(f).stem + ".json")).write_text(json.dumps(r, ensure_ascii=False, indent=1) + "\n")
         s = r.get("susunan", {})
-        print(json.dumps(dict(fail=r["fail"], baris=s.get("bil_baris"), condong=s.get("condong_darjah"),
+        print(json.dumps(dict(fail=r["fail"], jenis=s.get("jenis_susunan"), baris=s.get("bil_baris"), condong=s.get("condong_darjah"),
                               jajar=s.get("penjajaran"), dakwat=r.get("warna", {}).get("bil_dakwat"),
                               amaran=r.get("amaran")), ensure_ascii=False))

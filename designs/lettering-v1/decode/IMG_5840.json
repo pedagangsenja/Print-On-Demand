@@ -1,0 +1,303 @@
+{
+ "versi": "SK09 v1.1",
+ "fail": "IMG_5840.jpg",
+ "sha1": "2b3dc9e5b21b",
+ "tarikh": "2026-11-28",
+ "sumber_medan": "diukur skrip (kecuali kumpulan 'mata' = mata Claude)",
+ "kanvas": {
+  "w": 736,
+  "h": 981,
+  "nisbah": 0.75
+ },
+ "amaran": [
+  "lettering bertaut: medan 'baris' hanya anggaran; guna kumpulan 'seluruh' dan medan 'mata'"
+ ],
+ "susunan": {
+  "condong_darjah": 1.8,
+  "kotak_blok": [
+   84,
+   133,
+   658,
+   856
+  ],
+  "tepi_pct": {
+   "kiri": 11.4,
+   "kanan": 10.6,
+   "atas": 13.6,
+   "bawah": 12.7
+  },
+  "tepi_min_pct": 10.6,
+  "pusat_dx_pct": 0.4,
+  "pusat_dy_pct": 0.4,
+  "nisbah_blok": 0.794,
+  "liputan_dakwat_pct": 21.2,
+  "isian_blok_pct": 36.9,
+  "jenis_susunan": "lettering bertaut",
+  "bil_baris": 5,
+  "penjajaran": "tengah",
+  "serakan_penjajaran_pct": 3.2,
+  "sela_baris_pct": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "hierarki_nisbah": 5.63,
+  "baris_tertinggi": 1,
+  "ambang_dakwat": 27.9
+ },
+ "seluruh": {
+  "tebal_strok_px": 26.0,
+  "kontras_strok": 2.17,
+  "strok_nipis_pct": 6.3,
+  "condong_huruf_darjah": 23.5,
+  "komponen": 6,
+  "komponen_kecil": 0,
+  "kongsi_komponen_terbesar": 0.39,
+  "gelung": 10,
+  "bentuk_blok": "segi empat",
+  "hull_per_kotak": 0.89,
+  "kepadatan_blok_pct": 41.0,
+  "tepi_kasar_pct": 4.1,
+  "bil_huruf": 13,
+  "indeks_tebal": 0.24,
+  "gelung_setiap_huruf": 0.77
+ },
+ "baris": [
+  {
+   "n": 1,
+   "atas_pct": 1.0,
+   "tinggi_pct": 35.5,
+   "jalur_tinggi_pct": 35.5,
+   "warna_teks": "#fcfcfc",
+   "dalam_bekas": false,
+   "bekas": null,
+   "kotak_blok_pct": [
+    6.3,
+    100.0
+   ],
+   "tinggi_px": 255,
+   "lebar_px": 549,
+   "ukuran_kasar": false,
+   "lebar_pct": 93.7,
+   "tebal_strok_pct": 8.9,
+   "kontras_strok": 2.0,
+   "isian_pct": 37.7,
+   "condong_huruf_darjah": 14.5,
+   "komponen": 3,
+   "komponen_besar": 2,
+   "bersambung": false,
+   "nisbah_lebar_huruf": 1.55,
+   "beza_tinggi_huruf": 0.018,
+   "huruf": "HURUF BESAR (tinggi seragam)",
+   "tepi_kasar_pct": 3.9,
+   "pecah_pct": 1.9,
+   "kelas_anggaran": "skrip / tulisan sambung",
+   "peranan_saiz": "utama"
+  },
+  {
+   "n": 2,
+   "atas_pct": 36.5,
+   "tinggi_pct": 6.3,
+   "jalur_tinggi_pct": 6.3,
+   "warna_teks": "#fcfcfc",
+   "dalam_bekas": false,
+   "bekas": null,
+   "kotak_blok_pct": [
+    21.8,
+    85.8
+   ],
+   "tinggi_px": 45,
+   "lebar_px": 375,
+   "ukuran_kasar": false,
+   "lebar_pct": 64.0,
+   "tebal_strok_pct": 44.4,
+   "kontras_strok": 1.6,
+   "isian_pct": 49.1,
+   "condong_huruf_darjah": -29.5,
+   "komponen": 5,
+   "komponen_besar": 3,
+   "bersambung": true,
+   "nisbah_lebar_huruf": null,
+   "beza_tinggi_huruf": 0.06,
+   "huruf": "HURUF BESAR (tinggi seragam)",
+   "tepi_kasar_pct": 1.9,
+   "pecah_pct": 0.3,
+   "kelas_anggaran": "skrip / tulisan sambung",
+   "peranan_saiz": "kecil"
+  },
+  {
+   "n": 3,
+   "atas_pct": 42.8,
+   "tinggi_pct": 29.0,
+   "jalur_tinggi_pct": 29.0,
+   "warna_teks": "#fcfcfc",
+   "dalam_bekas": false,
+   "bekas": null,
+   "kotak_blok_pct": [
+    0.0,
+    96.6
+   ],
+   "tinggi_px": 208,
+   "lebar_px": 566,
+   "ukuran_kasar": false,
+   "lebar_pct": 96.6,
+   "tebal_strok_pct": 11.0,
+   "kontras_strok": 2.14,
+   "isian_pct": 40.4,
+   "condong_huruf_darjah": 20.0,
+   "komponen": 5,
+   "komponen_besar": 3,
+   "bersambung": false,
+   "nisbah_lebar_huruf": 1.54,
+   "beza_tinggi_huruf": 0.153,
+   "huruf": "huruf campur (tinggi tidak seragam)",
+   "tepi_kasar_pct": 3.7,
+   "pecah_pct": 1.6,
+   "kelas_anggaran": "skrip / tulisan sambung",
+   "peranan_saiz": "utama"
+  },
+  {
+   "n": 4,
+   "atas_pct": 71.7,
+   "tinggi_pct": 20.9,
+   "jalur_tinggi_pct": 20.9,
+   "warna_teks": "#fcfcfc",
+   "dalam_bekas": false,
+   "bekas": null,
+   "kotak_blok_pct": [
+    0.0,
+    94.5
+   ],
+   "tinggi_px": 150,
+   "lebar_px": 554,
+   "ukuran_kasar": false,
+   "lebar_pct": 94.5,
+   "tebal_strok_pct": 12.5,
+   "kontras_strok": 2.3,
+   "isian_pct": 42.7,
+   "condong_huruf_darjah": 14.5,
+   "komponen": 4,
+   "komponen_besar": 3,
+   "bersambung": false,
+   "nisbah_lebar_huruf": 1.15,
+   "beza_tinggi_huruf": 0.027,
+   "huruf": "HURUF BESAR (tinggi seragam)",
+   "tepi_kasar_pct": 3.3,
+   "pecah_pct": 1.0,
+   "kelas_anggaran": "skrip / tulisan sambung",
+   "peranan_saiz": "kecil"
+  },
+  {
+   "n": 5,
+   "atas_pct": 92.6,
+   "tinggi_pct": 6.8,
+   "jalur_tinggi_pct": 6.8,
+   "warna_teks": "#fcfcfc",
+   "dalam_bekas": false,
+   "bekas": null,
+   "kotak_blok_pct": [
+    10.1,
+    81.9
+   ],
+   "tinggi_px": 49,
+   "lebar_px": 421,
+   "ukuran_kasar": false,
+   "lebar_pct": 71.8,
+   "tebal_strok_pct": 32.7,
+   "kontras_strok": 1.5,
+   "isian_pct": 42.5,
+   "condong_huruf_darjah": 29.5,
+   "komponen": 3,
+   "komponen_besar": 3,
+   "bersambung": true,
+   "nisbah_lebar_huruf": null,
+   "beza_tinggi_huruf": 0.092,
+   "huruf": "huruf campur (tinggi tidak seragam)",
+   "tepi_kasar_pct": 1.7,
+   "pecah_pct": 0.4,
+   "kelas_anggaran": "skrip / tulisan sambung",
+   "peranan_saiz": "kecil"
+  }
+ ],
+ "elemen": [],
+ "warna": {
+  "latar": "#101010",
+  "bil_dakwat": 1,
+  "dakwat": [
+   {
+    "hex": "#fcfcfc",
+    "kongsi_pct": 19.8,
+    "peranan": "teks",
+    "ton": 1
+   }
+  ],
+  "palet": [
+   {
+    "hex": "#101010",
+    "kongsi_pct": 78.3,
+    "peranan": "latar",
+    "beza_dari_latar": 0.1
+   },
+   {
+    "hex": "#fcfcfc",
+    "kongsi_pct": 19.8,
+    "peranan": "teks",
+    "beza_dari_latar": 94.2
+   },
+   {
+    "hex": "#c2c2c2",
+    "kongsi_pct": 0.6,
+    "peranan": "peralihan tepi (antialias)",
+    "beza_dari_latar": 73.8
+   },
+   {
+    "hex": "#313131",
+    "kongsi_pct": 0.5,
+    "peranan": "ton latar (bayang atau tekstur latar)",
+    "beza_dari_latar": 15.7
+   },
+   {
+    "hex": "#898888",
+    "kongsi_pct": 0.4,
+    "peranan": "peralihan tepi (antialias)",
+    "beza_dari_latar": 52.2
+   },
+   {
+    "hex": "#585858",
+    "kongsi_pct": 0.4,
+    "peranan": "peralihan tepi (antialias)",
+    "beza_dari_latar": 32.9
+   }
+  ]
+ },
+ "tekstur": {
+  "latar_sd": 0.25,
+  "latar": "rata",
+  "dakwat_sd": 1.13,
+  "dakwat": "rata",
+  "huruf_pecah_pct": 1.8,
+  "bayang_lembut_pct": 0.0
+ },
+ "mata": {
+  "nama_gaya": "Skrip berus tebal licin, tiga baris",
+  "teks_rujukan": [
+   "Know",
+   "your",
+   "Worth"
+  ],
+  "kelas_huruf": "skrip berus tebal bersambung, kontras sederhana, huruf awal besar",
+  "susunan": "tiga baris rapat, sedikit bertindih, tengah; garis dasar hampir mendatar, huruf condong ke kanan",
+  "hiasan": [
+   "ekor mendatar panjang pada huruf akhir setiap baris",
+   "garis lintang 't' panjang"
+  ],
+  "jangan_salin": [
+   "ayat asal",
+   "susun atur tepat",
+   "tandatangan / logo jika ada"
+  ],
+  "nota": "",
+  "sumber": "mata Claude"
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "nama_gaya": "Sans italik pekat + tekstur logam retak + sapuan berus",
+ "teks_rujukan": [
+  "THE",
+  "BEST",
+  "REVENGE",
+  "IS",
+  "MASSIVE",
+  "SUCCESS"
+ ],
+ "kelas_huruf": "sans pekat italik huruf besar; kata kecil ('THE', 'IS') jauh lebih kecil",
+ "susunan": "enam baris tengah, seluruh blok naik ke kanan; baris besar hampir sama lebar",
+ "hiasan": [
+  "garis berus di kiri dan kanan kata kecil",
+  "sapuan berus di bawah baris akhir",
+  "tekstur retak dalam huruf",
+  "latar gelap bercahaya di bucu"
+ ],
+ "jangan_salin": [
+  "ayat asal",
+  "susun atur tepat",
+  "tandatangan / logo jika ada"
+ ],
+ "nota": "Latar bercahaya mengganggu ukuran skrip (bucu dikira dakwat)."
+}

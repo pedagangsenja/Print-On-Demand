@@ -1,4 +1,8 @@
-"""SK10 Banding (Standard Lettering v1.2, langkah 5: QC bahagian B). Versi 1.0, 28 Nov 2026.
+"""SK10 Banding (Standard Lettering v1.2, langkah 5: QC bahagian B). Versi 1.1, 28 Nov 2026.
+v1.1: dua profil. "baris lurus" pada kedua-dua rekod -> ciri baris dibanding (seperti v1.0). Jika salah satu
+      "lettering bertaut" -> ciri baris TIDAK dibanding (pecahan baris tidak boleh dipercayai); yang dibanding
+      ialah kumpulan 'seluruh' (indeks tebal, kontras strok, strok nipis, condong huruf, bersambung, gelung,
+      tepi kasar, bintik) + bentuk dan kepadatan blok. Indeks tebal dan gelung perlukan ayat: --teks-jana.
 
 Tugas: banding rekod decode IMEJ JANA dengan rekod decode GAMBAR UPLOAD (kedua-duanya daripada SK09), medan demi
        medan. Hasil: skor persamaan gaya (0-100), senarai medan sama / beza, dan SATU ubahan seterusnya (beza
@@ -13,6 +17,7 @@ Had: 'had' setiap medan ialah cadangan Claude 28 Nov 2026, BELUM ditentukur dari
 
 Guna: python3 SK10_banding.py <rujukan.json> <jana.json> [...] [--mod hp|warna] [--keluar fail.json]
       atau dengan gambar terus:  python3 SK10_banding.py --gambar <upload> <imej jana> [...]
+                                 [--teks-rujukan "ayat pada upload"] [--teks-jana "ayat pada imej jana"]
 """
 import json
 import sys
@@ -21,7 +26,7 @@ from pathlib import Path
 
 import numpy as np
 
-VERSI = "SK10 v1.0"
+VERSI = "SK10 v1.1"
 
 # medan: (kumpulan, berat, had, jenis, tindakan jika beza)
 #   jenis: 'mutlak' = beza nilai; 'nisbah' = beza peratus; 'kategori' = sama / tidak
@@ -49,6 +54,20 @@ MEDAN = [
     ("hiasan lain: ada",           "elemen",  1, None, "kategori", "prompt: hiasan"),
     ("tekstur huruf",              "tekstur", 2, None, "kategori", "prompt: tekstur dan kelas kemasan"),
     ("tekstur latar",              "tekstur", 1, None, "kategori", "prompt: tekstur dan kelas kemasan"),
+]
+# medan yang bergantung pada pecahan baris: hanya untuk "baris lurus"
+PERLU_BARIS = {"penjajaran", "serakan penjajaran (%)", "sela antara baris (%)", "hierarki (tertinggi / terendah)"}
+MEDAN_SELURUH = [
+    ("bentuk blok",                "susunan", 2, None, "kategori", "prompt: bentuk susunan"),
+    ("kepadatan blok (%)",         "susunan", 2, 8.0,  "mutlak",   "prompt: jarak dan hubungan baris"),
+    ("seluruh: indeks tebal",      "huruf",   4, 0.12, "nisbah",   "prompt: bentuk huruf ikut peranan"),
+    ("seluruh: kontras strok",     "huruf",   2, 0.6,  "mutlak",   "prompt: butiran garisan"),
+    ("seluruh: strok nipis (%)",   "huruf",   2, 8.0,  "mutlak",   "prompt: hiasan (ekor dan sapuan nipis)"),
+    ("seluruh: condong huruf (darjah)", "huruf", 3, 6.0, "mutlak", "prompt: garis dasar dan condong"),
+    ("seluruh: bersambung (kongsi bentuk terbesar)", "huruf", 3, 0.2, "mutlak", "prompt: jarak dan hubungan baris"),
+    ("seluruh: gelung setiap huruf", "huruf", 2, 0.25, "mutlak",   "prompt: bentuk huruf ikut peranan"),
+    ("seluruh: tepi kasar (%)",    "huruf",   2, 8.0,  "mutlak",   "prompt: tekstur dan kelas kemasan"),
+    ("bintik / percikan",          "elemen",  1, None, "kategori", "prompt: hiasan"),
 ]
 MEDAN_WARNA = [
     ("bilangan dakwat",            "warna",   3, 0.0,  "mutlak",   "warna C: bilangan dakwat"),
@@ -107,20 +126,40 @@ def tanda(r):
         "tekstur huruf": r["tekstur"]["dakwat"],
         "tekstur latar": r["tekstur"]["latar"],
         "bilangan dakwat": r["warna"]["bil_dakwat"],
+        "_jenis": s.get("jenis_susunan", "baris lurus"),
         "_latar": r["warna"]["latar"],
         "_dakwat": r["warna"]["dakwat"][0]["hex"] if r["warna"]["dakwat"] else None,
     }
+    g = r.get("seluruh") or {}
+    t.update({
+        "bentuk blok": g.get("bentuk_blok"),
+        "kepadatan blok (%)": g.get("kepadatan_blok_pct"),
+        "seluruh: indeks tebal": g.get("indeks_tebal"),
+        "seluruh: kontras strok": g.get("kontras_strok"),
+        "seluruh: strok nipis (%)": g.get("strok_nipis_pct"),
+        "seluruh: condong huruf (darjah)": g.get("condong_huruf_darjah"),
+        "seluruh: bersambung (kongsi bentuk terbesar)": g.get("kongsi_komponen_terbesar"),
+        "seluruh: gelung setiap huruf": g.get("gelung_setiap_huruf"),
+        "seluruh: tepi kasar (%)": g.get("tepi_kasar_pct"),
+        "bintik / percikan": None if not g else ("banyak" if g["komponen_kecil"] >= 10 else "sedikit / tiada"),
+    })
     return t
 
 
 def banding(ruj, jana, mod="hp"):
     a, b = tanda(ruj), tanda(jana)
+    bertaut = "lettering bertaut" in (a["_jenis"], b["_jenis"])
+    if bertaut:
+        medan = [m for m in MEDAN if not (m[0].startswith(("utama:", "baris kecil:")) or m[0] in PERLU_BARIS)]
+        medan = medan + MEDAN_SELURUH
+    else:
+        medan = MEDAN
     if mod == "warna":
         de = lambda x, y: None if not (x and y) else round(float(np.linalg.norm(_lab(x) - _lab(y))), 1)
         a["warna latar (beza Delta E)"], b["warna latar (beza Delta E)"] = 0.0, de(a["_latar"], b["_latar"])
         a["dakwat utama (beza Delta E)"], b["dakwat utama (beza Delta E)"] = 0.0, de(a["_dakwat"], b["_dakwat"])
     baris, jum, dapat = [], 0.0, 0.0
-    for nama, kump, berat, had, jenis, tindakan in MEDAN + (MEDAN_WARNA if mod == "warna" else []):
+    for nama, kump, berat, had, jenis, tindakan in medan + (MEDAN_WARNA if mod == "warna" else []):
         x, y = a.get(nama), b.get(nama)
         if x is None or y is None:
             # medan tiada pada satu pihak (cth. tiada baris kecil): tidak dikira, tetapi ditunjuk
@@ -145,7 +184,8 @@ def banding(ruj, jana, mod="hp"):
     beza = sorted([r for r in baris if r.get("rugi")], key=lambda r: -r["rugi"])
     prompt = [r for r in beza if not r["tindakan"].startswith("skrip")]
     return dict(
-        versi=VERSI, mod=mod, rujukan=ruj["fail"], jana=jana["fail"],
+        versi=VERSI, mod=mod, profil="lettering bertaut (ciri seluruh blok)" if bertaut else "baris lurus (ciri baris)",
+        rujukan=ruj["fail"], jana=jana["fail"],
         skor=round(dapat / jum * 100, 1) if jum else None,
         sama=sum(r["hasil"] == "sama" for r in baris), hampir=sum(r["hasil"] == "hampir" for r in baris),
         beza=sum(r["hasil"] == "beza" for r in baris),
@@ -161,19 +201,21 @@ if __name__ == "__main__":
     a = sys.argv[1:]
     mod = a[a.index("--mod") + 1] if "--mod" in a else "hp"
     keluar = a[a.index("--keluar") + 1] if "--keluar" in a else None
-    langkau = {i + 1 for i, x in enumerate(a) if x in ("--mod", "--keluar")}
+    langkau = {i + 1 for i, x in enumerate(a) if x in ("--mod", "--keluar", "--teks-jana", "--teks-rujukan")}
+    tj = a[a.index("--teks-jana") + 1] if "--teks-jana" in a else None
+    tr = a[a.index("--teks-rujukan") + 1] if "--teks-rujukan" in a else None
     fail = [x for i, x in enumerate(a) if not x.startswith("--") and i not in langkau]
     if len(fail) < 2:
         sys.exit(__doc__)
     if "--gambar" in a:
         sys.path.insert(0, str(Path(__file__).resolve().parent))
         from SK09_decode import decode
-        rekod = [decode(f) for f in fail]
+        rekod = [decode(f, None, tr if i == 0 else tj) for i, f in enumerate(fail)]
     else:
         rekod = [json.loads(Path(f).read_text()) for f in fail]
     hasil = [banding(rekod[0], r, mod) for r in rekod[1:]]
     if keluar:
         Path(keluar).write_text(json.dumps(hasil, ensure_ascii=False, indent=1) + "\n")
     for h in hasil:
-        print(json.dumps({k: h[k] for k in ("jana", "skor", "sama", "hampir", "beza", "ubahan_seterusnya",
+        print(json.dumps({k: h[k] for k in ("jana", "profil", "skor", "sama", "hampir", "beza", "ubahan_seterusnya",
                                             "skrip_5b")}, ensure_ascii=False))

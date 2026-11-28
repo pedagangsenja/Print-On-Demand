@@ -1,0 +1,240 @@
+{
+ "versi": "SK09 v1.1",
+ "fail": "IMG_5732.jpg",
+ "sha1": "b5e10b57244b",
+ "tarikh": "2026-11-28",
+ "sumber_medan": "diukur skrip (kecuali kumpulan 'mata' = mata Claude)",
+ "kanvas": {
+  "w": 750,
+  "h": 1000,
+  "nisbah": 0.75
+ },
+ "amaran": [
+  "lettering bertaut: medan 'baris' hanya anggaran; guna kumpulan 'seluruh' dan medan 'mata'"
+ ],
+ "susunan": {
+  "condong_darjah": 24.0,
+  "kotak_blok": [
+   9,
+   59,
+   720,
+   953
+  ],
+  "tepi_pct": {
+   "kiri": 1.2,
+   "kanan": 4.0,
+   "atas": 5.9,
+   "bawah": 4.7
+  },
+  "tepi_min_pct": 1.2,
+  "pusat_dx_pct": -1.4,
+  "pusat_dy_pct": 0.6,
+  "nisbah_blok": 0.795,
+  "liputan_dakwat_pct": 24.6,
+  "isian_blok_pct": 29.0,
+  "jenis_susunan": "lettering bertaut",
+  "bil_baris": 2,
+  "penjajaran": "rata kiri",
+  "serakan_penjajaran_pct": 4.5,
+  "sela_baris_pct": [
+   0.0
+  ],
+  "hierarki_nisbah": 2.95,
+  "baris_tertinggi": 1,
+  "ambang_dakwat": 27.9
+ },
+ "seluruh": {
+  "tebal_strok_px": 23.2,
+  "kontras_strok": 14.8,
+  "strok_nipis_pct": 50.6,
+  "condong_huruf_darjah": 34.5,
+  "komponen": 58,
+  "komponen_kecil": 54,
+  "kongsi_komponen_terbesar": 0.83,
+  "gelung": 25,
+  "bentuk_blok": "bujur / membulat",
+  "hull_per_kotak": 0.74,
+  "kepadatan_blok_pct": 41.0,
+  "tepi_kasar_pct": 45.2,
+  "bil_huruf": 22,
+  "indeks_tebal": 0.254,
+  "gelung_setiap_huruf": 1.14
+ },
+ "baris": [
+  {
+   "n": 1,
+   "atas_pct": 3.3,
+   "tinggi_pct": 69.7,
+   "jalur_tinggi_pct": 69.7,
+   "warna_teks": "#fcfcfc",
+   "dalam_bekas": false,
+   "bekas": null,
+   "kotak_blok_pct": [
+    8.9,
+    100.0
+   ],
+   "tinggi_px": 562,
+   "lebar_px": 683,
+   "ukuran_kasar": false,
+   "lebar_pct": 91.1,
+   "tebal_strok_pct": 0.5,
+   "kontras_strok": 11.98,
+   "isian_pct": 36.5,
+   "condong_huruf_darjah": 9.5,
+   "komponen": 44,
+   "komponen_besar": 1,
+   "bersambung": false,
+   "nisbah_lebar_huruf": 1.2,
+   "beza_tinggi_huruf": null,
+   "huruf": "tidak pasti",
+   "tepi_kasar_pct": 95.5,
+   "pecah_pct": 27.6,
+   "kelas_anggaran": "skrip / tulisan sambung",
+   "peranan_saiz": "utama"
+  },
+  {
+   "n": 2,
+   "atas_pct": 73.1,
+   "tinggi_pct": 23.6,
+   "jalur_tinggi_pct": 23.6,
+   "warna_teks": "#fcfcfc",
+   "dalam_bekas": false,
+   "bekas": null,
+   "kotak_blok_pct": [
+    0.0,
+    73.1
+   ],
+   "tinggi_px": 190,
+   "lebar_px": 548,
+   "ukuran_kasar": false,
+   "lebar_pct": 73.1,
+   "tebal_strok_pct": 1.5,
+   "kontras_strok": 13.2,
+   "isian_pct": 40.4,
+   "condong_huruf_darjah": 26.5,
+   "komponen": 21,
+   "komponen_besar": 4,
+   "bersambung": false,
+   "nisbah_lebar_huruf": 1.07,
+   "beza_tinggi_huruf": 0.277,
+   "huruf": "huruf campur (tinggi tidak seragam)",
+   "tepi_kasar_pct": 36.7,
+   "pecah_pct": 4.4,
+   "kelas_anggaran": "skrip / tulisan sambung",
+   "peranan_saiz": "kecil"
+  }
+ ],
+ "elemen": [
+  {
+   "jenis": "garis",
+   "kotak_pct": [
+    46.0,
+    24.9,
+    47.6,
+    25.3
+   ],
+   "warna": "#5b5b5b"
+  },
+  {
+   "jenis": "garis",
+   "kotak_pct": [
+    42.3,
+    91.8,
+    43.6,
+    92.1
+   ],
+   "warna": "#8e8e8e"
+  },
+  {
+   "jenis": "garis / sapuan",
+   "kotak_pct": [
+    9.1,
+    97.5,
+    20.3,
+    99.5
+   ],
+   "warna": "#fcfcfc"
+  }
+ ],
+ "warna": {
+  "latar": "#101010",
+  "bil_dakwat": 1,
+  "dakwat": [
+   {
+    "hex": "#fcfcfc",
+    "kongsi_pct": 22.8,
+    "peranan": "teks",
+    "ton": 1
+   }
+  ],
+  "palet": [
+   {
+    "hex": "#101010",
+    "kongsi_pct": 74.5,
+    "peranan": "latar",
+    "beza_dari_latar": 0.2
+   },
+   {
+    "hex": "#fcfcfc",
+    "kongsi_pct": 22.8,
+    "peranan": "teks",
+    "beza_dari_latar": 94.3
+   },
+   {
+    "hex": "#333333",
+    "kongsi_pct": 0.7,
+    "peranan": "ton latar (bayang atau tekstur latar)",
+    "beza_dari_latar": 16.7
+   },
+   {
+    "hex": "#c7c7c7",
+    "kongsi_pct": 0.7,
+    "peranan": "peralihan tepi (antialias)",
+    "beza_dari_latar": 75.7
+   },
+   {
+    "hex": "#8e8e8e",
+    "kongsi_pct": 0.7,
+    "peranan": "peralihan tepi (antialias)",
+    "beza_dari_latar": 54.5
+   },
+   {
+    "hex": "#5b5b5b",
+    "kongsi_pct": 0.5,
+    "peranan": "peralihan tepi (antialias)",
+    "beza_dari_latar": 34.0
+   }
+  ]
+ },
+ "tekstur": {
+  "latar_sd": 2.57,
+  "latar": "berbutir halus",
+  "dakwat_sd": 1.18,
+  "dakwat": "rata",
+  "huruf_pecah_pct": 27.6,
+  "bayang_lembut_pct": 0.04
+ },
+ "mata": {
+  "nama_gaya": "Skrip kaligrafi berus bebas + garis halus + percikan",
+  "teks_rujukan": [
+   "Stop",
+   "thinking",
+   "Start",
+   "Doing"
+  ],
+  "kelas_huruf": "skrip berus kontras tinggi (tebal nipis), huruf awal besar, sangat condong",
+  "susunan": "empat baris bertindih rapat, naik curam ke kanan; ekor huruf memanjang jauh ke kiri dan kanan",
+  "hiasan": [
+   "garis halus melengkung panjang",
+   "percikan dakwat",
+   "ekor strok panjang"
+  ],
+  "jangan_salin": [
+   "ayat asal",
+   "susun atur tepat",
+   "tandatangan / logo jika ada"
+  ],
+  "nota": "Sudut blok yang diukur skrip (24 darjah) tidak pasti kerana baris bertindih.",
+  "sumber": "mata Claude"
+ }
+}

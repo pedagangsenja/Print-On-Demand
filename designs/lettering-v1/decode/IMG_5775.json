@@ -1,0 +1,444 @@
+{
+ "versi": "SK09 v1.1",
+ "fail": "IMG_5775.jpg",
+ "sha1": "5d707ccb05db",
+ "tarikh": "2026-11-28",
+ "sumber_medan": "diukur skrip (kecuali kumpulan 'mata' = mata Claude)",
+ "kanvas": {
+  "w": 236,
+  "h": 354,
+  "nisbah": 0.667
+ },
+ "amaran": [
+  "gambar kecil (lebar 236 px): ukuran kasar; upload semula saiz penuh",
+  "lettering bertaut: medan 'baris' hanya anggaran; guna kumpulan 'seluruh' dan medan 'mata'"
+ ],
+ "susunan": {
+  "condong_darjah": 7.4,
+  "kotak_blok": [
+   30,
+   52,
+   204,
+   296
+  ],
+  "tepi_pct": {
+   "kiri": 12.7,
+   "kanan": 13.6,
+   "atas": 14.7,
+   "bawah": 16.4
+  },
+  "tepi_min_pct": 12.7,
+  "pusat_dx_pct": -0.4,
+  "pusat_dy_pct": -0.8,
+  "nisbah_blok": 0.713,
+  "liputan_dakwat_pct": 23.8,
+  "isian_blok_pct": 46.7,
+  "jenis_susunan": "lettering bertaut",
+  "bil_baris": 5,
+  "penjajaran": "rata kiri",
+  "serakan_penjajaran_pct": 5.5,
+  "sela_baris_pct": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "hierarki_nisbah": 1.88,
+  "baris_tertinggi": 5,
+  "ambang_dakwat": 29.4
+ },
+ "seluruh": {
+  "tebal_strok_px": 10.0,
+  "kontras_strok": 2.82,
+  "strok_nipis_pct": 9.7,
+  "condong_huruf_darjah": 2.5,
+  "komponen": 26,
+  "komponen_kecil": 7,
+  "kongsi_komponen_terbesar": 0.11,
+  "gelung": 11,
+  "bentuk_blok": "bujur / membulat",
+  "hull_per_kotak": 0.81,
+  "kepadatan_blok_pct": 53.6,
+  "tepi_kasar_pct": 7.0,
+  "bil_huruf": 27,
+  "indeks_tebal": 0.369,
+  "gelung_setiap_huruf": 0.41
+ },
+ "baris": [
+  {
+   "n": 1,
+   "atas_pct": 0.4,
+   "tinggi_pct": 22.7,
+   "jalur_tinggi_pct": 22.7,
+   "warna_teks": "#f5c233",
+   "dalam_bekas": false,
+   "bekas": null,
+   "kotak_blok_pct": [
+    13.5,
+    100.0
+   ],
+   "tinggi_px": 54,
+   "lebar_px": 167,
+   "ukuran_kasar": false,
+   "lebar_pct": 86.5,
+   "tebal_strok_pct": 18.5,
+   "kontras_strok": 1.35,
+   "isian_pct": 54.6,
+   "condong_huruf_darjah": 6.0,
+   "komponen": 10,
+   "komponen_besar": 7,
+   "bersambung": false,
+   "nisbah_lebar_huruf": 0.56,
+   "beza_tinggi_huruf": 0.129,
+   "huruf": "huruf campur (tinggi tidak seragam)",
+   "tepi_kasar_pct": 4.6,
+   "pecah_pct": 4.5,
+   "kelas_anggaran": "blok pekat",
+   "peranan_saiz": "utama"
+  },
+  {
+   "n": 2,
+   "atas_pct": 23.1,
+   "tinggi_pct": 20.2,
+   "jalur_tinggi_pct": 20.2,
+   "warna_teks": "#e5e5e7",
+   "dalam_bekas": false,
+   "bekas": null,
+   "kotak_blok_pct": [
+    8.8,
+    96.4
+   ],
+   "tinggi_px": 48,
+   "lebar_px": 169,
+   "ukuran_kasar": false,
+   "lebar_pct": 87.6,
+   "tebal_strok_pct": 12.5,
+   "kontras_strok": 2.5,
+   "isian_pct": 45.8,
+   "condong_huruf_darjah": 23.0,
+   "komponen": 6,
+   "komponen_besar": 3,
+   "bersambung": false,
+   "nisbah_lebar_huruf": 0.84,
+   "beza_tinggi_huruf": 0.117,
+   "huruf": "huruf campur (tinggi tidak seragam)",
+   "tepi_kasar_pct": 9.8,
+   "pecah_pct": 4.4,
+   "kelas_anggaran": "skrip / tulisan sambung",
+   "peranan_saiz": "utama"
+  },
+  {
+   "n": 3,
+   "atas_pct": 43.3,
+   "tinggi_pct": 13.0,
+   "jalur_tinggi_pct": 13.0,
+   "warna_teks": "#f5c233",
+   "dalam_bekas": false,
+   "bekas": null,
+   "kotak_blok_pct": [
+    10.4,
+    92.7
+   ],
+   "tinggi_px": 31,
+   "lebar_px": 159,
+   "ukuran_kasar": true,
+   "lebar_pct": 82.4,
+   "tebal_strok_pct": 19.4,
+   "kontras_strok": 2.0,
+   "isian_pct": 47.7,
+   "condong_huruf_darjah": 16.0,
+   "komponen": 6,
+   "komponen_besar": 2,
+   "bersambung": true,
+   "nisbah_lebar_huruf": null,
+   "beza_tinggi_huruf": 0.033,
+   "huruf": "HURUF BESAR (tinggi seragam)",
+   "tepi_kasar_pct": 7.3,
+   "pecah_pct": 4.3,
+   "kelas_anggaran": "skrip / tulisan sambung",
+   "peranan_saiz": "kecil"
+  },
+  {
+   "n": 4,
+   "atas_pct": 56.3,
+   "tinggi_pct": 18.9,
+   "jalur_tinggi_pct": 19.3,
+   "warna_teks": "#e5e5e7",
+   "dalam_bekas": false,
+   "bekas": null,
+   "kotak_blok_pct": [
+    0.0,
+    89.6
+   ],
+   "tinggi_px": 45,
+   "lebar_px": 173,
+   "ukuran_kasar": false,
+   "lebar_pct": 89.6,
+   "tebal_strok_pct": 16.0,
+   "kontras_strok": 1.91,
+   "isian_pct": 45.9,
+   "condong_huruf_darjah": 23.0,
+   "komponen": 4,
+   "komponen_besar": 4,
+   "bersambung": false,
+   "nisbah_lebar_huruf": 1.11,
+   "beza_tinggi_huruf": 0.028,
+   "huruf": "HURUF BESAR (tinggi seragam)",
+   "tepi_kasar_pct": 7.3,
+   "pecah_pct": 5.1,
+   "kelas_anggaran": "skrip / tulisan sambung",
+   "peranan_saiz": "utama"
+  },
+  {
+   "n": 5,
+   "atas_pct": 75.6,
+   "tinggi_pct": 24.4,
+   "jalur_tinggi_pct": 24.4,
+   "warna_teks": "#f5c233",
+   "dalam_bekas": false,
+   "bekas": null,
+   "kotak_blok_pct": [
+    0.0,
+    82.4
+   ],
+   "tinggi_px": 58,
+   "lebar_px": 159,
+   "ukuran_kasar": false,
+   "lebar_pct": 82.4,
+   "tebal_strok_pct": 22.7,
+   "kontras_strok": 1.2,
+   "isian_pct": 53.6,
+   "condong_huruf_darjah": 8.0,
+   "komponen": 5,
+   "komponen_besar": 3,
+   "bersambung": false,
+   "nisbah_lebar_huruf": 0.74,
+   "beza_tinggi_huruf": 0.008,
+   "huruf": "HURUF BESAR (tinggi seragam)",
+   "tepi_kasar_pct": 4.3,
+   "pecah_pct": 2.5,
+   "kelas_anggaran": "skrip / tulisan sambung",
+   "peranan_saiz": "utama"
+  }
+ ],
+ "elemen": [
+  {
+   "jenis": "garis",
+   "kotak_pct": [
+    25.9,
+    21.8,
+    32.1,
+    23.1
+   ],
+   "warna": "#e5e5e7"
+  },
+  {
+   "jenis": "garis",
+   "kotak_pct": [
+    54.9,
+    22.3,
+    60.6,
+    23.1
+   ],
+   "warna": "#e5e5e7"
+  },
+  {
+   "jenis": "garis",
+   "kotak_pct": [
+    16.6,
+    23.1,
+    22.8,
+    23.9
+   ],
+   "warna": "#a5873b"
+  },
+  {
+   "jenis": "garis",
+   "kotak_pct": [
+    77.7,
+    23.1,
+    82.9,
+    23.9
+   ],
+   "warna": "#a5873b"
+  },
+  {
+   "jenis": "hiasan warna lain",
+   "kotak_pct": [
+    86.5,
+    23.1,
+    95.9,
+    26.1
+   ],
+   "warna": "#f5c233"
+  },
+  {
+   "jenis": "hiasan warna lain",
+   "kotak_pct": [
+    11.4,
+    26.1,
+    15.0,
+    29.4
+   ],
+   "warna": "#473c2c"
+  },
+  {
+   "jenis": "hiasan warna lain",
+   "kotak_pct": [
+    5.7,
+    34.0,
+    12.4,
+    36.1
+   ],
+   "warna": "#a5873b"
+  },
+  {
+   "jenis": "garis",
+   "kotak_pct": [
+    5.2,
+    42.0,
+    11.9,
+    43.3
+   ],
+   "warna": "#473c2c"
+  },
+  {
+   "jenis": "garis",
+   "kotak_pct": [
+    49.2,
+    42.4,
+    63.7,
+    43.3
+   ],
+   "warna": "#a5873b"
+  },
+  {
+   "jenis": "garis",
+   "kotak_pct": [
+    5.2,
+    43.3,
+    8.3,
+    43.7
+   ],
+   "warna": "#473c2c"
+  },
+  {
+   "jenis": "garis",
+   "kotak_pct": [
+    15.5,
+    43.3,
+    21.8,
+    44.5
+   ],
+   "warna": "#e5e5e7"
+  },
+  {
+   "jenis": "hiasan warna lain",
+   "kotak_pct": [
+    30.6,
+    56.3,
+    36.3,
+    57.6
+   ],
+   "warna": "#a5873b"
+  },
+  {
+   "jenis": "garis",
+   "kotak_pct": [
+    77.2,
+    75.6,
+    80.8,
+    76.1
+   ],
+   "warna": "#a3a3a5"
+  }
+ ],
+ "warna": {
+  "latar": "#010006",
+  "bil_dakwat": 2,
+  "dakwat": [
+   {
+    "hex": "#f5c233",
+    "kongsi_pct": 10.7,
+    "peranan": "teks",
+    "ton": 1
+   },
+   {
+    "hex": "#e5e5e7",
+    "kongsi_pct": 9.3,
+    "peranan": "teks",
+    "ton": 2
+   }
+  ],
+  "palet": [
+   {
+    "hex": "#040206",
+    "kongsi_pct": 75.4,
+    "peranan": "latar",
+    "beza_dari_latar": 0.9
+   },
+   {
+    "hex": "#f5c233",
+    "kongsi_pct": 10.7,
+    "peranan": "teks",
+    "beza_dari_latar": 110.2
+   },
+   {
+    "hex": "#e5e5e7",
+    "kongsi_pct": 6.8,
+    "peranan": "teks",
+    "beza_dari_latar": 90.8
+   },
+   {
+    "hex": "#a3a3a5",
+    "kongsi_pct": 2.5,
+    "peranan": "dakwat lain (hiasan, bayang atau tekstur huruf)",
+    "beza_dari_latar": 66.9
+   },
+   {
+    "hex": "#a5873b",
+    "kongsi_pct": 2.3,
+    "peranan": "dakwat lain (hiasan, bayang atau tekstur huruf)",
+    "beza_dari_latar": 74.1
+   },
+   {
+    "hex": "#473c2c",
+    "kongsi_pct": 2.3,
+    "peranan": "ton latar (bayang atau tekstur latar)",
+    "beza_dari_latar": 29.2
+   }
+  ]
+ },
+ "tekstur": {
+  "latar_sd": 0.09,
+  "latar": "rata",
+  "dakwat_sd": 3.83,
+  "dakwat": "berbutir halus",
+  "huruf_pecah_pct": 4.1,
+  "bayang_lembut_pct": 0.0
+ },
+ "mata": {
+  "nama_gaya": "Campuran sans tebal + skrip berus + label",
+  "teks_rujukan": [
+   "SUCCESS",
+   "Grows",
+   "WHERE",
+   "Excuses",
+   "END"
+  ],
+  "kelas_huruf": "baris 1 dan 5 sans pekat sempit huruf besar; baris 2 dan 4 skrip berus tebal; baris 3 huruf kecil dalam label",
+  "susunan": "lima baris tengah, blok naik ke kanan, baris bersentuh",
+  "hiasan": [
+   "label segi empat untuk 'WHERE'",
+   "garis percikan di kiri dan kanan",
+   "bayang kelabu dalam skrip"
+  ],
+  "jangan_salin": [
+   "ayat asal",
+   "susun atur tepat",
+   "tandatangan / logo jika ada"
+  ],
+  "nota": "Fail ini kecil (236 x 354 piksel): ukuran kasar.",
+  "sumber": "mata Claude"
+ }
+}

@@ -1,0 +1,173 @@
+{
+ "versi": "SK09 v1.1",
+ "fail": "IMG_5818.jpg",
+ "sha1": "fb03e036b163",
+ "tarikh": "2026-11-28",
+ "sumber_medan": "diukur skrip (kecuali kumpulan 'mata' = mata Claude)",
+ "kanvas": {
+  "w": 600,
+  "h": 683,
+  "nisbah": 0.878
+ },
+ "amaran": [
+  "hanya 1 baris dikesan pada blok tinggi: baris mungkin bertindih dan tergabung",
+  "lettering bertaut: medan 'baris' hanya anggaran; guna kumpulan 'seluruh' dan medan 'mata'"
+ ],
+ "susunan": {
+  "condong_darjah": 14.0,
+  "kotak_blok": [
+   100,
+   100,
+   497,
+   620
+  ],
+  "tepi_pct": {
+   "kiri": 16.7,
+   "kanan": 17.2,
+   "atas": 14.6,
+   "bawah": 9.2
+  },
+  "tepi_min_pct": 9.2,
+  "pusat_dx_pct": -0.2,
+  "pusat_dy_pct": 2.7,
+  "nisbah_blok": 0.763,
+  "liputan_dakwat_pct": 22.4,
+  "isian_blok_pct": 44.5,
+  "jenis_susunan": "lettering bertaut",
+  "bil_baris": 1,
+  "penjajaran": "satu baris",
+  "serakan_penjajaran_pct": null,
+  "sela_baris_pct": [],
+  "hierarki_nisbah": 1.0,
+  "baris_tertinggi": 1,
+  "ambang_dakwat": 24.0
+ },
+ "seluruh": {
+  "tebal_strok_px": 14.4,
+  "kontras_strok": 1.76,
+  "strok_nipis_pct": 3.4,
+  "condong_huruf_darjah": 38.5,
+  "komponen": 16,
+  "komponen_kecil": 9,
+  "kongsi_komponen_terbesar": 0.31,
+  "gelung": 31,
+  "bentuk_blok": "bujur / membulat",
+  "hull_per_kotak": 0.76,
+  "kepadatan_blok_pct": 56.0,
+  "tepi_kasar_pct": 13.3,
+  "bil_huruf": 31,
+  "indeks_tebal": 0.264,
+  "gelung_setiap_huruf": 1.0
+ },
+ "baris": [
+  {
+   "n": 1,
+   "atas_pct": 0.4,
+   "tinggi_pct": 99.4,
+   "jalur_tinggi_pct": 99.4,
+   "warna_teks": "#d8d8d8",
+   "dalam_bekas": false,
+   "bekas": null,
+   "kotak_blok_pct": [
+    0.0,
+    100.0
+   ],
+   "tinggi_px": 498,
+   "lebar_px": 430,
+   "ukuran_kasar": false,
+   "lebar_pct": 100.0,
+   "tebal_strok_pct": 2.3,
+   "kontras_strok": 2.05,
+   "isian_pct": 42.9,
+   "condong_huruf_darjah": 6.5,
+   "komponen": 16,
+   "komponen_besar": 1,
+   "bersambung": false,
+   "nisbah_lebar_huruf": 0.95,
+   "beza_tinggi_huruf": null,
+   "huruf": "tidak pasti",
+   "tepi_kasar_pct": 70.4,
+   "pecah_pct": 34.0,
+   "kelas_anggaran": "nipis",
+   "peranan_saiz": "utama"
+  }
+ ],
+ "elemen": [],
+ "warna": {
+  "latar": "#1a1a1a",
+  "bil_dakwat": 1,
+  "dakwat": [
+   {
+    "hex": "#d8d8d8",
+    "kongsi_pct": 21.4,
+    "peranan": "teks",
+    "ton": 2
+   }
+  ],
+  "palet": [
+   {
+    "hex": "#1c1c1c",
+    "kongsi_pct": 73.1,
+    "peranan": "latar",
+    "beza_dari_latar": 1.1
+   },
+   {
+    "hex": "#d8d8d8",
+    "kongsi_pct": 18.6,
+    "peranan": "teks",
+    "beza_dari_latar": 77.2
+   },
+   {
+    "hex": "#3d3d3d",
+    "kongsi_pct": 4.4,
+    "peranan": "ton latar (bayang atau tekstur latar)",
+    "beza_dari_latar": 16.5
+   },
+   {
+    "hex": "#999999",
+    "kongsi_pct": 2.8,
+    "peranan": "dakwat lain (hiasan, bayang atau tekstur huruf)",
+    "beza_dari_latar": 54.1
+   },
+   {
+    "hex": "#686868",
+    "kongsi_pct": 1.1,
+    "peranan": "peralihan tepi (antialias)",
+    "beza_dari_latar": 34.9
+   }
+  ]
+ },
+ "tekstur": {
+  "latar_sd": 3.01,
+  "latar": "berbutir halus",
+  "dakwat_sd": 9.09,
+  "dakwat": "kasar / grunge",
+  "huruf_pecah_pct": 34.0,
+  "bayang_lembut_pct": 1.95
+ },
+ "mata": {
+  "nama_gaya": "Skrip berus tebal berpusar padat + bayang tindih",
+  "teks_rujukan": [
+   "The",
+   "smarter",
+   "You get",
+   "The",
+   "Less You",
+   "Speak"
+  ],
+  "kelas_huruf": "skrip berus tebal, hujung bergulung (spiral), kata kecil 'The' sebagai penyambung",
+  "susunan": "enam kumpulan kata bertaut rapat dalam bentuk bujur; baris naik ke kanan; huruf bertindih antara baris",
+  "hiasan": [
+   "hujung strok bergulung",
+   "bayang gelap di tempat strok bertindih (kesan 3D)",
+   "tekstur butir kain"
+  ],
+  "jangan_salin": [
+   "ayat asal",
+   "susun atur tepat",
+   "tandatangan / logo jika ada"
+  ],
+  "nota": "Bayang tindih dan tekstur bukan untuk jana hitam putih; urusan Warna v1 / Cetak v1.",
+  "sumber": "mata Claude"
+ }
+}

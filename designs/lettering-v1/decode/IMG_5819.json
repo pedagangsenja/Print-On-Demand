@@ -1,0 +1,543 @@
+{
+ "versi": "SK09 v1.1",
+ "fail": "IMG_5819.jpg",
+ "sha1": "b0058d994272",
+ "tarikh": "2026-11-28",
+ "sumber_medan": "diukur skrip (kecuali kumpulan 'mata' = mata Claude)",
+ "kanvas": {
+  "w": 1200,
+  "h": 1500,
+  "nisbah": 0.8
+ },
+ "amaran": [
+  "lettering bertaut: medan 'baris' hanya anggaran; guna kumpulan 'seluruh' dan medan 'mata'"
+ ],
+ "susunan": {
+  "condong_darjah": 5.0,
+  "kotak_blok": [
+   92,
+   116,
+   1175,
+   1417
+  ],
+  "tepi_pct": {
+   "kiri": 7.7,
+   "kanan": 2.1,
+   "atas": 7.7,
+   "bawah": 5.5
+  },
+  "tepi_min_pct": 2.1,
+  "pusat_dx_pct": 2.8,
+  "pusat_dy_pct": 1.1,
+  "nisbah_blok": 0.832,
+  "liputan_dakwat_pct": 36.1,
+  "isian_blok_pct": 46.1,
+  "jenis_susunan": "lettering bertaut",
+  "bil_baris": 6,
+  "penjajaran": "rata kiri",
+  "serakan_penjajaran_pct": 3.0,
+  "sela_baris_pct": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "hierarki_nisbah": 2.0,
+  "baris_tertinggi": 6,
+  "ambang_dakwat": 24.3
+ },
+ "seluruh": {
+  "tebal_strok_px": 40.0,
+  "kontras_strok": 1.6,
+  "strok_nipis_pct": 7.2,
+  "condong_huruf_darjah": -0.5,
+  "komponen": 93,
+  "komponen_kecil": 51,
+  "kongsi_komponen_terbesar": 0.11,
+  "gelung": 22,
+  "bentuk_blok": "segi empat",
+  "hull_per_kotak": 0.89,
+  "kepadatan_blok_pct": 51.4,
+  "tepi_kasar_pct": 12.6,
+  "bil_huruf": 49,
+  "indeks_tebal": 0.347,
+  "gelung_setiap_huruf": 0.45
+ },
+ "baris": [
+  {
+   "n": 1,
+   "atas_pct": 0.6,
+   "tinggi_pct": 10.6,
+   "jalur_tinggi_pct": 10.6,
+   "warna_teks": "#f74b56",
+   "dalam_bekas": false,
+   "bekas": null,
+   "kotak_blok_pct": [
+    7.9,
+    91.8
+   ],
+   "tinggi_px": 137,
+   "lebar_px": 923,
+   "ukuran_kasar": false,
+   "lebar_pct": 83.9,
+   "tebal_strok_pct": 24.8,
+   "kontras_strok": 1.71,
+   "isian_pct": 54.3,
+   "condong_huruf_darjah": 0.0,
+   "komponen": 11,
+   "komponen_besar": 5,
+   "bersambung": true,
+   "nisbah_lebar_huruf": null,
+   "beza_tinggi_huruf": 0.057,
+   "huruf": "HURUF BESAR (tinggi seragam)",
+   "tepi_kasar_pct": 5.2,
+   "pecah_pct": 0.7,
+   "kelas_anggaran": "skrip / tulisan sambung",
+   "peranan_saiz": "kecil"
+  },
+  {
+   "n": 2,
+   "atas_pct": 11.2,
+   "tinggi_pct": 18.8,
+   "jalur_tinggi_pct": 18.8,
+   "warna_teks": "#e78b29",
+   "dalam_bekas": false,
+   "bekas": null,
+   "kotak_blok_pct": [
+    4.4,
+    100.0
+   ],
+   "tinggi_px": 244,
+   "lebar_px": 1052,
+   "ukuran_kasar": false,
+   "lebar_pct": 95.6,
+   "tebal_strok_pct": 14.8,
+   "kontras_strok": 1.56,
+   "isian_pct": 49.9,
+   "condong_huruf_darjah": 1.5,
+   "komponen": 20,
+   "komponen_besar": 6,
+   "bersambung": false,
+   "nisbah_lebar_huruf": 0.95,
+   "beza_tinggi_huruf": 0.118,
+   "huruf": "huruf campur (tinggi tidak seragam)",
+   "tepi_kasar_pct": 11.2,
+   "pecah_pct": 1.5,
+   "kelas_anggaran": "blok sederhana",
+   "peranan_saiz": "utama"
+  },
+  {
+   "n": 3,
+   "atas_pct": 30.0,
+   "tinggi_pct": 16.9,
+   "jalur_tinggi_pct": 16.9,
+   "warna_teks": "#f35f23",
+   "dalam_bekas": false,
+   "bekas": null,
+   "kotak_blok_pct": [
+    5.9,
+    98.2
+   ],
+   "tinggi_px": 219,
+   "lebar_px": 1015,
+   "ukuran_kasar": false,
+   "lebar_pct": 92.3,
+   "tebal_strok_pct": 14.6,
+   "kontras_strok": 1.93,
+   "isian_pct": 55.8,
+   "condong_huruf_darjah": 0.0,
+   "komponen": 26,
+   "komponen_besar": 8,
+   "bersambung": false,
+   "nisbah_lebar_huruf": 0.51,
+   "beza_tinggi_huruf": 0.105,
+   "huruf": "huruf campur (tinggi tidak seragam)",
+   "tepi_kasar_pct": 8.7,
+   "pecah_pct": 1.4,
+   "kelas_anggaran": "blok sederhana",
+   "peranan_saiz": "utama"
+  },
+  {
+   "n": 4,
+   "atas_pct": 46.9,
+   "tinggi_pct": 12.8,
+   "jalur_tinggi_pct": 12.8,
+   "warna_teks": "#f74b56",
+   "dalam_bekas": false,
+   "bekas": null,
+   "kotak_blok_pct": [
+    2.3,
+    96.1
+   ],
+   "tinggi_px": 166,
+   "lebar_px": 1032,
+   "ukuran_kasar": false,
+   "lebar_pct": 93.8,
+   "tebal_strok_pct": 19.3,
+   "kontras_strok": 1.48,
+   "isian_pct": 54.8,
+   "condong_huruf_darjah": 3.5,
+   "komponen": 15,
+   "komponen_besar": 5,
+   "bersambung": true,
+   "nisbah_lebar_huruf": null,
+   "beza_tinggi_huruf": 0.136,
+   "huruf": "huruf campur (tinggi tidak seragam)",
+   "tepi_kasar_pct": 7.6,
+   "pecah_pct": 1.0,
+   "kelas_anggaran": "skrip / tulisan sambung",
+   "peranan_saiz": "utama"
+  },
+  {
+   "n": 5,
+   "atas_pct": 59.7,
+   "tinggi_pct": 16.1,
+   "jalur_tinggi_pct": 16.1,
+   "warna_teks": "#f35f23",
+   "dalam_bekas": false,
+   "bekas": null,
+   "kotak_blok_pct": [
+    8.5,
+    99.5
+   ],
+   "tinggi_px": 209,
+   "lebar_px": 1000,
+   "ukuran_kasar": false,
+   "lebar_pct": 90.9,
+   "tebal_strok_pct": 14.4,
+   "kontras_strok": 1.72,
+   "isian_pct": 50.5,
+   "condong_huruf_darjah": 3.5,
+   "komponen": 18,
+   "komponen_besar": 8,
+   "bersambung": false,
+   "nisbah_lebar_huruf": 0.76,
+   "beza_tinggi_huruf": 0.186,
+   "huruf": "huruf campur (tinggi tidak seragam)",
+   "tepi_kasar_pct": 8.3,
+   "pecah_pct": 1.3,
+   "kelas_anggaran": "blok sederhana",
+   "peranan_saiz": "utama"
+  },
+  {
+   "n": 6,
+   "atas_pct": 75.8,
+   "tinggi_pct": 21.2,
+   "jalur_tinggi_pct": 21.2,
+   "warna_teks": "#f74b56",
+   "dalam_bekas": false,
+   "bekas": null,
+   "kotak_blok_pct": [
+    0.0,
+    84.0
+   ],
+   "tinggi_px": 275,
+   "lebar_px": 924,
+   "ukuran_kasar": false,
+   "lebar_pct": 84.0,
+   "tebal_strok_pct": 13.1,
+   "kontras_strok": 1.26,
+   "isian_pct": 43.9,
+   "condong_huruf_darjah": 10.0,
+   "komponen": 19,
+   "komponen_besar": 8,
+   "bersambung": false,
+   "nisbah_lebar_huruf": 0.61,
+   "beza_tinggi_huruf": 0.122,
+   "huruf": "huruf campur (tinggi tidak seragam)",
+   "tepi_kasar_pct": 5.4,
+   "pecah_pct": 0.7,
+   "kelas_anggaran": "skrip / tulisan sambung",
+   "peranan_saiz": "utama"
+  }
+ ],
+ "elemen": [
+  {
+   "jenis": "garis",
+   "kotak_pct": [
+    26.7,
+    11.1,
+    27.1,
+    11.2
+   ],
+   "warna": "#680c28"
+  },
+  {
+   "jenis": "garis",
+   "kotak_pct": [
+    37.2,
+    11.1,
+    37.5,
+    11.2
+   ],
+   "warna": "#680c28"
+  },
+  {
+   "jenis": "garis",
+   "kotak_pct": [
+    11.6,
+    27.5,
+    25.5,
+    30.0
+   ],
+   "warna": "#e78b29"
+  },
+  {
+   "jenis": "garis",
+   "kotak_pct": [
+    35.2,
+    29.2,
+    47.0,
+    30.0
+   ],
+   "warna": "#f35f23"
+  },
+  {
+   "jenis": "garis",
+   "kotak_pct": [
+    48.7,
+    29.2,
+    52.5,
+    30.0
+   ],
+   "warna": "#f35f23"
+  },
+  {
+   "jenis": "garis",
+   "kotak_pct": [
+    11.2,
+    29.9,
+    11.5,
+    30.0
+   ],
+   "warna": "#680c28"
+  },
+  {
+   "jenis": "garis",
+   "kotak_pct": [
+    59.9,
+    29.9,
+    60.5,
+    30.0
+   ],
+   "warna": "#680c28"
+  },
+  {
+   "jenis": "garis",
+   "kotak_pct": [
+    28.2,
+    30.0,
+    31.7,
+    30.4
+   ],
+   "warna": "#a1342f"
+  },
+  {
+   "jenis": "garis",
+   "kotak_pct": [
+    82.5,
+    30.0,
+    90.6,
+    30.9
+   ],
+   "warna": "#e78b29"
+  },
+  {
+   "jenis": "garis",
+   "kotak_pct": [
+    65.3,
+    46.5,
+    68.0,
+    46.9
+   ],
+   "warna": "#f74b56"
+  },
+  {
+   "jenis": "garis",
+   "kotak_pct": [
+    32.5,
+    46.9,
+    34.5,
+    47.1
+   ],
+   "warna": "#a1342f"
+  },
+  {
+   "jenis": "garis",
+   "kotak_pct": [
+    34.6,
+    46.9,
+    35.0,
+    47.0
+   ],
+   "warna": "#a1342f"
+  },
+  {
+   "jenis": "garis",
+   "kotak_pct": [
+    73.2,
+    46.9,
+    74.0,
+    47.0
+   ],
+   "warna": "#a1342f"
+  },
+  {
+   "jenis": "garis",
+   "kotak_pct": [
+    70.4,
+    73.5,
+    81.3,
+    75.8
+   ],
+   "warna": "#e78b29"
+  },
+  {
+   "jenis": "garis",
+   "kotak_pct": [
+    60.9,
+    74.2,
+    68.6,
+    75.8
+   ],
+   "warna": "#e78b29"
+  },
+  {
+   "jenis": "garis",
+   "kotak_pct": [
+    37.4,
+    75.8,
+    44.9,
+    77.0
+   ],
+   "warna": "#f35f23"
+  },
+  {
+   "jenis": "hiasan warna lain",
+   "kotak_pct": [
+    53.3,
+    75.8,
+    59.4,
+    80.0
+   ],
+   "warna": "#e78b29"
+  },
+  {
+   "jenis": "hiasan warna lain",
+   "kotak_pct": [
+    58.9,
+    75.8,
+    68.7,
+    81.5
+   ],
+   "warna": "#e78b29"
+  },
+  {
+   "jenis": "hiasan warna lain",
+   "kotak_pct": [
+    69.8,
+    88.1,
+    73.2,
+    91.0
+   ],
+   "warna": "#680c28"
+  }
+ ],
+ "warna": {
+  "latar": "#41021d",
+  "bil_dakwat": 3,
+  "dakwat": [
+   {
+    "hex": "#f74b56",
+    "kongsi_pct": 15.6,
+    "peranan": "teks",
+    "ton": 2
+   },
+   {
+    "hex": "#f35f23",
+    "kongsi_pct": 10.8,
+    "peranan": "teks",
+    "ton": 1
+   },
+   {
+    "hex": "#e78b29",
+    "kongsi_pct": 8.5,
+    "peranan": "teks",
+    "ton": 1
+   }
+  ],
+  "palet": [
+   {
+    "hex": "#46041f",
+    "kongsi_pct": 52.2,
+    "peranan": "latar",
+    "beza_dari_latar": 1.9
+   },
+   {
+    "hex": "#f74b56",
+    "kongsi_pct": 12.8,
+    "peranan": "teks",
+    "beza_dari_latar": 65.9
+   },
+   {
+    "hex": "#680c28",
+    "kongsi_pct": 12.8,
+    "peranan": "ton latar (bayang atau tekstur latar)",
+    "beza_dari_latar": 15.8
+   },
+   {
+    "hex": "#f35f23",
+    "kongsi_pct": 10.8,
+    "peranan": "teks",
+    "beza_dari_latar": 79.3
+   },
+   {
+    "hex": "#e78b29",
+    "kongsi_pct": 8.5,
+    "peranan": "teks",
+    "beza_dari_latar": 82.7
+   },
+   {
+    "hex": "#a1342f",
+    "kongsi_pct": 2.8,
+    "peranan": "dakwat lain (hiasan, bayang atau tekstur huruf)",
+    "beza_dari_latar": 40.7
+   }
+  ]
+ },
+ "tekstur": {
+  "latar_sd": 3.48,
+  "latar": "berbutir halus",
+  "dakwat_sd": 4.26,
+  "dakwat": "berbutir halus",
+  "huruf_pecah_pct": 1.2,
+  "bayang_lembut_pct": 3.17
+ },
+ "mata": {
+  "nama_gaya": "Huruf potong bersudut, saiz bercampur, saling mengunci",
+  "teks_rujukan": [
+   "I need",
+   "Fantasy",
+   "to survive",
+   "because",
+   "reality is",
+   "too",
+   "difficult"
+  ],
+  "kelas_huruf": "huruf blok bersudut seperti potongan kertas; huruf besar dan kecil bercampur; tinggi huruf tidak sama",
+  "susunan": "blok segi empat padat; 'I' dan 'T' tinggi merentas dua baris; kata saling mengunci tanpa ruang kosong",
+  "hiasan": [
+   "bayang jatuh gelap ke kiri bawah",
+   "tekstur berus dalam huruf",
+   "bintik pada latar"
+  ],
+  "jangan_salin": [
+   "ayat asal",
+   "susun atur tepat",
+   "tandatangan / logo jika ada"
+  ],
+  "nota": "Kecerunan warna dan bayang bukan untuk jana hitam putih.",
+  "sumber": "mata Claude"
+ }
+}

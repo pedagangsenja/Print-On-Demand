@@ -1,5 +1,5 @@
 {
- "versi": "SK09 v1.0",
+ "versi": "SK09 v1.1",
  "fail": "IMG_5796.jpeg",
  "sha1": "db25b88b1c53",
  "tarikh": "2026-11-28",
@@ -30,6 +30,7 @@
   "nisbah_blok": 0.698,
   "liputan_dakwat_pct": 51.1,
   "isian_blok_pct": 58.6,
+  "jenis_susunan": "baris lurus",
   "bil_baris": 5,
   "penjajaran": "tengah",
   "serakan_penjajaran_pct": 0.7,
@@ -42,6 +43,23 @@
   "hierarki_nisbah": 9.42,
   "baris_tertinggi": 1,
   "ambang_dakwat": 27.0
+ },
+ "seluruh": {
+  "tebal_strok_px": 76.0,
+  "kontras_strok": 3.08,
+  "strok_nipis_pct": 28.0,
+  "condong_huruf_darjah": -0.5,
+  "komponen": 40,
+  "komponen_kecil": 23,
+  "kongsi_komponen_terbesar": 0.17,
+  "gelung": 12,
+  "bentuk_blok": "segi empat",
+  "hull_per_kotak": 0.96,
+  "kepadatan_blok_pct": 60.9,
+  "tepi_kasar_pct": 11.7,
+  "bil_huruf": 41,
+  "indeks_tebal": 0.543,
+  "gelung_setiap_huruf": 0.29
  },
  "baris": [
   {
