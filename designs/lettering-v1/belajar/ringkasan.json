@@ -1,7 +1,7 @@
 {
  "versi": "b1.1 (27 Nov 2026)",
- "tarikh": "2026-11-27",
- "imej": 202,
+ "tarikh": "2026-11-28",
+ "imej": 208,
  "suka": 0,
  "tolak": 0,
  "model": {
@@ -265,8 +265,8 @@
      "design": 1
     },
     "r1": {
-     "imej": 27,
-     "lulus": 26,
+     "imej": 24,
+     "lulus": 23,
      "pct": 96,
      "suka": 0,
      "tolak": 0,
@@ -274,16 +274,16 @@
     }
    },
    "semasa": {
-    "imej": 27,
-    "lulus": 26,
+    "imej": 24,
+    "lulus": 23,
     "pct": 96,
     "suka": 0,
     "tolak": 0,
     "design": 7
    },
    "semua": {
-    "imej": 46,
-    "lulus": 38,
+    "imej": 52,
+    "lulus": 43,
     "pct": 83,
     "suka": 0,
     "tolak": 0,
@@ -314,7 +314,7 @@
      "cadangan_teks": "Tanya pengguna sebabnya; tambah ke kad sebagai ciri QC"
     }
    ],
-   "ubahan_dicuba": 2,
+   "ubahan_dicuba": 3,
    "suka_imej": [],
    "tindakan": [
     {

@@ -14,7 +14,7 @@
   "cacat_berulang": "Perkataan salah eja, rosak, atau huruf besar / kecil salah (6 imej, 2 design); Cacat lain (tiada kelas) (6 imej, 2 design); Hiasan di tempat salah (3 imej, 1 design)",
   "tindakan": "Cacat 'Perkataan salah eja, rosak, atau huruf besar / kecil salah': Pilihan ubahan habis: tukar ke model seterusnya ikut jadual model × gaya, kemudian pendekkan ayat, kemudian lapor kepada pengguna",
   "ubahan_dicuba": 3,
-  "tarikh": "2026-11-27"
+  "tarikh": "2026-11-28"
  },
  {
   "model": "zturbo",
@@ -31,7 +31,7 @@
   "cacat_berulang": "Teks rawak, label atau tanda baca tambahan (6 imej, 3 design); Bilangan baris salah (baris dipisah) (3 imej, 1 design); Perkataan berulang atau tertinggal (2 imej, 2 design); Cacat lain (tiada kelas) (5 imej, 3 design); Hiasan yang tidak diminta (4 imej, 2 design); Bentuk huruf atau saiz label lain daripada kad (3 imej, 1 design); Hiasan di tempat salah (3 imej, 1 design)",
   "tindakan": "Cacat 'Teks rawak, label atau tanda baca tambahan': Pilihan ubahan habis: tukar ke model seterusnya ikut jadual model × gaya, kemudian pendekkan ayat, kemudian lapor kepada pengguna",
   "ubahan_dicuba": 3,
-  "tarikh": "2026-11-27"
+  "tarikh": "2026-11-28"
  },
  {
   "model": "ernie",
@@ -39,16 +39,16 @@
   "bahagian": "3.6",
   "rev": "r1",
   "status": "diuji: K3H, CPU, 3 seed",
-  "imej": 46,
-  "imej_semasa": 27,
-  "lulus_semasa": 26,
+  "imej": 52,
+  "imej_semasa": 24,
+  "lulus_semasa": 23,
   "pct_semasa": 96,
   "suka": 0,
   "tolak": 0,
   "cacat_berulang": "Bentuk huruf atau saiz label lain daripada kad (6 imej, 2 design); Cacat lain (tiada kelas) (2 imej, 1 design)",
   "tindakan": "Satu ubahan untuk jana seterusnya model ini: PEMBINA_UJI=ernie_frasa_bentuk (Frasa bentuk huruf dalam aturan model) bagi cacat 'Bentuk huruf atau saiz label lain daripada kad' (imej lulus; ciri gaya kad) (6 imej, 2 design); jana bersama aturan semasa, seed sama",
-  "ubahan_dicuba": 2,
-  "tarikh": "2026-11-27"
+  "ubahan_dicuba": 3,
+  "tarikh": "2026-11-28"
  },
  {
   "model": "moss",
@@ -65,7 +65,7 @@
   "cacat_berulang": "Perkataan salah eja, rosak, atau huruf besar / kecil salah (3 imej, 1 design); Hiasan yang tidak diminta (3 imej, 1 design)",
   "tindakan": "Cacat 'Perkataan salah eja, rosak, atau huruf besar / kecil salah': Pilihan ubahan habis: tukar ke model seterusnya ikut jadual model × gaya, kemudian pendekkan ayat, kemudian lapor kepada pengguna",
   "ubahan_dicuba": 3,
-  "tarikh": "2026-11-27"
+  "tarikh": "2026-11-28"
  },
  {
   "model": "klein3",
@@ -82,7 +82,7 @@
   "cacat_berulang": "-",
   "tindakan": "Tiada tindakan: tiada cacat berulang pada aturan semasa",
   "ubahan_dicuba": 2,
-  "tarikh": "2026-11-27"
+  "tarikh": "2026-11-28"
  },
  {
   "model": "qwen",
@@ -99,7 +99,7 @@
   "cacat_berulang": "-",
   "tindakan": "Belum diuji: ujian kelayakan (rangka am lawan aturan r0; kad sama; seed 42, 7, 123; perlu izin jana)",
   "ubahan_dicuba": 0,
-  "tarikh": "2026-11-27"
+  "tarikh": "2026-11-28"
  },
  {
   "model": "glm",
@@ -116,6 +116,6 @@
   "cacat_berulang": "-",
   "tindakan": "Belum diuji: ujian kelayakan (rangka am lawan aturan r0; kad sama; seed 42, 7, 123; perlu izin jana)",
   "ubahan_dicuba": 0,
-  "tarikh": "2026-11-27"
+  "tarikh": "2026-11-28"
  }
 ]

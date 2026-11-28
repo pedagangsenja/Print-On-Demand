@@ -407,5 +407,39 @@
     "bad15511b4bfd39686dfa4bae145ece1"
    ]
   }
+ },
+ "v12c-uji-kotak": {
+  "ernie": {
+   "K11N_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K11N_s7": [
+    false,
+    "Tanda petikan tambahan pada 'BEGIN'",
+    ""
+   ],
+   "K11N_s123": [
+    true,
+    "",
+    ""
+   ],
+   "K12Y_s42": [
+    true,
+    "Kotak 'GROWTH' hanya garis luar, bukan kotak putih penuh (ciri kad); garis tambahan di hujung 'LET YOUR'",
+    ""
+   ],
+   "K12Y_s7": [
+    true,
+    "Kotak 'GROWTH' hanya garis luar, bukan kotak putih penuh (ciri kad)",
+    ""
+   ],
+   "K12Y_s123": [
+    true,
+    "Kotak 'GROWTH' hanya garis luar, bukan kotak putih penuh (ciri kad)",
+    ""
+   ]
+  }
  }
 }

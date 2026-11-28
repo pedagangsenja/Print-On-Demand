@@ -43,7 +43,7 @@ MODEL = list(REV)
 W, H = 768, 1024
 # Ubahan CALON kitaran QC (langkah 5): hanya hidup bila dinamakan dalam PEMBINA_UJI (dipisah koma). Ubahan yang
 # berjaya ditulis balik ke aturan (rev naik) dan dibuang dari sini; yang gagal dicatat dalam standard dan dibuang.
-# Calon semasa: ernie_kotak_positif (K11N, K12Y), ernie_frasa_bentuk (K7M, K8G) (28 Nov 2026). (27 Nov 2026: 'zturbo_had_positif' pada K9B 1/3 -> 1/3 dan 'ernie_had_positif' pada K11N 2/3 -> 2/3, kalah, dibuang.) (26 Nov 2026: 'zturbo_satu_baris' diuji pada K8G, tidak berjaya, dibuang.)
+# Calon semasa: ernie_frasa_bentuk (K7M, K8G) (28 Nov 2026). ('ernie_kotak_positif' 28 Nov: K11N kotak 0/3 -> 3/3 tetapi K12Y 3/3 -> 0/3, kalah, dibuang.) (27 Nov 2026: 'zturbo_had_positif' pada K9B 1/3 -> 1/3 dan 'ernie_had_positif' pada K11N 2/3 -> 2/3, kalah, dibuang.) (26 Nov 2026: 'zturbo_satu_baris' diuji pada K8G, tidak berjaya, dibuang.)
 # Nama calon = <model>_<id pilihan> daripada belajar.py (KELAS), cth. zturbo_had_positif; belajar.py memutuskan menang / kalah (3.15).
 UJI = {u for u in os.environ.get("PEMBINA_UJI", "").split(",") if u}
 SATU = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"]
@@ -192,12 +192,7 @@ def ernie(m):
     s += tambahan(b)
     if "ernie_frasa_bentuk" in UJI:  # calon belajar 3.15 (28 Nov 2026, diluluskan pengguna): huruf berus nipis / kering (K7M, K8G)
         s.append("Every letter is drawn with a thick, heavy, fully filled stroke, never thin, scratchy or dry-brushed.")
-    had = f"Only these {SATU[m['nw'] - 1]} words, no other text"
-    if "ernie_kotak_positif" in UJI:  # calon pembaikan kotak (28 Nov 2026, diluluskan pengguna): ayat had positif
-        # 27 Nov: sebagai 'had_positif' kalah ikut G1-G2 (K11N 2/3 -> 2/3) tetapi kotak betul 3/3 (sebelum 0/3); diuji semula
-        had = (f"The only text in the image is these {SATU[m['nw'] - 1]} words, each drawn once exactly as written "
-               "between the quotes, without the quote marks")
-    s.append(f"{had}, pure black and white, "
+    s.append(f"Only these {SATU[m['nw'] - 1]} words, no other text, pure black and white, "
              f"{', '.join('no ' + x for x in b['tiada'])}, {b['gaya']} style, {b['margin']}.")
     return " ".join(s)
 
