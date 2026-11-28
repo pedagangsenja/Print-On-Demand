@@ -1,12 +1,17 @@
 {
  "versi": "s1 (27 Nov 2026)",
  "tarikh": "2026-11-28",
- "baris": 3400,
- "imej": 523,
+ "baris": 3008,
+ "imej": 481,
  "kad_dipakai": [
   "K10",
   "K11",
   "K12",
+  "K14",
+  "K15",
+  "K16",
+  "K17",
+  "K18",
   "K2",
   "K20",
   "K21",
@@ -89,16 +94,16 @@
    "versi": "5b v1.2",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 275,
-     "lulus": 263,
-     "cacat": 12,
+     "imej": 243,
+     "lulus": 234,
+     "cacat": 9,
      "input_rosak": 0,
-     "belum": 7,
+     "belum": 4,
      "tolak": 0
     },
     "5b v1.2": {
-     "imej": 149,
-     "lulus": 149,
+     "imej": 122,
+     "lulus": 122,
      "cacat": 0,
      "input_rosak": 1,
      "belum": 0,
@@ -114,8 +119,8 @@
     }
    },
    "semasa": {
-    "imej": 149,
-    "lulus": 149,
+    "imej": 122,
+    "lulus": 122,
     "cacat": 0,
     "input_rosak": 1,
     "belum": 0,
@@ -139,16 +144,16 @@
    "versi": "5b v1.2",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 65,
-     "lulus": 65,
+     "imej": 54,
+     "lulus": 54,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
      "tolak": 0
     },
     "5b v1.2": {
-     "imej": 32,
-     "lulus": 32,
+     "imej": 26,
+     "lulus": 26,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -164,8 +169,8 @@
     }
    },
    "semasa": {
-    "imej": 32,
-    "lulus": 32,
+    "imej": 26,
+    "lulus": 26,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -189,16 +194,16 @@
    "versi": "5b v1.2",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 337,
-     "lulus": 336,
+     "imej": 302,
+     "lulus": 301,
      "cacat": 1,
      "input_rosak": 0,
      "belum": 0,
      "tolak": 0
     },
     "5b v1.2": {
-     "imej": 169,
-     "lulus": 169,
+     "imej": 141,
+     "lulus": 141,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -214,8 +219,8 @@
     }
    },
    "semasa": {
-    "imej": 169,
-    "lulus": 169,
+    "imej": 141,
+    "lulus": 141,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -353,7 +358,7 @@
     }
    ],
    "calon": [],
-   "ubahan_dicuba": 22,
+   "ubahan_dicuba": 19,
    "tindakan": [
     {
      "jenis": "baiki",
@@ -409,11 +414,11 @@
    },
    "berulang": [],
    "calon": [],
-   "ubahan_dicuba": 7,
+   "ubahan_dicuba": 6,
    "tindakan": [
     {
-     "jenis": "tiada",
-     "teks": "Tiada tindakan: tiada cacat berulang"
+     "jenis": "parameter",
+     "teks": "Kad K14 ada 3 dakwat tetapi tiada peta_warna: tulis peta peranan -> dakwat ikut IMG_5838"
     }
    ]
   },

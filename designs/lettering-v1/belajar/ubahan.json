@@ -373,5 +373,20 @@
   "selepas": "6/6, bersih 1",
   "keputusan": "kalah",
   "nota": "Lebar baris masih tidak sama; huruf masih kurang kasar; dibuang dari UJI"
+ },
+ {
+  "tarikh": "2026-11-28",
+  "model": "zturbo",
+  "rev_dari": "r1",
+  "rev_ke": "r2",
+  "ubahan": "had_positif",
+  "kelas": [
+   "rawak"
+  ],
+  "design": "K16C, K17Z, K7M, K8G, K9B",
+  "sebelum": "2/15",
+  "selepas": "5/15",
+  "keputusan": "menang",
+  "nota": "Nama calon sama, tiga ayat berlainan dalam tiga sesi. Dinilai ikut ayat (28 Nov 2026, sesi hab): versi lucid-galileo ('The image shows exactly these N words ... every other area is plain empty black') K16C/K17Z 1/5 -> 2/5 tiada kelas baharu = MENANG, kini aturan 3.5 r2; versi nifty-lovelace K7M/K8G 0 -> 2 tiada kelas baharu; versi sleepy-edison K9B 1/3 -> 1/3 + hiasan_lebih = kalah. Gabungan nama sahaja (2/15 -> 5/15 + hiasan_lebih) tidak sah kerana ayat berbeza."
  }
 ]
