@@ -3,9 +3,9 @@
   "model": "klein4b",
   "nama": "FLUX.2 klein 4B",
   "bahagian": "3.4",
-  "rev": "r2",
-  "status": "diuji: K3H, CPU, 3 seed; r2 hiasan_kedudukan: K3K percikan di dalam label 3 -> 0 (b1.2)",
-  "imej": 42,
+  "rev": "r3",
+  "status": "diuji: K3H, CPU, 3 seed; r2 hiasan_kedudukan (K3K); r3 dua_kata_sebaris: K4q + K8G 2/6 -> 3/6",
+  "imej": 48,
   "imej_semasa": 0,
   "lulus_semasa": 0,
   "pct_semasa": null,
@@ -13,7 +13,7 @@
   "tolak": 0,
   "cacat_berulang": "-",
   "tindakan": "Tiada tindakan: tiada cacat berulang pada aturan semasa",
-  "ubahan_dicuba": 2,
+  "ubahan_dicuba": 3,
   "tarikh": "2026-11-28"
  },
  {
