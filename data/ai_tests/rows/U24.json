@@ -1,6 +1,6 @@
 [
  {
-  "key": "U15|zturbo-K10F-s42",
+  "key": "U24|zturbo-K10F-s42",
   "ai": true,
   "bukti": "lemah",
   "tempat": "CPU",
@@ -31,7 +31,7 @@
   "model_name": "Z-Image-Turbo",
   "label": "Z-Image-Turbo",
   "lajur": "Z-Image-Turbo",
-  "ujian": "U15",
+  "ujian": "U24",
   "ujian_nama": "Kitaran QC pusingan 1: Z-Image dan klein 4B (K10F, K12O)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: pintu G1–G3; ubahan dibanding dengan aturan semasa pada kad, ayat, seed sama",
@@ -39,7 +39,7 @@
   "varian": "calon tukar_peranan (FEWER utama → sokongan)"
  },
  {
-  "key": "U15|zturbo-K10F-s7",
+  "key": "U24|zturbo-K10F-s7",
   "ai": true,
   "bukti": "lemah",
   "tempat": "CPU",
@@ -70,7 +70,7 @@
   "model_name": "Z-Image-Turbo",
   "label": "Z-Image-Turbo",
   "lajur": "Z-Image-Turbo",
-  "ujian": "U15",
+  "ujian": "U24",
   "ujian_nama": "Kitaran QC pusingan 1: Z-Image dan klein 4B (K10F, K12O)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: pintu G1–G3; ubahan dibanding dengan aturan semasa pada kad, ayat, seed sama",
@@ -78,7 +78,7 @@
   "varian": "calon tukar_peranan (FEWER utama → sokongan)"
  },
  {
-  "key": "U15|zturbo-K10F-s123",
+  "key": "U24|zturbo-K10F-s123",
   "ai": true,
   "bukti": "lemah",
   "tempat": "CPU",
@@ -109,7 +109,7 @@
   "model_name": "Z-Image-Turbo",
   "label": "Z-Image-Turbo",
   "lajur": "Z-Image-Turbo",
-  "ujian": "U15",
+  "ujian": "U24",
   "ujian_nama": "Kitaran QC pusingan 1: Z-Image dan klein 4B (K10F, K12O)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: pintu G1–G3; ubahan dibanding dengan aturan semasa pada kad, ayat, seed sama",
@@ -117,7 +117,7 @@
   "varian": "calon tukar_peranan (FEWER utama → sokongan)"
  },
  {
-  "key": "U15|zturbo-K12O-s42",
+  "key": "U24|zturbo-K12O-s42",
   "ai": true,
   "bukti": "lemah",
   "tempat": "CPU",
@@ -148,7 +148,7 @@
   "model_name": "Z-Image-Turbo",
   "label": "Z-Image-Turbo",
   "lajur": "Z-Image-Turbo",
-  "ujian": "U15",
+  "ujian": "U24",
   "ujian_nama": "Kitaran QC pusingan 1: Z-Image dan klein 4B (K10F, K12O)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: pintu G1–G3; ubahan dibanding dengan aturan semasa pada kad, ayat, seed sama",
@@ -156,7 +156,7 @@
   "varian": "calon had_positif (ayat had positif tambahan)"
  },
  {
-  "key": "U15|zturbo-K12O-s7",
+  "key": "U24|zturbo-K12O-s7",
   "ai": true,
   "bukti": "lemah",
   "tempat": "CPU",
@@ -187,7 +187,7 @@
   "model_name": "Z-Image-Turbo",
   "label": "Z-Image-Turbo",
   "lajur": "Z-Image-Turbo",
-  "ujian": "U15",
+  "ujian": "U24",
   "ujian_nama": "Kitaran QC pusingan 1: Z-Image dan klein 4B (K10F, K12O)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: pintu G1–G3; ubahan dibanding dengan aturan semasa pada kad, ayat, seed sama",
@@ -195,7 +195,7 @@
   "varian": "calon had_positif (ayat had positif tambahan)"
  },
  {
-  "key": "U15|zturbo-K12O-s123",
+  "key": "U24|zturbo-K12O-s123",
   "ai": true,
   "bukti": "lemah",
   "tempat": "CPU",
@@ -226,7 +226,7 @@
   "model_name": "Z-Image-Turbo",
   "label": "Z-Image-Turbo",
   "lajur": "Z-Image-Turbo",
-  "ujian": "U15",
+  "ujian": "U24",
   "ujian_nama": "Kitaran QC pusingan 1: Z-Image dan klein 4B (K10F, K12O)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: pintu G1–G3; ubahan dibanding dengan aturan semasa pada kad, ayat, seed sama",
@@ -234,7 +234,7 @@
   "varian": "calon had_positif (ayat had positif tambahan)"
  },
  {
-  "key": "U15|klein4b-K10F-s42",
+  "key": "U24|klein4b-K10F-s42",
   "ai": true,
   "bukti": "lemah",
   "tempat": "CPU",
@@ -265,7 +265,7 @@
   "model_name": "FLUX.2 klein 4B",
   "label": "FLUX.2 klein 4B",
   "lajur": "FLUX.2 klein 4B",
-  "ujian": "U15",
+  "ujian": "U24",
   "ujian_nama": "Kitaran QC pusingan 1: Z-Image dan klein 4B (K10F, K12O)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: pintu G1–G3; ubahan dibanding dengan aturan semasa pada kad, ayat, seed sama",
@@ -273,7 +273,7 @@
   "varian": "calon tukar_peranan"
  },
  {
-  "key": "U15|klein4b-K10F-s7",
+  "key": "U24|klein4b-K10F-s7",
   "ai": true,
   "bukti": "lemah",
   "tempat": "CPU",
@@ -304,7 +304,7 @@
   "model_name": "FLUX.2 klein 4B",
   "label": "FLUX.2 klein 4B",
   "lajur": "FLUX.2 klein 4B",
-  "ujian": "U15",
+  "ujian": "U24",
   "ujian_nama": "Kitaran QC pusingan 1: Z-Image dan klein 4B (K10F, K12O)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: pintu G1–G3; ubahan dibanding dengan aturan semasa pada kad, ayat, seed sama",
@@ -312,7 +312,7 @@
   "varian": "calon tukar_peranan"
  },
  {
-  "key": "U15|klein4b-K10F-s123",
+  "key": "U24|klein4b-K10F-s123",
   "ai": true,
   "bukti": "lemah",
   "tempat": "CPU",
@@ -343,7 +343,7 @@
   "model_name": "FLUX.2 klein 4B",
   "label": "FLUX.2 klein 4B",
   "lajur": "FLUX.2 klein 4B",
-  "ujian": "U15",
+  "ujian": "U24",
   "ujian_nama": "Kitaran QC pusingan 1: Z-Image dan klein 4B (K10F, K12O)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: pintu G1–G3; ubahan dibanding dengan aturan semasa pada kad, ayat, seed sama",
@@ -351,7 +351,7 @@
   "varian": "calon tukar_peranan"
  },
  {
-  "key": "U15|klein4b-K12O-s42",
+  "key": "U24|klein4b-K12O-s42",
   "ai": true,
   "bukti": "lemah",
   "tempat": "CPU",
@@ -382,7 +382,7 @@
   "model_name": "FLUX.2 klein 4B",
   "label": "FLUX.2 klein 4B",
   "lajur": "FLUX.2 klein 4B",
-  "ujian": "U15",
+  "ujian": "U24",
   "ujian_nama": "Kitaran QC pusingan 1: Z-Image dan klein 4B (K10F, K12O)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: pintu G1–G3; ubahan dibanding dengan aturan semasa pada kad, ayat, seed sama",
