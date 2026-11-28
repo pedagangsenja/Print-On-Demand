@@ -1,0 +1,366 @@
+{
+ "nota": "Larian 27 Nov 2026: lima gambar upload, K9-K13, CPU, hitam putih. Semakan mata Claude pada helaian + potongan besar. Bukti lemah. ok = G1 (ejaan, huruf besar / kecil, baris) dan G2 (tiada teks / tanda rawak).",
+ "saringan_trademark": {
+  "kaedah": "Carian web (enjin carian umum, 27 Nov 2026) bagi frasa tepat + 'trademark'; semak hasil Justia / USPTO yang keluar. Saringan sahaja, bukan pengesahan undang-undang; TESS/TSDR USPTO belum disemak terus.",
+  "hasil": {
+   "R Hold your ground": "Permohonan HOLD YOUR GROUND (siri 88916197, pakaian) ditinggalkan 2021-03-09 (Justia, pihak ketiga). Risiko rendah; semak TSDR sebelum jual.",
+   "Q Do The Work Quietly": "Tiada rekod ditemui.",
+   "A Doubt Loses To Action": "Tiada rekod frasa tepat. DOUBT (CBS, kelas 9) dan DOUBT YOUR DOUBT (ditinggalkan) bukan frasa ini.",
+   "T Effort Today Freedom Tomorrow": "Tiada rekod ditemui.",
+   "S Steady Hands Build Strong Lives": "Tiada rekod frasa tepat. STEADY HANDS (sarung tangan, 2018) dan A STEADY HAND (2024, khidmat amal) bukan frasa penuh."
+  }
+ },
+ "v12-cpu-k50k54": {
+  "moss": {
+   "K50k_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K50k_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K51m_s42": [
+    true,
+    "kedudukan: blok tinggi di kanvas (SK03)",
+    ""
+   ],
+   "K51m_s7": [
+    true,
+    "kedudukan: blok tinggi di kanvas (SK03)",
+    ""
+   ],
+   "K52A_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K52A_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K53n_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K53n_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K54p_s42": [
+    true,
+    "lebar baris tidak sama (BUILD dijarakkan) - nota gaya",
+    ""
+   ],
+   "K54p_s7": [
+    true,
+    "lebar baris tidak sama (BUILD dijarakkan) - nota gaya",
+    ""
+   ],
+   "K54p_s123": [
+    true,
+    "lebar baris tidak sama (BUILD dijarakkan) - nota gaya",
+    ""
+   ]
+  },
+  "ernie": {
+   "K50k_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K50k_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K51m_s42": [
+    true,
+    "WORK tidak cukup besar (hierarki lemah, nota gaya)",
+    ""
+   ],
+   "K51m_s7": [
+    true,
+    "WORK tidak cukup besar (hierarki lemah, nota gaya)",
+    ""
+   ],
+   "K52A_s42": [
+    false,
+    "G3: garis tambahan: bingkai putih separa di tepi; 5b membaca latar sebagai putih (input rosak)",
+    ""
+   ],
+   "K52A_s7": [
+    false,
+    "G3: garis tambahan: bingkai putih separa di tepi; 5b membaca latar sebagai putih (input rosak)",
+    ""
+   ],
+   "K53n_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K53n_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K54p_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K54p_s7": [
+    false,
+    "G3: garis tambahan: bingkai putih separa di tepi; 5b membaca latar sebagai putih (input rosak)",
+    ""
+   ],
+   "K54p_s123": [
+    true,
+    "",
+    ""
+   ]
+  },
+  "klein3": {
+   "K50k_s42": [
+    true,
+    "blok kecil di tengah (ruang tepi, SK02)",
+    ""
+   ],
+   "K50k_s7": [
+    true,
+    "blok kecil (ruang tepi, SK02)",
+    ""
+   ],
+   "K51m_s42": [
+    false,
+    "ciri teras gagal: bentuk huruf lebar, bukan sempit tinggi (condensed) seperti kad (syarat QC, keputusan pengguna 28 Nov 2026)",
+    ""
+   ],
+   "K51m_s7": [
+    false,
+    "ciri teras gagal: bentuk huruf lebar, bukan sempit tinggi (condensed) seperti kad (syarat QC, keputusan pengguna 28 Nov 2026)",
+    ""
+   ],
+   "K52A_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K52A_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K53n_s42": [
+    true,
+    "hiasan atas menyentuh huruf O (tempat salah); dakwat krim bertekstur (kelabu, SK04)",
+    ""
+   ],
+   "K53n_s7": [
+    true,
+    "hiasan atas menyentuh huruf O (tempat salah); dakwat krim (kelabu, SK04)",
+    ""
+   ],
+   "K54p_s42": [
+    false,
+    "ciri teras gagal: bentuk huruf lebar, bukan sempit tinggi (condensed) seperti kad (syarat QC, keputusan pengguna 28 Nov 2026); sentuh tepi kiri / kanan (ruang tepi, SK02)",
+    ""
+   ],
+   "K54p_s7": [
+    false,
+    "ciri teras gagal: bentuk huruf lebar, bukan sempit tinggi (condensed) seperti kad (syarat QC, keputusan pengguna 28 Nov 2026); sentuh tepi kiri / kanan (ruang tepi, SK02)",
+    ""
+   ],
+   "K54p_s123": [
+    false,
+    "ciri teras gagal: bentuk huruf lebar, bukan sempit tinggi (condensed) seperti kad (syarat QC, keputusan pengguna 28 Nov 2026); sentuh tepi kiri / kanan (ruang tepi, SK02)",
+    ""
+   ]
+  },
+  "zturbo": {
+   "K50k_s42": [
+    true,
+    "blok hampir sentuh tepi kiri (ruang tepi, SK02)",
+    ""
+   ],
+   "K50k_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K51m_s42": [
+    true,
+    "sentuh tepi atas (ruang tepi, SK02)",
+    ""
+   ],
+   "K51m_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K52A_s42": [
+    false,
+    "G2: tanda rawak serpihan jalur di atas kiri huruf A, dibaca seperti tanda petikan; bar ucapan tiada",
+    ""
+   ],
+   "K52A_s7": [
+    true,
+    "jalur hazard menyentuh huruf A dan C (hiasan di tempat salah); LOSES TO tidak kecil (nota gaya)",
+    ""
+   ],
+   "K53n_s42": [
+    true,
+    "hiasan atas menyentuh huruf O (tempat salah)",
+    ""
+   ],
+   "K53n_s7": [
+    true,
+    "hiasan atas menyentuh huruf O (tempat salah)",
+    ""
+   ],
+   "K54p_s42": [
+    true,
+    "hampir sentuh tepi atas (ruang tepi, SK02)",
+    ""
+   ],
+   "K54p_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K54p_s123": [
+    true,
+    "",
+    ""
+   ]
+  },
+  "klein4b": {
+   "K50k_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K50k_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K51m_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K51m_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K52A_s42": [
+    true,
+    "jalur hazard menyentuh atas huruf A (hiasan di tempat salah)",
+    ""
+   ],
+   "K52A_s7": [
+    true,
+    "jalur hazard menyentuh atas huruf A dan C (hiasan di tempat salah)",
+    ""
+   ],
+   "K53n_s42": [
+    false,
+    "G3: garis tambahan: garis tegak separa di tepi kanan (cacat cetak)",
+    ""
+   ],
+   "K53n_s7": [
+    true,
+    "garis tambahan: bingkai garis nipis di sekeliling (tidak diminta)",
+    ""
+   ],
+   "K54p_s42": [
+    false,
+    "G1: 'BUILD' jadi 'BUIILD' (huruf I berulang)",
+    ""
+   ],
+   "K54p_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K54p_s123": [
+    true,
+    "",
+    ""
+   ]
+  }
+ },
+ "v12-cpu-k50k54-p1": {
+  "ernie": {
+   "K52A_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K52A_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K52A_s123": [
+    true,
+    "",
+    ""
+   ],
+   "K54p_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K54p_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K54p_s123": [
+    false,
+    "G2: tanda petikan tambahan sebelum 'STEADY'",
+    ""
+   ]
+  },
+  "klein3": {
+   "K51m_s42": [
+    false,
+    "ciri teras gagal: bentuk huruf lebar, bukan sempit tinggi (condensed) seperti kad",
+    ""
+   ],
+   "K51m_s7": [
+    false,
+    "ciri teras gagal: bentuk huruf lebar, bukan sempit tinggi (condensed) seperti kad",
+    ""
+   ],
+   "K51m_s123": [
+    false,
+    "ciri teras gagal: bentuk huruf lebar, bukan sempit tinggi (condensed) seperti kad",
+    ""
+   ],
+   "K54p_s42": [
+    false,
+    "ciri teras gagal: bentuk huruf lebar, bukan sempit tinggi (condensed) seperti kad",
+    ""
+   ],
+   "K54p_s7": [
+    false,
+    "ciri teras gagal: bentuk huruf lebar, bukan sempit tinggi (condensed) seperti kad",
+    ""
+   ],
+   "K54p_s123": [
+    false,
+    "ciri teras gagal: bentuk huruf lebar, bukan sempit tinggi (condensed) seperti kad",
+    ""
+   ]
+  }
+ }
+}

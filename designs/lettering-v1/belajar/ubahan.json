@@ -478,5 +478,50 @@
   "selepas": "5/5",
   "keputusan": "kalah",
   "nota": "Ayat 'Letter shapes: ...' (bentuk huruf setiap peranan disebut semula) ditambah; izin jana pengguna 28 Nov 2026 (raw/v12e-cpu-p2). Ejaan 6/6 betul. K43i: huruf sedikit tebal tetapi tidak bertaut, garis lengkung tambahan 2/3. K7M: swash bawah baris akhir hilang 3/3 (ciri kad). Tidak lebih baik, ada cacat baharu. Dibuang"
+ },
+ {
+  "tarikh": "2026-11-27",
+  "model": "zturbo",
+  "rev_dari": "r1",
+  "rev_ke": "r1",
+  "ubahan": "had_positif",
+  "kelas": [
+   "rawak"
+  ],
+  "design": "K52A, K7M, K8G",
+  "sebelum": "-",
+  "selepas": "-",
+  "keputusan": "tidak berkenaan",
+  "nota": "Aturan 3.5 r1 sudah menulis had sebagai ayat positif ('The only text in the image is these N words...') dan tiada perkataan berisiko (label, logo, signature, watermark); calon sama dengan aturan semasa, jadi tidak dijana"
+ },
+ {
+  "tarikh": "2026-11-27",
+  "model": "ernie",
+  "rev_dari": "r1",
+  "rev_ke": "r1",
+  "ubahan": "hiasan_tepat",
+  "kelas": [
+   "hiasan_lebih"
+  ],
+  "design": "K52A, K54p",
+  "sebelum": "2/5",
+  "selepas": "4/5",
+  "keputusan": "kalah",
+  "nota": "Tambah 'These are the only decorations, on a clean empty background.' (K52A) / 'There are no decorations, only a clean empty background.' (K54p). Bingkai putih hilang 6/6, tetapi K54p s123 kini ada tanda petikan tambahan (kelas cacat baharu: rawak). Seed 42, 7 (+123 K52A baharu). Dibuang. Imej K52A pusingan ini lulus QC dan dipakai (kitaran QC tamat)"
+ },
+ {
+  "tarikh": "2026-11-28",
+  "model": "klein3",
+  "rev_dari": "r1",
+  "rev_ke": "r1",
+  "ubahan": "frasa_bentuk",
+  "kelas": [
+   "bentuk"
+  ],
+  "design": "K51m, K54p",
+  "sebelum": "0/5",
+  "selepas": "0/5",
+  "keputusan": "kalah",
+  "nota": "Tambah 'Every letter is a tall, narrow condensed letterform, much taller than it is wide.' Huruf masih lebar pada 6/6 imej (seed 42, 7, 123; K51m s123 baharu). Dibuang. Pilihan bentuk habis: FLUX 3 Klein tidak sesuai untuk K10 / K13 (model lain lulus)"
  }
 ]

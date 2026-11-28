@@ -30,7 +30,7 @@ import akar  # noqa: E402
 import pembina  # noqa: E402
 import belajar_sk  # noqa: E402
 
-VERSI = "b1.4 (28 Nov 2026)"  # b1.4 = gabung b1.1 sleepy-edison + b1.2 nifty-lovelace + b1.3 lucid-galileo (pemecah seri: lulus, ♥, bersih, cacat sasaran)
+VERSI = "b1.5 (28 Nov 2026)"  # b1.5 = b1.4 (sleepy-edison + nifty-lovelace + lucid-galileo) + b1.2 focused-faraday (kelas bentuk "bentuk huruf lebar") (pemecah seri: lulus, ♥, bersih, cacat sasaran)
 B = os.path.join(HERE, "belajar")
 STOR = os.path.join(B, "stor", "data")
 EXPORT = os.path.normpath(os.path.join(HERE, "..", "..", "data", "export", "ai_tests", "aturan_belajar.json"))

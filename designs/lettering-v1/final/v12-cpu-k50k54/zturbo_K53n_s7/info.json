@@ -1,0 +1,44 @@
+{
+ "versi": "SK06 v1.3 (27 Nov 2026)",
+ "raw": "zturbo_K53n_s7_warna.png",
+ "style": "S1",
+ "palet": "kad K12",
+ "bg": "#0b0b0a",
+ "fills": [
+  "#f4f4f2"
+ ],
+ "layers": 1,
+ "ink_px": [
+  5939427
+ ],
+ "sizes": {
+  "18x24": [
+   5400,
+   7200
+  ]
+ },
+ "tekstur": {
+  "kad": "K53",
+  "teks": "lusuh cetakan halus",
+  "jenis": "worn",
+  "kuat": 0.6,
+  "tidak_dibuat": []
+ },
+ "amaran": [],
+ "tepi": {
+  "sasaran": {
+   "sisi": 4.6,
+   "atas_bawah": 1.6,
+   "sumber": "SK05 pada IMG_5786 (1024x1535; garis pembahagi hampir ke tepi)"
+  },
+  "hasil": {
+   "18x24": {
+    "kiri": 4.9,
+    "kanan": 4.9,
+    "atas": 1.6,
+    "bawah": 1.6
+   }
+  },
+  "dakwat_min_pct": 2.17
+ }
+}
