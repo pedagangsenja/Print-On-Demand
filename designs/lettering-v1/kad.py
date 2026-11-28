@@ -672,7 +672,7 @@ BLOK = {
 
 # ---------------------------------------------------------------------------------------------------------------
 # 27 Nov 2026 (petang): lima gambar upload baharu, larian v1.2 kedua (arahan pengguna: ayat dipilih Claude, CPU,
-# hitam putih, 3 seed). K14-K17 (asalnya K9-K12; dinamakan semula 28 Nov 2026 kerana cawangan lain memakai K9-K12) = kad baharu dibuat Claude daripada gambar (diluluskan pengguna
+# hitam putih, 3 seed). K30-K33 (asalnya K9-K12, kemudian K14-K17; dinamakan semula 28 Nov 2026 kerana cawangan lain memakai nombor itu) = kad baharu dibuat Claude daripada gambar (diluluskan pengguna
 # 28 Nov 2026). IMG_5727 = poster yang sama dengan K4 (IMG_5764), jadi kad K4 dipakai (langkah 1b).
 # Gambar rujukan disimpan di designs/lettering-v1/rujukan/ (langkah 1a). Ruang tepi + condong diukur SK05 v1.1;
 # warna dakwat diukur (k-means piksel dakwat, anggaran). Ayat cadangan Claude; saringan trademark: lihat
@@ -694,7 +694,7 @@ AYAT.update({
 })
 
 KAD.update({
-    "K14": dict(
+    "K30": dict(
         nama="Skrip sukan tebal bertaut + ekor swash bawah (krim atas hitam)", ref="IMG_5852",
         snc="belum", versi="v1.0 (27 Nov 2026; diluluskan pengguna 28 Nov 2026)",
         kelas="F1", dakwat=1, ruang_tepi=11, tekstur="tiada (vektor rata)", julat="1-3 perkataan",
@@ -722,7 +722,7 @@ KAD.update({
             ("Tepi licin, vektor rata, tiada tekstur", False),
             ("Satu warna cerah atas hitam", False),
             ("Tiada hiasan lain", False)]),
-    "K15": dict(
+    "K31": dict(
         nama="Berus kering huruf besar + skrip dalam kapsul + doodle (krim + oren atas hitam)", ref="IMG_5751",
         snc="belum", versi="v1.0 (27 Nov 2026; diluluskan pengguna 28 Nov 2026)",
         kelas="F2", dakwat=2, ruang_tepi=9, tekstur="lusuh berus kering", julat="4-6 perkataan",
@@ -750,7 +750,7 @@ KAD.update({
             ("Tekstur lusuh dalam huruf", False),
             ("Perkataan utama paling besar", False),
             ("Tiada teks lain", False)]),
-    "K16": dict(
+    "K32": dict(
         nama="Huruf tangan ganjil bercampur + terminal ikal + lusuh saring (dua biru atas biru gelap)", ref="IMG_5739",
         snc="belum", versi="v1.0 (27 Nov 2026; diluluskan pengguna 28 Nov 2026)",
         kelas="F2", dakwat=2, ruang_tepi=9, tekstur="lusuh cetakan saring", julat="5-8 perkataan",
@@ -780,7 +780,7 @@ KAD.update({
             ("Satu garis lengkung di bawah perkataan utama", False),
             ("Perkataan utama paling besar", False),
             ("Tiada teks lain", False)]),
-    "K17": dict(
+    "K33": dict(
         nama="Blok huruf tangan cop kering + kurungan tebal + anak panah (hijau tua atas biru air)", ref="IMG_5743",
         snc="belum", versi="v1.0 (27 Nov 2026; diluluskan pengguna 28 Nov 2026)",
         kelas="F2", dakwat=1, ruang_tepi=15, tekstur="lusuh cop kering", julat="2-4 perkataan",
@@ -812,7 +812,7 @@ KAD.update({
 BLOK["K4"]["rujukan"] = dict(condong_darjah=1.0, tepi_pct=12.0, tepi_sisi_pct=9.6, tepi_atas_bawah_pct=11.8,
                              sumber="SK05 pada IMG_5727 (foto poster atas kayu: dipotong ke poster, ambang 150; anggaran)")
 BLOK.update({
-    "K14": dict(
+    "K30": dict(
         medium="sports script typography poster", gaya="flat vector hand-lettered", latar_warna="solid black",
         latar_isi=None, tepi="crisp clean vector edges", bentuk="one compact two-line lockup",
         condong="rises toward the right", sentuh="nest closely", margin="moderate black margins",
@@ -829,7 +829,7 @@ BLOK.update({
         # SK05 v1.1 pada IMG_5852 (1200x900, melintang), 27 Nov 2026. Satu gambar.
         rujukan=dict(condong_darjah=12.5, tepi_pct=11.2, tepi_sisi_pct=12.3, tepi_atas_bawah_pct=9.4,
                      sumber="SK05 pada IMG_5852")),
-    "K15": dict(
+    "K31": dict(
         medium="motivational typography poster", gaya="hand-lettered", latar_warna="solid black", latar_isi=None,
         tepi="a rough dry-brush texture", bentuk="one tight centered block", condong=None,
         sentuh="sit close together", margin="moderate black margins",
@@ -851,7 +851,7 @@ BLOK.update({
         # blok tegak, jadi kad tidak meminta SK01 memutar blok (condong=None).
         rujukan=dict(condong_darjah=9.8, tepi_pct=9.4, tepi_sisi_pct=17.6, tepi_atas_bawah_pct=9.4,
                      sumber="SK05 pada IMG_5751")),
-    "K16": dict(
+    "K32": dict(
         medium="quirky typography poster", gaya="hand-drawn", latar_warna="solid black", latar_isi=None,
         tepi="a worn screen-print speckle texture", bentuk="one tall tight block in which every line is stretched to the block width",
         condong=None, sentuh="interlock like a puzzle", margin="moderate black margins",
@@ -867,7 +867,7 @@ BLOK.update({
         # SK05 v1.1 pada IMG_5739 (700x833), 27 Nov 2026. Blok tegak (condong 7.2 daripada garis lengkung), condong=None.
         rujukan=dict(condong_darjah=7.2, tepi_pct=8.6, tepi_sisi_pct=15.0, tepi_atas_bawah_pct=7.9,
                      sumber="SK05 pada IMG_5739")),
-    "K17": dict(
+    "K33": dict(
         medium="stamped typography poster", gaya="hand-drawn", latar_warna="solid black", latar_isi=None,
         tepi="a dry stamped ink texture with tiny speckles", bentuk="one compact upright block", condong=None,
         sentuh="sit close together", margin="wide empty black margins",

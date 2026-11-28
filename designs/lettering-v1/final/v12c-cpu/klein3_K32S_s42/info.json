@@ -1,0 +1,44 @@
+{
+ "versi": "SK06 v1.5 (27 Nov 2026)",
+ "raw": "klein3_K32S_s42.png",
+ "style": "S3",
+ "palet": null,
+ "bg": "#0b0b0b",
+ "fills": [
+  "#ffffff"
+ ],
+ "layers": 1,
+ "ink_px": [
+  1334416
+ ],
+ "sizes": {
+  "18x24": [
+   5400,
+   7200
+  ]
+ },
+ "tekstur": {
+  "kad": "K32",
+  "teks": "lusuh cetakan saring",
+  "jenis": "worn",
+  "kuat": 1.0,
+  "tidak_dibuat": []
+ },
+ "amaran": [],
+ "tepi": {
+  "sasaran": {
+   "sisi": 15.0,
+   "atas_bawah": 7.9,
+   "sumber": "SK05 pada IMG_5739"
+  },
+  "hasil": {
+   "18x24": {
+    "kiri": 15.0,
+    "kanan": 15.0,
+    "atas": 20.8,
+    "bawah": 26.8
+   }
+  },
+  "dakwat_min_pct": 15.0
+ }
+}
