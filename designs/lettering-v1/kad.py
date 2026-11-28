@@ -464,15 +464,16 @@ BLOK = {
                      tekstur=dict(jenis="marker", latar_halus=8.9, latar_sederhana=5.93, latar_kasar=5.22, dakwat_sd=8.21,
                                   dakwat_sd1=4.68, tepi_kasar=1.342, latar_median=27.0, lebar_blok=369,
                                   g_sederhana=5.72, g_kasar=4.75, g_dakwat=5.28, sumber="SK06 --ukur-tekstur pada IMG_5735",
-                                  had=["butir bawah 1 px dan tepi marker kering tidak ditiru: pada JPEG 600x449 itu kesan "
-                                       "mampatan; perlu gambar upload lebih besar"]))),
+                                  had_kekal=["butir bawah 1 px dan tepi marker kering tidak ditiru: pada JPEG 600x449 itu kesan "
+                                             "mampatan. Pengguna 28 Nov 2026: tiada gambar asal lebih besar, jadi had ini "
+                                             "kekal (bukan TINDAKAN ukur lagi)"]))),
 }
 
 
 # ---------------------------------------------------------------------------------------------------------------
 # 27 Nov 2026 (petang): lima gambar upload baharu, larian v1.2 kedua (arahan pengguna: ayat dipilih Claude, CPU,
-# hitam putih, 3 seed). K9-K12 = kad baharu dibuat Claude daripada gambar (belum diluluskan pengguna; pengguna
-# membenarkan jana terus). IMG_5727 = poster yang sama dengan K4 (IMG_5764), jadi kad K4 dipakai (langkah 1b).
+# hitam putih, 3 seed). K9-K12 = kad baharu dibuat Claude daripada gambar (diluluskan pengguna
+# 28 Nov 2026). IMG_5727 = poster yang sama dengan K4 (IMG_5764), jadi kad K4 dipakai (langkah 1b).
 # Gambar rujukan disimpan di designs/lettering-v1/rujukan/ (langkah 1a). Ruang tepi + condong diukur SK05 v1.1;
 # warna dakwat diukur (k-means piksel dakwat, anggaran). Ayat cadangan Claude; saringan trademark: lihat
 # designs/lettering-v1/qc/v12b_ayat.json.
@@ -495,7 +496,7 @@ AYAT.update({
 KAD.update({
     "K9": dict(
         nama="Skrip sukan tebal bertaut + ekor swash bawah (krim atas hitam)", ref="IMG_5852",
-        snc="belum", versi="v1.0 (27 Nov 2026; belum diluluskan pengguna)",
+        snc="belum", versi="v1.0 (27 Nov 2026; diluluskan pengguna 28 Nov 2026)",
         kelas="F1", dakwat=1, ruang_tepi=11, tekstur="tiada (vektor rata)", julat="1-3 perkataan",
         warna=dict(latar=("hitam", "#1a1a1a", "black"), dakwat=[("krim", "#fef2db", "white")]),
         medium="Hand-lettered sports script typography poster, portrait.",
@@ -523,7 +524,7 @@ KAD.update({
             ("Tiada hiasan lain", False)]),
     "K10": dict(
         nama="Berus kering huruf besar + skrip dalam kapsul + doodle (krim + oren atas hitam)", ref="IMG_5751",
-        snc="belum", versi="v1.0 (27 Nov 2026; belum diluluskan pengguna)",
+        snc="belum", versi="v1.0 (27 Nov 2026; diluluskan pengguna 28 Nov 2026)",
         kelas="F2", dakwat=2, ruang_tepi=9, tekstur="lusuh berus kering", julat="4-6 perkataan",
         warna=dict(latar=("hitam", "#191919", "black"), dakwat=[("krim", "#e7d6c1", "white"), ("oren", "#fb683f", "white")]),
         peta_warna=dict(utama=1, sokongan=0, penyambung=0, hiasan=0),   # perkataan utama oren, lain krim
@@ -551,7 +552,7 @@ KAD.update({
             ("Tiada teks lain", False)]),
     "K11": dict(
         nama="Huruf tangan ganjil bercampur + terminal ikal + lusuh saring (dua biru atas biru gelap)", ref="IMG_5739",
-        snc="belum", versi="v1.0 (27 Nov 2026; belum diluluskan pengguna)",
+        snc="belum", versi="v1.0 (27 Nov 2026; diluluskan pengguna 28 Nov 2026)",
         kelas="F2", dakwat=2, ruang_tepi=9, tekstur="lusuh cetakan saring", julat="5-8 perkataan",
         warna=dict(latar=("biru gelap", "#011841", "black"),
                    dakwat=[("biru pucat", "#b9e6f8", "white"), ("biru cerah", "#81d2f5", "white")]),
@@ -581,7 +582,7 @@ KAD.update({
             ("Tiada teks lain", False)]),
     "K12": dict(
         nama="Blok huruf tangan cop kering + kurungan tebal + anak panah (hijau tua atas biru air)", ref="IMG_5743",
-        snc="belum", versi="v1.0 (27 Nov 2026; belum diluluskan pengguna)",
+        snc="belum", versi="v1.0 (27 Nov 2026; diluluskan pengguna 28 Nov 2026)",
         kelas="F2", dakwat=1, ruang_tepi=15, tekstur="lusuh cop kering", julat="2-4 perkataan",
         warna=dict(latar=("biru air pucat", "#ccfcfe", "black"), dakwat=[("hijau tua", "#043e3f", "white")]),
         medium="Hand-drawn stamped typography poster, portrait.",

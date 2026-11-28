@@ -701,7 +701,7 @@ Model baharu juga memerlukan aturan prompt sendiri sebelum dipakai untuk design 
 
 ## Larian v1.2 kedua (27 Nov 2026, arahan pengguna)
 - **Tugas:** lima gambar upload, ayat baharu (pilihan Claude), semua model CPU, 3 seed (42, 7, 123), hitam putih, QC + gaya. Qwen-Image-2512 dan GLM-Image dilangkau (tidak muat 4 CPU / 15 GB).
-- **Design dan kad:**
+- **Design dan kad** (K9–K12 diluluskan pengguna 28 Nov 2026; nota: cawangan lain memakai nama K9–K13 untuk kad berlainan):
 
 | Id | Gambar upload | Kad | Ayat | Rujukan SK05 (condong; tepi sisi / atas-bawah) |
 |---|---|---|---|---|
@@ -716,6 +716,7 @@ Model baharu juga memerlukan aturan prompt sendiri sebelum dipakai untuk design 
 - **QC (`qc/v12b_cpu.json`, semakan mata huruf demi huruf; bukti lemah):** 55/75 lulus. MOSS 12/15, ERNIE 12/15, FLUX 3 Klein 14/15, Z-Image 9/15, klein 4B 8/15. K4F dan K12Y lulus pada semua model (K12Y klein 4B 2/3). K11S: MOSS dan ERNIE 0/3 (teks rawak di sisi: kapsyen penyambung "tucked tightly beside" + kotak penuh lebar), FLUX 3 Klein 2/3, Z-Image 1/3, klein 4B 0/3 (BRILLIANT hilang I). K9B: Z-Image dan klein 4B 0/3 ('Anyway' salah eja), model lain 3/3. Kitaran QC tamat tanpa larian semula (setiap design ada imej lulus).
 - **5b:** 55 imej; v1.1 52/55, v1.2 54/55 (baki: ERNIE K9B s7 condong 15.5° lawan 12.5°, swash dikira dalam sudut; 1 imej, dipantau).
 - **Kemasan:** 12 imej, gaya S3; kad 1 dakwat dengan warna C003 (SK07 → SK08 → SK06); K10 dan K11 (2 dakwat) terus SK06 `--kad` kerana tiada palet hitam putih 2 dakwat. `final/v12b-cpu/`, SK06 v1.4–v1.6.
+- **Dashboard (pengguna 28 Nov 2026: A):** 75 imej + 12 poster siap + 5 gambar rujukan di tab AI Image Test sebagai ujian U17 (`data/ai_tests/rows/U17.json`, `qc/v12b_blobs.json`); U13–U16 sudah dipakai sesi lain. Calon prompt diluluskan untuk larian seterusnya.
 - **Belajar (3.15):** calon `zturbo_had_positif`, `klein4b_hiasan_kedudukan`, `klein4b_cara_baris` (lihat Catatan pembaikan aturan model). "Cacat lain (tiada kelas)" ERNIE dan FLUX 3 Klein = nota imej lulus (ciri 7/8, SK04), bukan cacat.
 
 ## Catatan pembaikan aturan model
@@ -739,7 +740,7 @@ Setiap ubahan aturan (3.4–3.10) direkod di sini, dan juga dalam `designs/lette
 - v1.2, sudah dibina (26 Nov): SK01–SK05 dan `betulkan.py`; SK06 (`finish.py`) dibawa ke cawangan ini.
 - v1.2, sudah dibina (27 Nov): belajar selepas setiap jana (`belajar.py`, 3.15). `gen_hf_space.py` (ujian K6 lama) belum mencatat `rev` dan `uji`.
 - v1.2, sudah dibina (27 Nov): SK07 (warna ikut peranan), SK08 (bayang dalam huruf K3), `kemasan.py`; SK06 `--palet`.
-- v1.2, belum dibina: tepi marker kering K8 (perlu gambar upload lebih besar; butir latar sudah, SK06 v1.3); semakan ejaan automatik (kini mata sahaja); bayang lembut K1. (Selesai 27 Nov 2026 melalui Belajar SK: tekstur dibaca daripada kad, SK06 v1.1; ruang tepi ikut kad, SK06 v1.2; tekstur K8 marker, SK06 v1.3; rujukan K6 diukur; garis potong SK07 tidak lagi lurus di sambungan, SK07 v1.1.)
+- v1.2, tidak akan dibina: tepi marker kering K8 (pengguna 28 Nov 2026: tiada gambar asal lebih besar; had kekal, `rujukan.tekstur.had_kekal`). Belum dibina: butir latar sudah, SK06 v1.3); semakan ejaan automatik (kini mata sahaja); bayang lembut K1. (Selesai 27 Nov 2026 melalui Belajar SK: tekstur dibaca daripada kad, SK06 v1.1; ruang tepi ikut kad, SK06 v1.2; tekstur K8 marker, SK06 v1.3; rujukan K6 diukur; garis potong SK07 tidak lagi lurus di sambungan, SK07 v1.1.)
 - v1.2, belum selesai: sudut rujukan K1 dan K6 belum diukur; Qwen-Image-2512 dan GLM-Image belum diuji (tidak muat di CPU).
 - v1.2, bukti masih lemah: aturan 3.4–3.7 diuji pada satu kad (K3) dan satu ayat sahaja. Perlu diulang pada kad lain dan ayat pendek sebelum dianggap kukuh.
 - v1.2, belum diuji langsung: aturan 3.9–3.10 (Qwen-Image-2512, GLM-Image). Aturan 3.8 (FLUX 3 Image Klein) lulus ujian kelayakan di CPU, 27 Nov 2026. Perlu ujian kelayakan melalui Space (GPU, kuota harian); pengguna sebelum ini meminta CPU sahaja, jadi ujian ini menunggu kebenaran. `gen_hf_space.py` belum ada profil untuk tiga Space ini.
