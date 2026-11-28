@@ -1,0 +1,166 @@
+{
+ "skor_lama": {
+  "n": 384,
+  "top1_pct": 23.2,
+  "kedudukan_purata": 7.14
+ },
+ "rawak": {
+  "top1_pct": 3.8,
+  "kedudukan_purata": 13.5
+ },
+ "nota": "Ujian QC B ikut ciri (SK11 jadual F1) pada 384 imej betul/ sedia ada lawan 26 rujukan, 28 Nov 2026. 'sendiri' = imej dengan rujukan kadnya; 'lain' = dengan rujukan kad lain. Kiraan pertama (sebelum pembaikan) disimpan di bawah 'sebelum'.",
+ "sebelum": {
+  "ciri": {
+   "n": 384,
+   "top1_pct": 15.2,
+   "kedudukan_purata": 8.28
+  },
+  "semua_ciri": {
+   "n": 384,
+   "top1_pct": 18.4,
+   "kedudukan_purata": 7.55
+  },
+  "ciri_lulus": {
+   "tepi_strok": {
+    "sendiri_pct": 45.1,
+    "lain_pct": 41.3,
+    "n": 384
+   },
+   "condong_huruf_utama": {
+    "sendiri_pct": 83.1,
+    "lain_pct": 46.6,
+    "n": 384
+   },
+   "condong_blok": {
+    "sendiri_pct": 71.9,
+    "lain_pct": 56.0,
+    "n": 384
+   },
+   "tebal_utama": {
+    "sendiri_pct": 68.6,
+    "lain_pct": 63.7,
+    "n": 242
+   },
+   "hubungan_baris": {
+    "sendiri_pct": 45.8,
+    "lain_pct": 36.6,
+    "n": 306
+   },
+   "bekas": {
+    "sendiri_pct": 77.1,
+    "lain_pct": 63.9,
+    "n": 384
+   },
+   "garis_sapuan": {
+    "sendiri_pct": 68.0,
+    "lain_pct": 50.4,
+    "n": 384
+   },
+   "bentuk_blok": {
+    "sendiri_pct": 76.8,
+    "lain_pct": 59.7,
+    "n": 384
+   },
+   "kontras_strok": {
+    "sendiri_pct": 59.7,
+    "lain_pct": 37.3,
+    "n": 154
+   },
+   "penjajaran": {
+    "sendiri_pct": 70.8,
+    "lain_pct": 36.8,
+    "n": 106
+   },
+   "condong_huruf_sokongan": {
+    "sendiri_pct": 72.0,
+    "lain_pct": 43.6,
+    "n": 25
+   },
+   "saiz_sokongan": {
+    "sendiri_pct": 76.0,
+    "lain_pct": 43.3,
+    "n": 25
+   },
+   "saiz_penyambung": {
+    "sendiri_pct": 38.5,
+    "lain_pct": 45.1,
+    "n": 39
+   }
+  },
+  "lulus_semua_teras_pct": 20.8
+ },
+ "selepas_pembaikan": {
+  "ubahan": [
+   "tepi_strok hanya dibanding bila rujukan licin atau sedikit kasar",
+   "saiz_penyambung jadi maklumat sahaja"
+  ],
+  "ciri": {
+   "n": 384,
+   "top1_pct": 18.0,
+   "kedudukan_purata": 7.51
+  },
+  "ciri_lulus": {
+   "condong_huruf_utama": {
+    "sendiri_pct": 83.1,
+    "lain_pct": 46.6,
+    "n": 384
+   },
+   "condong_blok": {
+    "sendiri_pct": 71.9,
+    "lain_pct": 56.0,
+    "n": 384
+   },
+   "tebal_utama": {
+    "sendiri_pct": 68.6,
+    "lain_pct": 63.7,
+    "n": 242
+   },
+   "hubungan_baris": {
+    "sendiri_pct": 45.8,
+    "lain_pct": 36.6,
+    "n": 306
+   },
+   "bekas": {
+    "sendiri_pct": 77.1,
+    "lain_pct": 63.9,
+    "n": 384
+   },
+   "garis_sapuan": {
+    "sendiri_pct": 68.0,
+    "lain_pct": 50.4,
+    "n": 384
+   },
+   "bentuk_blok": {
+    "sendiri_pct": 76.8,
+    "lain_pct": 59.7,
+    "n": 384
+   },
+   "tepi_strok": {
+    "sendiri_pct": 52.2,
+    "lain_pct": 50.5,
+    "n": 205
+   },
+   "kontras_strok": {
+    "sendiri_pct": 59.7,
+    "lain_pct": 37.3,
+    "n": 154
+   },
+   "penjajaran": {
+    "sendiri_pct": 70.8,
+    "lain_pct": 36.8,
+    "n": 106
+   },
+   "condong_huruf_sokongan": {
+    "sendiri_pct": 72.0,
+    "lain_pct": 43.6,
+    "n": 25
+   },
+   "saiz_sokongan": {
+    "sendiri_pct": 76.0,
+    "lain_pct": 43.3,
+    "n": 25
+   }
+  },
+  "lulus_semua_teras_pct": 30.7
+ }
+}

@@ -4,6 +4,8 @@ v1.1: design LETTERING (huruf bertaut, baris bertindih, ekor huruf merentas bari
       (1) kumpulan 'seluruh' = ciri huruf diukur pada SELURUH blok, tidak bergantung pada pecahan baris;
       (2) 'jenis_susunan' = "baris lurus" atau "lettering bertaut"; bila bertaut, medan 'baris' hanya anggaran;
       (3) hiasan warna lain mesti kecil (dahulu perkataan warna kedua tersilap dikira hiasan).
+v1.3: indeks tebal setiap kata diukur selepas bintik tekstur ditutup (dahulu huruf pekat bertekstur, cth. IMG_5776,
+      terbaca "ringan").
 v1.2: kumpulan 'kata'. Claude menanda kotak setiap kata dengan mata (mata/<nama>.json, medan "kata": teks,
       kotak [x0, y0, x1, y1] dalam % gambar, peranan); skrip mengukur ciri huruf DI DALAM kotak itu. Untuk
       lettering bertaut, di mana skrip tidak boleh mengasingkan kata sendiri. Kotak boleh bertindih; bahagian
@@ -39,7 +41,7 @@ from PIL import Image
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from SK05_ukur import _skor  # noqa: E402
 
-VERSI = "SK09 v1.2"
+VERSI = "SK09 v1.3"
 HERE = Path(__file__).resolve().parent
 KELUAR = HERE.parent / "decode"
 
@@ -346,7 +348,8 @@ def ukur_kata(m, kata, sudut, blok_h):
             ys, xs = np.nonzero(c)
             cc = np.ascontiguousarray(c[ys.min():ys.max() + 1, xs.min():xs.max() + 1])
             nh = sum(ch.isalnum() for ch in k["teks"]) or 1
-            dtk = cv2.distanceTransform(cc, cv2.DIST_L2, 5)
+            kt = max(3, int(cc.shape[0] * 0.03)) | 1          # v1.3: tutup bintik tekstur dahulu (dakwat grunge)
+            dtk = cv2.distanceTransform(cv2.morphologyEx(cc, cv2.MORPH_CLOSE, np.ones((kt, kt), np.uint8)), cv2.DIST_L2, 5)
             rb = dtk[(dtk >= cv2.dilate(dtk, np.ones((3, 3), np.uint8)) - 1e-6) & (dtk >= 1.0)]
             tebal = float(2 * np.percentile(rb, 75)) if len(rb) else 0.0
             r.update(tinggi_pct=round(u["tinggi_px"] / blok_h * 100, 1), tinggi_px=u["tinggi_px"],

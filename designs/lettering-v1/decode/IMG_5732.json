@@ -1,5 +1,5 @@
 {
- "versi": "SK09 v1.2",
+ "versi": "SK09 v1.3",
  "fail": "IMG_5732.jpg",
  "sha1": "b5e10b57244b",
  "tarikh": "2026-11-28",
@@ -74,8 +74,8 @@
    "tinggi_pct": 37.0,
    "tinggi_px": 298,
    "lebar_px": 407,
-   "indeks_tebal": 0.16,
-   "tebal_strok_pct": 5.2,
+   "indeks_tebal": 0.267,
+   "tebal_strok_pct": 8.7,
    "kontras_strok": 11.2,
    "condong_huruf_darjah": 39.5,
    "bersambung": false,
@@ -96,8 +96,8 @@
    "tinggi_pct": 48.5,
    "tinggi_px": 391,
    "lebar_px": 607,
-   "indeks_tebal": 0.207,
-   "tebal_strok_pct": 4.9,
+   "indeks_tebal": 0.345,
+   "tebal_strok_pct": 8.2,
    "kontras_strok": 12.6,
    "condong_huruf_darjah": 34.5,
    "bersambung": true,
@@ -118,8 +118,8 @@
    "tinggi_pct": 38.7,
    "tinggi_px": 312,
    "lebar_px": 408,
-   "indeks_tebal": 0.197,
-   "tebal_strok_pct": 5.8,
+   "indeks_tebal": 0.262,
+   "tebal_strok_pct": 7.7,
    "kontras_strok": 12.6,
    "condong_huruf_darjah": 38.5,
    "bersambung": false,
@@ -140,8 +140,8 @@
    "tinggi_pct": 38.7,
    "tinggi_px": 312,
    "lebar_px": 504,
-   "indeks_tebal": 0.187,
-   "tebal_strok_pct": 6.0,
+   "indeks_tebal": 0.306,
+   "tebal_strok_pct": 9.9,
    "kontras_strok": 12.99,
    "condong_huruf_darjah": 37.5,
    "bersambung": false,
@@ -150,6 +150,7 @@
    "ukuran_kasar": false
   }
  ],
+ "kata_sumber": "kotak mata Claude",
  "baris": [
   {
    "n": 1,

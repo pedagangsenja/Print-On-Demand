@@ -1,0 +1,163 @@
+{
+ "versi": "SK11 v1.0 (jadual F1)",
+ "rekod": "IMG_5761.jpg",
+ "jenis_susunan": "lettering bertaut",
+ "amaran": [],
+ "blok": {
+  "medium": "lettering quote poster",
+  "gaya": "hand-lettered",
+  "latar_warna": "solid black",
+  "latar_isi": null,
+  "tepi": "rough textured edges",
+  "bentuk": "one tight block with a rounded outline",
+  "condong": "tilts slightly so each line rises toward the right",
+  "sentuh": "sit close together",
+  "margin": "wide empty black margins",
+  "huruf": {
+   "utama": {
+    "penuh": "very large very heavy sans-serif capitals with rough textured edges, slightly slanted to the right",
+    "ringkas": "very heavy sans-serif capitals"
+   },
+   "penyambung": {
+    "penuh": "small very heavy sans-serif capitals with rough textured edges",
+    "ringkas": "very heavy sans-serif capitals"
+   }
+  },
+  "tertinggi": null,
+  "hierarki": "The main words are larger than the small connecting words.",
+  "hiasan": null,
+  "sisi": null,
+  "hiasan_kotak": [],
+  "tiada": [
+   "other colors",
+   "outline",
+   "shadow"
+  ],
+  "ada": "solid white strokes on a clean black background",
+  "sama_lebar": false,
+  "rujukan": {
+   "condong_darjah": 6.4,
+   "tepi_pct": 0.0,
+   "tepi_sisi_pct": 0.0,
+   "tepi_atas_bawah_pct": 0.0,
+   "sumber": "SK09 v1.3 pada IMG_5761.jpg"
+  },
+  "ukuran": {
+   "utama": [
+    624,
+    168
+   ],
+   "penyambung": [
+    144,
+    64
+   ]
+  }
+ },
+ "sumber": {
+  "huruf.utama": "angka: saiz, tebal, tepi, condong; jenis huruf: mata; huruf besar / kecil: teks (mata)",
+  "huruf.penyambung": "angka: saiz, tebal, tepi, condong; jenis huruf: mata; huruf besar / kecil: teks (mata)",
+  "tepi": "angka: tepi_strok = 17.279 -> kasar / bertekstur",
+  "bentuk": "angka: bentuk_blok = bujur / membulat -> bujur / membulat",
+  "condong": "angka: condong_blok = 6.4 -> naik sedikit ke kanan",
+  "sentuh": "angka: hubungan_baris = 0.95 -> rapat",
+  "hierarki": "angka: nisbah tinggi kata ikut peranan",
+  "medium, latar, margin, tiada, ada": "tetap v1.2 (hitam putih; ruang tepi ialah keputusan cetak dalam kad)",
+  "hiasan": "mata (senarai hiasan); skrip hanya mengesan ada / tiada",
+  "ukuran": "angka: kotak kata (mata menanda kotak, skrip mengukur) dan tinggi blok / bilangan baris"
+ },
+ "ciri": {
+  "tepi_strok": {
+   "nilai": 17.279,
+   "tong": "kasar / bertekstur",
+   "frasa": "rough textured edges",
+   "teras": true,
+   "asas": "kata utama",
+   "jadual": "tepi_strok"
+  },
+  "condong_huruf_utama": {
+   "nilai": 13.17,
+   "tong": "condong sedikit",
+   "frasa": "slightly slanted to the right",
+   "teras": true,
+   "asas": "kata utama",
+   "jadual": "condong_huruf_utama"
+  },
+  "condong_blok": {
+   "nilai": 6.4,
+   "tong": "naik sedikit ke kanan",
+   "frasa": "tilts slightly so each line rises toward the right",
+   "teras": true,
+   "asas": "blok",
+   "jadual": "condong_blok"
+  },
+  "tebal_utama": {
+   "nilai": 0.338,
+   "tong": "sangat tebal",
+   "frasa": "very heavy",
+   "teras": false,
+   "asas": "kata utama",
+   "jadual": "tebal_utama_kata"
+  },
+  "hubungan_baris": {
+   "nilai": 0.95,
+   "tong": "rapat",
+   "frasa": "sit close together",
+   "teras": false,
+   "asas": "blok",
+   "jadual": "hubungan_baris"
+  },
+  "saiz_penyambung": {
+   "nilai": 0.397,
+   "tong": "kecil",
+   "frasa": "small",
+   "teras": false,
+   "asas": "kata",
+   "jadual": "saiz_penyambung"
+  },
+  "bekas": {
+   "nilai": "tiada",
+   "tong": "tiada",
+   "frasa": null,
+   "teras": true,
+   "asas": "blok",
+   "jadual": "bekas"
+  },
+  "garis_sapuan": {
+   "nilai": "ada",
+   "tong": "ada",
+   "frasa": "a long swash or short dash strokes",
+   "teras": false,
+   "asas": "blok",
+   "jadual": "garis_sapuan"
+  },
+  "bentuk_blok": {
+   "nilai": "bujur / membulat",
+   "tong": "bujur / membulat",
+   "frasa": "one tight block with a rounded outline",
+   "teras": false,
+   "asas": "blok",
+   "jadual": "bentuk_blok"
+  }
+ },
+ "ciri_teras": [
+  "tepi_strok",
+  "condong_huruf_utama",
+  "condong_blok",
+  "bekas"
+ ],
+ "mata": {
+  "nama_gaya": "Sans italik pekat + tekstur logam retak + sapuan berus",
+  "hiasan": [
+   "garis berus di kiri dan kanan kata kecil",
+   "sapuan berus di bawah baris akhir",
+   "tekstur retak dalam huruf",
+   "latar gelap bercahaya di bucu"
+  ],
+  "jangan_salin": [
+   "ayat asal",
+   "susun atur tepat",
+   "tandatangan / logo jika ada"
+  ]
+ },
+ "nota": "Draf: frasa daripada angka decode (jadual F1). Semak hiasan dan jenis huruf dengan mata sebelum jadi kad."
+}

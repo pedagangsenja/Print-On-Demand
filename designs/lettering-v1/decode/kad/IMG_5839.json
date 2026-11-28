@@ -1,0 +1,195 @@
+{
+ "versi": "SK11 v1.0 (jadual F1)",
+ "rekod": "IMG_5839.jpg",
+ "jenis_susunan": "lettering bertaut",
+ "amaran": [],
+ "blok": {
+  "medium": "lettering quote poster",
+  "gaya": "hand-lettered",
+  "latar_warna": "solid black",
+  "latar_isi": null,
+  "tepi": "slightly rough hand-drawn edges",
+  "bentuk": "one tight block with a rounded outline",
+  "condong": "rises clearly toward the right",
+  "sentuh": "sit close together and overlap slightly",
+  "margin": "wide empty black margins",
+  "huruf": {
+   "utama": {
+    "penuh": "very large bold monoline script lettering with slightly rough hand-drawn edges, strongly slanted to the right, with a big capital",
+    "ringkas": "bold monoline script lettering"
+   },
+   "sokongan": {
+    "penuh": "very large light monoline script lettering with slightly rough hand-drawn edges, strongly slanted to the right",
+    "ringkas": "light monoline script lettering"
+   },
+   "penyambung": {
+    "penuh": "very large bold connected monoline script lettering with slightly rough hand-drawn edges",
+    "ringkas": "bold connected monoline script lettering"
+   }
+  },
+  "tertinggi": null,
+  "hierarki": "All the words are about the same size.",
+  "hiasan": null,
+  "sisi": null,
+  "hiasan_kotak": [],
+  "tiada": [
+   "other colors",
+   "outline",
+   "shadow"
+  ],
+  "ada": "solid white strokes on a clean black background",
+  "sama_lebar": false,
+  "rujukan": {
+   "condong_darjah": 15.2,
+   "tepi_pct": 10.0,
+   "tepi_sisi_pct": 14.4,
+   "tepi_atas_bawah_pct": 10.0,
+   "sumber": "SK09 v1.3 pada IMG_5839.jpg"
+  },
+  "ukuran": {
+   "utama": [
+    488,
+    208
+   ],
+   "sokongan": [
+    320,
+    200
+   ],
+   "penyambung": [
+    304,
+    176
+   ]
+  }
+ },
+ "sumber": {
+  "huruf.utama": "angka: saiz, tebal, tepi, condong; jenis huruf: mata; huruf besar / kecil: teks (mata)",
+  "huruf.sokongan": "angka: saiz, tebal, tepi, condong; jenis huruf: mata; huruf besar / kecil: teks (mata)",
+  "huruf.penyambung": "angka: saiz, tebal, tepi, condong; jenis huruf: mata; huruf besar / kecil: teks (mata)",
+  "tepi": "angka: tepi_strok = 11.209 -> sedikit kasar",
+  "bentuk": "angka: bentuk_blok = bujur / membulat -> bujur / membulat",
+  "condong": "angka: condong_blok = 15.2 -> naik jelas ke kanan",
+  "sentuh": "angka: hubungan_baris = 0.0 -> bertindih sedikit",
+  "hierarki": "angka: nisbah tinggi kata ikut peranan",
+  "medium, latar, margin, tiada, ada": "tetap v1.2 (hitam putih; ruang tepi ialah keputusan cetak dalam kad)",
+  "hiasan": "mata (senarai hiasan); skrip hanya mengesan ada / tiada",
+  "ukuran": "angka: kotak kata (mata menanda kotak, skrip mengukur) dan tinggi blok / bilangan baris"
+ },
+ "ciri": {
+  "tepi_strok": {
+   "nilai": 11.209,
+   "tong": "sedikit kasar",
+   "frasa": "slightly rough hand-drawn edges",
+   "teras": true,
+   "asas": "kata utama",
+   "jadual": "tepi_strok"
+  },
+  "condong_huruf_utama": {
+   "nilai": 34.084,
+   "tong": "sangat condong",
+   "frasa": "strongly slanted to the right",
+   "teras": true,
+   "asas": "kata utama",
+   "jadual": "condong_huruf_utama"
+  },
+  "condong_huruf_sokongan": {
+   "nilai": 42.5,
+   "tong": "sangat condong",
+   "frasa": "strongly slanted to the right",
+   "teras": false,
+   "asas": "kata sokongan",
+   "jadual": "condong_huruf_sokongan"
+  },
+  "condong_blok": {
+   "nilai": 15.2,
+   "tong": "naik jelas ke kanan",
+   "frasa": "rises clearly toward the right",
+   "teras": true,
+   "asas": "blok",
+   "jadual": "condong_blok"
+  },
+  "tebal_utama": {
+   "nilai": 0.252,
+   "tong": "tebal",
+   "frasa": "bold",
+   "teras": false,
+   "asas": "kata utama",
+   "jadual": "tebal_utama_kata"
+  },
+  "kontras_strok": {
+   "nilai": 1.387,
+   "tong": "sekata",
+   "frasa": "an even stroke width",
+   "teras": false,
+   "asas": "kata utama",
+   "jadual": "kontras_strok"
+  },
+  "hubungan_baris": {
+   "nilai": 0.0,
+   "tong": "bertindih sedikit",
+   "frasa": "sit close together and overlap slightly",
+   "teras": false,
+   "asas": "blok",
+   "jadual": "hubungan_baris"
+  },
+  "saiz_sokongan": {
+   "nilai": 0.969,
+   "tong": "sama besar",
+   "frasa": "very large",
+   "teras": false,
+   "asas": "kata",
+   "jadual": "saiz_sokongan"
+  },
+  "saiz_penyambung": {
+   "nilai": 0.858,
+   "tong": "sama besar",
+   "frasa": "very large",
+   "teras": false,
+   "asas": "kata",
+   "jadual": "saiz_penyambung"
+  },
+  "bekas": {
+   "nilai": "tiada",
+   "tong": "tiada",
+   "frasa": null,
+   "teras": true,
+   "asas": "blok",
+   "jadual": "bekas"
+  },
+  "garis_sapuan": {
+   "nilai": "ada",
+   "tong": "ada",
+   "frasa": "a long swash or short dash strokes",
+   "teras": false,
+   "asas": "blok",
+   "jadual": "garis_sapuan"
+  },
+  "bentuk_blok": {
+   "nilai": "bujur / membulat",
+   "tong": "bujur / membulat",
+   "frasa": "one tight block with a rounded outline",
+   "teras": false,
+   "asas": "blok",
+   "jadual": "bentuk_blok"
+  }
+ },
+ "ciri_teras": [
+  "tepi_strok",
+  "condong_huruf_utama",
+  "condong_blok",
+  "bekas"
+ ],
+ "mata": {
+  "nama_gaya": "Skrip monoline berpusar, blok membulat",
+  "hiasan": [
+   "pusaran panjang pada huruf awal dan akhir",
+   "satu hati kecil",
+   "pusaran bawah seperti reben"
+  ],
+  "jangan_salin": [
+   "ayat asal",
+   "susun atur tepat",
+   "tandatangan / logo jika ada"
+  ]
+ },
+ "nota": "Draf: frasa daripada angka decode (jadual F1). Semak hiasan dan jenis huruf dengan mata sebelum jadi kad."
+}

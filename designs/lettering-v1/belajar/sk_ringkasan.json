@@ -492,7 +492,7 @@
    "nama": "decode",
    "fail": "SK09_decode.py",
    "langkah": "?",
-   "versi": "SK09 v1.2",
+   "versi": "SK09 v1.3",
    "ikut_versi": {},
    "semasa": {
     "imej": 0,
@@ -517,7 +517,32 @@
    "nama": "banding",
    "fail": "SK10_banding.py",
    "langkah": "?",
-   "versi": "SK10 v1.2",
+   "versi": "SK10 v1.3",
+   "ikut_versi": {},
+   "semasa": {
+    "imej": 0,
+    "lulus": 0,
+    "cacat": 0,
+    "input_rosak": 0,
+    "belum": 0,
+    "tolak": 0
+   },
+   "berulang": [],
+   "calon": [],
+   "ubahan_dicuba": 0,
+   "tindakan": [
+    {
+     "jenis": "tiada",
+     "teks": "Tiada tindakan: tiada cacat berulang"
+    }
+   ]
+  },
+  "SK11": {
+   "sk": "SK11",
+   "nama": "frasa",
+   "fail": "SK11_frasa.py",
+   "langkah": "?",
+   "versi": "SK11 v1.0 (jadual F1)",
    "ikut_versi": {},
    "semasa": {
     "imej": 0,

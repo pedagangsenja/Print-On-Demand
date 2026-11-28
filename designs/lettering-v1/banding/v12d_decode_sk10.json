@@ -1,11 +1,139 @@
 [
  {
-  "versi": "SK10 v1.2",
+  "versi": "SK10 v1.3",
+  "tentukur": "tiada (jadual asal)",
   "mod": "hp",
   "profil": "lettering bertaut (ciri seluruh blok)",
   "rujukan": "IMG_5840.jpg",
   "jana": "K24t_s42.png",
-  "skor": 85.2,
+  "ciri_teras": "3 / 4",
+  "ciri_semua": "5 / 8",
+  "ciri_gagal": [
+   {
+    "ciri": "tepi_strok",
+    "teras": true,
+    "rujukan": "licin",
+    "jana": "kasar / bertekstur"
+   },
+   {
+    "ciri": "tebal_utama",
+    "teras": false,
+    "rujukan": "tebal",
+    "jana": "sangat tebal"
+   },
+   {
+    "ciri": "hubungan_baris",
+    "teras": false,
+    "rujukan": "bertindih sedikit",
+    "jana": "terpisah"
+   }
+  ],
+  "ubahan_seterusnya_ciri": {
+   "ciri": "tepi_strok",
+   "teras": true,
+   "dari": "kasar / bertekstur",
+   "ke": "licin",
+   "frasa_sasaran": "smooth clean edges"
+  },
+  "ciri": [
+   {
+    "ciri": "tepi_strok",
+    "teras": true,
+    "kira": true,
+    "rujukan": 5.155,
+    "tong_rujukan": "licin",
+    "frasa_rujukan": "smooth clean edges",
+    "jana": 31.057,
+    "tong_jana": "kasar / bertekstur",
+    "lulus": false,
+    "hampir": false
+   },
+   {
+    "ciri": "condong_huruf_utama",
+    "teras": true,
+    "kira": true,
+    "rujukan": 18.651,
+    "tong_rujukan": "condong",
+    "frasa_rujukan": "leaning to the right",
+    "jana": 19.5,
+    "tong_jana": "condong",
+    "lulus": true,
+    "hampir": false
+   },
+   {
+    "ciri": "condong_blok",
+    "teras": true,
+    "kira": true,
+    "rujukan": 1.8,
+    "tong_rujukan": "mendatar",
+    "frasa_rujukan": null,
+    "jana": 0.0,
+    "tong_jana": "mendatar",
+    "lulus": true,
+    "hampir": false
+   },
+   {
+    "ciri": "tebal_utama",
+    "teras": false,
+    "kira": true,
+    "rujukan": 0.249,
+    "tong_rujukan": "tebal",
+    "frasa_rujukan": "bold",
+    "jana": 0.328,
+    "tong_jana": "sangat tebal",
+    "lulus": false,
+    "hampir": false
+   },
+   {
+    "ciri": "hubungan_baris",
+    "teras": false,
+    "kira": true,
+    "rujukan": 0.0,
+    "tong_rujukan": "bertindih sedikit",
+    "frasa_rujukan": "sit close together and overlap slightly",
+    "jana": 1.5,
+    "tong_jana": "terpisah",
+    "lulus": false,
+    "hampir": false
+   },
+   {
+    "ciri": "bekas",
+    "teras": true,
+    "kira": true,
+    "rujukan": "tiada",
+    "tong_rujukan": "tiada",
+    "frasa_rujukan": null,
+    "jana": "tiada",
+    "tong_jana": "tiada",
+    "lulus": true,
+    "hampir": false
+   },
+   {
+    "ciri": "garis_sapuan",
+    "teras": false,
+    "kira": true,
+    "rujukan": "tiada",
+    "tong_rujukan": "tiada",
+    "frasa_rujukan": null,
+    "jana": "tiada",
+    "tong_jana": "tiada",
+    "lulus": true,
+    "hampir": false
+   },
+   {
+    "ciri": "bentuk_blok",
+    "teras": false,
+    "kira": true,
+    "rujukan": "segi empat",
+    "tong_rujukan": "segi empat",
+    "frasa_rujukan": "one tight block",
+    "jana": "segi empat",
+    "tong_jana": "segi empat",
+    "lulus": true,
+    "hampir": false
+   }
+  ],
+  "skor": 82.9,
   "sama": 15,
   "hampir": 1,
   "beza": 3,
@@ -17,16 +145,16 @@
     "tindakan": "prompt: bentuk huruf (tepi strok licin atau kasar)"
    },
    {
+    "medan": "kata utama: indeks tebal",
+    "rujukan": 0.249,
+    "jana": 0.328,
+    "tindakan": "prompt: bentuk huruf ikut peranan (utama)"
+   },
+   {
     "medan": "seluruh: indeks tebal",
     "rujukan": 0.24,
     "jana": 0.317,
     "tindakan": "prompt: bentuk huruf ikut peranan"
-   },
-   {
-    "medan": "kata utama: indeks tebal",
-    "rujukan": 0.239,
-    "jana": 0.297,
-    "tindakan": "prompt: bentuk huruf ikut peranan (utama)"
    }
   ],
   "ubahan_seterusnya": {
@@ -283,14 +411,14 @@
    {
     "medan": "kata utama: indeks tebal",
     "kumpulan": "huruf",
-    "rujukan": 0.239,
-    "jana": 0.297,
-    "beza": 0.24,
+    "rujukan": 0.249,
+    "jana": 0.328,
+    "beza": 0.32,
     "had": 0.12,
     "hasil": "beza",
-    "skor": 0.49,
+    "skor": 0.18,
     "berat": 3,
-    "rugi": 1.53,
+    "rugi": 2.47,
     "tindakan": "prompt: bentuk huruf ikut peranan (utama)"
    },
    {
@@ -323,7 +451,7 @@
     "medan": "kata sokongan: indeks tebal",
     "kumpulan": "huruf",
     "rujukan": null,
-    "jana": 0.324,
+    "jana": 0.332,
     "hasil": "tidak dibanding",
     "skor": null,
     "berat": 2
@@ -359,15 +487,143 @@
   "nota": "had belum ditentukur (bukti lemah); skor menanda, tidak meluluskan"
  },
  {
-  "versi": "SK10 v1.2",
+  "versi": "SK10 v1.3",
+  "tentukur": "tiada (jadual asal)",
   "mod": "hp",
   "profil": "lettering bertaut (ciri seluruh blok)",
   "rujukan": "IMG_5840.jpg",
   "jana": "K24t_s7.png",
-  "skor": 85.6,
+  "ciri_teras": "3 / 4",
+  "ciri_semua": "5 / 8",
+  "ciri_gagal": [
+   {
+    "ciri": "tepi_strok",
+    "teras": true,
+    "rujukan": "licin",
+    "jana": "kasar / bertekstur"
+   },
+   {
+    "ciri": "tebal_utama",
+    "teras": false,
+    "rujukan": "tebal",
+    "jana": "sangat tebal"
+   },
+   {
+    "ciri": "hubungan_baris",
+    "teras": false,
+    "rujukan": "bertindih sedikit",
+    "jana": "rapat"
+   }
+  ],
+  "ubahan_seterusnya_ciri": {
+   "ciri": "tepi_strok",
+   "teras": true,
+   "dari": "kasar / bertekstur",
+   "ke": "licin",
+   "frasa_sasaran": "smooth clean edges"
+  },
+  "ciri": [
+   {
+    "ciri": "tepi_strok",
+    "teras": true,
+    "kira": true,
+    "rujukan": 5.155,
+    "tong_rujukan": "licin",
+    "frasa_rujukan": "smooth clean edges",
+    "jana": 60.039,
+    "tong_jana": "kasar / bertekstur",
+    "lulus": false,
+    "hampir": false
+   },
+   {
+    "ciri": "condong_huruf_utama",
+    "teras": true,
+    "kira": true,
+    "rujukan": 18.651,
+    "tong_rujukan": "condong",
+    "frasa_rujukan": "leaning to the right",
+    "jana": 19.5,
+    "tong_jana": "condong",
+    "lulus": true,
+    "hampir": false
+   },
+   {
+    "ciri": "condong_blok",
+    "teras": true,
+    "kira": true,
+    "rujukan": 1.8,
+    "tong_rujukan": "mendatar",
+    "frasa_rujukan": null,
+    "jana": 0.0,
+    "tong_jana": "mendatar",
+    "lulus": true,
+    "hampir": false
+   },
+   {
+    "ciri": "tebal_utama",
+    "teras": false,
+    "kira": true,
+    "rujukan": 0.249,
+    "tong_rujukan": "tebal",
+    "frasa_rujukan": "bold",
+    "jana": 0.334,
+    "tong_jana": "sangat tebal",
+    "lulus": false,
+    "hampir": false
+   },
+   {
+    "ciri": "hubungan_baris",
+    "teras": false,
+    "kira": true,
+    "rujukan": 0.0,
+    "tong_rujukan": "bertindih sedikit",
+    "frasa_rujukan": "sit close together and overlap slightly",
+    "jana": 0.75,
+    "tong_jana": "rapat",
+    "lulus": false,
+    "hampir": false
+   },
+   {
+    "ciri": "bekas",
+    "teras": true,
+    "kira": true,
+    "rujukan": "tiada",
+    "tong_rujukan": "tiada",
+    "frasa_rujukan": null,
+    "jana": "tiada",
+    "tong_jana": "tiada",
+    "lulus": true,
+    "hampir": false
+   },
+   {
+    "ciri": "garis_sapuan",
+    "teras": false,
+    "kira": true,
+    "rujukan": "tiada",
+    "tong_rujukan": "tiada",
+    "frasa_rujukan": null,
+    "jana": "tiada",
+    "tong_jana": "tiada",
+    "lulus": true,
+    "hampir": false
+   },
+   {
+    "ciri": "bentuk_blok",
+    "teras": false,
+    "kira": true,
+    "rujukan": "segi empat",
+    "tong_rujukan": "segi empat",
+    "frasa_rujukan": "one tight block",
+    "jana": "segi empat",
+    "tong_jana": "segi empat",
+    "lulus": true,
+    "hampir": false
+   }
+  ],
+  "skor": 80.5,
   "sama": 13,
-  "hampir": 4,
-  "beza": 2,
+  "hampir": 3,
+  "beza": 3,
   "beza_terbesar": [
    {
     "medan": "seluruh: tepi kasar (%)",
@@ -376,16 +632,16 @@
     "tindakan": "prompt: bentuk huruf (tepi strok licin atau kasar)"
    },
    {
+    "medan": "kata utama: indeks tebal",
+    "rujukan": 0.249,
+    "jana": 0.334,
+    "tindakan": "prompt: bentuk huruf ikut peranan (utama)"
+   },
+   {
     "medan": "seluruh: indeks tebal",
     "rujukan": 0.24,
     "jana": 0.316,
     "tindakan": "prompt: bentuk huruf ikut peranan"
-   },
-   {
-    "medan": "kata utama: indeks tebal",
-    "rujukan": 0.239,
-    "jana": 0.197,
-    "tindakan": "prompt: bentuk huruf ikut peranan (utama)"
    }
   ],
   "ubahan_seterusnya": {
@@ -642,14 +898,14 @@
    {
     "medan": "kata utama: indeks tebal",
     "kumpulan": "huruf",
-    "rujukan": 0.239,
-    "jana": 0.197,
-    "beza": 0.18,
+    "rujukan": 0.249,
+    "jana": 0.334,
+    "beza": 0.34,
     "had": 0.12,
-    "hasil": "hampir",
-    "skor": 0.77,
+    "hasil": "beza",
+    "skor": 0.08,
     "berat": 3,
-    "rugi": 0.7,
+    "rugi": 2.77,
     "tindakan": "prompt: bentuk huruf ikut peranan (utama)"
    },
    {
@@ -682,7 +938,7 @@
     "medan": "kata sokongan: indeks tebal",
     "kumpulan": "huruf",
     "rujukan": null,
-    "jana": 0.213,
+    "jana": 0.349,
     "hasil": "tidak dibanding",
     "skor": null,
     "berat": 2
@@ -718,11 +974,139 @@
   "nota": "had belum ditentukur (bukti lemah); skor menanda, tidak meluluskan"
  },
  {
-  "versi": "SK10 v1.2",
+  "versi": "SK10 v1.3",
+  "tentukur": "tiada (jadual asal)",
   "mod": "hp",
   "profil": "lettering bertaut (ciri seluruh blok)",
   "rujukan": "IMG_5840.jpg",
   "jana": "K24t_s42.png",
+  "ciri_teras": "2 / 4",
+  "ciri_semua": "5 / 8",
+  "ciri_gagal": [
+   {
+    "ciri": "tepi_strok",
+    "teras": true,
+    "rujukan": "licin",
+    "jana": "kasar / bertekstur"
+   },
+   {
+    "ciri": "condong_huruf_utama",
+    "teras": true,
+    "rujukan": "condong",
+    "jana": "sangat condong"
+   },
+   {
+    "ciri": "garis_sapuan",
+    "teras": false,
+    "rujukan": "tiada",
+    "jana": "ada"
+   }
+  ],
+  "ubahan_seterusnya_ciri": {
+   "ciri": "tepi_strok",
+   "teras": true,
+   "dari": "kasar / bertekstur",
+   "ke": "licin",
+   "frasa_sasaran": "smooth clean edges"
+  },
+  "ciri": [
+   {
+    "ciri": "tepi_strok",
+    "teras": true,
+    "kira": true,
+    "rujukan": 5.155,
+    "tong_rujukan": "licin",
+    "frasa_rujukan": "smooth clean edges",
+    "jana": 26.9,
+    "tong_jana": "kasar / bertekstur",
+    "lulus": false,
+    "hampir": false
+   },
+   {
+    "ciri": "condong_huruf_utama",
+    "teras": true,
+    "kira": true,
+    "rujukan": 18.651,
+    "tong_rujukan": "condong",
+    "frasa_rujukan": "leaning to the right",
+    "jana": 35.5,
+    "tong_jana": "sangat condong",
+    "lulus": false,
+    "hampir": false
+   },
+   {
+    "ciri": "condong_blok",
+    "teras": true,
+    "kira": true,
+    "rujukan": 1.8,
+    "tong_rujukan": "mendatar",
+    "frasa_rujukan": null,
+    "jana": 3.4,
+    "tong_jana": "naik sedikit ke kanan",
+    "lulus": true,
+    "hampir": true
+   },
+   {
+    "ciri": "tebal_utama",
+    "teras": false,
+    "kira": true,
+    "rujukan": 0.249,
+    "tong_rujukan": "tebal",
+    "frasa_rujukan": "bold",
+    "jana": 0.283,
+    "tong_jana": "tebal",
+    "lulus": true,
+    "hampir": false
+   },
+   {
+    "ciri": "hubungan_baris",
+    "teras": false,
+    "kira": true,
+    "rujukan": 0.0,
+    "tong_rujukan": "bertindih sedikit",
+    "frasa_rujukan": "sit close together and overlap slightly",
+    "jana": 0.0,
+    "tong_jana": "bertindih sedikit",
+    "lulus": true,
+    "hampir": false
+   },
+   {
+    "ciri": "bekas",
+    "teras": true,
+    "kira": true,
+    "rujukan": "tiada",
+    "tong_rujukan": "tiada",
+    "frasa_rujukan": null,
+    "jana": "tiada",
+    "tong_jana": "tiada",
+    "lulus": true,
+    "hampir": false
+   },
+   {
+    "ciri": "garis_sapuan",
+    "teras": false,
+    "kira": true,
+    "rujukan": "tiada",
+    "tong_rujukan": "tiada",
+    "frasa_rujukan": null,
+    "jana": "ada",
+    "tong_jana": "ada",
+    "lulus": false,
+    "hampir": false
+   },
+   {
+    "ciri": "bentuk_blok",
+    "teras": false,
+    "kira": true,
+    "rujukan": "segi empat",
+    "tong_rujukan": "segi empat",
+    "frasa_rujukan": "one tight block",
+    "jana": "segi empat",
+    "tong_jana": "segi empat",
+    "lulus": true,
+    "hampir": false
+   }
+  ],
   "skor": 79.3,
   "sama": 11,
   "hampir": 3,
@@ -1002,15 +1386,143 @@
   "nota": "had belum ditentukur (bukti lemah); skor menanda, tidak meluluskan"
  },
  {
-  "versi": "SK10 v1.2",
+  "versi": "SK10 v1.3",
+  "tentukur": "tiada (jadual asal)",
   "mod": "hp",
   "profil": "lettering bertaut (ciri seluruh blok)",
   "rujukan": "IMG_5840.jpg",
   "jana": "K24t_s7.png",
-  "skor": 84.6,
-  "sama": 13,
+  "ciri_teras": "3 / 4",
+  "ciri_semua": "5 / 8",
+  "ciri_gagal": [
+   {
+    "ciri": "tepi_strok",
+    "teras": true,
+    "rujukan": "licin",
+    "jana": "kasar / bertekstur"
+   },
+   {
+    "ciri": "tebal_utama",
+    "teras": false,
+    "rujukan": "tebal",
+    "jana": "sangat tebal"
+   },
+   {
+    "ciri": "garis_sapuan",
+    "teras": false,
+    "rujukan": "tiada",
+    "jana": "ada"
+   }
+  ],
+  "ubahan_seterusnya_ciri": {
+   "ciri": "tepi_strok",
+   "teras": true,
+   "dari": "kasar / bertekstur",
+   "ke": "licin",
+   "frasa_sasaran": "smooth clean edges"
+  },
+  "ciri": [
+   {
+    "ciri": "tepi_strok",
+    "teras": true,
+    "kira": true,
+    "rujukan": 5.155,
+    "tong_rujukan": "licin",
+    "frasa_rujukan": "smooth clean edges",
+    "jana": 37.465,
+    "tong_jana": "kasar / bertekstur",
+    "lulus": false,
+    "hampir": false
+   },
+   {
+    "ciri": "condong_huruf_utama",
+    "teras": true,
+    "kira": true,
+    "rujukan": 18.651,
+    "tong_rujukan": "condong",
+    "frasa_rujukan": "leaning to the right",
+    "jana": 26.645,
+    "tong_jana": "condong",
+    "lulus": true,
+    "hampir": false
+   },
+   {
+    "ciri": "condong_blok",
+    "teras": true,
+    "kira": true,
+    "rujukan": 1.8,
+    "tong_rujukan": "mendatar",
+    "frasa_rujukan": null,
+    "jana": 0.0,
+    "tong_jana": "mendatar",
+    "lulus": true,
+    "hampir": false
+   },
+   {
+    "ciri": "tebal_utama",
+    "teras": false,
+    "kira": true,
+    "rujukan": 0.249,
+    "tong_rujukan": "tebal",
+    "frasa_rujukan": "bold",
+    "jana": 0.318,
+    "tong_jana": "sangat tebal",
+    "lulus": false,
+    "hampir": false
+   },
+   {
+    "ciri": "hubungan_baris",
+    "teras": false,
+    "kira": true,
+    "rujukan": 0.0,
+    "tong_rujukan": "bertindih sedikit",
+    "frasa_rujukan": "sit close together and overlap slightly",
+    "jana": 0.2,
+    "tong_jana": "bertindih sedikit",
+    "lulus": true,
+    "hampir": false
+   },
+   {
+    "ciri": "bekas",
+    "teras": true,
+    "kira": true,
+    "rujukan": "tiada",
+    "tong_rujukan": "tiada",
+    "frasa_rujukan": null,
+    "jana": "tiada",
+    "tong_jana": "tiada",
+    "lulus": true,
+    "hampir": false
+   },
+   {
+    "ciri": "garis_sapuan",
+    "teras": false,
+    "kira": true,
+    "rujukan": "tiada",
+    "tong_rujukan": "tiada",
+    "frasa_rujukan": null,
+    "jana": "ada",
+    "tong_jana": "ada",
+    "lulus": false,
+    "hampir": false
+   },
+   {
+    "ciri": "bentuk_blok",
+    "teras": false,
+    "kira": true,
+    "rujukan": "segi empat",
+    "tong_rujukan": "segi empat",
+    "frasa_rujukan": "one tight block",
+    "jana": "segi empat",
+    "tong_jana": "segi empat",
+    "lulus": true,
+    "hampir": false
+   }
+  ],
+  "skor": 79.8,
+  "sama": 12,
   "hampir": 4,
-  "beza": 2,
+  "beza": 3,
   "beza_terbesar": [
    {
     "medan": "seluruh: tepi kasar (%)",
@@ -1025,10 +1537,10 @@
     "tindakan": "prompt: hiasan"
    },
    {
-    "medan": "seluruh: indeks tebal",
-    "rujukan": 0.24,
-    "jana": 0.284,
-    "tindakan": "prompt: bentuk huruf ikut peranan"
+    "medan": "kata utama: indeks tebal",
+    "rujukan": 0.249,
+    "jana": 0.318,
+    "tindakan": "prompt: bentuk huruf ikut peranan (utama)"
    }
   ],
   "ubahan_seterusnya": {
@@ -1285,15 +1797,15 @@
    {
     "medan": "kata utama: indeks tebal",
     "kumpulan": "huruf",
-    "rujukan": 0.239,
-    "jana": 0.246,
-    "beza": 0.03,
+    "rujukan": 0.249,
+    "jana": 0.318,
+    "beza": 0.28,
     "had": 0.12,
-    "hasil": "sama",
-    "skor": 1.0,
+    "hasil": "beza",
+    "skor": 0.35,
     "berat": 3,
-    "rugi": 0.0,
-    "tindakan": null
+    "rugi": 1.96,
+    "tindakan": "prompt: bentuk huruf ikut peranan (utama)"
    },
    {
     "medan": "kata utama: condong huruf (darjah)",
@@ -1325,7 +1837,7 @@
     "medan": "kata sokongan: indeks tebal",
     "kumpulan": "huruf",
     "rujukan": null,
-    "jana": 0.268,
+    "jana": 0.305,
     "hasil": "tidak dibanding",
     "skor": null,
     "berat": 2
@@ -1361,11 +1873,139 @@
   "nota": "had belum ditentukur (bukti lemah); skor menanda, tidak meluluskan"
  },
  {
-  "versi": "SK10 v1.2",
+  "versi": "SK10 v1.3",
+  "tentukur": "tiada (jadual asal)",
   "mod": "hp",
   "profil": "lettering bertaut (ciri seluruh blok)",
   "rujukan": "IMG_5840.jpg",
   "jana": "K24t_s42.png",
+  "ciri_teras": "3 / 4",
+  "ciri_semua": "5 / 8",
+  "ciri_gagal": [
+   {
+    "ciri": "tepi_strok",
+    "teras": true,
+    "rujukan": "licin",
+    "jana": "kasar / bertekstur"
+   },
+   {
+    "ciri": "garis_sapuan",
+    "teras": false,
+    "rujukan": "tiada",
+    "jana": "ada"
+   },
+   {
+    "ciri": "bentuk_blok",
+    "teras": false,
+    "rujukan": "segi empat",
+    "jana": "bujur / membulat"
+   }
+  ],
+  "ubahan_seterusnya_ciri": {
+   "ciri": "tepi_strok",
+   "teras": true,
+   "dari": "kasar / bertekstur",
+   "ke": "licin",
+   "frasa_sasaran": "smooth clean edges"
+  },
+  "ciri": [
+   {
+    "ciri": "tepi_strok",
+    "teras": true,
+    "kira": true,
+    "rujukan": 5.155,
+    "tong_rujukan": "licin",
+    "frasa_rujukan": "smooth clean edges",
+    "jana": 28.1,
+    "tong_jana": "kasar / bertekstur",
+    "lulus": false,
+    "hampir": false
+   },
+   {
+    "ciri": "condong_huruf_utama",
+    "teras": true,
+    "kira": true,
+    "rujukan": 18.651,
+    "tong_rujukan": "condong",
+    "frasa_rujukan": "leaning to the right",
+    "jana": 28.5,
+    "tong_jana": "sangat condong",
+    "lulus": true,
+    "hampir": true
+   },
+   {
+    "ciri": "condong_blok",
+    "teras": true,
+    "kira": true,
+    "rujukan": 1.8,
+    "tong_rujukan": "mendatar",
+    "frasa_rujukan": null,
+    "jana": 0.0,
+    "tong_jana": "mendatar",
+    "lulus": true,
+    "hampir": false
+   },
+   {
+    "ciri": "tebal_utama",
+    "teras": false,
+    "kira": true,
+    "rujukan": 0.249,
+    "tong_rujukan": "tebal",
+    "frasa_rujukan": "bold",
+    "jana": 0.267,
+    "tong_jana": "tebal",
+    "lulus": true,
+    "hampir": false
+   },
+   {
+    "ciri": "hubungan_baris",
+    "teras": false,
+    "kira": true,
+    "rujukan": 0.0,
+    "tong_rujukan": "bertindih sedikit",
+    "frasa_rujukan": "sit close together and overlap slightly",
+    "jana": 0.0,
+    "tong_jana": "bertindih sedikit",
+    "lulus": true,
+    "hampir": false
+   },
+   {
+    "ciri": "bekas",
+    "teras": true,
+    "kira": true,
+    "rujukan": "tiada",
+    "tong_rujukan": "tiada",
+    "frasa_rujukan": null,
+    "jana": "tiada",
+    "tong_jana": "tiada",
+    "lulus": true,
+    "hampir": false
+   },
+   {
+    "ciri": "garis_sapuan",
+    "teras": false,
+    "kira": true,
+    "rujukan": "tiada",
+    "tong_rujukan": "tiada",
+    "frasa_rujukan": null,
+    "jana": "ada",
+    "tong_jana": "ada",
+    "lulus": false,
+    "hampir": false
+   },
+   {
+    "ciri": "bentuk_blok",
+    "teras": false,
+    "kira": true,
+    "rujukan": "segi empat",
+    "tong_rujukan": "segi empat",
+    "frasa_rujukan": "one tight block",
+    "jana": "bujur / membulat",
+    "tong_jana": "bujur / membulat",
+    "lulus": false,
+    "hampir": false
+   }
+  ],
   "skor": 77.8,
   "sama": 11,
   "hampir": 2,
@@ -1645,11 +2285,133 @@
   "nota": "had belum ditentukur (bukti lemah); skor menanda, tidak meluluskan"
  },
  {
-  "versi": "SK10 v1.2",
+  "versi": "SK10 v1.3",
+  "tentukur": "tiada (jadual asal)",
   "mod": "hp",
   "profil": "lettering bertaut (ciri seluruh blok)",
   "rujukan": "IMG_5840.jpg",
   "jana": "K24t_s7.png",
+  "ciri_teras": "3 / 4",
+  "ciri_semua": "6 / 8",
+  "ciri_gagal": [
+   {
+    "ciri": "tepi_strok",
+    "teras": true,
+    "rujukan": "licin",
+    "jana": "kasar / bertekstur"
+   },
+   {
+    "ciri": "garis_sapuan",
+    "teras": false,
+    "rujukan": "tiada",
+    "jana": "ada"
+   }
+  ],
+  "ubahan_seterusnya_ciri": {
+   "ciri": "tepi_strok",
+   "teras": true,
+   "dari": "kasar / bertekstur",
+   "ke": "licin",
+   "frasa_sasaran": "smooth clean edges"
+  },
+  "ciri": [
+   {
+    "ciri": "tepi_strok",
+    "teras": true,
+    "kira": true,
+    "rujukan": 5.155,
+    "tong_rujukan": "licin",
+    "frasa_rujukan": "smooth clean edges",
+    "jana": 116.2,
+    "tong_jana": "kasar / bertekstur",
+    "lulus": false,
+    "hampir": false
+   },
+   {
+    "ciri": "condong_huruf_utama",
+    "teras": true,
+    "kira": true,
+    "rujukan": 18.651,
+    "tong_rujukan": "condong",
+    "frasa_rujukan": "leaning to the right",
+    "jana": 28.5,
+    "tong_jana": "sangat condong",
+    "lulus": true,
+    "hampir": true
+   },
+   {
+    "ciri": "condong_blok",
+    "teras": true,
+    "kira": true,
+    "rujukan": 1.8,
+    "tong_rujukan": "mendatar",
+    "frasa_rujukan": null,
+    "jana": 0.0,
+    "tong_jana": "mendatar",
+    "lulus": true,
+    "hampir": false
+   },
+   {
+    "ciri": "tebal_utama",
+    "teras": false,
+    "kira": true,
+    "rujukan": 0.249,
+    "tong_rujukan": "tebal",
+    "frasa_rujukan": "bold",
+    "jana": 0.279,
+    "tong_jana": "tebal",
+    "lulus": true,
+    "hampir": false
+   },
+   {
+    "ciri": "hubungan_baris",
+    "teras": false,
+    "kira": true,
+    "rujukan": 0.0,
+    "tong_rujukan": "bertindih sedikit",
+    "frasa_rujukan": "sit close together and overlap slightly",
+    "jana": 0.0,
+    "tong_jana": "bertindih sedikit",
+    "lulus": true,
+    "hampir": false
+   },
+   {
+    "ciri": "bekas",
+    "teras": true,
+    "kira": true,
+    "rujukan": "tiada",
+    "tong_rujukan": "tiada",
+    "frasa_rujukan": null,
+    "jana": "tiada",
+    "tong_jana": "tiada",
+    "lulus": true,
+    "hampir": false
+   },
+   {
+    "ciri": "garis_sapuan",
+    "teras": false,
+    "kira": true,
+    "rujukan": "tiada",
+    "tong_rujukan": "tiada",
+    "frasa_rujukan": null,
+    "jana": "ada",
+    "tong_jana": "ada",
+    "lulus": false,
+    "hampir": false
+   },
+   {
+    "ciri": "bentuk_blok",
+    "teras": false,
+    "kira": true,
+    "rujukan": "segi empat",
+    "tong_rujukan": "segi empat",
+    "frasa_rujukan": "one tight block",
+    "jana": "segi empat",
+    "tong_jana": "segi empat",
+    "lulus": true,
+    "hampir": false
+   }
+  ],
   "skor": 81.5,
   "sama": 11,
   "hampir": 3,

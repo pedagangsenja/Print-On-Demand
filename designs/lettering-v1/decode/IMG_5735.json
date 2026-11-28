@@ -1,5 +1,5 @@
 {
- "versi": "SK09 v1.2",
+ "versi": "SK09 v1.3",
  "fail": "IMG_5735.jpg",
  "sha1": "10da9ec2b9d8",
  "tarikh": "2026-11-28",
@@ -75,8 +75,8 @@
    "tinggi_pct": 26.2,
    "tinggi_px": 110,
    "lebar_px": 235,
-   "indeks_tebal": 0.305,
-   "tebal_strok_pct": 13.8,
+   "indeks_tebal": 0.321,
+   "tebal_strok_pct": 14.5,
    "kontras_strok": 1.35,
    "condong_huruf_darjah": 21.5,
    "bersambung": false,
@@ -97,8 +97,8 @@
    "tinggi_pct": 25.5,
    "tinggi_px": 107,
    "lebar_px": 343,
-   "indeks_tebal": 0.323,
-   "tebal_strok_pct": 13.1,
+   "indeks_tebal": 0.332,
+   "tebal_strok_pct": 13.4,
    "kontras_strok": 1.48,
    "condong_huruf_darjah": 19.5,
    "bersambung": false,
@@ -119,8 +119,8 @@
    "tinggi_pct": 28.3,
    "tinggi_px": 119,
    "lebar_px": 329,
-   "indeks_tebal": 0.311,
-   "tebal_strok_pct": 15.8,
+   "indeks_tebal": 0.324,
+   "tebal_strok_pct": 16.4,
    "kontras_strok": 1.54,
    "condong_huruf_darjah": 19.5,
    "bersambung": false,
@@ -151,6 +151,7 @@
    "ukuran_kasar": false
   }
  ],
+ "kata_sumber": "kotak mata Claude",
  "baris": [
   {
    "n": 1,

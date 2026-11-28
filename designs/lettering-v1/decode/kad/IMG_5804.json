@@ -1,0 +1,145 @@
+{
+ "versi": "SK11 v1.0 (jadual F1)",
+ "rekod": "IMG_5804.jpeg",
+ "jenis_susunan": "baris lurus",
+ "amaran": [],
+ "blok": {
+  "medium": "lettering quote poster",
+  "gaya": "hand-lettered",
+  "latar_warna": "solid black",
+  "latar_isi": null,
+  "tepi": "rough textured edges",
+  "bentuk": "one tight block",
+  "condong": null,
+  "sentuh": "sit close together",
+  "margin": "wide empty black margins",
+  "huruf": {
+   "utama": {
+    "penuh": "very large very heavy sans-serif capitals with rough textured edges",
+    "ringkas": "very heavy sans-serif capitals"
+   }
+  },
+  "tertinggi": null,
+  "hierarki": "All the words are about the same size.",
+  "hiasan": null,
+  "sisi": null,
+  "hiasan_kotak": [],
+  "tiada": [
+   "other colors",
+   "outline",
+   "shadow"
+  ],
+  "ada": "solid white strokes on a clean black background",
+  "sama_lebar": true,
+  "rujukan": {
+   "condong_darjah": 0.0,
+   "tepi_pct": 6.9,
+   "tepi_sisi_pct": 20.5,
+   "tepi_atas_bawah_pct": 6.9,
+   "sumber": "SK09 v1.3 pada IMG_5804.jpeg"
+  }
+ },
+ "sumber": {
+  "huruf.utama": "angka: saiz, tebal, tepi, condong; jenis huruf: mata; huruf besar / kecil: teks (mata)",
+  "tepi": "angka: tepi_strok = 19.304 -> kasar / bertekstur",
+  "bentuk": "angka: bentuk_blok = segi empat -> segi empat",
+  "condong": "angka: condong_blok = 0.0 -> mendatar",
+  "sentuh": "angka: hubungan_baris = 1.0 -> rapat",
+  "hierarki": "lalai (tiada kotak kata)",
+  "medium, latar, margin, tiada, ada": "tetap v1.2 (hitam putih; ruang tepi ialah keputusan cetak dalam kad)",
+  "hiasan": "mata (senarai hiasan); skrip hanya mengesan ada / tiada"
+ },
+ "ciri": {
+  "tepi_strok": {
+   "nilai": 19.304,
+   "tong": "kasar / bertekstur",
+   "frasa": "rough textured edges",
+   "teras": true,
+   "asas": "baris utama",
+   "jadual": "tepi_strok"
+  },
+  "condong_huruf_utama": {
+   "nilai": 0.0,
+   "tong": "tegak",
+   "frasa": "upright",
+   "teras": true,
+   "asas": "baris utama",
+   "jadual": "condong_huruf_utama"
+  },
+  "condong_blok": {
+   "nilai": 0.0,
+   "tong": "mendatar",
+   "frasa": null,
+   "teras": true,
+   "asas": "blok",
+   "jadual": "condong_blok"
+  },
+  "tebal_utama": {
+   "nilai": 21.337,
+   "tong": "sangat tebal",
+   "frasa": "very heavy",
+   "teras": false,
+   "asas": "baris utama",
+   "jadual": "tebal_utama_baris"
+  },
+  "hubungan_baris": {
+   "nilai": 1.0,
+   "tong": "rapat",
+   "frasa": "sit close together",
+   "teras": false,
+   "asas": "blok",
+   "jadual": "hubungan_baris"
+  },
+  "bekas": {
+   "nilai": "tiada",
+   "tong": "tiada",
+   "frasa": null,
+   "teras": true,
+   "asas": "blok",
+   "jadual": "bekas"
+  },
+  "garis_sapuan": {
+   "nilai": "tiada",
+   "tong": "tiada",
+   "frasa": null,
+   "teras": false,
+   "asas": "blok",
+   "jadual": "garis_sapuan"
+  },
+  "bentuk_blok": {
+   "nilai": "segi empat",
+   "tong": "segi empat",
+   "frasa": "one tight block",
+   "teras": false,
+   "asas": "blok",
+   "jadual": "bentuk_blok"
+  },
+  "penjajaran": {
+   "nilai": "sama lebar (kiri dan kanan rata)",
+   "tong": "sama lebar (kiri dan kanan rata)",
+   "frasa": "every line stretched to the same width",
+   "teras": true,
+   "asas": "blok",
+   "jadual": "penjajaran"
+  }
+ },
+ "ciri_teras": [
+  "tepi_strok",
+  "condong_huruf_utama",
+  "condong_blok",
+  "bekas",
+  "penjajaran"
+ ],
+ "mata": {
+  "nama_gaya": "Blok sans pekat sempit sama lebar + tekstur grunge",
+  "hiasan": [
+   "tiada"
+  ],
+  "jangan_salin": [
+   "ayat asal",
+   "susun atur tepat",
+   "tandatangan / logo jika ada"
+  ]
+ },
+ "nota": "Draf: frasa daripada angka decode (jadual F1). Semak hiasan dan jenis huruf dengan mata sebelum jadi kad."
+}

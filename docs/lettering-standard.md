@@ -87,6 +87,28 @@ Guna: `python3 skrip/SK09_decode.py <gambar> [--semak]`; `python3 skrip/SK10_ban
 - **Kad pendua (belum diselesaikan):** tiga gambar rujukan ada lebih daripada satu kad daripada sesi berlainan: IMG_5840 (K22, K50, K24; K25 ialah gaya terbitan), IMG_5793 (K23, K51), IMG_5743 (K18, K33). Dikira daripada medan `ref` dalam `kad.py` (38 kad, 32 gambar rujukan). Sesi baharu mesti menyemak `kad.py` cawangan induk sebelum membuat kad atau huruf ayat baharu.
 - Butiran "Kerja lettering masih di 7 cawangan" dalam "Belum selesai" tidak lagi benar.
 
+## Frasa daripada angka (SK11) dan QC B ikut ciri (28 Nov 2026, keputusan pengguna; tanpa jana baharu)
+**Masalah.** Angka decode hampir tidak sampai ke prompt: frasa Kad Gaya ditulis dengan mata. Contoh K24: rekod menunjuk tepi strok licin (4%), frasa mata ialah "brush script", dan 6 imej pertama bertepi kasar.
+
+**SK11 (`skrip/SK11_frasa.py`, jadual F1).** Satu jadual tetap menukar ukuran kepada tong, dan setiap tong kepada satu frasa:
+- tepi strok (% tepi kasar): bawah 8 licin "smooth clean edges"; 8–16 "slightly rough hand-drawn edges"; 16 ke atas "rough textured edges".
+- condong huruf (darjah): bawah 5 tegak; 5–15 "slightly slanted to the right"; 15–28 "leaning to the right"; 28 ke atas "strongly slanted to the right".
+- condong blok (darjah): bawah 3 mendatar; 3–10 "tilts slightly so each line rises toward the right"; 10 ke atas "rises clearly toward the right".
+- tebal (indeks tebal kata): bawah 0.21 "light"; 0.21–0.29 "bold"; 0.29 ke atas "very heavy". Kontras strok: bawah 1.7 sekata; 1.7–3 sederhana; 3 ke atas tinggi (tidak dipakai bila tepi kasar).
+- hubungan baris, saiz kata sokongan / penyambung berbanding utama, bekas, garis / sapuan, penjajaran, bentuk blok: lihat `JADUAL` dan `KATEGORI` dalam skrip.
+- Sempadan diletak daripada ukuran 16 gambar rujukan dan pertimbangan Claude; belum diuji dengan jana baharu.
+- `draf_kad(rekod)` menulis draf isi kad (`decode/kad/<gambar>.json`, bentuk `kad.BLOK`) dengan sumber setiap medan. Mata kekal untuk: jenis huruf (skrip / sans / serif), teks, hiasan. Peraturan "angka mengatasi mata": kata "brush" hanya dipakai bila tepi diukur kasar.
+- Semakan: draf IMG_5840 = "very large bold script lettering with smooth clean edges, leaning to the right, with a big capital", iaitu tepi licin tanpa kata "brush", sama dengan pembetulan K24 v1.1 yang dahulu perlu satu pusingan jana untuk ditemui. 16 draf dijana; 2 ditanda amaran gaya campuran (IMG_5776, IMG_5838: kata sama peranan tetapi jenis huruf berlainan). Draf belum dijadikan kad dan belum diuji dengan jana.
+- SK09 v1.3: indeks tebal kata diukur selepas bintik tekstur ditutup (IMG_5776 dahulu terbaca "light").
+
+**QC B ikut ciri (SK10 v1.3).** Imej jana melalui jadual yang sama; ciri LULUS jika jatuh dalam tong yang sama dengan upload (jalur toleransi di sempadan). Laporan: `ciri_teras` n / m, senarai ciri gagal, dan `ubahan_seterusnya_ciri` dengan frasa sasaran. Ciri teras: tepi strok, condong huruf utama, condong blok, bekas, penjajaran (baris lurus). Skor lama kekal sebagai maklumat.
+- Ujian K24t (10 imej): pusingan 0 gagal "tepi strok" pada 6 / 6 (teras 2–3 / 4); pusingan 1 lulus teras 4 / 4 pada 4 / 4. Padan dengan mata Claude. Bukti lemah (satu kad).
+- Ujian 384 imej lawan 26 rujukan (`banding/ciri_ujian.json`): sebagai PEMBEZA gaya, ciri TIDAK lebih baik daripada skor lama (rujukan sendiri menang 18.0% lawan 23.2%; kedudukan purata 7.51 lawan 7.14; rawak 3.8% dan 13.5). Nilainya ialah laporan yang boleh dibaca dan frasa sasaran, bukan ketepatan yang lebih tinggi.
+- Ciri yang berguna (lulus dengan rujukan sendiri lawan rujukan lain): condong huruf utama 83% lawan 47%; penjajaran 71% lawan 37%; saiz sokongan 76% lawan 43%; condong huruf sokongan 72% lawan 44%. Lemah: tebal 69% lawan 64%; tepi strok 52% lawan 51% (walaupun hanya dibanding bila rujukan licin).
+- Dua pembaikan daripada ujian: tepi strok tidak dibanding bila rujukan bertekstur (tekstur ditambah skrip dalam Cetak v1); saiz penyambung jadi maklumat sahaja (38% lawan 45%).
+- Hanya 30.7% imej sedia ada lulus SEMUA ciri teras dengan rujukan sendiri, jadi ciri teras TIDAK boleh menjadi pintu lulus; ia menanda sahaja.
+- Belum diketahui: sama ada "tepi strok" gagal kerana jana memang kerap bertepi kasar, atau kerana ukurannya hingar pada imej jana. Perlu semakan mata pada sampel.
+
 ## Tentukur SK10 dan kad pendua (28 Nov 2026, tanpa jana baharu)
 Skrip: `skrip/tentukur_sk10.py`; hasil penuh: `banding/tentukur_sk10.json`. Data: 384 imej `betul/` sedia ada, 26 gambar rujukan, 30 kad. Tahap bukti: sederhana (ratusan imej, satu ukuran).
 

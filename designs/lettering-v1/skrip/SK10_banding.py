@@ -1,4 +1,9 @@
 """SK10 Banding (Standard Lettering v1.2, langkah 5: QC bahagian B). Versi 1.1, 28 Nov 2026.
+v1.3 (28 Nov 2026): QC B ikut CIRI, bukan skor. Tentukur pada 384 imej menunjukkan skor keseluruhan lemah (rujukan
+      sendiri menang 24%, rawak 4%), jadi hasil utama kini 'ciri': setiap ciri terukur (jadual SK11) LULUS jika imej
+      jana jatuh dalam tong yang sama dengan upload, iaitu akan dihuraikan dengan frasa yang sama. 'ciri_teras' = n / m
+      ciri teras lulus. 'ubahan_seterusnya' diambil daripada ciri teras yang gagal dahulu, dengan frasa sasarannya.
+      Skor lama kekal sebagai maklumat ('skor').
 v1.1: dua profil. "baris lurus" pada kedua-dua rekod -> ciri baris dibanding (seperti v1.0). Jika salah satu
       "lettering bertaut" -> ciri baris TIDAK dibanding (pecahan baris tidak boleh dipercayai); yang dibanding
       ialah kumpulan 'seluruh' (indeks tebal, kontras strok, strok nipis, condong huruf, bersambung, gelung,
@@ -27,7 +32,7 @@ from pathlib import Path
 
 import numpy as np
 
-VERSI = "SK10 v1.2"
+VERSI = "SK10 v1.3"
 
 # medan: (kumpulan, berat, had, jenis, tindakan jika beza)
 #   jenis: 'mutlak' = beza nilai; 'nisbah' = beza peratus; 'kategori' = sama / tidak
@@ -244,9 +249,24 @@ def banding(ruj, jana, mod="hp"):
                           berat=berat, rugi=round(berat * (1 - sk), 2), tindakan=None if sk >= 0.999 else tindakan))
     beza = sorted([r for r in baris if r.get("rugi")], key=lambda r: -r["rugi"])
     prompt = [r for r in beza if not r["tindakan"].startswith("skrip")]
+    import SK11_frasa
+    cr = SK11_frasa.banding_ciri(ruj, jana)
+    cr_kira = [c for c in cr if c.get("kira", True)]
+    teras = [c for c in cr_kira if c["teras"]]
+    gagal = [c for c in cr_kira if not c["lulus"]]
+    gagal.sort(key=lambda c: (not c["teras"],))                       # ciri teras yang gagal dahulu
+    SKRIP_5B = {"condong_blok": "skrip 5b (SK01)"}
+    gagal_prompt = [c for c in gagal if c["ciri"] not in SKRIP_5B]
+    ubah_ciri = (dict(ciri=gagal_prompt[0]["ciri"], teras=gagal_prompt[0]["teras"], dari=gagal_prompt[0]["tong_jana"],
+                      ke=gagal_prompt[0]["tong_rujukan"], frasa_sasaran=gagal_prompt[0]["frasa_rujukan"])
+                 if gagal_prompt else None)
     return dict(
         versi=VERSI, tentukur=TENTUKUR or "tiada (jadual asal)", mod=mod, profil="lettering bertaut (ciri seluruh blok)" if bertaut else "baris lurus (ciri baris)",
         rujukan=ruj["fail"], jana=jana["fail"],
+        ciri_teras="%d / %d" % (sum(c["lulus"] for c in teras), len(teras)),
+        ciri_semua="%d / %d" % (sum(c["lulus"] for c in cr_kira), len(cr_kira)),
+        ciri_gagal=[dict(ciri=c["ciri"], teras=c["teras"], rujukan=c["tong_rujukan"], jana=c["tong_jana"]) for c in gagal],
+        ubahan_seterusnya_ciri=ubah_ciri, ciri=cr,
         skor=round(dapat / jum * 100, 1) if jum else None,
         sama=sum(r["hasil"] == "sama" for r in baris), hampir=sum(r["hasil"] == "hampir" for r in baris),
         beza=sum(r["hasil"] == "beza" for r in baris),
@@ -281,5 +301,5 @@ if __name__ == "__main__":
     if keluar:
         Path(keluar).write_text(json.dumps(hasil, ensure_ascii=False, indent=1) + "\n")
     for h in hasil:
-        print(json.dumps({k: h[k] for k in ("jana", "profil", "skor", "sama", "hampir", "beza", "ubahan_seterusnya",
+        print(json.dumps({k: h[k] for k in ("jana", "ciri_teras", "ciri_semua", "ciri_gagal", "ubahan_seterusnya_ciri", "skor",
                                             "skrip_5b")}, ensure_ascii=False))

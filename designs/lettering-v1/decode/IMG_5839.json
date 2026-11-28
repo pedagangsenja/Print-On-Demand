@@ -1,5 +1,5 @@
 {
- "versi": "SK09 v1.2",
+ "versi": "SK09 v1.3",
  "fail": "IMG_5839.jpg",
  "sha1": "701faab03ce6",
  "tarikh": "2026-11-28",
@@ -78,7 +78,7 @@
    "tinggi_px": 184,
    "lebar_px": 361,
    "indeks_tebal": 0.207,
-   "tebal_strok_pct": 6.9,
+   "tebal_strok_pct": 7.0,
    "kontras_strok": 1.32,
    "condong_huruf_darjah": 34.5,
    "bersambung": false,
@@ -143,8 +143,8 @@
    "tinggi_pct": 30.4,
    "tinggi_px": 131,
    "lebar_px": 344,
-   "indeks_tebal": 0.266,
-   "tebal_strok_pct": 10.1,
+   "indeks_tebal": 0.315,
+   "tebal_strok_pct": 11.9,
    "kontras_strok": 1.48,
    "condong_huruf_darjah": 33.5,
    "bersambung": true,
@@ -153,6 +153,7 @@
    "ukuran_kasar": false
   }
  ],
+ "kata_sumber": "kotak mata Claude",
  "baris": [
   {
    "n": 1,
