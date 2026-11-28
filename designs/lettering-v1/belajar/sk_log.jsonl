@@ -31,116 +31,116 @@
 {"sk": "SK01", "versi": "5b v1.1", "imej": "v12-cpu/zturbo/K3K_s42", "larian": "v12-cpu", "kad": "K3", "jalan": true, "gagal": [], "amaran": []}
 {"sk": "SK01", "versi": "5b v1.1", "imej": "v12-cpu/zturbo/K3K_s7", "larian": "v12-cpu", "kad": "K3", "jalan": true, "gagal": [], "amaran": []}
 {"sk": "SK01", "versi": "5b v1.1", "imej": "v12-cpu/zturbo/K7M_s123", "larian": "v12-cpu", "kad": "K7", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K10N_s7", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K12Y_s123", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K9B_s123", "larian": "v12b-cpu", "kad": "K9", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K9B_s42", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K9B_s7", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": ["condong 15.5 masih di luar had (rujukan 12.5)"], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K10N_s7", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K11S_s123", "larian": "v12b-cpu", "kad": "K11", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K11S_s42", "larian": "v12b-cpu", "kad": "K11", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K12Y_s123", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K9B_s123", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K9B_s42", "larian": "v12b-cpu", "kad": "K9", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K9B_s7", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/klein4b/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/klein4b/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/klein4b/K10N_s7", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/klein4b/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/klein4b/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/klein4b/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/klein4b/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/klein4b/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K10N_s7", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K12Y_s123", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K9B_s123", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K9B_s42", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K9B_s7", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/zturbo/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/zturbo/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/zturbo/K11S_s42", "larian": "v12b-cpu", "kad": "K11", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/zturbo/K12Y_s123", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/zturbo/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/zturbo/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/zturbo/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/zturbo/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.1", "imej": "v12b-cpu/zturbo/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K10N_s7", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K12Y_s123", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K9B_s123", "larian": "v12b-cpu", "kad": "K9", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K9B_s42", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K9B_s7", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": ["condong 15.5 masih di luar had (rujukan 12.5)"], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K10N_s7", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K11S_s123", "larian": "v12b-cpu", "kad": "K11", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K11S_s42", "larian": "v12b-cpu", "kad": "K11", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K12Y_s123", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K9B_s123", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K9B_s42", "larian": "v12b-cpu", "kad": "K9", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K9B_s7", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/klein4b/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/klein4b/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/klein4b/K10N_s7", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/klein4b/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/klein4b/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/klein4b/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/klein4b/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/klein4b/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K10N_s7", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K12Y_s123", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K9B_s123", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K9B_s42", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K9B_s7", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/zturbo/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/zturbo/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/zturbo/K11S_s42", "larian": "v12b-cpu", "kad": "K11", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/zturbo/K12Y_s123", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/zturbo/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/zturbo/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/zturbo/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/zturbo/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK01", "versi": "5b v1.2", "imej": "v12b-cpu/zturbo/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K14R_s123", "larian": "v12c-cpu", "kad": "K14", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K14R_s42", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K14R_s7", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": ["condong 15.5 masih di luar had (rujukan 12.5)"], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K15T_s7", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K17O_s123", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K14R_s123", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K14R_s42", "larian": "v12c-cpu", "kad": "K14", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K14R_s7", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K15T_s7", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K16S_s123", "larian": "v12c-cpu", "kad": "K16", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K16S_s42", "larian": "v12c-cpu", "kad": "K16", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K17O_s123", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/klein4b/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/klein4b/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/klein4b/K15T_s7", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/klein4b/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/klein4b/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/klein4b/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/klein4b/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/klein4b/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K14R_s123", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K14R_s42", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K14R_s7", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K15T_s7", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K17O_s123", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/zturbo/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/zturbo/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/zturbo/K16S_s42", "larian": "v12c-cpu", "kad": "K16", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/zturbo/K17O_s123", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/zturbo/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/zturbo/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/zturbo/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/zturbo/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.1", "imej": "v12c-cpu/zturbo/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K14R_s123", "larian": "v12c-cpu", "kad": "K14", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K14R_s42", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K14R_s7", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": ["condong 15.5 masih di luar had (rujukan 12.5)"], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K15T_s7", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K17O_s123", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K14R_s123", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K14R_s42", "larian": "v12c-cpu", "kad": "K14", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K14R_s7", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K15T_s7", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K16S_s123", "larian": "v12c-cpu", "kad": "K16", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K16S_s42", "larian": "v12c-cpu", "kad": "K16", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K17O_s123", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/klein4b/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/klein4b/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/klein4b/K15T_s7", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/klein4b/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/klein4b/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/klein4b/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/klein4b/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/klein4b/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K14R_s123", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K14R_s42", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K14R_s7", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K15T_s7", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K17O_s123", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/zturbo/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/zturbo/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/zturbo/K16S_s42", "larian": "v12c-cpu", "kad": "K16", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/zturbo/K17O_s123", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/zturbo/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/zturbo/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/zturbo/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/zturbo/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK01", "versi": "5b v1.2", "imej": "v12c-cpu/zturbo/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
 {"sk": "SK02", "versi": "5b v1.1", "imej": "v12-cpu/ernie/K3K_s123", "larian": "v12-cpu", "kad": "K3", "jalan": true, "gagal": [], "amaran": []}
 {"sk": "SK02", "versi": "5b v1.1", "imej": "v12-cpu/ernie/K3K_s42", "larian": "v12-cpu", "kad": "K3", "jalan": true, "gagal": [], "amaran": []}
 {"sk": "SK02", "versi": "5b v1.1", "imej": "v12-cpu/ernie/K7M_s123", "larian": "v12-cpu", "kad": "K7", "jalan": false, "gagal": [], "amaran": []}
@@ -174,116 +174,116 @@
 {"sk": "SK02", "versi": "5b v1.1", "imej": "v12-cpu/zturbo/K3K_s42", "larian": "v12-cpu", "kad": "K3", "jalan": true, "gagal": [], "amaran": []}
 {"sk": "SK02", "versi": "5b v1.1", "imej": "v12-cpu/zturbo/K3K_s7", "larian": "v12-cpu", "kad": "K3", "jalan": true, "gagal": [], "amaran": []}
 {"sk": "SK02", "versi": "5b v1.1", "imej": "v12-cpu/zturbo/K7M_s123", "larian": "v12-cpu", "kad": "K7", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K10N_s7", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K12Y_s123", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K9B_s123", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K9B_s42", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K9B_s7", "larian": "v12b-cpu", "kad": "K9", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K10N_s7", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": ["ruang tepi masih di luar had: beza 2.3 mata"], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K11S_s123", "larian": "v12b-cpu", "kad": "K11", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K11S_s42", "larian": "v12b-cpu", "kad": "K11", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K12Y_s123", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K9B_s123", "larian": "v12b-cpu", "kad": "K9", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K9B_s42", "larian": "v12b-cpu", "kad": "K9", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K9B_s7", "larian": "v12b-cpu", "kad": "K9", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/klein4b/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/klein4b/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/klein4b/K10N_s7", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/klein4b/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/klein4b/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/klein4b/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/klein4b/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/klein4b/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": ["ruang tepi masih di luar had: beza 2.3 mata"], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K10N_s7", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K12Y_s123", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K9B_s123", "larian": "v12b-cpu", "kad": "K9", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K9B_s42", "larian": "v12b-cpu", "kad": "K9", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K9B_s7", "larian": "v12b-cpu", "kad": "K9", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/zturbo/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/zturbo/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/zturbo/K11S_s42", "larian": "v12b-cpu", "kad": "K11", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/zturbo/K12Y_s123", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/zturbo/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/zturbo/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/zturbo/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/zturbo/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.1", "imej": "v12b-cpu/zturbo/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K10N_s7", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K12Y_s123", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K9B_s123", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K9B_s42", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K9B_s7", "larian": "v12b-cpu", "kad": "K9", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K10N_s7", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K11S_s123", "larian": "v12b-cpu", "kad": "K11", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K11S_s42", "larian": "v12b-cpu", "kad": "K11", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K12Y_s123", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K9B_s123", "larian": "v12b-cpu", "kad": "K9", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K9B_s42", "larian": "v12b-cpu", "kad": "K9", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K9B_s7", "larian": "v12b-cpu", "kad": "K9", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/klein4b/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/klein4b/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/klein4b/K10N_s7", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/klein4b/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/klein4b/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/klein4b/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/klein4b/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/klein4b/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K10N_s7", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K12Y_s123", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K9B_s123", "larian": "v12b-cpu", "kad": "K9", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K9B_s42", "larian": "v12b-cpu", "kad": "K9", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K9B_s7", "larian": "v12b-cpu", "kad": "K9", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/zturbo/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/zturbo/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/zturbo/K11S_s42", "larian": "v12b-cpu", "kad": "K11", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/zturbo/K12Y_s123", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/zturbo/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/zturbo/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/zturbo/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/zturbo/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK02", "versi": "5b v1.2", "imej": "v12b-cpu/zturbo/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K14R_s123", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K14R_s42", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K14R_s7", "larian": "v12c-cpu", "kad": "K14", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K15T_s7", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K17O_s123", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K14R_s123", "larian": "v12c-cpu", "kad": "K14", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K14R_s42", "larian": "v12c-cpu", "kad": "K14", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K14R_s7", "larian": "v12c-cpu", "kad": "K14", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K15T_s7", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": ["ruang tepi masih di luar had: beza 2.3 mata"], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K16S_s123", "larian": "v12c-cpu", "kad": "K16", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K16S_s42", "larian": "v12c-cpu", "kad": "K16", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K17O_s123", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/klein4b/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/klein4b/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/klein4b/K15T_s7", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/klein4b/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/klein4b/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/klein4b/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/klein4b/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/klein4b/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K14R_s123", "larian": "v12c-cpu", "kad": "K14", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K14R_s42", "larian": "v12c-cpu", "kad": "K14", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K14R_s7", "larian": "v12c-cpu", "kad": "K14", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": ["ruang tepi masih di luar had: beza 2.3 mata"], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K15T_s7", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K17O_s123", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/zturbo/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/zturbo/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/zturbo/K16S_s42", "larian": "v12c-cpu", "kad": "K16", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/zturbo/K17O_s123", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/zturbo/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/zturbo/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/zturbo/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/zturbo/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.1", "imej": "v12c-cpu/zturbo/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K14R_s123", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K14R_s42", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K14R_s7", "larian": "v12c-cpu", "kad": "K14", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K15T_s7", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K17O_s123", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K14R_s123", "larian": "v12c-cpu", "kad": "K14", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K14R_s42", "larian": "v12c-cpu", "kad": "K14", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K14R_s7", "larian": "v12c-cpu", "kad": "K14", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K15T_s7", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K16S_s123", "larian": "v12c-cpu", "kad": "K16", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K16S_s42", "larian": "v12c-cpu", "kad": "K16", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K17O_s123", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/klein4b/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/klein4b/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/klein4b/K15T_s7", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/klein4b/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/klein4b/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/klein4b/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/klein4b/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/klein4b/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K14R_s123", "larian": "v12c-cpu", "kad": "K14", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K14R_s42", "larian": "v12c-cpu", "kad": "K14", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K14R_s7", "larian": "v12c-cpu", "kad": "K14", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K15T_s7", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K17O_s123", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/zturbo/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/zturbo/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/zturbo/K16S_s42", "larian": "v12c-cpu", "kad": "K16", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/zturbo/K17O_s123", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/zturbo/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/zturbo/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/zturbo/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/zturbo/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK02", "versi": "5b v1.2", "imej": "v12c-cpu/zturbo/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
 {"sk": "SK03", "versi": "5b v1.1", "imej": "v12-cpu/ernie/K3K_s123", "larian": "v12-cpu", "kad": "K3", "jalan": false, "gagal": [], "amaran": []}
 {"sk": "SK03", "versi": "5b v1.1", "imej": "v12-cpu/ernie/K3K_s42", "larian": "v12-cpu", "kad": "K3", "jalan": false, "gagal": [], "amaran": []}
 {"sk": "SK03", "versi": "5b v1.1", "imej": "v12-cpu/ernie/K7M_s123", "larian": "v12-cpu", "kad": "K7", "jalan": false, "gagal": [], "amaran": []}
@@ -317,116 +317,116 @@
 {"sk": "SK03", "versi": "5b v1.1", "imej": "v12-cpu/zturbo/K3K_s42", "larian": "v12-cpu", "kad": "K3", "jalan": true, "gagal": [], "amaran": []}
 {"sk": "SK03", "versi": "5b v1.1", "imej": "v12-cpu/zturbo/K3K_s7", "larian": "v12-cpu", "kad": "K3", "jalan": false, "gagal": [], "amaran": []}
 {"sk": "SK03", "versi": "5b v1.1", "imej": "v12-cpu/zturbo/K7M_s123", "larian": "v12-cpu", "kad": "K7", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K10N_s7", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K12Y_s123", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K9B_s123", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K9B_s42", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K9B_s7", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K10N_s7", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K11S_s123", "larian": "v12b-cpu", "kad": "K11", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K11S_s42", "larian": "v12b-cpu", "kad": "K11", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K12Y_s123", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K9B_s123", "larian": "v12b-cpu", "kad": "K9", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K9B_s42", "larian": "v12b-cpu", "kad": "K9", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K9B_s7", "larian": "v12b-cpu", "kad": "K9", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/klein4b/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/klein4b/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/klein4b/K10N_s7", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/klein4b/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/klein4b/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/klein4b/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/klein4b/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/klein4b/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K10N_s7", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K12Y_s123", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K9B_s123", "larian": "v12b-cpu", "kad": "K9", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K9B_s42", "larian": "v12b-cpu", "kad": "K9", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K9B_s7", "larian": "v12b-cpu", "kad": "K9", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/zturbo/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/zturbo/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/zturbo/K11S_s42", "larian": "v12b-cpu", "kad": "K11", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/zturbo/K12Y_s123", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/zturbo/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/zturbo/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/zturbo/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/zturbo/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.1", "imej": "v12b-cpu/zturbo/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K10N_s7", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K12Y_s123", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K9B_s123", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K9B_s42", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K9B_s7", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K10N_s7", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K11S_s123", "larian": "v12b-cpu", "kad": "K11", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K11S_s42", "larian": "v12b-cpu", "kad": "K11", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K12Y_s123", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K9B_s123", "larian": "v12b-cpu", "kad": "K9", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K9B_s42", "larian": "v12b-cpu", "kad": "K9", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K9B_s7", "larian": "v12b-cpu", "kad": "K9", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/klein4b/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/klein4b/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/klein4b/K10N_s7", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/klein4b/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/klein4b/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/klein4b/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/klein4b/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/klein4b/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K10N_s7", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K12Y_s123", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K9B_s123", "larian": "v12b-cpu", "kad": "K9", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K9B_s42", "larian": "v12b-cpu", "kad": "K9", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K9B_s7", "larian": "v12b-cpu", "kad": "K9", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/zturbo/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/zturbo/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/zturbo/K11S_s42", "larian": "v12b-cpu", "kad": "K11", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/zturbo/K12Y_s123", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/zturbo/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/zturbo/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/zturbo/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/zturbo/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK03", "versi": "5b v1.2", "imej": "v12b-cpu/zturbo/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K14R_s123", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K14R_s42", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K14R_s7", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K15T_s7", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K17O_s123", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K14R_s123", "larian": "v12c-cpu", "kad": "K14", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K14R_s42", "larian": "v12c-cpu", "kad": "K14", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K14R_s7", "larian": "v12c-cpu", "kad": "K14", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K15T_s7", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K16S_s123", "larian": "v12c-cpu", "kad": "K16", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K16S_s42", "larian": "v12c-cpu", "kad": "K16", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K17O_s123", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/klein4b/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/klein4b/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/klein4b/K15T_s7", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/klein4b/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/klein4b/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/klein4b/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/klein4b/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/klein4b/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K14R_s123", "larian": "v12c-cpu", "kad": "K14", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K14R_s42", "larian": "v12c-cpu", "kad": "K14", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K14R_s7", "larian": "v12c-cpu", "kad": "K14", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K15T_s7", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K17O_s123", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/zturbo/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/zturbo/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/zturbo/K16S_s42", "larian": "v12c-cpu", "kad": "K16", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/zturbo/K17O_s123", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/zturbo/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/zturbo/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/zturbo/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/zturbo/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.1", "imej": "v12c-cpu/zturbo/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K14R_s123", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K14R_s42", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K14R_s7", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K15T_s7", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K17O_s123", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K14R_s123", "larian": "v12c-cpu", "kad": "K14", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K14R_s42", "larian": "v12c-cpu", "kad": "K14", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K14R_s7", "larian": "v12c-cpu", "kad": "K14", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K15T_s7", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K16S_s123", "larian": "v12c-cpu", "kad": "K16", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K16S_s42", "larian": "v12c-cpu", "kad": "K16", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K17O_s123", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/klein4b/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/klein4b/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/klein4b/K15T_s7", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/klein4b/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/klein4b/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/klein4b/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/klein4b/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/klein4b/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K14R_s123", "larian": "v12c-cpu", "kad": "K14", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K14R_s42", "larian": "v12c-cpu", "kad": "K14", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K14R_s7", "larian": "v12c-cpu", "kad": "K14", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K15T_s7", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K17O_s123", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/zturbo/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/zturbo/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/zturbo/K16S_s42", "larian": "v12c-cpu", "kad": "K16", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/zturbo/K17O_s123", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/zturbo/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/zturbo/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/zturbo/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/zturbo/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK03", "versi": "5b v1.2", "imej": "v12c-cpu/zturbo/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
 {"sk": "SK04", "versi": "5b v1.1", "imej": "v12-cpu/ernie/K3K_s123", "larian": "v12-cpu", "kad": "K3", "jalan": true, "gagal": [], "amaran": []}
 {"sk": "SK04", "versi": "5b v1.1", "imej": "v12-cpu/ernie/K3K_s42", "larian": "v12-cpu", "kad": "K3", "jalan": true, "gagal": [], "amaran": []}
 {"sk": "SK04", "versi": "5b v1.1", "imej": "v12-cpu/ernie/K7M_s123", "larian": "v12-cpu", "kad": "K7", "jalan": true, "gagal": [], "amaran": []}
@@ -460,116 +460,116 @@
 {"sk": "SK04", "versi": "5b v1.1", "imej": "v12-cpu/zturbo/K3K_s42", "larian": "v12-cpu", "kad": "K3", "jalan": true, "gagal": [], "amaran": []}
 {"sk": "SK04", "versi": "5b v1.1", "imej": "v12-cpu/zturbo/K3K_s7", "larian": "v12-cpu", "kad": "K3", "jalan": true, "gagal": [], "amaran": []}
 {"sk": "SK04", "versi": "5b v1.1", "imej": "v12-cpu/zturbo/K7M_s123", "larian": "v12-cpu", "kad": "K7", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K10N_s7", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K12Y_s123", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K9B_s123", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K9B_s42", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/ernie/K9B_s7", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K10N_s7", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K11S_s123", "larian": "v12b-cpu", "kad": "K11", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K11S_s42", "larian": "v12b-cpu", "kad": "K11", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K12Y_s123", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K9B_s123", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K9B_s42", "larian": "v12b-cpu", "kad": "K9", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/klein3/K9B_s7", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/klein4b/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/klein4b/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/klein4b/K10N_s7", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/klein4b/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/klein4b/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/klein4b/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/klein4b/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/klein4b/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K10N_s7", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K12Y_s123", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K9B_s123", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K9B_s42", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/moss/K9B_s7", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/zturbo/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/zturbo/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/zturbo/K11S_s42", "larian": "v12b-cpu", "kad": "K11", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/zturbo/K12Y_s123", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/zturbo/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/zturbo/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/zturbo/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/zturbo/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.1", "imej": "v12b-cpu/zturbo/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K10N_s7", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K12Y_s123", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K9B_s123", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K9B_s42", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/ernie/K9B_s7", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K10N_s7", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K11S_s123", "larian": "v12b-cpu", "kad": "K11", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K11S_s42", "larian": "v12b-cpu", "kad": "K11", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K12Y_s123", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K9B_s123", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K9B_s42", "larian": "v12b-cpu", "kad": "K9", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/klein3/K9B_s7", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/klein4b/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/klein4b/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/klein4b/K10N_s7", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/klein4b/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/klein4b/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/klein4b/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/klein4b/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/klein4b/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K10N_s7", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K12Y_s123", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K9B_s123", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K9B_s42", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/moss/K9B_s7", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/zturbo/K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/zturbo/K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/zturbo/K11S_s42", "larian": "v12b-cpu", "kad": "K11", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/zturbo/K12Y_s123", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/zturbo/K12Y_s42", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/zturbo/K12Y_s7", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/zturbo/K4F_s123", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/zturbo/K4F_s42", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK04", "versi": "5b v1.2", "imej": "v12b-cpu/zturbo/K4F_s7", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K14R_s123", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K14R_s42", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K14R_s7", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K15T_s7", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K17O_s123", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/ernie/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K14R_s123", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K14R_s42", "larian": "v12c-cpu", "kad": "K14", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K14R_s7", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K15T_s7", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K16S_s123", "larian": "v12c-cpu", "kad": "K16", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K16S_s42", "larian": "v12c-cpu", "kad": "K16", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K17O_s123", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/klein3/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/klein4b/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/klein4b/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/klein4b/K15T_s7", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/klein4b/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/klein4b/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/klein4b/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/klein4b/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/klein4b/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K14R_s123", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K14R_s42", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K14R_s7", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K15T_s7", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K17O_s123", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/moss/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/zturbo/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/zturbo/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/zturbo/K16S_s42", "larian": "v12c-cpu", "kad": "K16", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/zturbo/K17O_s123", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/zturbo/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/zturbo/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/zturbo/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/zturbo/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.1", "imej": "v12c-cpu/zturbo/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K14R_s123", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K14R_s42", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K14R_s7", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K15T_s7", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K17O_s123", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/ernie/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K14R_s123", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K14R_s42", "larian": "v12c-cpu", "kad": "K14", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K14R_s7", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K15T_s7", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K16S_s123", "larian": "v12c-cpu", "kad": "K16", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K16S_s42", "larian": "v12c-cpu", "kad": "K16", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K17O_s123", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/klein3/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/klein4b/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/klein4b/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/klein4b/K15T_s7", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/klein4b/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/klein4b/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/klein4b/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/klein4b/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/klein4b/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K14R_s123", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K14R_s42", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K14R_s7", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K15T_s7", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K17O_s123", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/moss/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": false, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/zturbo/K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/zturbo/K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/zturbo/K16S_s42", "larian": "v12c-cpu", "kad": "K16", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/zturbo/K17O_s123", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/zturbo/K17O_s42", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/zturbo/K17O_s7", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/zturbo/K4F_s123", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/zturbo/K4F_s42", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK04", "versi": "5b v1.2", "imej": "v12c-cpu/zturbo/K4F_s7", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
 {"sk": "SK06", "versi": "SK06 v1 (27 Nov 2026)", "imej": "v12-cpu/K3K_klein3_s42", "larian": "v12-cpu", "kad": "", "jalan": true, "gagal": [], "amaran": []}
 {"sk": "SK06", "versi": "SK06 v1 (27 Nov 2026)", "imej": "v12-cpu/K3K_moss_s42", "larian": "v12-cpu", "kad": "", "jalan": true, "gagal": [], "amaran": []}
 {"sk": "SK06", "versi": "SK06 v1 (27 Nov 2026)", "imej": "v12-cpu/K7M_klein3_s7", "larian": "v12-cpu", "kad": "", "jalan": true, "gagal": [], "amaran": []}
@@ -614,37 +614,37 @@
 {"sk": "SK06", "versi": "SK06 v1.3 (27 Nov 2026)", "imej": "v12-cpu/klein4b/K8G_s42", "larian": "v12-cpu-sk07", "kad": "K8", "jalan": true, "gagal": [], "amaran": []}
 {"sk": "SK06", "versi": "SK06 v1.3 (27 Nov 2026)", "imej": "v12-cpu/moss/K3K_s42", "larian": "uji_sk/SK06_v1.3", "kad": "K3", "jalan": true, "gagal": [], "amaran": []}
 {"sk": "SK06", "versi": "SK06 v1.3 (27 Nov 2026)", "imej": "v12-cpu/moss/K7M_s42", "larian": "uji_sk/SK06_v1.3", "kad": "K7", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK06", "versi": "SK06 v1.3 (27 Nov 2026)", "imej": "v12b-cpu/ernie_K4F_s7_C003+C003", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK06", "versi": "SK06 v1.3 (27 Nov 2026)", "imej": "v12b-cpu/ernie_K9B_s123_C003+C003", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": ["tekstur kad 'tiada (vektor rata)' belum ada jenisnya dalam SK06: tidak dibuat"]}
-{"sk": "SK06", "versi": "SK06 v1.3 (27 Nov 2026)", "imej": "v12b-cpu/klein3_K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK06", "versi": "SK06 v1.3 (27 Nov 2026)", "imej": "v12b-cpu/klein3_K11S_s42", "larian": "v12b-cpu", "kad": "K11", "jalan": true, "gagal": [], "amaran": ["tekstur kad 'lusuh cetakan saring' belum ada jenisnya dalam SK06: tidak dibuat"]}
-{"sk": "SK06", "versi": "SK06 v1.3 (27 Nov 2026)", "imej": "v12b-cpu/klein3_K12Y_s7_C003+C003", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": ["tekstur kad 'lusuh cop kering' belum ada jenisnya dalam SK06: tidak dibuat"]}
-{"sk": "SK06", "versi": "SK06 v1.3 (27 Nov 2026)", "imej": "v12b-cpu/klein4b_K12Y_s42_C003+C003", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": ["tekstur kad 'lusuh cop kering' belum ada jenisnya dalam SK06: tidak dibuat"]}
-{"sk": "SK06", "versi": "SK06 v1.3 (27 Nov 2026)", "imej": "v12b-cpu/klein4b_K4F_s123_C003+C003", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK06", "versi": "SK06 v1.3 (27 Nov 2026)", "imej": "v12b-cpu/moss_K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK06", "versi": "SK06 v1.3 (27 Nov 2026)", "imej": "v12b-cpu/moss_K12Y_s123_C003+C003", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": ["tekstur kad 'lusuh cop kering' belum ada jenisnya dalam SK06: tidak dibuat"]}
-{"sk": "SK06", "versi": "SK06 v1.3 (27 Nov 2026)", "imej": "v12b-cpu/moss_K4F_s42_C003+C003", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK06", "versi": "SK06 v1.3 (27 Nov 2026)", "imej": "v12b-cpu/moss_K9B_s7_C003+C003", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": ["tekstur kad 'tiada (vektor rata)' belum ada jenisnya dalam SK06: tidak dibuat"]}
-{"sk": "SK06", "versi": "SK06 v1.3 (27 Nov 2026)", "imej": "v12b-cpu/zturbo_K11S_s42", "larian": "v12b-cpu", "kad": "K11", "jalan": true, "gagal": [], "amaran": ["tekstur kad 'lusuh cetakan saring' belum ada jenisnya dalam SK06: tidak dibuat"]}
-{"sk": "SK06", "versi": "SK06 v1.4 (27 Nov 2026)", "imej": "v12b-cpu/ernie_K4F_s7_C003+C003", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK06", "versi": "SK06 v1.4 (27 Nov 2026)", "imej": "v12b-cpu/ernie_K9B_s123_C003+C003", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": ["tekstur kad 'tiada (vektor rata)' belum ada jenisnya dalam SK06: tidak dibuat"]}
-{"sk": "SK06", "versi": "SK06 v1.4 (27 Nov 2026)", "imej": "v12b-cpu/klein3_K10N_s42", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK06", "versi": "SK06 v1.4 (27 Nov 2026)", "imej": "v12b-cpu/klein3_K11S_s42", "larian": "v12b-cpu", "kad": "K11", "jalan": true, "gagal": [], "amaran": ["tekstur kad 'lusuh cetakan saring' belum ada jenisnya dalam SK06: tidak dibuat"]}
-{"sk": "SK06", "versi": "SK06 v1.4 (27 Nov 2026)", "imej": "v12b-cpu/klein3_K12Y_s7_C003+C003", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": ["tekstur kad 'lusuh cop kering' belum ada jenisnya dalam SK06: tidak dibuat"]}
-{"sk": "SK06", "versi": "SK06 v1.4 (27 Nov 2026)", "imej": "v12b-cpu/klein4b_K12Y_s42_C003+C003", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": ["tekstur kad 'lusuh cop kering' belum ada jenisnya dalam SK06: tidak dibuat"]}
-{"sk": "SK06", "versi": "SK06 v1.4 (27 Nov 2026)", "imej": "v12b-cpu/klein4b_K4F_s123_C003+C003", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK06", "versi": "SK06 v1.4 (27 Nov 2026)", "imej": "v12b-cpu/moss_K10N_s123", "larian": "v12b-cpu", "kad": "K10", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK06", "versi": "SK06 v1.4 (27 Nov 2026)", "imej": "v12b-cpu/moss_K12Y_s123_C003+C003", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": ["tekstur kad 'lusuh cop kering' belum ada jenisnya dalam SK06: tidak dibuat"]}
-{"sk": "SK06", "versi": "SK06 v1.4 (27 Nov 2026)", "imej": "v12b-cpu/moss_K4F_s42_C003+C003", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK06", "versi": "SK06 v1.4 (27 Nov 2026)", "imej": "v12b-cpu/moss_K9B_s7_C003+C003", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": ["tekstur kad 'tiada (vektor rata)' belum ada jenisnya dalam SK06: tidak dibuat"]}
-{"sk": "SK06", "versi": "SK06 v1.4 (27 Nov 2026)", "imej": "v12b-cpu/zturbo_K11S_s42", "larian": "v12b-cpu", "kad": "K11", "jalan": true, "gagal": [], "amaran": ["tekstur kad 'lusuh cetakan saring' belum ada jenisnya dalam SK06: tidak dibuat"]}
-{"sk": "SK06", "versi": "SK06 v1.5 (27 Nov 2026)", "imej": "v12b-cpu/klein3_K11S_s42", "larian": "v12b-cpu", "kad": "K11", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK06", "versi": "SK06 v1.5 (27 Nov 2026)", "imej": "v12b-cpu/klein3_K12Y_s7_C003+C003", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK06", "versi": "SK06 v1.5 (27 Nov 2026)", "imej": "v12b-cpu/klein4b_K12Y_s42_C003+C003", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK06", "versi": "SK06 v1.5 (27 Nov 2026)", "imej": "v12b-cpu/moss_K12Y_s123_C003+C003", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK06", "versi": "SK06 v1.5 (27 Nov 2026)", "imej": "v12b-cpu/zturbo_K11S_s42", "larian": "v12b-cpu", "kad": "K11", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK06", "versi": "SK06 v1.6 (27 Nov 2026)", "imej": "v12b-cpu/ernie_K9B_s123_C003+C003", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK06", "versi": "SK06 v1.6 (27 Nov 2026)", "imej": "v12b-cpu/moss_K9B_s7_C003+C003", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK06", "versi": "SK06 v1.3 (27 Nov 2026)", "imej": "v12c-cpu/ernie_K14R_s123_C003+C003", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": ["tekstur kad 'tiada (vektor rata)' belum ada jenisnya dalam SK06: tidak dibuat"]}
+{"sk": "SK06", "versi": "SK06 v1.3 (27 Nov 2026)", "imej": "v12c-cpu/ernie_K4F_s7_C003+C003", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK06", "versi": "SK06 v1.3 (27 Nov 2026)", "imej": "v12c-cpu/klein3_K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK06", "versi": "SK06 v1.3 (27 Nov 2026)", "imej": "v12c-cpu/klein3_K16S_s42", "larian": "v12c-cpu", "kad": "K16", "jalan": true, "gagal": [], "amaran": ["tekstur kad 'lusuh cetakan saring' belum ada jenisnya dalam SK06: tidak dibuat"]}
+{"sk": "SK06", "versi": "SK06 v1.3 (27 Nov 2026)", "imej": "v12c-cpu/klein3_K17O_s7_C003+C003", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": ["tekstur kad 'lusuh cop kering' belum ada jenisnya dalam SK06: tidak dibuat"]}
+{"sk": "SK06", "versi": "SK06 v1.3 (27 Nov 2026)", "imej": "v12c-cpu/klein4b_K17O_s42_C003+C003", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": ["tekstur kad 'lusuh cop kering' belum ada jenisnya dalam SK06: tidak dibuat"]}
+{"sk": "SK06", "versi": "SK06 v1.3 (27 Nov 2026)", "imej": "v12c-cpu/klein4b_K4F_s123_C003+C003", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK06", "versi": "SK06 v1.3 (27 Nov 2026)", "imej": "v12c-cpu/moss_K14R_s7_C003+C003", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": ["tekstur kad 'tiada (vektor rata)' belum ada jenisnya dalam SK06: tidak dibuat"]}
+{"sk": "SK06", "versi": "SK06 v1.3 (27 Nov 2026)", "imej": "v12c-cpu/moss_K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK06", "versi": "SK06 v1.3 (27 Nov 2026)", "imej": "v12c-cpu/moss_K17O_s123_C003+C003", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": ["tekstur kad 'lusuh cop kering' belum ada jenisnya dalam SK06: tidak dibuat"]}
+{"sk": "SK06", "versi": "SK06 v1.3 (27 Nov 2026)", "imej": "v12c-cpu/moss_K4F_s42_C003+C003", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK06", "versi": "SK06 v1.3 (27 Nov 2026)", "imej": "v12c-cpu/zturbo_K16S_s42", "larian": "v12c-cpu", "kad": "K16", "jalan": true, "gagal": [], "amaran": ["tekstur kad 'lusuh cetakan saring' belum ada jenisnya dalam SK06: tidak dibuat"]}
+{"sk": "SK06", "versi": "SK06 v1.4 (27 Nov 2026)", "imej": "v12c-cpu/ernie_K14R_s123_C003+C003", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": ["tekstur kad 'tiada (vektor rata)' belum ada jenisnya dalam SK06: tidak dibuat"]}
+{"sk": "SK06", "versi": "SK06 v1.4 (27 Nov 2026)", "imej": "v12c-cpu/ernie_K4F_s7_C003+C003", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK06", "versi": "SK06 v1.4 (27 Nov 2026)", "imej": "v12c-cpu/klein3_K15T_s42", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK06", "versi": "SK06 v1.4 (27 Nov 2026)", "imej": "v12c-cpu/klein3_K16S_s42", "larian": "v12c-cpu", "kad": "K16", "jalan": true, "gagal": [], "amaran": ["tekstur kad 'lusuh cetakan saring' belum ada jenisnya dalam SK06: tidak dibuat"]}
+{"sk": "SK06", "versi": "SK06 v1.4 (27 Nov 2026)", "imej": "v12c-cpu/klein3_K17O_s7_C003+C003", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": ["tekstur kad 'lusuh cop kering' belum ada jenisnya dalam SK06: tidak dibuat"]}
+{"sk": "SK06", "versi": "SK06 v1.4 (27 Nov 2026)", "imej": "v12c-cpu/klein4b_K17O_s42_C003+C003", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": ["tekstur kad 'lusuh cop kering' belum ada jenisnya dalam SK06: tidak dibuat"]}
+{"sk": "SK06", "versi": "SK06 v1.4 (27 Nov 2026)", "imej": "v12c-cpu/klein4b_K4F_s123_C003+C003", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK06", "versi": "SK06 v1.4 (27 Nov 2026)", "imej": "v12c-cpu/moss_K14R_s7_C003+C003", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": ["tekstur kad 'tiada (vektor rata)' belum ada jenisnya dalam SK06: tidak dibuat"]}
+{"sk": "SK06", "versi": "SK06 v1.4 (27 Nov 2026)", "imej": "v12c-cpu/moss_K15T_s123", "larian": "v12c-cpu", "kad": "K15", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK06", "versi": "SK06 v1.4 (27 Nov 2026)", "imej": "v12c-cpu/moss_K17O_s123_C003+C003", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": ["tekstur kad 'lusuh cop kering' belum ada jenisnya dalam SK06: tidak dibuat"]}
+{"sk": "SK06", "versi": "SK06 v1.4 (27 Nov 2026)", "imej": "v12c-cpu/moss_K4F_s42_C003+C003", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK06", "versi": "SK06 v1.4 (27 Nov 2026)", "imej": "v12c-cpu/zturbo_K16S_s42", "larian": "v12c-cpu", "kad": "K16", "jalan": true, "gagal": [], "amaran": ["tekstur kad 'lusuh cetakan saring' belum ada jenisnya dalam SK06: tidak dibuat"]}
+{"sk": "SK06", "versi": "SK06 v1.5 (27 Nov 2026)", "imej": "v12c-cpu/klein3_K16S_s42", "larian": "v12c-cpu", "kad": "K16", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK06", "versi": "SK06 v1.5 (27 Nov 2026)", "imej": "v12c-cpu/klein3_K17O_s7_C003+C003", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK06", "versi": "SK06 v1.5 (27 Nov 2026)", "imej": "v12c-cpu/klein4b_K17O_s42_C003+C003", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK06", "versi": "SK06 v1.5 (27 Nov 2026)", "imej": "v12c-cpu/moss_K17O_s123_C003+C003", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK06", "versi": "SK06 v1.5 (27 Nov 2026)", "imej": "v12c-cpu/zturbo_K16S_s42", "larian": "v12c-cpu", "kad": "K16", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK06", "versi": "SK06 v1.6 (27 Nov 2026)", "imej": "v12c-cpu/ernie_K14R_s123_C003+C003", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK06", "versi": "SK06 v1.6 (27 Nov 2026)", "imej": "v12c-cpu/moss_K14R_s7_C003+C003", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
 {"sk": "SK07", "versi": "SK07 v1 (27 Nov 2026)", "imej": "v12-cpu/ernie/K3K_s123", "larian": "v12-cpu-sk07", "kad": "K3", "jalan": true, "gagal": ["'Words' masuk teras baris 'After' 45%: baris salah dibelah", "bekas 'After' bukan segi empat (isi 74%): tiada label atau baris salah dibelah"], "amaran": ["1 komponen bertaut dibelah pada garis potong mendatar: semak warna di sambungan", "9785 piksel ekor huruf di luar segi empat label dipulangkan ke baris asal"]}
 {"sk": "SK07", "versi": "SK07 v1 (27 Nov 2026)", "imej": "v12-cpu/ernie/K3K_s42", "larian": "v12-cpu-sk07", "kad": "K3", "jalan": true, "gagal": [], "amaran": ["2 komponen bertaut dibelah pada garis potong mendatar: semak warna di sambungan", "332 piksel ekor huruf di luar segi empat label dipulangkan ke baris asal"]}
 {"sk": "SK07", "versi": "SK07 v1 (27 Nov 2026)", "imej": "v12-cpu/klein3/K3K_s123", "larian": "v12-cpu-sk07", "kad": "K3", "jalan": true, "gagal": [], "amaran": ["1 komponen bertaut dibelah pada garis potong mendatar: semak warna di sambungan"]}
@@ -662,16 +662,16 @@
 {"sk": "SK07", "versi": "SK07 v1 (27 Nov 2026)", "imej": "v12-cpu/zturbo/K3K_s123", "larian": "v12-cpu-sk07", "kad": "K3", "jalan": true, "gagal": [], "amaran": ["'Words' masuk teras baris 'After' 10%: semak warna"]}
 {"sk": "SK07", "versi": "SK07 v1 (27 Nov 2026)", "imej": "v12-cpu/zturbo/K3K_s42", "larian": "v12-cpu-sk07", "kad": "K3", "jalan": true, "gagal": [], "amaran": ["1 komponen bertaut dibelah pada garis potong mendatar: semak warna di sambungan", "3196 piksel ekor huruf di luar segi empat label dipulangkan ke baris asal"]}
 {"sk": "SK07", "versi": "SK07 v1 (27 Nov 2026)", "imej": "v12-cpu/zturbo/K3K_s7", "larian": "v12-cpu-sk07", "kad": "K3", "jalan": true, "gagal": ["bekas 'After' bukan segi empat (isi 50%): tiada label atau baris salah dibelah"], "amaran": ["2 komponen bertaut dibelah pada garis potong mendatar: semak warna di sambungan", "1568 piksel ekor huruf di luar segi empat label dipulangkan ke baris asal", "'Stays' masuk teras baris 'After' 11%: semak warna"]}
-{"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "scratchpad/k4in/klein4b_K12Y_s42+C003", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "scratchpad/k4in/klein4b_K4F_s123+C003", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "scratchpad/k6in/ernie_K4F_s7+C003", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "scratchpad/k6in/ernie_K9B_s123+C003", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "scratchpad/k6in/klein3_K12Y_s7+C003", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "scratchpad/k6in/klein4b_K12Y_s42+C003", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "scratchpad/k6in/klein4b_K4F_s123+C003", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "scratchpad/k6in/moss_K12Y_s123+C003", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "scratchpad/k6in/moss_K4F_s42+C003", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "scratchpad/k6in/moss_K9B_s7+C003", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "scratchpad/k4in/klein4b_K17O_s42+C003", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "scratchpad/k4in/klein4b_K4F_s123+C003", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "scratchpad/k6in/ernie_K14R_s123+C003", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "scratchpad/k6in/ernie_K4F_s7+C003", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "scratchpad/k6in/klein3_K17O_s7+C003", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "scratchpad/k6in/klein4b_K17O_s42+C003", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "scratchpad/k6in/klein4b_K4F_s123+C003", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "scratchpad/k6in/moss_K14R_s7+C003", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "scratchpad/k6in/moss_K17O_s123+C003", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "scratchpad/k6in/moss_K4F_s42+C003", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
 {"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "v12-cpu/ernie/K3K_s123", "larian": "v12-cpu-sk07", "kad": "K3", "jalan": true, "gagal": [], "amaran": ["1 komponen bertaut dibelah pada leher paling sempit: semak warna di sambungan", "167 piksel ekor huruf di luar segi empat label dipulangkan ke baris asal"]}
 {"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "v12-cpu/ernie/K3K_s42", "larian": "v12-cpu-sk07", "kad": "K3", "jalan": true, "gagal": [], "amaran": ["2 komponen bertaut dibelah pada leher paling sempit: semak warna di sambungan", "332 piksel ekor huruf di luar segi empat label dipulangkan ke baris asal"]}
 {"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "v12-cpu/klein3/K3K_s123", "larian": "v12-cpu-sk07", "kad": "K3", "jalan": true, "gagal": [], "amaran": ["1 komponen bertaut dibelah pada leher paling sempit: semak warna di sambungan"]}
@@ -689,12 +689,12 @@
 {"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "v12-cpu/zturbo/K3K_s123", "larian": "v12-cpu-sk07", "kad": "K3", "jalan": true, "gagal": [], "amaran": ["'Words' masuk teras baris 'After' 10%: semak warna"]}
 {"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "v12-cpu/zturbo/K3K_s42", "larian": "v12-cpu-sk07", "kad": "K3", "jalan": true, "gagal": [], "amaran": ["1 komponen bertaut dibelah pada leher paling sempit: semak warna di sambungan", "3196 piksel ekor huruf di luar segi empat label dipulangkan ke baris asal"]}
 {"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "v12-cpu/zturbo/K3K_s7", "larian": "v12-cpu-sk07", "kad": "K3", "jalan": true, "gagal": ["bekas 'After' bukan segi empat (isi 50%): tiada label atau baris salah dibelah"], "amaran": ["2 komponen bertaut dibelah pada leher paling sempit: semak warna di sambungan", "1568 piksel ekor huruf di luar segi empat label dipulangkan ke baris asal", "'Stays' masuk teras baris 'After' 11%: semak warna"]}
-{"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "v12b-cpu/ernie/K4F_s7+C003", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "v12b-cpu/ernie/K9B_s123+C003", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "v12b-cpu/klein3/K12Y_s7+C003", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "v12b-cpu/moss/K12Y_s123+C003", "larian": "v12b-cpu", "kad": "K12", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "v12b-cpu/moss/K4F_s42+C003", "larian": "v12b-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
-{"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "v12b-cpu/moss/K9B_s7+C003", "larian": "v12b-cpu", "kad": "K9", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "v12c-cpu/ernie/K14R_s123+C003", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "v12c-cpu/ernie/K4F_s7+C003", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "v12c-cpu/klein3/K17O_s7+C003", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "v12c-cpu/moss/K14R_s7+C003", "larian": "v12c-cpu", "kad": "K14", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "v12c-cpu/moss/K17O_s123+C003", "larian": "v12c-cpu", "kad": "K17", "jalan": true, "gagal": [], "amaran": []}
+{"sk": "SK07", "versi": "SK07 v1.1 (27 Nov 2026)", "imej": "v12c-cpu/moss/K4F_s42+C003", "larian": "v12c-cpu", "kad": "K4", "jalan": true, "gagal": [], "amaran": []}
 {"sk": "SK08", "versi": "SK08 v1 (27 Nov 2026)", "imej": "v12-cpu/ernie/K3K_s123", "larian": "v12-cpu-sk07", "kad": "K3", "jalan": true, "gagal": [], "amaran": []}
 {"sk": "SK08", "versi": "SK08 v1 (27 Nov 2026)", "imej": "v12-cpu/ernie/K3K_s42", "larian": "v12-cpu-sk07", "kad": "K3", "jalan": true, "gagal": [], "amaran": []}
 {"sk": "SK08", "versi": "SK08 v1 (27 Nov 2026)", "imej": "v12-cpu/klein3/K3K_s123", "larian": "v12-cpu-sk07", "kad": "K3", "jalan": true, "gagal": [], "amaran": []}

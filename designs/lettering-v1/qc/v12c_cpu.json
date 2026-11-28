@@ -1,0 +1,397 @@
+{
+ "nota": "Larian v1.2 kedua (kad K14-K17 + K4), 27 Nov 2026. CPU sahaja, hitam putih, seed 42/7/123. Semakan mata Claude pada helaian semakan (tahap bukti lemah). ok = G1 (ejaan, huruf besar/kecil, baris) + G2 (tiada teks rawak) + G3 (tiada cacat) lulus dan ciri kad >=7/8. Nilai ketiga = id aset dashboard (kosong: pengguna belum pilih A / SNC).",
+ "v12c-cpu": {
+  "moss": {
+   "K14R_s42": [
+    true,
+    "G1-G3 lulus; skrip sukan + swash bawah; ciri 8/8; latar ada corak samar (SK04 bersihkan)",
+    "c2ce205d8cf1f9a40c680081523277c3"
+   ],
+   "K15T_s42": [
+    true,
+    "G1-G3 lulus; 'build' huruf kecil dalam kapsul; doodle; ciri 8/8",
+    "1f33b72d3f5709ff6c7c578af3e3711d"
+   ],
+   "K4F_s42": [
+    true,
+    "G1-G3 lulus; serif Victoria + hiasan; ciri 8/8",
+    "fa22f546fdd914fa9d15358beb5ea14d"
+   ],
+   "K17O_s42": [
+    true,
+    "G1-G3 lulus; kurungan atas/bawah + anak panah; ciri 8/8; latar ada corak samar (SK04 bersihkan)",
+    "0aa30e5a6f154352e5eafe70ffa447ed"
+   ],
+   "K14R_s7": [
+    true,
+    "G1-G3 lulus; skrip sukan + swash bawah; ciri 8/8",
+    "1364e30afbc2e8d28796c76d9f50729d"
+   ],
+   "K15T_s7": [
+    true,
+    "G1-G3 lulus; 'build' huruf kecil dalam kapsul; doodle; ciri 8/8",
+    "094404645b3b609aa15361449cac0a7c"
+   ],
+   "K4F_s7": [
+    true,
+    "G1-G3 lulus; serif Victoria + hiasan; ciri 8/8",
+    "db0a65027a9fc61bf6594267aa8c69e2"
+   ],
+   "K17O_s7": [
+    true,
+    "G1-G3 lulus; kurungan atas/bawah + anak panah; ciri 8/8",
+    "266b9fa24ffb2addc78461b3c40dd218"
+   ],
+   "K14R_s123": [
+    true,
+    "G1-G3 lulus; skrip sukan + swash bawah; ciri 8/8",
+    "8a87b68edb667f9a2b1f93cf6eeb7da4"
+   ],
+   "K15T_s123": [
+    true,
+    "G1-G3 lulus; 'build' huruf kecil dalam kapsul; doodle; ciri 8/8",
+    "acf3e54fad9e145056bbc5c63e831ebc"
+   ],
+   "K4F_s123": [
+    true,
+    "G1-G3 lulus; serif Victoria + hiasan; ciri 8/8",
+    "9a7d7ed824281e09ce12ceba7bd47fbc"
+   ],
+   "K17O_s123": [
+    true,
+    "G1-G3 lulus; kurungan atas/bawah + anak panah; ciri 8/8",
+    "1d1d4ae877888f51971d7b8774835fa9"
+   ],
+   "K16S_s42": [
+    false,
+    "G2 gagal: tanda rawak - teks 'capir', 'capitals', 'xpitals' di sisi STILL / FOR MY",
+    "eae2507a66b5aa78684fcd1def6ea38c"
+   ],
+   "K16S_s7": [
+    false,
+    "G2 gagal: tanda rawak - teks 'capitals' x4 di sisi STILL / FOR MY",
+    "938e008ae06b2a56b5711397fb39fe9a"
+   ],
+   "K16S_s123": [
+    false,
+    "G2 gagal: tanda rawak - teks 'driving', 'capitals', 'alving', 'bypitals' di sisi",
+    "8afd2a2c8231b88b31e9ecc6477ae532"
+   ]
+  },
+  "sebab_sistematik": {
+   "K16S moss": "kapsyen penyambung 'small hand-drawn capitals tucked tightly beside the big words' + kotak penuh lebar (sama_lebar) -> model isi sisi dengan perkataan 'capitals'. Kitaran QC pusingan 1: satu ubahan kapsyen penyambung K16, dijalankan selepas semua enjin pusingan 1 siap (supaya pusingan 1 sama untuk semua enjin).",
+   "K16S ernie": "Sama seperti MOSS: penyambung pendek dalam kotak penuh lebar -> teks diulang / rawak di sisi. Disahkan masalah kad (2 enjin).",
+   "K14R zturbo": "Z-Image Turbo salah eja 'Anyway' 3/3 (skrip bersambung huruf y-w-a-y). Kitaran QC: satu ubahan prompt.",
+   "K14R klein4b": "FLUX.2 klein 4B salah eja 'Anyway' 3/3 (skrip bersambung y-w-a-y), sama seperti Z-Image Turbo. Model lain lulus K14R -> tiada larian semula.",
+   "K16S klein4b": "klein 4B salah eja BRILLIANT 2/3 + I rosak 1/3. klein3 dan zturbo lulus K16S -> kitaran tamat tanpa larian semula."
+  },
+  "ernie": {
+   "K14R_s42": [
+    true,
+    "G1-G3 lulus; skrip sukan + swash; blok tegak (SK01 condongkan)",
+    "b479e0266533628a832b11778ca7ef46"
+   ],
+   "K15T_s42": [
+    true,
+    "G1-G3 lulus; 'build' dalam kapsul; doodle; ciri 8/8",
+    "8dd53e7ad9a6a673a8af128fac521f2c"
+   ],
+   "K14R_s7": [
+    true,
+    "G1-G3 lulus; skrip sukan + swash; blok tegak (SK01 condongkan)",
+    "e083d264e6c401dad14efa21a85edcf7"
+   ],
+   "K15T_s7": [
+    true,
+    "G1-G3 lulus; 'build' dalam kapsul; doodle; ciri 8/8",
+    "2e0b2b60003bb9dcd24f4158ab9a496b"
+   ],
+   "K14R_s123": [
+    true,
+    "G1-G3 lulus; skrip sukan + swash; blok tegak (SK01 condongkan)",
+    "92d9fc5aa8932353748b8450b2bb98d7"
+   ],
+   "K15T_s123": [
+    true,
+    "G1-G3 lulus; 'build' dalam kapsul; doodle; ciri 8/8",
+    "66c29edf173b05d40005d5f444d4125f"
+   ],
+   "K16S_s42": [
+    false,
+    "G2 gagal: STILL berulang ('still STILL'); bingkai segi empat tiada dalam kad",
+    "a2d12d694542a714fce02d285c49be5f"
+   ],
+   "K16S_s7": [
+    false,
+    "G1 gagal: BRILLIANT jadi 'BRILLTANG' di atas, tanda rawak 'STIEL' menegak; latar putih di tepi",
+    "272d9808a25cb6c0baa5d92016df1174"
+   ],
+   "K16S_s123": [
+    false,
+    "G2 gagal: tanda rawak 'SGL'; bingkai putih di tepi kanvas",
+    "3073e72a11ba1301f63d9901d6b6f914"
+   ],
+   "K4F_s42": [
+    true,
+    "G1-G3 lulus; serif Victoria + hiasan; bintik latar (SK04 bersihkan)",
+    "a5e655354de10b4bf06817dcef802421"
+   ],
+   "K17O_s42": [
+    true,
+    "G1-G3 lulus; kurungan jadi bucu bingkai (ciri 7/8); tekstur bintik dalam huruf",
+    "82b7570b591f84d93cfe224e64481646"
+   ],
+   "K4F_s7": [
+    true,
+    "G1-G3 lulus; serif Victoria + hiasan; bintik latar (SK04 bersihkan)",
+    "99645fbd8514bab562e10aaa12372f9c"
+   ],
+   "K17O_s7": [
+    true,
+    "G1-G3 lulus; kurungan jadi bucu bingkai (ciri 7/8); tekstur bintik dalam huruf",
+    "35dcec224e52bd0779a04b120f55e83c"
+   ],
+   "K4F_s123": [
+    true,
+    "G1-G3 lulus; serif Victoria + hiasan; bintik latar (SK04 bersihkan)",
+    "42902c57f2d9ef37d9cf97f60a864fe0"
+   ],
+   "K17O_s123": [
+    true,
+    "G1-G3 lulus; kurungan jadi bucu bingkai (ciri 7/8); tekstur bintik dalam huruf",
+    "dba16cb85d50ef54ba41feb5d1c8b227"
+   ]
+  },
+  "klein3": {
+   "K14R_s42": [
+    true,
+    "G1-G3 lulus; skrip sukan + swash; condong ringan",
+    "176c895e071ceb17bfeee6b5247794fe"
+   ],
+   "K15T_s42": [
+    true,
+    "G1-G3 lulus; 'build' dalam kapsul; doodle; ciri 8/8",
+    "49c00bcb17f16870d30de2f1672fc93d"
+   ],
+   "K4F_s42": [
+    true,
+    "G1-G3 lulus; serif Victoria + hiasan; dakwat krim (SK04 jadikan putih)",
+    "55c6f540ab51e5ffca19afb564ea8f51"
+   ],
+   "K17O_s42": [
+    true,
+    "G1-G3 lulus; garis kurungan atas/bawah + anak panah; ciri 7/8 (s42 garis lurus tanpa kaki)",
+    "651b2967456de89e5a5d6da3835800d5"
+   ],
+   "K14R_s7": [
+    true,
+    "G1-G3 lulus; skrip sukan + swash; condong ringan",
+    "83d080f90c24a8f3e5e4ae1c7fc4eb49"
+   ],
+   "K15T_s7": [
+    true,
+    "G1-G3 lulus; 'build' dalam kapsul; doodle; ciri 8/8",
+    "045ed773a229ebc1ecdccad1e536ef76"
+   ],
+   "K4F_s7": [
+    true,
+    "G1-G3 lulus; serif Victoria + hiasan; dakwat krim (SK04 jadikan putih)",
+    "d0803eb1b65452ba25b7f1f4994bb903"
+   ],
+   "K17O_s7": [
+    true,
+    "G1-G3 lulus; kurungan + anak panah; ciri 8/8",
+    "9f796ef6338f215889601249a8f774d9"
+   ],
+   "K14R_s123": [
+    true,
+    "G1-G3 lulus; skrip sukan + swash; condong ringan",
+    "0b2bcee2dbf69ba305f96dd99d50ed9d"
+   ],
+   "K15T_s123": [
+    true,
+    "G1-G3 lulus; 'build' dalam kapsul; doodle; ciri 8/8",
+    "8f62651caec390006335d8aeaf6f2fea"
+   ],
+   "K4F_s123": [
+    true,
+    "G1-G3 lulus; serif Victoria + hiasan; dakwat krim (SK04 jadikan putih)",
+    "86c22197afceded697b7ef9fd3ca289e"
+   ],
+   "K17O_s123": [
+    true,
+    "G1-G3 lulus; kurungan + anak panah; ciri 8/8",
+    "8d0d649a32e6990eb37ca331221df709"
+   ],
+   "K16S_s42": [
+    true,
+    "G1-G3 lulus; semua baris sama lebar; penyambung dijarakkan luas; ciri 8/8",
+    "f0d656d67e2c7dc6b5bd0460337d0d42"
+   ],
+   "K16S_s7": [
+    false,
+    "G1 gagal: STILL jadi 'STIILL' (I berlebih)",
+    "352c2bd43896a67db212b33cd97ef418"
+   ],
+   "K16S_s123": [
+    true,
+    "G1-G3 lulus; ciri 8/8",
+    "03565da6d1c9ad688104205f1226de19"
+   ]
+  },
+  "zturbo": {
+   "K14R_s42": [
+    false,
+    "G1 gagal: Anyway jadi 'Anyocy'; huruf sentuh tepi kanvas",
+    "18e5ef3c57df47b2bbec2676759380bd"
+   ],
+   "K14R_s7": [
+    false,
+    "G1 gagal: Anyway jadi 'Anyooy'",
+    "40c98393ff1ea3cbdd7e5571fc3b95bd"
+   ],
+   "K14R_s123": [
+    false,
+    "G1 gagal: Anyway jadi 'Anyooy'; huruf sentuh tepi kanvas",
+    "e3d331bee104994eb1e18cb86acc8f26"
+   ],
+   "K15T_s42": [
+    true,
+    "G1-G3 lulus; 'build' dalam kapsul; doodle sedikit (ciri 7/8)",
+    "da44acbd6ef6100ad0b4f4084466b1cf"
+   ],
+   "K15T_s7": [
+    false,
+    "G1 gagal: LITTLE jadi 'LITLE' (T hilang)",
+    "6e7579ddf145e74414bd7ad23cbdb18b"
+   ],
+   "K15T_s123": [
+    true,
+    "G1-G3 lulus; doodle sedikit (ciri 7/8)",
+    "74dfad2033a60601d75e1ee1a2b07027"
+   ],
+   "K16S_s42": [
+    true,
+    "G1-G3 lulus; baris sama lebar; swirl kecil; ciri 7/8 (gaya kurang quirky)",
+    "dcad794f2be2adb29f5de3efe5272953"
+   ],
+   "K16S_s7": [
+    false,
+    "G1 gagal: WAITING jadi 'WAITNG' (I hilang)",
+    "a9916787ff5043706d7f14be02c96bea"
+   ],
+   "K16S_s123": [
+    false,
+    "G1 gagal: baris STILL hilang",
+    "55237f1fb9f0a2d9fbac48da124b2e31"
+   ],
+   "K4F_s42": [
+    true,
+    "G1-G3 lulus; serif Victoria + garis titik; ciri 8/8",
+    "dfddae1eec6d2c8c402de50587617fb1"
+   ],
+   "K17O_s42": [
+    true,
+    "G1-G3 lulus; kurungan jadi bar penuh lebar tanpa kaki, tepi sempit (SK02 betulkan); ciri 7/8",
+    "cdcc260a9bf35386e7b8065fd7793615"
+   ],
+   "K4F_s7": [
+    true,
+    "G1-G3 lulus; serif Victoria + garis titik; ciri 8/8",
+    "6bff2870e7c50f070ef1d8090929974f"
+   ],
+   "K17O_s7": [
+    true,
+    "G1-G3 lulus; kurungan jadi bar penuh lebar tanpa kaki, tepi sempit (SK02 betulkan); ciri 7/8",
+    "0ee88408b50660be93b34978465b6b06"
+   ],
+   "K4F_s123": [
+    true,
+    "G1-G3 lulus; serif Victoria + garis titik; ciri 8/8",
+    "74691687d39aba9792c7d1f576570b5c"
+   ],
+   "K17O_s123": [
+    true,
+    "G1-G3 lulus; kurungan jadi bar penuh lebar tanpa kaki, tepi sempit (SK02 betulkan); ciri 7/8",
+    "898a0228871c0949b745a8149ec2d990"
+   ]
+  },
+  "klein4b": {
+   "K14R_s42": [
+    false,
+    "G1 gagal: Anyway jadi 'Anwuny'",
+    "48279673a97a82d034f289328331995d"
+   ],
+   "K14R_s7": [
+    false,
+    "G1 gagal: Anyway jadi 'Anwuny'",
+    "bfe912e77267fec051d832b0386783df"
+   ],
+   "K14R_s123": [
+    false,
+    "G1 gagal: Anyway jadi 'Anwary'",
+    "10a64b7b7545b049cc81385995b67d16"
+   ],
+   "K15T_s42": [
+    true,
+    "G1-G3 lulus; 'build' dalam kapsul; doodle + mahkota; ciri 8/8",
+    "4d7a02d6011852b393301bd3648c0fd0"
+   ],
+   "K15T_s7": [
+    true,
+    "G1-G3 lulus; doodle kemas; ciri 8/8",
+    "9eb080b049aeaa147ecb30e3633f06c8"
+   ],
+   "K15T_s123": [
+    true,
+    "G1-G3 lulus; ciri 8/8",
+    "8ab146607e1a5cc171b19da14c62b851"
+   ],
+   "K16S_s42": [
+    false,
+    "G1 gagal: BRILLIANT jadi 'BRLLIANT' (I hilang)",
+    "ad375bcb082bf4749aae3a1b5f37befe"
+   ],
+   "K16S_s7": [
+    false,
+    "G1 gagal: BRILLIANT jadi 'BRLLIANT' (I hilang)",
+    "9c84c7b2415bec58b7923da392dbcc1f"
+   ],
+   "K16S_s123": [
+    false,
+    "G3 gagal: huruf I dalam STILL rosak (titik terpisah, nampak STI'LL)",
+    "5caf1c777744487574bfe5a175c0c72b"
+   ],
+   "K4F_s42": [
+    true,
+    "G1-G3 lulus; serif Victoria + garis titik + hiasan atas bawah; ciri 8/8",
+    "eae9bf2ddfc4f42076d397baef9c0da2"
+   ],
+   "K4F_s7": [
+    true,
+    "G1-G3 lulus; ciri 8/8",
+    "ac5bbc6687a34cfbbc19e41887dde111"
+   ],
+   "K4F_s123": [
+    true,
+    "G1-G3 lulus; ciri 8/8",
+    "5ac42a9c2689adc2d3cd52141ef5a4a5"
+   ],
+   "K17O_s42": [
+    true,
+    "G1-G3 lulus; anak panah kedua-dua sisi IS; kurungan jadi bar tanpa kaki; ciri 7/8",
+    "2505ff98650a476ba701e5213aebeffb"
+   ],
+   "K17O_s7": [
+    true,
+    "G1-G3 lulus; anak panah satu sisi sahaja; ciri 7/8",
+    "04f4d640878d5b01bb1b39548d28c93b"
+   ],
+   "K17O_s123": [
+    false,
+    "G2 gagal: tanda rawak, anak panah kanan rosak jadi bentuk huruf A",
+    "816688c4fb585f76482cab7dc162bf89"
+   ]
+  }
+ }
+}

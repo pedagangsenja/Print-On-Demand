@@ -45,8 +45,8 @@ import numpy as np
 from PIL import Image
 
 VERSI = "SK06 v1.6 (27 Nov 2026)"
-# v1.6 (Belajar SK, ubahan nota_kurungan): nota dalam kurungan pada teks tekstur kad diabaikan (K9 'tiada (vektor rata)' = tiada).
-# v1.5 (Belajar SK, ubahan lusuh_saring_cop): K11 'lusuh cetakan saring' dan K12 'lusuh cop kering' dipadan ke jenis worn.
+# v1.6 (Belajar SK, ubahan nota_kurungan): nota dalam kurungan pada teks tekstur kad diabaikan (K14 'tiada (vektor rata)' = tiada).
+# v1.5 (Belajar SK, ubahan lusuh_saring_cop): K16 'lusuh cetakan saring' dan K17 'lusuh cop kering' dipadan ke jenis worn.
 # v1.4 (Belajar SK, ubahan titik_halus): komponen dakwat < AREA_MIN px (skala imej asal) dibuang; dahulu 30 px membuang
 # garis titik dan bintik latar kad K4 (titik 8-30 px). 4 px masih membuang hingar 1-3 px.
 AREA_MIN = 4

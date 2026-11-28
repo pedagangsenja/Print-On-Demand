@@ -43,7 +43,7 @@ MODEL = list(REV)
 W, H = 768, 1024
 # Ubahan CALON kitaran QC (langkah 5): hanya hidup bila dinamakan dalam PEMBINA_UJI (dipisah koma). Ubahan yang
 # berjaya ditulis balik ke aturan (rev naik) dan dibuang dari sini; yang gagal dicatat dalam standard dan dibuang.
-# Calon semasa (27 Nov 2026, TINDAKAN [cuba] belajar.py selepas larian v12b-cpu): zturbo_had_positif, klein4b_hiasan_kedudukan,
+# Calon semasa (27 Nov 2026, TINDAKAN [cuba] belajar.py selepas larian v12c-cpu): zturbo_had_positif, klein4b_hiasan_kedudukan,
 # klein4b_cara_baris (selepas QC klein4b: BRILLIANT hilang huruf I 2/3).
 # (26 Nov 2026: 'zturbo_satu_baris' diuji pada K8G, tidak berjaya, dibuang.)
 # Nama calon = <model>_<id pilihan> daripada belajar.py (KELAS), cth. zturbo_had_positif; belajar.py memutuskan menang / kalah (3.15).

@@ -60,7 +60,7 @@
      "imej": 2,
      "gagal": 2,
      "design": [
-      "K11S"
+      "K16S"
      ],
      "cadangan": "cara_baris",
      "cadangan_teks": "Cara menulis baris teks ikut aturan model (klein: satu ayat prosa setiap baris; ERNIE: PE hidup)"
@@ -71,7 +71,7 @@
      "imej": 2,
      "gagal": 2,
      "design": [
-      "K12Y",
+      "K17O",
       "K7M"
      ],
      "cadangan": "had_positif",
@@ -83,7 +83,7 @@
      "imej": 6,
      "gagal": 1,
      "design": [
-      "K12Y",
+      "K17O",
       "K3K"
      ],
      "cadangan": "hiasan_kedudukan",
@@ -95,8 +95,8 @@
      "imej": 8,
      "gagal": 0,
      "design": [
-      "K10N",
-      "K12Y",
+      "K15T",
+      "K17O",
       "K4F"
      ],
      "cadangan": null,
@@ -191,8 +191,8 @@
      "imej": 3,
      "gagal": 3,
      "design": [
-      "K10N",
-      "K11S"
+      "K15T",
+      "K16S"
      ],
      "cadangan": "cara_baris",
      "cadangan_teks": "Cara menulis baris teks ikut aturan model (klein: satu ayat prosa setiap baris; ERNIE: PE hidup)"
@@ -203,9 +203,9 @@
      "imej": 9,
      "gagal": 0,
      "design": [
-      "K10N",
-      "K11S",
-      "K12Y",
+      "K15T",
+      "K16S",
+      "K17O",
       "K4F"
      ],
      "cadangan": null,
@@ -310,11 +310,11 @@
      "imej": 15,
      "gagal": 3,
      "design": [
-      "K10N",
-      "K11S",
-      "K12Y",
-      "K4F",
-      "K9B"
+      "K14R",
+      "K15T",
+      "K16S",
+      "K17O",
+      "K4F"
      ],
      "cadangan": null,
      "cadangan_teks": "Tanya pengguna sebabnya; tambah ke kad sebagai ciri QC"
@@ -325,8 +325,8 @@
      "imej": 9,
      "gagal": 3,
      "design": [
-      "K11S",
-      "K12Y",
+      "K16S",
+      "K17O",
       "K3K",
       "K4F"
      ],
@@ -421,7 +421,7 @@
      "imej": 3,
      "gagal": 3,
      "design": [
-      "K11S"
+      "K16S"
      ],
      "cadangan": "had_positif",
      "cadangan_teks": "Buang perkataan berisiko daripada ayat had (label, logo, signature, watermark); tulis had sebagai ayat positif"
@@ -432,10 +432,10 @@
      "imej": 12,
      "gagal": 0,
      "design": [
-      "K10N",
-      "K12Y",
-      "K4F",
-      "K9B"
+      "K14R",
+      "K15T",
+      "K17O",
+      "K4F"
      ],
      "cadangan": null,
      "cadangan_teks": "Tanya pengguna sebabnya; tambah ke kad sebagai ciri QC"
@@ -446,7 +446,7 @@
      "imej": 3,
      "gagal": 0,
      "design": [
-      "K12Y"
+      "K17O"
      ],
      "cadangan": "hiasan_kedudukan",
      "cadangan_teks": "Nyatakan kedudukan hiasan (kiri dan kanan, di luar label)"
@@ -508,11 +508,11 @@
      "imej": 14,
      "gagal": 0,
      "design": [
-      "K10N",
-      "K11S",
-      "K12Y",
-      "K4F",
-      "K9B"
+      "K14R",
+      "K15T",
+      "K16S",
+      "K17O",
+      "K4F"
      ],
      "cadangan": null,
      "cadangan_teks": "Tanya pengguna sebabnya; tambah ke kad sebagai ciri QC"
@@ -523,7 +523,7 @@
      "imej": 4,
      "gagal": 0,
      "design": [
-      "K12Y",
+      "K17O",
       "K3K"
      ],
      "cadangan": "hiasan_kedudukan",

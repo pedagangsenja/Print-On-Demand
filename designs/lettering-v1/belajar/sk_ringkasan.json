@@ -4,15 +4,15 @@
  "baris": 711,
  "imej": 123,
  "kad_dipakai": [
-  "K10",
-  "K11",
-  "K12",
+  "K14",
+  "K15",
+  "K16",
+  "K17",
   "K3",
   "K4",
   "K6",
   "K7",
-  "K8",
-  "K9"
+  "K8"
  ],
  "suka": 0,
  "sk": {
@@ -53,7 +53,7 @@
      "kelas": "condong",
      "nama": "Sudut condong lain daripada kad",
      "imej": [
-      "v12b-cpu/ernie/K9B_s7"
+      "v12c-cpu/ernie/K14R_s7"
      ],
      "n": 1,
      "kalah": []
