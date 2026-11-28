@@ -73,15 +73,15 @@
   "bahagian": "3.8",
   "rev": "r1",
   "status": "lulus kelayakan: 9/9 lawan rangka am 6/9, CPU; lesen diterima 27 Nov 2026",
-  "imej": 29,
+  "imej": 35,
   "imej_semasa": 20,
   "lulus_semasa": 15,
   "pct_semasa": 75,
   "suka": 0,
   "tolak": 0,
   "cacat_berulang": "Bentuk huruf atau saiz label lain daripada kad (5 imej, 2 design); Cacat lain (tiada kelas) (2 imej, 1 design)",
-  "tindakan": "Satu ubahan untuk jana seterusnya model ini: PEMBINA_UJI=klein3_frasa_bentuk (Frasa bentuk huruf dalam aturan model) bagi cacat 'Bentuk huruf atau saiz label lain daripada kad' (5 imej, 2 design); jana bersama aturan semasa, seed sama",
-  "ubahan_dicuba": 2,
+  "tindakan": "Cacat 'Bentuk huruf atau saiz label lain daripada kad': Pilihan ubahan habis: tukar ke model seterusnya ikut jadual model × gaya, kemudian pendekkan ayat, kemudian lapor kepada pengguna",
+  "ubahan_dicuba": 3,
   "tarikh": "2026-11-28"
  },
  {

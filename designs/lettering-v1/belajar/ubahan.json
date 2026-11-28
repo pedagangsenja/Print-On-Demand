@@ -162,5 +162,20 @@
   "selepas": "4/5",
   "keputusan": "kalah",
   "nota": "Tambah 'These are the only decorations, on a clean empty background.' (K11A) / 'There are no decorations, only a clean empty background.' (K13S). Bingkai putih hilang 6/6, tetapi K13S s123 kini ada tanda petikan tambahan (kelas cacat baharu: rawak). Seed 42, 7 (+123 K11A baharu). Dibuang. Imej K11A pusingan ini lulus QC dan dipakai (kitaran QC tamat)"
+ },
+ {
+  "tarikh": "2026-11-28",
+  "model": "klein3",
+  "rev_dari": "r1",
+  "rev_ke": "r1",
+  "ubahan": "frasa_bentuk",
+  "kelas": [
+   "bentuk"
+  ],
+  "design": "K10Q, K13S",
+  "sebelum": "0/5",
+  "selepas": "0/5",
+  "keputusan": "kalah",
+  "nota": "Tambah 'Every letter is a tall, narrow condensed letterform, much taller than it is wide.' Huruf masih lebar pada 6/6 imej (seed 42, 7, 123; K10Q s123 baharu). Dibuang. Pilihan bentuk habis: FLUX 3 Klein tidak sesuai untuk K10 / K13 (model lain lulus)"
  }
 ]

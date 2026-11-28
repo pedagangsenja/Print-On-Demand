@@ -1,4 +1,4 @@
-# Baris AI Image Test U13 (K9-K13): python3 ai_rows_k9k13.py dalam designs/lettering-v1 -> data/ai_tests/rows/U13.json
+# Baris AI Image Test U23 (U13 dipakai sesi lain) (K9-K13): python3 ai_rows_k9k13.py dalam designs/lettering-v1 -> data/ai_tests/rows/U23.json
 import json, sys, os
 sys.path.insert(0, '.')
 import kad, pembina
@@ -28,7 +28,7 @@ for b in ('v12-cpu-k9k13', 'v12-cpu-k9k13-p1'):
             lines = pembina.bina(m, kid, aid)[1]
             mk, mn = NAMA[m]
             rows.append(dict(
-                ujian='U13', ujian_nama='Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih', jenis='Ujian',
+                ujian='U23', ujian_nama='Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)', jenis='Ujian',
                 standard='Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)',
                 ujian_nota='Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.',
                 ai=True, bukti='lemah', tempat='CPU', kad=kid, kad_name=kad.KAD[kid]['nama'], kad_nota=kad.KAD[kid]['versi'],
@@ -37,9 +37,9 @@ for b in ('v12-cpu-k9k13', 'v12-cpu-k9k13-p1'):
                 img_siap=('/_blob/' + bm[fin]) if fin in bm else None,
                 cacat=nota.startswith('G3'), teras=(False if 'ciri teras gagal' in nota else (True if ok else None)), gaya='', tanda='',
                 tarikh='2026-11-28' if 'klein3' == m and p1 else '2026-11-27',
-                key=f'U13|{m}-{k}' + ('-p1' if p1 else ''), model=mk, model_name=mn, label=mn,
+                key=f'U23|{m}-{k}' + ('-p1' if p1 else ''), model=mk, model_name=mn, label=mn,
                 lajur=mn + (' · pusingan 1' if p1 else ''), varian=NOTA_P.get(b, {}).get(m, 'aturan semasa (pembina v1.2)'),
                 saat=saat.get((b, m, iid, s)), img='/_blob/' + bm[raw], w=768, h=1024,
                 lulus=bool(ok), ejaan=not nota.startswith('G1'), rawak=nota.startswith('G2'), sebab=nota))
-json.dump(rows, open('../../data/ai_tests/rows/U13.json', 'w'), ensure_ascii=False, indent=1)
+json.dump(rows, open('../../data/ai_tests/rows/U23.json', 'w'), ensure_ascii=False, indent=1)
 print(len(rows), sum(r['lulus'] for r in rows), sum(1 for r in rows if r['img_siap']), sum(1 for r in rows if r['saat'] is None))

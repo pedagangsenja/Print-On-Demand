@@ -1,7 +1,7 @@
 {
  "versi": "b1.2 (28 Nov 2026)",
  "tarikh": "2026-11-28",
- "imej": 187,
+ "imej": 193,
  "suka": 0,
  "tolak": 0,
  "model": {
@@ -436,9 +436,9 @@
     "design": 8
    },
    "semua": {
-    "imej": 29,
+    "imej": 35,
     "lulus": 21,
-    "pct": 72,
+    "pct": 60,
     "suka": 0,
     "tolak": 0,
     "design": 8
@@ -453,8 +453,8 @@
       "K10Q",
       "K13S"
      ],
-     "cadangan": "frasa_bentuk",
-     "cadangan_teks": "Frasa bentuk huruf dalam aturan model"
+     "cadangan": null,
+     "cadangan_teks": "Pilihan ubahan habis: tukar ke model seterusnya ikut jadual model × gaya, kemudian pendekkan ayat, kemudian lapor kepada pengguna"
     },
     {
      "kelas": "lain",
@@ -468,13 +468,12 @@
      "cadangan_teks": "Tanya pengguna sebabnya; tambah ke kad sebagai ciri QC"
     }
    ],
-   "ubahan_dicuba": 2,
+   "ubahan_dicuba": 3,
    "suka_imej": [],
    "tindakan": [
     {
-     "jenis": "cuba",
-     "ubahan": "frasa_bentuk",
-     "teks": "Satu ubahan untuk jana seterusnya model ini: PEMBINA_UJI=klein3_frasa_bentuk (Frasa bentuk huruf dalam aturan model) bagi cacat 'Bentuk huruf atau saiz label lain daripada kad' (5 imej, 2 design); jana bersama aturan semasa, seed sama"
+     "jenis": "habis",
+     "teks": "Cacat 'Bentuk huruf atau saiz label lain daripada kad': Pilihan ubahan habis: tukar ke model seterusnya ikut jadual model × gaya, kemudian pendekkan ayat, kemudian lapor kepada pengguna"
     }
    ]
   },

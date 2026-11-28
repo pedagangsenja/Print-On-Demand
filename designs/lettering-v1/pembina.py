@@ -43,7 +43,7 @@ MODEL = list(REV)
 W, H = 768, 1024
 # Ubahan CALON kitaran QC (langkah 5): hanya hidup bila dinamakan dalam PEMBINA_UJI (dipisah koma). Ubahan yang
 # berjaya ditulis balik ke aturan (rev naik) dan dibuang dari sini; yang gagal dicatat dalam standard dan dibuang.
-# Calon semasa: 'klein4b_hiasan_tepat' (27 Nov 2026, bingkai K12T); 'klein3_frasa_bentuk' (28 Nov 2026, huruf lebar K10Q, K13S). (27 Nov 2026: 'ernie_hiasan_tepat' KALAH, dibuang.) (26 Nov 2026: 'zturbo_satu_baris' diuji pada K8G, tidak berjaya, dibuang.)
+# Calon semasa: 'klein4b_hiasan_tepat' (27 Nov 2026, bingkai K12T). (28 Nov 2026: 'klein3_frasa_bentuk' KALAH, dibuang.) (27 Nov 2026: 'ernie_hiasan_tepat' KALAH, dibuang.) (26 Nov 2026: 'zturbo_satu_baris' diuji pada K8G, tidak berjaya, dibuang.)
 # Nama calon = <model>_<id pilihan> daripada belajar.py (KELAS), cth. zturbo_had_positif; belajar.py memutuskan menang / kalah (3.15).
 UJI = {u for u in os.environ.get("PEMBINA_UJI", "").split(",") if u}
 SATU = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"]
@@ -308,9 +308,6 @@ def klein3_bahagian(m):
         s.append(f"The block {b['condong']}, and neighbouring lines {b['sentuh']}.")
     elif b.get("condong") or b.get("sentuh"):
         s.append(f"The block {b['condong']}." if b.get("condong") else f"Neighbouring lines {b['sentuh']}.")
-    if "klein3_frasa_bentuk" in UJI and any("condensed" in (l.get("penuh") or "") for l in L):
-        # calon 3.15 (28 Nov 2026): huruf lebar pada K10Q / K13S (5 imej); bentuk condensed dinyatakan dengan nisbah
-        s.append("Every letter is a tall, narrow condensed letterform, much taller than it is wide.")
     bil, baris_ayat, hias_ayat = {}, [], []
 
     def idbaru(nama):

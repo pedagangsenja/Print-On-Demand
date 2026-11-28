@@ -1,7 +1,7 @@
 [
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -22,7 +22,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|moss-K9R_s42",
+  "key": "U23|moss-K9R_s42",
   "model": "moss",
   "model_name": "MOSS-Image SFT",
   "label": "MOSS-Image SFT",
@@ -38,8 +38,8 @@
   "sebab": ""
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -60,7 +60,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|moss-K9R_s7",
+  "key": "U23|moss-K9R_s7",
   "model": "moss",
   "model_name": "MOSS-Image SFT",
   "label": "MOSS-Image SFT",
@@ -76,8 +76,8 @@
   "sebab": ""
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -98,7 +98,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|moss-K10Q_s42",
+  "key": "U23|moss-K10Q_s42",
   "model": "moss",
   "model_name": "MOSS-Image SFT",
   "label": "MOSS-Image SFT",
@@ -114,8 +114,8 @@
   "sebab": "kedudukan: blok tinggi di kanvas (SK03)"
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -136,7 +136,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|moss-K10Q_s7",
+  "key": "U23|moss-K10Q_s7",
   "model": "moss",
   "model_name": "MOSS-Image SFT",
   "label": "MOSS-Image SFT",
@@ -152,8 +152,8 @@
   "sebab": "kedudukan: blok tinggi di kanvas (SK03)"
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -174,7 +174,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|moss-K11A_s42",
+  "key": "U23|moss-K11A_s42",
   "model": "moss",
   "model_name": "MOSS-Image SFT",
   "label": "MOSS-Image SFT",
@@ -190,8 +190,8 @@
   "sebab": ""
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -212,7 +212,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|moss-K11A_s7",
+  "key": "U23|moss-K11A_s7",
   "model": "moss",
   "model_name": "MOSS-Image SFT",
   "label": "MOSS-Image SFT",
@@ -228,8 +228,8 @@
   "sebab": ""
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -250,7 +250,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|moss-K12T_s42",
+  "key": "U23|moss-K12T_s42",
   "model": "moss",
   "model_name": "MOSS-Image SFT",
   "label": "MOSS-Image SFT",
@@ -266,8 +266,8 @@
   "sebab": ""
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -288,7 +288,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|moss-K12T_s7",
+  "key": "U23|moss-K12T_s7",
   "model": "moss",
   "model_name": "MOSS-Image SFT",
   "label": "MOSS-Image SFT",
@@ -304,8 +304,8 @@
   "sebab": ""
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -326,7 +326,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|moss-K13S_s42",
+  "key": "U23|moss-K13S_s42",
   "model": "moss",
   "model_name": "MOSS-Image SFT",
   "label": "MOSS-Image SFT",
@@ -342,8 +342,8 @@
   "sebab": "lebar baris tidak sama (BUILD dijarakkan) - nota gaya"
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -364,7 +364,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|moss-K13S_s7",
+  "key": "U23|moss-K13S_s7",
   "model": "moss",
   "model_name": "MOSS-Image SFT",
   "label": "MOSS-Image SFT",
@@ -380,8 +380,8 @@
   "sebab": "lebar baris tidak sama (BUILD dijarakkan) - nota gaya"
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -402,7 +402,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|moss-K13S_s123",
+  "key": "U23|moss-K13S_s123",
   "model": "moss",
   "model_name": "MOSS-Image SFT",
   "label": "MOSS-Image SFT",
@@ -418,8 +418,8 @@
   "sebab": "lebar baris tidak sama (BUILD dijarakkan) - nota gaya"
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -440,7 +440,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|ernie-K9R_s42",
+  "key": "U23|ernie-K9R_s42",
   "model": "ernie",
   "model_name": "ERNIE-Image-Turbo",
   "label": "ERNIE-Image-Turbo",
@@ -456,8 +456,8 @@
   "sebab": ""
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -478,7 +478,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|ernie-K9R_s7",
+  "key": "U23|ernie-K9R_s7",
   "model": "ernie",
   "model_name": "ERNIE-Image-Turbo",
   "label": "ERNIE-Image-Turbo",
@@ -494,8 +494,8 @@
   "sebab": ""
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -516,7 +516,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|ernie-K10Q_s42",
+  "key": "U23|ernie-K10Q_s42",
   "model": "ernie",
   "model_name": "ERNIE-Image-Turbo",
   "label": "ERNIE-Image-Turbo",
@@ -532,8 +532,8 @@
   "sebab": "WORK tidak cukup besar (hierarki lemah, nota gaya)"
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -554,7 +554,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|ernie-K10Q_s7",
+  "key": "U23|ernie-K10Q_s7",
   "model": "ernie",
   "model_name": "ERNIE-Image-Turbo",
   "label": "ERNIE-Image-Turbo",
@@ -570,8 +570,8 @@
   "sebab": "WORK tidak cukup besar (hierarki lemah, nota gaya)"
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -592,7 +592,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|ernie-K11A_s42",
+  "key": "U23|ernie-K11A_s42",
   "model": "ernie",
   "model_name": "ERNIE-Image-Turbo",
   "label": "ERNIE-Image-Turbo",
@@ -608,8 +608,8 @@
   "sebab": "G3: garis tambahan: bingkai putih separa di tepi; 5b membaca latar sebagai putih (input rosak)"
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -630,7 +630,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|ernie-K11A_s7",
+  "key": "U23|ernie-K11A_s7",
   "model": "ernie",
   "model_name": "ERNIE-Image-Turbo",
   "label": "ERNIE-Image-Turbo",
@@ -646,8 +646,8 @@
   "sebab": "G3: garis tambahan: bingkai putih separa di tepi; 5b membaca latar sebagai putih (input rosak)"
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -668,7 +668,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|ernie-K12T_s42",
+  "key": "U23|ernie-K12T_s42",
   "model": "ernie",
   "model_name": "ERNIE-Image-Turbo",
   "label": "ERNIE-Image-Turbo",
@@ -684,8 +684,8 @@
   "sebab": ""
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -706,7 +706,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|ernie-K12T_s7",
+  "key": "U23|ernie-K12T_s7",
   "model": "ernie",
   "model_name": "ERNIE-Image-Turbo",
   "label": "ERNIE-Image-Turbo",
@@ -722,8 +722,8 @@
   "sebab": ""
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -744,7 +744,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|ernie-K13S_s42",
+  "key": "U23|ernie-K13S_s42",
   "model": "ernie",
   "model_name": "ERNIE-Image-Turbo",
   "label": "ERNIE-Image-Turbo",
@@ -760,8 +760,8 @@
   "sebab": ""
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -782,7 +782,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|ernie-K13S_s7",
+  "key": "U23|ernie-K13S_s7",
   "model": "ernie",
   "model_name": "ERNIE-Image-Turbo",
   "label": "ERNIE-Image-Turbo",
@@ -798,8 +798,8 @@
   "sebab": "G3: garis tambahan: bingkai putih separa di tepi; 5b membaca latar sebagai putih (input rosak)"
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -820,7 +820,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|ernie-K13S_s123",
+  "key": "U23|ernie-K13S_s123",
   "model": "ernie",
   "model_name": "ERNIE-Image-Turbo",
   "label": "ERNIE-Image-Turbo",
@@ -836,8 +836,8 @@
   "sebab": ""
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -858,7 +858,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|klein3-K9R_s42",
+  "key": "U23|klein3-K9R_s42",
   "model": "flux3klein",
   "model_name": "FLUX 3 Image Klein",
   "label": "FLUX 3 Image Klein",
@@ -874,8 +874,8 @@
   "sebab": "blok kecil di tengah (ruang tepi, SK02)"
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -896,7 +896,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|klein3-K9R_s7",
+  "key": "U23|klein3-K9R_s7",
   "model": "flux3klein",
   "model_name": "FLUX 3 Image Klein",
   "label": "FLUX 3 Image Klein",
@@ -912,8 +912,8 @@
   "sebab": "blok kecil (ruang tepi, SK02)"
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -934,7 +934,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|klein3-K10Q_s42",
+  "key": "U23|klein3-K10Q_s42",
   "model": "flux3klein",
   "model_name": "FLUX 3 Image Klein",
   "label": "FLUX 3 Image Klein",
@@ -950,8 +950,8 @@
   "sebab": "ciri teras gagal: bentuk huruf lebar, bukan sempit tinggi (condensed) seperti kad (syarat QC, keputusan pengguna 28 Nov 2026)"
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -972,7 +972,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|klein3-K10Q_s7",
+  "key": "U23|klein3-K10Q_s7",
   "model": "flux3klein",
   "model_name": "FLUX 3 Image Klein",
   "label": "FLUX 3 Image Klein",
@@ -988,8 +988,8 @@
   "sebab": "ciri teras gagal: bentuk huruf lebar, bukan sempit tinggi (condensed) seperti kad (syarat QC, keputusan pengguna 28 Nov 2026)"
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -1010,7 +1010,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|klein3-K11A_s42",
+  "key": "U23|klein3-K11A_s42",
   "model": "flux3klein",
   "model_name": "FLUX 3 Image Klein",
   "label": "FLUX 3 Image Klein",
@@ -1026,8 +1026,8 @@
   "sebab": ""
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -1048,7 +1048,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|klein3-K11A_s7",
+  "key": "U23|klein3-K11A_s7",
   "model": "flux3klein",
   "model_name": "FLUX 3 Image Klein",
   "label": "FLUX 3 Image Klein",
@@ -1064,8 +1064,8 @@
   "sebab": ""
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -1086,7 +1086,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|klein3-K12T_s42",
+  "key": "U23|klein3-K12T_s42",
   "model": "flux3klein",
   "model_name": "FLUX 3 Image Klein",
   "label": "FLUX 3 Image Klein",
@@ -1102,8 +1102,8 @@
   "sebab": "hiasan atas menyentuh huruf O (tempat salah); dakwat krim bertekstur (kelabu, SK04)"
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -1124,7 +1124,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|klein3-K12T_s7",
+  "key": "U23|klein3-K12T_s7",
   "model": "flux3klein",
   "model_name": "FLUX 3 Image Klein",
   "label": "FLUX 3 Image Klein",
@@ -1140,8 +1140,8 @@
   "sebab": "hiasan atas menyentuh huruf O (tempat salah); dakwat krim (kelabu, SK04)"
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -1162,7 +1162,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|klein3-K13S_s42",
+  "key": "U23|klein3-K13S_s42",
   "model": "flux3klein",
   "model_name": "FLUX 3 Image Klein",
   "label": "FLUX 3 Image Klein",
@@ -1178,8 +1178,8 @@
   "sebab": "ciri teras gagal: bentuk huruf lebar, bukan sempit tinggi (condensed) seperti kad (syarat QC, keputusan pengguna 28 Nov 2026); sentuh tepi kiri / kanan (ruang tepi, SK02)"
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -1200,7 +1200,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|klein3-K13S_s7",
+  "key": "U23|klein3-K13S_s7",
   "model": "flux3klein",
   "model_name": "FLUX 3 Image Klein",
   "label": "FLUX 3 Image Klein",
@@ -1216,8 +1216,8 @@
   "sebab": "ciri teras gagal: bentuk huruf lebar, bukan sempit tinggi (condensed) seperti kad (syarat QC, keputusan pengguna 28 Nov 2026); sentuh tepi kiri / kanan (ruang tepi, SK02)"
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -1238,7 +1238,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|klein3-K13S_s123",
+  "key": "U23|klein3-K13S_s123",
   "model": "flux3klein",
   "model_name": "FLUX 3 Image Klein",
   "label": "FLUX 3 Image Klein",
@@ -1254,8 +1254,8 @@
   "sebab": "ciri teras gagal: bentuk huruf lebar, bukan sempit tinggi (condensed) seperti kad (syarat QC, keputusan pengguna 28 Nov 2026); sentuh tepi kiri / kanan (ruang tepi, SK02)"
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -1276,7 +1276,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|zturbo-K9R_s42",
+  "key": "U23|zturbo-K9R_s42",
   "model": "zturbo",
   "model_name": "Z-Image-Turbo",
   "label": "Z-Image-Turbo",
@@ -1292,8 +1292,8 @@
   "sebab": "blok hampir sentuh tepi kiri (ruang tepi, SK02)"
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -1314,7 +1314,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|zturbo-K9R_s7",
+  "key": "U23|zturbo-K9R_s7",
   "model": "zturbo",
   "model_name": "Z-Image-Turbo",
   "label": "Z-Image-Turbo",
@@ -1330,8 +1330,8 @@
   "sebab": ""
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -1352,7 +1352,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|zturbo-K10Q_s42",
+  "key": "U23|zturbo-K10Q_s42",
   "model": "zturbo",
   "model_name": "Z-Image-Turbo",
   "label": "Z-Image-Turbo",
@@ -1368,8 +1368,8 @@
   "sebab": "sentuh tepi atas (ruang tepi, SK02)"
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -1390,7 +1390,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|zturbo-K10Q_s7",
+  "key": "U23|zturbo-K10Q_s7",
   "model": "zturbo",
   "model_name": "Z-Image-Turbo",
   "label": "Z-Image-Turbo",
@@ -1406,8 +1406,8 @@
   "sebab": ""
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -1428,7 +1428,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|zturbo-K11A_s42",
+  "key": "U23|zturbo-K11A_s42",
   "model": "zturbo",
   "model_name": "Z-Image-Turbo",
   "label": "Z-Image-Turbo",
@@ -1444,8 +1444,8 @@
   "sebab": "G2: tanda rawak serpihan jalur di atas kiri huruf A, dibaca seperti tanda petikan; bar ucapan tiada"
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -1466,7 +1466,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|zturbo-K11A_s7",
+  "key": "U23|zturbo-K11A_s7",
   "model": "zturbo",
   "model_name": "Z-Image-Turbo",
   "label": "Z-Image-Turbo",
@@ -1482,8 +1482,8 @@
   "sebab": "jalur hazard menyentuh huruf A dan C (hiasan di tempat salah); LOSES TO tidak kecil (nota gaya)"
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -1504,7 +1504,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|zturbo-K12T_s42",
+  "key": "U23|zturbo-K12T_s42",
   "model": "zturbo",
   "model_name": "Z-Image-Turbo",
   "label": "Z-Image-Turbo",
@@ -1520,8 +1520,8 @@
   "sebab": "hiasan atas menyentuh huruf O (tempat salah)"
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -1542,7 +1542,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|zturbo-K12T_s7",
+  "key": "U23|zturbo-K12T_s7",
   "model": "zturbo",
   "model_name": "Z-Image-Turbo",
   "label": "Z-Image-Turbo",
@@ -1558,8 +1558,8 @@
   "sebab": "hiasan atas menyentuh huruf O (tempat salah)"
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -1580,7 +1580,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|zturbo-K13S_s42",
+  "key": "U23|zturbo-K13S_s42",
   "model": "zturbo",
   "model_name": "Z-Image-Turbo",
   "label": "Z-Image-Turbo",
@@ -1596,8 +1596,8 @@
   "sebab": "hampir sentuh tepi atas (ruang tepi, SK02)"
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -1618,7 +1618,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|zturbo-K13S_s7",
+  "key": "U23|zturbo-K13S_s7",
   "model": "zturbo",
   "model_name": "Z-Image-Turbo",
   "label": "Z-Image-Turbo",
@@ -1634,8 +1634,8 @@
   "sebab": ""
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -1656,7 +1656,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|zturbo-K13S_s123",
+  "key": "U23|zturbo-K13S_s123",
   "model": "zturbo",
   "model_name": "Z-Image-Turbo",
   "label": "Z-Image-Turbo",
@@ -1672,8 +1672,8 @@
   "sebab": ""
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -1694,7 +1694,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|klein4b-K9R_s42",
+  "key": "U23|klein4b-K9R_s42",
   "model": "klein4b",
   "model_name": "FLUX.2 klein 4B",
   "label": "FLUX.2 klein 4B",
@@ -1710,8 +1710,8 @@
   "sebab": ""
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -1732,7 +1732,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|klein4b-K9R_s7",
+  "key": "U23|klein4b-K9R_s7",
   "model": "klein4b",
   "model_name": "FLUX.2 klein 4B",
   "label": "FLUX.2 klein 4B",
@@ -1748,8 +1748,8 @@
   "sebab": ""
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -1770,7 +1770,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|klein4b-K10Q_s42",
+  "key": "U23|klein4b-K10Q_s42",
   "model": "klein4b",
   "model_name": "FLUX.2 klein 4B",
   "label": "FLUX.2 klein 4B",
@@ -1786,8 +1786,8 @@
   "sebab": ""
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -1808,7 +1808,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|klein4b-K10Q_s7",
+  "key": "U23|klein4b-K10Q_s7",
   "model": "klein4b",
   "model_name": "FLUX.2 klein 4B",
   "label": "FLUX.2 klein 4B",
@@ -1824,8 +1824,8 @@
   "sebab": ""
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -1846,7 +1846,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|klein4b-K11A_s42",
+  "key": "U23|klein4b-K11A_s42",
   "model": "klein4b",
   "model_name": "FLUX.2 klein 4B",
   "label": "FLUX.2 klein 4B",
@@ -1862,8 +1862,8 @@
   "sebab": "jalur hazard menyentuh atas huruf A (hiasan di tempat salah)"
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -1884,7 +1884,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|klein4b-K11A_s7",
+  "key": "U23|klein4b-K11A_s7",
   "model": "klein4b",
   "model_name": "FLUX.2 klein 4B",
   "label": "FLUX.2 klein 4B",
@@ -1900,8 +1900,8 @@
   "sebab": "jalur hazard menyentuh atas huruf A dan C (hiasan di tempat salah)"
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -1922,7 +1922,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|klein4b-K12T_s42",
+  "key": "U23|klein4b-K12T_s42",
   "model": "klein4b",
   "model_name": "FLUX.2 klein 4B",
   "label": "FLUX.2 klein 4B",
@@ -1938,8 +1938,8 @@
   "sebab": "G3: garis tambahan: garis tegak separa di tepi kanan (cacat cetak)"
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -1960,7 +1960,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|klein4b-K12T_s7",
+  "key": "U23|klein4b-K12T_s7",
   "model": "klein4b",
   "model_name": "FLUX.2 klein 4B",
   "label": "FLUX.2 klein 4B",
@@ -1976,8 +1976,8 @@
   "sebab": "garis tambahan: bingkai garis nipis di sekeliling (tidak diminta)"
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -1998,7 +1998,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|klein4b-K13S_s42",
+  "key": "U23|klein4b-K13S_s42",
   "model": "klein4b",
   "model_name": "FLUX.2 klein 4B",
   "label": "FLUX.2 klein 4B",
@@ -2014,8 +2014,8 @@
   "sebab": "G1: 'BUILD' jadi 'BUIILD' (huruf I berulang)"
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -2036,7 +2036,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|klein4b-K13S_s7",
+  "key": "U23|klein4b-K13S_s7",
   "model": "klein4b",
   "model_name": "FLUX.2 klein 4B",
   "label": "FLUX.2 klein 4B",
@@ -2052,8 +2052,8 @@
   "sebab": ""
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -2074,7 +2074,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|klein4b-K13S_s123",
+  "key": "U23|klein4b-K13S_s123",
   "model": "klein4b",
   "model_name": "FLUX.2 klein 4B",
   "label": "FLUX.2 klein 4B",
@@ -2090,8 +2090,8 @@
   "sebab": ""
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -2112,7 +2112,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|ernie-K11A_s42-p1",
+  "key": "U23|ernie-K11A_s42-p1",
   "model": "ernie",
   "model_name": "ERNIE-Image-Turbo",
   "label": "ERNIE-Image-Turbo",
@@ -2128,8 +2128,8 @@
   "sebab": ""
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -2150,7 +2150,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|ernie-K11A_s7-p1",
+  "key": "U23|ernie-K11A_s7-p1",
   "model": "ernie",
   "model_name": "ERNIE-Image-Turbo",
   "label": "ERNIE-Image-Turbo",
@@ -2166,8 +2166,8 @@
   "sebab": ""
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -2188,7 +2188,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|ernie-K11A_s123-p1",
+  "key": "U23|ernie-K11A_s123-p1",
   "model": "ernie",
   "model_name": "ERNIE-Image-Turbo",
   "label": "ERNIE-Image-Turbo",
@@ -2204,8 +2204,8 @@
   "sebab": ""
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -2226,7 +2226,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|ernie-K13S_s42-p1",
+  "key": "U23|ernie-K13S_s42-p1",
   "model": "ernie",
   "model_name": "ERNIE-Image-Turbo",
   "label": "ERNIE-Image-Turbo",
@@ -2242,8 +2242,8 @@
   "sebab": ""
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -2264,7 +2264,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|ernie-K13S_s7-p1",
+  "key": "U23|ernie-K13S_s7-p1",
   "model": "ernie",
   "model_name": "ERNIE-Image-Turbo",
   "label": "ERNIE-Image-Turbo",
@@ -2280,8 +2280,8 @@
   "sebab": ""
  },
  {
-  "ujian": "U13",
-  "ujian_nama": "Standard v1.2: 5 gaya baharu K9–K13, 5 model CPU, hitam putih",
+  "ujian": "U23",
+  "ujian_nama": "Standard v1.2: K9–K13 sesi B (5 gaya, 5 model CPU, hitam putih)",
   "jenis": "Ujian",
   "standard": "Lettering v1.2: G1 ejaan + G2 tiada teks / tanda rawak + G3 tiada cacat + ciri teras kad (huruf condensed, keputusan pengguna 28 Nov 2026)",
   "ujian_nota": "Lima gambar upload (IMG_5840, 5793, 5789, 5786, 5791), ayat baharu pilihan Claude, kad K9–K13 (diluluskan pengguna 28 Nov 2026). CPU container, laluan 1 seed 42, 7; laluan 2 (K13S) seed 42, 7, 123. Pusingan 1 kitaran QC: ERNIE (K11A, K13S) dan FLUX 3 Klein (K10Q, K13S). img_siap = kemasan hitam putih (5b + SK07 + SK06 v1.4) pratonton 18×24. Semakan mata Claude.",
@@ -2302,7 +2302,7 @@
   "gaya": "",
   "tanda": "",
   "tarikh": "2026-11-27",
-  "key": "U13|ernie-K13S_s123-p1",
+  "key": "U23|ernie-K13S_s123-p1",
   "model": "ernie",
   "model_name": "ERNIE-Image-Turbo",
   "label": "ERNIE-Image-Turbo",
