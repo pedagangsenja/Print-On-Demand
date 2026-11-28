@@ -5,188 +5,188 @@
    "K3K_s42": [
     true,
     "Blok tidak condong (dibetulkan SK01)",
-    ""
+    "a875d81b6d79e0ebc09014e7865198c1"
    ],
    "K3K_s7": [
     true,
     "Blok tidak condong (dibetulkan SK01)",
-    ""
+    "622c8cfb37692af861b5708c4417b3bc"
    ],
    "K3K_s123": [
     true,
     "Blok tidak condong (dibetulkan SK01)",
-    ""
+    "09531159a2744576f9b48f4a2d01b1d6"
    ],
    "K7M_s42": [
     true,
     "Blok tidak condong; blok di atas tengah (dibetulkan SK01, SK03)",
-    ""
+    "30f5446f8081a2ab2f551c1c02b0d957"
    ],
    "K7M_s7": [
     true,
     "Blok tidak condong (dibetulkan SK01)",
-    ""
+    "39a8f10c65f9ad7bd8370c3315d371b1"
    ],
    "K7M_s123": [
     true,
     "Blok tidak condong (dibetulkan SK01)",
-    ""
+    "cd8e53689b8ea807595cd558e5d089f4"
    ],
    "K8G_s42": [
     false,
     "'ALMOST' jadi 'ALMIST'",
-    ""
+    "361ec3d50a921bd8e644eba6016593d3"
    ],
    "K8G_s7": [
     false,
     "'ALMOST' jadi 'ALMIST'",
-    ""
+    "5ef71a09c7c9e9d5f98293f4325f3f9e"
    ],
    "K8G_s123": [
     false,
     "'ALMOST' jadi 'ALMiOST' (huruf i tambahan)",
-    ""
+    "f2ee770392512fed80b8d40a5db3f4cc"
    ]
   },
   "ernie": {
    "K3K_s42": [
     true,
     "",
-    ""
+    "684a3f73887dbc156bf8e2377a67521f"
    ],
    "K3K_s7": [
     false,
     "Tanda petikan dan koma tambahan: 'KINDNESS', Words, FADE'",
-    ""
+    "5f1d71ab7c35db2aecb68b322c49d22b"
    ],
    "K3K_s123": [
     true,
     "",
-    ""
+    "692ba5fe152bae6bc6caa46c6ba0dc6c"
    ],
    "K7M_s42": [
     true,
     "Skrip berus kering, lebih nipis daripada rujukan",
-    ""
+    "6a1c69e08a39eab4a16a7d8a660704d4"
    ],
    "K7M_s7": [
     true,
     "Skrip berus kering, lebih nipis daripada rujukan",
-    ""
+    "acce1bbb47f916ddefcc3bfea6e3b2ea"
    ],
    "K7M_s123": [
     true,
     "Skrip berus kering, lebih nipis daripada rujukan",
-    ""
+    "d08c755dbdad79dda05986ac4f519566"
    ],
    "K8G_s42": [
     true,
     "Huruf berus nipis tinggi, bukan marker bulat tebal; bintang kecil",
-    ""
+    "79d3f207351a7a45790616f2b0a067d6"
    ],
    "K8G_s7": [
     true,
     "Huruf berus nipis; latar kelabu bertekstur (dibersih SK04)",
-    ""
+    "a81c6014d259379775c0a6925bbdf6cd"
    ],
    "K8G_s123": [
     true,
     "Huruf berus nipis; latar kelabu bertekstur (dibersih SK04)",
-    ""
+    "c88846487e3b23f44b80393a93d6df6b"
    ]
   },
   "zturbo": {
    "K3K_s42": [
     true,
     "Bintang tidak diminta; tiada percikan di sisi label; label kecil; tiada condong",
-    ""
+    "dd5ac20a14f5a4e215719a2412fe9d1e"
    ],
    "K3K_s7": [
     true,
     "Bintang tidak diminta; tiada percikan di sisi label; label kecil",
-    ""
+    "ea11545e799a037d034a0f4c2f80aa52"
    ],
    "K3K_s123": [
     true,
     "Bintang tidak diminta; tiada percikan di sisi label; label kecil",
-    ""
+    "1f6508fc2456aa5871c6bd62fdfec4b2"
    ],
    "K7M_s42": [
     false,
     "Titik tambahan selepas 'Room'",
-    ""
+    "ea2efd558e75d7eda96a52f9f43058b4"
    ],
    "K7M_s7": [
     false,
     "Titik tambahan selepas 'Make' dan 'Wonder'",
-    ""
+    "53932066697feba12c2f9e3fb03fa209"
    ],
    "K7M_s123": [
     true,
     "",
-    ""
+    "1312b1123f641e12a3e4def93bf3eb13"
    ],
    "K8G_s42": [
     false,
     "5 baris (KEEP / GOING dipisah); bintik selepas 'THERE' dibaca sebagai noktah",
-    ""
+    "a13eae23a019f8e8fab1edce42ed68c6"
    ],
    "K8G_s7": [
     false,
     "5 baris (KEEP / GOING dipisah); bintik selepas 'THERE' dibaca sebagai noktah",
-    ""
+    "ea776b21fde66398c783dc9025643ad9"
    ],
    "K8G_s123": [
     false,
     "'KEEP' rosak ('KEE=P'); 5 baris",
-    ""
+    "bcc07274c902e1d9549498de9cbdcd44"
    ]
   },
   "klein4b": {
    "K3K_s42": [
     true,
     "Percikan dilukis di dalam label",
-    ""
+    "2153e1f69f8cd0df6f794ab17eb488af"
    ],
    "K3K_s7": [
     true,
     "Percikan dilukis di dalam label",
-    ""
+    "15000fc2313f08de4843495996e1c9ae"
    ],
    "K3K_s123": [
     true,
     "Percikan dilukis di dalam label",
-    ""
+    "69558d53ea952b62a8a4c516ec50fe9a"
    ],
    "K7M_s42": [
     false,
     "Tanda rawak kecil sebelum 'Make'",
-    ""
+    "ef2c7b776a1787c1c5e077e2d041c81a"
    ],
    "K7M_s7": [
     true,
     "",
-    ""
+    "aa9867b92ab4daf40e1226654e092817"
    ],
    "K7M_s123": [
     true,
     "",
-    ""
+    "83bab1b8ab53dfaa8a7c6f691ce98723"
    ],
    "K8G_s42": [
     true,
     "",
-    ""
+    "c58292a5a2f02c51d11a31236756ebff"
    ],
    "K8G_s7": [
     false,
     "'KEEP' jadi 'KEPP'; 'you' jadi 'You'",
-    ""
+    "741a7acbb2dd3e54b50a33bf42b0e642"
    ],
    "K8G_s123": [
     false,
     "'ALMOST' jadi 'ALMOT'; 5 baris",
-    ""
+    "bb6f2fab065d24ea8f12a8f075d123e5"
    ]
   },
   "klein3": {
@@ -243,34 +243,34 @@
    "K8J_s42": [
     false,
     "'ALMOST' jadi 'ALMiST' (peranan ditukar: tiada beza)",
-    ""
+    "603b80397549dc601a8c0b46c6a21de9"
    ],
    "K8J_s7": [
     false,
     "'ALMOST' jadi 'ALMiST'",
-    ""
+    "ecaf552d819d2bbd6810cecb94cc6432"
    ],
    "K8J_s123": [
     false,
     "'ALMOST' jadi 'ALMiST'",
-    ""
+    "938d810621c3e15a0cc28bdedfef5abe"
    ]
   },
   "zturbo": {
    "K8G_s42": [
     false,
     "Masih 5 baris (KEEP / GOING dipisah); bintik selepas 'THERE'",
-    ""
+    "4144bd925d2f1579c6ce81ae5a0e95d7"
    ],
    "K8G_s7": [
     false,
     "Masih 5 baris; 'ALMOST' jadi 'ALWOST'; bintik selepas 'THERE'",
-    ""
+    "4d8156104e3bb158d20728ec7ab933c8"
    ],
    "K8G_s123": [
     false,
     "Masih 5 baris; bintik selepas 'THERE'",
-    ""
+    "d9d1cbe0aa31135abed06746531dfe0b"
    ]
   }
  }

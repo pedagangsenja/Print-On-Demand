@@ -1,0 +1,44 @@
+{
+ "versi": "SK06 v1.4 (27 Nov 2026)",
+ "raw": "klein3_K41g_s42_HP_warna.png",
+ "style": "S3",
+ "palet": "kad K10 HP",
+ "bg": "#030101",
+ "fills": [
+  "#ffffff"
+ ],
+ "layers": 1,
+ "ink_px": [
+  2933817
+ ],
+ "sizes": {
+  "18x24": [
+   5400,
+   7200
+  ]
+ },
+ "tekstur": {
+  "kad": "K41",
+  "teks": "cetakan lusuh berbintik",
+  "jenis": "worn",
+  "kuat": 1.0,
+  "tidak_dibuat": []
+ },
+ "amaran": [],
+ "tepi": {
+  "sasaran": {
+   "sisi": 10.8,
+   "atas_bawah": 9.8,
+   "sumber": "SK05 pada IMG_5777"
+  },
+  "hasil": {
+   "18x24": {
+    "kiri": 10.8,
+    "kanan": 10.8,
+    "atas": 17.8,
+    "bawah": 23.8
+   }
+  },
+  "dakwat_min_pct": 10.9
+ }
+}

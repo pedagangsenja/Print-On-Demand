@@ -1,4 +1,8 @@
-"""SK07 Warna C ikut peranan (Standard Lettering v1.2, langkah 6). Versi 1.1, 27 Nov 2026.
+"""SK07 Warna C ikut peranan (Standard Lettering v1.2, langkah 6). Versi 1.3, 27 Nov 2026.
+v1.3 (Belajar SK, ubahan hp_neutral, parameter): --warna HP pada kad berbilang dakwat / tanpa peta_warna / berwarna
+(K9-K11): satu dakwat = dakwat kad yang neutral (tanpa warna) dan paling kontras dengan latar; jika tiada, putih atau
+hitam tulen. Semua peranan satu dakwat, jadi peta_warna tidak diperlukan. K12, K13: sama seperti v1.2.
+v1.2 (Belajar SK, ubahan hitam_putih, parameter): --warna HP = latar kad + dakwat pertama kad untuk semua peranan.
 v1.1 (Belajar SK, ubahan belah_leher): huruf bertaut merentas baris dibelah pada leher paling sempit, bukan garis
 lurus; komponen berbilang baris dikumpul ikut julat penuhnya. Bukti: ernie K3K s42 (puncak S 'Stays' ikut kuning),
 ernie K3K s123 (baris salah dibelah).
@@ -31,7 +35,7 @@ Teks; baris berbekas mesti ada komponen segi empat (isi >= 75%); komponen utuh y
 berlainan warna > 30% piksel = GAGAL, 10-30% = amaran (standard langkah 6: huruf bertaut merentas baris tidak boleh
 diasingkan warnanya). Komponen yang dibelah dicatat sebagai amaran. Kad satu dakwat tidak perlu peta baris.
 
-Guna: python3 SK07_warna.py <imej> <kad> <ayat> <folder keluar> [--warna Cxxx]
+Guna: python3 SK07_warna.py <imej> <kad> <ayat> <folder keluar> [--warna Cxxx | --warna HP (hitam putih: latar kad, satu dakwat neutral paling kontras; v1.3)]
 Hasil (imej asal tidak ditimpa): <nama>_peranan.png (0 latar, 1 utama, 2 sokongan, 3 penyambung, 4 hiasan,
 5 bayang), <nama>_alfa.png (kelegapan tepi anti-alias), <nama>_warna.png, <nama>_palet.json (untuk SK06 --palet),
 log_6.jsonl. GAGAL = tiada fail imej.
@@ -49,7 +53,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 import kad  # noqa: E402
 from SK05_ukur import condong, latar, muat, topeng  # noqa: E402
 
-ID, VERSI = "SK07", "SK07 v1.1 (27 Nov 2026)"
+ID, VERSI = "SK07", "SK07 v1.3 (27 Nov 2026)"
 KOD = dict(latar=0, utama=1, sokongan=2, penyambung=3, hiasan=4, bayang=5)
 NAMA = {v: k for k, v in KOD.items()}
 STOR = Path(__file__).resolve().parent.parent / "belajar" / "stor" / "data" / "warna" / "items"
@@ -69,6 +73,17 @@ def palet(kid, warna=None):
     """Warna setiap peranan. Lalai = warna kad; --warna Cxxx = latar + huruf daripada Daftar S/C (nombor dakwat
     sama dengan kad: dakwat ke-i kad diganti huruf ke-i warna C)."""
     k = kad.KAD[kid]
+    if warna == "HP":
+        # v1.2 (Belajar SK, ubahan hitam_putih): poster hitam putih sahaja (keputusan pengguna 27 Nov 2026).
+        # v1.3 (hp_neutral): satu dakwat = dakwat kad neutral paling kontras dengan latar (K13: hitam, bukan kuning
+        # mustard; K10: tiada dakwat neutral -> putih tulen); semua peranan dakwat itu.
+        latar = k["warna"]["latar"][1]
+        terang = lambda h: sum(int(h[i:i + 2], 16) for i in (1, 3, 5)) / 3
+        neutral = lambda h: max(int(h[i:i + 2], 16) for i in (1, 3, 5)) - min(int(h[i:i + 2], 16) for i in (1, 3, 5)) <= 24
+        calon = [d[1] for d in k["warna"]["dakwat"] if neutral(d[1]) and abs(terang(d[1]) - terang(latar)) >= 128]
+        dakwat = max(calon, key=lambda h: abs(terang(h) - terang(latar))) if calon else (
+            "#ffffff" if terang(latar) < 128 else "#000000")
+        return dict(sumber=f"kad {kid} HP", latar=latar, peranan={r: dakwat for r in KOD if r != "latar"})
     peta = k.get("peta_warna")
     if peta is None:
         if k["dakwat"] != 1:
@@ -392,11 +407,13 @@ def baris_peranan(rgb_, kid, aid):
     return (None if cat["gagal"] else peta), cat
 
 
-def peranan(rgb_, kid, aid):
-    if kad.KAD[kid]["dakwat"] == 1 and len(set(palet(kid)["peranan"].values())) == 1:
+def peranan(rgb_, kid, aid, warna=None):
+    # v1.3 (hp_neutral): --warna HP = satu dakwat untuk semua peranan, jadi peta peranan tidak diperlukan
+    if warna == "HP" or (kad.KAD[kid]["dakwat"] == 1 and len(set(palet(kid)["peranan"].values())) == 1):
         blok, semua = topeng(rgb_)
         return semua.astype(np.uint8) * KOD["utama"], dict(skrip=ID, versi=VERSI, condong_darjah=condong(blok),
-                                                           amaran=[], gagal=[], nota="kad satu dakwat")
+                                                           amaran=[], gagal=[],
+                                                           nota="hitam putih (HP)" if warna == "HP" else "kad satu dakwat")
     return baris_peranan(rgb_, kid, aid)
 
 
@@ -436,7 +453,7 @@ if __name__ == "__main__":
     f, kid, aid, keluar = Path(a[0]), a[1], a[2], Path(a[3])
     pal = palet(kid, pil.get("warna"))
     im = muat(f)
-    peta, cat = peranan(im, kid, aid)
+    peta, cat = peranan(im, kid, aid, pil.get("warna"))
     lulus = tulis(keluar, f.stem, peta, pal, dict(imej=str(f), kad=kid, ayat=aid, **cat), alfa(im))
     print(f.stem, "|", [b["teks"] + ":" + b["peranan"] for b in cat.get("baris", [])] or cat.get("nota", ""),
           "| hiasan", cat.get("hiasan", 0), "|", "lulus" if lulus else "GAGAL: " + "; ".join(cat["gagal"]),

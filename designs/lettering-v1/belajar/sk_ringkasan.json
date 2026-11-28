@@ -1,14 +1,44 @@
 {
  "versi": "s1 (27 Nov 2026)",
  "tarikh": "2026-11-28",
- "baris": 304,
- "imej": 50,
+ "baris": 3408,
+ "imej": 480,
  "kad_dipakai": [
+  "K10",
+  "K11",
+  "K12",
+  "K14",
+  "K15",
+  "K16",
+  "K17",
+  "K18",
+  "K2",
+  "K20",
+  "K21",
+  "K22",
+  "K23",
   "K24",
   "K3",
+  "K30",
+  "K31",
+  "K32",
+  "K33",
+  "K4",
+  "K40",
+  "K41",
+  "K42",
+  "K43",
+  "K44",
+  "K5",
+  "K50",
+  "K51",
+  "K52",
+  "K53",
+  "K54",
   "K6",
   "K7",
-  "K8"
+  "K8",
+  "K9"
  ],
  "suka": 0,
  "sk": {
@@ -17,19 +47,27 @@
    "nama": "condong",
    "fail": "SK01_condong.py",
    "langkah": "5b",
-   "versi": "5b v1.2",
+   "versi": "5b v1.5 (28 Nov 2026)",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 28,
-     "lulus": 28,
-     "cacat": 0,
+     "imej": 74,
+     "lulus": 68,
+     "cacat": 6,
+     "input_rosak": 0,
+     "belum": 3,
+     "tolak": 0
+    },
+    "5b v1.2": {
+     "imej": 21,
+     "lulus": 20,
+     "cacat": 1,
      "input_rosak": 0,
      "belum": 0,
      "tolak": 0
     },
-    "5b v1.2": {
-     "imej": 5,
-     "lulus": 5,
+    "5b v1.3 (28 Nov 2026)": {
+     "imej": 16,
+     "lulus": 16,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -37,8 +75,8 @@
     }
    },
    "semasa": {
-    "imej": 5,
-    "lulus": 5,
+    "imej": 16,
+    "lulus": 16,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -46,11 +84,11 @@
    },
    "berulang": [],
    "calon": [],
-   "ubahan_dicuba": 0,
+   "ubahan_dicuba": 1,
    "tindakan": [
     {
-     "jenis": "tiada",
-     "teks": "Tiada tindakan: tiada cacat berulang"
+     "jenis": "uji_semula",
+     "teks": "Kod SK01 kini 5b v1.5 (28 Nov 2026) tetapi log hanya 5b v1.1, 5b v1.2, 5b v1.3 (28 Nov 2026): catat ubahan dalam sk_ubahan.json (cuba) dan jalan semula pada imej yang sama"
     }
    ]
   },
@@ -59,17 +97,83 @@
    "nama": "ruang tepi",
    "fail": "SK02_ruang_tepi.py",
    "langkah": "5b",
-   "versi": "5b v1.2",
+   "versi": "5b v1.5 (28 Nov 2026)",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 20,
-     "lulus": 20,
+     "imej": 248,
+     "lulus": 239,
+     "cacat": 9,
+     "input_rosak": 0,
+     "belum": 2,
+     "tolak": 0
+    },
+    "5b v1.2": {
+     "imej": 126,
+     "lulus": 126,
+     "cacat": 0,
+     "input_rosak": 1,
+     "belum": 0,
+     "tolak": 0
+    },
+    "5b v1.3 (28 Nov 2026)": {
+     "imej": 68,
+     "lulus": 68,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    }
+   },
+   "semasa": {
+    "imej": 68,
+    "lulus": 68,
+    "cacat": 0,
+    "input_rosak": 0,
+    "belum": 0,
+    "tolak": 0
+   },
+   "berulang": [],
+   "calon": [],
+   "ubahan_dicuba": 3,
+   "tindakan": [
+    {
+     "jenis": "uji_semula",
+     "teks": "Kod SK02 kini 5b v1.5 (28 Nov 2026) tetapi log hanya 5b v1.1, 5b v1.2, 5b v1.3 (28 Nov 2026): catat ubahan dalam sk_ubahan.json (cuba) dan jalan semula pada imej yang sama"
+    },
+    {
+     "jenis": "ukur",
+     "teks": "Kad K42 tiada rujukan ruang tepi: ukur SK05 pada IMG_5761"
+    },
+    {
+     "jenis": "ukur",
+     "teks": "Kad K5 tiada rujukan ruang tepi: ukur SK05 pada IMG_5730"
+    }
+   ]
+  },
+  "SK03": {
+   "sk": "SK03",
+   "nama": "kedudukan",
+   "fail": "SK03_kedudukan.py",
+   "langkah": "5b",
+   "versi": "5b v1.5 (28 Nov 2026)",
+   "ikut_versi": {
+    "5b v1.1": {
+     "imej": 54,
+     "lulus": 54,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
      "tolak": 0
     },
     "5b v1.2": {
+     "imej": 31,
+     "lulus": 31,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    },
+    "5b v1.3 (28 Nov 2026)": {
      "imej": 4,
      "lulus": 4,
      "cacat": 0,
@@ -91,50 +195,8 @@
    "ubahan_dicuba": 0,
    "tindakan": [
     {
-     "jenis": "tiada",
-     "teks": "Tiada tindakan: tiada cacat berulang"
-    }
-   ]
-  },
-  "SK03": {
-   "sk": "SK03",
-   "nama": "kedudukan",
-   "fail": "SK03_kedudukan.py",
-   "langkah": "5b",
-   "versi": "5b v1.2",
-   "ikut_versi": {
-    "5b v1.1": {
-     "imej": 20,
-     "lulus": 20,
-     "cacat": 0,
-     "input_rosak": 0,
-     "belum": 0,
-     "tolak": 0
-    },
-    "5b v1.2": {
-     "imej": 5,
-     "lulus": 5,
-     "cacat": 0,
-     "input_rosak": 0,
-     "belum": 0,
-     "tolak": 0
-    }
-   },
-   "semasa": {
-    "imej": 5,
-    "lulus": 5,
-    "cacat": 0,
-    "input_rosak": 0,
-    "belum": 0,
-    "tolak": 0
-   },
-   "berulang": [],
-   "calon": [],
-   "ubahan_dicuba": 0,
-   "tindakan": [
-    {
-     "jenis": "tiada",
-     "teks": "Tiada tindakan: tiada cacat berulang"
+     "jenis": "uji_semula",
+     "teks": "Kod SK03 kini 5b v1.5 (28 Nov 2026) tetapi log hanya 5b v1.1, 5b v1.2, 5b v1.3 (28 Nov 2026): catat ubahan dalam sk_ubahan.json (cuba) dan jalan semula pada imej yang sama"
     }
    ]
   },
@@ -143,19 +205,27 @@
    "nama": "hitam putih",
    "fail": "SK04_hitam_putih.py",
    "langkah": "5b",
-   "versi": "5b v1.2",
+   "versi": "5b v1.5 (28 Nov 2026)",
    "ikut_versi": {
     "5b v1.1": {
-     "imej": 37,
-     "lulus": 37,
-     "cacat": 0,
+     "imej": 308,
+     "lulus": 307,
+     "cacat": 1,
      "input_rosak": 0,
      "belum": 0,
      "tolak": 0
     },
     "5b v1.2": {
-     "imej": 7,
-     "lulus": 7,
+     "imej": 148,
+     "lulus": 148,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    },
+    "5b v1.3 (28 Nov 2026)": {
+     "imej": 81,
+     "lulus": 81,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -163,8 +233,8 @@
     }
    },
    "semasa": {
-    "imej": 7,
-    "lulus": 7,
+    "imej": 81,
+    "lulus": 81,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -175,8 +245,8 @@
    "ubahan_dicuba": 0,
    "tindakan": [
     {
-     "jenis": "tiada",
-     "teks": "Tiada tindakan: tiada cacat berulang"
+     "jenis": "uji_semula",
+     "teks": "Kod SK04 kini 5b v1.5 (28 Nov 2026) tetapi log hanya 5b v1.1, 5b v1.2, 5b v1.3 (28 Nov 2026): catat ubahan dalam sk_ubahan.json (cuba) dan jalan semula pada imej yang sama"
     }
    ]
   },
@@ -185,7 +255,7 @@
    "nama": "ukur",
    "fail": "SK05_ukur.py",
    "langkah": "1, 5b",
-   "versi": "SK05 v1.1",
+   "versi": "SK05 v1.2",
    "ikut_versi": {},
    "semasa": {
     "imej": 0,
@@ -210,7 +280,7 @@
    "nama": "finish",
    "fail": "SK06_finish.py",
    "langkah": "6",
-   "versi": "SK06 v1.3 (27 Nov 2026)",
+   "versi": "SK06 v1.9 (28 Nov 2026)",
    "ikut_versi": {
     "SK06 v1 (27 Nov 2026)": {
      "imej": 22,
@@ -237,8 +307,40 @@
      "tolak": 0
     },
     "SK06 v1.3 (27 Nov 2026)": {
-     "imej": 3,
-     "lulus": 3,
+     "imej": 124,
+     "lulus": 120,
+     "cacat": 4,
+     "input_rosak": 0,
+     "belum": 7,
+     "tolak": 0
+    },
+    "SK06 v1.4 (27 Nov 2026)": {
+     "imej": 165,
+     "lulus": 156,
+     "cacat": 9,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    },
+    "SK06 v1.5 (27 Nov 2026)": {
+     "imej": 5,
+     "lulus": 5,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    },
+    "SK06 v1.5 (28 Nov 2026)": {
+     "imej": 1,
+     "lulus": 1,
+     "cacat": 0,
+     "input_rosak": 0,
+     "belum": 0,
+     "tolak": 0
+    },
+    "SK06 v1.6 (27 Nov 2026)": {
+     "imej": 2,
+     "lulus": 2,
      "cacat": 0,
      "input_rosak": 0,
      "belum": 0,
@@ -246,8 +348,8 @@
     }
    },
    "semasa": {
-    "imej": 3,
-    "lulus": 3,
+    "imej": 2,
+    "lulus": 2,
     "cacat": 0,
     "input_rosak": 0,
     "belum": 0,
@@ -255,12 +357,21 @@
    },
    "berulang": [],
    "calon": [],
-   "ubahan_dicuba": 3,
+   "ubahan_dicuba": 10,
    "tindakan": [
+    {
+     "jenis": "uji_semula",
+     "teks": "Kod SK06 kini SK06 v1.9 (28 Nov 2026) tetapi log hanya SK06 v1 (27 Nov 2026), SK06 v1.1 (27 Nov 2026), SK06 v1.2 (27 Nov 2026), SK06 v1.3 (27 Nov 2026), SK06 v1.4 (27 Nov 2026), SK06 v1.5 (27 Nov 2026), SK06 v1.5 (28 Nov 2026), SK06 v1.6 (27 Nov 2026): catat ubahan dalam sk_ubahan.json (cuba) dan jalan semula pada imej yang sama"
+    },
     {
      "jenis": "ukur",
      "medan": "tekstur_had",
-     "teks": "Kad K8, had tekstur: butir bawah 1 px dan tepi marker kering tidak ditiru: pada JPEG 600x449 itu kesan mampatan; perlu gambar upload lebih besar"
+     "teks": "Kad K51, had tekstur: calar diukur sebagai pecahan lubang sahaja; arah / panjang calar ditetapkan prosedur"
+    },
+    {
+     "jenis": "ukur",
+     "medan": "tekstur_had",
+     "teks": "Kad K54, had tekstur: JPEG 440x694: bintik bawah 1 px tidak diukur"
     }
    ]
   },
@@ -269,7 +380,7 @@
    "nama": "warna",
    "fail": "SK07_warna.py",
    "langkah": "6",
-   "versi": "SK07 v1.1 (27 Nov 2026)",
+   "versi": "SK07 v1.3 (27 Nov 2026)",
    "ikut_versi": {
     "SK07 v1 (27 Nov 2026)": {
      "imej": 17,
@@ -280,29 +391,37 @@
      "tolak": 0
     },
     "SK07 v1.1 (27 Nov 2026)": {
-     "imej": 17,
-     "lulus": 17,
+     "imej": 166,
+     "lulus": 166,
      "cacat": 0,
-     "input_rosak": 1,
+     "input_rosak": 3,
+     "belum": 0,
+     "tolak": 0
+    },
+    "SK07 v1.3 (27 Nov 2026)": {
+     "imej": 53,
+     "lulus": 53,
+     "cacat": 0,
+     "input_rosak": 0,
      "belum": 0,
      "tolak": 0
     }
    },
    "semasa": {
-    "imej": 17,
-    "lulus": 17,
+    "imej": 53,
+    "lulus": 53,
     "cacat": 0,
-    "input_rosak": 1,
+    "input_rosak": 0,
     "belum": 0,
     "tolak": 0
    },
    "berulang": [],
    "calon": [],
-   "ubahan_dicuba": 1,
+   "ubahan_dicuba": 3,
    "tindakan": [
     {
-     "jenis": "tiada",
-     "teks": "Tiada tindakan: tiada cacat berulang"
+     "jenis": "parameter",
+     "teks": "Kad K14 ada 3 dakwat tetapi tiada peta_warna: tulis peta peranan -> dakwat ikut IMG_5838"
     }
    ]
   },

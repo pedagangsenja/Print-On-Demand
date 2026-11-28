@@ -1,4 +1,5 @@
-"""SK05 Ukuran (Standard Lettering v1.2, langkah 1 dan 5b). Versi 1.1, 26 Nov 2026.
+"""SK05 Ukuran (Standard Lettering v1.2, langkah 1 dan 5b). Versi 1.2, 27 Nov 2026.
+v1.2: penapis bintik juga relatif kepada komponen terbesar (>= 1%), jadi kotak blok stabil bila imej diskala (SK02).
 v1.1: 'sentuh_tepi' kini hanya blok tulisan; bintik latar di tepi (kad K6, K8) dilapor sebagai 'bintik_tepi' dan
       tidak lagi menggagalkan imej (ditemui pada larian pertama, ERNIE K8G seed 123).
 
@@ -20,7 +21,7 @@ import cv2
 import numpy as np
 from PIL import Image
 
-VERSI = "SK05 v1.1"
+VERSI = "SK05 v1.2"
 
 
 def muat(path):
@@ -36,14 +37,17 @@ def latar(rgb):
     return np.median(tepi, axis=0)
 
 
-def topeng(rgb, ambang=60, min_bahagian=0.0005):
+def topeng(rgb, ambang=60, min_bahagian=0.0005, min_relatif=0.01):
     """Topeng dakwat (beza daripada latar). Pulang (blok, semua): 'blok' membuang bintik kecil (bintang, percikan)
     supaya kotak blok tidak ditarik oleh hiasan latar; 'semua' = setiap piksel dakwat."""
     d = np.abs(rgb.astype(np.int16) - latar(rgb).astype(np.int16)).max(axis=2)
     semua = (d > ambang).astype(np.uint8)
     n, lab, st, _ = cv2.connectedComponentsWithStats(semua, 8)
     simpan = np.zeros(n, bool)
-    simpan[1:] = st[1:, cv2.CC_STAT_AREA] >= min_bahagian * semua.size
+    luas = st[1:, cv2.CC_STAT_AREA]
+    # v1.2 (Belajar SK, BAIKI ruang tepi, ubahan bintik_relatif): komponen >= 1% komponen terbesar juga disimpan, supaya
+    # hiasan sebenar (sengkang sisi K12) tidak hilang daripada kotak blok bila SK02 mengecilkan imej.
+    simpan[1:] = (luas >= min_bahagian * semua.size) | (luas >= min_relatif * (luas.max() if len(luas) else 0))
     return simpan[lab].astype(np.uint8), semua
 
 
@@ -92,10 +96,10 @@ def baris(blok, sudut):
     return [round((b - a) / jumlah * 100, 1) for a, b in gab] if jumlah else []
 
 
-def ukur(rgb):
+def ukur(rgb, min_bahagian=0.0005):
     """Semua ukuran satu gambar. Peratus ruang tepi dikira daripada lebar (kiri, kanan) dan tinggi (atas, bawah)."""
     h, w = rgb.shape[:2]
-    blok, semua = topeng(rgb)
+    blok, semua = topeng(rgb, min_bahagian=min_bahagian)
     ys, xs = np.nonzero(blok)
     if len(xs) == 0:
         return dict(w=w, h=h, kosong=True)

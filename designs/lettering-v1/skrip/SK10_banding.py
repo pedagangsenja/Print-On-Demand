@@ -16,7 +16,7 @@ Had: 'had' setiap medan ialah cadangan Claude 28 Nov 2026, BELUM ditentukur dari
      bahagian A.
 
 Guna: python3 SK10_banding.py <rujukan.json> <jana.json> [...] [--mod hp|warna] [--keluar fail.json]
-      biasa:  python3 SK10_banding.py decode/<upload>.json <imej jana.png> [...] --kad K24T
+      biasa:  python3 SK10_banding.py decode/<upload>.json <imej jana.png> [...] --kad K24t
       atau dengan gambar terus:  python3 SK10_banding.py --gambar <upload> <imej jana> [...]
                                  [--teks-rujukan "ayat pada upload"] [--teks-jana "ayat pada imej jana"]
 """
@@ -56,7 +56,7 @@ MEDAN = [
     ("tekstur huruf",              "tekstur", 2, None, "kategori", "prompt: tekstur dan kelas kemasan"),
     ("tekstur latar",              "tekstur", 1, None, "kategori", "prompt: tekstur dan kelas kemasan"),
 ]
-# Berat (larian K24T, 28 Nov 2026): indeks tebal 2 (ditarik oleh ekor panjang, kurang dipercayai); tepi kasar 3
+# Berat (larian K24t, 28 Nov 2026): indeks tebal 2 (ditarik oleh ekor panjang, kurang dipercayai); tepi kasar 3
 # (beza paling jelas di mata: berus kering lawan strok licin). Pertimbangan Claude, belum ditentukur.
 # medan yang bergantung pada pecahan baris: hanya untuk "baris lurus"
 PERLU_BARIS = {"penjajaran", "serakan penjajaran (%)", "sela antara baris (%)", "hierarki (tertinggi / terendah)"}
@@ -239,7 +239,7 @@ if __name__ == "__main__":
     fail = [x for i, x in enumerate(a) if not x.startswith("--") and i not in langkau]
     if len(fail) < 2:
         sys.exit(__doc__)
-    # setiap hujah: rekod .json (dibaca terus) atau gambar (di-decode di sini). Imej jana dengan --kad K24T:
+    # setiap hujah: rekod .json (dibaca terus) atau gambar (di-decode di sini). Imej jana dengan --kad K24t:
     # ayat dan peranan baris daripada kad.AYAT, supaya kumpulan 'kata' diisi sendiri.
     sys.path.insert(0, str(Path(__file__).resolve().parent))
     from SK09_decode import decode, spec_kad

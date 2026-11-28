@@ -24,7 +24,7 @@ Had: latar mesti hampir satu warna. Baris yang bertindih rapat boleh tergabung (
 Guna: python3 SK09_decode.py <gambar> [...] [--keluar DIR] [--semak] [--teks "ayat pada gambar"]
       --keluar DIR  folder rekod (lalai: ../decode);  --semak = simpan gambar semakan (kotak baris dan elemen)
       --teks        ayat pada gambar (untuk imej jana); gambar upload: diambil daripada mata/<nama>.json
-      --kad K24T    imej jana: ayat dan peranan setiap baris daripada kad.AYAT (kumpulan 'kata' diisi sendiri)
+      --kad K24t    imej jana: ayat dan peranan setiap baris daripada kad.AYAT (kumpulan 'kata' diisi sendiri)
 """
 import hashlib
 import json
@@ -360,7 +360,7 @@ def ukur_kata(m, kata, sudut, blok_h):
 
 
 def spec_kad(kod):
-    """'K24T' -> (ayat penuh, [(teks baris, peranan), ...]) daripada kad.AYAT: Spesifikasi Teks imej jana."""
+    """'K24t' -> (ayat penuh, [(teks baris, peranan), ...]) daripada kad.AYAT: Spesifikasi Teks imej jana."""
     sys.path.insert(0, str(HERE.parent))
     import kad
     a = kad.AYAT[kod[-1]]

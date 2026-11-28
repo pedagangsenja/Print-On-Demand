@@ -7,3 +7,5 @@ out_gpu_hf/
 raw/*/run.log
 raw/*/jana.log
 raw/*/run_*.log
+raw/*/larian*.log
+final/*/*/18x24.png

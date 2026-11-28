@@ -17,10 +17,15 @@
 # ruang_tepi kad). Sisi yang mengehad = nilai kad; pusat optik 0.47 hanya jika ruang atas / bawah tidak kurang
 # daripada kad. Ruang tepi diukur pada blok tulisan (topeng SK05, bintik hiasan kecil tidak dikira), sama seperti
 # SK02 / SK05. Ruang tepi hasil dicatat dalam info.json. Tanpa --kad: 76% x 78% seperti v1.
+# v1.4 (27 Nov 2026, Belajar SK, ubahan kata_tekstur, parameter): kata kad 'bintik' / 'berbintik' = jenis lusuh (worn);
+# 'tiada (rata)' = tiada tekstur. Kad K9, K10, K13 (bintik lusuh) kini bertekstur; K11 'retak kasar' masih tidak dibuat.
 # v1.3 (27 Nov 2026, Belajar SK, ubahan tekstur_marker): jenis tekstur 'marker' (tepi marker kering + butir latar)
 # dengan parameter yang diukur pada gambar upload kad (--ukur-tekstur; disimpan di kad.BLOK[k]['rujukan']['tekstur']).
 # Butir dijana pada skala rujukan (blok tulisan sama lebar), jadi rupa sama pada setiap saiz poster. Hasil diukur
 # semula pada skala rujukan dan dicatat dalam info.json (amaran jika beza > 30%).
+# v1.4 (27 Nov 2026, Belajar SK, ubahan tekstur_calar): jenis tekstur 'calar' (calar + bintik lusuh dalam dakwat,
+# kad K23 (dahulu K12), IMG_5793) dengan parameter yang diukur pada gambar upload (ukur_calar: peratus lubang dalam sampul huruf,
+# kongsi lubang memanjang = calar, panjang median calar), dijana pada skala rujukan; diukur semula selepas jana.
 # Guna: python3 SK06_finish.py <imej> <S1..S6> <folder keluar> [--sizes 18x24,24x36] [--keep-color] [--palet <json>] [--kad Kx]
 #       python3 SK06_finish.py --ukur-tekstur <gambar upload>   (v1.3: ukuran tekstur untuk kad)
 """Siapkan imej lettering AI untuk cetak (CPU sahaja).
@@ -44,7 +49,18 @@ import cv2
 import numpy as np
 from PIL import Image
 
-VERSI = "SK06 v1.3 (27 Nov 2026)"
+VERSI = "SK06 v1.9 (28 Nov 2026)"
+# v1.9 (28 Nov 2026, sesi hab): + v1.4 focused-faraday (tekstur_calar_semburan: jenis 'calar' dan 'semburan' dengan
+# parameter lubang_dakwat, ditentukur sendiri; ukur_lubang). Dua kaedah 'calar' wujud: parameter lubang_dakwat = kaedah
+# focused-faraday (kad K51, K54); parameter g_bil_calar = kaedah nifty-lovelace (kad K23). Kedua-duanya untuk IMG_5793.
+# v1.8 (28 Nov 2026, sesi hab): v1.7 + kata tekstur exciting-sagan ("berbintik", "bintik", "tiada (rata)").
+# v1.7 (28 Nov 2026, sesi hab): gabung v1.4 nifty-lovelace (tekstur_calar, K23) + v1.4-v1.6 focused-allen (titik_halus,
+# lusuh_saring_cop, nota_kurungan). Nombor versi focused-allen v1.4-v1.6 dikekalkan dalam sejarah di bawah.
+# v1.6 (Belajar SK, ubahan nota_kurungan): nota dalam kurungan pada teks tekstur kad diabaikan (K14 'tiada (vektor rata)' = tiada).
+# v1.5 (Belajar SK, ubahan lusuh_saring_cop): K16 'lusuh cetakan saring' dan K17 'lusuh cop kering' dipadan ke jenis worn.
+# v1.4 (Belajar SK, ubahan titik_halus): komponen dakwat < AREA_MIN px (skala imej asal) dibuang; dahulu 30 px membuang
+# garis titik dan bintik latar kad K4 (titik 8-30 px). 4 px masih membuang hingar 1-3 px.
+AREA_MIN = 4
 from scipy.optimize import linear_sum_assignment
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -57,16 +73,17 @@ FIT_W, FIT_H = 0.76, 0.78   # lockup muat dalam 76% lebar / 78% tinggi kanvas
 CENTER_Y = 0.47   # pusat optik sedikit di atas tengah
 
 # Tekstur kad (teks bebas dalam kad.py) -> jenis prosedur. Turutan = keutamaan. Kekuatan: "halus" 0.6, lain 1.0.
-TEKSTUR_KAD = [("kapur", "chalk"), ("lusuh", "worn"), ("grunge", "worn"), ("butir", "grain"), ("grain", "grain")]
-KUAT_KAD = {"halus": 0.6, "sederhana": 1.0}
-SOKONG = ("tiada", "kapur", "lusuh", "grunge", "butir", "grain", "halus", "sederhana", "cetakan", "berus kering")
+TEKSTUR_KAD = [("calar", "calar"), ("semburan", "semburan"), ("kapur", "chalk"), ("lusuh", "worn"), ("grunge", "worn"), ("bintik", "worn"), ("butir", "grain"), ("grain", "grain")]
+KUAT_KAD = {"halus": 0.6, "sederhana": 1.0, "kasar": 1.0}
+SOKONG = ("tiada", "kapur", "lusuh", "grunge", "butir", "grain", "halus", "sederhana", "cetakan", "berus kering",
+          "saring", "cop kering", "berbintik", "bintik", "calar", "semburan", "kasar")   # v1.5: lusuh cetakan saring (K11), lusuh cop kering (K12) = jenis worn
 
 
 def tekstur_kad(teks):
     """Pulang dict(jenis, kuat, tidak_dibuat) daripada teks tekstur kad, ikut bahagian (pisah '+' atau ','). Bahagian
     tanpa padanan jenis, atau tekstur pada latar (SK06 hanya menekstur dakwat), masuk tidak_dibuat supaya
     belajar_sk.py menandanya (cth. K8 'tepi marker kering', 'butir latar')."""
-    t = (teks or "tiada").lower().strip()
+    t = re.sub(r"\s*\([^)]*\)", "", (teks or "tiada").lower()).strip()   # v1.6: nota dalam kurungan diabaikan
     if t == "tiada":
         return dict(jenis="none", kuat=0.0, tidak_dibuat=[])
     jenis, kuat, tak = None, 1.0, []
@@ -186,7 +203,7 @@ def potrace_paths(mask, tmp):
 def vectorize(img, n_ink, palet=None):
     labels, centers, bg_rgb = segment_palet(img, palet) if palet else segment(img, n_ink)
     H, W = labels.shape
-    masks = {i: clean(labels == i, area_min=int(30 * UP * UP)) for i in range(len(centers))}
+    masks = {i: clean(labels == i, area_min=int(AREA_MIN * UP * UP)) for i in range(len(centers))}
     masks = {i: m for i, m in masks.items() if m.any()}
     union = np.zeros(labels.shape, bool)
     for m in masks.values():
@@ -296,6 +313,52 @@ def ukur_tekstur(rgb, lebar_blok=None):
                 latar_median=round(float(np.median(g[lat])), 1), lebar_blok=bw)
 
 
+def ukur_lubang(rgb, lebar_blok=None, songsang=False):
+    """v1.4: pecahan lubang (warna latar) di dalam dakwat, pada skala rujukan (blok tulisan selebar lebar_blok).
+    Dakwat = Otsu; dakwat 'penuh' = tutup morfologi (lebar blok / 120 px), jadi lubang kecil dikira, kaunter huruf tidak."""
+    g = rgb.astype(np.float32).mean(-1)
+    if songsang:
+        g = 255 - g
+    t, _ = cv2.threshold(g.astype(np.uint8), 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+    ink = (g > t).astype(np.uint8)
+    ys, xs = np.nonzero(ink)
+    bw = int(xs.max() - xs.min() + 1)
+    if lebar_blok and abs(bw - lebar_blok) > 2:
+        f = lebar_blok / bw
+        g = cv2.resize(g, (max(1, int(g.shape[1] * f)), max(1, int(g.shape[0] * f))), interpolation=cv2.INTER_AREA)
+        ink = (g > t).astype(np.uint8)
+        bw = lebar_blok
+    kk = max(3, bw // 120)
+    penuh = cv2.morphologyEx(ink, cv2.MORPH_CLOSE, np.ones((kk, kk), np.uint8))
+    teras = cv2.erode(penuh, np.ones((3, 3), np.uint8)).astype(bool)
+    return dict(lubang_dakwat=round(float((teras & (ink == 0)).sum() / max(1, teras.sum())), 4), lebar_blok_lubang=bw)
+
+
+def ukur_calar(rgb, lebar_blok=None, bg=None):
+    """v1.4: ukur calar + bintik lusuh di dalam huruf (lubang warna latar di dalam sampul dakwat). Latar = median tepi
+    imej (atau bg). Skala semula dahulu supaya blok dakwat selebar lebar_blok. Pulang lubang_pct (lubang / sampul),
+    calar_pct (kongsi lubang memanjang: nisbah >= 4 dan panjang >= 12 px), calar_panjang (median, px) dan lebar_blok."""
+    rgb = rgb.astype(np.float32)
+    b = np.array(bg, np.float32) if bg is not None else np.median(np.concatenate([rgb[:4].reshape(-1, 3), rgb[-4:].reshape(-1, 3),
+                                                                                   rgb[:, :4].reshape(-1, 3), rgb[:, -4:].reshape(-1, 3)]), 0)
+    ink = (np.abs(rgb - b).sum(-1) > 150).astype(np.uint8)
+    ys, xs = np.nonzero(ink)
+    bw = int(xs.max() - xs.min() + 1)
+    if lebar_blok and abs(bw - lebar_blok) > 2:
+        f = lebar_blok / bw
+        ink = (cv2.resize(ink * 255, (max(1, int(ink.shape[1] * f)), max(1, int(ink.shape[0] * f))), interpolation=cv2.INTER_AREA) > 127).astype(np.uint8)
+        bw = lebar_blok
+    env = cv2.morphologyEx(ink, cv2.MORPH_CLOSE, np.ones((5, 5), np.uint8))
+    holes = ((env > 0) & (ink == 0)).astype(np.uint8)
+    n, _, st, _ = cv2.connectedComponentsWithStats(holes, 8)
+    a, w, h = st[1:, 4], st[1:, 2], st[1:, 3]
+    pj = np.maximum(w, h)
+    cal = (pj / np.maximum(1, np.minimum(w, h)) >= 4) & (pj >= 12)
+    tot = max(1, int(holes.sum()))
+    return dict(lubang_pct=round(100 * tot / max(1, int(env.sum())), 2), calar_pct=round(100 * float(a[cal].sum()) / tot, 1),
+                calar_panjang=float(np.median(pj[cal])) if cal.any() else 0.0, lebar_blok=bw)
+
+
 def noise(shape, sigma, rng):
     n = rng.standard_normal(shape).astype(np.float32)
     n = cv2.GaussianBlur(n, (0, 0), sigma) if sigma > 0 else n
@@ -362,6 +425,52 @@ def texture(png_rgb, bg_hex, kind, seed=7, kuat=1.0, p=None, k=1.0):
         a = ink
         dk = nz(3) * p["g_dakwat"]
         out = (bg + lat[..., None]) * (1 - a[..., None]) + (img + dk[..., None]) * a[..., None]
+    elif kind in ("calar", "semburan") and p and "lubang_dakwat" in p:   # v1.4: lubang dijana pada skala rujukan; sasaran p["lubang_dakwat"]
+        H, W = shape
+        hs, ws = max(8, int(round(H / k))), max(8, int(round(W / k)))
+        ink_r = cv2.resize(ink, (ws, hs), interpolation=cv2.INTER_AREA) > 0.5
+        sasar, bw = float(p["lubang_dakwat"]), p["lebar_blok"]
+        garis, gar = np.zeros((hs, ws), np.float32), np.zeros((H, W), np.float32)
+        if kind == "calar":   # calar lurus nipis (1 px rujukan, dilukis pada saiz akhir), arah dan panjang rawak; baki = bintik
+            for _ in range(int(ink_r.sum() / (bw * bw) * 150) + 1):
+                x, y = rng.uniform(0, ws), rng.uniform(0, hs)
+                L, t_ = rng.uniform(0.03, 0.3) * bw, rng.uniform(0, np.pi)
+                x2, y2 = x + L * np.cos(t_), y + L * np.sin(t_)
+                cv2.line(garis, (int(x), int(y)), (int(x2), int(y2)), 1.0, 1, cv2.LINE_AA)
+                cv2.line(gar, (int(x * k), int(y * k)), (int(x2 * k), int(y2 * k)), 1.0, max(1, int(round(0.8 * k))), cv2.LINE_AA)
+            n = noise((hs, ws), 0.7, rng) * 0.7 + noise((hs, ws), 3, rng) * 0.3
+        else:   # semburan: bintik berkelompok
+            n = noise((hs, ws), 0.6, rng) * 0.85 + noise((hs, ws), 6, rng) * 0.15
+        # Bintik dibesarkan dengan licin (bulat, bukan petak piksel), kemudian ditentukur: ukur semula pada skala
+        # rujukan dan laras pecahan bintik (paling banyak 3 kali), kerana bintik 1 px rujukan separa hilang bila dikecilkan.
+        f_, a = 1.0, ink
+        for _ in range(3):
+            baki = min(0.6, max(0.0, sasar * f_ - float((garis > 0.5)[ink_r].mean())))
+            titik = (n > np.quantile(n[ink_r], 1 - baki)).astype(np.float32) if baki > 0 and ink_r.any() else np.zeros_like(n)
+            big = cv2.GaussianBlur(cv2.resize(titik, (W, H), interpolation=cv2.INTER_LINEAR), (0, 0), max(0.5, 0.35 * k))
+            hole = np.maximum((big > 0.4).astype(np.float32), np.clip(gar, 0, 1))
+            a = ink * (1 - hole)
+            out = bg + (img - bg) * a[..., None]
+            m_ = ukur_lubang(np.clip(out, 0, 255).astype(np.uint8), bw)["lubang_dakwat"]
+            if abs(m_ - sasar) <= 0.1 * sasar or m_ <= 0:
+                break
+            f_ *= sasar / m_
+    elif kind == "calar":   # v1.4: calar + bintik lusuh dalam dakwat; p diukur pada gambar upload, k = px hasil / px rujukan
+        H, W = shape
+        hs, ws = max(8, int(round(H / k))), max(8, int(round(W / k)))
+        m = np.zeros((hs, ws), np.uint8)
+        nc = int(p["g_bil_calar"] * hs * ws / 1e6)
+        for _ in range(nc):   # calar: garis nipis, sudut rawak, panjang lognormal sekitar median rujukan
+            L = float(np.clip(rng.lognormal(np.log(p["g_panjang"]), 0.6), 6, 12 * p["g_panjang"]))
+            t = rng.uniform(0, np.pi)
+            x, y = rng.uniform(0, ws), rng.uniform(0, hs)
+            dx, dy = np.cos(t) * L / 2, np.sin(t) * L / 2
+            cv2.line(m, (int(x - dx), int(y - dy)), (int(x + dx), int(y + dy)), 1, 1)
+        n = noise((hs, ws), 1.0, rng) * 0.7 + noise((hs, ws), 4, rng) * 0.5
+        bintik = n > p["g_ambang_bintik"]
+        hole = cv2.resize(((m > 0) | bintik).astype(np.uint8) * 255, (W, H), interpolation=cv2.INTER_LINEAR).astype(np.float32) / 255
+        a = ink * (1 - hole)
+        out = bg + (img - bg) * a[..., None]
     else:
         raise ValueError(kind)
     return np.clip(out, 0, 255).astype(np.uint8)
@@ -370,7 +479,11 @@ def texture(png_rgb, bg_hex, kind, seed=7, kuat=1.0, p=None, k=1.0):
 def main():
     args = sys.argv[1:]
     if args and args[0] == "--ukur-tekstur":   # v1.3: ukur tekstur gambar upload kad
-        print(json.dumps(dict(gambar=Path(args[1]).name, **ukur_tekstur(np.array(Image.open(args[1]).convert("RGB")))), ensure_ascii=False))
+        rgb_ = np.array(Image.open(args[1]).convert("RGB"))
+        if "--songsang" in args:   # v1.4 focused-faraday: dakwat gelap atas latar cerah (cth. IMG_5793, IMG_5791): lubang sahaja
+            print(json.dumps(dict(gambar=Path(args[1]).name, **ukur_lubang(rgb_, songsang=True)), ensure_ascii=False))
+        else:
+            print(json.dumps(dict(gambar=Path(args[1]).name, **ukur_tekstur(rgb_), **ukur_lubang(rgb_)), ensure_ascii=False))
         return
     raw, sid, out = Path(args.pop(0)), args.pop(0), Path(args.pop(0))
     sizes = ["18x24"]
@@ -437,10 +550,16 @@ def main():
             bb = vec.get("bbox_blok") or vec["bbox"]
             k_ = s_ * (bb[2] - bb[0]) / tk["ukur"]["lebar_blok"]
         arr = texture(arr, bg_hex, tk["jenis"], kuat=tk["kuat"] or 1.0, p=tk.get("ukur"), k=k_)
-        if tk.get("ukur"):   # ukur semula pada skala rujukan
-            h_ = ukur_tekstur(arr, tk["ukur"]["lebar_blok"])
+        if tk.get("ukur") and tk["jenis"] in ("calar", "semburan") and "lubang_dakwat" in tk["ukur"]:   # kaedah focused-faraday
+            h_ = ukur_lubang(arr, tk["ukur"]["lebar_blok"])
             info["tekstur"].setdefault("hasil_ukur", {})[sz] = h_
-            for m in ("latar_sederhana", "latar_kasar", "dakwat_sd1"):   # skala yang diukur dengan yakin sahaja
+            if abs(h_["lubang_dakwat"] - tk["ukur"]["lubang_dakwat"]) > 0.3 * tk["ukur"]["lubang_dakwat"]:
+                info["amaran"].append(f"tekstur {sz}: lubang_dakwat {h_['lubang_dakwat']} lawan rujukan {tk['ukur']['lubang_dakwat']} (beza > 30%)")
+        elif tk.get("ukur"):   # ukur semula pada skala rujukan
+            calar = tk["jenis"] == "calar"
+            h_ = ukur_calar(arr, tk["ukur"]["lebar_blok"], hex2rgb(bg_hex)) if calar else ukur_tekstur(arr, tk["ukur"]["lebar_blok"])
+            info["tekstur"].setdefault("hasil_ukur", {})[sz] = h_
+            for m in (("lubang_pct", "calar_pct") if calar else ("latar_sederhana", "latar_kasar", "dakwat_sd1")):   # skala yang diukur dengan yakin sahaja
                 if abs(h_[m] - tk["ukur"][m]) > 0.3 * abs(tk["ukur"][m]):
                     info["amaran"].append(f"tekstur {sz}: {m} {h_[m]} lawan rujukan {tk['ukur'][m]} (beza > 30%)")
         im = Image.fromarray(arr)

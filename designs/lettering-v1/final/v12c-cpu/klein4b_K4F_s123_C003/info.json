@@ -1,0 +1,44 @@
+{
+ "versi": "SK06 v1.4 (27 Nov 2026)",
+ "raw": "klein4b_K4F_s123_C003_warna.png",
+ "style": "S3",
+ "palet": "C003",
+ "bg": "#0b0b0b",
+ "fills": [
+  "#fefefe"
+ ],
+ "layers": 1,
+ "ink_px": [
+  1608367
+ ],
+ "sizes": {
+  "18x24": [
+   5400,
+   7200
+  ]
+ },
+ "tekstur": {
+  "kad": "K4",
+  "teks": "lusuh cetakan",
+  "jenis": "worn",
+  "kuat": 1.0,
+  "tidak_dibuat": []
+ },
+ "amaran": [],
+ "tepi": {
+  "sasaran": {
+   "sisi": 9.6,
+   "atas_bawah": 11.8,
+   "sumber": "SK05 pada IMG_5727 (foto poster atas kayu: dipotong ke poster, ambang 150; anggaran)"
+  },
+  "hasil": {
+   "18x24": {
+    "kiri": 23.9,
+    "kanan": 23.9,
+    "atas": 11.8,
+    "bawah": 11.8
+   }
+  },
+  "dakwat_min_pct": 8.77
+ }
+}

@@ -1,0 +1,90 @@
+{
+ "nota": "Ujian ubahan calon belajar.py (3.15), 27 Nov 2026 (izin pengguna 'ya'): kad, ayat dan seed sama dengan imej cacat asal (v12-cpu, v12-cpu-ref6). PEMBINA_UJI dicatat dalam log. Semakan mata Claude, bukti lemah. ok = G1 + G2.",
+ "v12-cpu-uji": {
+  "klein4b": {
+   "K3K_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K3K_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K3K_s123": [
+    true,
+    "",
+    ""
+   ]
+  },
+  "zturbo": {
+   "K7M_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K7M_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K8G_s42": [
+    false,
+    "5 baris (KEEP / GOING dipisah); bintik selepas 'THERE' dibaca sebagai noktah",
+    ""
+   ],
+   "K8G_s7": [
+    false,
+    "5 baris (KEEP / GOING dipisah); bintik selepas 'THERE' dibaca sebagai noktah",
+    ""
+   ]
+  },
+  "ernie": {
+   "K22c_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K3K_s7": [
+    false,
+    "'AFTER' berulang (label kedua 'AFTER', satu tanpa kotak); garis tambahan dan bintang tidak diminta",
+    ""
+   ]
+  }
+ },
+ "v12-cpu-uji2": {
+  "klein4b": {
+   "K4q_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K4q_s7": [
+    false,
+    "'QUIET WORK' dipisah jadi dua baris",
+    ""
+   ],
+   "K4q_s123": [
+    false,
+    "'WORK' jadi 'WOK', 'RESULTS' jadi 'RESULLTS'",
+    ""
+   ],
+   "K8G_s42": [
+    true,
+    "",
+    ""
+   ],
+   "K8G_s7": [
+    true,
+    "",
+    ""
+   ],
+   "K8G_s123": [
+    false,
+    "5 baris (KEEP / GOING dipisah); 'ALMOST' jadi 'ALMOT'",
+    ""
+   ]
+  }
+ }
+}

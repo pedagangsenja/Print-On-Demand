@@ -181,7 +181,7 @@ NODES = [
     dict(id="5b", lorong=S, baris=12, tajuk="Pembetulan skrip (SK01–SK04)",
          butiran=["5b Pembetulan skrip (v1.2), selepas pintu wajib lulus: condong, ruang tepi, kedudukan, hitam putih bersih",
                   "5b hanya jalan bila ukuran tersasar daripada ukuran rujukan kad; ejaan dan bentuk huruf mesti jana semula",
-                  "SK01 v1.1 (28 Nov, keputusan anda): kad 'tiada condong' yang ada sudut rujukan terukur diluruskan ke 0 darjah bila imej condong lebih 3 darjah; larian K24T: 9 daripada 10 imej lulus semakan akhir",
+                  "SK01 v1.1 (28 Nov, keputusan anda): kad 'tiada condong' yang ada sudut rujukan terukur diluruskan ke 0 darjah bila imej condong lebih 3 darjah; larian K24t: 9 daripada 10 imej lulus semakan akhir",
                   "Daftar skrip: SK01 condong, SK02 ruang tepi, SK03 kedudukan, SK04 hitam putih bersih, SK05 ukuran (26 Nov); SK09 decode, SK10 banding (28 Nov). SK06 kemasan, SK07 warna dan SK08 bayang bukan lagi dalam v1.2: pindah ke Cetak v1 dan Warna v1",
                   "Larian pertama: 33 imej dibetulkan (condong, ruang tepi, kedudukan, hitam putih), 0 gagal semakan akhir",
                   "Skrip baharu: bila gambar upload ada ciri yang tiada skrip → tulis, simpan di skrip/<ID>_<nama>.py, uji pada imej sedia ada, daftar, kemas kini standard + dashboard, beritahu anda"],
@@ -197,7 +197,7 @@ NODES = [
                   "Skor menanda dan menyusun; ia tidak meluluskan imej. Had setiap medan belum ditentukur: bukti lemah",
                   "Dua profil (v1.1): design baris lurus = ciri setiap baris; lettering bertaut = ciri seluruh blok",
                   "Banding kata ikut peranan (v1.2): tebal dan condong kata utama / sokongan, nisbah tinggi antara peranan",
-                  "Larian K24T (28 Nov): beza terbesar sama pada 6/6 imej (tepi strok kasar); selepas SATU ubahan kad, tepi kasar turun daripada 26–109% ke 2–7% (upload 4.1%) pada 4/4 imej",
+                  "Larian K24t (28 Nov): beza terbesar sama pada 6/6 imej (tepi strok kasar); selepas SATU ubahan kad, tepi kasar turun daripada 26–109% ke 2–7% (upload 4.1%) pada 4/4 imej",
                   "Amaran: skor keseluruhan belum selari dengan mata (MOSS turun walaupun nampak lebih hampir); nilai satu ubahan pada medan sasarannya",
                   "Ujian pertama, 14 imej sedia ada lawan 5 upload: kotak garis luar (bukan kotak pejal), condong tersasar dan tekstur huruf hilang dikesan sendiri"],
          alat=[("skrip/SK10_banding.py (Python)", "v1.2: dua profil + banding kata ikut peranan; diuji pada 24 imej; had dan berat belum ditentukur", PART),
@@ -209,7 +209,7 @@ NODES = [
                   "Sebab tolak daripada senarai tetap; disalur balik ke kad, aturan model, jadual model × gaya atau ulangan",
                   "Had bilangan imej setiap helaian",
                   "Titik kelulusan 2 daripada 2 dalam v1.2; v1.2 tamat di sini (hitam putih sahaja)",
-                  "Design pertama yang lulus aliran baharu: K24T 'Trust Your Pace', ERNIE seed 7 (28 Nov 2026), fail lulus/K24T_ernie_s7.png"],
+                  "Design pertama yang lulus aliran baharu: K24t 'Trust Your Pace', ERNIE seed 7 (28 Nov 2026), fail lulus/K24t_ernie_s7.png"],
          alat=[("Paparan sebelah-menyebelah", "upload, imej sauh, hasil + skor persamaan", NO)]),
 
     # ---------- 6. Simpan ----------

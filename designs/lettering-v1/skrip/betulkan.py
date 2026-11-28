@@ -1,5 +1,6 @@
 """Langkah 5b penuh: ukur -> SK01 condong -> SK02 ruang tepi -> SK03 kedudukan -> SK04 hitam putih bersih -> ukur semula.
-Standard Lettering v1.2. Versi 1, 26 Nov 2026.
+Standard Lettering v1.2. Versi 1, 26 Nov 2026. v1.2 (27 Nov 2026, Belajar SK, ubahan had_ikut_skala): had bintik ukur ikut
+skala matriks (luas x had asal), supaya hiasan kecil (sinar K9) tidak masuk / keluar kotak selepas SK02 dan SK03 tidak tersasar.
 
 Turutan tetap. Setiap pembetulan hanya jalan bila ukurannya tersasar melebihi had (asas.HAD) dan kad ada angka
 rujukannya. Tiga pembetulan pertama digabung menjadi SATU matriks dan imej asal dilukis semula sekali sahaja
@@ -22,21 +23,40 @@ import SK02_ruang_tepi
 import SK03_kedudukan
 import SK04_hitam_putih
 
-VERSI = "5b v1.2"
+VERSI = "5b v1.5 (28 Nov 2026)"  # v1.4 hab (ukur_semula + had_ikut_skala) + SK01 v1.1: kad tiada condong dengan sudut rujukan terukur diluruskan
+MIN = 0.0005  # had bintik SK05 (bahagian kanvas) pada imej asal
 
 
 def betulkan(rgb, ruj, had=asas.HAD):
     sebelum, M, tindakan, semasa = asas.ukur(rgb), np.eye(3), {}, rgb
+    luas = 1.0  # v1.2 (ubahan had_ikut_skala): had bintik ikut skala, supaya hiasan kecil tidak masuk / keluar kotak
     for sk in (SK01_condong, SK02_ruang_tepi, SK03_kedudukan):
-        m, cat = sk.matriks(asas.ukur(semasa), ruj, had)
+        m, cat = sk.matriks(asas.ukur(semasa, MIN * luas), ruj, had)
         tindakan[sk.ID] = cat
         if m is not None:
             M = m @ M
+            luas = abs(np.linalg.det(M[:2, :2]))
             semasa = asas.lukis(rgb, M, halus=False)
+            # 5b v1.2 (28 Nov 2026, Belajar SK: BAIKI SK01): ukur semula selepas putar dan betulkan baki, paling banyak
+            # 2 kali lagi. Ukuran pertama boleh tersasar (K7M s123 15.5 di had julat; klein3 K9B s123 12.1 -> 13.4).
+            for _ in range(2 if sk is SK01_condong else 0):
+                m2, c2 = sk.matriks(asas.ukur(semasa), ruj, had)
+                if m2 is None:
+                    break
+                M = m2 @ M
+                semasa = asas.lukis(rgb, M, halus=False)
+                cat.setdefault("ulang_putar", []).append(c2["putar_darjah"])
     ubah = any(t["jalan"] for t in tindakan.values())
     hasil = asas.lukis(rgb, M) if ubah else rgb
     hasil, tindakan["SK04"] = SK04_hitam_putih.betul(hasil, ruj, had, selepas_ubah=ubah)
-    selepas = asas.ukur(hasil)
+    selepas = asas.ukur(hasil, MIN * luas)
+    # v1.2: SK02 diukur semula selepas SK04 (hiasan halus yang dibersihkan SK04 mengecilkan kotak blok) dan
+    # dijalankan sekali lagi pada imej asal dengan matriks gabungan, jika ruang tepi masih di luar had.
+    m2, cat2 = SK02_ruang_tepi.matriks(selepas, ruj, had)
+    if m2 is not None and selepas["kotak"]:
+        M = m2 @ M
+        hasil, tindakan["SK04"] = SK04_hitam_putih.betul(asas.lukis(rgb, M), ruj, had, selepas_ubah=True)
+        selepas, tindakan["SK02_ulang"] = asas.ukur(hasil, MIN * luas), cat2
     gagal = []
     if selepas["sentuh_tepi"]:
         gagal.append("dakwat menyentuh tepi kanvas (huruf mungkin terpotong)")

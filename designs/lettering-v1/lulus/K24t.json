@@ -1,0 +1,58 @@
+{
+ "kod": "K24t",
+ "ayat": "Trust Your Pace",
+ "kad": "K24",
+ "versi_kad_semasa_jana": "v1.0 (frasa 'brush script'; tepi berus kering)",
+ "versi_kad_diluluskan": "v1.1 (tepi licin; diluluskan pengguna 28 Nov 2026)",
+ "rujukan": "IMG_5840",
+ "rekod_decode": "decode/IMG_5840.json",
+ "model": "ERNIE-Image-Turbo (aturan r1)",
+ "seed": 7,
+ "peranti": "CPU",
+ "batch": "v12d-decode",
+ "fail": {
+  "mentah": "raw/v12d-decode/ernie/K24t_s7.png",
+  "dibetulkan": "betul/v12d-decode/ernie/K24t_s7.png",
+  "lulus": "lulus/K24t_ernie_s7.png"
+ },
+ "sha1": "1cd5dc4b7c1c",
+ "qc_a": "lulus: ejaan 'Trust / your / Pace' betul sebelum dan selepas pembetulan, tiada teks rawak (mata Claude, bukti lemah)",
+ "pembetulan_5b": "SK01 v1.1 -6.8 darjah (lurus), SK02 skala 0.946, SK03 pusat, SK04 hitam putih bersih",
+ "qc_b": {
+  "skor": 84.6,
+  "profil": "lettering bertaut (ciri seluruh blok)",
+  "beza_terbesar": [
+   {
+    "medan": "seluruh: tepi kasar (%)",
+    "rujukan": 4.1,
+    "jana": 33.7,
+    "tindakan": "prompt: bentuk huruf (tepi strok licin atau kasar)"
+   },
+   {
+    "medan": "garis / sapuan: ada",
+    "rujukan": "tiada",
+    "jana": "ada",
+    "tindakan": "prompt: hiasan"
+   },
+   {
+    "medan": "seluruh: indeks tebal",
+    "rujukan": 0.24,
+    "jana": 0.284,
+    "tindakan": "prompt: bentuk huruf ikut peranan"
+   }
+  ]
+ },
+ "kelulusan": {
+  "oleh": "pengguna",
+  "tarikh": "2026-11-28",
+  "langkah": "7 (lulus design hitam putih)",
+  "pilihan": "imej 4 daripada helaian 10 imej"
+ },
+ "catatan": [
+  "Pengguna memilih imej berus kering (kad v1.0) walaupun cadangan Claude ialah imej 10 (tepi licin, lebih hampir dengan upload).",
+  "Garis bawah berasingan di bawah 'Pace' bukan ciri rujukan (rujukan: ekor bersambung dengan huruf).",
+  "Saringan trademark ayat belum dibuat.",
+  "Belum didaftar di dashboard: menunggu pilihan A atau SNC.",
+  "Seterusnya: Warna v1, kemudian Cetak v1 (belum dibina)."
+ ]
+}

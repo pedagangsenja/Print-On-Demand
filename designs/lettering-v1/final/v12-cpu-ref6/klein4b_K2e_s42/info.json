@@ -1,0 +1,46 @@
+{
+ "versi": "SK06 v1.4 (27 Nov 2026)",
+ "raw": "klein4b_K2e_s42_warna.png",
+ "style": "S5",
+ "palet": "kad K2",
+ "bg": "#0a0a0a",
+ "fills": [
+  "#ecebe6",
+  "#e0a526"
+ ],
+ "layers": 2,
+ "ink_px": [
+  2333196,
+  823309
+ ],
+ "sizes": {
+  "18x24": [
+   5400,
+   7200
+  ]
+ },
+ "tekstur": {
+  "kad": "K2",
+  "teks": "grunge lusuh sederhana",
+  "jenis": "worn",
+  "kuat": 1.0,
+  "tidak_dibuat": []
+ },
+ "amaran": [],
+ "tepi": {
+  "sasaran": {
+   "sisi": 13.4,
+   "atas_bawah": 10.6,
+   "sumber": "SK05 pada IMG_5792 (atas terpotong)"
+  },
+  "hasil": {
+   "18x24": {
+    "kiri": 17.2,
+    "kanan": 17.2,
+    "atas": 10.6,
+    "bawah": 10.6
+   }
+  },
+  "dakwat_min_pct": 14.13
+ }
+}
