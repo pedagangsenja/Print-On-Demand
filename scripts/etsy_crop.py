@@ -7,7 +7,8 @@ Guna:
 Setiap argumen: <no gambar>=<laluan fail>:<lajur>x<baris>.
 Hasil:
   data/etsy/crops/etsy-<gambar>-<nn>.jpg   (tidak dikomit: karya penjual lain)
-  data/etsy/crop_metrics.json              (kotak potong, nisbah, liputan dakwat)
+  data/etsy/crop_metrics.json              (kotak potong, nisbah, liputan dakwat, simetri,
+                                            agihan dakwat, pusat jisim, kepingan, lubang, tebal garis, isi siluet)
 
 Cara potong: piksel gelap (kelabu < 110) dikira dakwat. Baris grid dipisah pada
 jalur kosong mendatar yang paling lebar, kemudian lajur pada jalur kosong
@@ -17,8 +18,10 @@ import json
 import os
 import sys
 
+import cv2
 import numpy as np
 from PIL import Image
+from scipy import ndimage
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT_DIR = os.path.join(ROOT, "data", "etsy", "crops")
@@ -52,6 +55,38 @@ def split(profile, n):
     gaps = sorted((a + lo, b + lo) for a, b in gaps)
     edges = [lo] + [x for g in gaps for x in g] + [hi]
     return [(edges[i], edges[i + 1]) for i in range(0, len(edges), 2)]
+
+
+def measure(sub):
+    """Ukuran bentuk daripada topeng dakwat (kotak ketat satu design)."""
+    h, w = sub.shape
+    area = float(sub.sum())
+    u8 = sub.astype(np.uint8)
+    flip = sub[:, ::-1]
+    thirds = [float(sub[int(h * a / 3):int(h * (a + 1) / 3)].sum()) for a in range(3)]
+    ys, xs = np.nonzero(sub)
+    n, _, st, _ = cv2.connectedComponentsWithStats(u8, connectivity=8)
+    pieces = int((st[1:, cv2.CC_STAT_AREA] >= 6).sum())
+    n2, lab2, st2, _ = cv2.connectedComponentsWithStats((1 - u8).astype(np.uint8), connectivity=4)
+    border = set(lab2[0]) | set(lab2[-1]) | set(lab2[:, 0]) | set(lab2[:, -1])
+    holes = sum(1 for i in range(1, n2) if i not in border and st2[i, cv2.CC_STAT_AREA] >= 6)
+    cnts, _ = cv2.findContours(u8, cv2.RETR_CCOMP, cv2.CHAIN_APPROX_NONE)
+    perim = sum(cv2.arcLength(c, True) for c in cnts) or 1.0
+    k = max(3, int(round(0.1 * w)) | 1)
+    closed = cv2.morphologyEx(u8, cv2.MORPH_CLOSE, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (k, k)))
+    sil = ndimage.binary_fill_holes(closed.astype(bool))
+    return {
+        "simetri_pct": round(100 * float((sub & flip).sum()) / float((sub | flip).sum()), 1),
+        "dakwat_atas_pct": round(100 * thirds[0] / area, 1),
+        "dakwat_tengah_pct": round(100 * thirds[1] / area, 1),
+        "dakwat_bawah_pct": round(100 * thirds[2] / area, 1),
+        "pusat_x_pct": round(100 * float(xs.mean()) / w, 1),
+        "pusat_y_pct": round(100 * float(ys.mean()) / h, 1),
+        "kepingan": pieces,
+        "lubang": int(holes),
+        "tebal_pct": round(100 * (2 * area / perim) / w, 1),
+        "isi_siluet_pct": round(100 * float(sil.mean()), 1),
+    }
 
 
 def main(argv):
@@ -92,6 +127,7 @@ def main(argv):
                     "tinggi_px": bh,
                     "nisbah": round(bw / bh, 2),
                     "dakwat_pct": round(100 * float(ink[ty0:ty1, x0:x1].mean()), 1),
+                    **measure(ink[ty0:ty1, x0:x1]),
                 })
         print(f"gambar {no}: {n} design ({ncol}x{nrow})")
     with open(METRICS, "w") as f:

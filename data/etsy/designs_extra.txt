@@ -1,0 +1,135 @@
+# Lapisan nyahkod kedua (semakan zum besar, 28 Nov 2026). Dibaca oleh scripts/build_etsy.py.
+# id | saiz setiap baris (1 terkecil - 5 terbesar) | ikon: gaya saiz slot; ... (ikut turutan I: dalam designs.txt)
+#    | kesan khas: KATA=kesan, ... | teks bertindih baris lain (ya/tidak) | sudut senget anggaran (darjah) | formula ayat | nada | kunci gaya
+# gaya ikon: pejal, garis, tebuk, campur. saiz ikon: K kecil, S sederhana, B besar.
+# slot ikon: nombor n = selepas baris n (0 = paling atas); b = membingkai; s = di sisi; h<n> = dalam huruf baris n; x<n> = di belakang baris n
+1-01 | 4 3 1 4 5 | garis S b; garis K 5; garis K s | YOU=tepi bawah kasar | ya | 5 | KEEP TALKING, I'M [KATA KERJA KERJAYA]-ING YOU | sindiran | stetoskop melilit teks dan berakhir sebagai hati; reben senget memisahkan dua kata besar
+1-02 | 5 4 3 | pejal S x1 | SUCK=tepi kasar bertakuk, IT UP=tebuk atas sapuan berus | ya | 8 | [KATA KERJA] IT UP, [NAMA PANGGILAN] | sindiran | straw menembusi huruf; cawan duduk di antara baris 1 dan 2
+1-03 | 2 5 1 4 | garis S s | - | ya | 8 | PROBABLY [KEADAAN] FOR [SESUATU] | sindiran | jam loceng mengisi ruang di sebelah kata sambung
+1-04 | 2 5 5 2 4 | tebuk K h3 | "MOUTH"=hujung berus | tidak | 5 | I HAVE A GOOD [X] BUT THIS [Y] | sindiran | hati ditebuk dalam huruf A; kata akhir dalam tanda petik sebagai pukulan
+1-05 | 4 1 2 4 3 | pejal S 0 | SARCASM=bucu bertakuk | ya | 0 | [SIFAT]: JUST ONE OF THE MANY SERVICES I OFFER | sindiran | haiwan mengintai di atas kata pertama, tapak kaki memegang huruf
+1-06 | 4 4 1 3 5 3 | garis S s | BRAIN=potong serong | tidak | 4 | MY [ORGAN] HAS TOO MANY [BENDA] OPEN | sindiran | kata BRAIN dipotong garis serong seperti gangguan skrin; ikon di penjuru kiri atas
+1-07 | 3 1 3 5 1 3 | - | OFFENDED=garis dalam putih | ya | 0 | I'M SORRY IF I OFFENDED YOU WITH MY [KEBAIKAN] | sindiran | satu kata skrip gergasi di tengah, diapit lengkung naik di atas dan lengkung turun di bawah
+1-08 | 3 2 5 1 4 4 | - | - | ya | 8 | IT'S OK IF YOU DON'T LIKE ME, NOT EVERYONE HAS GOOD [X] | sindiran | reben senget terselit antara dua baris tebal; penutup skrip dua baris
+1-09 | 2 5 1 5 | - | IDK, IDC,=tepi kasar, IDGAF=tepi kasar | tidak | 0 | JUST SO WE'RE CLEAR: [SINGKATAN], [SINGKATAN], OH YEAH & ALSO [SINGKATAN] | sindiran | reben skrol bergaris di atas; pil kecil bergaris titik memisahkan dua baris kasar
+1-10 | 3 4 4 3 | - | IDEA=kotak putih di atas reben hitam | ya | 4 | (rosak) THAT'S A [X] IDEA, WHAT TIME? | lucu | kata tengah dalam kotak putih yang ditindih atas reben hitam
+1-11 | 3 4 4 3 | - | IDEA=kotak putih di atas reben hitam | ya | 4 | (rosak) THAT'S A [X] IDEA, WHAT TIME? | lucu | kata tengah dalam kotak putih yang ditindih atas reben hitam
+1-12 | 2 5 1 3 1 4 2 | garis S 1; pejal K s | COFFEE=bucu serong | tidak | 0 | I LIKE MY [MINUMAN] HOW I LIKE MYSELF: [SIFAT], [SIFAT] AND TOO [SIFAT] FOR YOU | sindiran | tujuh baris berselang besar-kecil; api mengapit baris pukulan
+1-13 | 2 5 2 4 4 | pejal B 2; pejal S 2 | I SHUT THE=garis dalam putih, OFF=hujung berus | ya | 0 | I DON'T [X], I [TINDAKAN LEBIH KERAS] | sindiran | huruf O dibesarkan jadi butang kuasa di tengah; dua font berbeza dalam satu baris akhir
+1-14 | 3 1 5 3 1 | campur B 1 | APPARENTLY=dalam letupan komik bergaris | ya | 0 | APPARENTLY I'M NOT ALLOWED TO [X]. RUDE, BUT OKAY. | lucu | haiwan mengintai di atas garis dengan tapak kaki; ayat penutup kecil dalam pil
+1-15 | 3 1 5 3 1 4 | campur B 4 | - | ya | 0 | I PROMISE I'M NICER THAN MY [X] LOOKS | sindiran | ikon wajah lebar menggantikan satu baris; kata MY ditindih pada ikon
+1-16 | 5 3 5 3 2 | - | BETTER=tepi kasar, reben bertepi koyak | tidak | 5 | SOME THINGS ARE BETTER LEFT ALONE, LIKE [X], FOR INSTANCE | sindiran | reben koyak senget di tengah; ayat pukulan dalam skrip nipis di bawah
+3-01 | 3 5 2 5 2 | garis K 4 | TOGETHER=tebuk atas sapuan berus kasar | ya | 10 | I HAVE IT ALL TOGETHER, I JUST FORGOT WHERE I PUT IT | lucu | kotak berus kasar di atas, reben melengkung turun di bawah; pin lokasi terselit di bawah skrip
+3-02 | 2 5 1 4 4 | - | LIMITED=garis dalam putih berganda, EDITION=garis dalam putih berganda | ya | 5 | I'M NOT [SIFAT NEGATIF], I AM [LABEL ISTIMEWA] | bangga | kata skrip-huruf-besar gergasi dengan satu huruf kecil; plak hitam besar sebagai tapak
+3-03 | 4 1 5 4 | garis B b | - | ya | 6 | [SIFAT] IS JUST ONE OF MY MANY TALENTS | sindiran | seluruh ayat dalam gelembung ucapan bergaris; skrip memecah keluar bingkai
+3-04 | 5 2 4 | pejal S 1 | PATIENCE=hujung berus | tidak | 8 | [X] LONGER THAN MY PATIENCE | sindiran | ikon melintang menggantikan garis pemisah antara baris 1 dan 2
+3-05 | 3 1 5 3 | - | - | ya | 8 | [X] IS MY LOVE LANGUAGE | sindiran | dua reben senget bertentangan mengapit satu kata skrip gergasi
+3-06 | 2 4 3 2 5 | - | SARCASM=berus kering, DEPENDS ON=garis dalam putih, STUPIDITY=huruf retak dalam kotak bergerigi | ya | 5 | MY LEVEL OF [X] DEPENDS ON YOUR LEVEL OF [Y] | sindiran | lima rawatan berbeza dalam lima baris; kata pukulan retak di bawah
+3-07 | 3 3 5 5 3 | garis B b; pejal S b | Study For=tebuk dalam pensel | ya | 0 | MY LIFE FEELS LIKE A [X] I DIDN'T [Y] FOR | lucu | objek tema (buku nota, pensel) menjadi bekas teks
+3-08 | 5 2 2 4 3 | garis S 2; pejal K 2 | SORRY=hujung berus, I'M LATE...=tebuk atas sapuan berus | ya | 10 | SORRY I'M LATE... I DIDN'T WANT TO COME | sindiran | ikon jam di tengah memisahkan alasan dan pukulan
+3-09 | 4 3 1 5 | pejal S 0; garis K 4 | MIXED=tebuk atas kotak koyak | ya | 5 | [X MANIS] MIXED WITH A LITTLE [X LIAR] | lucu | ikon atas (matahari) dan ikon bawah (puting beliung) melambangkan dua separuh ayat
+3-10 | 3 2 1 5 2 2 | pejal S 3 | - | ya | 0 | WHATEVER LIFE THROWS AT YOU, [KATA KERJA DUA MAKNA] & LET IT HIT SOMEONE ELSE | lucu | main kata: haiwan ikon ialah kata utama; bentuk keseluruhan hampir bulat
+3-11 | 4 3 2 3 5 | - | SUBSCRIPTION=garis dalam putih | ya | 0 | CANCEL MY SUBSCRIPTION, I'M DONE WITH MY ISSUES | sindiran | bingkai perisai bergaris terbuka; kata akhir skrip tebal memecah bingkai
+3-12 | 4 4 3 5 | pejal K 0 | - | tidak | 0 | IF YOU LOVE ME LET ME [X] | selesa | separuh atas skrip, separuh bawah huruf besar; kata akhir paling besar
+3-13 | 3 5 2 5 | - | EVERYONE=hujung berus, ELSE IS=tebuk atas sapuan berus, THINKING.=hujung berus | ya | 8 | I SAY WHAT EVERYONE ELSE IS THINKING. | sindiran | pembuka dalam gelembung ucapan bergaris; semua baris senget ke atas
+3-14 | 2 5 5 1 4 | - | WRONG=plak bucu serong bergaris | ya | 5 | I'M NOT A [LABEL], BUT YOU'RE DOING IT WRONG | sindiran | dua baris skrip gergasi di tengah; plak hitam sebagai tapak
+3-15 | 3 4 2 5 3 | pejal K 0; pejal K s | I SPRINKLE=tebuk dalam kotak berus | tidak | 0 | I DON'T [X], I [Y] TRUTH LIKE [Z] | sindiran | pembuka dan penutup skrip nipis; daun di sisi dan titik konfeti menggantikan pancar
+3-16 | 3 5 1 3 4 | garis B x2 | NO=berus kering, SOCIAL=hujung berus | ya | 6 | (rosak) I'M NOT [X], I'M JUST SELECTIVELY SOCIAL | sindiran | ikon melintang di belakang kata terbesar seperti kata itu sedang diangkat
+4-01 | 2 5 2 | pejal K 1 | - | ya | 10 | (rosak) I'M NOT PERFECT, [LABEL] | bangga | cap bulat bergaris berganda; skrip senget melintang di tengah; teks ikut lengkung bulatan
+4-02 | 3 3 4 5 | - | LOVE ME=garis dalam putih, SLEEP=hujung berus | ya | 5 | IF YOU LOVE ME LET ME [X] | selesa | empat baris, empat font; saiz makin besar ke bawah
+4-03 | 2 5 2 3 2 5 | - | - | ya | 0 | I AM A GREAT MULTITASKER: I CAN [A], [B] & [C] ALL AT THE SAME TIME | sindiran | enam baris berselang: reben, skrip, kecil, reben, kecil, skrip
+4-04 | 4 2 5 5 | - | HOLD ON=garis dalam putih | ya | 5 | HOLD ON, LET ME OVERTHINK THIS | lucu | reben tebal senget di atas; anak panah berganda mengapit kata akhir
+4-05 | 5 3 5 4 | pejal K 1 | - | ya | 0 | DON'T MAKE ME OVERTHINK THIS | lucu | tiada blok hitam langsung; ukiran pusar dan anak panah berhati menggantikan reben
+4-06 | 3 5 4 4 | tebuk S h2; pejal K s | NO=tepi kasar | tidak | 0 | (rosak) [X] NO VALIDATION REQUIRED | bangga | huruf O diganti bulatan hitam berisi kilat; reben besar sebagai tapak
+4-07 | 2 5 1 2 | pejal K s | - | ya | 10 | I'M NOT SPECIAL, I'M JUST A LIMITED EDITION | bangga | cap bulat bergaris nipis; bintang mengisi ruang antara teks lengkung dan skrip
+4-08 | 4 3 5 4 | - | IDGAF-ISH=plak bergaris berganda | ya | 10 | FEELING KINDA [SIFAT]-ISH TODAY | sindiran | plak bergaris di tengah diapit skrip senget di atas dan di bawah
+4-09 | 2 5 2 | pejal K 1 | - | ya | 10 | I'M NOT SPECIAL, I'M LIMITED | bangga | skrip memecah keluar bulatan berganda; titisan pancar di bawah skrip
+4-10 | 3 4 2 5 | pejal S 0 | - | ya | 0 | IF YOU LOVE ME LET ME [X] | selesa | langit malam (bulan, awan, buruj) sebagai mahkota design; kata akhir skrip gergasi
+4-11 | 2 5 3 3 2 4 | - | WILL OUTRUDE=tebuk dalam kotak bulat | ya | 0 | DON'T BE RUDE, CAUSE MY RUDE WILL OUTRUDE YOUR RUDE & YOU'LL CRY | sindiran | enam baris berselang skrip dan huruf besar; reben skrol bergaris di atas
+4-12 | 5 1 5 2 4 | pejal S s | BUT THANKFULLY=reben putih bergaris | ya | 8 | LIFE IS A [X], BUT THANKFULLY SO AM I | sindiran | kata sambung kecil duduk dalam ikon hati hitam; reben putih senget di tengah
+4-13 | 2 4 3 2 4 | campur B s | THE COFFEE=tebuk dalam reben | ya | 8 | FIRST I [X], THEN I DO THE THINGS | lucu | ikon tinggi di sisi kanan merentas tiga baris; seluruh design senget naik
+4-14 | 3 5 3 2 4 | tebuk B h2 | - | tidak | 0 | (rosak) DO NOT TALK TO ME UNTIL I'VE HAD MY [MINUMAN] | amaran | gaya papan tanda amaran: huruf O jadi tanda seru, jalur bahaya sebagai pemisah
+4-15 | 5 5 2 3 5 | campur K 3 | Calendar Says=garis luar dengan isi putih | ya | 8 | AFTER [HARI] EVEN THE CALENDAR SAYS [SINGKATAN] | sindiran | skrip bergaris luar menindih ikon kalendar; kata pukulan slab di bawah
+4-16 | 5 4 4 4 | - | FINE DAY=kotak putih di atas reben hitam | ya | 8 | ANOTHER FINE DAY RUINED BY [X] | sindiran | skrip dan huruf besar berselang empat kali; kotak putih ditindih atas reben
+7-01 | 3 3 4 5 | pejal S 4 | BE YOUR=tebuk dalam reben | ya | 6 | I'LL ALWAYS BE YOUR BIGGEST FAN | sayang | bola menindih penjuru kata akhir; reben senget di baris kedua
+7-02 | 2 2 5 1 3 | pejal B 0; pejal K 0; pejal S 5 | - | tidak | 0 | [A] AND FOOTBALL AND [B] | lucu | cap bulat bergaris terbuka; ikon besar di atas memecah bulatan; dua reben kecil mengapit ikon
+7-03 | 5 4 | pejal S 0 | SEASON=berus kering | ya | 8 | [KATA SUKAN] SEASON | semangat | dua baris sahaja: huruf tinggi melengkung dan berus senget; bola meluncur di atas
+7-04 | 4 5 | pejal S 0 | - | tidak | 0 | FOOTBALL [PERANAN KELUARGA] | bangga | dua baris tebal dipisah bintang berlengkung; tapak bucu perisai
+7-05 | 5 5 | pejal S 0 | - | tidak | 0 | GAME DAY | semangat | dua kata varsity sama besar; sapuan berus kasar sebagai tapak
+7-06 | 4 5 | pejal S 0 | - | ya | 0 | FOOTBALL [GELARAN PEMINAT] | semangat | bola berapi di atas; slab melengkung dipadankan dengan skrip berekor
+7-07 | 5 5 | pejal S 0 | GAME=berus kering | ya | 12 | GAME DAY | semangat | rajah taktik X dan O sebagai hiasan; kedua-dua kata senget tajam
+7-08 | 5 4 | pejal S 0 | SEASON=berus kering | ya | 10 | [KATA SUKAN] SEASON | semangat | semua unsur condong ke kanan atas untuk rasa laju
+7-09 | 4 4 5 3 | pejal S 0 | - | ya | 0 | LITTLE [SAUDARA] BIGGEST FAN | bangga | separuh bola sebagai mahkota; skrip menindih slab di atasnya
+7-10 | 4 1 4 5 3 | pejal S 3 | - | ya | 0 | LOUD AND PROUD FOOTBALL [PERANAN] | bangga | bola di tengah memisahkan huruf blok di atas dan skrip di bawah
+7-11 | 3 3 5 5 | - | PLAYER=garis dalam putih | ya | 0 | MY FAVORITE PLAYER CALLS ME [PERANAN] | bangga | pembuka melengkung tinggi seperti pelangi; dua kata akhir paling besar
+7-12 | 5 2 4 | pejal S 0 | FOOTBALL=berus kering | ya | 5 | FALL MEANS FOOTBALL (Y'ALL) | semangat | bingkai perisai bergaris; baris tengah bersayap jalur laju
+7-13 | 3 5 4 | pejal S 0 | GRANDSON=garis luar | ya | 5 | THAT'S MY [SAUDARA] OUT THERE | bangga | bola di penjuru kiri atas; varsity bergaris luar sebagai kata utama
+7-14 | 4 5 4 | pejal B 1 | MY FIRST=berus kering | ya | 8 | MY FIRST FOOTBALL SEASON | sayang | bola besar di tengah; slab melengkung mengikut bawah bola
+7-15 | 5 5 | pejal B 1 | VIBES=berus kering | ya | 8 | FOOTBALL VIBES (ONLY) | semangat | bola terselit di antara skrip dan berus; dua kata sahaja
+7-16 | 4 2 4 4 | pejal S 0 | FOOTBALL=calar halus, FAVORITE=calar halus | ya | 0 | FOOTBALL IS MY FAVORITE SEASON | semangat | separuh bola memancar di atas; reben berbintang antara dua baris slab
+8-01 | 2 4 4 2 4 | pejal S 2 | CALLS=huruf bergaris dalam reben | ya | 0 | MY FAVORITE PLAYER CALLS ME [PERANAN] | bangga | bola di tengah antara dua baris slab; reben jarang-huruf sebelum skrip
+8-02 | 5 5 | - | GOAL=garis luar berganda dengan bayang | ya | 0 | GOAL DIGGER | lucu | main kata dua baris: varsity bergaris luar di atas, skrip di bawah; pancar seperti matahari
+8-03 | 2 5 3 4 | pejal S 3 | LIFE IS=tebuk dalam reben, Football=berus kering | ya | 5 | LIFE IS BETTER WITH [X] | sayang | dua skrip berbeza (halus dan berus) dipisah huruf western; bola meluncur di antaranya
+8-04 | 2 5 3 4 | pejal K s | PROUD=berus kering | ya | 8 | LOUD AND PROUD FOOTBALL [PERANAN] | bangga | reben skrol bergaris di atas; dua bola kecil mengapit kata akhir skrip
+8-05 | 3 5 4 3 | pejal S 2 | BIGGEST=berus kering, FAN=berjalur mendatar dengan bayang | ya | 6 | LITTLE [SAUDARA] BIGGEST FAN | bangga | empat baris, empat rawatan; bola di tengah di bawah lengkung slab
+8-06 | 5 5 4 | pejal S h2 | LIVE=berus kering, LOVE=berus kering | ya | 10 | LIVE LOVE [X] | sayang | huruf O diganti bola berbentuk hati; tiga baris senget selari
+8-07 | 5 5 | pejal S 0; garis B b | MAMA=garis luar berganda | ya | 5 | FOOTBALL [PERANAN KELUARGA] | sayang | sapuan berus berbentuk hati sebagai bingkai atas dengan bola di lekuknya
+8-08 | 5 1 4 4 | pejal S 0 | FOOTBALL=garis luar dengan bayang, FAVORITE=berus kering | ya | 8 | FOOTBALL IS MY FAVORITE SEASON | semangat | lencana bergaris bucu enam; setiap baris font berlainan dan semuanya senget
+8-09 | 2 5 2 3 5 | pejal S 5 | LET'S=tebuk dalam kotak, WATCH=tebuk dalam kotak | ya | 8 | LET'S CUDDLE AND WATCH [X] | sayang | dua kotak hitam kecil sebagai kata sambung; bentuk keseluruhan hampir bulat
+8-10 | 4 5 | pejal S 0 | - | ya | 6 | FOOTBALL [PERANAN KELUARGA] | bangga | slab melengkung dan skrip gergasi; bintang bergaris sebagai penutup bawah
+8-11 | 5 5 1 5 | campur S 4 | GAME=berus kering, FACE=garis luar tebuk dalam kotak, ON=berus kering | tidak | 5 | GAME FACE ALWAYS ON | semangat | sepasang mata garang di bawah menjadikan seluruh design seperti wajah
+8-12 | 4 4 4 | pejal S 1 | DAD=diapit dua hujung reben | tidak | 0 | PROUD FOOTBALL [PERANAN] | bangga | bola bersayap garis laju di antara dua baris slab; reben terbelah mengapit kata akhir
+8-13 | 5 4 | pejal S 0 | DAD=berus kering | ya | 10 | FOOTBALL [PERANAN KELUARGA] | bangga | slab tinggi melengkung di atas, berus senget di bawah
+8-14 | 3 3 2 5 | pejal K s | TEAMMATES=tebuk dalam reben beralun, FAMILY=berus kering | ya | 8 | MORE THAN TEAMMATES, WE'RE FAMILY | sayang | reben beralun dengan hujung bergulung; kata pukulan berus di bawah
+8-15 | 5 4 4 | pejal S 0 | - | ya | 0 | PROUD FOOTBALL [PERANAN] | bangga | bingkai bucu enam bergaris terbuka; bola memecah penjuru atas
+8-16 | 2 5 | pejal B 0 | Season=berus kering | ya | 10 | 'TIS THE SEASON | semangat | bola besar meluncur di atas; satu kata skrip gergasi dengan sapuan berus
+8-17 | 4 2 4 4 | pejal S 3; pejal K s | MEANS=tebuk dalam reben | ya | 0 | FALL MEANS FOOTBALL (Y'ALL) | semangat | daun maple mengapit kata pertama; bola dan skrip di bawah dikelilingi kilau
+8-18 | 3 5 4 3 | pejal S 2 | BIGGEST=berus kering, FAN=berjalur mendatar dengan bayang | ya | 6 | LITTLE [SAUDARA] BIGGEST FAN | bangga | empat baris, empat rawatan; bola di tengah di bawah slab
+8-19 | 4 2 5 1 3 | pejal S h3; pejal K 5 | - | ya | 0 | SUNDAYS ARE FOR [A] AND [B] | sayang | salib berus kasar disisip di tengah kata utama; dua reben kecil sebagai kata sambung
+8-20 | 4 5 4 | pejal S 0 | FOOTBALL=berus kering, ONLY=berus kering | ya | 8 | FOOTBALL VIBES (ONLY) | semangat | slab tebal di tengah diapit dua baris berus senget
+8-21 | 4 4 | campur B 0 | - | ya | 0 | FOOTBALL [PERANAN KELUARGA] | sayang | ikon hati berganda mengambil separuh atas design; dua baris teks sebagai tapak
+8-22 | 4 5 5 | pejal S h1; pejal K 3 | - | ya | 0 | FAITH FAMILY FOOTBALL | sayang | salib tinggi menggantikan huruf T dan memecah garis atas; tiga kata, tiga font
+8-23 | 2 4 4 2 5 | garis S 0; tebuk K h5 | MY=tebuk dalam reben, PLAYERS=tebuk dalam kotak, MOM=garis luar | tidak | 0 | MY FAVORITE PLAYER CALLS ME [PERANAN] | bangga | lima baris padat berselang hitam-putih; hati ditebuk dalam huruf O
+8-24 | 5 4 1 4 5 | pejal S 5 | HUSTLE=berus kering, HIT=slab bertepi kasar, NEVER=berus kering, QUIT=berus kering | ya | 8 | HUSTLE, HIT & NEVER QUIT | motivasi | hampir semua baris berus kering senget; bola di hujung baris akhir
+8-25 | 4 4 4 | garis S 0 | VIBES=berus kering, ONLY=tebuk dalam reben | ya | 0 | FOOTBALL VIBES (ONLY) | semangat | lencana: lengkung bola di atas, reben bertakuk dan bucu perisai berbintang di bawah
+9-01 | 3 4 3 | tebuk B 0; tebuk B 0; tebuk B 0 | LOVE=berus condong di antara dua kata sans | tidak | 0 | PEACE LOVE [X] | sayang | tiga panel hitam bertepi kasar dengan ikon putih; teks satu baris di bawah
+9-02 | 3 5 2 4 | pejal S 0; garis B b | BELONGS TO A=tebuk dalam reben | ya | 5 | MY HEART BELONGS TO A [X] | sayang | lengkung bulat terbuka sebagai bingkai; skrip gergasi memecah bingkai
+9-03 | 3 3 5 4 | campur K s | PROUD=berus kering | ya | 5 | LOUD AND PROUD FOOTBALL [PERANAN] | bangga | ekor skrip berakhir sebagai hati yang mengandungi bola kecil
+9-04 | 4 5 2 4 | garis S s | EAT=berus kering, SLEEP=bertepi kasar | ya | 8 | EAT SLEEP [X] REPEAT | semangat | empat baris, empat font; bola di sisi kanan sebaris dengan skrip nipis
+9-05 | 5 5 | pejal S 0 | MAMA=garis luar berganda dengan bayang | ya | 0 | FOOTBALL [PERANAN KELUARGA] | sayang | bola berbentuk hati sebagai mahkota; skrip dan varsity bergaris luar
+9-06 | 3 5 3 5 | pejal S 4 | SISTER=garis luar berganda, BIGGEST=tebuk dalam reben, FAN=berus kering | ya | 0 | LITTLE [SAUDARA] BIGGEST FAN | bangga | empat baris, empat rawatan; bola di sebelah kata akhir
+9-07 | 2 4 4 2 5 | pejal B 2 | CALLS ME=tebuk dalam reben | ya | 0 | MY FAVORITE PLAYER CALLS ME [PERANAN] | bangga | dua tangan menadah bola di tengah; kata akhir skrip paling besar
+9-08 | - | garis B 0; garis S s | - | tidak | 15 | (tiada teks) | sayang | bola bergaris tebal dengan ekor gerak yang berakhir sebagai hati
+9-09 | 4 2 3 5 | garis S 0 | IS MY=tebuk dalam reben, FAVORITE=berus condong, SEASON=berus kering | ya | 5 | FOOTBALL IS MY FAVORITE SEASON | semangat | empat baris, empat font; reben bersayap jalur di baris kedua
+9-10 | 3 5 4 | pejal S h3 | I=berus kering, BLEED=berus kering | ya | 10 | I BLEED [X] | semangat | dua huruf O diganti dua bola menegak; tapak bucu berjalur
+9-11 | 5 5 | pejal S 0 | - | ya | 8 | FOOTBALL [PERANAN KELUARGA] | sayang | dua kata skrip sahaja; ekor huruf akhir bergelung membalut ke atas
+9-12 | 2 5 2 3 4 | pejal K 5 | READY=condong tebal, FOR=tebuk dalam kotak, FOOTBALL=berus kering | ya | 6 | ARE YOU READY FOR SOME [X] | semangat | lima baris, lima font; reben skrol bergaris di atas
+9-13 | 3 5 2 5 | garis B b | BIGGEST=huruf bergaris dalam reben, FAN=berus kering | ya | 0 | LITTLE [SAUDARA] BIGGEST FAN | bangga | separuh bola bergaris sebagai mangkuk tapak yang menadah semua teks
+9-14 | 4 3 | pejal B 0 | FOOTBALL=berus kering, SEASON=reben putih bergaris berganda | ya | 10 | [KATA SUKAN] SEASON | semangat | bola besar meluncur di atas; lencana reben putih dengan bucu perisai berbintang
+9-15 | 4 5 | pejal S 1 | - | ya | 0 | FOOTBALL [PERANAN KELUARGA] | sayang | bola berbentuk hati di tengah; anak panah berhati sebagai garis penutup
+9-16 | 3 5 3 | pejal S 1 | MOM=tebuk dalam reben bersayap jalur | ya | 5 | LOUD AND PROUD FOOTBALL [PERANAN] | bangga | pembuka melengkung tinggi di atas bola; reben kecil bersayap jalur di bawah
+10-01 | 2 5 4 3 | pejal K 0 | MY=huruf berjalur | ya | 0 | MY FAVORITE PLAYER CALLS ME [PERANAN] | bangga | bola kecil bersayap garis di puncak; empat baris mengecil ke skrip di bawah
+10-02 | 4 1 4 5 | pejal B 1 | ON THE=berus kering, FIELD=berus kering | ya | 8 | MY HEART IS ON THE FIELD | sayang | bola berbentuk hati besar di tengah; kata sambung skrip kecil terselit di sisi
+10-03 | 2 2 5 5 | pejal S 4 | I'LL ALWAYS=tebuk dalam reben, BIGGEST=garis luar berganda, Fan=berus kering | ya | 6 | I'LL ALWAYS BE YOUR BIGGEST FAN | sayang | varsity bergaris luar dan skrip berus sama besar; bola di hujung skrip
+10-04 | 3 3 2 5 | pejal K 4 | HERE=tebuk atas sapuan berus | ya | 0 | I'M JUST HERE FOR THE [X] | lucu | lengkung nipis di atas dan bawah membentuk bulatan; kata pukulan skrip gergasi
+10-05 | 5 5 1 4 4 | pejal S h1 | LOVE=berus kering, YOU=berus kering, END ZONE=plak hitam bucu enam bergaris | ya | 8 | LOVE YOU TO THE END ZONE AND BACK | sayang | huruf O diganti bola berbentuk hati; separuh atas berus, separuh bawah lencana
+10-06 | 4 1 5 4 | garis B 2 | - | ya | 6 | LOVE YOU TO THE END ZONE AND BACK | sayang | garis hati-bola besar di tengah; kata sambung kecil bertindan dalam lekuk hati
+10-07 | 4 1 5 | pejal S 1; pejal K s; pejal S s | - | ya | 0 | FOOTBALL AND FALL Y'ALL | semangat | tiga ikon musim (bola, daun, labu); skrip dua baris gergasi di bawah
+10-08 | 5 3 4 | pejal S 0; pejal K s; pejal S 3 | MEANS=garis dalam putih, FOOTBALL=berus kering | ya | 6 | FALL MEANS FOOTBALL (Y'ALL) | semangat | dua daun berlainan mengapit kata pertama; reben tebal di tengah
+10-09 | 2 5 3 5 | garis S 0; tebuk K h4 | NIECE=garis luar berganda, BIGGEST=tebuk dalam reben | tidak | 0 | LITTLE [SAUDARA] BIGGEST FAN | bangga | bintang ditebuk dalam huruf A; separuh bola bergaris sebagai mahkota
+10-10 | 5 4 | campur B 0; pejal K s | FOOTBALL=garis luar berganda dengan isi putih, BABY=berus kering | ya | 8 | FOOTBALL [PERANAN KELUARGA] | sayang | tapak kaki bayi di sisi kata akhir; varsity berisi putih supaya nampak ringan
+10-11 | 5 4 4 3 | garis B b; garis K s | FOOTBALL=tebuk dalam reben | ya | 0 | FAMILY FOOD FAITH FOOTBALL | sayang | bumbung rumah bergaris sebagai bingkai atas; reben sebagai lantai
+10-12 | 2 4 4 2 4 | pejal S s; tebuk K h3 | IT'S A=tebuk dalam reben, DAD=garis luar tebuk dalam kotak berjalur, FOR=tebuk dalam lencana kecil, FOOTBALL=berus kering | ya | 5 | (rosak) IT'S A BEAUTIFUL DAY FOR FOOTBALL | semangat | lima baris, lima rawatan; dua bola mengapit lencana kecil
+10-13 | 4 5 4 3 | tebuk K h1; pejal S 3; pejal K 4 | Football=berus kering | ya | 8 | EAT SLEEP [X] REPEAT | semangat | garpu ditebuk dalam huruf A; helmet duduk sebaris dengan kata akhir
+10-14 | 3 4 2 5 | pejal S 0 | CALL ME=tebuk dalam reben, COACH=garis luar berganda | ya | 0 | MY FAVORITE [KUMPULAN] CALL ME [PERANAN] | bangga | hati bertabur di sekeliling; kata akhir varsity bergaris luar paling besar
+10-15 | 5 4 | pejal S 0 | - | ya | 0 | SUNDAY FUNDAY | semangat | skrip gergasi di atas slab; bola memancar sebagai mahkota
+10-16 | 5 2 4 4 | pejal S 0 | IS MY=tebuk dalam reben | ya | 0 | FOOTBALL IS MY FAVORITE SEASON | semangat | bola bermahkota di atas; skrip pembuka dan skrip penutup mengapit dua baris slab
+10-17 | 5 4 5 | pejal S s | - | ya | 10 | THAT'S MY [SAUDARA] | bangga | satu font skrip berus untuk semua baris; bola mengisi ruang kosong di kanan
+10-18 | 5 4 | pejal S 0 | FOOTBALL=berus kering, VIBES=garis luar berganda | ya | 10 | FOOTBALL VIBES (ONLY) | semangat | berus senget di atas, varsity bergaris luar di bawah; bola memancar sebagai mahkota
+10-19 | 2 5 3 1 4 | pejal K 4 | MY FAVORITE=tebuk dalam reben, CALLS ME=tebuk dalam kotak, MOM=berus kering | ya | 0 | MY FAVORITE PLAYER CALLS ME [PERANAN] | bangga | lima baris, lima font; skrip menindih bawah slab
+10-20 | 2 5 2 5 | pejal S 3; garis K s | ON THAT=reben putih bergaris, FIELD=garis luar berganda | ya | 5 | MY HEART IS ON THE FIELD | sayang | skrip gergasi di atas, varsity bergaris luar di bawah; reben putih kecil di tengah
+10-21 | 2 4 4 2 5 | pejal S 0 | MY=tebuk dalam reben, FAVORITE=western bergaris luar berganda, CALLS ME=tebuk dalam reben | ya | 0 | MY FAVORITE PLAYER CALLS ME [PERANAN] | bangga | huruf western berhias sebagai baris kedua; dua reben kecil sebagai kata sambung
+10-22 | 4 5 | pejal K 0 | DAD=garis dalam putih dengan garis luar | ya | 5 | FOOTBALL [PERANAN KELUARGA] | bangga | lencana bersayap jalur dengan bucu perisai berbintang; skrip di atas varsity
+10-23 | 4 5 | garis S 0 | - | ya | 5 | GAME DAY VIBES | semangat | tapak perisai dilukis seperti padang dengan garis ela; lengkung bola di atas
+10-24 | 2 4 5 3 | campur B 2 | LIVIN' THAT=tebuk dalam reben, FOOTBALL=berus kering, MOM=berus kering | ya | 8 | LIVIN' THAT FOOTBALL [PERANAN] LIFE | bangga | bola dalam hati di tengah memisahkan dua kata berus; skrip kecil sebagai penutup
+10-25 | 5 4 | garis B 0 | - | ya | 5 | SUNDAY FUNDAY | semangat | lengkung jahitan bola memancar seperti matahari terbit; garis jahitan sebagai garis bawah

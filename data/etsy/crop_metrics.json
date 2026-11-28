@@ -15,7 +15,17 @@
   "lebar_px": 231,
   "tinggi_px": 258,
   "nisbah": 0.9,
-  "dakwat_pct": 35.1
+  "dakwat_pct": 35.1,
+  "simetri_pct": 27.9,
+  "dakwat_atas_pct": 37.8,
+  "dakwat_tengah_pct": 33.3,
+  "dakwat_bawah_pct": 28.9,
+  "pusat_x_pct": 51.3,
+  "pusat_y_pct": 46.1,
+  "kepingan": 33,
+  "lubang": 22,
+  "tebal_pct": 2.5,
+  "isi_siluet_pct": 78.5
  },
  {
   "id": "1-02",
@@ -33,7 +43,17 @@
   "lebar_px": 248,
   "tinggi_px": 266,
   "nisbah": 0.93,
-  "dakwat_pct": 47.9
+  "dakwat_pct": 47.9,
+  "simetri_pct": 39.9,
+  "dakwat_atas_pct": 32.7,
+  "dakwat_tengah_pct": 37.0,
+  "dakwat_bawah_pct": 30.3,
+  "pusat_x_pct": 49.0,
+  "pusat_y_pct": 48.6,
+  "kepingan": 36,
+  "lubang": 10,
+  "tebal_pct": 3.9,
+  "isi_siluet_pct": 83.6
  },
  {
   "id": "1-03",
@@ -51,7 +71,17 @@
   "lebar_px": 248,
   "tinggi_px": 250,
   "nisbah": 0.99,
-  "dakwat_pct": 43.2
+  "dakwat_pct": 43.2,
+  "simetri_pct": 38.4,
+  "dakwat_atas_pct": 33.4,
+  "dakwat_tengah_pct": 34.3,
+  "dakwat_bawah_pct": 32.3,
+  "pusat_x_pct": 47.9,
+  "pusat_y_pct": 49.1,
+  "kepingan": 33,
+  "lubang": 17,
+  "tebal_pct": 3.6,
+  "isi_siluet_pct": 83.9
  },
  {
   "id": "1-04",
@@ -69,7 +99,17 @@
   "lebar_px": 237,
   "tinggi_px": 264,
   "nisbah": 0.9,
-  "dakwat_pct": 49.0
+  "dakwat_pct": 49.0,
+  "simetri_pct": 53.0,
+  "dakwat_atas_pct": 34.4,
+  "dakwat_tengah_pct": 35.4,
+  "dakwat_bawah_pct": 30.2,
+  "pusat_x_pct": 49.2,
+  "pusat_y_pct": 48.3,
+  "kepingan": 28,
+  "lubang": 21,
+  "tebal_pct": 4.0,
+  "isi_siluet_pct": 82.3
  },
  {
   "id": "1-05",
@@ -87,7 +127,17 @@
   "lebar_px": 238,
   "tinggi_px": 268,
   "nisbah": 0.89,
-  "dakwat_pct": 39.2
+  "dakwat_pct": 39.2,
+  "simetri_pct": 35.6,
+  "dakwat_atas_pct": 28.1,
+  "dakwat_tengah_pct": 33.4,
+  "dakwat_bawah_pct": 38.5,
+  "pusat_x_pct": 50.6,
+  "pusat_y_pct": 52.9,
+  "kepingan": 49,
+  "lubang": 21,
+  "tebal_pct": 2.7,
+  "isi_siluet_pct": 80.8
  },
  {
   "id": "1-06",
@@ -105,7 +155,17 @@
   "lebar_px": 225,
   "tinggi_px": 271,
   "nisbah": 0.83,
-  "dakwat_pct": 44.3
+  "dakwat_pct": 44.3,
+  "simetri_pct": 35.1,
+  "dakwat_atas_pct": 32.9,
+  "dakwat_tengah_pct": 29.4,
+  "dakwat_bawah_pct": 37.7,
+  "pusat_x_pct": 51.6,
+  "pusat_y_pct": 51.9,
+  "kepingan": 59,
+  "lubang": 21,
+  "tebal_pct": 3.2,
+  "isi_siluet_pct": 85.0
  },
  {
   "id": "1-07",
@@ -123,7 +183,17 @@
   "lebar_px": 253,
   "tinggi_px": 278,
   "nisbah": 0.91,
-  "dakwat_pct": 36.5
+  "dakwat_pct": 36.5,
+  "simetri_pct": 45.8,
+  "dakwat_atas_pct": 30.6,
+  "dakwat_tengah_pct": 38.9,
+  "dakwat_bawah_pct": 30.5,
+  "pusat_x_pct": 49.8,
+  "pusat_y_pct": 49.7,
+  "kepingan": 52,
+  "lubang": 16,
+  "tebal_pct": 2.4,
+  "isi_siluet_pct": 81.9
  },
  {
   "id": "1-08",
@@ -141,7 +211,17 @@
   "lebar_px": 227,
   "tinggi_px": 279,
   "nisbah": 0.81,
-  "dakwat_pct": 40.9
+  "dakwat_pct": 40.9,
+  "simetri_pct": 39.2,
+  "dakwat_atas_pct": 31.6,
+  "dakwat_tengah_pct": 36.3,
+  "dakwat_bawah_pct": 32.1,
+  "pusat_x_pct": 50.0,
+  "pusat_y_pct": 49.7,
+  "kepingan": 52,
+  "lubang": 22,
+  "tebal_pct": 3.1,
+  "isi_siluet_pct": 83.4
  },
  {
   "id": "1-09",
@@ -159,7 +239,17 @@
   "lebar_px": 257,
   "tinggi_px": 264,
   "nisbah": 0.97,
-  "dakwat_pct": 37.4
+  "dakwat_pct": 37.4,
+  "simetri_pct": 31.7,
+  "dakwat_atas_pct": 26.0,
+  "dakwat_tengah_pct": 34.0,
+  "dakwat_bawah_pct": 40.0,
+  "pusat_x_pct": 48.3,
+  "pusat_y_pct": 54.1,
+  "kepingan": 69,
+  "lubang": 13,
+  "tebal_pct": 2.4,
+  "isi_siluet_pct": 85.4
  },
  {
   "id": "1-10",
@@ -177,7 +267,17 @@
   "lebar_px": 236,
   "tinggi_px": 296,
   "nisbah": 0.8,
-  "dakwat_pct": 37.9
+  "dakwat_pct": 37.9,
+  "simetri_pct": 39.5,
+  "dakwat_atas_pct": 28.1,
+  "dakwat_tengah_pct": 42.6,
+  "dakwat_bawah_pct": 29.3,
+  "pusat_x_pct": 48.6,
+  "pusat_y_pct": 52.3,
+  "kepingan": 47,
+  "lubang": 11,
+  "tebal_pct": 2.8,
+  "isi_siluet_pct": 84.0
  },
  {
   "id": "1-11",
@@ -195,7 +295,17 @@
   "lebar_px": 226,
   "tinggi_px": 284,
   "nisbah": 0.8,
-  "dakwat_pct": 37.9
+  "dakwat_pct": 37.9,
+  "simetri_pct": 40.4,
+  "dakwat_atas_pct": 28.0,
+  "dakwat_tengah_pct": 42.7,
+  "dakwat_bawah_pct": 29.3,
+  "pusat_x_pct": 48.8,
+  "pusat_y_pct": 52.3,
+  "kepingan": 47,
+  "lubang": 11,
+  "tebal_pct": 2.9,
+  "isi_siluet_pct": 83.4
  },
  {
   "id": "1-12",
@@ -213,7 +323,17 @@
   "lebar_px": 233,
   "tinggi_px": 282,
   "nisbah": 0.83,
-  "dakwat_pct": 41.5
+  "dakwat_pct": 41.5,
+  "simetri_pct": 59.2,
+  "dakwat_atas_pct": 31.7,
+  "dakwat_tengah_pct": 33.2,
+  "dakwat_bawah_pct": 35.1,
+  "pusat_x_pct": 49.9,
+  "pusat_y_pct": 50.1,
+  "kepingan": 78,
+  "lubang": 34,
+  "tebal_pct": 2.4,
+  "isi_siluet_pct": 86.6
  },
  {
   "id": "1-13",
@@ -231,7 +351,17 @@
   "lebar_px": 243,
   "tinggi_px": 238,
   "nisbah": 1.02,
-  "dakwat_pct": 46.2
+  "dakwat_pct": 46.2,
+  "simetri_pct": 52.2,
+  "dakwat_atas_pct": 35.6,
+  "dakwat_tengah_pct": 29.7,
+  "dakwat_bawah_pct": 34.8,
+  "pusat_x_pct": 48.2,
+  "pusat_y_pct": 49.4,
+  "kepingan": 34,
+  "lubang": 17,
+  "tebal_pct": 3.2,
+  "isi_siluet_pct": 86.0
  },
  {
   "id": "1-14",
@@ -249,7 +379,17 @@
   "lebar_px": 229,
   "tinggi_px": 275,
   "nisbah": 0.83,
-  "dakwat_pct": 36.1
+  "dakwat_pct": 36.1,
+  "simetri_pct": 42.7,
+  "dakwat_atas_pct": 35.7,
+  "dakwat_tengah_pct": 30.0,
+  "dakwat_bawah_pct": 34.3,
+  "pusat_x_pct": 49.9,
+  "pusat_y_pct": 50.6,
+  "kepingan": 55,
+  "lubang": 42,
+  "tebal_pct": 2.4,
+  "isi_siluet_pct": 71.7
  },
  {
   "id": "1-15",
@@ -267,7 +407,17 @@
   "lebar_px": 238,
   "tinggi_px": 288,
   "nisbah": 0.83,
-  "dakwat_pct": 42.5
+  "dakwat_pct": 42.5,
+  "simetri_pct": 53.0,
+  "dakwat_atas_pct": 33.8,
+  "dakwat_tengah_pct": 29.8,
+  "dakwat_bawah_pct": 36.5,
+  "pusat_x_pct": 50.1,
+  "pusat_y_pct": 50.0,
+  "kepingan": 61,
+  "lubang": 25,
+  "tebal_pct": 2.6,
+  "isi_siluet_pct": 91.2
  },
  {
   "id": "1-16",
@@ -285,7 +435,17 @@
   "lebar_px": 261,
   "tinggi_px": 237,
   "nisbah": 1.1,
-  "dakwat_pct": 39.9
+  "dakwat_pct": 39.9,
+  "simetri_pct": 45.8,
+  "dakwat_atas_pct": 36.6,
+  "dakwat_tengah_pct": 39.9,
+  "dakwat_bawah_pct": 23.4,
+  "pusat_x_pct": 50.4,
+  "pusat_y_pct": 44.5,
+  "kepingan": 55,
+  "lubang": 20,
+  "tebal_pct": 2.4,
+  "isi_siluet_pct": 86.7
  },
  {
   "id": "3-01",
@@ -303,7 +463,17 @@
   "lebar_px": 221,
   "tinggi_px": 269,
   "nisbah": 0.82,
-  "dakwat_pct": 40.0
+  "dakwat_pct": 40.0,
+  "simetri_pct": 32.9,
+  "dakwat_atas_pct": 32.3,
+  "dakwat_tengah_pct": 37.2,
+  "dakwat_bawah_pct": 30.5,
+  "pusat_x_pct": 48.0,
+  "pusat_y_pct": 50.0,
+  "kepingan": 51,
+  "lubang": 33,
+  "tebal_pct": 2.6,
+  "isi_siluet_pct": 82.1
  },
  {
   "id": "3-02",
@@ -321,7 +491,17 @@
   "lebar_px": 253,
   "tinggi_px": 267,
   "nisbah": 0.95,
-  "dakwat_pct": 41.1
+  "dakwat_pct": 41.1,
+  "simetri_pct": 55.0,
+  "dakwat_atas_pct": 34.3,
+  "dakwat_tengah_pct": 35.4,
+  "dakwat_bawah_pct": 30.4,
+  "pusat_x_pct": 49.2,
+  "pusat_y_pct": 49.0,
+  "kepingan": 24,
+  "lubang": 26,
+  "tebal_pct": 2.8,
+  "isi_siluet_pct": 84.4
  },
  {
   "id": "3-03",
@@ -339,7 +519,17 @@
   "lebar_px": 250,
   "tinggi_px": 237,
   "nisbah": 1.05,
-  "dakwat_pct": 43.7
+  "dakwat_pct": 43.7,
+  "simetri_pct": 43.6,
+  "dakwat_atas_pct": 32.0,
+  "dakwat_tengah_pct": 43.0,
+  "dakwat_bawah_pct": 24.9,
+  "pusat_x_pct": 49.4,
+  "pusat_y_pct": 47.0,
+  "kepingan": 32,
+  "lubang": 11,
+  "tebal_pct": 3.0,
+  "isi_siluet_pct": 86.7
  },
  {
   "id": "3-04",
@@ -357,7 +547,17 @@
   "lebar_px": 256,
   "tinggi_px": 213,
   "nisbah": 1.2,
-  "dakwat_pct": 39.8
+  "dakwat_pct": 39.8,
+  "simetri_pct": 45.4,
+  "dakwat_atas_pct": 38.8,
+  "dakwat_tengah_pct": 28.8,
+  "dakwat_bawah_pct": 32.4,
+  "pusat_x_pct": 50.9,
+  "pusat_y_pct": 47.9,
+  "kepingan": 24,
+  "lubang": 15,
+  "tebal_pct": 2.8,
+  "isi_siluet_pct": 78.3
  },
  {
   "id": "3-05",
@@ -375,7 +575,17 @@
   "lebar_px": 234,
   "tinggi_px": 253,
   "nisbah": 0.92,
-  "dakwat_pct": 43.5
+  "dakwat_pct": 43.5,
+  "simetri_pct": 35.3,
+  "dakwat_atas_pct": 31.5,
+  "dakwat_tengah_pct": 36.0,
+  "dakwat_bawah_pct": 32.6,
+  "pusat_x_pct": 49.1,
+  "pusat_y_pct": 49.3,
+  "kepingan": 23,
+  "lubang": 20,
+  "tebal_pct": 3.5,
+  "isi_siluet_pct": 84.6
  },
  {
   "id": "3-06",
@@ -393,7 +603,17 @@
   "lebar_px": 237,
   "tinggi_px": 265,
   "nisbah": 0.89,
-  "dakwat_pct": 42.8
+  "dakwat_pct": 42.8,
+  "simetri_pct": 45.5,
+  "dakwat_atas_pct": 35.1,
+  "dakwat_tengah_pct": 30.8,
+  "dakwat_bawah_pct": 34.2,
+  "pusat_x_pct": 49.4,
+  "pusat_y_pct": 49.6,
+  "kepingan": 66,
+  "lubang": 49,
+  "tebal_pct": 2.3,
+  "isi_siluet_pct": 94.9
  },
  {
   "id": "3-07",
@@ -411,7 +631,17 @@
   "lebar_px": 243,
   "tinggi_px": 228,
   "nisbah": 1.07,
-  "dakwat_pct": 43.8
+  "dakwat_pct": 43.8,
+  "simetri_pct": 39.4,
+  "dakwat_atas_pct": 32.8,
+  "dakwat_tengah_pct": 30.7,
+  "dakwat_bawah_pct": 36.5,
+  "pusat_x_pct": 48.6,
+  "pusat_y_pct": 51.0,
+  "kepingan": 28,
+  "lubang": 30,
+  "tebal_pct": 2.7,
+  "isi_siluet_pct": 89.3
  },
  {
   "id": "3-08",
@@ -429,7 +659,17 @@
   "lebar_px": 213,
   "tinggi_px": 277,
   "nisbah": 0.77,
-  "dakwat_pct": 36.0
+  "dakwat_pct": 36.0,
+  "simetri_pct": 35.2,
+  "dakwat_atas_pct": 44.8,
+  "dakwat_tengah_pct": 21.6,
+  "dakwat_bawah_pct": 33.6,
+  "pusat_x_pct": 51.3,
+  "pusat_y_pct": 45.9,
+  "kepingan": 53,
+  "lubang": 25,
+  "tebal_pct": 3.0,
+  "isi_siluet_pct": 74.6
  },
  {
   "id": "3-09",
@@ -447,7 +687,17 @@
   "lebar_px": 244,
   "tinggi_px": 263,
   "nisbah": 0.93,
-  "dakwat_pct": 36.3
+  "dakwat_pct": 36.3,
+  "simetri_pct": 36.6,
+  "dakwat_atas_pct": 30.2,
+  "dakwat_tengah_pct": 41.1,
+  "dakwat_bawah_pct": 28.7,
+  "pusat_x_pct": 47.4,
+  "pusat_y_pct": 48.8,
+  "kepingan": 50,
+  "lubang": 8,
+  "tebal_pct": 2.7,
+  "isi_siluet_pct": 72.0
  },
  {
   "id": "3-10",
@@ -465,7 +715,17 @@
   "lebar_px": 236,
   "tinggi_px": 279,
   "nisbah": 0.85,
-  "dakwat_pct": 35.0
+  "dakwat_pct": 35.0,
+  "simetri_pct": 48.1,
+  "dakwat_atas_pct": 39.1,
+  "dakwat_tengah_pct": 27.8,
+  "dakwat_bawah_pct": 33.1,
+  "pusat_x_pct": 49.7,
+  "pusat_y_pct": 48.0,
+  "kepingan": 43,
+  "lubang": 31,
+  "tebal_pct": 2.4,
+  "isi_siluet_pct": 71.4
  },
  {
   "id": "3-11",
@@ -483,7 +743,17 @@
   "lebar_px": 245,
   "tinggi_px": 272,
   "nisbah": 0.9,
-  "dakwat_pct": 39.9
+  "dakwat_pct": 39.9,
+  "simetri_pct": 44.7,
+  "dakwat_atas_pct": 32.9,
+  "dakwat_tengah_pct": 34.3,
+  "dakwat_bawah_pct": 32.8,
+  "pusat_x_pct": 48.8,
+  "pusat_y_pct": 47.9,
+  "kepingan": 50,
+  "lubang": 18,
+  "tebal_pct": 2.6,
+  "isi_siluet_pct": 81.8
  },
  {
   "id": "3-12",
@@ -501,7 +771,17 @@
   "lebar_px": 222,
   "tinggi_px": 251,
   "nisbah": 0.88,
-  "dakwat_pct": 36.3
+  "dakwat_pct": 36.3,
+  "simetri_pct": 41.6,
+  "dakwat_atas_pct": 17.4,
+  "dakwat_tengah_pct": 39.8,
+  "dakwat_bawah_pct": 42.8,
+  "pusat_x_pct": 49.0,
+  "pusat_y_pct": 59.4,
+  "kepingan": 24,
+  "lubang": 15,
+  "tebal_pct": 3.6,
+  "isi_siluet_pct": 71.8
  },
  {
   "id": "3-13",
@@ -519,7 +799,17 @@
   "lebar_px": 240,
   "tinggi_px": 244,
   "nisbah": 0.98,
-  "dakwat_pct": 42.0
+  "dakwat_pct": 42.0,
+  "simetri_pct": 35.5,
+  "dakwat_atas_pct": 21.8,
+  "dakwat_tengah_pct": 41.6,
+  "dakwat_bawah_pct": 36.6,
+  "pusat_x_pct": 49.6,
+  "pusat_y_pct": 54.1,
+  "kepingan": 43,
+  "lubang": 10,
+  "tebal_pct": 2.6,
+  "isi_siluet_pct": 88.3
  },
  {
   "id": "3-14",
@@ -537,7 +827,17 @@
   "lebar_px": 248,
   "tinggi_px": 245,
   "nisbah": 1.01,
-  "dakwat_pct": 38.4
+  "dakwat_pct": 38.4,
+  "simetri_pct": 43.0,
+  "dakwat_atas_pct": 31.6,
+  "dakwat_tengah_pct": 31.7,
+  "dakwat_bawah_pct": 36.7,
+  "pusat_x_pct": 49.2,
+  "pusat_y_pct": 51.1,
+  "kepingan": 36,
+  "lubang": 27,
+  "tebal_pct": 2.3,
+  "isi_siluet_pct": 87.7
  },
  {
   "id": "3-15",
@@ -555,7 +855,17 @@
   "lebar_px": 224,
   "tinggi_px": 278,
   "nisbah": 0.81,
-  "dakwat_pct": 33.1
+  "dakwat_pct": 33.1,
+  "simetri_pct": 38.8,
+  "dakwat_atas_pct": 19.6,
+  "dakwat_tengah_pct": 47.2,
+  "dakwat_bawah_pct": 33.2,
+  "pusat_x_pct": 50.6,
+  "pusat_y_pct": 53.3,
+  "kepingan": 49,
+  "lubang": 25,
+  "tebal_pct": 2.4,
+  "isi_siluet_pct": 79.9
  },
  {
   "id": "3-16",
@@ -573,7 +883,17 @@
   "lebar_px": 230,
   "tinggi_px": 263,
   "nisbah": 0.87,
-  "dakwat_pct": 37.1
+  "dakwat_pct": 37.1,
+  "simetri_pct": 45.0,
+  "dakwat_atas_pct": 29.4,
+  "dakwat_tengah_pct": 36.2,
+  "dakwat_bawah_pct": 34.4,
+  "pusat_x_pct": 49.7,
+  "pusat_y_pct": 51.3,
+  "kepingan": 40,
+  "lubang": 14,
+  "tebal_pct": 2.8,
+  "isi_siluet_pct": 77.9
  },
  {
   "id": "4-01",
@@ -591,7 +911,17 @@
   "lebar_px": 243,
   "tinggi_px": 247,
   "nisbah": 0.98,
-  "dakwat_pct": 30.4
+  "dakwat_pct": 30.4,
+  "simetri_pct": 53.6,
+  "dakwat_atas_pct": 27.7,
+  "dakwat_tengah_pct": 42.3,
+  "dakwat_bawah_pct": 30.0,
+  "pusat_x_pct": 48.8,
+  "pusat_y_pct": 49.9,
+  "kepingan": 27,
+  "lubang": 8,
+  "tebal_pct": 2.1,
+  "isi_siluet_pct": 80.8
  },
  {
   "id": "4-02",
@@ -609,7 +939,17 @@
   "lebar_px": 252,
   "tinggi_px": 243,
   "nisbah": 1.04,
-  "dakwat_pct": 39.0
+  "dakwat_pct": 39.0,
+  "simetri_pct": 40.2,
+  "dakwat_atas_pct": 28.6,
+  "dakwat_tengah_pct": 40.7,
+  "dakwat_bawah_pct": 30.7,
+  "pusat_x_pct": 50.3,
+  "pusat_y_pct": 50.1,
+  "kepingan": 28,
+  "lubang": 12,
+  "tebal_pct": 3.4,
+  "isi_siluet_pct": 73.2
  },
  {
   "id": "4-03",
@@ -627,7 +967,17 @@
   "lebar_px": 229,
   "tinggi_px": 264,
   "nisbah": 0.87,
-  "dakwat_pct": 40.7
+  "dakwat_pct": 40.7,
+  "simetri_pct": 38.2,
+  "dakwat_atas_pct": 35.5,
+  "dakwat_tengah_pct": 33.1,
+  "dakwat_bawah_pct": 31.3,
+  "pusat_x_pct": 50.0,
+  "pusat_y_pct": 49.4,
+  "kepingan": 49,
+  "lubang": 31,
+  "tebal_pct": 2.5,
+  "isi_siluet_pct": 85.2
  },
  {
   "id": "4-04",
@@ -645,7 +995,17 @@
   "lebar_px": 243,
   "tinggi_px": 242,
   "nisbah": 1.0,
-  "dakwat_pct": 42.8
+  "dakwat_pct": 42.8,
+  "simetri_pct": 41.6,
+  "dakwat_atas_pct": 33.8,
+  "dakwat_tengah_pct": 33.6,
+  "dakwat_bawah_pct": 32.6,
+  "pusat_x_pct": 50.1,
+  "pusat_y_pct": 49.4,
+  "kepingan": 32,
+  "lubang": 10,
+  "tebal_pct": 3.1,
+  "isi_siluet_pct": 86.0
  },
  {
   "id": "4-05",
@@ -663,7 +1023,17 @@
   "lebar_px": 243,
   "tinggi_px": 269,
   "nisbah": 0.9,
-  "dakwat_pct": 29.5
+  "dakwat_pct": 29.5,
+  "simetri_pct": 23.4,
+  "dakwat_atas_pct": 27.4,
+  "dakwat_tengah_pct": 37.9,
+  "dakwat_bawah_pct": 34.8,
+  "pusat_x_pct": 47.3,
+  "pusat_y_pct": 52.4,
+  "kepingan": 27,
+  "lubang": 17,
+  "tebal_pct": 2.4,
+  "isi_siluet_pct": 72.4
  },
  {
   "id": "4-06",
@@ -681,7 +1051,17 @@
   "lebar_px": 252,
   "tinggi_px": 269,
   "nisbah": 0.94,
-  "dakwat_pct": 42.4
+  "dakwat_pct": 42.4,
+  "simetri_pct": 53.7,
+  "dakwat_atas_pct": 23.2,
+  "dakwat_tengah_pct": 38.7,
+  "dakwat_bawah_pct": 38.1,
+  "pusat_x_pct": 49.7,
+  "pusat_y_pct": 55.5,
+  "kepingan": 33,
+  "lubang": 19,
+  "tebal_pct": 3.5,
+  "isi_siluet_pct": 77.2
  },
  {
   "id": "4-07",
@@ -699,7 +1079,17 @@
   "lebar_px": 246,
   "tinggi_px": 248,
   "nisbah": 0.99,
-  "dakwat_pct": 24.5
+  "dakwat_pct": 24.5,
+  "simetri_pct": 38.8,
+  "dakwat_atas_pct": 25.4,
+  "dakwat_tengah_pct": 44.9,
+  "dakwat_bawah_pct": 29.8,
+  "pusat_x_pct": 49.3,
+  "pusat_y_pct": 50.8,
+  "kepingan": 40,
+  "lubang": 11,
+  "tebal_pct": 1.6,
+  "isi_siluet_pct": 80.5
  },
  {
   "id": "4-08",
@@ -717,7 +1107,17 @@
   "lebar_px": 240,
   "tinggi_px": 269,
   "nisbah": 0.89,
-  "dakwat_pct": 38.5
+  "dakwat_pct": 38.5,
+  "simetri_pct": 44.5,
+  "dakwat_atas_pct": 25.8,
+  "dakwat_tengah_pct": 42.6,
+  "dakwat_bawah_pct": 31.7,
+  "pusat_x_pct": 49.4,
+  "pusat_y_pct": 52.3,
+  "kepingan": 30,
+  "lubang": 15,
+  "tebal_pct": 2.8,
+  "isi_siluet_pct": 80.6
  },
  {
   "id": "4-09",
@@ -735,7 +1135,17 @@
   "lebar_px": 252,
   "tinggi_px": 252,
   "nisbah": 1.0,
-  "dakwat_pct": 27.3
+  "dakwat_pct": 27.3,
+  "simetri_pct": 37.7,
+  "dakwat_atas_pct": 27.0,
+  "dakwat_tengah_pct": 43.9,
+  "dakwat_bawah_pct": 29.0,
+  "pusat_x_pct": 49.9,
+  "pusat_y_pct": 50.6,
+  "kepingan": 30,
+  "lubang": 9,
+  "tebal_pct": 1.9,
+  "isi_siluet_pct": 80.1
  },
  {
   "id": "4-10",
@@ -753,7 +1163,17 @@
   "lebar_px": 237,
   "tinggi_px": 262,
   "nisbah": 0.9,
-  "dakwat_pct": 36.1
+  "dakwat_pct": 36.1,
+  "simetri_pct": 43.6,
+  "dakwat_atas_pct": 20.3,
+  "dakwat_tengah_pct": 48.3,
+  "dakwat_bawah_pct": 31.4,
+  "pusat_x_pct": 49.8,
+  "pusat_y_pct": 54.4,
+  "kepingan": 32,
+  "lubang": 15,
+  "tebal_pct": 3.4,
+  "isi_siluet_pct": 77.1
  },
  {
   "id": "4-11",
@@ -771,7 +1191,17 @@
   "lebar_px": 216,
   "tinggi_px": 277,
   "nisbah": 0.78,
-  "dakwat_pct": 37.6
+  "dakwat_pct": 37.6,
+  "simetri_pct": 45.4,
+  "dakwat_atas_pct": 26.2,
+  "dakwat_tengah_pct": 37.4,
+  "dakwat_bawah_pct": 36.4,
+  "pusat_x_pct": 50.4,
+  "pusat_y_pct": 54.0,
+  "kepingan": 59,
+  "lubang": 35,
+  "tebal_pct": 2.3,
+  "isi_siluet_pct": 83.3
  },
  {
   "id": "4-12",
@@ -789,7 +1219,17 @@
   "lebar_px": 233,
   "tinggi_px": 273,
   "nisbah": 0.85,
-  "dakwat_pct": 42.0
+  "dakwat_pct": 42.0,
+  "simetri_pct": 36.5,
+  "dakwat_atas_pct": 30.5,
+  "dakwat_tengah_pct": 41.9,
+  "dakwat_bawah_pct": 27.6,
+  "pusat_x_pct": 49.3,
+  "pusat_y_pct": 48.7,
+  "kepingan": 35,
+  "lubang": 16,
+  "tebal_pct": 3.3,
+  "isi_siluet_pct": 79.9
  },
  {
   "id": "4-13",
@@ -807,7 +1247,17 @@
   "lebar_px": 240,
   "tinggi_px": 270,
   "nisbah": 0.89,
-  "dakwat_pct": 33.2
+  "dakwat_pct": 33.2,
+  "simetri_pct": 25.9,
+  "dakwat_atas_pct": 28.0,
+  "dakwat_tengah_pct": 40.2,
+  "dakwat_bawah_pct": 31.8,
+  "pusat_x_pct": 48.9,
+  "pusat_y_pct": 51.9,
+  "kepingan": 41,
+  "lubang": 19,
+  "tebal_pct": 2.6,
+  "isi_siluet_pct": 78.6
  },
  {
   "id": "4-14",
@@ -825,7 +1275,17 @@
   "lebar_px": 245,
   "tinggi_px": 270,
   "nisbah": 0.91,
-  "dakwat_pct": 44.2
+  "dakwat_pct": 44.2,
+  "simetri_pct": 48.7,
+  "dakwat_atas_pct": 31.7,
+  "dakwat_tengah_pct": 34.2,
+  "dakwat_bawah_pct": 34.1,
+  "pusat_x_pct": 49.4,
+  "pusat_y_pct": 51.4,
+  "kepingan": 58,
+  "lubang": 10,
+  "tebal_pct": 3.5,
+  "isi_siluet_pct": 86.7
  },
  {
   "id": "4-15",
@@ -843,7 +1303,17 @@
   "lebar_px": 230,
   "tinggi_px": 288,
   "nisbah": 0.8,
-  "dakwat_pct": 38.5
+  "dakwat_pct": 38.5,
+  "simetri_pct": 37.0,
+  "dakwat_atas_pct": 32.2,
+  "dakwat_tengah_pct": 29.3,
+  "dakwat_bawah_pct": 38.5,
+  "pusat_x_pct": 49.2,
+  "pusat_y_pct": 52.6,
+  "kepingan": 49,
+  "lubang": 22,
+  "tebal_pct": 2.5,
+  "isi_siluet_pct": 78.7
  },
  {
   "id": "4-16",
@@ -861,7 +1331,17 @@
   "lebar_px": 243,
   "tinggi_px": 275,
   "nisbah": 0.88,
-  "dakwat_pct": 42.4
+  "dakwat_pct": 42.4,
+  "simetri_pct": 41.8,
+  "dakwat_atas_pct": 25.8,
+  "dakwat_tengah_pct": 37.2,
+  "dakwat_bawah_pct": 36.9,
+  "pusat_x_pct": 50.7,
+  "pusat_y_pct": 53.8,
+  "kepingan": 39,
+  "lubang": 19,
+  "tebal_pct": 2.8,
+  "isi_siluet_pct": 84.9
  },
  {
   "id": "7-01",
@@ -879,7 +1359,17 @@
   "lebar_px": 226,
   "tinggi_px": 274,
   "nisbah": 0.82,
-  "dakwat_pct": 42.1
+  "dakwat_pct": 42.1,
+  "simetri_pct": 49.6,
+  "dakwat_atas_pct": 29.8,
+  "dakwat_tengah_pct": 34.2,
+  "dakwat_bawah_pct": 36.0,
+  "pusat_x_pct": 50.9,
+  "pusat_y_pct": 51.6,
+  "kepingan": 33,
+  "lubang": 23,
+  "tebal_pct": 3.5,
+  "isi_siluet_pct": 77.5
  },
  {
   "id": "7-02",
@@ -897,7 +1387,17 @@
   "lebar_px": 246,
   "tinggi_px": 262,
   "nisbah": 0.94,
-  "dakwat_pct": 39.4
+  "dakwat_pct": 39.4,
+  "simetri_pct": 52.8,
+  "dakwat_atas_pct": 30.2,
+  "dakwat_tengah_pct": 43.3,
+  "dakwat_bawah_pct": 26.6,
+  "pusat_x_pct": 49.3,
+  "pusat_y_pct": 48.5,
+  "kepingan": 55,
+  "lubang": 26,
+  "tebal_pct": 2.6,
+  "isi_siluet_pct": 80.8
  },
  {
   "id": "7-03",
@@ -915,7 +1415,17 @@
   "lebar_px": 254,
   "tinggi_px": 220,
   "nisbah": 1.15,
-  "dakwat_pct": 42.9
+  "dakwat_pct": 42.9,
+  "simetri_pct": 36.7,
+  "dakwat_atas_pct": 22.1,
+  "dakwat_tengah_pct": 47.9,
+  "dakwat_bawah_pct": 30.0,
+  "pusat_x_pct": 51.5,
+  "pusat_y_pct": 51.3,
+  "kepingan": 23,
+  "lubang": 5,
+  "tebal_pct": 3.4,
+  "isi_siluet_pct": 74.4
  },
  {
   "id": "7-04",
@@ -933,7 +1443,17 @@
   "lebar_px": 257,
   "tinggi_px": 258,
   "nisbah": 1.0,
-  "dakwat_pct": 43.1
+  "dakwat_pct": 43.1,
+  "simetri_pct": 42.7,
+  "dakwat_atas_pct": 25.9,
+  "dakwat_tengah_pct": 39.5,
+  "dakwat_bawah_pct": 34.7,
+  "pusat_x_pct": 50.6,
+  "pusat_y_pct": 52.2,
+  "kepingan": 22,
+  "lubang": 7,
+  "tebal_pct": 4.0,
+  "isi_siluet_pct": 74.1
  },
  {
   "id": "7-05",
@@ -951,7 +1471,17 @@
   "lebar_px": 251,
   "tinggi_px": 262,
   "nisbah": 0.96,
-  "dakwat_pct": 44.8
+  "dakwat_pct": 44.8,
+  "simetri_pct": 52.5,
+  "dakwat_atas_pct": 27.2,
+  "dakwat_tengah_pct": 37.8,
+  "dakwat_bawah_pct": 35.0,
+  "pusat_x_pct": 48.7,
+  "pusat_y_pct": 52.9,
+  "kepingan": 27,
+  "lubang": 4,
+  "tebal_pct": 4.3,
+  "isi_siluet_pct": 83.6
  },
  {
   "id": "7-06",
@@ -969,7 +1499,17 @@
   "lebar_px": 263,
   "tinggi_px": 211,
   "nisbah": 1.25,
-  "dakwat_pct": 37.0
+  "dakwat_pct": 37.0,
+  "simetri_pct": 38.4,
+  "dakwat_atas_pct": 25.2,
+  "dakwat_tengah_pct": 37.9,
+  "dakwat_bawah_pct": 36.8,
+  "pusat_x_pct": 50.6,
+  "pusat_y_pct": 52.6,
+  "kepingan": 23,
+  "lubang": 12,
+  "tebal_pct": 2.9,
+  "isi_siluet_pct": 71.3
  },
  {
   "id": "7-07",
@@ -987,7 +1527,17 @@
   "lebar_px": 253,
   "tinggi_px": 263,
   "nisbah": 0.96,
-  "dakwat_pct": 37.1
+  "dakwat_pct": 37.1,
+  "simetri_pct": 30.9,
+  "dakwat_atas_pct": 31.8,
+  "dakwat_tengah_pct": 42.8,
+  "dakwat_bawah_pct": 25.4,
+  "pusat_x_pct": 48.1,
+  "pusat_y_pct": 47.2,
+  "kepingan": 22,
+  "lubang": 8,
+  "tebal_pct": 3.1,
+  "isi_siluet_pct": 70.3
  },
  {
   "id": "7-08",
@@ -1005,7 +1555,17 @@
   "lebar_px": 254,
   "tinggi_px": 228,
   "nisbah": 1.11,
-  "dakwat_pct": 40.2
+  "dakwat_pct": 40.2,
+  "simetri_pct": 33.3,
+  "dakwat_atas_pct": 27.2,
+  "dakwat_tengah_pct": 43.4,
+  "dakwat_bawah_pct": 29.4,
+  "pusat_x_pct": 48.0,
+  "pusat_y_pct": 50.1,
+  "kepingan": 28,
+  "lubang": 10,
+  "tebal_pct": 2.9,
+  "isi_siluet_pct": 75.0
  },
  {
   "id": "7-09",
@@ -1023,7 +1583,17 @@
   "lebar_px": 220,
   "tinggi_px": 263,
   "nisbah": 0.84,
-  "dakwat_pct": 35.7
+  "dakwat_pct": 35.7,
+  "simetri_pct": 40.2,
+  "dakwat_atas_pct": 21.2,
+  "dakwat_tengah_pct": 40.4,
+  "dakwat_bawah_pct": 38.4,
+  "pusat_x_pct": 49.0,
+  "pusat_y_pct": 56.0,
+  "kepingan": 40,
+  "lubang": 9,
+  "tebal_pct": 3.1,
+  "isi_siluet_pct": 73.1
  },
  {
   "id": "7-10",
@@ -1041,7 +1611,17 @@
   "lebar_px": 217,
   "tinggi_px": 285,
   "nisbah": 0.76,
-  "dakwat_pct": 44.2
+  "dakwat_pct": 44.2,
+  "simetri_pct": 48.4,
+  "dakwat_atas_pct": 30.0,
+  "dakwat_tengah_pct": 36.3,
+  "dakwat_bawah_pct": 33.8,
+  "pusat_x_pct": 49.8,
+  "pusat_y_pct": 50.9,
+  "kepingan": 29,
+  "lubang": 18,
+  "tebal_pct": 4.2,
+  "isi_siluet_pct": 80.4
  },
  {
   "id": "7-11",
@@ -1059,7 +1639,17 @@
   "lebar_px": 254,
   "tinggi_px": 271,
   "nisbah": 0.94,
-  "dakwat_pct": 38.3
+  "dakwat_pct": 38.3,
+  "simetri_pct": 36.5,
+  "dakwat_atas_pct": 25.7,
+  "dakwat_tengah_pct": 40.0,
+  "dakwat_bawah_pct": 34.4,
+  "pusat_x_pct": 50.2,
+  "pusat_y_pct": 52.7,
+  "kepingan": 33,
+  "lubang": 12,
+  "tebal_pct": 3.2,
+  "isi_siluet_pct": 75.6
  },
  {
   "id": "7-12",
@@ -1077,7 +1667,17 @@
   "lebar_px": 254,
   "tinggi_px": 251,
   "nisbah": 1.01,
-  "dakwat_pct": 37.9
+  "dakwat_pct": 37.9,
+  "simetri_pct": 45.5,
+  "dakwat_atas_pct": 29.5,
+  "dakwat_tengah_pct": 40.4,
+  "dakwat_bawah_pct": 30.2,
+  "pusat_x_pct": 49.3,
+  "pusat_y_pct": 48.9,
+  "kepingan": 29,
+  "lubang": 13,
+  "tebal_pct": 3.2,
+  "isi_siluet_pct": 72.2
  },
  {
   "id": "7-13",
@@ -1095,7 +1695,17 @@
   "lebar_px": 257,
   "tinggi_px": 228,
   "nisbah": 1.13,
-  "dakwat_pct": 44.0
+  "dakwat_pct": 44.0,
+  "simetri_pct": 33.6,
+  "dakwat_atas_pct": 24.1,
+  "dakwat_tengah_pct": 47.0,
+  "dakwat_bawah_pct": 28.9,
+  "pusat_x_pct": 48.4,
+  "pusat_y_pct": 51.9,
+  "kepingan": 33,
+  "lubang": 27,
+  "tebal_pct": 2.3,
+  "isi_siluet_pct": 82.1
  },
  {
   "id": "7-14",
@@ -1113,7 +1723,17 @@
   "lebar_px": 244,
   "tinggi_px": 258,
   "nisbah": 0.95,
-  "dakwat_pct": 43.6
+  "dakwat_pct": 43.6,
+  "simetri_pct": 34.4,
+  "dakwat_atas_pct": 28.3,
+  "dakwat_tengah_pct": 39.9,
+  "dakwat_bawah_pct": 31.8,
+  "pusat_x_pct": 50.8,
+  "pusat_y_pct": 51.0,
+  "kepingan": 36,
+  "lubang": 11,
+  "tebal_pct": 3.2,
+  "isi_siluet_pct": 84.9
  },
  {
   "id": "7-15",
@@ -1131,7 +1751,17 @@
   "lebar_px": 249,
   "tinggi_px": 260,
   "nisbah": 0.96,
-  "dakwat_pct": 44.2
+  "dakwat_pct": 44.2,
+  "simetri_pct": 36.6,
+  "dakwat_atas_pct": 30.0,
+  "dakwat_tengah_pct": 39.1,
+  "dakwat_bawah_pct": 30.9,
+  "pusat_x_pct": 51.7,
+  "pusat_y_pct": 50.5,
+  "kepingan": 19,
+  "lubang": 10,
+  "tebal_pct": 3.9,
+  "isi_siluet_pct": 76.5
  },
  {
   "id": "7-16",
@@ -1149,7 +1779,17 @@
   "lebar_px": 242,
   "tinggi_px": 282,
   "nisbah": 0.86,
-  "dakwat_pct": 39.9
+  "dakwat_pct": 39.9,
+  "simetri_pct": 50.4,
+  "dakwat_atas_pct": 22.6,
+  "dakwat_tengah_pct": 46.6,
+  "dakwat_bawah_pct": 30.8,
+  "pusat_x_pct": 48.8,
+  "pusat_y_pct": 53.5,
+  "kepingan": 42,
+  "lubang": 20,
+  "tebal_pct": 3.0,
+  "isi_siluet_pct": 79.9
  },
  {
   "id": "8-01",
@@ -1167,7 +1807,17 @@
   "lebar_px": 175,
   "tinggi_px": 196,
   "nisbah": 0.89,
-  "dakwat_pct": 42.6
+  "dakwat_pct": 42.6,
+  "simetri_pct": 51.2,
+  "dakwat_atas_pct": 31.3,
+  "dakwat_tengah_pct": 37.5,
+  "dakwat_bawah_pct": 31.2,
+  "pusat_x_pct": 49.8,
+  "pusat_y_pct": 49.6,
+  "kepingan": 34,
+  "lubang": 17,
+  "tebal_pct": 3.1,
+  "isi_siluet_pct": 90.7
  },
  {
   "id": "8-02",
@@ -1185,7 +1835,17 @@
   "lebar_px": 186,
   "tinggi_px": 197,
   "nisbah": 0.94,
-  "dakwat_pct": 38.3
+  "dakwat_pct": 38.3,
+  "simetri_pct": 36.2,
+  "dakwat_atas_pct": 18.7,
+  "dakwat_tengah_pct": 44.8,
+  "dakwat_bawah_pct": 36.5,
+  "pusat_x_pct": 47.7,
+  "pusat_y_pct": 55.3,
+  "kepingan": 40,
+  "lubang": 13,
+  "tebal_pct": 2.4,
+  "isi_siluet_pct": 75.4
  },
  {
   "id": "8-03",
@@ -1203,7 +1863,17 @@
   "lebar_px": 171,
   "tinggi_px": 207,
   "nisbah": 0.83,
-  "dakwat_pct": 41.0
+  "dakwat_pct": 41.0,
+  "simetri_pct": 35.9,
+  "dakwat_atas_pct": 33.7,
+  "dakwat_tengah_pct": 31.3,
+  "dakwat_bawah_pct": 34.9,
+  "pusat_x_pct": 48.2,
+  "pusat_y_pct": 49.6,
+  "kepingan": 38,
+  "lubang": 17,
+  "tebal_pct": 3.0,
+  "isi_siluet_pct": 77.1
  },
  {
   "id": "8-04",
@@ -1221,7 +1891,17 @@
   "lebar_px": 183,
   "tinggi_px": 193,
   "nisbah": 0.95,
-  "dakwat_pct": 38.4
+  "dakwat_pct": 38.4,
+  "simetri_pct": 33.0,
+  "dakwat_atas_pct": 36.0,
+  "dakwat_tengah_pct": 33.2,
+  "dakwat_bawah_pct": 30.8,
+  "pusat_x_pct": 50.0,
+  "pusat_y_pct": 48.8,
+  "kepingan": 45,
+  "lubang": 15,
+  "tebal_pct": 2.5,
+  "isi_siluet_pct": 84.4
  },
  {
   "id": "8-05",
@@ -1239,7 +1919,17 @@
   "lebar_px": 182,
   "tinggi_px": 195,
   "nisbah": 0.93,
-  "dakwat_pct": 44.8
+  "dakwat_pct": 44.8,
+  "simetri_pct": 41.0,
+  "dakwat_atas_pct": 33.4,
+  "dakwat_tengah_pct": 36.8,
+  "dakwat_bawah_pct": 29.8,
+  "pusat_x_pct": 47.2,
+  "pusat_y_pct": 48.3,
+  "kepingan": 51,
+  "lubang": 10,
+  "tebal_pct": 3.0,
+  "isi_siluet_pct": 88.4
  },
  {
   "id": "8-06",
@@ -1257,7 +1947,17 @@
   "lebar_px": 188,
   "tinggi_px": 206,
   "nisbah": 0.91,
-  "dakwat_pct": 38.6
+  "dakwat_pct": 38.6,
+  "simetri_pct": 28.6,
+  "dakwat_atas_pct": 30.2,
+  "dakwat_tengah_pct": 39.3,
+  "dakwat_bawah_pct": 30.6,
+  "pusat_x_pct": 49.3,
+  "pusat_y_pct": 49.2,
+  "kepingan": 21,
+  "lubang": 13,
+  "tebal_pct": 3.4,
+  "isi_siluet_pct": 78.2
  },
  {
   "id": "8-07",
@@ -1275,7 +1975,17 @@
   "lebar_px": 189,
   "tinggi_px": 187,
   "nisbah": 1.01,
-  "dakwat_pct": 43.2
+  "dakwat_pct": 43.2,
+  "simetri_pct": 38.1,
+  "dakwat_atas_pct": 26.4,
+  "dakwat_tengah_pct": 34.7,
+  "dakwat_bawah_pct": 38.9,
+  "pusat_x_pct": 48.7,
+  "pusat_y_pct": 53.0,
+  "kepingan": 20,
+  "lubang": 60,
+  "tebal_pct": 2.4,
+  "isi_siluet_pct": 87.2
  },
  {
   "id": "8-08",
@@ -1293,7 +2003,17 @@
   "lebar_px": 197,
   "tinggi_px": 190,
   "nisbah": 1.04,
-  "dakwat_pct": 37.4
+  "dakwat_pct": 37.4,
+  "simetri_pct": 35.7,
+  "dakwat_atas_pct": 34.3,
+  "dakwat_tengah_pct": 41.2,
+  "dakwat_bawah_pct": 24.6,
+  "pusat_x_pct": 49.2,
+  "pusat_y_pct": 47.5,
+  "kepingan": 35,
+  "lubang": 15,
+  "tebal_pct": 2.6,
+  "isi_siluet_pct": 75.3
  },
  {
   "id": "8-09",
@@ -1311,7 +2031,17 @@
   "lebar_px": 184,
   "tinggi_px": 186,
   "nisbah": 0.99,
-  "dakwat_pct": 40.5
+  "dakwat_pct": 40.5,
+  "simetri_pct": 32.0,
+  "dakwat_atas_pct": 31.8,
+  "dakwat_tengah_pct": 33.0,
+  "dakwat_bawah_pct": 35.2,
+  "pusat_x_pct": 51.9,
+  "pusat_y_pct": 50.8,
+  "kepingan": 33,
+  "lubang": 25,
+  "tebal_pct": 2.8,
+  "isi_siluet_pct": 81.4
  },
  {
   "id": "8-10",
@@ -1329,7 +2059,17 @@
   "lebar_px": 194,
   "tinggi_px": 184,
   "nisbah": 1.05,
-  "dakwat_pct": 39.0
+  "dakwat_pct": 39.0,
+  "simetri_pct": 32.6,
+  "dakwat_atas_pct": 26.1,
+  "dakwat_tengah_pct": 42.5,
+  "dakwat_bawah_pct": 31.5,
+  "pusat_x_pct": 50.6,
+  "pusat_y_pct": 50.5,
+  "kepingan": 32,
+  "lubang": 10,
+  "tebal_pct": 3.2,
+  "isi_siluet_pct": 79.3
  },
  {
   "id": "8-11",
@@ -1347,7 +2087,17 @@
   "lebar_px": 188,
   "tinggi_px": 200,
   "nisbah": 0.94,
-  "dakwat_pct": 44.6
+  "dakwat_pct": 44.6,
+  "simetri_pct": 59.6,
+  "dakwat_atas_pct": 37.8,
+  "dakwat_tengah_pct": 35.7,
+  "dakwat_bawah_pct": 26.5,
+  "pusat_x_pct": 49.8,
+  "pusat_y_pct": 44.6,
+  "kepingan": 27,
+  "lubang": 10,
+  "tebal_pct": 3.4,
+  "isi_siluet_pct": 75.2
  },
  {
   "id": "8-12",
@@ -1365,7 +2115,17 @@
   "lebar_px": 189,
   "tinggi_px": 198,
   "nisbah": 0.95,
-  "dakwat_pct": 43.6
+  "dakwat_pct": 43.6,
+  "simetri_pct": 57.7,
+  "dakwat_atas_pct": 30.1,
+  "dakwat_tengah_pct": 36.2,
+  "dakwat_bawah_pct": 33.7,
+  "pusat_x_pct": 49.6,
+  "pusat_y_pct": 51.2,
+  "kepingan": 36,
+  "lubang": 14,
+  "tebal_pct": 3.5,
+  "isi_siluet_pct": 81.7
  },
  {
   "id": "8-13",
@@ -1383,7 +2143,17 @@
   "lebar_px": 189,
   "tinggi_px": 188,
   "nisbah": 1.01,
-  "dakwat_pct": 40.6
+  "dakwat_pct": 40.6,
+  "simetri_pct": 35.3,
+  "dakwat_atas_pct": 25.6,
+  "dakwat_tengah_pct": 45.8,
+  "dakwat_bawah_pct": 28.6,
+  "pusat_x_pct": 49.8,
+  "pusat_y_pct": 50.1,
+  "kepingan": 33,
+  "lubang": 10,
+  "tebal_pct": 3.4,
+  "isi_siluet_pct": 75.0
  },
  {
   "id": "8-14",
@@ -1401,7 +2171,17 @@
   "lebar_px": 189,
   "tinggi_px": 178,
   "nisbah": 1.06,
-  "dakwat_pct": 40.4
+  "dakwat_pct": 40.4,
+  "simetri_pct": 38.6,
+  "dakwat_atas_pct": 33.0,
+  "dakwat_tengah_pct": 38.2,
+  "dakwat_bawah_pct": 28.8,
+  "pusat_x_pct": 48.8,
+  "pusat_y_pct": 46.9,
+  "kepingan": 40,
+  "lubang": 15,
+  "tebal_pct": 2.8,
+  "isi_siluet_pct": 77.7
  },
  {
   "id": "8-15",
@@ -1419,7 +2199,17 @@
   "lebar_px": 174,
   "tinggi_px": 194,
   "nisbah": 0.9,
-  "dakwat_pct": 38.4
+  "dakwat_pct": 38.4,
+  "simetri_pct": 45.3,
+  "dakwat_atas_pct": 32.5,
+  "dakwat_tengah_pct": 37.4,
+  "dakwat_bawah_pct": 30.1,
+  "pusat_x_pct": 51.0,
+  "pusat_y_pct": 48.6,
+  "kepingan": 30,
+  "lubang": 18,
+  "tebal_pct": 2.9,
+  "isi_siluet_pct": 81.0
  },
  {
   "id": "8-16",
@@ -1437,7 +2227,17 @@
   "lebar_px": 195,
   "tinggi_px": 168,
   "nisbah": 1.16,
-  "dakwat_pct": 38.2
+  "dakwat_pct": 38.2,
+  "simetri_pct": 29.1,
+  "dakwat_atas_pct": 25.1,
+  "dakwat_tengah_pct": 36.5,
+  "dakwat_bawah_pct": 38.4,
+  "pusat_x_pct": 49.9,
+  "pusat_y_pct": 54.3,
+  "kepingan": 27,
+  "lubang": 9,
+  "tebal_pct": 3.0,
+  "isi_siluet_pct": 75.3
  },
  {
   "id": "8-17",
@@ -1455,7 +2255,17 @@
   "lebar_px": 172,
   "tinggi_px": 199,
   "nisbah": 0.86,
-  "dakwat_pct": 39.1
+  "dakwat_pct": 39.1,
+  "simetri_pct": 40.8,
+  "dakwat_atas_pct": 32.3,
+  "dakwat_tengah_pct": 40.7,
+  "dakwat_bawah_pct": 26.9,
+  "pusat_x_pct": 47.7,
+  "pusat_y_pct": 47.5,
+  "kepingan": 43,
+  "lubang": 17,
+  "tebal_pct": 3.1,
+  "isi_siluet_pct": 80.5
  },
  {
   "id": "8-18",
@@ -1473,7 +2283,17 @@
   "lebar_px": 176,
   "tinggi_px": 189,
   "nisbah": 0.93,
-  "dakwat_pct": 44.1
+  "dakwat_pct": 44.1,
+  "simetri_pct": 40.4,
+  "dakwat_atas_pct": 33.1,
+  "dakwat_tengah_pct": 36.9,
+  "dakwat_bawah_pct": 30.0,
+  "pusat_x_pct": 47.1,
+  "pusat_y_pct": 48.5,
+  "kepingan": 52,
+  "lubang": 11,
+  "tebal_pct": 2.9,
+  "isi_siluet_pct": 88.4
  },
  {
   "id": "8-19",
@@ -1491,7 +2311,17 @@
   "lebar_px": 158,
   "tinggi_px": 207,
   "nisbah": 0.76,
-  "dakwat_pct": 41.7
+  "dakwat_pct": 41.7,
+  "simetri_pct": 39.2,
+  "dakwat_atas_pct": 35.6,
+  "dakwat_tengah_pct": 37.5,
+  "dakwat_bawah_pct": 26.8,
+  "pusat_x_pct": 49.8,
+  "pusat_y_pct": 46.7,
+  "kepingan": 44,
+  "lubang": 22,
+  "tebal_pct": 3.3,
+  "isi_siluet_pct": 84.4
  },
  {
   "id": "8-20",
@@ -1509,7 +2339,17 @@
   "lebar_px": 180,
   "tinggi_px": 190,
   "nisbah": 0.95,
-  "dakwat_pct": 39.3
+  "dakwat_pct": 39.3,
+  "simetri_pct": 39.1,
+  "dakwat_atas_pct": 27.9,
+  "dakwat_tengah_pct": 42.3,
+  "dakwat_bawah_pct": 29.8,
+  "pusat_x_pct": 50.0,
+  "pusat_y_pct": 50.2,
+  "kepingan": 33,
+  "lubang": 12,
+  "tebal_pct": 3.3,
+  "isi_siluet_pct": 77.3
  },
  {
   "id": "8-21",
@@ -1527,7 +2367,17 @@
   "lebar_px": 180,
   "tinggi_px": 199,
   "nisbah": 0.9,
-  "dakwat_pct": 38.5
+  "dakwat_pct": 38.5,
+  "simetri_pct": 36.8,
+  "dakwat_atas_pct": 26.2,
+  "dakwat_tengah_pct": 38.0,
+  "dakwat_bawah_pct": 35.8,
+  "pusat_x_pct": 48.9,
+  "pusat_y_pct": 52.7,
+  "kepingan": 25,
+  "lubang": 10,
+  "tebal_pct": 3.1,
+  "isi_siluet_pct": 76.3
  },
  {
   "id": "8-22",
@@ -1545,7 +2395,17 @@
   "lebar_px": 183,
   "tinggi_px": 204,
   "nisbah": 0.9,
-  "dakwat_pct": 44.5
+  "dakwat_pct": 44.5,
+  "simetri_pct": 42.3,
+  "dakwat_atas_pct": 24.7,
+  "dakwat_tengah_pct": 40.9,
+  "dakwat_bawah_pct": 34.4,
+  "pusat_x_pct": 49.0,
+  "pusat_y_pct": 53.5,
+  "kepingan": 32,
+  "lubang": 15,
+  "tebal_pct": 3.5,
+  "isi_siluet_pct": 83.2
  },
  {
   "id": "8-23",
@@ -1563,7 +2423,17 @@
   "lebar_px": 181,
   "tinggi_px": 195,
   "nisbah": 0.93,
-  "dakwat_pct": 40.3
+  "dakwat_pct": 40.3,
+  "simetri_pct": 50.2,
+  "dakwat_atas_pct": 24.5,
+  "dakwat_tengah_pct": 38.7,
+  "dakwat_bawah_pct": 36.8,
+  "pusat_x_pct": 49.7,
+  "pusat_y_pct": 54.8,
+  "kepingan": 54,
+  "lubang": 36,
+  "tebal_pct": 2.3,
+  "isi_siluet_pct": 85.0
  },
  {
   "id": "8-24",
@@ -1581,7 +2451,17 @@
   "lebar_px": 163,
   "tinggi_px": 211,
   "nisbah": 0.77,
-  "dakwat_pct": 42.2
+  "dakwat_pct": 42.2,
+  "simetri_pct": 31.5,
+  "dakwat_atas_pct": 34.0,
+  "dakwat_tengah_pct": 34.6,
+  "dakwat_bawah_pct": 31.4,
+  "pusat_x_pct": 48.2,
+  "pusat_y_pct": 48.3,
+  "kepingan": 41,
+  "lubang": 6,
+  "tebal_pct": 3.4,
+  "isi_siluet_pct": 84.2
  },
  {
   "id": "8-25",
@@ -1599,7 +2479,17 @@
   "lebar_px": 180,
   "tinggi_px": 192,
   "nisbah": 0.94,
-  "dakwat_pct": 38.5
+  "dakwat_pct": 38.5,
+  "simetri_pct": 46.8,
+  "dakwat_atas_pct": 28.7,
+  "dakwat_tengah_pct": 38.6,
+  "dakwat_bawah_pct": 32.7,
+  "pusat_x_pct": 49.3,
+  "pusat_y_pct": 50.8,
+  "kepingan": 33,
+  "lubang": 11,
+  "tebal_pct": 3.1,
+  "isi_siluet_pct": 79.5
  },
  {
   "id": "9-01",
@@ -1617,7 +2507,17 @@
   "lebar_px": 240,
   "tinggi_px": 220,
   "nisbah": 1.09,
-  "dakwat_pct": 51.4
+  "dakwat_pct": 51.4,
+  "simetri_pct": 50.8,
+  "dakwat_atas_pct": 36.8,
+  "dakwat_tengah_pct": 35.6,
+  "dakwat_bawah_pct": 27.5,
+  "pusat_x_pct": 46.6,
+  "pusat_y_pct": 46.6,
+  "kepingan": 36,
+  "lubang": 15,
+  "tebal_pct": 3.2,
+  "isi_siluet_pct": 86.8
  },
  {
   "id": "9-02",
@@ -1635,7 +2535,17 @@
   "lebar_px": 247,
   "tinggi_px": 228,
   "nisbah": 1.08,
-  "dakwat_pct": 43.7
+  "dakwat_pct": 43.7,
+  "simetri_pct": 34.6,
+  "dakwat_atas_pct": 32.7,
+  "dakwat_tengah_pct": 37.2,
+  "dakwat_bawah_pct": 30.0,
+  "pusat_x_pct": 50.0,
+  "pusat_y_pct": 48.3,
+  "kepingan": 22,
+  "lubang": 17,
+  "tebal_pct": 3.2,
+  "isi_siluet_pct": 85.5
  },
  {
   "id": "9-03",
@@ -1653,7 +2563,17 @@
   "lebar_px": 238,
   "tinggi_px": 240,
   "nisbah": 0.99,
-  "dakwat_pct": 42.1
+  "dakwat_pct": 42.1,
+  "simetri_pct": 37.1,
+  "dakwat_atas_pct": 32.8,
+  "dakwat_tengah_pct": 36.3,
+  "dakwat_bawah_pct": 30.9,
+  "pusat_x_pct": 48.2,
+  "pusat_y_pct": 49.2,
+  "kepingan": 31,
+  "lubang": 17,
+  "tebal_pct": 3.0,
+  "isi_siluet_pct": 82.7
  },
  {
   "id": "9-04",
@@ -1671,7 +2591,17 @@
   "lebar_px": 185,
   "tinggi_px": 251,
   "nisbah": 0.74,
-  "dakwat_pct": 46.3
+  "dakwat_pct": 46.3,
+  "simetri_pct": 38.9,
+  "dakwat_atas_pct": 33.0,
+  "dakwat_tengah_pct": 37.3,
+  "dakwat_bawah_pct": 29.7,
+  "pusat_x_pct": 48.9,
+  "pusat_y_pct": 48.1,
+  "kepingan": 22,
+  "lubang": 18,
+  "tebal_pct": 3.5,
+  "isi_siluet_pct": 83.3
  },
  {
   "id": "9-05",
@@ -1689,7 +2619,17 @@
   "lebar_px": 250,
   "tinggi_px": 220,
   "nisbah": 1.14,
-  "dakwat_pct": 43.9
+  "dakwat_pct": 43.9,
+  "simetri_pct": 43.0,
+  "dakwat_atas_pct": 24.8,
+  "dakwat_tengah_pct": 34.9,
+  "dakwat_bawah_pct": 40.4,
+  "pusat_x_pct": 50.3,
+  "pusat_y_pct": 54.6,
+  "kepingan": 31,
+  "lubang": 57,
+  "tebal_pct": 2.3,
+  "isi_siluet_pct": 83.1
  },
  {
   "id": "9-06",
@@ -1707,7 +2647,17 @@
   "lebar_px": 246,
   "tinggi_px": 258,
   "nisbah": 0.95,
-  "dakwat_pct": 43.5
+  "dakwat_pct": 43.5,
+  "simetri_pct": 46.0,
+  "dakwat_atas_pct": 27.1,
+  "dakwat_tengah_pct": 41.9,
+  "dakwat_bawah_pct": 31.0,
+  "pusat_x_pct": 50.1,
+  "pusat_y_pct": 50.6,
+  "kepingan": 43,
+  "lubang": 25,
+  "tebal_pct": 2.3,
+  "isi_siluet_pct": 87.7
  },
  {
   "id": "9-07",
@@ -1725,7 +2675,17 @@
   "lebar_px": 216,
   "tinggi_px": 273,
   "nisbah": 0.79,
-  "dakwat_pct": 44.5
+  "dakwat_pct": 44.5,
+  "simetri_pct": 53.5,
+  "dakwat_atas_pct": 26.4,
+  "dakwat_tengah_pct": 37.7,
+  "dakwat_bawah_pct": 35.9,
+  "pusat_x_pct": 49.8,
+  "pusat_y_pct": 53.4,
+  "kepingan": 35,
+  "lubang": 19,
+  "tebal_pct": 3.5,
+  "isi_siluet_pct": 84.0
  },
  {
   "id": "9-08",
@@ -1743,7 +2703,17 @@
   "lebar_px": 217,
   "tinggi_px": 247,
   "nisbah": 0.88,
-  "dakwat_pct": 29.6
+  "dakwat_pct": 29.6,
+  "simetri_pct": 20.8,
+  "dakwat_atas_pct": 36.2,
+  "dakwat_tengah_pct": 37.2,
+  "dakwat_bawah_pct": 26.5,
+  "pusat_x_pct": 53.5,
+  "pusat_y_pct": 46.6,
+  "kepingan": 8,
+  "lubang": 2,
+  "tebal_pct": 4.2,
+  "isi_siluet_pct": 78.1
  },
  {
   "id": "9-09",
@@ -1761,7 +2731,17 @@
   "lebar_px": 246,
   "tinggi_px": 255,
   "nisbah": 0.96,
-  "dakwat_pct": 34.9
+  "dakwat_pct": 34.9,
+  "simetri_pct": 34.8,
+  "dakwat_atas_pct": 24.2,
+  "dakwat_tengah_pct": 41.9,
+  "dakwat_bawah_pct": 33.9,
+  "pusat_x_pct": 48.0,
+  "pusat_y_pct": 53.7,
+  "kepingan": 46,
+  "lubang": 20,
+  "tebal_pct": 2.3,
+  "isi_siluet_pct": 77.5
  },
  {
   "id": "9-10",
@@ -1779,7 +2759,17 @@
   "lebar_px": 247,
   "tinggi_px": 262,
   "nisbah": 0.94,
-  "dakwat_pct": 42.2
+  "dakwat_pct": 42.2,
+  "simetri_pct": 40.8,
+  "dakwat_atas_pct": 24.0,
+  "dakwat_tengah_pct": 41.7,
+  "dakwat_bawah_pct": 34.3,
+  "pusat_x_pct": 49.5,
+  "pusat_y_pct": 52.6,
+  "kepingan": 20,
+  "lubang": 12,
+  "tebal_pct": 3.6,
+  "isi_siluet_pct": 73.9
  },
  {
   "id": "9-11",
@@ -1797,7 +2787,17 @@
   "lebar_px": 256,
   "tinggi_px": 245,
   "nisbah": 1.04,
-  "dakwat_pct": 39.1
+  "dakwat_pct": 39.1,
+  "simetri_pct": 27.3,
+  "dakwat_atas_pct": 31.9,
+  "dakwat_tengah_pct": 39.6,
+  "dakwat_bawah_pct": 28.5,
+  "pusat_x_pct": 48.5,
+  "pusat_y_pct": 48.0,
+  "kepingan": 14,
+  "lubang": 9,
+  "tebal_pct": 3.4,
+  "isi_siluet_pct": 73.7
  },
  {
   "id": "9-12",
@@ -1815,7 +2815,17 @@
   "lebar_px": 230,
   "tinggi_px": 260,
   "nisbah": 0.88,
-  "dakwat_pct": 37.4
+  "dakwat_pct": 37.4,
+  "simetri_pct": 35.1,
+  "dakwat_atas_pct": 29.9,
+  "dakwat_tengah_pct": 35.7,
+  "dakwat_bawah_pct": 34.4,
+  "pusat_x_pct": 48.4,
+  "pusat_y_pct": 51.3,
+  "kepingan": 51,
+  "lubang": 18,
+  "tebal_pct": 2.6,
+  "isi_siluet_pct": 83.1
  },
  {
   "id": "9-13",
@@ -1833,7 +2843,17 @@
   "lebar_px": 244,
   "tinggi_px": 242,
   "nisbah": 1.01,
-  "dakwat_pct": 40.8
+  "dakwat_pct": 40.8,
+  "simetri_pct": 45.6,
+  "dakwat_atas_pct": 29.7,
+  "dakwat_tengah_pct": 40.3,
+  "dakwat_bawah_pct": 30.0,
+  "pusat_x_pct": 50.1,
+  "pusat_y_pct": 49.8,
+  "kepingan": 28,
+  "lubang": 9,
+  "tebal_pct": 3.3,
+  "isi_siluet_pct": 81.8
  },
  {
   "id": "9-14",
@@ -1851,7 +2871,17 @@
   "lebar_px": 254,
   "tinggi_px": 262,
   "nisbah": 0.97,
-  "dakwat_pct": 38.8
+  "dakwat_pct": 38.8,
+  "simetri_pct": 29.1,
+  "dakwat_atas_pct": 34.7,
+  "dakwat_tengah_pct": 38.3,
+  "dakwat_bawah_pct": 27.0,
+  "pusat_x_pct": 53.2,
+  "pusat_y_pct": 47.1,
+  "kepingan": 24,
+  "lubang": 8,
+  "tebal_pct": 3.0,
+  "isi_siluet_pct": 73.0
  },
  {
   "id": "9-15",
@@ -1869,7 +2899,17 @@
   "lebar_px": 256,
   "tinggi_px": 250,
   "nisbah": 1.02,
-  "dakwat_pct": 42.8
+  "dakwat_pct": 42.8,
+  "simetri_pct": 38.1,
+  "dakwat_atas_pct": 33.0,
+  "dakwat_tengah_pct": 34.8,
+  "dakwat_bawah_pct": 32.2,
+  "pusat_x_pct": 47.8,
+  "pusat_y_pct": 48.6,
+  "kepingan": 17,
+  "lubang": 13,
+  "tebal_pct": 3.5,
+  "isi_siluet_pct": 86.2
  },
  {
   "id": "9-16",
@@ -1887,7 +2927,17 @@
   "lebar_px": 250,
   "tinggi_px": 226,
   "nisbah": 1.11,
-  "dakwat_pct": 40.6
+  "dakwat_pct": 40.6,
+  "simetri_pct": 48.0,
+  "dakwat_atas_pct": 32.5,
+  "dakwat_tengah_pct": 35.7,
+  "dakwat_bawah_pct": 31.8,
+  "pusat_x_pct": 49.3,
+  "pusat_y_pct": 50.1,
+  "kepingan": 32,
+  "lubang": 19,
+  "tebal_pct": 2.6,
+  "isi_siluet_pct": 88.2
  },
  {
   "id": "10-01",
@@ -1905,7 +2955,17 @@
   "lebar_px": 190,
   "tinggi_px": 203,
   "nisbah": 0.94,
-  "dakwat_pct": 36.6
+  "dakwat_pct": 36.6,
+  "simetri_pct": 40.7,
+  "dakwat_atas_pct": 23.2,
+  "dakwat_tengah_pct": 41.4,
+  "dakwat_bawah_pct": 35.4,
+  "pusat_x_pct": 48.9,
+  "pusat_y_pct": 53.0,
+  "kepingan": 37,
+  "lubang": 13,
+  "tebal_pct": 2.9,
+  "isi_siluet_pct": 74.2
  },
  {
   "id": "10-02",
@@ -1923,7 +2983,17 @@
   "lebar_px": 184,
   "tinggi_px": 202,
   "nisbah": 0.91,
-  "dakwat_pct": 43.4
+  "dakwat_pct": 43.4,
+  "simetri_pct": 44.1,
+  "dakwat_atas_pct": 34.2,
+  "dakwat_tengah_pct": 37.3,
+  "dakwat_bawah_pct": 28.5,
+  "pusat_x_pct": 49.7,
+  "pusat_y_pct": 46.7,
+  "kepingan": 26,
+  "lubang": 8,
+  "tebal_pct": 4.0,
+  "isi_siluet_pct": 76.4
  },
  {
   "id": "10-03",
@@ -1941,7 +3011,17 @@
   "lebar_px": 193,
   "tinggi_px": 185,
   "nisbah": 1.04,
-  "dakwat_pct": 50.5
+  "dakwat_pct": 50.5,
+  "simetri_pct": 49.7,
+  "dakwat_atas_pct": 29.0,
+  "dakwat_tengah_pct": 38.1,
+  "dakwat_bawah_pct": 32.9,
+  "pusat_x_pct": 48.9,
+  "pusat_y_pct": 49.9,
+  "kepingan": 33,
+  "lubang": 25,
+  "tebal_pct": 3.0,
+  "isi_siluet_pct": 88.3
  },
  {
   "id": "10-04",
@@ -1959,7 +3039,17 @@
   "lebar_px": 193,
   "tinggi_px": 191,
   "nisbah": 1.01,
-  "dakwat_pct": 33.5
+  "dakwat_pct": 33.5,
+  "simetri_pct": 35.9,
+  "dakwat_atas_pct": 25.6,
+  "dakwat_tengah_pct": 34.0,
+  "dakwat_bawah_pct": 40.4,
+  "pusat_x_pct": 49.7,
+  "pusat_y_pct": 54.2,
+  "kepingan": 45,
+  "lubang": 12,
+  "tebal_pct": 2.5,
+  "isi_siluet_pct": 77.0
  },
  {
   "id": "10-05",
@@ -1977,7 +3067,17 @@
   "lebar_px": 181,
   "tinggi_px": 216,
   "nisbah": 0.84,
-  "dakwat_pct": 38.0
+  "dakwat_pct": 38.0,
+  "simetri_pct": 33.9,
+  "dakwat_atas_pct": 35.0,
+  "dakwat_tengah_pct": 35.3,
+  "dakwat_bawah_pct": 29.7,
+  "pusat_x_pct": 49.3,
+  "pusat_y_pct": 47.8,
+  "kepingan": 46,
+  "lubang": 23,
+  "tebal_pct": 2.8,
+  "isi_siluet_pct": 73.3
  },
  {
   "id": "10-06",
@@ -1995,7 +3095,17 @@
   "lebar_px": 187,
   "tinggi_px": 197,
   "nisbah": 0.95,
-  "dakwat_pct": 37.2
+  "dakwat_pct": 37.2,
+  "simetri_pct": 33.6,
+  "dakwat_atas_pct": 35.3,
+  "dakwat_tengah_pct": 32.9,
+  "dakwat_bawah_pct": 31.7,
+  "pusat_x_pct": 48.6,
+  "pusat_y_pct": 48.5,
+  "kepingan": 43,
+  "lubang": 9,
+  "tebal_pct": 2.9,
+  "isi_siluet_pct": 80.4
  },
  {
   "id": "10-07",
@@ -2013,7 +3123,17 @@
   "lebar_px": 184,
   "tinggi_px": 181,
   "nisbah": 1.02,
-  "dakwat_pct": 40.5
+  "dakwat_pct": 40.5,
+  "simetri_pct": 39.6,
+  "dakwat_atas_pct": 35.6,
+  "dakwat_tengah_pct": 34.7,
+  "dakwat_bawah_pct": 29.7,
+  "pusat_x_pct": 51.2,
+  "pusat_y_pct": 48.1,
+  "kepingan": 34,
+  "lubang": 13,
+  "tebal_pct": 3.2,
+  "isi_siluet_pct": 79.6
  },
  {
   "id": "10-08",
@@ -2031,7 +3151,17 @@
   "lebar_px": 203,
   "tinggi_px": 193,
   "nisbah": 1.05,
-  "dakwat_pct": 44.7
+  "dakwat_pct": 44.7,
+  "simetri_pct": 45.3,
+  "dakwat_atas_pct": 31.6,
+  "dakwat_tengah_pct": 34.4,
+  "dakwat_bawah_pct": 34.0,
+  "pusat_x_pct": 48.4,
+  "pusat_y_pct": 49.9,
+  "kepingan": 31,
+  "lubang": 16,
+  "tebal_pct": 2.8,
+  "isi_siluet_pct": 89.9
  },
  {
   "id": "10-09",
@@ -2049,7 +3179,17 @@
   "lebar_px": 197,
   "tinggi_px": 215,
   "nisbah": 0.92,
-  "dakwat_pct": 44.6
+  "dakwat_pct": 44.6,
+  "simetri_pct": 47.0,
+  "dakwat_atas_pct": 20.3,
+  "dakwat_tengah_pct": 45.9,
+  "dakwat_bawah_pct": 33.8,
+  "pusat_x_pct": 50.4,
+  "pusat_y_pct": 53.9,
+  "kepingan": 35,
+  "lubang": 37,
+  "tebal_pct": 2.4,
+  "isi_siluet_pct": 85.8
  },
  {
   "id": "10-10",
@@ -2067,7 +3207,17 @@
   "lebar_px": 198,
   "tinggi_px": 199,
   "nisbah": 0.99,
-  "dakwat_pct": 41.8
+  "dakwat_pct": 41.8,
+  "simetri_pct": 33.8,
+  "dakwat_atas_pct": 21.6,
+  "dakwat_tengah_pct": 43.9,
+  "dakwat_bawah_pct": 34.5,
+  "pusat_x_pct": 49.7,
+  "pusat_y_pct": 53.9,
+  "kepingan": 29,
+  "lubang": 58,
+  "tebal_pct": 2.2,
+  "isi_siluet_pct": 80.8
  },
  {
   "id": "10-11",
@@ -2085,7 +3235,17 @@
   "lebar_px": 184,
   "tinggi_px": 208,
   "nisbah": 0.88,
-  "dakwat_pct": 38.0
+  "dakwat_pct": 38.0,
+  "simetri_pct": 60.3,
+  "dakwat_atas_pct": 25.9,
+  "dakwat_tengah_pct": 35.7,
+  "dakwat_bawah_pct": 38.4,
+  "pusat_x_pct": 50.1,
+  "pusat_y_pct": 54.1,
+  "kepingan": 39,
+  "lubang": 21,
+  "tebal_pct": 3.0,
+  "isi_siluet_pct": 82.2
  },
  {
   "id": "10-12",
@@ -2103,7 +3263,17 @@
   "lebar_px": 195,
   "tinggi_px": 198,
   "nisbah": 0.98,
-  "dakwat_pct": 44.8
+  "dakwat_pct": 44.8,
+  "simetri_pct": 49.6,
+  "dakwat_atas_pct": 29.7,
+  "dakwat_tengah_pct": 38.7,
+  "dakwat_bawah_pct": 31.6,
+  "pusat_x_pct": 48.7,
+  "pusat_y_pct": 50.7,
+  "kepingan": 44,
+  "lubang": 25,
+  "tebal_pct": 2.7,
+  "isi_siluet_pct": 85.5
  },
  {
   "id": "10-13",
@@ -2121,7 +3291,17 @@
   "lebar_px": 180,
   "tinggi_px": 211,
   "nisbah": 0.85,
-  "dakwat_pct": 47.3
+  "dakwat_pct": 47.3,
+  "simetri_pct": 35.7,
+  "dakwat_atas_pct": 31.6,
+  "dakwat_tengah_pct": 36.9,
+  "dakwat_bawah_pct": 31.5,
+  "pusat_x_pct": 46.8,
+  "pusat_y_pct": 49.4,
+  "kepingan": 36,
+  "lubang": 25,
+  "tebal_pct": 3.6,
+  "isi_siluet_pct": 90.4
  },
  {
   "id": "10-14",
@@ -2139,7 +3319,17 @@
   "lebar_px": 187,
   "tinggi_px": 211,
   "nisbah": 0.89,
-  "dakwat_pct": 41.9
+  "dakwat_pct": 41.9,
+  "simetri_pct": 51.1,
+  "dakwat_atas_pct": 27.3,
+  "dakwat_tengah_pct": 36.4,
+  "dakwat_bawah_pct": 36.3,
+  "pusat_x_pct": 50.2,
+  "pusat_y_pct": 53.1,
+  "kepingan": 53,
+  "lubang": 45,
+  "tebal_pct": 2.2,
+  "isi_siluet_pct": 87.2
  },
  {
   "id": "10-15",
@@ -2157,7 +3347,17 @@
   "lebar_px": 203,
   "tinggi_px": 176,
   "nisbah": 1.15,
-  "dakwat_pct": 39.9
+  "dakwat_pct": 39.9,
+  "simetri_pct": 53.0,
+  "dakwat_atas_pct": 25.0,
+  "dakwat_tengah_pct": 36.7,
+  "dakwat_bawah_pct": 38.4,
+  "pusat_x_pct": 49.0,
+  "pusat_y_pct": 53.4,
+  "kepingan": 23,
+  "lubang": 8,
+  "tebal_pct": 2.9,
+  "isi_siluet_pct": 77.3
  },
  {
   "id": "10-16",
@@ -2175,7 +3375,17 @@
   "lebar_px": 188,
   "tinggi_px": 215,
   "nisbah": 0.87,
-  "dakwat_pct": 45.8
+  "dakwat_pct": 45.8,
+  "simetri_pct": 40.2,
+  "dakwat_atas_pct": 27.9,
+  "dakwat_tengah_pct": 34.9,
+  "dakwat_bawah_pct": 37.2,
+  "pusat_x_pct": 51.0,
+  "pusat_y_pct": 52.3,
+  "kepingan": 27,
+  "lubang": 25,
+  "tebal_pct": 3.1,
+  "isi_siluet_pct": 86.0
  },
  {
   "id": "10-17",
@@ -2193,7 +3403,17 @@
   "lebar_px": 186,
   "tinggi_px": 211,
   "nisbah": 0.88,
-  "dakwat_pct": 43.7
+  "dakwat_pct": 43.7,
+  "simetri_pct": 33.0,
+  "dakwat_atas_pct": 31.7,
+  "dakwat_tengah_pct": 36.1,
+  "dakwat_bawah_pct": 32.3,
+  "pusat_x_pct": 45.8,
+  "pusat_y_pct": 49.4,
+  "kepingan": 18,
+  "lubang": 8,
+  "tebal_pct": 4.5,
+  "isi_siluet_pct": 74.0
  },
  {
   "id": "10-18",
@@ -2211,7 +3431,17 @@
   "lebar_px": 188,
   "tinggi_px": 188,
   "nisbah": 1.0,
-  "dakwat_pct": 38.5
+  "dakwat_pct": 38.5,
+  "simetri_pct": 39.9,
+  "dakwat_atas_pct": 18.0,
+  "dakwat_tengah_pct": 47.0,
+  "dakwat_bawah_pct": 35.0,
+  "pusat_x_pct": 50.0,
+  "pusat_y_pct": 55.1,
+  "kepingan": 33,
+  "lubang": 16,
+  "tebal_pct": 3.1,
+  "isi_siluet_pct": 72.5
  },
  {
   "id": "10-19",
@@ -2229,7 +3459,17 @@
   "lebar_px": 172,
   "tinggi_px": 192,
   "nisbah": 0.9,
-  "dakwat_pct": 39.6
+  "dakwat_pct": 39.6,
+  "simetri_pct": 48.4,
+  "dakwat_atas_pct": 34.5,
+  "dakwat_tengah_pct": 33.0,
+  "dakwat_bawah_pct": 32.5,
+  "pusat_x_pct": 48.9,
+  "pusat_y_pct": 48.3,
+  "kepingan": 45,
+  "lubang": 29,
+  "tebal_pct": 2.9,
+  "isi_siluet_pct": 80.9
  },
  {
   "id": "10-20",
@@ -2247,7 +3487,17 @@
   "lebar_px": 178,
   "tinggi_px": 201,
   "nisbah": 0.89,
-  "dakwat_pct": 37.2
+  "dakwat_pct": 37.2,
+  "simetri_pct": 33.2,
+  "dakwat_atas_pct": 33.0,
+  "dakwat_tengah_pct": 30.7,
+  "dakwat_bawah_pct": 36.3,
+  "pusat_x_pct": 49.5,
+  "pusat_y_pct": 51.4,
+  "kepingan": 40,
+  "lubang": 15,
+  "tebal_pct": 2.2,
+  "isi_siluet_pct": 81.9
  },
  {
   "id": "10-21",
@@ -2265,7 +3515,17 @@
   "lebar_px": 176,
   "tinggi_px": 191,
   "nisbah": 0.92,
-  "dakwat_pct": 44.9
+  "dakwat_pct": 44.9,
+  "simetri_pct": 46.6,
+  "dakwat_atas_pct": 25.4,
+  "dakwat_tengah_pct": 43.3,
+  "dakwat_bawah_pct": 31.2,
+  "pusat_x_pct": 49.4,
+  "pusat_y_pct": 51.7,
+  "kepingan": 41,
+  "lubang": 31,
+  "tebal_pct": 2.4,
+  "isi_siluet_pct": 85.2
  },
  {
   "id": "10-22",
@@ -2283,7 +3543,17 @@
   "lebar_px": 179,
   "tinggi_px": 183,
   "nisbah": 0.98,
-  "dakwat_pct": 43.4
+  "dakwat_pct": 43.4,
+  "simetri_pct": 33.0,
+  "dakwat_atas_pct": 26.0,
+  "dakwat_tengah_pct": 40.8,
+  "dakwat_bawah_pct": 33.2,
+  "pusat_x_pct": 50.3,
+  "pusat_y_pct": 51.7,
+  "kepingan": 15,
+  "lubang": 14,
+  "tebal_pct": 3.1,
+  "isi_siluet_pct": 77.8
  },
  {
   "id": "10-23",
@@ -2301,7 +3571,17 @@
   "lebar_px": 194,
   "tinggi_px": 188,
   "nisbah": 1.03,
-  "dakwat_pct": 32.0
+  "dakwat_pct": 32.0,
+  "simetri_pct": 34.9,
+  "dakwat_atas_pct": 27.1,
+  "dakwat_tengah_pct": 50.1,
+  "dakwat_bawah_pct": 22.7,
+  "pusat_x_pct": 50.2,
+  "pusat_y_pct": 48.3,
+  "kepingan": 29,
+  "lubang": 5,
+  "tebal_pct": 2.9,
+  "isi_siluet_pct": 65.4
  },
  {
   "id": "10-24",
@@ -2319,7 +3599,17 @@
   "lebar_px": 176,
   "tinggi_px": 211,
   "nisbah": 0.83,
-  "dakwat_pct": 43.7
+  "dakwat_pct": 43.7,
+  "simetri_pct": 44.1,
+  "dakwat_atas_pct": 35.3,
+  "dakwat_tengah_pct": 35.1,
+  "dakwat_bawah_pct": 29.5,
+  "pusat_x_pct": 49.0,
+  "pusat_y_pct": 47.6,
+  "kepingan": 29,
+  "lubang": 27,
+  "tebal_pct": 3.1,
+  "isi_siluet_pct": 83.0
  },
  {
   "id": "10-25",
@@ -2337,6 +3627,16 @@
   "lebar_px": 197,
   "tinggi_px": 195,
   "nisbah": 1.01,
-  "dakwat_pct": 34.3
+  "dakwat_pct": 34.3,
+  "simetri_pct": 37.8,
+  "dakwat_atas_pct": 17.1,
+  "dakwat_tengah_pct": 37.5,
+  "dakwat_bawah_pct": 45.4,
+  "pusat_x_pct": 49.0,
+  "pusat_y_pct": 59.9,
+  "kepingan": 24,
+  "lubang": 6,
+  "tebal_pct": 2.9,
+  "isi_siluet_pct": 82.6
  }
 ]

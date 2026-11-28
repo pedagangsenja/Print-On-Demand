@@ -35,7 +35,7 @@ O: pancar atas, garis apit FOR, garis bunyi jam, garis ekor bawah skrip
 M: ceria, santai ; khalayak: umum
 
 #1-04 sindiran reben-bertindan segi4
-L: I HAVE A/sn/R/K | GOOD/SL/-/H | HEART/SL/-/H | BUT THIS/sn/R/K | "MOUTH"/BC/S/H
+L: I HAVE A/sn/gelembung hitam berekor/K | GOOD/SL/-/H | HEART/SL/-/H | BUT THIS/sn/R/K | "MOUTH"/BC/S/H
 I: hati kecil, dalam huruf A (HEART), ganti-huruf
 O: pancar tepi reben atas, titik dalam reben, tanda petik besar, garis ekor
 M: berani, sassy ; khalayak: wanita
@@ -53,7 +53,7 @@ O: garis apit HAS, pancar sisi OPEN
 M: tekno, serabut ; khalayak: pekerja pejabat
 
 #1-07 sindiran reben-bertindan segi4
-L: I'M SORRY/SP/L/S | IF I/sn/-/K | OFFENDED/SP/RG/S | you/SKR/-/H | WITH MY/sn/-/K | COMMON SENSE/SP/L/S
+L: I'M SORRY/SP/L/S | IF I/sn/-/K | OFFENDED/SP/R/S | you/SKR/-/H | WITH MY/sn/-/K | COMMON SENSE/SP/lengkung turun/S
 O: garis apit IF I, pancar sisi kiri-kanan, bintang apit WITH MY, garis ekor, bintang bawah
 M: sinis, vintaj ; khalayak: umum
 
@@ -78,19 +78,19 @@ O: bintang atas, pancar sisi, titik, pancar bawah reben, garis ekor
 M: ceria ; khalayak: umum ; isu: ayat tidak bermakna (gabungan dua ayat) ; nota: salinan 1-10 dalam gambar yang sama
 
 #1-12 sindiran reben-bertindan segi4
-L: I LIKE MY/sn/R+L/K | COFFEE/SLB/-/H | HOW I LIKE MYSELF/sn/-/K | DARK, BITTER,/SP/R/S | AND/sn/-/K | TOO HOT/SP/-/S | FOR YOU/sn/P/K
+L: I LIKE MY/sn/R+L/K | COFFEE/VAR/-/H | HOW I LIKE MYSELF/sn/-/K | DARK, BITTER,/SP/R/S | AND/sn/-/K | TOO HOT/SP/-/S | FOR YOU/sn/P/K
 I: cawan kopi dengan biji kopi, bawah reben atas, aksen | api, kiri dan kanan TOO HOT, aksen
 O: pancar sisi reben atas, bintang apit, garis apit FOR YOU
 M: kopi, berani ; khalayak: peminum kopi
 
 #1-13 sindiran ikon-tengah segi4
-L: I DON'T/SL/-/K | MATCH ENERGY/SP/L/H | I SHUT THE/SL/R/K | POWER/SP/-/H | OFF/BC/S/H
+L: I DON'T/SL/-/K | MATCH ENERGY/SP/L/H | I SHUT THE/SL/R/K | POWER/SP/-/H | OFF/BC/S+=/H
 I: butang kuasa besar, tengah, tengah | kilat, kiri dan kanan butang, aksen
 O: pancar apit I DON'T, garis ekor
 M: tegas, elektrik ; khalayak: umum
 
 #1-14 sindiran ikon-tengah segi4
-L: APPARENTLY/SP/gelembung berduri+L/S | I'M NOT ALLOWED TO/sn/-/K | ADOPT/SL/-/H | All the dogs/SKR/-/S | RUDE, BUT OKAY./sn/P/K
+L: APPARENTLY/SP/letupan komik bergaris+L/S | I'M NOT ALLOWED TO/sn/-/K | ADOPT/SL/-/H | All the dogs/SKR/-/S | RUDE, BUT OKAY./sn/P/K
 I: anjing menjeling dengan dua tapak kaki di atas garis, tengah, tengah
 O: pancar sisi, titik apit skrip, garis apit pil
 M: comel, lucu ; khalayak: pencinta anjing
@@ -107,7 +107,7 @@ O: pancar sisi, bintang dengan garis, garis ekor
 M: introvert, lucu ; khalayak: introvert
 
 #3-01 sindiran reben-bertindan segi4 kasar
-L: I HAVE IT ALL/SP/L/S | TOGETHER/SP/B/H | I JUST/sn/R/K | Forgot/SKR/S/H | WHERE I PUT IT/sn/R+L/K
+L: I HAVE IT ALL/SP/L/S | TOGETHER/SP/B/H | I JUST/sn/R/K | Forgot/SKR/S/H | WHERE I PUT IT/sn/R+lengkung turun/K
 I: pin lokasi dengan riak, bawah Forgot, aksen
 O: hati dengan garis, pancar sisi, bintang apit Forgot
 M: pelupa, lucu ; khalayak: ibu, umum
@@ -158,7 +158,7 @@ O: pancar sisi, garis apit, garis ekor berpusar
 M: manis tapi liar ; khalayak: wanita, ibu
 
 #3-10 sindiran ikon-tengah segi4
-L: WHATEVER/SP/R+L/S | LIFE THROWS/sn/L/K | AT YOU/sn/KH/K | Duck &/SKR/-/H | LET IT HIT/sn/R/K | SOMEONE ELSE/sn/L/K
+L: WHATEVER/SP/R+L/S | LIFE THROWS/sn/L/K | AT YOU/sn/kotak hitam bucu enam/K | Duck &/SKR/-/H | LET IT HIT/sn/R/K | SOMEONE ELSE/sn/lengkung turun/K
 I: itik bercermin mata hitam, tengah di atas skrip, tengah
 O: pancar sisi, bintang apit bawah
 M: selamba, lucu ; khalayak: umum
@@ -197,7 +197,7 @@ O: kilat apit atas, garis apit, garis ekor
 M: gim, introvert ; khalayak: peminat gim ; isu: ayat rosak (I'm not NO)
 
 #4-01 sindiran lencana-bulat bulat
-L: I'M NOT/sn/L/S | Perfect/SKR/S/H | SPECIAL/sn/L/S
+L: I'M NOT/sn/L/S | Perfect/SKR/S/H | SPECIAL/sn/lengkung turun/S
 I: mahkota, atas tengah, aksen
 O: bulatan berganda, titik, kilau 4 bucu
 M: cap comel ; khalayak: wanita ; isu: ayat rosak (I'm not perfect special)
@@ -230,7 +230,7 @@ O: garis tiga apit, pancar sisi NO
 M: degil ; khalayak: umum ; isu: ayat rosak (outside NO validation required)
 
 #4-07 sindiran lencana-bulat bulat
-L: I'M NOT/sn/L/S | Special/SKR/S/H | I'M JUST/sn/-/K | A LIMITED EDITION/sn/L/S
+L: I'M NOT/sn/L/S | Special/SKR/S/H | I'M JUST/sn/-/K | A LIMITED EDITION/sn/lengkung turun/S
 I: hati kecil, atas huruf l, aksen
 O: bulatan tunggal, tiga bintang atas, bintang sisi, garis ekor
 M: cap comel ; khalayak: umum
@@ -241,7 +241,7 @@ O: pancar sisi, anak panah bulu apit Today, garis ekor
 M: malas layan ; khalayak: dewasa
 
 #4-09 sindiran lencana-bulat bulat
-L: I'M NOT/sn/L/S | Special/SKR/S/H | I'M LIMITED/sn/L/S
+L: I'M NOT/sn/L/S | Special/SKR/S/H | I'M LIMITED/sn/lengkung turun/S
 I: mahkota, atas tengah, aksen
 O: bulatan berganda (skrip memecah bulatan), bintang, titisan pancar bawah skrip
 M: cap comel ; khalayak: umum
@@ -293,7 +293,7 @@ O: hati dengan garis, pancar sisi, lengkung laju bawah bola
 M: sokongan keluarga ; khalayak: keluarga pemain
 
 #7-02 football lencana-bulat bulat
-L: TURKEY/sn/R/K | AND/sn/R/K | FOOTBALL/SP/L/H | AND/sn/-/K | PUMPKIN PIE/sn/L/S
+L: TURKEY/sn/R/K | AND/sn/R+=/K | FOOTBALL/SLB/L/H | AND/sn/-/K | PUMPKIN PIE/sn/L/S
 I: ayam belanda, atas tengah, atas | daun maple, kiri dan kanan atas, aksen | bola, bawah tengah, aksen
 O: bingkai bulat garis, garis apit
 M: Thanksgiving, musim luruh ; khalayak: keluarga, musim Thanksgiving
@@ -347,7 +347,7 @@ O: garis apit AND, pancar sisi bola, garis ekor, bintang apit DAD
 M: bapa bangga ; khalayak: bapa pemain
 
 #7-11 football reben-bertindan segi4
-L: MY FAVORITE/HT/L/S | PLAYER/sn/RG/S | CALL ME/SB/-/H | Mom/SKR/-/H
+L: MY FAVORITE/HT/L/S | PLAYER/sn/R/S | CALL ME/SB/-/H | Mom/SKR/-/H
 O: hati dengan pancar, dua bintang, garis ekor, hati kanan
 M: ibu bangga ; khalayak: ibu pemain ; isu: tatabahasa (CALL ME, patut CALLS ME)
 
@@ -393,7 +393,7 @@ O: pancar atas, kilau 4 bucu, bintang tengah, garis ekor
 M: main kata ; khalayak: umum, sukan
 
 #8-03 football reben-bertindan segi4
-L: LIFE IS/SLB/R+L/K | Better/SKR/-/H | WITH/SLB/-/S | Football/SKR/-/H
+L: LIFE IS/WST/R+L/K | Better/SKR/-/H | WITH/WST/-/S | Football/SKR/-/H
 I: bola dengan garis laju, tengah di bawah WITH, tengah
 O: pancar sisi, hati apit WITH, garis apit, garis ekor
 M: ceria ; khalayak: peminat
@@ -429,7 +429,7 @@ O: bingkai perisai garis, bintang apit IS MY, garis ekor
 M: lencana sukan ; khalayak: peminat
 
 #8-09 football bertindan segi4 senget kasar
-L: LET'S/sn/R/K | CUDDLE/BC/S/H | AND/sn/-/K | WATCH/SP/KG/S | Football/SKR/-/H
+L: LET'S/sn/R/K | CUDDLE/BC/S/H | AND/sn/-/K | WATCH/SP/KH+=/S | Football/SKR/-/H
 I: bola, kanan bawah, aksen
 O: pancar atas, kilau 4 bucu sisi, garis apit AND, garis ekor, hati
 M: pasangan, selesa ; khalayak: pasangan
@@ -447,7 +447,7 @@ O: pancar atas, garis apit ALWAYS, kilat apit ON
 M: garang, bersaing ; khalayak: pemain
 
 #8-12 football reben-bertindan segi4
-L: PROUD/SLB/L/H | FOOTBALL/SLB/-/H | DAD/BC/R/H
+L: PROUD/SLB/L/H | FOOTBALL/SLB/-/H | DAD/BC/diapit dua hujung reben/H
 I: bola, tengah, tengah
 O: bintang atas dengan pancar, garis laju apit bola, garis ekor, bintang bawah
 M: bapa klasik ; khalayak: bapa pemain
@@ -465,7 +465,7 @@ O: pancar sisi, garis apit, sapuan berus, tiga bintang
 M: semangat pasukan ; khalayak: pasukan, jurulatih
 
 #8-15 football perisai perisai
-L: PROUD/SLB/-/H | football/SKR/-/H | SISTER/SLB/-/H
+L: PROUD/SP/-/H | football/SKR/-/H | SISTER/SP/-/H
 I: bola dengan garis laju, atas kanan, atas
 O: bingkai heksagon garis, pancar sisi, hati sisi, hati bawah
 M: lencana ; khalayak: kakak atau adik pemain
@@ -477,13 +477,13 @@ O: kilau 4 bucu, titik, sapuan berus bawah
 M: perayaan, sukan ; khalayak: peminat, musim cuti
 
 #8-17 football reben-bertindan segi4
-L: FALL/SLB/L/H | MEANS/SLB/RG/S | FOOTBALL/SLB/-/H | Y'all/SKR/-/H
+L: FALL/SLB/L/H | MEANS/SLB/R/S | FOOTBALL/SLB/-/H | Y'all/SKR/-/H
 I: bola, tengah di bawah FOOTBALL, aksen | daun maple, apit FALL, aksen
 O: garis laju, kilau 4 bucu apit, garis ekor
 M: musim luruh ; khalayak: peminat
 
 #8-18 football ikon-tengah segi4 kasar
-L: LITTLE/SLB/L/S | BROTHER/SLB/-/H | BIGGEST/BK/S/H | FAN/VARO/RG/S
+L: LITTLE/SLB/L/S | BROTHER/SLB/-/H | BIGGEST/BK/S/H | FAN/VARO/-/S
 I: bola, tengah, tengah
 O: pancar atas, bintang, lengkung, hati apit FAN
 M: adik-beradik ; khalayak: adik pemain ; nota: varian 8-05
@@ -507,19 +507,19 @@ O: garis ekor
 M: romantik ; khalayak: teman wanita pemain
 
 #8-22 football ikon-ganti-huruf segi4
-L: FAITH/HT/L/H | FAMILY/SP/-/H | football/SKR/-/H
+L: FAITH/SLB/L/H | FAMILY/SP/-/H | football/SKR/-/H
 I: salib, ganti huruf T (FAITH), ganti-huruf | bola, bawah tengah, aksen
 O: pancar sisi, hati tengah, garis ekor, hati apit bola
 M: agama, keluarga ; khalayak: Kristian, keluarga
 
 #8-23 football reben-bertindan segi4
-L: MY/SLB/R/K | FAVORITE/SLB/-/H | PLAYERS/SLB/KG/H | CALL ME/SLB/-/K | MOM/VARO/-/H
+L: MY/SLB/R/K | FAVORITE/SLB/-/H | PLAYERS/SLB/KH/H | CALL ME/SLB/-/K | MOM/VARO/-/H
 I: bola, atas tengah, atas | hati, ganti huruf O (MOM), ganti-huruf
 O: bintang apit bola, pancar sisi, garis apit, hati bawah
 M: ibu bangga ; khalayak: ibu pemain
 
 #8-24 football bertindan segi4 senget kasar
-L: HUSTLE/BK/S/H | HIT/BK/S/H | &/sn/-/K | NEVER/BK/S/H | QUIT/BK/S/H
+L: HUSTLE/BK/S/H | HIT/SLB/-/H | &/sn/-/K | NEVER/BK/S/H | QUIT/BK/S/H
 I: bola, kanan bawah, aksen
 O: bintang apit HIT, sapuan berus, bintang bawah
 M: kasar, motivasi ; khalayak: pemain, jurulatih ; nota: hampir satu font sahaja
@@ -531,7 +531,7 @@ O: garis laju apit, bintang apit VIBES, bucu perisai bawah dengan bintang
 M: lencana ; khalayak: peminat
 
 #9-01 football panel-ikon segi4 kasar
-L: PEACE/SP/-/S | LOVE/BC/S/H | FOOTBALL/SP/-/S
+L: PEACE/SP/-/S | LOVE/BC/S+=/H | FOOTBALL/SP/=/S
 I: tangan isyarat peace (putih dalam panel hitam), panel kiri, panel | hati berjahitan bola, panel tengah, panel | bola, panel kanan, panel
 O: tiga panel hitam bertepi kasar, hati kecil dalam panel, titik pemisah, hati dengan garis lengkung bawah
 M: retro, grunge ; khalayak: peminat ; nota: semua teks dalam satu baris mendatar
@@ -620,13 +620,13 @@ O: hati kecil apit, pancar sisi, garis ekor, anak panah berhati bawah
 M: ibu, boho ; khalayak: ibu pemain
 
 #9-16 football ikon-tengah segi4
-L: LOUD AND PROUD/SLB/L/S | Football/SKR/-/H | MOM/VARO/RG/S
+L: LOUD AND PROUD/SLB/L/S | Football/SKR/-/H | MOM/VARO/R/S
 I: bola berhati, tengah, tengah
 O: bintang apit bola, pancar sisi, garis ekor, jalur garis apit MOM
 M: ibu bangga ; khalayak: ibu pemain
 
 #10-01 football bertindan segi4
-L: MY/SLB/-/K | FAVORITE/SP/L/H | PLAYER/SLB/-/H | Calls Me Bro/SKR/-/S
+L: MY/SLB/-/K | FAVORITE/SLB/L/H | PLAYER/SLB/-/H | Calls Me Bro/SKR/-/S
 I: bola kecil, atas tengah, atas
 O: garis apit bola, bintang apit MY, bintang tengah, pancar sisi PLAYER, garis ekor
 M: abang bangga ; khalayak: abang atau adik lelaki pemain
@@ -644,13 +644,13 @@ O: bintang dalam reben, garis apit, bintang, garis ekor
 M: sokongan ; khalayak: keluarga pemain
 
 #10-04 football lengkung-atas segi4
-L: I'M JUST/SL/L/S | HERE/SL/B/H | FOR THE/sn/-/K | Snacks/SKR/-/H
+L: I'M JUST/SLB/L/S | HERE/SL/B/H | FOR THE/sn/-/K | Snacks/SKR/-/H
 I: bola kecil, bawah tengah, aksen
 O: garis lengkung atas, bintang, garis apit, kilau, bintang apit bola, lengkung bawah
 M: lucu, bukan peminat ; khalayak: penonton santai
 
 #10-05 football ikon-ganti-huruf segi4 senget kasar
-L: LOVE/BK/S/H | YOU/BK/S/H | TO THE/SLB/-/K | END ZONE/SLB/PH/H | AND BACK/SP/-/S
+L: LOVE/BK/S/H | YOU/BK/S/H | TO THE/SLB/KH/K | END ZONE/SLB/PH/H | AND BACK/SP/-/S
 I: bola bentuk hati, ganti huruf O (LOVE), ganti-huruf
 O: bintang atas, pancar sisi, hati, garis apit TO THE, bintang sisi, bintang bawah
 M: penyayang ; khalayak: ibu, pasangan pemain
@@ -668,7 +668,7 @@ O: bintang apit bola, garis apit AND
 M: musim luruh ; khalayak: peminat
 
 #10-08 football reben-bertindan segi4 kasar
-L: FALL/SLB/S/H | MEANS/SLB/RG/S | FOOTBALL/BK/S/H
+L: FALL/SLB/S/H | MEANS/SLB/R/S | FOOTBALL/BK/S/H
 I: daun maple, kiri atas, aksen | daun oak, kanan atas, aksen | bola, bawah tengah, aksen
 O: kilau, hati tengah, garis laju apit bola
 M: musim luruh ; khalayak: peminat
@@ -692,14 +692,14 @@ O: pancar sisi FAMILY, bintang dengan garis apit FOOD, dahan daun apit faith, ha
 M: rumah, keluarga ; khalayak: keluarga
 
 #10-12 football reben-bertindan segi4 kasar
-L: IT'S A/SLB/R+L/K | BEAUTIFUL/SLB/L/H | DAD/VARO/KH/H | FOR/SLB/perisai kecil garis/K | FOOTBALL/BK/S/H
+L: IT'S A/SLB/R+L/K | BEAUTIFUL/SP/L/H | DAD/VARO/KH/H | FOR/SLB/lencana hitam kecil/K | FOOTBALL/BK/S/H
 I: bola, kiri dan kanan FOR, aksen | bintang, dalam huruf A (DAD), ganti-huruf
 O: bintang apit reben, garis laju apit DAD, sapuan berus bawah
 M: sporty ; khalayak: bapa pemain ; isu: ayat rosak (DAD, patut DAY)
 
 #10-13 football bertindan segi4 kasar taksimetri
-L: EAT/SL/-/H | SLEEP/SL/-/H | Football/SKR/S/H | REPEAT/SLB/-/S
-I: garpu, dalam huruf T (EAT), ganti-huruf | helmet, kiri bawah, aksen | bola kecil, bawah tengah, aksen
+L: EAT/SL/-/H | SLEEP/SL/-/H | Football/SKR/S/H | REPEAT/SL/-/S
+I: garpu, ditebuk dalam huruf A (EAT), ganti-huruf | helmet, kiri bawah, aksen | bola kecil, bawah tengah, aksen
 O: bintang, pancar kanan atas, sapuan berus, garis laju, bintang apit bola
 M: peminat tegar ; khalayak: pemain, peminat
 
@@ -734,7 +734,7 @@ O: pancar atas bola, kilau 4 bucu apit, hati bawah
 M: santai ; khalayak: peminat
 
 #10-19 football reben-bertindan segi4 kasar
-L: MY FAVORITE/SLB/R+L/K | FOOTBALL/SLB/L/H | player/SKR/-/S | CALLS ME/sn/-/K | MOM/BK/S/H
+L: MY FAVORITE/SLB/R+L/K | FOOTBALL/SLB/L/H | player/SKR/-/S | CALLS ME/sn/KH/K | MOM/BK/S/H
 I: bola kecil, tengah di atas MOM, aksen
 O: tiga bintang, garis apit CALLS ME, hati apit, pancar sisi, hati bawah
 M: ibu bangga ; khalayak: ibu pemain
@@ -746,7 +746,7 @@ O: pancar apit MY, bintang apit bola, garis laju, hati bawah
 M: emosi ; khalayak: ibu, pasangan pemain
 
 #10-21 football bertindan segi4
-L: MY/SLB/-/K | FAVORITE/WST/bergaris luar/H | PLAYER/SLB/-/H | CALLS ME/sn/R/K | Grandma/SKR/-/H
+L: MY/SLB/R/K | FAVORITE/WST/bergaris luar/H | PLAYER/SLB/-/H | CALLS ME/sn/R/K | Grandma/SKR/-/H
 I: bola, atas tengah, atas
 O: lengkung laju apit bola, hati apit MY, garis apit, hati kecil, pancar sisi
 M: vintaj western ; khalayak: nenek pemain
