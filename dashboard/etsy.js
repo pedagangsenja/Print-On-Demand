@@ -55,6 +55,7 @@ window.ETSY_FREQ.forEach(([id, field, sep]) => dash.calc(`etsy_f_${id}`, {
   /*COLS*/
   const COLS = [
     ["tema", "Tema", "ringkas ayat", ""],
+    ["pemerhatian", "Pemerhatian", "ringkas tiru", "xw"],
     ["susunan", "Jenis susunan", "ringkas susun", ""],
     ["kunci_gaya", "Kunci gaya (idea utama)", "ringkas tiru", "w"],
     ["baris", "Baris demi baris: font (calon) · saiz · rawatan · kesan · peranan", "teks", "lines"],
@@ -217,7 +218,7 @@ window.ETSY_FREQ.forEach(([id, field, sep]) => dash.calc(`etsy_f_${id}`, {
     const words = F.q.toLowerCase().split(/\s+/).filter(Boolean);
     if (words.length) {
       const hay = [r.id, r.ayat, r.ikon, r.jenis_font, r.font_calon, r.hiasan, r.bekas, r.rasa, r.khalayak, r.susunan,
-        r.nota, r.formula, r.kunci_gaya, r.kesan_butiran, r.nada].join(' ').toLowerCase();
+        r.nota, r.formula, r.kunci_gaya, r.kesan_butiran, r.nada, r.pemerhatian].join(' ').toLowerCase();
       if (!words.every((w) => hay.includes(w))) return false;
     }
     return true;
@@ -288,7 +289,7 @@ window.ETSY_FREQ.forEach(([id, field, sep]) => dash.calc(`etsy_f_${id}`, {
     const fig = el('div', 'etsy-d-img'); const src = POD.blob(r.img);
     if (src) { const img = el('img'); img.src = src; img.alt = `Design ${r.id}: ${r.ayat}`; fig.appendChild(img); if (POD.likeOn) POD.likeOn(fig, src, { cap: `Etsy ${r.id}: ${r.ayat}`, gaya: r.susunan, teks: r.ayat }); }
     const sum = el('div', 'etsy-d-sum');
-    [['Kunci gaya', r.kunci_gaya], ['Jenis susunan', r.susunan], ['Tangga saiz', r.tangga_saiz], ['Formula ayat', r.formula], ['Kesukaran tiru', `${r.kesukaran} (skor ${r.skor_tiru})`]]
+    [['Pemerhatian', r.pemerhatian], ['Kunci gaya', r.kunci_gaya], ['Jenis susunan', r.susunan], ['Tangga saiz', r.tangga_saiz], ['Formula ayat', r.formula], ['Kesukaran tiru', `${r.kesukaran} (skor ${r.skor_tiru})`]]
       .forEach(([k, v]) => { const p = el('p'); p.append(el('b', '', `${k}: `), document.createTextNode(String(v == null || v === '' ? '—' : v))); sum.appendChild(p); });
     top.append(fig, sum); box.appendChild(top);
     box.appendChild(el('h4', '', 'Baris demi baris'));

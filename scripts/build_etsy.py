@@ -4,6 +4,7 @@
 Input:
   data/etsy/designs.txt        analisis setiap design (ditulis tangan, lihat kepala fail)
   data/etsy/designs_extra.txt  lapisan kedua: saiz baris, gaya ikon, kesan huruf, formula ayat, kunci gaya
+  data/etsy/pemerhatian.json   pemerhatian setiap design, ditulis penyemak bebas (semakan ketiga)
   data/etsy/crop_metrics.json  ukuran potongan (scripts/etsy_crop.py)
   data/etsy/blobs.txt          id gambar yang dimuat naik ke dashboard
   data/etsy/font_calon.json    lesen font calon (disalin daripada senarai induk font dashboard)
@@ -48,11 +49,12 @@ RAWATAN = {
     "RS": "reben skrol", "KH": "kotak hitam", "KG": "kotak garis", "P": "pil",
     "B": "sapuan berus hitam", "PH": "plak hitam", "=": "sebaris dengan baris sebelumnya",
 }
-BUKAN_BEKAS = {"-", "L", "S", "=", "lengkung turun", "bergaris potong", "bergaris luar"}
+KOD_BEKAS = {"R", "RG", "RS", "KH", "KG", "P", "B", "PH"}
+KATA_BEKAS = ("reben", "kotak", "pil", "plak", "gelembung", "letupan", "lencana", "hati", "buku", "pensel", "perisai")
 PERANAN = {"H": "kata utama", "S": "sokongan", "K": "kata sambung"}
 PERANAN_KOD = {"H": "U", "S": "S", "K": "K"}
 SUSUNAN = {
-    "reben-bertindan": "Reben bertindan", "bertindan": "Bertindan tanpa reben", "lencana-bulat": "Lencana bulat",
+    "reben-bertindan": "Bertindan dengan reben atau kotak", "bertindan": "Bertindan tanpa bekas", "lencana-bulat": "Lencana bulat",
     "perisai": "Perisai", "ikon-tengah": "Ikon di tengah", "ikon-atas": "Ikon di atas", "ikon-sisi": "Ikon di sisi",
     "skrip-dominan": "Skrip dominan", "ikon-ganti-huruf": "Ikon dalam kata", "bingkai-ikon": "Ikon sebagai bingkai",
     "dua-baris": "Dua baris", "lengkung-atas": "Lengkung atas", "papan-tanda": "Papan tanda",
@@ -206,6 +208,7 @@ def main():
     extra = parse_extra(os.path.join(SRC, "designs_extra.txt"))
     metrics = {r["id"]: r for r in json.load(open(os.path.join(SRC, "crop_metrics.json")))}
     blobs = dict(l.split() for l in open(os.path.join(SRC, "blobs.txt")) if l.strip())
+    obs = json.load(open(os.path.join(SRC, "pemerhatian.json"), encoding="utf-8"))
 
     calon_path = os.path.join(SRC, "font_calon.json")
     semua_font = uniq([f for v in FONT.values() for f in v[2]] + EXTRA_FONTS)
@@ -248,7 +251,8 @@ def main():
         huruf = [c for c in ayat if c.isalpha()]
         jenis_font = uniq(l["font"] for l in lines)
         calon = uniq(f"{l['font']}: " + (d["L"][i]["khas"] or " / ".join(FONT[l["_kod"]][2][:2])) for i, l in enumerate(lines))
-        bekas = uniq(RAWATAN.get(r, r) for l in lines for r in l["_r"] if r not in BUKAN_BEKAS)
+        bekas = uniq(RAWATAN.get(r, r) for l in lines for r in l["_r"]
+                     if r in KOD_BEKAS or (r not in RAWATAN and any(k in r for k in KATA_BEKAS)))
         arah = uniq(("naik" if r == "L" else "turun") for l in lines for r in l["_r"] if r in ("L", "lengkung turun"))
         utama = [l for l in lines if l["_p"] == "H"]
         ked = uniq(("atas" if i < n / 3 else "tengah" if i < 2 * n / 3 else "bawah") for i, l in enumerate(lines) if l["_p"] == "H")
@@ -290,7 +294,7 @@ def main():
         fam = keluarga[x["formula"]]
         rows.append({
             "id": d["id"], "img": f"/_blob/{blobs[d['id']]}", "tema": TEMA[d["tema"]], "listing": LISTING[d["tema"]],
-            "penjual": "ArtfulCraftsCreators",
+            "penjual": "ArtfulCraftsCreators", "pemerhatian": obs[d["id"]],
             # teks dan font
             "ayat": ayat or "(tiada teks)", "bil_perkataan": len(ayat.split()), "bil_aksara": len(huruf),
             "huruf_besar_pct": round(100 * sum(1 for c in huruf if c.isupper()) / len(huruf)) if huruf else 0,
