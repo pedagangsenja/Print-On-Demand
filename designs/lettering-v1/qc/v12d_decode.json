@@ -1,0 +1,41 @@
+{
+ "nota": "Larian v1.2 dengan aliran baharu (decode dahulu, QC A + QC B), 28 Nov 2026. Kad K24 (daripada rekod decode IMG_5840), ayat T 'Trust Your Pace', seed 42 dan 7, CPU, hitam putih. QC A = semakan mata Claude pada helaian (bukti lemah): ok = G1 ejaan + G2 tiada teks rawak + G3 tiada cacat. Nilai ketiga = id aset dashboard (kosong: belum dimuat naik, menunggu pilihan A atau SNC). QC B (skor persamaan SK10) dalam qc/v12d_decode_sk10.json.",
+ "v12d-decode": {
+  "moss": {
+   "K24T_s42": [
+    true,
+    "Tepi strok berus kering (rujukan licin); tiada ekor mendatar pada 'Trust' dan 'your'; skor persamaan SK10 85.2",
+    ""
+   ],
+   "K24T_s7": [
+    true,
+    "Tepi strok berus kering, lebih kasar; strok lebih nipis daripada rujukan; skor persamaan SK10 85.6",
+    ""
+   ]
+  },
+  "ernie": {
+   "K24T_s42": [
+    true,
+    "Garis bawah berasingan di bawah 'Pace' (rujukan: ekor bersambung dengan huruf); tepi berus kering; skor persamaan SK10 79.3",
+    ""
+   ],
+   "K24T_s7": [
+    true,
+    "Garis bawah berasingan di bawah 'Pace'; blok condong kira-kira 7 darjah (rujukan hampir mendatar); tepi berus kering; skor persamaan SK10 74.9",
+    ""
+   ]
+  },
+  "klein3": {
+   "K24T_s42": [
+    true,
+    "Sapuan berasingan di bawah setiap baris; tekstur berus paling kuat; blok condong kira-kira 6 darjah; skor persamaan SK10 72.3",
+    ""
+   ],
+   "K24T_s7": [
+    true,
+    "Sapuan berasingan di bawah setiap baris; tekstur berus paling kuat; blok condong kira-kira 7 darjah; skor persamaan SK10 76.1",
+    ""
+   ]
+  }
+ }
+}
