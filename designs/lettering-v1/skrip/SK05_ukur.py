@@ -92,10 +92,10 @@ def baris(blok, sudut):
     return [round((b - a) / jumlah * 100, 1) for a, b in gab] if jumlah else []
 
 
-def ukur(rgb):
+def ukur(rgb, min_bahagian=0.0005):
     """Semua ukuran satu gambar. Peratus ruang tepi dikira daripada lebar (kiri, kanan) dan tinggi (atas, bawah)."""
     h, w = rgb.shape[:2]
-    blok, semua = topeng(rgb)
+    blok, semua = topeng(rgb, min_bahagian=min_bahagian)
     ys, xs = np.nonzero(blok)
     if len(xs) == 0:
         return dict(w=w, h=h, kosong=True)

@@ -312,5 +312,66 @@
   "selepas": "3/5",
   "keputusan": "kalah",
   "nota": "Dinilai semula atas rekod gabungan (nifty-lovelace + sleepy-edison): kalah, sama seperti kedua-dua sesi."
+ },
+ {
+  "tarikh": "2026-11-28",
+  "model": "zturbo",
+  "rev_dari": "r1",
+  "rev_ke": "r2",
+  "ubahan": "had_positif",
+  "kelas": [
+   "ejaan",
+   "rawak"
+  ],
+  "design": "K16C, K17Z",
+  "sebelum": "1/5",
+  "selepas": "2/5",
+  "keputusan": "menang",
+  "nota": "Had positif tanpa perkataan berisiko; K16C 0/3 -> 1/3, K17Z 1/2 -> 1/2; masih NEEZ / EED"
+ },
+ {
+  "tarikh": "2026-11-28",
+  "model": "ernie",
+  "rev_dari": "r1",
+  "rev_ke": "r2",
+  "ubahan": "hiasan_tepat",
+  "kelas": [
+   "hiasan_lebih"
+  ],
+  "design": "K14X",
+  "sebelum": "2/3",
+  "selepas": "3/3",
+  "keputusan": "menang",
+  "nota": "Clean empty background, no other shapes, lines or borders; jalur tepi hilang"
+ },
+ {
+  "tarikh": "2026-11-28",
+  "model": "klein3",
+  "rev_dari": "r1",
+  "rev_ke": "r2",
+  "ubahan": "hiasan_kedudukan",
+  "kelas": [
+   "hiasan_tempat"
+  ],
+  "design": "K14X",
+  "sebelum": "3/3, bersih 0",
+  "selepas": "3/3",
+  "keputusan": "menang",
+  "nota": "Bekas spanning the full width of the block (kecuali small); reben penuh lebar 3/3; menang ikut seri bersih (b1.3)"
+ },
+ {
+  "tarikh": "2026-11-28",
+  "model": "klein4b",
+  "rev_dari": "r1",
+  "rev_ke": "r1",
+  "ubahan": "frasa_bentuk",
+  "kelas": [
+   "bentuk"
+  ],
+  "design": "K15E, K16C",
+  "sebelum": "6/6, bersih 1",
+  "selepas": "6/6, bersih 1",
+  "keputusan": "kalah",
+  "nota": "Lebar baris masih tidak sama; huruf masih kurang kasar; dibuang dari UJI"
  }
 ]

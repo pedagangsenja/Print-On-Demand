@@ -123,5 +123,22 @@
   "nota": "Selepas SK01 memutar, blok diukur semula dan baki sudut dibetulkan, paling banyak 2 kali lagi. Sebab: ukuran sudut pertama boleh tersasar (skrip berswash; nilai di had julat SK05)",
   "bukti": "2 imej: 0/2 -> 2/2 lulus semakan akhir (K9B 13.4 -> 15.2, rujukan 15.x; K7M 0.0 -> 13.6, rujukan 12.4); semakan mata: kedua-dua condong naik ke kanan. Bukti lemah",
   "hasil": "betul/v12b-cpu/klein3/K9B_s123 dan betul/v12c-uji-bentuk/ernie/K7M_s123 dijana semula"
+ },
+ {
+  "sk": "SK02",
+  "ubahan": "had_ikut_skala",
+  "kelas": "ruang_tepi",
+  "dari": "5b v1.1",
+  "ke": "5b v1.2",
+  "imej": [
+   "v12-cpu-k14/klein4b/K14X_s42",
+   "v12-cpu-k14/zturbo/K14X_s42",
+   "v12-cpu-k14/zturbo/K14X_s7"
+  ],
+  "keputusan": "menang",
+  "tarikh": "2026-11-27",
+  "nota": "betulkan.py: had bintik ukur (SK05 min_bahagian) didarab luas matriks selepas setiap pembetulan, supaya bahagian kecil (sinar K9) yang sama dikira sebelum dan selepas skala. Cubaan pertama (hiasan rapat dalam SK05 sendiri) dibatalkan: 35/158 kotak berubah termasuk 3 rujukan upload",
+  "bukti": "56 imej lulus QC larian K14-K18: lulus 5b 53/56 -> 56/56; 51 imej sama piksel demi piksel; 5 imej K14X berubah (3 sasaran + moss s7, s123 kini dipusat), ejaan tidak berubah (semakan mata). Bukti lemah: satu batch, satu kad",
+  "hasil": "betul/v12-cpu-k14 dijana semula dengan 5b v1.2"
  }
 ]

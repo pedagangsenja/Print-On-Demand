@@ -66,7 +66,7 @@ Sebab (bukti lemah): AI Image Test 2, 150 imej: gaya satu dakwat (K1, K4) 40/60 
 - Aturan model hanya menentukan CARA MENULIS isi itu. Aturan model tidak boleh menambah, membuang atau menukar ciri gaya.
 - Pembina ialah kod: kad + Spesifikasi Teks + model yang sama mesti menghasilkan prompt yang sama.
 - Model yang ada aturan sendiri (3.4–3.10) WAJIB memakai aturan itu. Model tanpa aturan memakai rangka am (3.3) sehingga aturannya ditulis (3.12).
-- Tujuh model ada aturan: lima sudah diuji (3.4–3.8, rev r1; FLUX 3 Image Klein lulus ujian kelayakan 27 Nov 2026) dan dua ditulis daripada sumber rasmi sahaja, belum diuji (3.9–3.10, rev r0). Aturan r0 mesti lulus ujian kelayakan (3.12) sebelum dipakai untuk design sebenar.
+- Tujuh model ada aturan: lima sudah diuji (3.4–3.8, rev r1 / r2; FLUX 3 Image Klein lulus ujian kelayakan 27 Nov 2026) dan dua ditulis daripada sumber rasmi sahaja, belum diuji (3.9–3.10, rev r0). Aturan r0 mesti lulus ujian kelayakan (3.12) sebelum dipakai untuk design sebenar.
 - Semua aturan belajar selepas setiap batch imej (3.15): hasil QC, ♥ dan tolak pengguna menentukan ubahan seterusnya; ubahan yang menang terus menaikkan rev.
 - Sebab (bukti lemah: kad K3 × ayat H "Patience Builds What Hurry Breaks", 3 seed, CPU, semakan mata, 26 Nov 2026). Imej ejaan betul:
 
@@ -129,7 +129,7 @@ Dipakai untuk model tanpa aturan sendiri, dan sebagai pembanding dalam ujian kel
 - **Tetapan:** bf16 asal, 4 langkah, guidance 1.0, tiada penambah prompt.
 - **Cacat diketahui (r1):** garis percikan dilukis di dalam label pada 2/3 imej. Ubahan pertama untuk dicuba: nyatakan `in the black space to the left and to the right of the label`.
 
-### 3.5 Aturan Z-Image Turbo (rev r1; had positif r2 dipulangkan 28 Nov 2026 selepas rekod semua sesi digabung)
+### 3.5 Aturan Z-Image Turbo (rev r2 versi lucid-galileo, 28 Nov 2026; had positif versi nifty-lovelace kalah atas rekod gabungan)
 - **Sumber:** perbincangan rasmi pasukan Z-Image di Hugging Face dan templat penambah prompt mereka (`pe.py`): prompt panjang dan terperinci; teks tepat dalam petikan berganda; untuk poster, huraikan font dan susun atur; tiada negative prompt; had 512 token (rasmi). Julat 80–250 perkataan (pihak ketiga).
 - **Bentuk:** huraian objektif yang panjang, seperti kapsyen gambar. Ayat penyata ("The poster contains…", "Line two reads…"), bukan arahan ("make", "draw").
 - **Turutan ayat:**
@@ -140,12 +140,12 @@ Dipakai untuk model tanpa aturan sendiri, dan sebagai pembanding dalam ujian kel
   5. Setiap baris BERNOMBOR (D + E): `Line one, at the top, reads "PATIENCE" in very large, heavy, condensed bold sans-serif capital letters.` … `Line five, at the bottom, reads "BREAKS" …, and it is the tallest line of the poster.`
   6. Hiasan dengan kedudukan tepat (F): `three short white dash strokes radiate from the left side of the label and three from the right side`.
   7. Penutup (H).
-- **Had ditulis sebagai ayat POSITIF, bukan "no …":** `The only text in the image is these five words, each appearing once. The image uses only pure white and pure black, flat fills, sharp edges, and a clean empty background.`
+- **Had ditulis sebagai ayat POSITIF, bukan "no …" (r2, `had_positif`):** `The image shows exactly these five words, each appearing once and spelled exactly as quoted, in pure white on pure black, and every other area is plain empty black` + (` apart from <isi latar kad>`) + `.` Tiada perkataan berisiko (label, logo, signature). r1: `The only text in the image is these five words, each appearing once. The image uses only pure white and pure black, …`
 - **Panjang:** 80–250 perkataan. Contoh yang lulus: 249 perkataan.
 - **Tetapan:** GGUF Q8_0, 9 langkah, guidance 0.0, tiada penambah prompt.
 - **Cacat diketahui (r1):** percikan hanya di kanan label; ruang tepi sempit (dibetulkan skrip, 5b). Rangka am juga lulus ejaan 3/3, jadi aturan ini mengemaskan hiasan, bukan ejaan.
 
-### 3.6 Aturan ERNIE-Image-Turbo (rev r2)
+### 3.6 Aturan ERNIE-Image-Turbo (rev r3, 28 Nov 2026 = r2 ketebalan huruf sleepy-edison + hiasan_tepat lucid-galileo; gabungan belum diuji bersama)
 - **Sumber:** dokumen diffusers: penambah prompt (PE) hidup secara lalai dan "may reduce instruction-following accuracy" (rasmi). Kad model: skor teks OneIG-EN 0.9488 tanpa PE lawan 0.9666 dengan PE; GENEval keseluruhan 0.8667 tanpa PE lawan 0.8510 dengan PE (rasmi).
 - **Dua peringkat:** (a) pembina menulis prompt mentah yang pendek; (b) PE rasmi mengembangkannya; imej dijana daripada prompt yang dikembangkan.
 - **Prompt mentah, satu perenggan pendek (contoh yang lulus: 94 perkataan):**
@@ -157,6 +157,7 @@ Dipakai untuk model tanpa aturan sendiri, dan sebagai pembanding dalam ujian kel
 - **PE dijalankan SEKALI bagi setiap prompt, seed 42.** Hasil yang sama dipakai untuk semua seed imej, supaya seed hanya mengubah imej, bukan prompt. PE boleh menulis dalam bahasa Cina; itu dibenarkan.
 - **Semakan WAJIB pada hasil PE sebelum jana:** setiap perkataan Spesifikasi Teks ada, ejaan dan huruf besar / kecil tepat; turutan baris sama; tiada perkataan Latin lain dalam petikan. PE boleh menyebut semula sesuatu perkataan sebagai rujukan (contoh K3H: 'PATIENCE' dua kali); itu dibenarkan.
 - **Jika semakan gagal:** jalankan PE semula dengan seed 7, kemudian 123. Masih gagal: PE dimatikan, rangka am (3.3) dipakai, dan hal ini direkod.
+- **Ayat hiasan tepat (r2, `hiasan_tepat`), sebelum blok H + G:** `Clean empty background` + (` apart from <isi latar kad>`) + `, no other shapes, lines or borders than those described.`
 - **Log:** prompt mentah, prompt dikembangkan, seed PE.
 - **Tetapan:** GGUF Q8_0, 8 langkah, guidance 1.0. PE dimuat dan dijalankan berasingan sebelum model imej (jimat RAM); penjanaan memakai `use_pe=False` dengan prompt yang sudah dikembangkan.
 - **Cacat diketahui (r1):** seed 123 meragukan pada "Builds"; bintang yang tidak diminta; label lebih besar daripada rujukan. Rangka am tanpa PE mengulang perkataan label ("WHAT WHAT") pada 3/3 imej.
@@ -182,7 +183,7 @@ Dipakai untuk model tanpa aturan sendiri, dan sebagai pembanding dalam ujian kel
 - **Tetapan:** bf16 asal, 8 langkah, tanpa CFG, LoRA `lodestones/MOSS-Image-SFT-8-steps-dmd` × 0.7, templat sembang "thinking" hidup.
 - **Cacat diketahui (r1):** blok tidak condong, kerana kotak JSON tegak. Condong dibuat oleh skrip (5b), bukan oleh prompt.
 
-### 3.8 Aturan FLUX 3 Image Klein (rev r1: lulus ujian kelayakan 27 Nov 2026)
+### 3.8 Aturan FLUX 3 Image Klein (rev r2, 28 Nov 2026; r1: lulus ujian kelayakan 27 Nov 2026)
 - **Rev r0 → r1:** Ujian kelayakan (27 Nov 2026, K3K, K7M, K8G, seed 42, 7, 123, CPU, semakan mata, bukti lemah): aturan 3.8 9/9 lawan rangka am 6/9 (rangka am: 'KEEP GOING' tanpa jarak pada 3/3 seed K8G). Teks aturan tidak berubah; hanya rev naik (3.15).
 - **Sumber (rasmi):** kad model `black-forest-labs/flux-3-image-klein` dan arahan penambah prompt rasminya (`flux-3-image-klein-pup`, `system_prompts.json`).
   - "Always run a prompt upsampler… trained on full scene captions… a short prompt sent as typed gives generic output."
@@ -196,6 +197,7 @@ Dipakai untuk model tanpa aturan sendiri, dan sebagai pembanding dalam ujian kel
   2. Latar, ruang tepi dan susunan blok (B, G, C), dengan id: `A solid black background <background_1> fills the frame with wide empty margins.`
   3. Setiap baris dari atas ke bawah, dimulakan dengan sauh kedudukan (`At the top,` `Directly below it,` `In the center,` `Below the label,` `At the bottom,`), menyebut baris itu pada tahap identiti sahaja dan memetik id-nya: `a line of huge heavy condensed sans-serif capitals <En_Text_1>`.
   4. Penutup (H) sebagai apa yang ADA: `The poster holds only these five lines of lettering, in pure white and pure black with flat fills and crisp edges.`
+- **Lebar bekas (r2, `hiasan_kedudukan`):** baris berbekas (reben, label) dalam kapsyen ditambah ` spanning the full width of the block`, kecuali bekas yang disebut `small`.
 - **Dalam kapsyen DILARANG:** perkataan Spesifikasi Teks, petikan, koordinat, pertimbangan mutu atau emosi. Semua itu duduk dalam jadual.
 - **Jadual unsur:** satu baris bagi setiap baris teks, satu bagi latar, satu bagi setiap hiasan. Kunci ikut turutan: `id`, `bbox`, `desc`.
   - `id` baris teks: `En_Text_1`, `En_Text_2`… dari atas ke bawah. Unsur lain: kata nama + indeks dari kiri ke kanan (`background_1`, `sparkle_1`, `sparkle_2`). Setiap id unik, dan setiap id disebut sekali dalam kapsyen.
@@ -553,11 +555,12 @@ Empat skrip pembetulan (SK01–SK04) ialah set asas. Skrip lain ditambah hanya i
 **SK07 dan SK08 (dibina 27 Nov 2026, diluluskan pengguna: tanpa GIMP / Inkscape, Python sahaja):**
 - **SK07 kaedah:** sudut condong (SK05) → komponen bersambung dikumpul ikut julat teras menegak → kumpulan = baris Spesifikasi Teks (lebih: gabung yang paling rapat; kurang: kumpulan paling tinggi dibelah pada garis paling nipis) → komponen kecil di luar julat perkataan = hiasan → dalam baris berlabel, ekor huruf baris jiran di luar segi empat label dipulangkan → warna. Huruf dalam label = lubang, jadi kekal hitam. Tepi anti-alias imej 5b disimpan (`_alfa.png`) supaya tepi cetak licin.
 - **SK07 v1.1 (27 Nov 2026, Belajar SK):** komponen setinggi >= 1.6 x tinggi median huruf (huruf bertaut merentas baris) dikumpul ikut julat penuh; komponen yang melintas garis potong dibelah pada leher paling sempit (watershed atas jarak ke tepi dakwat) antara dua baris berjiran tanpa label; di sekitar label kekal cara v1 (label ialah bingkai berlubang, tiada leher yang jelas). Ujian pertama cuba leher di mana-mana: label AFTER terbelah dua warna pada 3 imej, jadi dihadkan.
-- **SK07 ujian (14 imej K3K selepas 5b, 5 model):** 12 lulus; 2 GAGAL dengan sebab betul (ernie s123: baris salah dibelah; zturbo s7: tiada label segi empat). Cacat yang masih nampak: ernie s42, puncak huruf S "Stays" yang bersentuh KINDNESS ikut kuning (amaran "dibelah" dicatat; pengguna semak di langkah 7). Kad satu dakwat K7M, K8G: tukar warna sahaja, tidak rosak. Varian C001 pada MOSS s42: lulus.
+- **SK07 ujian (14 imej K3K selepas 5b, 5 model):** 12 lulus; 2 GAGAL dengan sebab betul (ernie s123: baris salah dibelah; zturbo s7: tiada label segi empat). Cacat yang masih nampak: ernie s42, puncak huruf S "Stays" yang bersentuh KINDNESS ikut kuning (amaran "dibelah" dicatat); dibuang atas arahan pengguna 27 Nov 2026. Kad satu dakwat K7M, K8G: tukar warna sahaja, tidak rosak. Varian C001 pada MOSS s42: lulus.
 - **SK08 ukuran IMG_5775 (salinan dashboard 236×354, satu gambar, anggaran):** bayang BUKAN di luar huruf. Bahagian bawah setiap strok skrip putih berwarna kelabu cerah (dua tona rata). Model: piksel dalam 40% larian strok yang paling hampir dengan arah 250° (relatif garis dasar, iaitu ke bawah dan sedikit ke kiri) = kelabu. Warna diukur #b2b3b5; putih #f1f1f3. Padanan model dengan gambar: IoU 0.389; kongsi kelabu dalam huruf 28.6% (model 35.3%). Kad K3 sebelum ini menulis "kelabu gelap #3a3a3a di bawah / kanan" tanpa ukuran; kad kini guna ukuran.
 - **SK08 ujian:** 12 imej K3K yang lulus SK07: kongsi bayang 33.6–36.5% setiap imej (rujukan model 35.3%), tiada amaran.
 - **SK08 had:** bayang lembut K1 (IMG_5818: bayang jatuh atas coretan lain di bawahnya) tidak boleh dibuat daripada imej hitam putih rata, kerana susunan coretan (mana di atas) tiada. Kad lain belum ada rujukan bayang.
 - **Hasil:** `designs/lettering-v1/final/v12-cpu-sk07/` (SVG induk + pratonton 18×24; PNG 300 DPI dijana semula bila perlu), `final/v12-cpu-sk07/peranan/` (peta, imej berwarna, palet, `log_6.jsonl`), helaian `qc/sk07_sk08_kemasan.jpg`.
+- **Simpanan (keputusan pengguna 27 Nov 2026: SNC):** 11 design K3K berwarna + 1 varian C001 didaftar sebagai warna C011–C022 (gambar = pratonton 18×24, medan `gaya` = kod S imej hitam putih asal). Tiga imej hitam putih FLUX 3 Klein K3K (lesen diterima) didaftar sebagai gaya S036–S038 supaya design berwarna itu ada kod S. C008 dikemas kini: kelabu bayang #3a3a3a → #b2b3b5 (ukuran SK08). Peta rekod: `designs/lettering-v1/qc/sk07_sk08_snc.json`.
 
 ### Belajar SK selepas setiap batch: skrip dibaiki atau dicipta sendiri (keputusan pengguna 27 Nov 2026)
 **Tujuan:** sama seperti 3.15 untuk aturan prompt, tetapi untuk skrip SK. Setiap batch menambah bukti; kelemahan SK dibaiki, parameter kad yang belum dibaca ditambah, dan cacat tanpa SK mendapat SK baharu. Bukti, bukan tekaan.
@@ -612,6 +615,7 @@ Setiap ubahan SK direkod di sini dan dalam `designs/lettering-v1/belajar/sk_ubah
 |---|---|---|---|---|---|---|
 | 27 Nov 2026 | SK06 | `tekstur_calar`: jenis tekstur calar + bintik lusuh dalam dakwat (kad K23, dahulu K12), parameter diukur pada panel koral IMG_5793 (`ukur_calar`) | tekstur (jenis kad K23) | v1.3 → v1.4 | MENANG | K23f: 0/2 → 1/2 tanpa cacat SK; moss 1.61 / 24.5 lawan rujukan 2.08 / 24.9; klein3 masih terlalu ringan (0.92 / 12.3, `silap`); imej kad lain sama piksel (K2e beza 0). Juga UKUR: K23 diukur semula di dalam panel (tepi sisi 8.5, atas / bawah 6.1; ukuran pertama silap), K2 (IMG_5792: sisi 13.4, bawah 10.6) dan K4 (IMG_5764, foto: atas / bawah 10.2, sisi 10.9). Bukti lemah |
 | 28 Nov 2026 | SK01 (5b) | `ukur_semula`: selepas SK01 memutar, blok diukur semula dan baki sudut dibetulkan, paling banyak 2 kali lagi (`betulkan.py`) | condong (ukuran pertama tersasar) | 5b v1.1 → v1.2 | MENANG | 2 imej: 0/2 → 2/2 (klein3 K9B s123 13.4 → 15.2; ERNIE K7M s123 0.0 → 13.6, ukuran pertama 15.5 di had julat); semakan mata. Bukti lemah |
+| 27 Nov 2026 | SK02 (betulkan.py) | `had_ikut_skala`: had bintik ukur SK05 didarab luas matriks selepas setiap pembetulan | ruang tepi (sinar kecil K14 masuk / keluar kotak selepas skala) | 5b v1.1 → v1.2 | MENANG | 56 imej K14–K18: lulus 5b 53/56 → 56/56; 51 sama piksel; ejaan tidak berubah. Cubaan pertama (hiasan rapat dalam SK05) dibatalkan: 35/158 kotak berubah termasuk 3 rujukan. Bukti lemah |
 | 27 Nov 2026 | SK06 | `tekstur_marker`: jenis tekstur marker, parameter diukur pada gambar upload kad, dijana pada skala rujukan | tekstur (jenis kad K8) | v1.2 → v1.3 | MENANG | K8G diukur = IMG_5735 (5.93 / 5.22 / 4.68; v1.2: 1.67 / 1.13); K3K, K7M sama piksel. Had: tepi marker kering tidak diukur (JPEG kecil). Bukti lemah |
 | 27 Nov 2026 | SK06 | `tepi_kad`: ruang tepi setiap saiz poster ikut kad (asas.rujukan, seperti SK02), diukur pada blok tulisan | ruang tepi (parameter kad) | v1.1 → v1.2 | MENANG | 3 imej: diukur = kad dalam 0.1 mata (v1.1 lari sehingga 5.8); tiada terpotong; 16 kemasan dijana semula. Bukti lemah |
 | 27 Nov 2026 | SK06 | `tekstur_kad`: tekstur dibaca daripada kad (`--kad`); bahagian tanpa jenis = amaran + ganti gaya daripada gambar yang sama | tekstur (parameter kad) | v1 → v1.1 | MENANG | 3 imej: 3/3 → 3/3, jurang tertutup; K3K, K8G sama piksel; K7M butir halus (dilihat pada 300 DPI). Bukti lemah |
@@ -729,6 +733,34 @@ Model baharu juga memerlukan aturan prompt sendiri sebelum dipakai untuk design 
 - **Selepas larian (28 Nov 2026, keputusan pengguna):** kad K9–K12 diluluskan (v1.0); kad K10 tambah ciri QC wajib "Tiada panel atau kotak putih di sekeliling blok"; 76 imej disimpan di AI Image Test (ujian U16). Uji ulang ERNIE kotak: kalah. Uji ERNIE frasa bentuk (K7M, K8G): menang, ERNIE r1 → r2. SK01: 5b v1.2.
 - **Kemasan (SK06, hitam putih):** FLUX 3 Klein seed 42 bagi setiap design: K9B S3, K10V S5 (lusuh), K11N S3, K12Y S3 (`final/v12b-cpu/`, helaian `qc/v12b_cpu_akhir.jpg`).
 - **Model × kad selepas larian ini (bukti lemah):** K9 = MOSS, ERNIE, FLUX 3 Klein; K10 = semua lima (ERNIE 1/3); K11 = MOSS, FLUX 3 Klein, Z-Image (2/3); K12 = MOSS, ERNIE, FLUX 3 Klein, Z-Image (2/3).
+## Larian K14–K18 (asal K9–K13) (27 Nov 2026, CPU, hitam putih sahaja, arahan pengguna)
+Lima gambar upload baharu, lima kad baharu (K14–K18, `kad.py`, v1.0, diluluskan pengguna 28 Nov 2026; asalnya bernombor K9–K13, ditukar 28 Nov kerana sesi lain `exciting-sagan-qk5lce` memakai K9–K13; ayat R, S ditukar ke X, Z atas sebab sama), ayat baharu pilihan Claude. Semua model yang muat di CPU (15 GB RAM): MOSS, ERNIE, FLUX 3 Klein, Z-Image, klein 4B. Qwen-Image-2512 dan GLM-Image dilangkau (tidak muat RAM). Seed 42, 7, 123 (K14–K16) dan 42, 7 (K17–K18). Kemasan warna (langkah 6) tidak dibuat: arahan pengguna hitam putih sahaja. QC: semakan mata Claude, `qc/v12_cpu_k14.json`, helaian `qc/v12k14_<model>_<ID>.jpg` (bukti lemah).
+
+| ID | Gambar | Kad | Ayat | Ciri utama |
+|---|---|---|---|---|
+| K14X | IMG_5838 | K14 | Rest Well and Dream Big | caps inline + skrip, reben bertakuk, sinar atas |
+| K15E | IMG_5817 | K15 | Learn Explore Create Share Be Curious Be Kind | sans tebal bertindan, sama lebar |
+| K16C | IMG_5819 | K16 | Some Days Need Extra Coffee | huruf tangan pelik tebal, kapur, bintik latar |
+| K17Z | IMG_5745 | K17 | Small Wins Still Count | huruf gelembung kartun, titik + percikan |
+| K18U | IMG_5743 | K18 | Sundays Feel Good! | cop getah lusuh, bingkai, anak panah |
+
+Lulus G1–G2 (imej lulus / dijana):
+
+| Model | K14X | K15E | K16C | K17Z | K18U | Jumlah | Masa jana CPU |
+|---|---|---|---|---|---|---|---|
+| MOSS | 3/3 | 3/3 | 3/3 | 2/2 | 2/2 | 13/13 | 4465 s |
+| ERNIE | 2/3 | 3/3 | 3/3 | 1/2 | 2/2 | 11/13 | 6728 s |
+| FLUX 3 Klein | 3/3 | 3/3 | 3/3 | 2/2 | 2/2 | 13/13 | 5295 s |
+| Z-Image | 3/3 | 3/3 | 0/3 | 1/2 | 2/2 | 9/13 | 4192 s |
+| klein 4B | 2/3 | 3/3 | 3/3 | 1/2 | 1/2 | 10/13 | 2605 s |
+
+- **Paling hampir rujukan (semakan mata):** K14 = ERNIE s42, klein 4B s42; K15 = FLUX 3 Klein; K16 = ERNIE (berus kasar + bintik); K17 = ERNIE s7, FLUX 3 Klein; K18 = ERNIE (bingkai penuh, cop, anak panah).
+- **Cacat utama:** Z-Image × K16 (NEED hilang / terlalu kecil, 3/3); huruf kecil i dalam STILL / WINS (Z-Image, klein 4B); MOSS × K16 terlalu kemas, MOSS × K18 bingkai atas / bawah sahaja; FLUX 3 Klein × K16, K18 blok kecil.
+- **5b:** 56 imej lulus dibetulkan (`betul/v12-cpu-k14/`), 56/56 lulus semakan akhir selepas SK 5b v1.2 (lihat Catatan pembaikan SK). Ejaan tidak berubah.
+- **Belajar (3.15, `belajar.py` b1.2):** nota QC kini ditulis dengan kata kelas cacat; kelas `bentuk` dan `hiasan_tempat` diluaskan (bentuk huruf, lebar baris, bingkai hanya, reben kecil); rekod SNC tanpa folder model (kemasan SK07 / SK08) dilangkau. TINDAKAN CUBA ditulis dalam `pembina.py` (`UJI`), dipakai pada jana seterusnya model itu: `zturbo_had_positif`, `ernie_hiasan_tepat`, `klein3_hiasan_kedudukan`, `klein4b_frasa_bentuk`. MOSS: HABIS bagi ejaan K8 (sedia ada).
+- **Uji calon (28 Nov 2026, `run_uji_k14.sh`, `raw/v12-cpu-k14-uji/`, QC `qc/v12_cpu_k14_uji.json`, 17 imej, seed sama):** MENANG `zturbo_had_positif` 1/5 → 2/5, `ernie_hiasan_tepat` 2/3 → 3/3, `klein3_hiasan_kedudukan` 3/3 → 3/3 (bersih 0 → 3); KALAH `klein4b_frasa_bentuk` 6/6 → 6/6 (bersih 1 → 1). Tiga yang menang ditulis ke aturan (rev r2). 5b: 14 imej lulus QC, 14/14 lulus (`betul/v12-cpu-k14-uji/`). `belajar.py` b1.3: lulus sama → imej tanpa kelas cacat lebih banyak menang. Z-Image ejaan K16 masih HABIS pilihan ubahan: tukar model (ERNIE / FLUX 3 Klein lulus 3/3).
+- **Dashboard (28 Nov 2026, pilihan pengguna A):** 65 imej disimpan di tab AI Image Test sebagai ujian **U15** (`data/ai_tests/rows/U15.json`, kad K14–K18). U13 / U14 milik sesi lain (cawangan `exciting-sagan-qk5lce`) dipulihkan ke dalam build ini selepas hampir tertimpa. Sesi itu juga mencipta kad K9–K13 daripada gambar upload yang sama (definisi lain); jadi kad sesi ini ditukar ke K14–K18 (keputusan pengguna 28 Nov 2026).
+- **Belajar SK:** SK02 BAIKI (5b v1.2, MENANG). PARAMETER tertangguh: jenis tekstur K14–K18 (SK06) dan peta warna K15 (SK07) milik langkah 6, tidak dijalankan kerana hitam putih sahaja.
 
 ## Catatan pembaikan aturan model
 Setiap ubahan aturan (3.4–3.10) direkod di sini, dan juga dalam `designs/lettering-v1/belajar/ubahan.json` (dibaca oleh `belajar.py`, 3.15). Ujian pertama (26 Nov 2026, K3 × ayat H, seed 42, 7, 123, semakan mata, bukti lemah) mengubah beberapa perkara serentak, kerana dibuat sebelum peraturan "satu ubahan setiap pusingan".
@@ -767,6 +799,10 @@ Setiap ubahan aturan (3.4–3.10) direkod di sini, dan juga dalam `designs/lette
 - **Seed 7 dan 123 (27 Nov 2026, izin pengguna):** G1 + G2 lulus: MOSS 12/12, FLUX 3 Klein 12/12, ERNIE 10/12 (K22c tanda petikan 2/2), Z-Image 10/12 (K4q 'LOOD' 2/2), klein 4B 8/12 (K20a s123 'Kids' berulang, K21b s123 'TEACHIER', K4q baris dipisah 2/2). Jumlah 3 seed: 79/90. K23 'HABITS' tidak gergasi pada semua model (ciri teras kad belum tercapai). Kemasan 36 imej MOSS + FLUX 3 Klein: `final/v12-cpu-ref6/`, helaian `qc/v12_cpu_ref6_kemasan.jpg`.
 - Disimpan sebagai A (pilihan pengguna): AI Image Test ujian U13 (`data/ai_tests/rows/U13.json`), 30 baris.
 - Belajar 3.15: calon CUBA ditulis dalam `pembina.py` (`klein4b_hiasan_kedudukan`, `zturbo_had_positif`, `ernie_had_positif`); belum diuji (perlu izin jana).
+| 28 Nov 2026 | Z-Image Turbo | r1 → r2 (`had_positif`, MENANG) | K16C: NEED hilang / rosak (3/3); K17Z s7: huruf kecil i | Had positif "exactly these N words … spelled exactly as quoted … every other area is plain empty black" | 1/5 → 2/5 (K16C 0/3 → 1/3; K17Z 1/2 → 1/2). Masih rosak: NEEZ, EED. Bukti lemah |
+| 28 Nov 2026 | ERNIE Turbo | r1 → r2 (`hiasan_tepat`, MENANG) | K14X s7: jalur putih tepi kanan / bawah | Tambah "Clean empty background …, no other shapes, lines or borders than those described." | 2/3 → 3/3. Bukti lemah |
+| 28 Nov 2026 | FLUX 3 Image Klein | r1 → r2 (`hiasan_kedudukan`, MENANG ikut seri b1.3) | K14X: reben kecil sahaja pada AND / BIG (3/3) | Bekas "spanning the full width of the block" (kecuali bekas `small`) | 3/3 → 3/3; bersih 0/3 → 3/3. Bukti lemah |
+| 28 Nov 2026 | klein 4B | r1 (tiada perubahan) | K15E: lebar baris tidak sama; K16C: huruf kurang kasar | `frasa_bentuk`: "Every line uses the same … letterforms, and each line is stretched to exactly the same width". TIDAK berjaya, dibuang | 6/6 → 6/6; bersih 1 → 1 |
 
 ## Belum selesai
 - v1.2, sudah dibina (26 Nov): pembina kod bagi tujuh model + semakan 3.11 (`pembina.py`, 3.13).
